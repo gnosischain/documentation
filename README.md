@@ -10,10 +10,14 @@ The website is built using [Docusaurus 2](https://docusaurus.io/).
 
 The Developers Portal is an ecosystem tool, we welcome everybody to collaborate and improve it!
 
+### Prerequisites
+
+[Node.js](https://nodejs.org/en/download/) version 14.13 or higher.  
+
 ### Installation
 
 ```
-$ yarn
+$ yarn install
 ```
 
 ### Local Development
