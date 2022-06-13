@@ -1,0 +1,105 @@
+name: Deploy 
+
+# Run on pushes to main or PRs
+on:
+  # Pull request hook without any config. Launches for every pull request
+  pull_request:
+  # Launches for pushes to main or dev
+  push:
+    branches:
+      - main
+      - dev
+  # Launches build when release is published
+  release:
+    types: [published]
+
+env:
+  REPO_NAME_ALPHANUMERIC: gnosischain
+  BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump env
+        run: env | sort
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+      - name: Remove broken apt repos [Ubuntu]
+        if: ${{ matrix.os }} == 'ubuntu-latest'
+        run: |
+          for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - run: |
+          sudo apt-get update
+          sudo apt-get -y install python3-pip python3-dev libusb-1.0-0-dev libudev-dev
+          pip install awscli --upgrade --user
+          # Due to some dependencies yarn may randomly throw an error about invalid cache
+          # This approach is taken from https://github.com/yarnpkg/yarn/issues/7212#issuecomment-506155894 to fix the issue
+          # Another approach is to install with flag --network-concurrency 1, but this will make the installation pretty slow (default value is 8)
+          mkdir .yarncache
+          yarn install --cache-folder ./.yarncache --frozen-lockfile
+          rm -rf .yarncache
+          yarn cache clean
+
+      # Set dev flag (for PR deployments)
+      - name: Set PR flag
+        run: echo "dev" >> $GITHUB_ENV
+        if: github.ref != 'refs/heads/main'
+
+      # Set staging flag on staging
+      - name: Set staging flag for staging
+        run: echo "staging" >> $GITHUB_ENV
+        if: github.ref == 'refs/heads/main'
+
+      - name: Build app
+        run: yarn build    
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+      
+      # Script to deploy to staging environment
+      # https://guardians.staging.gnosisdev.com
+      - name: 'Deploy to S3: Staging'
+        if: github.ref == 'refs/heads/main'
+        run: |
+          aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/staging/current --exclude "*.html" --cache-control max-age=31536000,public
+          aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/staging/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+      # Script to package release files
+      - name: 'Package release version'
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/releases/${{ github.event.release.tag_name }} --delete --exclude "*.html" --cache-control max-age=31536000,public
+          aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/releases/${{ github.event.release.tag_name }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+      # Script to prepare production deployments
+      # https://guardians.gnosis-safe.io
+      - name: 'Prepare production deployment flow'
+        if: success() && startsWith(github.ref, 'refs/tags/v')
+        run: bash ./scripts/github/production_deployment.sh
+        env:
+          PROD_DEPLOYMENT_HOOK_TOKEN: ${{ secrets.PROD_DEPLOYMENT_HOOK_TOKEN }}
+          PROD_DEPLOYMENT_HOOK_URL: ${{ secrets.PROD_DEPLOYMENT_HOOK_URL }}
+          VERSION_TAG: ${{ github.event.release.tag_name }}
