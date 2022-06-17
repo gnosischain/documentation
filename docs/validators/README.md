@@ -9,7 +9,7 @@ Gnosis Beacon Chain (GBC) brings extendable and accelerated beacon-network funct
 
 GBC is optimized for certain parameters (block/epoch time) and can serve in a frontrunning capacity to important Ethereum consensus-layer updates. For example, the merge will first take place on testnets. Once thorough testing is complete, updates can then move to a production-level, real-world value environment (Gnosis Beacon Chain).
 
-[Validating GBC](validator-info/get-started-node-setup/) only requires the equivalent of 1 GNO, opening up validation opportunities for diverse groups of individuals across the globe.
+[Validating GBC](/validators/client/) only requires the equivalent of 1 GNO, opening up validation opportunities for diverse groups of individuals across the globe.
 
 :::tip
 🙋🏼‍♀️ Want to run a GBC validator node with ease? [DappNode ](https://dappnode.io)provides hardware solutions and step-by-step setup, plus an opportunity to get up to 4 validators free with purchase. [Learn More](https://shop.dappnode.io/product/dappnodextreme-gnosis/).
