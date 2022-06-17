@@ -34,13 +34,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/gnosischain/developers-portal/tree/main',
-        },
-        blog: {
-          showReadingTime: true,
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -63,12 +57,29 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            type: 'docSidebar',
             position: 'left',
+            sidebarId: 'overview',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Articles', position: 'left'},
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'quickstart',
+            label: 'Quick Start',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'validators',
+            label: 'Validators',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'bridge',
+            label: 'Bridge',
+          },
           {
             href: 'https://github.com/gnosischain/developers-portal',
             label: 'GitHub',
@@ -83,8 +94,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Quick Start',
+                to: '/quick-start',
               },
             ],
           },
@@ -97,7 +108,7 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'http://discord.gg/gnosischain',
+                href: 'https://discord.gg/pjHjQwycV8',
               },
               {
                 label: 'Twitter',
@@ -109,8 +120,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Articles',
-                to: '/blog',
+                label: 'Careers',
+                href: 'https://gnosis.io/careers/',
               },
               {
                 label: 'GitHub',
@@ -126,6 +137,32 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    
+    plugins: [
+      [
+        'docusaurus-plugin-includes',
+        {
+          embeds: [
+            {
+              key: 'youtube',
+              embedFunction: function(code) {
+                var params = code.split(',');
+                var videoId = params[0];
+                var query = params.length > 1 ? params[1] : "";
+                return '<iframe width="785" height="440" type="text/html" frameborder="0" src="https://www.youtube.com/embed/' + videoId + '/?' + query + '"></iframe>'
+              }
+            },
+            {
+              key: 'file',
+              embedFunction: function(url) {
+                var fileName = url.split(/[\\\/]/).pop();
+                return '<p>Download: <a href="' + url + '" target="_blank">' + fileName + '</a></p>';
+              }
+            }
+          ],
+        },
+      ],
+    ],
 };
 
 module.exports = config;
