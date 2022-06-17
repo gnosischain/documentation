@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Gnosis Chain',
   tagline: 'Developers Portal',
-  url: 'https://developers.gnosischain.com',
+  url: 'https://developers-portal.staging.gnosisdev.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
