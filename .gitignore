@@ -2,3 +2,5 @@ node_modules
 .docusaurus
 .DS_Store
 package-lock.json
+build
+yarn.lock
