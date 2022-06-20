@@ -1,9 +1,12 @@
+---
+---
+
 # Contracts, Addresses, Parameters
 
 ### **Contracts & Token Addresses**
 
-:::caution
-**DO NOT send funds directly to the GBC Deposit Contract.** To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/validators/get-started/responsibilities).
+:::caution DO NOT send funds directly to the GBC Deposit Contract.
+To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/validators/get-started/responsibilities).
 :::
 
 | Contract                   | Address                                                                                                                                            |
@@ -25,7 +28,7 @@
 | Slashing                                          | Reductions to 16 mGNO, then removal                                                                                                                                                 |
 | Clients                                           | Prysm, Lighthouse                                                                                                                                                                   |
 | Custom Deposit Contract                           | <p></p><ul><li>mGNO deposit (ERC20 enabled)</li><li>Upgradeable</li><li>Claiming on accidental locks</li><li>Custom network keys generation (deposit-cli)</li></ul>                 |
-| Explorer                                          | <p>Modified beaconchain explorer<br><span data-gb-custom-inline data-tag="emoji" data-code="1f50d">🔍</span> <a href="http://beacon.gnosischain.com">beacon.gnosischain.com</a></p> |
+| Explorer                                          | <p>Modified beaconchain explorer<br /><span data-gb-custom-inline data-tag="emoji" data-code="1f50d">🔍</span> <a href="http://beacon.gnosischain.com">beacon.gnosischain.com</a></p> |
 | RPC                                               | [https://rpc-gbc.gnosischain.com](https://rpc-gbc.gnosischain.com)                                                                                                                  |
-| :white\_check\_mark: Launch MVP                   | <p>4096 validators<br>131,072 mGNO </p><p>83% APY</p>                                                                                                                               |
+| :white\_check\_mark: Launch MVP                   | <p>4096 validators<br />131,072 mGNO </p><p>83% APY</p>                                                                                                                               |
 | :white\_check\_mark: Security Goal Prior to Merge | <p>50K+ validators</p><p>1.6M+ mGNO</p><p>23% APY</p>                                                                                                                               |

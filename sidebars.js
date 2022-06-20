@@ -71,7 +71,7 @@ const sidebars = {
           label: 'Explorer',
           href: 'https://beacon.gnosischain.com/',
         },
-        'validators/beacon-chain-analytics',
+        'validators/tools/beacon-chain-analytics',
         {
           type: 'link',
           label: 'Deposit Tool',
@@ -80,14 +80,24 @@ const sidebars = {
         'validators/tools/liquid-staking',
       ],
     },
-    'validators/security-audit',
+    {
+      type: 'category',
+      label: 'Info',
+      collapsed: true,
+      link: {type: 'doc', id: 'validators/info/README'},
+      items: [
+        'validators/info/upgradeability',
+        'validators/info/security-audit',
+        'validators/info/faq',
+        'validators/info/media-kit',
+      ],
+    },
     {
       type: 'link',
       label: 'Landing Page',
       href: 'https://www.gnosischain.com/',
     },
-    'validators/media-kit',
-    'validators/faq',
+    
   ],
 
 

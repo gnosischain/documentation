@@ -1,3 +1,5 @@
+---
+---
 # Upgradeability
 
 One differentiator for the Gnosis Beacon Chain relative to the Ethereum Beacon chain is the ability to upgrade contracts. A proxy pattern allows for this functionality, which can be extremely useful if an update is required (a bug is found, new functionality added etc).
