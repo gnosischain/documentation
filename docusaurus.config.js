@@ -81,6 +81,18 @@ const config = {
             label: 'Bridge',
           },
           {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'specs',
+            label: 'Specs',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'governance',
+            label: 'Governance',
+          },
+          {
             href: 'https://github.com/gnosischain/developers-portal',
             label: 'GitHub',
             position: 'right',

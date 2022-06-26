@@ -1,0 +1,19 @@
+---
+---
+
+# Community Governance
+
+Community members and GNO holders can [create and vote on proposals](https://forum.gnosis.io/t/readme-gnosisdao-governance-process/736) related to changes, improvements or anything they would like to see with the Gnosis Chain ecosystem.
+
+First, a proposal is discussed in an open-ended fashion, then a forum poll is initiated, and finally a snapshot vote is conducted. Anyone can discuss and participate, and GNO holders on Ethereum mainnet, the Gnosis Chain, or those who lock GNO in a variety of protocols on either network can vote on a proposal.
+
+## Governance Process Phases
+
+The following info is from the [GnosisDAO forum](https://forum.gnosis.io/t/readme-gnosisdao-governance-process/736). Please visit for more details and to start or comment on an active proposal.
+
+| Phase                 | Content                                                                                                                                                               | Duration   | Passing Requirements                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Phase 1 Ideation      | • Post created on the Gnosis Forum in the [GnosisDAO category 108](https://forum.gnosis.io/c/dao)                                                                     | Open-ended | No formal requirement**.** However, if a proposal discussion fails to garner momentum from the community, it is unlikely to become a successful proposal.                                                                                                                                                                                                                                                    |
+| Phase 2 Specification | • [Gnosis Improvement Proposal 73](https://forum.gnosis.io/t/gip-0-template/734) (GIP) post created                                                                   | 5 days     | One outcome with a relative majority of votes on the forum poll. If the relative majority of votes indicates `Make no changes,` the proposal does not pass to Phase 3.                                                                                                                                                                                                                                       |
+| Phase 3 Consensus     | • [Gnosis Improvement Proposal 73](https://forum.gnosis.io/t/gip-0-template/734) (GIP) post refined • [GnosisDAO Snapshot 60](https://snapshot.org/#/gnosis.eth) poll | 7 days     | For proposals to be accepted there must be one outcome with a relative majority of GNO used for signaling on the GnosisDAO Snapshot poll accompanied by a yes-voting quorum of a minimum of 4%\[1] of the circulating supply of GNO. If the relative majority of GNO used in signaling on the Snapshot poll indicates the result `Make no changes,` the proposal will not be accepted and considered closed. |
+

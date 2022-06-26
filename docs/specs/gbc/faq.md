@@ -15,7 +15,7 @@ Validators propose and vote on blocks to include in the chain. The chain is secu
 
 ### What is the deposit contract?
 
-The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity\_deposit\_contract/deposit\_contract.sol), with [some additional functionality](/validators/info/security-audit).
+The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity\_deposit\_contract/deposit\_contract.sol), with [some additional functionality](/specs/security-audit).
 
 * Contract Security Audit by Chainsecurity: [https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/](https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/)
 * GBC Contract Address: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://blockscout.com/xdai/mainnet/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)
