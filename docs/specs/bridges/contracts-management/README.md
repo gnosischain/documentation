@@ -10,8 +10,8 @@ Bridge administrators can perform 4 groups of operations with the xDai bridge. A
 
 Multisignature Wallet Addresses:
 
-* the ETH Mainnet: `0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd`, [ABI](https://github.com/poanetwork/poa-chain-spec/blob/4fe29a700b1331c570e20c5424523e522f5ab4d7/abis/bridge/MultiSigWallet.json), [Etherscan](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)
-* the xDai chain: `0x0d3726e5a9f37234d6b55216fc971d30f150a60f`, [ABI](https://github.com/poanetwork/poa-chain-spec/blob/4fe29a700b1331c570e20c5424523e522f5ab4d7/abis/bridge/MultiSigWallet.json), [Blockscout](https://blockscout.com/poa/dai/address/0x0d3726e5a9f37234d6b55216fc971d30f150a60f/transactions)
+* ETH Mainnet: `0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd`, [ABI](https://github.com/poanetwork/poa-chain-spec/blob/4fe29a700b1331c570e20c5424523e522f5ab4d7/abis/bridge/MultiSigWallet.json), [Etherscan](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)
+* Gnosis Chain: `0x0d3726e5a9f37234d6b55216fc971d30f150a60f`, [ABI](https://github.com/poanetwork/poa-chain-spec/blob/4fe29a700b1331c570e20c5424523e522f5ab4d7/abis/bridge/MultiSigWallet.json), [Blockscout](https://blockscout.com/poa/dai/address/0x0d3726e5a9f37234d6b55216fc971d30f150a60f/transactions)
 
 **Example action flow:**
 

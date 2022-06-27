@@ -53,7 +53,7 @@ A modification to the Gnosis Chain deposit contract allows you to deposit in bat
     ```
 
 :::note
-Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain (formerly xDai Chain) blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool. This means it will take approximately 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
+Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool. This means it will take approximately 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
 :::
 
 ##

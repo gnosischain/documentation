@@ -36,7 +36,7 @@ The submitter will execute these methods: `addValidator` and (optionally) `setRe
 
 ![Add in parameters manually and copy ABI](/img/bridges/abi.png)
 
-2\) Use Nifty Wallet (or another tool that can build transactions based on contract source code/ABI) to invoke the `submitTransaction` method of the multisig wallet contract. You will do this for the ETH Mainnet **and** the xDAI chain. The following example uses Nifty Wallet.
+2\) Use Nifty Wallet (or another tool that can build transactions based on contract source code/ABI) to invoke the `submitTransaction` method of the multisig wallet contract. You will do this for the ETH Mainnet **and** the Gnosis Chain. The following example uses Nifty Wallet.
 
 ## SubmitTransaction
 
@@ -74,7 +74,7 @@ The submitter will execute these methods: `addValidator` and (optionally) `setRe
   * c. Select `Uint256` for Argument, paste in the number of required signatures to account for the new validator. This number should be at least a majority of validators, the current set of validators decides this number.
   * d. Example output should have a similar format `aec452390000000000000000000000000000000000000000000000000000000000000005`
 
-4\) Complete steps as in #3, using the new ABI value with the `submitTransaction` method to send this transaction to both the ETH Mainnet and the xDai chain.
+4\) Complete steps as in #3, using the new ABI value with the `submitTransaction` method to send this transaction to both the ETH Mainnet and the Gnosis Chain.
 
 5\) Share Submission event indexes for all transactions with current validators through the Slack channel or another means.
 
@@ -99,7 +99,7 @@ _**All bridges must be stopped before the last required validator submits a sign
 * f. Set the gas limit **two times larger** than the gas estimator suggests. As soon as enough confirmations are received, the method is invoked automatically.
 * g. Repeat for the second method - ie `setRequiredSignature`
 * h. Switch to the xDai network and select the xDai contract account `0x0d3726e5a9f37234d6b55216fc971d30f150a60f`
-* i. Repeat steps b-f to confirm transactions on the xDai chain.
+* i. Repeat steps b-f to confirm transactions on the Gnosis Chain.
 
 7\) Restart the bridge after the last validator signature is submitted. `sudo service poabridge start`
 

@@ -203,7 +203,7 @@ Increase the amount of blocks required for confirmation on the Ethereum Mainnet 
 
 ### Increase finalization time to 20 blocks
 
-​🗳️ **Justification:** To increase security, finalization time on the xDai chain for the xDAI TokenBridge and for the ETH-xDAI Arbitrary Message Bridge increased to 20 blocks from previous 8-12.
+​🗳️ **Justification:** To increase security, finalization time on the Gnosis Chain for the xDAI TokenBridge and for the ETH-xDAI Arbitrary Message Bridge increased to 20 blocks from previous 8-12.
 
 ​✅ **Implemented:** October 18**,** 2021
 

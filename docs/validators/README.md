@@ -27,7 +27,7 @@ This talk at DevConnect by researcher Kirill Fedoseev is a primer about the GBC 
 
 ## Gnosis Chain
 
-Gnosis Chain (formerly the xDai Chain) is the associated execution-layer EVM chain for stable transactions. Gnosis Chain uses the xDai token for transactions and includes a wide-ranging group of projects and users.
+Gnosis Chain is the associated execution-layer EVM chain for stable transactions. Gnosis Chain uses the xDai token for transactions and includes a wide-ranging group of projects and users.
 
 Much like Ethereum, Gnosis Chain will continue to run in its current form until the merge with the Gnosis Beacon Chain. This merge will follow a similar trajectory to the Ethereum merge.
 

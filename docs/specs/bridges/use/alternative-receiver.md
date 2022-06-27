@@ -4,7 +4,7 @@ description: Instructions how to use the Alternative receiver feature with the x
 
 # Alternative Receiver
 
-The new feature _Alternative Receiver_ has integrated in the contracts of the xDai bridge as part of [the recent contracts upgrade](https://forum.poa.network/t/migration-of-the-xdai-tokenbridge-completed/3212). With this feature it becomes possible to transfer tokens through the bridge to any account by very simple actions. It means that Alice can send Dai to Bob’s account on the xDai chain in one transaction, and Bob can send xDai to Clare’s account on the Ethereum Mainnet in one transaction too.
+The new feature _Alternative Receiver_ has integrated in the contracts of the xDai bridge as part of [the recent contracts upgrade](https://forum.poa.network/t/migration-of-the-xdai-tokenbridge-completed/3212). With this feature it becomes possible to transfer tokens through the bridge to any account by very simple actions. It means that Alice can send Dai to Bob’s account on the Gnosis Chain in one transaction, and Bob can send xDai to Clare’s account on the Ethereum Mainnet in one transaction too.
 
 Due to different nature of tokens on two sides of the xDai bridge the operations to transfer assets to an alternative receiver from one chain to another differ as well.
 
@@ -38,21 +38,21 @@ You must give your approval to permit a contract to transfer tokens, as the defa
 
 **relayTokens Method (1)**
 
-* `_receiver (address)` - address of the alternate receiver, the account that will be sent native tokens on the xDai chain
+* `_receiver (address)` - address of the alternate receiver, the account that will be sent native tokens on the Gnosis Chain
 * `_amount (uint256)` - the amount of tokens (in Wei) to transfer; must be less or equal amount of tokens approved for the bridge operations
 * Click **Write**
 
 **relayTokens Method(14)**
 
 * `_sender (address)` - optional. Use when the Dai deposit is performed by another contract on behalf of a user account (e.g. by a DEX)
-* `_receiver (address)` - address of the alternate receiver, the account that will be sent native tokens on the xDai chain
+* `_receiver (address)` - address of the alternate receiver, the account that will be sent native tokens on the Gnosis Chain
 * `_amount (uint256)` - the amount of tokens (in Wei) to transfer; must be less or equal amount of tokens approved for the bridge operations
 * Click **Write**
 
 ![Here we send .5 Dai. We can send any amount up to the amount approved in step 4.](/img/bridges/4-etherscan.png)
 
 1. Submit the transaction in the MetaMask and wait until it is included in the chain.
-2. The xDai bridge will take some time to relay the deposit request to the xDai chain. Once complete, the balance of the `_receiver`account will increase with the corresponding amount of xDai.
+2. The xDai bridge will take some time to relay the deposit request to the Gnosis Chain. Once complete, the balance of the `_receiver`account will increase with the corresponding amount of xDai.
 
 ### xDai to Dai
 
@@ -60,7 +60,7 @@ You must give your approval to permit a contract to transfer tokens, as the defa
 Since Etherscan does not currently support xDai, we use MyEtherWallet for this example. You can also use Nifty Wallet or BlockScout.
 :::
 
-1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet).
+1. Choose the Gnosis Chain in the browser wallet extension and login to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet).
 2. Initialize the xDai bridge contract interface by putting the bridge contract address `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6` and the following JSON in the **`ABI/JSON Interface`** field:
 
 ```javascript

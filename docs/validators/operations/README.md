@@ -4,7 +4,7 @@
 # Deposits
 
 :::caution
-Deposits occur on the Gnosis Chain (formerly xDai Chain). **If you have GNO on Ethereum mainnet, you will need to bridge it to GC**.
+Deposits occur on the Gnosis Chain. **If you have GNO on Ethereum mainnet, you will need to bridge it to GC**.
 
 * [Use the OmniBridge](https://omni.gnosischain.com/bridge) to move GNO from Ethereum to GNO on GC.
 * Add Gnosis Chain Network to your wallet with [https://chainlist.org/](https://chainlist.org) or [with these manual instructions](https://developers.gnosischain.com/for-users/wallets/metamask/metamask-setup).
