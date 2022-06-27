@@ -15,4 +15,4 @@ Use comma-separated RPC urls for the `XDAI_RPC_URL` variable to set fallback IPs
 
 If you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
-If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.gg/pjHjQwycV8)
+If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8)

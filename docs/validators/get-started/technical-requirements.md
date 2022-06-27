@@ -5,7 +5,7 @@
 
 ## The Basics
 
-Since GBC is a smaller-stakes environment, it is a great place to refine new skills. Be sure to read instructions carefully and ask questions ([discord channel](https://discord.gg/pjHjQwycV8)) as needed.
+Since GBC is a smaller-stakes environment, it is a great place to refine new skills. Be sure to read instructions carefully and ask questions ([discord channel](https://discord.com/invite/pjHjQwycV8)) as needed.
 
 * **Using the Terminal**:  You will be required to enter commands into a terminal window. These will be simple copy-paste instructions, but familiarity with using a terminal is helpful.
 * **Key Management**: You will use the command line to derive a key-pair for validating blocks as well as a mnemonic you will use later to derive a withdrawal pair. It is important to store these safely (offline highly recommended).
