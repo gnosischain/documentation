@@ -102,4 +102,4 @@ Once you have written to the contract method, a View your **transaction** button
 
 ![](/img/bridges/etherscan3.jpg)
 
-![A completed transaction](/img/bridges/Etherscan2.jpg)
+![A completed transaction](/img/bridges/etherscan2.jpg)

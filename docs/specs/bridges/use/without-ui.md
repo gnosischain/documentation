@@ -54,7 +54,7 @@ Once you have written to the contract method, a View your **transaction** button
 
 ![](/img/bridges/etherscan3.jpg)
 
-![A completed transaction](/img/bridges/Etherscan2.jpg)
+![A completed transaction](/img/bridges/etherscan2.jpg)
 
 :::success
 Instructions migrated from the POA forum [https://forum.poa.network/t/how-to-relay-dai-stablecoins-without-usage-of-the-bridge-ui/1876](https://forum.poa.network/t/how-to-relay-dai-stablecoins-without-usage-of-the-bridge-ui/1876)
