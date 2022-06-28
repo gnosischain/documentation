@@ -8,9 +8,9 @@ description: >-
 
 The Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain [now requires a request-and-claim scheme to transfer data from the xDai chain](https://forum.poa.network/t/request-and-claim-to-transfer-assets-from-xdai-chain/4495), and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Mainnet side.
 
-{% hint style="info" %}
+:::info
 This approach is the equivalent of the set of actions performing by [the OmniBridge UI](https://www.xdaichain.com/for-users/omnibridge) after pressing the "Claim" button, or by the [AMB Live Monitoring app](https://alm-xdai.herokuapp.com) after pressing the "Execute" button.
-{% endhint %}
+:::
 
 Below is the list of actions that can be executed in BlockScout and Etherscan, or, if you are familiar with the contract interaction through Web3 provider, it can be done by importing the contract's ABI to your application.
 
@@ -26,6 +26,6 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 
 ![Using Etherscan to Write to the AMB contract on Ethereum ](</img/specs/bridges/image-95.png>)
 
-{% hint style="warning" %}
+:::warning
 MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more.
-{% endhint %}
+

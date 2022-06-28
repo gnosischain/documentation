@@ -2,9 +2,9 @@
 
 It is possible to use the OmniBridge UI to transfer any ERC20 from Ethereum to xDai. Any user can initiate this initial transfer. Once the token exists on xDai, it can be transferred back and forth using the same UI.
 
-{% hint style="warning" %}
+:::warning
 OmniBridge and OmniBridge UI are experimental Beta software, use at your own risk. Access the unofficial OmniBridge UI: [https://omni.xdaichain.com/](https://omni.xdaichain.com)
-{% endhint %}
+:::
 
 ## Token Transfer
 

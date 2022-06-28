@@ -6,9 +6,9 @@ description: How to deploy an erc20-to-erc20 Arbitrary Message Bridge extension
 
 Instructions for deploying bridge mediator contracts on top of [the Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the xDai chain.](../about-the-eth-xdai-amb/)
 
-{% hint style="info" %}
+:::info
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
-{% endhint %}
+:::
 
 The steps below assume you will use an existing ERC20 or an ERC677/827 token on Ethereum when creating the new ERC677 token contract on xDai. The AMB mediator will have rights to mint new tokens for any request to relay tokens through this AMB extension. More details about the extension internals are available here: ["How to develop a cross-blockchain application using the AMB"](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb).
 

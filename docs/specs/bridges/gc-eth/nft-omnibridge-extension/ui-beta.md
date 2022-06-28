@@ -11,9 +11,9 @@ Current functionality is inherited from the OmniBridge UI for ERC20s and include
 
 ![](/img/specs/bridges/nft-bridge-1.png)
 
-{% hint style="warning" %}
+:::warning
 The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between xDai and Ethereum.
-{% endhint %}
+:::
 
 ## Simple Transfer Instruction
 

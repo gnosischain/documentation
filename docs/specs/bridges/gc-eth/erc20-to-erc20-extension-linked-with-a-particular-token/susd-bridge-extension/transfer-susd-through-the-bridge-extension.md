@@ -6,9 +6,9 @@ description: Instructions on relaying Synth sUSD tokens through the sUSD bridge 
 
 One of the simplest ways to transfer Synth sUSD tokens through the bridge extension is to use [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet). MEW may be used for both types of operations: to deposit tokens to the xDai chain and to withdraw tokens from the xDai chain.
 
-{% hint style="info" %}
+:::info
 You will need a small amount of Ether for gas fees and an amount of sUSD to transfer for this tutorial. sUSD can be obtained through [Uniswap](https://uniswap.exchange) or other exchanges.
-{% endhint %}
+:::
 
 ## Deposit sUSD tokens to the xDai chain
 
@@ -34,13 +34,13 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 4. 3\) Enter the **Value** - the amount of tokens (in Wei) to transfer.
 5. 4\) Press Write to initiate the approval.
 
-{% hint style="warning" %}
+:::warning
 Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 * **Min** per transaction: **$0.50 sUSD**
 * **Max** per transaction: **$1,000.00 sUSD**
 * Transaction limit **max per day**: **$3,000.00 sUSD**
-{% endhint %}
+:::
 
 ![](/img/specs/bridges/sUSD2.png)
 
@@ -93,9 +93,9 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 ![](/img/specs/bridges/Nifty2.png)
 
-{% hint style="success" %}
+:::success
 You should now see your newly transferred sUSD balance on the xDAi chain.
-{% endhint %}
+:::
 
 ## Withdraw sUSD tokens from the xDai chain
 
@@ -121,19 +121,19 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 4. 3\) Enter the value to transfer in Wei in the `_value` field.
 5. 4\) Click **Write.**
 
-{% hint style="warning" %}
+:::warning
 Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 * **Min** per transaction: **$0.50 sUSD**
 * **Max** per transaction: **$1,000.00 sUSD**
 * Transaction limit **max per day**: **$3,000.00 sUSD**
-{% endhint %}
+:::
 
 ![](/img/specs/bridges/send2.png)
 
-{% hint style="info" %}
+:::info
 The `transfer` method of the bridgeable token contract will automatically notify the mediator contract about the new amount of tokens transferred to the mediator contract account. For this reason, no other action is required from the user side to finish the withdrawal request.
-{% endhint %}
+:::
 
 1. Check the gas price, then **Submit** the transaction through the web3 wallet extension and wait until it is included in the chain.
 2. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the balance of the account specified as `_to` in the `transfer` method call will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x57ab1e02fee23774580c119740129eac7081e9d3?a=0x71f12d03e1711cb96e11e1a5c12da7466699db8d), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.

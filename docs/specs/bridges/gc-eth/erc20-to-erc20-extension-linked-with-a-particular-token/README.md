@@ -13,6 +13,6 @@ This section covers such aspects as:
 * the AMB mediators configuration and deployment
 * deployment of the UI based on the Burner Wallet 2 plugin to provide a convenient way to transfer tokens through the deployed AMB extension
 
-{% hint style="info" %}
+:::info
 To convert to an ERC20 on xDai without deploying a customized extension or dedicated mediators, see the OmniBridge UI.
-{% endhint %}
+:::

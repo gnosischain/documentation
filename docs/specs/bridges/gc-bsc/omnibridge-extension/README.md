@@ -6,12 +6,12 @@ description: Full duplex bridge for ERC20-based tokens between BSC and xDai
 
 The OmniBridge multi-token extension for the Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain is the simplest way to transfer **ANY** ERC20/ERC677/ERC827 token to and from the xDai chain.
 
-{% hint style="info" %}
+:::info
 * BSC-xDai isaccessed through the [OmniBridge UI](https://omni.xdaichain.com/bridge). Select BSC-xDai from the dropdown menu and set the MetaMask network to xDai or BSC to proceed.
 * OmniBridge does not require a UI for functionality, and[ tokens can be transferred manually](manual-tokens-transfer.md).
 * [Live Monitoring App](https://alm-bsc-xdai.herokuapp.com)
 * Additional items may be referenced in the [ETH-xDai Omnibridge Extension ](../../eth-xdai-amb-bridge/multi-token-extension/)section.
-{% endhint %}
+:::
 
 By using this extension any user (not only the token contract owner) can transfer tokens in both directions: from BSC to xDai and from the xDai chain to BSC with fast, inexpensive transactions and without deploying any additional contracts.
 

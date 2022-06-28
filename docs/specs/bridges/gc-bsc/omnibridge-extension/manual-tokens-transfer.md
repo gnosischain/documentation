@@ -6,17 +6,17 @@ description: How to transfer tokens manually through the BSC-xDai OmniBridge
 
 The OmniBridge is a decentralized application. Tokens can be transferred through the extension without using a dedicated UI.
 
-{% hint style="warning" %}
+:::warning
 Manual token transfers through the OmniBridge extension require that each step is performed properly. Funds may be lost if not performed properly. Proceed at your own risk.
-{% endhint %}
+:::
 
 ## BSC -> xDai: Transfer from the Binance Smart Chain to the xDai Chain.
 
-{% hint style="info" %}
+:::info
 The instructions below uses [MyEtherWallet](https://www.myetherwallet.com) to interaction with the token contract. This is due to currently limitations of  [BscScan](https://bscscan.com) where some token contracts cannot be verified and interaction is not possible.\
 \
 _One could find more convenient ways to interact with the token contracts._
-{% endhint %}
+:::
 
 1\. Login to [MyEtherWallet](https://www.myetherwallet.com). If MetaMask is used to login, the Binance Smart Chain must be [added to MetaMask](https://docs.binance.org/smart-chain/wallet/metamask.html) first.
 
@@ -91,12 +91,12 @@ Press the "Write" button and confirm the transaction in your web3 wallet. Wait f
 
 In the "Tokens Transfers" tab in BlockScout you can see the amount of tokens transferred through the bridge and token receiver.
 
-{% hint style="warning" %}
+:::warning
 The origin of the token will determine the operation mentioned. Token Origin:
 
 * Binance Smart Chain: Token Minting
 * xDai Chain: Token Transfer
-{% endhint %}
+:::
 
 ![](</img/specs/bridges/image-106.png>)
 
@@ -108,9 +108,9 @@ The origin of the token will determine the operation mentioned. Token Origin:
 
 ## xDai -> BSC: Transfer from the xDai Chain to the Binance Smart Chain
 
-{% hint style="warning" %}
+:::warning
 The token transfer process from the xDai chain to the Binance Smart Chain requires a user to send transactions on both chains. That is why the xDai native tokens and BNB native tokens are required to pay gas fees for these transactions.
-{% endhint %}
+:::
 
 1\. Choose the xDai chain in MetaMask. If it is not configured in MetaMask follow [these instructions](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to set it up.
 
@@ -140,13 +140,13 @@ Press the "Write" button and confirm the transaction in your wallet. Wait until 
 
 8\. Switch the chain to the Binance Smart Chain in MetaMask and press the "Execute" button to finalize the token transfer. This action collects the Arbitrary Message Bridge oracles confirmations and delivers them to BSC. BNB native tokens are required to pay for gas fees to finalize this transfer.
 
-{% hint style="info" %}
+:::info
 The transfer finalization can be performed without ALM by [collecting and delivering the oracles' confirmations manually](https://docs.tokenbridge.net/bsc-xdai-amb/about-the-bsc-xdai-amb/submit-confirmations-manually).
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::warning
 MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more. Although the FAQ is for the OmniBridge between Ethereum Mainnet and the xDai chain the reason why MetaMask provides higher gas usage estimate is the same.
-{% endhint %}
+:::
 
 ![](</img/specs/bridges/image-115.png>)
 

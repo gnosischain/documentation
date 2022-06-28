@@ -6,9 +6,9 @@ description: Instructions how to replace the interim token by the DAOstack token
 
 For demonstration purposes we use [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet)  to replace one token contract on the xDai chain by another one. These actions may be applied to any other wallet with similar capabilities.
 
-{% hint style="warning" %}
+:::warning
 Before changing the token from the interim token contract (`0x3E12081DD66A3600FC0A2E6cc9e6b5B3b8f037f6`) to the DAOstack token contract (`0x543Ff227F64Aa17eA132Bf9886cAb5DB55DCAddf`) **it is necessary to make sure** that the balance of the GEN-xGEN bridge extension is zero - the mediator contract of the extension on the side of the Ethereum Mainnet does not own any amount of GEN tokens. If so, withdraw all the xGEN tokens from the xDai chain.
-{% endhint %}
+:::
 
 ### Assign the mediator contract as the DAOstack token contract owner
 

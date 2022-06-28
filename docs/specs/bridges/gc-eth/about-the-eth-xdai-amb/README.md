@@ -36,6 +36,6 @@ Additional fees may be introduced at a later time to cover expenses incurred by 
 
 Withdrawal requests call the `transfer` method of the token contracts with the mediator contract address as the recipient (the multitoken/erc20-to-erc20 extension for AMB).
 
-{% hint style="success" %}
+:::success
 A detailed description of the AMB and examples of AMB extensions are available here: [Arbitrary Message Bridge (AMB)](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge).
-{% endhint %}
+:::

@@ -8,13 +8,13 @@ description: >-
 
 The NFT extension is operational, and a UI to transfer NFTs is currently in development. For now, users can access and write to contracts using BlockScout and Etherscan. In the following example, we will bridge an EIP-1155 NFT and an NFT collection from xDai to Ethereum and back using methods accessed through these block explorers.
 
-{% hint style="warning" %}
+:::warning
 The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between xDai and Ethereum.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::info
 If you want to bridge an [ERC721 NFT, instructions are available here](nft-transfer-example.md).
-{% endhint %}
+:::
 
 ## :bridge\_at\_night:-> xDai to Ethereum
 
@@ -26,9 +26,9 @@ The process consists of several steps.
 2. Initiate a request to transfer.
 3. Finalize the transfer request on Ethereum.
 
-{% hint style="info" %}
+:::info
 Token contracts must be verified in BlockScout to access write operations. If your token contract is not yet verified, [follow these steps for BlockScout](https://docs.blockscout.com/for-users/smart-contract-interaction/verifying-a-smart-contract).
-{% endhint %}
+:::
 
 ## 1) Locate your NFT
 
@@ -98,12 +98,12 @@ You can follow the status on the monitor. Once 4 validators are successful you c
 
 ![](</img/specs/bridges/image-157.png>)
 
-{% hint style="info" %}
+:::info
 Gas fee estimates to transfer may be prohibitively expensive. Note:
 
 * Fees will likely be significantly lower than the estimate.
 * You can try return later when fees are lower and execute then. There is no time limit for the transfer.
-{% endhint %}
+:::
 
 Once the transaction is verified and included in a block, the token will be transferred to the same account on Ethereum that called the `safeTransferFrom`/`safeBatchTransferFrom`method.
 

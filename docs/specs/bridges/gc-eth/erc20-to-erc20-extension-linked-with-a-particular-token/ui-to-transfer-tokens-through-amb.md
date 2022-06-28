@@ -6,9 +6,9 @@ description: How to develop a web-application to transfer tokens through AMB
 
 This manual describes how to rapidly develop a web-application to transfer tokens using the Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain. It assumes that an `erc-to-erc` extension was deployed [using these steps](deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md).
 
-{% hint style="info" %}
+:::info
 The application is based on [the Burner Wallet 2 interface](https://github.com/burner-wallet/burner-wallet-2). Quick launch of a new application is possible with [the TokenBridge plugin developed for the Arbitrary Message Bridge mediators](https://github.com/poanetwork/tokenbridge/tree/master/burner-wallet-plugin).
-{% endhint %}
+:::
 
 ![The main page of the BW2-based application to transfer tokens through AMB](</img/specs/bridges/image-46.png>)
 
@@ -20,9 +20,9 @@ Before developing the application developing, the following must be prepared:
 * the ERC20/ERC677/ERC827 token contract address in the Ethereum Mainnet
 * the ERC677 token contract address deployed together with the mediators
 
-{% hint style="warning" %}
+:::warning
 For demonstration purposes, data for [the sUSD AMB extension](susd-bridge-extension/) will be used below.
-{% endhint %}
+:::
 
 ## Instructions
 
@@ -39,7 +39,7 @@ cd tokenbridge-burner-wallet-plugin bw-plugin
 * `my-plugin/src/assets/xsUSD.ts` is for the ERC677 token created by the `erc-to-erc` AMB extension deployment process.
 
 {% tabs %}
-{% tab title="my-plugin/src/assets/sUSD.ts" %}
+{% tab title="my-plugin/src/assets/sUSD.ts
 ```javascript
 import { BridgeableERC20Asset } from '@poanet/tokenbridge-bw-exchange'
 
@@ -53,7 +53,7 @@ export default new BridgeableERC20Asset({
 ```
 {% endtab %}
 
-{% tab title="my-plugin/src/assets/xsUSD.ts" %}
+{% tab title="my-plugin/src/assets/xsUSD.ts
 ```javascript
 import { ERC677Asset } from '@poanet/tokenbridge-bw-exchange'
 
@@ -69,7 +69,7 @@ export default new ERC677Asset({
 
 3\. Rename `my-plugin/src/pairs/StakeBridge.ts` to `my-plugin/src/pairs/sUSDBridge.ts` and replace its contents as follows:
 
-{% code title="my-plugin/src/pairs/sUSDBridge.ts" %}
+{% code title="my-plugin/src/pairs/sUSDBridge.ts
 ```javascript
 import { Mediator } from '@poanet/tokenbridge-bw-exchange'
 import { sUSD, xsUSD } from '../index'
@@ -90,17 +90,17 @@ export default class sUSDBridge extends Mediator {
   }
 }
 ```
-{% endcode %}
+:::
 
 4\. Modify `my-plugin/src/index.ts` to export new assets and the bridgeable pair.
 
-{% code title="my-plugin/src/index.ts" %}
+{% code title="my-plugin/src/index.ts
 ```javascript
 export { default as sUSD } from './assets/sUSD'
 export { default as xsUSD } from './assets/xsUSD'
 export { default as sUSDBridge } from './pairs/sUSDBridge'
 ```
-{% endcode %}
+:::
 
 5\. Modify `wallet/src/index.tsx` to operate with new objects:
 

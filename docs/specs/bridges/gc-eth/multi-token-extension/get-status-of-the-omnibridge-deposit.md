@@ -6,17 +6,17 @@ description: >-
 
 # Get status of the OmniBridge deposit
 
-{% hint style="warning" %}
+:::warning
 This page is mostly for the application developers, if you sent tokens through the OmniBridge and would like to get the status whether the tokens were sent successfully or not, please use [AMB Live Monitoring application](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application) instead.
-{% endhint %}
+:::
 
 First of all, the Arbitrary Message Bridge contract (`0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e`) which is used by the OmniBridge, emits the `UserRequestForAffirmation` event as part of the a deposit request made by user.
 
-{% code title="https://github.com/poanetwork/tokenbridge-contracts/blob/feb0ba555cb8bf74f7fa21911120d878715a0a84/contracts/upgradeable_contracts/arbitrary_message/ForeignAMB.sol#L6" %}
+{% code title="https://github.com/poanetwork/tokenbridge-contracts/blob/feb0ba555cb8bf74f7fa21911120d878715a0a84/contracts/upgradeable_contracts/arbitrary_message/ForeignAMB.sol#L6
 ```
 event UserRequestForAffirmation(bytes32 indexed messageId, bytes encodedData);
 ```
-{% endcode %}
+:::
 
 For example, here is the event in the OmniBridge transaction: [https://etherscan.io/tx/0x804a4b28520faad8b68d122cafdffedd2e185a9aa734b69f264a652d5c53afa4#eventlog](https://etherscan.io/tx/0x804a4b28520faad8b68d122cafdffedd2e185a9aa734b69f264a652d5c53afa4#eventlog), the topic `0x482515ce3d9494a37ce83f18b72b363449458435fafdd7a53ddea7460fe01b58`.
 
@@ -26,7 +26,7 @@ It is obvious from the event definition and from the example that the Id of the 
 
 On another side of the bridge if the message was executed successfully the AMB contract (`0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59`) emits the `AffirmationCompleted` event.
 
-{% code title="https://github.com/poanetwork/tokenbridge-contracts/blob/feb0ba555cb8bf74f7fa21911120d878715a0a84/contracts/upgradeable_contracts/arbitrary_message/HomeAMB.sol#L7-L12" %}
+{% code title="https://github.com/poanetwork/tokenbridge-contracts/blob/feb0ba555cb8bf74f7fa21911120d878715a0a84/contracts/upgradeable_contracts/arbitrary_message/HomeAMB.sol#L7-L12
 ```
 event AffirmationCompleted(
     address indexed sender,
@@ -35,7 +35,7 @@ event AffirmationCompleted(
     bool status
 );
 ```
-{% endcode %}
+:::
 
 Here is the event corresponding to the requests from the example: [https://blockscout.com/xdai/mainnet/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs](https://blockscout.com/xdai/mainnet/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs)
 
