@@ -57,7 +57,7 @@ The following processes use [Docker](https://www.docker.com) to generate keystor
 :::
 
 :::note
-We highly recommend generating keystores on a safe, completely offline device. To do so, you will need to connect online to pull the docker image (step 1), then disconnect to proceed with key generation (step 2), then finally save your deposit\_data.json file (step 3) to a usb key or other transfer method that does not require online connection.
+We highly recommend generating keystores on a safe, completely offline device. To do so, you will need to connect online to pull the docker image-step 1), then disconnect to proceed with key generation (step 2), then finally save your deposit\_data.json file (step 3) to a usb key or other transfer method that does not require online connection.
 
 Securely backup your mnemonic, keystores, and password and keep in a safe place.
 :::
