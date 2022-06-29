@@ -1,27 +1,27 @@
 ---
 description: >-
-  Use the NFT OmniBridge extension to transfer ERC721 NFTs between xDai and
+  Use the NFT OmniBridge extension to transfer ERC721 NFTs between Gnosis Chain and
   Ethereum
 ---
 
 # ERC721-based NFT Transfer Example
 
-The NFT extension is operational, and a UI to transfer ERC721 NFTs is currently in development. For now, users can access and write to contracts using BlockScout and Etherscan. In the following example, we will bridge an NFT from xDai to Ethereum and back using methods accessed through these block explorers.
+The NFT extension is operational, and a UI to transfer ERC721 NFTs is currently in development. For now, users can access and write to contracts using BlockScout and Etherscan. In the following example, we will bridge an NFT from Gnosis Chain to Ethereum and back using methods accessed through these block explorers.
 
 :::warning
-The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between xDai and Ethereum.
+The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between Gnosis Chain and Ethereum.
 :::
 
 :::info
 If you want to bridge an [ERC1155 NFT or NFT collection, instructions are here](eip1155-based-nft-transfer-example.md).
 :::
 
-## -> xDai to Ethereum
+## -> Gnosis Chain to Ethereum
 
-NFTs can be minted on xDai very inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The process consists of several steps.
+NFTs can be minted on Gnosis Chain very inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The process consists of several steps.
 
 1. Locate your NFT contract and tokenID.
-2. Approve the mediator contract on xDai to transfer your NFT.
+2. Approve the mediator contract on Gnosis Chain to transfer your NFT.
 3. Initiate a request to transfer.
 4. Finalize the transfer request on Ethereum.
 
@@ -48,7 +48,7 @@ ERC721`transferFrom` functionality allows the contract to transfer your token an
 2. Press the **Connect to MetaMask** button to connect the address that holds the NFT
 3. In the `approve` method, add the following:
    1. to (address): [`0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC`](https://blockscout.com/poa/xdai/address/0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC) \
-      _This is the xDai mediator contract._
+      _This is the Gnosis Chain mediator contract._
    2. tokenId (uint256): TokenID for your ERC721\
       _May vary in size depending on how ids are created for this NFT. _
 4. Click the **Write **button and confirm in MetaMask.
@@ -70,7 +70,7 @@ Open the mediator contract ([`0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC`](https
 
 ## 4) Finalize the Transfer on Ethereum
 
-The Arbitrary Message Bridge oracles will use the xDai chain to collect confirmations of the NFT token transfer. As soon as the confirmations are collected, they will be relayed to Ethereum for finalization.
+The Arbitrary Message Bridge oracles will use the Gnosis Chain to collect confirmations of the NFT token transfer. As soon as the confirmations are collected, they will be relayed to Ethereum for finalization.
 
 1\) Find and copy the transaction hash id of the previous transaction (`relayToken`). You can find this in your MetaMask wallet in the Activity section. Click on the Contract Interaction and the Details icon to copy the tx hash.
 
@@ -97,9 +97,9 @@ Gas fee estimates to transfer may be prohibitively expensive. Note:
 
 Once the transaction is verified and included in a block, the token will be transferred to the same account on Ethereum that called the `relayTokens` method.
 
-## -> Ethereum to xDai
+## -> Ethereum to Gnosis Chain
 
-The following process is similar to the above using Etherscan rather than BlockScout to write transactions. You will not need to manually execute on the xDai side, it is automated when bridging NFTs from Ethereum to xDai.
+The following process is similar to the above using Etherscan rather than BlockScout to write transactions. You will not need to manually execute on the Gnosis Chain side, it is automated when bridging NFTs from Ethereum to Gnosis Chain.
 
 ## 1) Locate your NFT
 
@@ -139,7 +139,7 @@ Open the mediator contract ([`0x6C8d0AFDDBD29a0954feEB73904923fC8f73C480`](https
 
 ## 4) Monitor progress and view in BlockScout when complete
 
-The Arbitrary Message Bridge oracles will send confirmations to the xDai chain. As soon as enough confirmations received, the transfer is executed automatically (does not need manual execution as opposed to xDai -> Eth transfers).
+The Arbitrary Message Bridge oracles will send confirmations to the Gnosis Chain. As soon as enough confirmations received, the transfer is executed automatically (does not need manual execution as opposed to GC -> Eth transfers).
 
 You can monitor this progress with the ALM tool at [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com). Paste in the tx hash from the contract interaction in MetaMask to monitor.
 

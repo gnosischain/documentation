@@ -10,7 +10,7 @@ New tokens deployed by the multi-token mediator are not verified automatically i
 
 ![](</img/specs/bridges/image-78.png>)
 
-The bridgeable token name is extended by "on xDai":
+The bridgeable token name is extended by "on GC":
 
 ![](</img/specs/bridges/image-80.png>)
 

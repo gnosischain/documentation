@@ -4,7 +4,7 @@ description: Instructions how to manually submit the oracles' confirmation to th
 
 # Submit confirmations manually
 
-The Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain requires a request-and-claim scheme to transfer data from the xDai chain. This scheme requires at least two transactions to pass the message from the xDai chain: one transaction to initiate the message transfer and a second to forward collected oracles' confirmations about the message transfer request to the contracts on BSC.
+The Arbitrary Message Bridge between the Binance Smart Chain and the Gnosis Chain requires a request-and-claim scheme to transfer data from the Gnosis Chain. This scheme requires at least two transactions to pass the message from the Gnosis Chain: one transaction to initiate the message transfer and a second to forward collected oracles' confirmations about the message transfer request to the contracts on BSC.
 
 Some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the BSC side.
 
@@ -27,5 +27,5 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 ![](</img/specs/bridges/image-121.png>)
 
 :::warning
-MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more. Although the FAQ is for the OmniBridge between Ethereum Mainnet and the xDai chain the reason why MetaMask provides higher gas usage estimate is the same.
+MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more. Although the FAQ is for the OmniBridge between Ethereum Mainnet and the Gnosis Chain the reason why MetaMask provides higher gas usage estimate is the same.
 :::

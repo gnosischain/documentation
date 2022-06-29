@@ -4,7 +4,7 @@ description: >-
   oracles on the same node
 ---
 
-# Add-on: xDai and AMB bridge oracles on the same node
+# Add-on: GC and AMB bridge oracles on the same node
 
 There are several benefits to hosting the xDai bridge and Arbitrary Message Bridge oracles on the same node:
 

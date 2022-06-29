@@ -2,15 +2,15 @@
 description: Instructions on relaying Synth sUSD tokens through the sUSD bridge extension
 ---
 
-# Transfer sUSD between the ETH Mainnet and the xDai Chain using the sUSD bridge extension
+# Transfer sUSD between the ETH Mainnet and the Gnosis Chain using the sUSD bridge extension
 
-One of the simplest ways to transfer Synth sUSD tokens through the bridge extension is to use [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet). MEW may be used for both types of operations: to deposit tokens to the xDai chain and to withdraw tokens from the xDai chain.
+One of the simplest ways to transfer Synth sUSD tokens through the bridge extension is to use [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet). MEW may be used for both types of operations: to deposit tokens to the Gnosis Chain and to withdraw tokens from the Gnosis Chain.
 
 :::info
 You will need a small amount of Ether for gas fees and an amount of sUSD to transfer for this tutorial. sUSD can be obtained through [Uniswap](https://uniswap.exchange) or other exchanges.
 :::
 
-## Deposit sUSD tokens to the xDai chain
+## Deposit sUSD tokens to the Gnosis Chain
 
 1. Activate and open a web3 wallet (like MetaMask or Nifty Wallet) and select the Ethereum Mainnet chain. Go to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 2. 1\) Select the **Interact with Contract** item from the sidebar menu
@@ -68,25 +68,25 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 5\) Choose an appropriate `relayTokens` method. There are two possible methods:
 
-1. `relayTokens(address _receiver, uint256 _amount)`- Used to transfer sUSD tokens to a recipient in the xDai chain.
+1. `relayTokens(address _receiver, uint256 _amount)`- Used to transfer sUSD tokens to a recipient in the Gnosis Chain.
 2. `relayTokens(address _from, address _receiver, uint256 _amount)` - Used in scenarios when the sUSD tokens deposit is performed by another contract on behalf of a user account (e.g. by a DEX).
 3. 1\) Select the **first** relayTokens method
-4. 2\) `_receiver` - Enter the account that will receive the sUSD tokens on the xDai chain. We assume the same account that deposits the token also receives the token, so enter the address (from your web3wallet & shown in MEW) you are initiating the transfer from.
+4. 2\) `_receiver` - Enter the account that will receive the sUSD tokens on the Gnosis Chain. We assume the same account that deposits the token also receives the token, so enter the address (from your web3wallet & shown in MEW) you are initiating the transfer from.
 5. 3\)`_amount` -- the amount of tokens (in Wei) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
 6. 4\) Press **Write**.
 
 ![](/img/specs/bridges/sUSD5.png)
 
 1. Check the gas price, then Submit the transaction your web3wallet and wait until it is included in the chain.
-2. It will require the AMB bridge a short amount time to relay the deposit request to the xDai chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token-transfers).
+2. It will require the AMB bridge a short amount time to relay the deposit request to the Gnosis Chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token-transfers).
 
 ## View Balances
 
-9\) To view your sUSD token balance on the xDai chain using Nifty Wallet ( use a similar process with MetaMask):
+9\) To view your sUSD token balance on the Gnosis Chain using Nifty Wallet ( use a similar process with MetaMask):
 
-* 1\) Select the **xDai chain**.
+* 1\) Select the **Gnosis Chain**.
 * 2\) Click **Add Token.**
-* 3\) Enter the sUSD xDai Token Address:  `0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e`
+* 3\) Enter the sUSD GC Token Address:  `0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e`
 * 4\) Click **Add.**
 
 ![](</img/specs/bridges/nifty1-1-2.png>)
@@ -94,12 +94,12 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 ![](/img/specs/bridges/Nifty2.png)
 
 :::success
-You should now see your newly transferred sUSD balance on the xDAi chain.
+You should now see your newly transferred sUSD balance on the Gnosis Chain.
 :::
 
-## Withdraw sUSD tokens from the xDai chain
+## Withdraw sUSD tokens from the Gnosis Chain
 
-1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet). Select to the **Interact with Contract** item in the side navigation menu. (_note: you must have sUSD tokens in your wallet on the xDai chain to proceed_)
+1. Choose the Gnosis Chain in the browser wallet extension and login to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet). Select to the **Interact with Contract** item in the side navigation menu. (_note: you must have sUSD tokens in your wallet on the Gnosis Chain to proceed_)
 2. Initialize the sUSD bridgeable token contract interface:
 3. 1\) Add the token **Contract Address**`0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e` .
 4. 2\) Add the following JSON in the **`ABI/JSON Interface`** field:
@@ -117,7 +117,7 @@ You should now see your newly transferred sUSD balance on the xDAi chain.
 
 1. Transfer the sUSD bridgeable tokens to the mediator contract:
 2. 1\) Select transfer from the the **Select an Item** dropdown
-3. 2\) Enter in the `_to` address:`0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B` . This is the  mediator contract serving the bridge extension in the xDai chain.
+3. 2\) Enter in the `_to` address:`0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B` . This is the  mediator contract serving the bridge extension in the Gnosis Chain.
 4. 3\) Enter the value to transfer in Wei in the `_value` field.
 5. 4\) Click **Write.**
 

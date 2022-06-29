@@ -4,7 +4,7 @@ NFT UI is now in Beta, with additional features and functionality in progress. T
 
 Current functionality is inherited from the OmniBridge UI for ERC20s and includes:
 
-1. **Network Switcher.** There is current support for 2 bridges, Rinkeby<->xDai and Mainnet<->xDai. Switching to the appropriate network in MetaMask will also influence the display.
+1. **Network Switcher.** There is current support for 2 bridges, Rinkeby<->Gnosis Chain and Ethereum Mainnet<->Gnosis Chain. Switching to the appropriate network in MetaMask will also influence the display.
 2. **History Tab**. Shows previous transactions and any available claims.
 3. **Advanced.** Use to set an alternate receiving address on the destination chain (send to another address)
 4. **ERC-721 & ERC-1155 Support**. Scroll down to see any ERC-1155 Tokens owned by the connected address. You can transfer multiple ERC-1155s with a single bridge tx.
@@ -12,7 +12,7 @@ Current functionality is inherited from the OmniBridge UI for ERC20s and include
 ![](/img/specs/bridges/nft-bridge-1.png)
 
 :::warning
-The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between xDai and Ethereum.
+The NFT Extension is in Beta and transfers are performed at your own risk. NFT transfers can be very expensive and are not reversible once you initiate a transfer. Keep this in mind when deciding whether or not to bridge NFTs between Gnosis Chain and Ethereum.
 :::
 
 ## Simple Transfer Instruction
@@ -37,7 +37,7 @@ The NFT Extension is in Beta and transfers are performed at your own risk. NFT t
 
 ![](/img/specs/bridges/claim1-2.png)
 
-6\) View the History tab ([https://xdai-omnibridge-nft-staging.web.app/history](https://xdai-omnibridge-nft-staging.web.app/history)) to see the claim button and previously claimed transactions. For testing purposes, the xDai <-> Rinkeby bridge is currently set to auto-claim, so the NFT is automatically claimed to your address without needing to process a 2nd claim transaction.
+6\) View the History tab ([https://xdai-omnibridge-nft-staging.web.app/history](https://xdai-omnibridge-nft-staging.web.app/history)) to see the claim button and previously claimed transactions. For testing purposes, the Gnosis Chain <-> Rinkeby bridge is currently set to auto-claim, so the NFT is automatically claimed to your address without needing to process a 2nd claim transaction.
 
 ![](/img/specs/bridges/img6.png)
 

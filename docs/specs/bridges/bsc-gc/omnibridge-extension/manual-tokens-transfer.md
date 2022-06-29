@@ -1,5 +1,5 @@
 ---
-description: How to transfer tokens manually through the BSC-xDai OmniBridge
+description: How to transfer tokens manually through the BSC-GC OmniBridge
 ---
 
 # Manual tokens transfer (No UI)
@@ -10,7 +10,7 @@ The OmniBridge is a decentralized application. Tokens can be transferred through
 Manual token transfers through the OmniBridge extension require that each step is performed properly. Funds may be lost if not performed properly. Proceed at your own risk.
 :::
 
-## BSC -> xDai: Transfer from the Binance Smart Chain to the xDai Chain.
+## BSC -> GC: Transfer from the Binance Smart Chain to the Gnosis Chain.
 
 :::info
 The instructions below uses [MyEtherWallet](https://www.myetherwallet.com) to interaction with the token contract. This is due to currently limitations of  [BscScan](https://bscscan.com) where some token contracts cannot be verified and interaction is not possible.\
@@ -95,7 +95,7 @@ In the "Tokens Transfers" tab in BlockScout you can see the amount of tokens tra
 The origin of the token will determine the operation mentioned. Token Origin:
 
 * Binance Smart Chain: Token Minting
-* xDai Chain: Token Transfer
+* Gnosis Chain: Token Transfer
 :::
 
 ![](</img/specs/bridges/image-106.png>)
@@ -106,13 +106,13 @@ The origin of the token will determine the operation mentioned. Token Origin:
 
 ![](</img/specs/bridges/image-108.png>)
 
-## xDai -> BSC: Transfer from the xDai Chain to the Binance Smart Chain
+## GC -> BSC: Transfer from the Gnosis Chain to the Binance Smart Chain
 
 :::warning
-The token transfer process from the xDai chain to the Binance Smart Chain requires a user to send transactions on both chains. That is why the xDai native tokens and BNB native tokens are required to pay gas fees for these transactions.
+The token transfer process from the Gnosis Chain to the Binance Smart Chain requires a user to send transactions on both chains. That is why the xDai native tokens and BNB native tokens are required to pay gas fees for these transactions.
 :::
 
-1\. Choose the xDai chain in MetaMask. If it is not configured in MetaMask follow [these instructions](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to set it up.
+1\. Choose the Gnosis Chain in MetaMask. If it is not configured in MetaMask follow [these instructions](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to set it up.
 
 2\. Use the [BlockScout site](https://blockscout.com/xdai/mainnet) to find the token you want to bridge.
 
@@ -145,7 +145,7 @@ The transfer finalization can be performed without ALM by [collecting and delive
 :::
 
 :::warning
-MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more. Although the FAQ is for the OmniBridge between Ethereum Mainnet and the xDai chain the reason why MetaMask provides higher gas usage estimate is the same.
+MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower. Please refer to [the OmniBridge UI FAQ](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate) to learn more. Although the FAQ is for the OmniBridge between Ethereum Mainnet and the Gnosis Chain the reason why MetaMask provides higher gas usage estimate is the same.
 :::
 
 ![](</img/specs/bridges/image-115.png>)

@@ -1,16 +1,16 @@
-# Transfer any ERC20 from Ethereum to xDai
+# Transfer any ERC20 from Ethereum to Gnosis Chain
 
-It is possible to use the OmniBridge UI to transfer any ERC20 from Ethereum to xDai. Any user can initiate this initial transfer. Once the token exists on xDai, it can be transferred back and forth using the same UI.
+It is possible to use the OmniBridge UI to transfer any ERC20 from Ethereum to Gnosis Chain. Any user can initiate this initial transfer. Once the token exists on Gnosis Chain, it can be transferred back and forth using the same UI.
 
 :::warning
-OmniBridge and OmniBridge UI are experimental Beta software, use at your own risk. Access the unofficial OmniBridge UI: [https://omni.xdaichain.com/](https://omni.xdaichain.com)
+OmniBridge and OmniBridge UI are experimental Beta software, use at your own risk. Access the unofficial OmniBridge UI: [https://omni.gnosischain.com/](https://omni.gnosischain.com)
 :::
 
 ## Token Transfer
 
-In this example, we transfer the Basic Attention Token (BAT) from Ethereum to xDai. When we start, this token does not yet exist on xDai. It takes less than 5 minutes and some ETH for gas fees.
+In this example, we transfer the Basic Attention Token (BAT) from Ethereum to Gnosis Chain. When we start, this token does not yet exist on Gnosis Chain. It takes less than 5 minutes and some ETH for gas fees.
 
-1\) Go to the OmniBridge UI at [https://omni.xdaichain.com/](https://omni.xdaichain.com)
+1\) Go to the OmniBridge UI at [https://omni.gnosischain.com/](https://omni.gnosischain.com)
 
 1. Connect your MetaMask to Ethereum Mainnet
 2. Select the Token you want to transfer (here we select BAT) and enter the amount.
@@ -22,7 +22,7 @@ In this example, we transfer the Basic Attention Token (BAT) from Ethereum to xD
 
 ![](/img/specs/bridges/Omni2.jpg)
 
-3\) Once approve TX is complete, you can now Transfer BAT to BAT on xDai. Click **Transfer.**
+3\) Once approve TX is complete, you can now Transfer BAT to BAT on GC. Click **Transfer.**
 
 ![](/img/specs/bridges/Omni3.jpg)
 
@@ -48,13 +48,13 @@ a. Prior to transaction
 
 b. After transaction
 
-![BAT added to xDai, you can see the new contract address here](/img/specs/bridges/bridge2.jpg)
+![BAT added to GC, you can see the new contract address here](/img/specs/bridges/bridge2.jpg)
 
 ## Add the New Token to MetaMask
 
-Now that you have bridged to xDai, you will need to add the token to MetaMask to view.
+Now that you have bridged to Gnosis Chain, you will need to add the token to MetaMask to view.
 
-1\) Switch your MetaMask to the xDai chain (if you haven't setup yet, instructions here). Click on Assets, then scroll down and click Add Token.
+1\) Switch your MetaMask to the Gnosis Chain (if you haven't setup yet, instructions here). Click on Assets, then scroll down and click Add Token.
 
 ![](</img/specs/bridges/mmx1-1.jpg>)
 
@@ -63,17 +63,17 @@ _Note: Do not use the search feature, as this will search for tokens on Ethereum
 
 ![](/img/specs/bridges/mmx2.jpg)
 
-3\) Click **Add Tokens** to add to your wallet on the xDai chain.
+3\) Click **Add Tokens** to add to your wallet on the Gnosis Chain.
 
 ![](/img/specs/bridges/mmx3.jpg)
 
-## Find a Custom Token Address on xDai
+## Find a Custom Token Address on Gnosis Chain
 
-There are several ways to find the Custom token address on xDai using BlockScout.
+There are several ways to find the Custom token address on GC using BlockScout.
 
 1\) BlockScout Bridged Token List. If you successfully bridged a token with the OmniBridge, you can find it at [https://blockscout.com/xdai/mainnet/bridged-tokens](https://blockscout.com/xdai/mainnet/bridged-tokens).
 
-2\) Via your address on BlockScout. Paste your address into the BlockScout Search bar at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) and click the Tokens tab to see all the tokens associated with your address on xDai.
+2\) Via your address on BlockScout. Paste your address into the BlockScout Search bar at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) and click the Tokens tab to see all the tokens associated with your address on Gnosis Chain.
 
 ![](/img/specs/bridges/blockscout-search.jpg)
 

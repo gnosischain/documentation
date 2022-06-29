@@ -17,6 +17,6 @@ There are currently two bridges on Gnosis Chain that connect it to the Ethereum 
 | Max per day             | Updated to 10,000,000 per day in either direction with [governance decision](https://forum.poa.network/t/increase-daily-limit-for-xdai-withdrawals-from-the-xdai-to-the-mainnet/3823). Day resets at 00:00 UTC.                      |
 | FAQs                    | [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge)                                                                         |
 
-The Gnosis Chain uses the ERC20 to Native TokenBridge functionality to provide fast, inexpensive and stable transactions. This bridge allows users to transform DAI (an ERC20 stable token) on the mainnet into xDAI on a compatible chain. xDAI tokens can then be sent quickly and with minimal cost on the xDAI network. The Gnosis Chain has been a breakout success in the Ethereum community, providing an easy way for vendors to accept a stable cryptocurrency.
+The Gnosis Chain uses the ERC20 to Native TokenBridge functionality to provide fast, inexpensive and stable transactions. This bridge allows users to transform DAI (an ERC20 stable token) on the mainnet into xDAI on a compatible chain. xDAI tokens can then be sent quickly and with minimal cost on the Gnosis Chain. The Gnosis Chain has been a breakout success in the Ethereum community, providing an easy way for vendors to accept a stable cryptocurrency.
 
 ![](/img/specs/bridges/xdai-bridge.png)

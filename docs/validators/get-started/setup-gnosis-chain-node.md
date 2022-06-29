@@ -30,7 +30,7 @@ Features:
 
 ### 3rd Party Service Providers
 
-Third party node providers are also an option for setting up and running a Gnosis (xDai) Chain Node.
+Third party node providers are also an option for setting up and running a Gnosis Chain Node.
 
 * **QuickNode** [https://blog.quiknode.io/xdai-network-is-live-on-quiknode/](https://blog.quicknode.com/xdai-network-is-live-on-quiknode/)
 * **Ankr** [https://www.ankr.com/](https://www.ankr.com/protocol/public/gnosis/)

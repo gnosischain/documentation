@@ -44,7 +44,7 @@ mGNO is typically wrapped behind the scenes during a deposit. If you need extra 
 
 ![](/img/validators/swap-12.png)
 
-You must have GNO on the Gnosis Chain (**not on the Ethereum mainnet**) to convert to mGNO. You can move GNO from Ethereum to xDai using the [OmniBridge](https://omni.gnosischain.com/bridge).
+You must have GNO on the Gnosis Chain (**not on the Ethereum mainnet**) to convert to mGNO. You can move GNO from Ethereum to Gnosis Chain using the [OmniBridge](https://omni.gnosischain.com/bridge).
 
 ### How much mGNO do I need to stake to become a validator?
 

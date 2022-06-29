@@ -10,7 +10,7 @@ Before you begin the setup, please check the [Validator Requirements and Respons
 When you are ready, you will perform the following steps to get things up and running.
 
 :::caution
-**Optional:**  [Setup and run a Gnosis Chain (GC) Node](#1-setup-and-run-a-gnosis-chain-formerly-xdai-node): This step is for experienced node runners only. To begin, it is not needed but will be encouraged for the merge. Instructions below include a default option to connect to the public RPC.
+**Optional:**  [Setup and run a Gnosis Chain Node](/validators/client/nethermind-node-setup): This step is for experienced node runners only. To begin, it is not needed but will be encouraged for the merge. Instructions below include a default option to connect to the public RPC.
 :::
 
 1. [Generate Validator Keystores and Deposit Data](#step-1-generate-validator-accounts-and-deposit-data): On an offline machine, generate up to 128 separate validator keys per node.

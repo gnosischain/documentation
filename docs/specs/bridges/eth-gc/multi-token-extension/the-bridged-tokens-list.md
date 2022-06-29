@@ -8,11 +8,11 @@ description: Tokens Bridged using the multi-token bridge extension
 A dynamic list with additional information is now available at [https://blockscout.com/xdai/mainnet/bridged-tokens](https://blockscout.com/xdai/mainnet/bridged-tokens)
 :::
 
-The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to xDai. When a token is bridged, the name is appended with _**on xDai**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](correspondence-of-bridgeable-tokens.md).
+The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to Gnosis Chain. When a token is bridged, the name is appended with _**on GC**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](correspondence-of-bridgeable-tokens.md).
 
 ## 🌱 The Bridged Token List is growing daily! 🌱
 
-| Token | On xDai | On Ethereum  |
+| Token | On GC | On Ethereum  |
 | :--- | :--- | :--- |
 | STAKE | [0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e](https://blockscout.com/xdai/mainnet/tokens/0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e/token_transfers) | [0x0ae055097c6d159879521c384f1d2123d1f195e6](https://etherscan.io/token/0x0ae055097c6d159879521c384f1d2123d1f195e6) |
 | USDT | [0x4ECaBa5870353805a9F068101A40E0f32ed605C6](https://blockscout.com/xdai/mainnet/tokens/0x4ECaBa5870353805a9F068101A40E0f32ed605C6) | [0xdac17f958d2ee523a2206206994597c13d831ec7](https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7) |

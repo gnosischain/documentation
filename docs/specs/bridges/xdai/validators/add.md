@@ -56,7 +56,7 @@ The submitter will execute these methods: `addValidator` and (optionally) `setRe
 
 ### **2.2 Gnosis Chain**
 
-* a. Open Nifty Wallet, switch to the xDai network and go to **xDai** contract account `0x0d3726e5a9f37234d6b55216fc971d30f150a60f`. If you have not used this feature before and need to import the contract, see [https://medium.com/poa-network/nifty-wallet-now-supports-interactions-with-smart-contracts-5e8c43c19e3a](https://medium.com/poa-network/nifty-wallet-now-supports-interactions-with-smart-contracts-5e8c43c19e3a)
+* a. Open Nifty Wallet, switch to the Gnosis Chain and go to **xDai** contract account `0x0d3726e5a9f37234d6b55216fc971d30f150a60f`. If you have not used this feature before and need to import the contract, see [https://medium.com/poa-network/nifty-wallet-now-supports-interactions-with-smart-contracts-5e8c43c19e3a](https://medium.com/poa-network/nifty-wallet-now-supports-interactions-with-smart-contracts-5e8c43c19e3a)
 * b. Click **Execute Methods**, and choose the `submitTransaction` method
 * c. Destination address is `0xb289f0e6fbdff8eee340498a56e1787b303f1b6d`
 * d. Value is 0

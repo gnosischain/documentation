@@ -12,7 +12,7 @@ Gnosis Beacon Chain (GBC) is live based on a Q4 soft launch for small-scale, dis
 * GBC Explorer: [https://beacon.gnosischain.com](https://beacon.gnosischain.com/)
 :::
 
-‌The Gnosis Beacon Chain offers a new consensus opportunity for the Gnosis (formerly xDai) Chain. It  will start with modified client implementations (Prysm/Lighthouse) to support faster blocks and built for a wider community of diverse validators.
+‌The Gnosis Beacon Chain offers a new consensus opportunity for the Gnosis Chain. It  will start with modified client implementations (Prysm/Lighthouse) to support faster blocks and built for a wider community of diverse validators.
 
 ‌While the Eth 2.0 staking deposit contract has attracted an impressive number of validators (200K+), these validators must each contribute 32 ETH to participate. This amount is out of reach for many blockchain users. In addition, centralized exchanges are pooling funds to create largely connected staking pools which may limit overall decentralization.
 

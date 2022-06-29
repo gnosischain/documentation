@@ -13,7 +13,7 @@ Validators are selected based on the amount of STAKE they place into the protoco
 :::
 
 :::info
-Prior to Public POSDAO, Permissioned POSDAO was used nominated validators to sign blocks. xDai transitioned to public POSDAO in December, 2020.
+Prior to Public POSDAO, Permissioned POSDAO was used nominated validators to sign blocks. Gnosis Chain (formerly xDai Chain) transitioned to public POSDAO in December, 2020.
 :::
 
 ## Whitepaper

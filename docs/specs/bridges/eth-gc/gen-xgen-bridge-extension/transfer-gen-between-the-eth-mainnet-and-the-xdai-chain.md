@@ -2,7 +2,7 @@
 description: Instructions on relaying DAOstack tokens through the GEN-xGEN bridge extension
 ---
 
-# Transfer GEN between the ETH Mainnet and the xDai Chain
+# Transfer GEN between the ETH Mainnet and the Gnosis Chain
 
 :::warning
 This manual is not intended as an official protocol to transfer GEN tokens through the AMB extension. The actions described below provide an idea about how to automate operations involving the Arbitrary Message Bridge, and demonstrate the transfer process.
@@ -12,9 +12,9 @@ This manual is not intended as an official protocol to transfer GEN tokens throu
 It is assumed that accounts executing operations below have a small amount of Ether and xDai for gas fees as well as an amount of GENs to transfer. GEN tokens can be obtained through [Uniswap](https://uniswap.exchange/) or other exchanges.
 :::
 
-For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet)  to move assets from the Ethereum Mainnet to the xDai chain. These actions may be applied to any other wallet with similar capabilities.
+For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet)  to move assets from the Ethereum Mainnet to the Gnosis Chain. These actions may be applied to any other wallet with similar capabilities.
 
-## Deposit GEN tokens to the xDai chain
+## Deposit GEN tokens to the Gnosis Chain
 
 1. GEN is a ERC827-compatible token. If the account that receives tokens is a contract, it is possible to call a method of this contract. The `onTokenTransfer` method of the mediator contract will be used to notify the mediator contract that some amount of tokens has been sent. We can build the method invocation with [https://abi.hashex.org/](https://abi.hashex.org/) 
 
@@ -67,11 +67,11 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 4. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet \(like MetaMask or Nifty wallet\). Wait to proceed until it is included in the chain.
 
-5. The AMB bridge requires a short amount time to relay the deposit request to the xDai chain. After some time the xGEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers) \(input the final token contract to monitor\). 
+5. The AMB bridge requires a short amount time to relay the deposit request to the Gnosis Chain. After some time the xGEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x3e12081dd66a3600fc0a2e6cc9e6b5b3b8f037f6/token_transfers) \(input the final token contract to monitor\). 
 
-## Withdraw GEN tokens from the xDai chain \(the interim token\)
+## Withdraw GEN tokens from the Gnosis Chain \(the interim token\)
 
-1. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). Select the **Interact with Contract** item in the side navigation menu. \(_note: you must have xGEN tokens in your wallet on the xDai chain to proceed_\)
+1. Choose the Gnosis Chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). Select the **Interact with Contract** item in the side navigation menu. \(_note: you must have xGEN tokens in your wallet on the Gnosis Chain to proceed_\)
 
 2. Initialize the xGEN bridgeable token contract interface:
 
@@ -95,7 +95,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 3. Transfer the xGEN tokens to the mediator contract:
 
 * 1\) Select _transferAndCall_ from the the **Select an Item** dropdown
-* 2\) Enter in the **\_to** address: `0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`. This is the  mediator contract serving the bridge extension in the xDai chain.
+* 2\) Enter in the **\_to** address: `0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`. This is the  mediator contract serving the bridge extension in the Gnosis Chain.
 * 3\) Enter the **\_value** to transfer in Wei in the `_value` field.
 * 4\) Enter `0x` symbols to the **\_data** field.
 * 5\) Click **Write.**
@@ -106,7 +106,7 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 
 5. It will require the AMB bridge some time to transfer tokens to the Ethereum Mainnet. After several minutes, the GEN balance of the account that sent the tokens will increase. The result of the relay operation can be monitored [in Etherscan](https://etherscan.io/token/0x543ff227f64aa17ea132bf9886cab5db55dcaddf?a=0x6eA6C65E14661C0BcaB5bc862fE5E7D3B5630C2F), and should be viewable in your web3 wallet connected to the Ethereum Mainnet.
 
-## Withdraw GEN tokens from the xDai chain \(the DAOstack token\)
+## Withdraw GEN tokens from the Gnosis Chain \(the DAOstack token\)
 
 :::warning
 This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
@@ -116,9 +116,9 @@ This actions are valid only in case if the xGEN token will be represented by DAO
 It is assumed that the address of the DAOstack-developed token will be `0x543ff227f64aa17ea132bf9886cab5db55dcaddf.`
 :::
 
-1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the xDai chain_](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain)_._
+1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the Gnosis Chain_](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain)_._
 
-2. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the `account _from` used to encode the mediator contract's method in the previous step. \(the same as in step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
+2. Choose the Gnosis Chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the `account _from` used to encode the mediator contract's method in the previous step. \(the same as in step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 
 * 1\) Select the **Interact with Contract** item from the sidebar menu
 * 2\) Initialize the xGEN token contract interface by entering the DAOstack token contract address in the **Contract Address** field: `0x543ff227f64aa17ea132bf9886cab5db55dcaddf`.
@@ -138,7 +138,7 @@ It is assumed that the address of the DAOstack-developed token will be `0x543ff2
 3. Fill the parameters to execute the `transfer` method:
 
 * 1\) Select `transfer` from the **Select an Item** dropdown
-* 2\) Enter the **\_to** address `0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`. This is the mediator contract serving the bridge extension on the xDai chain.
+* 2\) Enter the **\_to** address `0xe47097ceF3B0bcbb0095A21523714bF0022E2DB8`. This is the mediator contract serving the bridge extension on the Gnosis Chain.
 * 3\) Enter the **\_value** - the amount of tokens \(in Wei\) to transfer. It must be the same as the value encoded in the call of _onTokenTransfer_.
 * 4\) Enter the **\_data** with the hexadecimal string - encoded value of `onTokenTransfer` call. Prepend the string by `0x` symbols.
 * 5\) Press **Write** to send the tokens.

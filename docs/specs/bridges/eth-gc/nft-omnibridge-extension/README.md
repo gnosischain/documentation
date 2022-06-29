@@ -1,7 +1,7 @@
 ---
 description: >-
   Technical details about the NFT OmniBridge AMB extension deployed on top of
-  AMB between the Ethereum Mainnet and the xDai chain
+  AMB between the Ethereum Mainnet and the Gnosis Chain
 ---
 
 # NFT OmniBridge extension
@@ -23,4 +23,4 @@ A bridged NFTs uniqueness is provided by making a correspondence between the ori
 ## Deployment information
 
 * Mediator contract on the Ethereum Mainnet: [`0x6C8d0AFDDBD29a0954feEB73904923fC8f73C480`](https://etherscan.io/address/0x6C8d0AFDDBD29a0954feEB73904923fC8f73C480)
-* Mediator contract on the xDai chain: [`0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC`](https://blockscout.com/poa/xdai/address/0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC)
+* Mediator contract on the Gnosis Chain: [`0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC`](https://blockscout.com/poa/xdai/address/0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC)

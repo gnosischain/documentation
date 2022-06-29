@@ -29,7 +29,7 @@ Nethermind Launcher is a self-contained app - you do not need to install .NET se
 * [Understanding logs](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs)
 
 :::note
-When you start the Launcher choose the following options to sync a node (Still uses xDai name):
+When you start the Launcher choose the following options to sync a node:
 
 * Start Nethermind: **Node**
 * Select network: **xDai**

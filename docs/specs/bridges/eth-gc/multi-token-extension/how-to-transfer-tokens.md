@@ -14,7 +14,7 @@ There is an [OMNIBRIDGE UI](https://omni.xdaichain.com) now available which call
 
 The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see [the separate section below](how-to-transfer-tokens.md#simplification-for-erc-677-erc827-tokens).
 
-### Ethereum -> xDai Chain
+### Ethereum -> Gnosis Chain
 
 The steps below assume:
 
@@ -69,7 +69,7 @@ Press the "Write" button to send the transaction.
 
 The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in the MetaMask/NiftyWallet, wait for the block miners to verify. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
 
-Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to the xDai chain to invoke the multi-token mediator contract and complete the tokens transfer.
+Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to the Gnosis Chain to invoke the multi-token mediator contract and complete the tokens transfer.
 
 You can monitor the confirmation and AMB request execution with [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com). Specify the hash (tx id) of the transaction used to call `relayTokens`  in the ALM entry page to check the status of the AMB request initiated by this transaction in real time
 
@@ -79,10 +79,10 @@ You can monitor the confirmation and AMB request execution with [the AMB Live Mo
 
 If the AMB request is executed successfully:
 
-* **If token has not been transferred with AMB before**: If this is the first transaction for this particular token using the AMB,  a new ERC677 token contract will be deployed to the xDai chain. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
+* **If token has not been transferred with AMB before**: If this is the first transaction for this particular token using the AMB,  a new ERC677 token contract will be deployed to the Gnosis Chain. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on GC" (e.g. "Dai Stablecoin v1.0 on GC"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
 * **If token has been previously transferred with AMB:** If If the ERC677 token has already been registered by the mediator for the original ERC20 token, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
 
-Once the process is complete and indexed by BlockScout, it is possible to find the token contract on the xDai chain (in the current example, Sai tokens has the symbol "DAI", that's why it is being used to discover the new token contract).
+Once the process is complete and indexed by BlockScout, it is possible to find the token contract on the Gnosis Chain (in the current example, Sai tokens has the symbol "DAI", that's why it is being used to discover the new token contract).
 
 ![](</img/specs/bridges/image-67.png>)
 
@@ -100,7 +100,7 @@ This view also informs the viewer that the token is bridged and provides a link 
 
 At this point, the token can be added to MetaMask/NiftyWallet and operations (like transferring tokens, sending to other contracts etc) are available for use.
 
-### xDai Chain -> Ethereum
+### Gnosis Chain -> Ethereum
 
 The steps below assume that the account performing the actions is funded with some xDai to cover gas fees.
 
@@ -120,13 +120,13 @@ Go to the "Write Proxy" tab of the token contract in BlockScout:
 
 ![](</img/specs/bridges/image-73.png>)
 
-In the transferAndCall method enter the multi-token mediator contract address on the xDai chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`), amount of tokens to transfer, and "0x" in the `_data` field. Press Write to send the transaction.
+In the transferAndCall method enter the multi-token mediator contract address on the Gnosis Chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`), amount of tokens to transfer, and "0x" in the `_data` field. Press Write to send the transaction.
 
 ![](</img/specs/bridges/image-74.png>)
 
-The MetaMask/NiftyWallet window will appear. Gas price should be 1 GWei, adjust if needed. Once the transaction is confirmed in the MetaMask/NiftyWallet, wait for verification by the xDai chain validators. This is typically completed in a few seconds.
+The MetaMask/NiftyWallet window will appear. Gas price should be 1 GWei, adjust if needed. Once the transaction is confirmed in the MetaMask/NiftyWallet, wait for verification by the Gnosis Chain validators. This is typically completed in a few seconds.
 
-Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations in the xDai chain and transfer them to Ethereum. The transaction sent by a validator to Ethereum will execute the request to unlock the tokens.
+Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations in the Gnosis Chain and transfer them to Ethereum. The transaction sent by a validator to Ethereum will execute the request to unlock the tokens.
 
 You can monitor this process using [the AMB Live Monitoring tool](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com). Specify the hash (tx id) of the transaction used to call `transferAndCall` in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time:
 
@@ -146,15 +146,15 @@ Click Write Contract and specify the multi-token mediator contract address on Et
 
 ![](</img/specs/bridges/image-77.png>)
 
-## Simplification for token transfers from the xDai side
+## Simplification for token transfers from the GC side
 
 :::danger
 Do Not Use the `transfer` method to send tokens to the multi-token mediator on Ethereum. It will lead to loss of tokens.
 
 
-The token contact deployed on the xDai chain is a customized version of ERC677 standard. It contains [the changes](https://github.com/poanetwork/tokenbridge-contracts/blob/e09bd71bb67cf2ebce3cd7a4ec7130beea733018/contracts/ERC677BridgeToken.sol#L58-L62) that allow calling the `transfer` method to withdraw tokens from the xDai chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on the xDai chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
+The token contact deployed on the Gnosis Chain is a customized version of ERC677 standard. It contains [the changes](https://github.com/poanetwork/tokenbridge-contracts/blob/e09bd71bb67cf2ebce3cd7a4ec7130beea733018/contracts/ERC677BridgeToken.sol#L58-L62) that allow calling the `transfer` method to withdraw tokens from the Gnosis Chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on the Gnosis Chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
 
 :::warning
-The method described above works only for tokens deployed by the multi-token mediator in the xDai chain.
+The method described above works only for tokens deployed by the multi-token mediator in the Gnosis Chain.
 
 

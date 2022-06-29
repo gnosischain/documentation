@@ -1,14 +1,14 @@
 ---
-description: ETH-xDai Arbitrary Message Bridge information
+description: ETH-GC Arbitrary Message Bridge information
 ---
 
 # ETH-GC Bridge
 
-An Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the xDai chain extends the number of the applications that can leverage cross-chain communications.
+An Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the Gnosis Chain extends the number of the applications that can leverage cross-chain communications.
 
 Any application can [build its own AMB extension](https://docs.tokenbridge.net/amb-bridge/how-to-develop-xchain-apps-by-amb). This is represented by two mediator contracts so that either assets or arbitrary data can be transferred between chains. The deployed mediator contracts **do not** require a set of oracles to be setup, allowing an application to launch quickly and reducing the cost of application ownership.
 
-The mediator contracts rely on the following information about the ETH-xDai Arbitrary Message Bridge:
+The mediator contracts rely on the following information about the ETH-GC Arbitrary Message Bridge:
 
 * **Ethereum Mainnet**:
   * AMB contract: [`0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e)

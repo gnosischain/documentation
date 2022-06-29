@@ -4,7 +4,7 @@ description: How to develop a web-application to transfer tokens through AMB
 
 # UI to transfer tokens through AMB
 
-This manual describes how to rapidly develop a web-application to transfer tokens using the Arbitrary Message Bridge between the Ethereum Mainnet and the xDai chain. It assumes that an `erc-to-erc` extension was deployed [using these steps](deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md).
+This manual describes how to rapidly develop a web-application to transfer tokens using the Arbitrary Message Bridge between the Ethereum Mainnet and the Gnosis Chain. It assumes that an `erc-to-erc` extension was deployed [using these steps](deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md).
 
 :::info
 The application is based on [the Burner Wallet 2 interface](https://github.com/burner-wallet/burner-wallet-2). Quick launch of a new application is possible with [the TokenBridge plugin developed for the Arbitrary Message Bridge mediators](https://github.com/poanetwork/tokenbridge/tree/master/burner-wallet-plugin).
@@ -60,7 +60,7 @@ import { ERC677Asset } from '@poanet/tokenbridge-bw-exchange'
 export default new ERC677Asset({
   id: 'xsusd',    //internal id of the asset
   name: 'xsUSD',  //displayed name of the asset
-  network: '100', //chain id (xdai chain)
+  network: '100', //chain id (Gnosis Chain)
   address: '0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e' //token contract address
 })
 ```
@@ -74,7 +74,7 @@ export default new ERC677Asset({
 import { Mediator } from '@poanet/tokenbridge-bw-exchange'
 import { sUSD, xsUSD } from '../index'
 
-// Mediator contract address at the xDai chain
+// Mediator contract address at the Gnosis Chain
 const homeMediatorAddress = '0xD9a3039cfC70aF84AC9E566A2526fD3b683B995B'
 // Mediator contract at the Ethereum Mainnet
 const foreignMediatorAddress = '0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D'
@@ -139,7 +139,7 @@ docker run -ti -p 8080:8080 -e PORT=8080 \
 wallet:   Local:            http://localhost:8080/
 ```
 
-9\. Run a browser and paste the URL in the terminal (`http://localhost:8080/`). The browser must have [the MetaMask extension](https://metamask.io) installed. [The xDai RPC endpoint must be added](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to MetaMask. Press the "Exchange" button to test a transfer of bridgeable tokens through the AMB.
+9\. Run a browser and paste the URL in the terminal (`http://localhost:8080/`). The browser must have [the MetaMask extension](https://metamask.io) installed. [The Gnosis Chain RPC endpoint must be added](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to MetaMask. Press the "Exchange" button to test a transfer of bridgeable tokens through the AMB.
 
 ![The exchange page allows to bridge tokens through AMB](</img/specs/bridges/image-47.png>)
 

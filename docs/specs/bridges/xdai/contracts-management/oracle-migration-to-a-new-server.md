@@ -10,7 +10,7 @@ description: >-
 
 1.  Create a new server instance with your hosting provider (e.g. AWS, Digital Ocean, etc), you can use same specs as the current one (or at least 2 Core CPU, 4 GB RAM, Ubuntu 16.04 LTS, 32 GB Disk).
 
-    _Important_: don’t stop or terminate your current server yet! We might need it to roll back if any errors occur. If you’re currently running both xDai bridge validator and xDai network validator on the same server, let us know and we’ll provide you with instructions on how to move network validator to your new server after bridge migration is completed successfully
+    _Important_: don’t stop or terminate your current server yet! We might need it to roll back if any errors occur. If you’re currently running both xDai bridge validator and Gnosis Chain validator on the same server, let us know and we’ll provide you with instructions on how to move network validator to your new server after bridge migration is completed successfully
 2.  When you created new server, please note down its’ IP address and try to connect to it via ssh from your local computer to make sure that the server is accessible to you. When connected to the server, check that your user has sudo-privileges by running
 
     ```

@@ -1,5 +1,5 @@
 ---
-description: 'Current xDai Consensus model: POSDAO with Authority Round Consensus'
+description: 'Current Gnosis Chain Consensus model: POSDAO with Authority Round Consensus'
 ---
 
 # AuRa with POSDAO Consensus
@@ -8,13 +8,13 @@ Consensus refers to the agreement process between nodes in a network. The nodes 
 
 There are 2 aspects to the process - the actual consensus mechanism to add transactions to blocks, and sybil protection, which prevents malicious actors.
 
-xDai currently uses Parity's AuRa (Authority Round) proof-of-authority consensus model to append blocks to the Gnosis Chain. In this model, selected validators ([selected through the POSDAO dPOS process](/specs/consensus/posdao)) take turns signing blocks. A signed block is broadcast to all validators, and if the majority agree it is valid, it is added to the chain. A new block is added every 5 seconds, regardless of whether any transactions occurred during that time. _Note: POSDAO offers a pluggable consensus feature, so different or additional consensus processes may be added in the future._
+Gnosis Chain currently uses Parity's AuRa (Authority Round) proof-of-authority consensus model to append blocks to the Gnosis Chain. In this model, selected validators ([selected through the POSDAO dPOS process](/specs/consensus/posdao)) take turns signing blocks. A signed block is broadcast to all validators, and if the majority agree it is valid, it is added to the chain. A new block is added every 5 seconds, regardless of whether any transactions occurred during that time. _Note: POSDAO offers a pluggable consensus feature, so different or additional consensus processes may be added in the future._
 
-xDai uses delegated Proof of Stake to provide sybil protection. Validators and delegators must add STAKE to the protocol. If the nodes participate as expected, they receive additional STAKE rewards. If they engage in malicious behavior (like not revealing random numbers) the validator is banned and their STAKE (and delegators STAKE) is frozen. These behavioral rewards act as incentives to promote an honest group of validators participating in consensus.
+Gnosis Chain uses delegated Proof of Stake to provide sybil protection. Validators and delegators must add STAKE to the protocol. If the nodes participate as expected, they receive additional STAKE rewards. If they engage in malicious behavior (like not revealing random numbers) the validator is banned and their STAKE (and delegators STAKE) is frozen. These behavioral rewards act as incentives to promote an honest group of validators participating in consensus.
 
 (TODO: LINK)Learn more in the Whitepaper](../posdao-whitepaper.md)
 
-View current xDai validator pools in the [BlockScout Staking Application](https://blockscout.com/xdai/mainnet/validators).
+View current Gnosis Chain validator pools in the [BlockScout Staking Application](https://blockscout.com/xdai/mainnet/validators).
 
 :::info
 Finality delay\

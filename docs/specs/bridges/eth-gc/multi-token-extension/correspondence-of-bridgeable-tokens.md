@@ -1,10 +1,10 @@
 ---
-description: Find the analogous token address for tokens bridged on Ethereum and xDai
+description: Find the analogous token address for tokens bridged on Ethereum and GC
 ---
 
-# Corresponding token contract addresses (ETH - XDAI)
+# Corresponding token contract addresses (ETH - GC)
 
-There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on the xDai chain.
+There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on the Gnosis Chain.
 
 ## Approach #1: BlockScout
 
@@ -26,13 +26,13 @@ BlockScout also distinguishes bridged tokens at the _Top of the tokens_ page by 
 
 ## Approach #2: Mediator storage
 
-The multi-token mediator on the xDai chain ([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)) provides methods for viewing correspondence of bridgeable tokens:
+The multi-token mediator on the Gnosis Chain ([`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d)) provides methods for viewing correspondence of bridgeable tokens:
 
-* `foreignTokenAddress` - returns the address of the token contract on the Ethereum Mainnet by specifying the address the token contract on the xDai chain.
-* `homeTokenAddress` - returns the address of the token contract on the xDai chain by specifying the address of the token contract on the Ethereum chain.
+* `foreignTokenAddress` - returns the address of the token contract on the Ethereum Mainnet by specifying the address the token contract on the Gnosis Chain.
+* `homeTokenAddress` - returns the address of the token contract on the Gnosis Chain by specifying the address of the token contract on the Ethereum chain.
 
 ![The contract page in the BlockScout allows to read the contract's data](</img/specs/bridges/image-85.png>)
 
-![The method to get correspondence for the token contract on the xDai](</img/specs/bridges/image-86.png>)
+![The method to get correspondence for the token contract on the Gnosis Chain](</img/specs/bridges/image-86.png>)
 
 ![The method returns the address of the token contract on the Ethereum Mainnet](</img/specs/bridges/image-87.png>)
