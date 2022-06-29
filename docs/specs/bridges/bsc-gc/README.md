@@ -2,7 +2,7 @@
 description: BSC-xDai Arbitrary Message Bridge information
 ---
 
-# GC-BSC Bridge
+# BSC-GC Bridge
 
 The main goal of the Arbitrary Message Bridge between the Binance Smart Chain and the xDai chain is to provide a platform for the OmniBridge connecting both chains.
 

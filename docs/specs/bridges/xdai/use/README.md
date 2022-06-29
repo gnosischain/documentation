@@ -13,8 +13,8 @@ Instructions for usage with the UI are available:
 * (TODO: Link)Moving Dai to xDai](/bridges/xdai/moving-dai-to-xdai)
 * (TODO: Link)Moving xDai to Dai](/bridges/xdai/moving-xdai-to-dai)
 
-The bridge can also be used [without the UI](/specs/bridges/use/without-ui).
+The bridge can also be used [without the UI](/specs/bridges/xdai/use/without-ui).
 
 ### Advanced operations
 
-It is possible to move Dai to xDai and back to an alternative receiver by calling the bridge methods directly as in [this manual](/specs/bridges/use/alternative-receiver).
+It is possible to move Dai to xDai and back to an alternative receiver by calling the bridge methods directly as in [this manual](/specs/bridges/xdai/use/alternative-receiver).

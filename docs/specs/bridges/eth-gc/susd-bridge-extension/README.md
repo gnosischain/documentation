@@ -14,6 +14,6 @@ The sUSD bridge extension of the ETH-xDai Arbitrary Message Bridge is a pair of 
 This extension was deployed to demonstrate a working model of the ETH-xDai AMB. Anyone who owns sUSD tokens can use the bridge - sUSDs are locked in the bridge contract and the same amount of [sUSD bridgeable tokens](https://blockscout.com/xdai/mainnet/address/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e) are minted on the xDai chain. The reverse operation burns sUSD bridgeable tokens on the xDai chain and unlock Synth sUSD tokens on the Ethereum Mainnet.
 
 :::success
-Follow the step-by-step instructions to [Transfer sUSD through the bridge extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension).
+Follow the step-by-step instructions to [Transfer sUSD through the bridge extension](/specs/bridges/eth-gc/susd-bridge-extension/transfer-susd-through-the-bridge-extension).
 :::
 

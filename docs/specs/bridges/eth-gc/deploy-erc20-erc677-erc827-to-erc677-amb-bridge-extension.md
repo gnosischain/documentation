@@ -4,7 +4,7 @@ description: How to deploy an erc-to-erc Arbitrary Message Bridge extension
 
 # Deploy ERC20/ERC677/ERC827 to ERC677 AMB bridge extension
 
-Instructions for deploying bridge mediator contracts on top of [the Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the xDai chain](https://docs.tokenbridge.net/eth-xdai-amb-bridge/about-the-eth-xdai-amb).
+Instructions for deploying bridge mediator contracts on top of [the Arbitrary Message Bridge \(AMB\) between the Ethereum Mainnet and the xDai chain](/specs/bridges/eth-gc).
 
 :::info
 An AMB bridge extension is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
@@ -168,5 +168,5 @@ Output will look similar to this:
 
 ![](/img/specs/bridges/image-36.png)
 
-5. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension/transfer-susd-through-the-bridge-extension) for an example process.
+5. Verify that tokens can be transferred in both directions through the bridge. See the [the sUSD bridge AMB extension](/specs/bridges/eth-gc/susd-bridge-extension/transfer-susd-through-the-bridge-extension) for an example process.
 

@@ -17,8 +17,8 @@ The Arbitrary Message Bridge (AMB) is designed to relay** any data** between two
 AMB's universality means it can be used as a base layer for bridge and application construction. Once the bridge contracts are deployed and the corresponding validators are running the oracles, other applications can use them without the need to deploy their own infrastructure.
 
 :::success
-* Check out the [ETH-GC AMB](/bridges/xdai/about-the-eth-xdai-amb/)section to view and try some live extensions.
-* Learn about our new [multi-token extension](/bridges/xdai/multi-token-extension/), where an ERC20 on Ethereum is bridged and automatically created on xDai!
+* Check out the [ETH-GC AMB](/specs/bridges/eth-gc/)section to view and try some live extensions.
+* Learn about our new [multi-token extension](/specs/bridges/eth-gc/multi-token-extension/), where an ERC20 on Ethereum is bridged and automatically created on xDai!
 :::
 
 ## AMB extensions

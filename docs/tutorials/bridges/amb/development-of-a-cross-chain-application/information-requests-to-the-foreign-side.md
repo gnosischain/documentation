@@ -76,7 +76,7 @@ Everything that can be returned by the following JSON RPC API calls can be reque
 
 Currently the cross-chain information requests are available on the following bridges:
 
-* [ETH-xDai AMB](https://docs.tokenbridge.net/eth-xdai-amb-bridge/about-the-eth-xdai-amb), requests from xDai to the Ethereum Mainnet
+* [ETH-xDai AMB](/specs/bridges/eth-gc/about-the-eth-xdai-amb), requests from xDai to the Ethereum Mainnet
 * [Kovan-Sokol AMB](https://docs.tokenbridge.net/kovan-sokol-amb-bridge/about-the-kovan-sokol-amb), requests from Sokol to Kovan
 * [Rinkeby-xDai AMB](https://docs.tokenbridge.net/rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb), requests from xDai to Rinkeby
 * [BSC-xDai AMB](https://docs.tokenbridge.net/bsc-xdai-amb/about-the-bsc-xdai-amb), requests from xDai to Binance Smart Chain

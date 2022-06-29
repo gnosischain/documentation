@@ -4,7 +4,7 @@ description: The xDai bridge is used to transform Dai into xDai, and xDai back t
 
 # xDai Bridge
 
-There are currently two bridges on Gnosis Chain that connect it to the Ethereum Mainnet. The ERC-20 to Native Bridge, and the [GC <-> ETH AMB](/specs/bridges/gc-eth/). This sections covers the ERC20-Native Bridge.
+There are currently two bridges on Gnosis Chain that connect it to the Ethereum Mainnet. The ERC-20 to Native Bridge, and the [GC <-> ETH AMB](/specs/bridges/eth-gc/). This sections covers the ERC20-Native Bridge.
 
 |  |  |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

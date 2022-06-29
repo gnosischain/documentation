@@ -109,14 +109,14 @@ For demonstration purposes we use [MyEtherWallet \(MEW\)](https://www.myetherwal
 ## Withdraw GEN tokens from the xDai chain \(the DAOstack token\)
 
 :::warning
-This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
+This actions are valid only in case if the xGEN token will be represented by DAOstack-developed contract. The plan is that the substitute of the interim token by DAOstack contract will happen after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
 :::
 
 :::warning
 It is assumed that the address of the DAOstack-developed token will be `0x543ff227f64aa17ea132bf9886cab5db55dcaddf.`
 :::
 
-1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the xDai chain_](https://docs.tokenbridge.net/eth-xdai-amb-bridge/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain)_._
+1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the xDai chain_](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain)_._
 
 2. Choose the xDai chain in the browser wallet extension and login to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the `account _from` used to encode the mediator contract's method in the previous step. \(the same as in step 1.4\). Go to [MyEtherWallet \(MEW\)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 

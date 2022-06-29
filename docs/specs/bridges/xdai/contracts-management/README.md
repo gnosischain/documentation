@@ -22,7 +22,7 @@ Multisignature Wallet Addresses:
 
 The particular action flow will vary for different management operations.
 
-* [Upgrade Contracts](/specs/bridges/contracts-management/upgrade-contracts)
-* [Configuration](/specs/bridges/contracts-management/configuration)
-* [Admin Privileges Management](/specs/bridges/contracts-management/admin-privileges-management)
-* [ERC20 Tokens Release](/specs/bridges/contracts-management/erc20-tokens-release)
+* [Upgrade Contracts](/specs/bridges/xdai/contracts-management/upgrade-contracts)
+* [Configuration](/specs/bridges/xdai/contracts-management/configuration)
+* [Admin Privileges Management](/specs/bridges/xdai/contracts-management/admin-privileges-management)
+* [ERC20 Tokens Release](/specs/bridges/xdai/contracts-management/erc20-tokens-release)

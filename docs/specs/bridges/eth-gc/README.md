@@ -2,7 +2,7 @@
 description: ETH-xDai Arbitrary Message Bridge information
 ---
 
-# About the ETH-xDai AMB
+# ETH-GC Bridge
 
 An Arbitrary Message Bridge (AMB) between the Ethereum Mainnet and the xDai chain extends the number of the applications that can leverage cross-chain communications.
 

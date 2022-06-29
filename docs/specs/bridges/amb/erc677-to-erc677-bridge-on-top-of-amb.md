@@ -10,7 +10,7 @@ Instructions for deploying a pair of ERC677-compatible tokens and the bridge med
 **An AMB bridge extension** is a pair of mediator contracts associated with a specific pair of Arbitrary Message Bridge contracts.
 :::
 
-The steps below assume that the AMB is up and running and serves [the bridge between Kovan (Foreign) chain and Sokol (Home) chain](../kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/).
+The steps below assume that the AMB is up and running and serves [the bridge between Kovan (Foreign) chain and Sokol (Home) chain](https://docs.tokenbridge.net/kovan-sokol-amb-bridge/about-the-kovan-sokol-amb/).
 
 ## Instructions
 

@@ -4,7 +4,7 @@ description: Configuring a contract
 
 # Configuration
 
-A definition of all configuration parameters that can change the bridge behavior are available in the [xDai Bridge Management API](/specs/bridges/contracts-management/management-api). We describe the steps for changing the daily limit of the Bridge Home contract (`0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6`, deployed in the Gnosis Chain).
+A definition of all configuration parameters that can change the bridge behavior are available in the [xDai Bridge Management API](/specs/bridges/xdai/contracts-management/management-api). We describe the steps for changing the daily limit of the Bridge Home contract (`0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6`, deployed in the Gnosis Chain).
 
 :::info
 The instructions use [NiftyWallet](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid) to invoke contract methods. An example how to use this functionality is available [here](https://medium.com/poa-network/nifty-wallet-now-supports-interactions-with-smart-contracts-5e8c43c19e3a)

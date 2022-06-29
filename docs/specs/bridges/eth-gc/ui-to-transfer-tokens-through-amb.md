@@ -21,7 +21,7 @@ Before developing the application developing, the following must be prepared:
 * the ERC677 token contract address deployed together with the mediators
 
 :::warning
-For demonstration purposes, data for [the sUSD AMB extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/susd-bridge-extension) will be used below.
+For demonstration purposes, data for [the sUSD AMB extension](/specs/bridges/eth-gc/susd-bridge-extension) will be used below.
 :::
 
 ## Instructions

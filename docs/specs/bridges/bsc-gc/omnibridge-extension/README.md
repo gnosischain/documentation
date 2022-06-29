@@ -10,7 +10,7 @@ The OmniBridge multi-token extension for the Arbitrary Message Bridge between th
 * BSC-xDai isaccessed through the [OmniBridge UI](https://omni.xdaichain.com/bridge). Select BSC-xDai from the dropdown menu and set the MetaMask network to xDai or BSC to proceed.
 * OmniBridge does not require a UI for functionality, and[ tokens can be transferred manually](manual-tokens-transfer.md).
 * [Live Monitoring App](https://alm-bsc-xdai.herokuapp.com)
-* Additional items may be referenced in the [ETH-xDai Omnibridge Extension ](../../eth-xdai-amb-bridge/multi-token-extension/)section.
+* Additional items may be referenced in the [ETH-xDai Omnibridge Extension ](/specs/bridges/eth-gc/multi-token-extension/)section.
 :::
 
 By using this extension any user (not only the token contract owner) can transfer tokens in both directions: from BSC to xDai and from the xDai chain to BSC with fast, inexpensive transactions and without deploying any additional contracts.
