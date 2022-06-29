@@ -2,7 +2,7 @@
 description: Using OmniBridge to bridge ANY ERC20-type token to the Gnosis Chain
 ---
 
-# 🌉 OmniBridge Extension
+# OmniBridge Extension
 
 The OmniBridge multi-token extension for the Arbitrary Message Bridge between Ethereum and the Gnosis Chain is the simplest way to transfer **ANY** ERC20/ERC677/ERC827 token to the Gnosis Chain.
 
@@ -12,16 +12,16 @@ An AMB bridge extension is a pair of mediator contracts associated with a specif
 :::
 
 :::success
-* List of the tokens already bridged through the extension is available [here](the-bridged-tokens-list/)
-* [OmniBridge UI](https://omni.xdaichain.com)
-* Follow the [How to transfer tokens](how-to-transfer-tokens.md) section to perform operations
-* [Security Audit Completed](../../about-tokenbridge/security-audits.md#tokenbridge-audit-by-quantstamp-covers-omnibridge).
+* List of the tokens already bridged through the extension is available [here](/specs/bridges/eth-gc/multi-token-extension/the-bridged-tokens-list)
+* [OmniBridge UI](https://omni.gnosischain.com/)
+* Follow the [How to transfer tokens](/specs/bridges/eth-gc/multi-token-extension/how-to-transfer-tokens) section to perform operations
+* [Security Audit Completed](/specs/security-audit#tokenbridge-audit-by-quantstamp-covers-omnibridge).
 :::
 
 By using this extension any user (not only the token contract owner) can transfer tokens from Ethereum to a chain with fast, inexpensive transactions (in this case the Gnosis Chain) without deploying any additional contracts. The specified token amount is locked in the mediator contract, a new token contract is deployed automatically on the Gnosis Chain, and the requested token amount is minted on the Gnosis Chain. The reverse operation burns bridgeable tokens on the Gnosis Chain and unlocks the tokens from the token contract on Ethereum.
 
 :::info
-More details for the operations to deposit and withdraw tokens are available [here.](extension-internals.md)
+More details for the operations to deposit and withdraw tokens are available [here.](/specs/bridges/eth-gc/multi-token-extension/extension-internals)
 
 General FAQs are located here: [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge)
 :::

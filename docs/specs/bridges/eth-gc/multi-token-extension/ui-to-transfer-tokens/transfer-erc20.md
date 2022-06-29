@@ -1,3 +1,6 @@
+---
+---
+
 # Transfer any ERC20 from Ethereum to Gnosis Chain
 
 It is possible to use the OmniBridge UI to transfer any ERC20 from Ethereum to Gnosis Chain. Any user can initiate this initial transfer. Once the token exists on Gnosis Chain, it can be transferred back and forth using the same UI.

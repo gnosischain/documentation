@@ -23,7 +23,7 @@ function requireToPassMessage(address _contract,
 ```
 
 * `address _contract`  address of the contract on the other network.
-* `bytes _data`encoded bytes of the method selector and the parameters that will be called in the contract on the other network. In the [Code Examples](how-to-develop-xchain-apps-by-amb.md#code-examples) section there is an example of how to generate this parameter.
+* `bytes _data`encoded bytes of the method selector and the parameters that will be called in the contract on the other network. In the [Code Examples](/tutorials/bridges/amb/development-of-a-cross-chain-application/how-to-develop-xchain-apps-by-amb#code-examples) section there is an example of how to generate this parameter.
 *   `uint256 _gas` The gas to be provided in execution of the method call in the contract on the other network. To generate this parameter you need to measure the gas usage of the method to be executed. It can be done by manual invocation of the method in a dev environment or by using a tool like [eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter) to get the gas usage of the methods from the unit tests.
 
     The AMB bridge provides a maximum gas value to be provided in the execution of the method, so the provided gas value must not exceed this limit. To get this limit, you can call the method:
@@ -86,7 +86,7 @@ All methods accept as a parameter the hash of the transaction that originated th
 ## Example of ERC20/ERC677 to ERC677 using AMB bridge
 
 :::info
-Explicit deployment instructions are [available here](../erc677-to-erc677-bridge-on-top-of-amb.md)
+Explicit deployment instructions are [available here](/specs/bridges/amb/erc677-to-erc677-bridge-on-top-of-amb)
 :::
 
 We can use the AMB bridge to move ERC20/ERC677 tokens between two chains. To do this, we'll have two contracts that communicate with each other:

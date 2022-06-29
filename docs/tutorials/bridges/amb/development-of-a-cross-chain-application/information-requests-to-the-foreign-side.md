@@ -76,10 +76,10 @@ Everything that can be returned by the following JSON RPC API calls can be reque
 
 Currently the cross-chain information requests are available on the following bridges:
 
-* [ETH-GC AMB](/specs/bridges/eth-gc/about-the-eth-xdai-amb), requests from Gnosis Chain to the Ethereum Mainnet
+* [ETH-GC AMB](/specs/bridges/eth-gc), requests from Gnosis Chain to the Ethereum Mainnet
 * [Kovan-Sokol AMB](https://docs.tokenbridge.net/kovan-sokol-amb-bridge/about-the-kovan-sokol-amb), requests from Sokol to Kovan
 * [Rinkeby-GC AMB](https://docs.tokenbridge.net/rinkeby-xdai-amb-bridge/about-the-rinkeby-xdai-amb), requests from Gnosis Chain to Rinkeby
-* [BSC-GC AMB](https://docs.tokenbridge.net/bsc-xdai-amb/about-the-bsc-xdai-amb), requests from Gnosis Chain to Binance Smart Chain
+* [BSC-GC AMB](/specs/bridges/bsc-gc), requests from Gnosis Chain to Binance Smart Chain
 * [ETH-BSC AMB](https://docs.tokenbridge.net/eth-etc-amb-bridge/about-the-eth-etc-amb), requests from Binance Smart Chain to the Ethereum Mainnet
 
 ### Examples

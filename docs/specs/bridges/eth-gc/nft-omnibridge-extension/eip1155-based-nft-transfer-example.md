@@ -13,10 +13,10 @@ The NFT Extension is in Beta and transfers are performed at your own risk. NFT t
 :::
 
 :::info
-If you want to bridge an [ERC721 NFT, instructions are available here](nft-transfer-example.md).
+If you want to bridge an [ERC721 NFT, instructions are available here](/specs/bridges/eth-gc/nft-omnibridge-extension/nft-transfer-example).
 :::
 
-## :bridge\_at\_night:-> Gnosis Chain to Ethereum
+## Gnosis Chain to Ethereum
 
 NFTs can be minted on Gnosis Chain inexpensively. These NFTs can then be bridged to Ethereum using the NFT OmniBridge extension. The EIP1155 standard supports batched transfers, so several tokens can be transferred in one bridge operation if these tokens are in the same contract.
 
@@ -30,7 +30,7 @@ The process consists of several steps.
 Token contracts must be verified in BlockScout to access write operations. If your token contract is not yet verified, [follow these steps for BlockScout](https://docs.blockscout.com/for-users/smart-contract-interaction/verifying-a-smart-contract).
 :::
 
-## 1) Locate your NFT
+### 1) Locate your NFT
 
 You will need the contract and token ID(s) for your EIP1155 NFT(s) to start. If you have trouble locating, you can enter your wallet address in the [BlockScout search bar](https://blockscout.com/poa/xdai) and unroll the tokens list in the Balance section. Here you will see your EIP1155s. Find one which you want to bridge and note its **TokenID**:
 
@@ -44,11 +44,11 @@ On the token contract page go to the **Write Contract** or **Write Proxy** tab d
 
 ![](</img/specs/bridges/image-149.png>)
 
-## 2) Initiate the Transfer
+### 2) Initiate the Transfer
 
 Different methods are used depending on the number of tokens you are bridging (one token or a batch of tokens).
 
-### Transfer one token
+#### Transfer one token
 
 1. Press the **Connect to MetaMask** button to connect the address that holds the NFT.
 2. In the `safeTransferFrom` method, add the following:
@@ -63,7 +63,7 @@ Different methods are used depending on the number of tokens you are bridging (o
 
 ![](</img/specs/bridges/image-151.png>)
 
-### Transfer several tokens
+#### Transfer several tokens
 
 1. Press the **Connect to MetaMask** button to connect the address that holds the NFT
 2. In the `safeBatchTransferFrom` method, add the following:
@@ -78,7 +78,7 @@ Different methods are used depending on the number of tokens you are bridging (o
 
 ![](</img/specs/bridges/image-155.png>)
 
-## 3) Finalize the Transfer on Ethereum
+### 3) Finalize the Transfer on Ethereum
 
 The Arbitrary Message Bridge oracles will use the Gnosis Chain to collect confirmations of the NFT token(s) transfer. As soon as the confirmations are collected, they will be relayed to Ethereum for finalization.
 
@@ -107,11 +107,11 @@ Gas fee estimates to transfer may be prohibitively expensive. Note:
 
 Once the transaction is verified and included in a block, the token will be transferred to the same account on Ethereum that called the `safeTransferFrom`/`safeBatchTransferFrom`method.
 
-## :bridge\_at\_night:-> Ethereum to Gnosis Chain
+## Ethereum to Gnosis Chain
 
 The following process is similar to the above using Etherscan rather than BlockScout to write transactions. You will not need to manually execute on the Gnosis Chain side, it is automated when bridging NFTs from Ethereum to Gnosis Chain.
 
-## 1) Locate your NFT
+### 1) Locate your NFT
 
 Etherscan does not provide a simple way to discover EIP1155 tokens owned by a particular account. So, you either need to know the address of the token contract initially deployed on the Mainnet or, in the case of bridged tokens, use the NFT OmniBridge to discover the address of the bridged token contract.
 
@@ -126,11 +126,11 @@ Etherscan does not provide a simple way to discover EIP1155 tokens owned by a pa
 
 ![](</img/specs/bridges/image-159.png>)
 
-## 2) Initiate the Transfer
+### 2) Initiate the Transfer
 
 Different methods are used depending on the number of tokens you are bridging.
 
-### Transfer one token
+#### Transfer one token
 
 1. Press the **Connect to Web3** button to connect the address that holds the NFT
 2. In the `safeTransferFrom` method, add the following:
@@ -145,7 +145,7 @@ Different methods are used depending on the number of tokens you are bridging.
 
 ![](</img/specs/bridges/image-160.png>)
 
-### Transfer several tokens
+#### Transfer several tokens
 
 1. Press the **Connect to Web3** button to connect the address that holds the NFT
 2. In the `safeBatchTransferFrom` method, add the following:
@@ -160,9 +160,9 @@ Different methods are used depending on the number of tokens you are bridging.
 
 ![](</img/specs/bridges/image-163.png>)
 
-## 4) Monitor progress and view in BlockScout when complete <a href="4-monitor-progress-and-view-in-blockscout-when-complete" id="4-monitor-progress-and-view-in-blockscout-when-complete"></a>
+### 3) Monitor progress and view in BlockScout when complete
 
-The Arbitrary Message Bridge oracles will send confirmations to the Gnosis Chain. As soon as enough confirmations received, the transfer is executed automatically (does not need manual execution as opposed to xDai -> Eth transfers).
+The Arbitrary Message Bridge oracles will send confirmations to the Gnosis Chain. As soon as enough confirmations received, the transfer is executed automatically (does not need manual execution as opposed to GC -> Eth transfers).
 
 You can monitor this progress with the ALM tool at [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com). Paste in the tx hash from the contract interaction in MetaMask to monitor.
 
