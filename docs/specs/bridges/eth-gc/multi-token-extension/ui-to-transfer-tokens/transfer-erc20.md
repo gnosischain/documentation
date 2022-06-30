@@ -35,7 +35,7 @@ In this example, we transfer the Basic Attention Token (BAT) from Ethereum to Gn
 
 5\) The bridge transaction will begin to process. While you are waiting for block confirmations, you can click on the ALM monitor link to view progress with your transfer.
 
-![](/img/specs/bridges/Omni5.jpg)
+![](/img/specs/bridges/omni5.jpg)
 
 6\) Transfer processing in ALM.
 

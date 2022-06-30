@@ -42,11 +42,11 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 * Transaction limit **max per day**: **$3,000.00 sUSD**
 :::
 
-![](/img/specs/bridges/sUSD2.png)
+![](/img/specs/bridges/susd2.png)
 
 1. Check that the Gas price is not set too high, then **Submit** the transaction with a web3 wallet (like MetaMask or Nifty wallet - here we use Nifty). Wait to proceed until it is included in the chain.
 
-![](/img/specs/bridges/sUSD3.png)
+![](/img/specs/bridges/susd3.png)
 
 1. Press the **Back** button. You will now initialize the mediator contract interface:
 2. 1\) Enter the mediator contract address`0x71F12d03E1711cb96E11E1A5c12Da7466699Db8D`
@@ -64,7 +64,7 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 * 3\) Press **Continue**.
 
-![](/img/specs/bridges/sUSD4.png)
+![](/img/specs/bridges/susd4.png)
 
 5\) Choose an appropriate `relayTokens` method. There are two possible methods:
 
@@ -75,7 +75,7 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 5. 3\)`_amount` -- the amount of tokens (in Wei) to transfer; it must be less or equal amount of tokens approved for the bridge operations.
 6. 4\) Press **Write**.
 
-![](/img/specs/bridges/sUSD5.png)
+![](/img/specs/bridges/susd5.png)
 
 1. Check the gas price, then Submit the transaction your web3wallet and wait until it is included in the chain.
 2. It will require the AMB bridge a short amount time to relay the deposit request to the Gnosis Chain. After some time the balance of the account specified as `_receiver` in the `relayTokens` method call will increase. The result of the relay operation can be monitored [in Blockscout](https://blockscout.com/xdai/mainnet/tokens/0x4c36d2919e407f0cc2ee3c993ccf8ac26d9ce64e/token-transfers).
@@ -91,7 +91,7 @@ Note that minimum and maximum transaction amounts are embedded into the bridge.
 
 ![](</img/specs/bridges/nifty1-1-2.png>)
 
-![](/img/specs/bridges/Nifty2.png)
+![](/img/specs/bridges/nifty2.png)
 
 :::success
 You should now see your newly transferred sUSD balance on the Gnosis Chain.
