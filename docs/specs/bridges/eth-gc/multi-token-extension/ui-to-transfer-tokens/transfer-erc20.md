@@ -41,7 +41,7 @@ In this example, we transfer the Basic Attention Token (BAT) from Ethereum to Gn
 
 ![](</img/specs/bridges/omni6a-1.jpg>)
 
-![Successful after 2 validator approvals](/img/specs/bridges/Omni6b.jpg)
+![Successful after 2 validator approvals](/img/specs/bridges/omni6b.jpg)
 
 7\) After a successful transfer, you can check the token on BlockScout to see that it exists. Check Bridged tokens at [https://blockscout.com/xdai/mainnet/bridged-tokens](https://blockscout.com/xdai/mainnet/bridged-tokens).
 
@@ -86,11 +86,11 @@ There are several ways to find the Custom token address on GC using BlockScout.
 
 4\) When bridging, you can click on the executed ALM Transaction to locate newly minted tokens.
 
-![](/img/specs/bridges/ALM1.jpg)
+![](/img/specs/bridges/alm1.jpg)
 
-![](/img/specs/bridges/ALM2.jpg)
+![](/img/specs/bridges/alm2.jpg)
 
-![](/img/specs/bridges/ALM3.jpg)
+![](/img/specs/bridges/alm3.jpg)
 
 ## Switch Bridges & Networks in UI
 
