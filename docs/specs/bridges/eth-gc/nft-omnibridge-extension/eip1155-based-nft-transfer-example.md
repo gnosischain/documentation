@@ -88,7 +88,7 @@ The Arbitrary Message Bridge oracles will use the Gnosis Chain to collect confir
 
 2\) Go to the the ALM Monitoring tool here: [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com) and paste in the tx hash.
 
-![](</img/specs/bridges/NFTalm1-1.png>)
+![](</img/specs/bridges/nftalm1-1.png>)
 
 You can follow the status on the monitor. Once 4 validators are successful you can execute the transaction.
 

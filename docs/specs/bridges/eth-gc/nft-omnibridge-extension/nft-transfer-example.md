@@ -36,9 +36,9 @@ You will need the contract and token ID for your NFT to start. If you have troub
 1. **ERC721 Contract Address**
 2. **TokenID **you wish to transfer.
 
-![](/img/specs/bridges/NFTbridge1.png)
+![](/img/specs/bridges/nftbridge1.png)
 
-![](/img/specs/bridges/NFT2.png)
+![](/img/specs/bridges/nft2.png)
 
 ## 2) Approve Contract to Transfer
 
@@ -53,20 +53,20 @@ ERC721`transferFrom` functionality allows the contract to transfer your token an
       _May vary in size depending on how ids are created for this NFT. _
 4. Click the **Write **button and confirm in MetaMask.
 
-![](/img/specs/bridges/NFT3.png)
+![](/img/specs/bridges/nft3.png)
 
 ## 3) Initiate theTransfer
 
 Open the mediator contract ([`0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC`](https://blockscout.com/poa/xdai/address/0x80199C8D04Af4c5cEB532adF4463b18BB4B59ffC) )  in BlockScout and go to the "Write Proxy" tab. Metamask should still be connected.
 
-![](/img/specs/bridges/NFT5.png)
+![](/img/specs/bridges/nft5.png)
 
 1. Scroll to the `relayToken` method and enter the NFT details from step 1.
    1. token (address) field: the ERC721 token contract address
    2. tokenId (uint256) field: the id of the token to transfer
 2. Click the **Write** button and confirm in MetaMask.
 
-![](/img/specs/bridges/NFT6.png)
+![](/img/specs/bridges/nft6.png)
 
 ## 4) Finalize the Transfer on Ethereum
 
@@ -74,15 +74,15 @@ The Arbitrary Message Bridge oracles will use the Gnosis Chain to collect confir
 
 1\) Find and copy the transaction hash id of the previous transaction (`relayToken`). You can find this in your MetaMask wallet in the Activity section. Click on the Contract Interaction and the Details icon to copy the tx hash.
 
-![](/img/specs/bridges/NFT7.png)
+![](/img/specs/bridges/nft7.png)
 
 2\) Go to the the ALM Monitoring tool here: [https://alm-xdai.herokuapp.com/](https://alm-xdai.herokuapp.com) and paste in the tx hash.
 
-![](</img/specs/bridges/NFTalm1-1.png>)
+![](</img/specs/bridges/nftalm1-1.png>)
 
 You can follow the status on the monitor. Once 4 validators are successful you can execute the transaction.
 
-![](/img/specs/bridges/NFTALM2.png)
+![](/img/specs/bridges/nftalm2.png)
 
 3\) Switch to **Ethereum Mainnet in MetaMask** and press the **Execute **button**. **Confirm the transaction in MetaMask**.**This will send the transaction to the Arbitrary Message Bridge contract with collected confirmations of the AMB oracles.
 

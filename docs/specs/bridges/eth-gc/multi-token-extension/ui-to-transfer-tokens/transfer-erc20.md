@@ -19,19 +19,19 @@ In this example, we transfer the Basic Attention Token (BAT) from Ethereum to Gn
 2. Select the Token you want to transfer (here we select BAT) and enter the amount.
 3. Click Unlock to approve account interaction.
 
-![](/img/specs/bridges/Omni1.jpg)
+![](/img/specs/bridges/omni1.jpg)
 
 2\) Confirm the transaction to approve Omnibridge.
 
-![](/img/specs/bridges/Omni2.jpg)
+![](/img/specs/bridges/omni2.jpg)
 
 3\) Once approve TX is complete, you can now Transfer BAT to BAT on GC. Click **Transfer.**
 
-![](/img/specs/bridges/Omni3.jpg)
+![](/img/specs/bridges/omni3.jpg)
 
 4\) Press **Confirm** to approve the transfer and pay the gas fees. These may be expensive depending on network congestion. We recommend checking current gas prices ([https://ethgas.watch/](https://ethgas.watch)), and it also may make sense to bridge over a larger amount of tokens in a single transaction.
 
-![](/img/specs/bridges/Omni4.jpg)
+![](/img/specs/bridges/omni4.jpg)
 
 5\) The bridge transaction will begin to process. While you are waiting for block confirmations, you can click on the ALM monitor link to view progress with your transfer.
 

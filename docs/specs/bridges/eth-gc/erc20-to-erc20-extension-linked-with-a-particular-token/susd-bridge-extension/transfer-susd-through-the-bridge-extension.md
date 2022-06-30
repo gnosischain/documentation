@@ -26,7 +26,7 @@ You will need a small amount of Ether for gas fees and an amount of sUSD to tran
 
 * 4\) Click **Continue**.
 
-![](/img/specs/bridges/sUSD1.png)
+![](/img/specs/bridges/susd1.png)
 
 1. Approve the mediator contract to perform operations with tokens:
 2. 1\) Select `approve` from the **Select an Item** dropdown
