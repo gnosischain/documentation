@@ -8,7 +8,7 @@ description: Tokens Bridged using the multi-token bridge extension
 A dynamic list with additional information is now available at [https://blockscout.com/xdai/mainnet/bridged-tokens](https://blockscout.com/xdai/mainnet/bridged-tokens)
 :::
 
-The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to Gnosis Chain. When a token is bridged, the name is appended with _**on GC**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](correspondence-of-bridgeable-tokens.md).
+The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to Gnosis Chain. When a token is bridged, the name is appended with _**on GC**_.  On a token page, you can also find the link to the original token on Ethereum. For more, see the [corresponding token contract addresses page](/specs/bridges/eth-gc/multi-token-extension/correspondence-of-bridgeable-tokens).
 
 ## 🌱 The Bridged Token List is growing daily! 🌱
 

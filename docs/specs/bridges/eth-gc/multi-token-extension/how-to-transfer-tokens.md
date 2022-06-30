@@ -12,7 +12,7 @@ There is an [OMNIBRIDGE UI](https://omni.xdaichain.com) now available which call
 
 ## General Case: ERC20 Token Transfer
 
-The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see [the separate section below](how-to-transfer-tokens.md#simplification-for-erc-677-erc827-tokens).
+The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see [the separate section below](#simplification-for-erc-677-erc827-tokens).
 
 ### Ethereum -> Gnosis Chain
 
@@ -108,7 +108,7 @@ Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account
 
 :::warning
 Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow [the steps to verify the contract](/specs/bridges/eth-gc/multi-token-extension/new-token-contract-verification-in-blockscout) before starting.
-
+:::
 
 #### Step 1: transferAndCall method to transfer tokens
 
@@ -150,11 +150,11 @@ Click Write Contract and specify the multi-token mediator contract address on Et
 
 :::danger
 Do Not Use the `transfer` method to send tokens to the multi-token mediator on Ethereum. It will lead to loss of tokens.
-
+:::
 
 The token contact deployed on the Gnosis Chain is a customized version of ERC677 standard. It contains [the changes](https://github.com/poanetwork/tokenbridge-contracts/blob/e09bd71bb67cf2ebce3cd7a4ec7130beea733018/contracts/ERC677BridgeToken.sol#L58-L62) that allow calling the `transfer` method to withdraw tokens from the Gnosis Chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on the Gnosis Chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
 
-:::warning
+:::caution
 The method described above works only for tokens deployed by the multi-token mediator in the Gnosis Chain.
-
+:::
 

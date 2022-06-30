@@ -13,7 +13,7 @@ The NFT Extension is in Beta and transfers are performed at your own risk. NFT t
 :::
 
 :::info
-If you want to bridge an [ERC1155 NFT or NFT collection, instructions are here](eip1155-based-nft-transfer-example.md).
+If you want to bridge an [ERC1155 NFT or NFT collection, instructions are here](/specs/bridges/eth-gc/nft-omnibridge-extension/eip1155-based-nft-transfer-example).
 :::
 
 ## -> Gnosis Chain to Ethereum

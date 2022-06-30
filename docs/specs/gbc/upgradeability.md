@@ -10,7 +10,7 @@ A multi-sig Gnosis Safe is used to expand admin responsibilities to a larger ent
 
 A proposed upgrade is presented to this board and a minimum of 7 signatures are required to enact any proposal.
 
-:judge:[Governance Board Members](https://developers.gnosischain.com/for-users/governance#current-governing-board)
+[Governance Board Members](/governance)
 
 ### Contracts managed by the Governance Board
 

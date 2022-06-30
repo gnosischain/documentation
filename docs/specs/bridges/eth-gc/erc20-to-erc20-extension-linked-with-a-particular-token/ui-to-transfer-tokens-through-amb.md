@@ -4,7 +4,7 @@ description: How to develop a web-application to transfer tokens through AMB
 
 # UI to transfer tokens through AMB
 
-This manual describes how to rapidly develop a web-application to transfer tokens using the Arbitrary Message Bridge between the Ethereum Mainnet and the Gnosis Chain. It assumes that an `erc-to-erc` extension was deployed [using these steps](deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md).
+This manual describes how to rapidly develop a web-application to transfer tokens using the Arbitrary Message Bridge between the Ethereum Mainnet and the Gnosis Chain. It assumes that an `erc-to-erc` extension was deployed [using these steps](/specs/bridges/eth-gc/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension).
 
 :::info
 The application is based on [the Burner Wallet 2 interface](https://github.com/burner-wallet/burner-wallet-2). Quick launch of a new application is possible with [the TokenBridge plugin developed for the Arbitrary Message Bridge mediators](https://github.com/poanetwork/tokenbridge/tree/master/burner-wallet-plugin).

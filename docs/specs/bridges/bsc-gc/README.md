@@ -23,4 +23,4 @@ The mediator contracts rely on the following information about the BSC-GC Arbitr
 
 It is possible to get the status of an AMB transaction using [the Live Monitoring app](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application): [https://alm-bsc-xdai.herokuapp.com/](https://alm-bsc-xdai.herokuapp.com). Transactions require a multi-sig (for bridge validators, not users) for a successful transfer. Current validators can be viewed with the live monitoring application.
 
-For transactions from the Gnosis Chain [manual execution](submit-confirmations-manually.md) is required. This action delivers the validator confirmations gathered on the Gnosis Chain to the Binance Smart Chain and triggers the transferred message handling.
+For transactions from the Gnosis Chain [manual execution](/specs/bridges/bsc-gc/submit-confirmations-manually) is required. This action delivers the validator confirmations gathered on the Gnosis Chain to the Binance Smart Chain and triggers the transferred message handling.

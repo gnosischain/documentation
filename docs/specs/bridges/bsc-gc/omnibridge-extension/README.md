@@ -8,7 +8,7 @@ The OmniBridge multi-token extension for the Arbitrary Message Bridge between th
 
 :::info
 * BSC-GC isaccessed through the [OmniBridge UI](https://omni.xdaichain.com/bridge). Select BSC-GC from the dropdown menu and set the MetaMask network to GC or BSC to proceed.
-* OmniBridge does not require a UI for functionality, and[ tokens can be transferred manually](manual-tokens-transfer.md).
+* OmniBridge does not require a UI for functionality, and [tokens can be transferred manually](/specs/bridges/bsc-gc/omnibridge-extension/manual-tokens-transfer).
 * [Live Monitoring App](https://alm-bsc-xdai.herokuapp.com)
 * Additional items may be referenced in the [ETH-GC Omnibridge Extension ](/specs/bridges/eth-gc/multi-token-extension/)section.
 :::

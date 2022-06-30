@@ -12,7 +12,7 @@ Gnosis Chain currently uses Parity's AuRa (Authority Round) proof-of-authority c
 
 Gnosis Chain uses delegated Proof of Stake to provide sybil protection. Validators and delegators must add STAKE to the protocol. If the nodes participate as expected, they receive additional STAKE rewards. If they engage in malicious behavior (like not revealing random numbers) the validator is banned and their STAKE (and delegators STAKE) is frozen. These behavioral rewards act as incentives to promote an honest group of validators participating in consensus.
 
-(TODO: LINK)Learn more in the Whitepaper](../posdao-whitepaper.md)
+[Learn more in the Whitepaper](/specs/consensus/posdao#whitepaper)
 
 View current Gnosis Chain validator pools in the [BlockScout Staking Application](https://blockscout.com/xdai/mainnet/validators).
 
