@@ -18,7 +18,7 @@ AMB's universality means it can be used as a base layer for bridge and applicati
 
 :::success
 * Check out the [ETH-GC AMB](/specs/bridges/eth-gc/)section to view and try some live extensions.
-* Learn about our new [multi-token extension](/specs/bridges/eth-gc/multi-token-extension/), where an ERC20 on Ethereum is bridged and automatically created on Gnosis Chain!
+* Learn about our new [multi-token extension](/specs/bridges/eth-gc/extensions/multi-token/), where an ERC20 on Ethereum is bridged and automatically created on Gnosis Chain!
 :::
 
 ## AMB extensions

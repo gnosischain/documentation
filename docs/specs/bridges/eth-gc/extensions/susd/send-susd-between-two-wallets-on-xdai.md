@@ -7,7 +7,7 @@ description: >-
 # Send sUSD between two wallets on Gnosis Chain
 
 :::success
-sUSD can be sent between any two Gnosis Chain enabled wallets. You will need some amount of sUSD on the Gnosis Chain, as well as some xDai for gas \(less than $.01\), to send from one wallet to another. To transfer sUSD from the Ethereum Mainnet to the Gnosis Chain, see the [transfer using the bridge extension](/specs/bridges/eth-gc/susd-bridge-extension/transfer-susd-through-the-bridge-extension) post.
+sUSD can be sent between any two Gnosis Chain enabled wallets. You will need some amount of sUSD on the Gnosis Chain, as well as some xDai for gas \(less than $.01\), to send from one wallet to another. To transfer sUSD from the Ethereum Mainnet to the Gnosis Chain, see the [transfer using the bridge extension](/specs/bridges/eth-gc/extensions/susd/transfer) post.
 :::
 
 In this example we use [**Alpha Wallet**](https://alphawallet.com/), a mobile wallet with built-in Gnosis Chain support, and ****[**Nifty wallet**](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), a web3 enabled wallet similar to MetaMask but better equipped to work with Gnosis Chain.

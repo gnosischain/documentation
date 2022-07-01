@@ -12,16 +12,16 @@ An AMB bridge extension is a pair of mediator contracts associated with a specif
 :::
 
 :::success
-* List of the tokens already bridged through the extension is available [here](/specs/bridges/eth-gc/multi-token-extension/the-bridged-tokens-list)
+* List of the tokens already bridged through the extension is available [here](/specs/bridges/eth-gc/extensions/multi-token/the-bridged-tokens-list)
 * [OmniBridge UI](https://omni.gnosischain.com/)
-* Follow the [How to transfer tokens](/specs/bridges/eth-gc/multi-token-extension/how-to-transfer-tokens) section to perform operations
+* Follow the [How to transfer tokens](/specs/bridges/eth-gc/extensions/multi-token/how-to-transfer-tokens) section to perform operations
 * [Security Audit Completed](/specs/security-audit#tokenbridge-audit-by-quantstamp-covers-omnibridge).
 :::
 
 By using this extension any user (not only the token contract owner) can transfer tokens from Ethereum to a chain with fast, inexpensive transactions (in this case the Gnosis Chain) without deploying any additional contracts. The specified token amount is locked in the mediator contract, a new token contract is deployed automatically on the Gnosis Chain, and the requested token amount is minted on the Gnosis Chain. The reverse operation burns bridgeable tokens on the Gnosis Chain and unlocks the tokens from the token contract on Ethereum.
 
 :::info
-More details for the operations to deposit and withdraw tokens are available [here.](/specs/bridges/eth-gc/multi-token-extension/extension-internals)
+More details for the operations to deposit and withdraw tokens are available [here.](/specs/bridges/eth-gc/extensions/multi-token/extension-internals)
 
 General FAQs are located here: [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge)
 :::

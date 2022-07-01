@@ -107,7 +107,7 @@ The steps below assume that the account performing the actions is funded with so
 Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BlockScout.
 
 :::warning
-Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow [the steps to verify the contract](/specs/bridges/eth-gc/multi-token-extension/new-token-contract-verification-in-blockscout) before starting.
+Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow [the steps to verify the contract](/specs/bridges/eth-gc/extensions/multi-token/new-token-contract-verification-in-blockscout) before starting.
 :::
 
 #### Step 1: transferAndCall method to transfer tokens

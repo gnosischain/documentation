@@ -99,14 +99,14 @@ For demonstration purposes we use [MyEtherWallet (MEW)](https://www.myetherwalle
 ## Withdraw GEN tokens from the Gnosis Chain (the DAOstack token)
 
 :::warning
-These actions are valid only when the xGEN token is represented by DAOstack-developed contract. In this case there are plans to substitute the interim token with a DAOstack contract after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
+These actions are valid only when the xGEN token is represented by DAOstack-developed contract. In this case there are plans to substitute the interim token with a DAOstack contract after some trial period. Until that time the actions below are not applicable - use [the way specified for the interim token](/specs/bridges/eth-gc/extensions/gen-xgen/transfer#withdraw-gen-tokens-from-the-xdai-chain-the-interim-token).
 :::
 
 :::warning
 It is assumed that the address of the DAOstack-developed token will be `0x543ff227f64aa17ea132bf9886cab5db55dcaddf.`
 :::
 
-1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the Gnosis Chain_](/specs/bridges/eth-gc/gen-xgen-bridge-extension/transfer-gen-between-the-eth-mainnet-and-the-xdai-chain#deposit-gen-tokens-to-the-xdai-chain)_._
+1. Prepare the encoded call of the method `onTokenTransfer` by the same way as it is described by the first step in [the section _Deposit GEN tokens to the Gnosis Chain_](/specs/bridges/eth-gc/extensions/gen-xgen/transfer#deposit-gen-tokens-to-the-xdai-chain)_._
 2. Choose the Gnosis Chain in the browser wallet extension and login to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet). The account that will send the tokens must be the same as the `account _from` used to encode the mediator contract's method in the previous step. (the same as in step 1.4). Go to [MyEtherWallet (MEW)](https://www.myetherwallet.com/access-my-wallet) and select the option to login with a web3 wallet. Next:
 3. 1\) Select the **Interact with Contract** item from the sidebar menu
 4. 2\) Initialize the xGEN token contract interface by entering the DAOstack token contract address in the **Contract Address** field: `0x543ff227f64aa17ea132bf9886cab5db55dcaddf`.

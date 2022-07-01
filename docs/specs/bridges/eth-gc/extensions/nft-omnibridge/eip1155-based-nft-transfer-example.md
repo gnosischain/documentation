@@ -13,7 +13,7 @@ The NFT Extension is in Beta and transfers are performed at your own risk. NFT t
 :::
 
 :::info
-If you want to bridge an [ERC721 NFT, instructions are available here](/specs/bridges/eth-gc/nft-omnibridge-extension/nft-transfer-example).
+If you want to bridge an [ERC721 NFT, instructions are available here](/specs/bridges/eth-gc/extensions/nft-omnibridge/nft-transfer-example).
 :::
 
 ## Gnosis Chain to Ethereum

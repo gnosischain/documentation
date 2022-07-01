@@ -65,7 +65,7 @@ _One could find more convenient ways to interact with the token contracts._
 4\. Choose the `approve` method from the dropdown list and fill in the following:
 
 * "Spender" is the OmniBridge mediator contract [`0xF0b456250DC9990662a6F25808cC74A6d1131Ea9`](https://bscscan.com/address/0xF0b456250DC9990662a6F25808cC74A6d1131Ea9)
-* Value" is the amount of tokens that is going to be transferred through the bridge. The value is specified in Wei and must be [within the limits on the bridge operations](https://docs.tokenbridge.net/bsc-xdai-amb/omnibridge-extension#transfer-limits).
+* Value" is the amount of tokens that is going to be transferred through the bridge. The value is specified in Wei and must be [within the limits on the bridge operations](/specs/bridges/bsc-gc/extensions/omnibridge#transfer-limits).
 * Press the "Write" button and confirm the transaction in your wallet (MetaMask or other).
 * Wait until the transaction is included in a block.
 
@@ -122,7 +122,7 @@ The token transfer process from the Gnosis Chain to the Binance Smart Chain requ
 
 ![](</img/specs/bridges/image-110.png>)
 
-4\. Scroll down to the "approve" method and fill data in the form where "spender" is the OmniBridge mediator contract [`0x59447362798334d3485c64D1e4870Fde2DDC0d75`](https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/transactions) and "value" is the amount of tokens to transfer through the bridge. The value is specified in Wei and must be [within the limits on the bridge operations](https://docs.tokenbridge.net/bsc-xdai-amb/omnibridge-extension#transfer-limits). \
+4\. Scroll down to the "approve" method and fill data in the form where "spender" is the OmniBridge mediator contract [`0x59447362798334d3485c64D1e4870Fde2DDC0d75`](https://blockscout.com/xdai/mainnet/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75/transactions) and "value" is the amount of tokens to transfer through the bridge. The value is specified in Wei and must be [within the limits on the bridge operations](/specs/bridges/bsc-gc/extensions/omnibridge#transfer-limits). \
 \
 Press the "Write" button and confirm the transaction in your wallet. Wait until the transaction is included in a block.
 
