@@ -12,7 +12,7 @@ sUSD can be sent between any two Gnosis Chain enabled wallets. You will need som
 
 In this example we use [**Alpha Wallet**](https://alphawallet.com/), a mobile wallet with built-in Gnosis Chain support, and ****[**Nifty wallet**](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en), a web3 enabled wallet similar to MetaMask but better equipped to work with Gnosis Chain.
 
-{% embed url="https://www.youtube.com/watch?v=AMoycEFWDIY&feature=youtu.be" caption="A video guide for Cross-chain sUSD transfer from the Ethereum Mainnet to the Gnosis Chain
+{@youtube: AMoycEFWDIY}
 
 1\) Assuming you have transferred sUSD to an address on the Gnosis Chain, open that account in your Alpha Wallet. If you need to import an existing account, [follow these instructions](https://www.xdaichain.com/for-users/wallets/alpha-wallet/importing-an-existing-account-to-alpha-wallet).
 

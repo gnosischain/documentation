@@ -26,9 +26,7 @@ More details for the operations to deposit and withdraw tokens are available [he
 General FAQs are located here: [https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge](https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge)
 :::
 
-{% embed url="https://www.youtube.com/watch?v=WMubACRjS_4
-Lead Architect Alexander Kolotov speaks at EdCon on the Multi-token tool
-{% endembed %}
+{@youtube: WMubACRjS_4}
 
 ## OmniBridge technical information and extension parameters
 
