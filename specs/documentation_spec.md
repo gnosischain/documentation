@@ -1,6 +1,6 @@
 # Spec: Make Gnosis Docs Great Again 
 
-![homepage](img/homepage.png)
+>![homepage](img/homepage.png)
 
 ## Objectives
 
@@ -62,7 +62,7 @@
 
 ## Specs
 
-![homepage](img/homepage.png)
+> ![homepage](img/homepage.png)
 
 ### Features
 
@@ -85,7 +85,7 @@
 
 ### Info Architecture
 
-![info-architecture](img/info-architecture.png)
+>![info-architecture](img/info-architecture.png)
 
 **Site Map**
 - What is Gnosis Chain
@@ -100,7 +100,7 @@
 
 ### About Gnosis Chain
 
-![about-gnosis-wireframe](img/about-page.png)
+>![about-gnosis-wireframe](img/about-page.png)
 
 **User Stories**
 
@@ -136,7 +136,7 @@
 
 ### User Guide
 
-![user-guide-wireframe](img/user-guide-page.png)
+>![user-guide-wireframe](img/user-guide-page.png)
 
 **User Objectives**
 - [ ] How do I start using GC, as someone new to blockchain?
@@ -151,7 +151,7 @@
 
 ### Developers
 
-![developers-wireframe](img/developers-page.png)
+>![developers-wireframe](img/developers-page.png)
 
 **User Objectives**
 - [ ] As a Developer coming from Ethereum, what are key things I need to know about GC?
@@ -165,7 +165,7 @@
 
 ### Run a Node
 
-![validators-wireframe](img/validators-page.png)
+>![validators-wireframe](img/validators-page.png)
 
 - [ ] How do I run a Validator in the GC Network?
 - [ ] How much can I expect to earn as a Validator on the Network?
@@ -181,7 +181,7 @@
 
 ### Bridges
 
-![bridges-wireframe](img/bridges-page.png)
+>![bridges-wireframe](img/bridges-page.png)
 
 **Nomenclature**
 
@@ -230,7 +230,7 @@
 
 ### Tools
 
-![tools-wireframe](img/tools-page.png)
+>![tools-wireframe](img/tools-page.png)
 
 - [ ] What are the Block Explorers I can use?
   - [ ] How do I learn more about Blockscout?
@@ -246,7 +246,7 @@
 
 > Should this be "Guides" instead, where we put all the guides that don't quite fit into other sections? Integrations can then just be one sub-section of Guides
 
-![integrations-wireframe](img/integrations-page.png)
+>![integrations-wireframe](img/integrations-page.png)
 
 **User Stories**
 
@@ -263,7 +263,7 @@
 
 > This is a novel idea I had, which I haven't seen in other chains, but could supercharge the composability and growth in ours. 
 
-![ecosystem-wireframe](img/ecosystems-page.png)
+>![ecosystem-wireframe](img/ecosystems-page.png)
 
 **User Stories**
 
