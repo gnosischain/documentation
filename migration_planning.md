@@ -2,7 +2,7 @@
 
 This is a list of all existing docs across 
 * [Former xdaichain.com Documentation](https://developers.gnosischain.com/)
-* [Gnosis Beacon Chain Documentation]()
+* [Gnosis Beacon Chain Documentation](https://docs.gnosischain.com/)
 
 This is used for the planning for the new Gnosis Chain DevHub
 * Reorganized Developer Docs
@@ -21,7 +21,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [ ] Chain Usage (Dune Analytics Dashboards)
   * [ ] [Why Gnosis/xDai section](https://blockscout.com/xdai/mainnet/)
 * [ ] Community Updates
-  * [ ] [Youtube Channel](https://www.youtube.com/channel/UC93IarcktP0-dZzpI_vvO3g)
+  * [ ] [Youtube Channel](https://www.youtube.com/GnosisChain)
   * [ ] [Substack Newsletter](https://gnosischain.substack.com/)
 * [ ] About Gnosis Chain
   * [ ] Features
