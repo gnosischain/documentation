@@ -2,7 +2,7 @@
 
 This is a list of all existing docs across 
 * [Former xdaichain.com Documentation](https://developers.gnosischain.com/)
-* [Gnosis Beacon Chain Documentation]()
+* [Gnosis Beacon Chain Documentation](https://docs.gnosischain.com/)
 
 This is used for the planning for the new Gnosis Chain DevHub
 * Reorganized Developer Docs
@@ -13,6 +13,7 @@ This is used for the planning for the new Gnosis Chain DevHub
 The current version of this can be found at [developers.gnosischain.com](https://developers.gnosischain.com/)
 
 * [ ] Top-level links
+<<<<<<< HEAD
   * [ ] [Omni Bridge](https://omni.gnosischain.com/) #bridge
   * [ ] [xDai Bridge](https://bridge.gnosischain.com/) #bridge
   * [ ] [Gnosis Beacon Chain Docs](https://docs.gnosischain.com/) #validators
@@ -21,7 +22,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [ ] Chain Usage (Dune Analytics Dashboards) #tools
   * [ ] [Why Gnosis/xDai section](https://blockscout.com/xdai/mainnet/) #about
 * [ ] Community Updates #community
-  * [ ] [Youtube Channel](https://www.youtube.com/channel/UC93IarcktP0-dZzpI_vvO3g) #community
+  * [ ] [Youtube Channel](https://www.youtube.com/GnosisChain) #community
   * [ ] [Substack Newsletter](https://gnosischain.substack.com/) #community
 * [ ] About Gnosis Chain #about
   * [ ] Features #about
