@@ -10,8 +10,8 @@ description: >-
 
 Instructions for usage with the UI are available:
 
-* (TODO: Link)Moving Dai to xDai](/bridges/xdai/moving-dai-to-xdai)
-* (TODO: Link)Moving xDai to Dai](/bridges/xdai/moving-xdai-to-dai)
+* [Moving Dai to xDai](/bridges/xdai/moving-dai-to-xdai)
+* [Moving xDai to Dai](/bridges/xdai/moving-xdai-to-dai)
 
 The bridge can also be used [without the UI](/specs/bridges/xdai/use/without-ui).
 
