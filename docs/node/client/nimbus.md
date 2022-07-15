@@ -13,7 +13,7 @@ Nimbus is built in Nim under an Apache 2.0 License. [More on the Nimbus and team
 
 The original Nimbus binaries do not support Gnosis Beacon chain out-of-the-box, however GBC specific binaries still can be built from source. For convenience, we provide easy to use prebuilt docker images in our GBC Nimbus Repo.
 
-* [Get Started with Nimbus on GBC](/validators/get-started/#nimbus)
+* [Get Started with Nimbus on GBC](/node/get-started/#nimbus)
 * GBC Nimbus Repo\
   [https://github.com/gnosischain/nimbus-launch](https://github.com/gnosischain/nimbus-launch)
 

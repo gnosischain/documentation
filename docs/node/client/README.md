@@ -5,19 +5,19 @@
 
 ## Setup Summary
 
-Before you begin the setup, please check the [Validator Requirements and Responsibilities](/validators/get-started/responsibilities) and [Technical Requirements](/validators/get-started/technical-requirements) for your node.
+Before you begin the setup, please check the [Validator Requirements and Responsibilities](/node/get-started/responsibilities) and [Technical Requirements](/node/get-started/technical-requirements) for your node.
 
 When you are ready, you will perform the following steps to get things up and running.
 
 :::caution
-**Optional:**  [Setup and run a Gnosis Chain Node](/validators/client/nethermind-node-setup): This step is for experienced node runners only. To begin, it is not needed but will be encouraged for the merge. Instructions below include a default option to connect to the public RPC.
+**Optional:**  [Setup and run a Gnosis Chain Node](/node/client/nethermind-node-setup): This step is for experienced node runners only. To begin, it is not needed but will be encouraged for the merge. Instructions below include a default option to connect to the public RPC.
 :::
 
 1. [Generate Validator Keystores and Deposit Data](#step-1-generate-validator-accounts-and-deposit-data): On an offline machine, generate up to 128 separate validator keys per node.
 2. [Choose your Gnosis Beacon Chain (GBC) Client:](#step-2-choose-your-beacon-chain-client--import-validator-keys) Choose to run either Prysm, Lighthouse or Nimbus. Add keystores and env variables.
 3. [Start up your GBC Node](#step-3-run-the-beacon-chain-node-with-the-attached-validator-process): Run in the docker container.
-4. [Deposit to your Validator(s)](/validators/operations/): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
-5. [View on Explorer](/validators/operations/#view-your-validator): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
+4. [Deposit to your Validator(s)](/node/operations/): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
+5. [View on Explorer](/node/operations/#view-your-validator): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
 
 ### **Requirements:**
 
@@ -93,7 +93,7 @@ docker run -it --rm -v /path/to/validator_keys:/app/validator_keys \
 
 4\.  Choose a secure password and confirm. It should be at least 8 characters. You will see a mnemonic seed phrase. Write down and store your pwd and mnemonic safely offline.
 
-![](/img/validators/mnemonic.png)
+![](/img/node/mnemonic.png)
 
 Following execution, the path you defined for `/path/to/validator_keys` will contain the keystores and `deposit_data*.json` file.
 
@@ -110,7 +110,7 @@ _`Want to learn more about Ethereum 2.0 keys and key generation?`_ 💡[Learn mo
 :::note
 To begin, determine which client you want to run, [Lighthouse](https://lighthouse.sigmaprime.io), [Prysm](https://prysmaticlabs.com) or [Nimbus](https://nimbus.guide/intro.html). Instructions differ for the 3 clients, **see below for instructions related to each implementation.**
 
-Make sure your machine conforms to the [Technical Requirements](/validators/get-started/technical-requirements#beacon-chain-node-requirements) for running a node, including opening the following pair of ports:
+Make sure your machine conforms to the [Technical Requirements](/node/get-started/technical-requirements#beacon-chain-node-requirements) for running a node, including opening the following pair of ports:
 
 * **12000 UDP, 13000 TCP**
 :::
@@ -134,7 +134,7 @@ The Prysm client has been modified slightly. The underlying go-ethereum library 
     \
    Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
    1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-   2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/validators/client/connect-to-a-gc-node) **** rather than the public RPC.\
+   2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC.\
 
 8.  Run the following command to import all added keystore files:
 
@@ -162,7 +162,7 @@ The Lighthouse client natively supports Gnosis Beacon Chain. Further instruction
     Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
 
     1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-    2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/validators/client/connect-to-a-gc-node) **** rather than the public RPC.
+    2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC.
 
 
 7.  Run the following command to import all added keystore files:
@@ -190,7 +190,7 @@ Official binaries or docker images for Ethereum Mainnet **do not** currently sup
     Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
 
     1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-    2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/validators/client/connect-to-a-gc-node) **** rather than the public RPC. Make sure to use a WSS connection instead of HTTPS.
+    2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC. Make sure to use a WSS connection instead of HTTPS.
 6.  Run the following command to import all added keystore files, you will be interactively prompted to enter a keystore password:
 
     ```
@@ -220,6 +220,6 @@ A similar command can be used to look at the validator process logs: `docker-com
 
 ## Step 4) Make a Deposit
 
-Making deposits is a 2 part process. See the [Validator Deposits section](/validators/operations/) for details.
+Making deposits is a 2 part process. See the [Validator Deposits section](/node/operations/) for details.
 
 ##

@@ -11,7 +11,7 @@ While not mandatory (public RPC endpoint connection is possible), we encourage u
 
 Follow these instructions to get started:
 
-* [Nethermind](/validators/client/nethermind-node-setup)
+* [Nethermind](/node/client/nethermind-node-setup)
 
 Once your node is setup, take note of the RPC endpoint - you will need it later in the setup. The default is typically `http://x.x.x.x:8545` where `x.x.x.x` is your instance ip.
 

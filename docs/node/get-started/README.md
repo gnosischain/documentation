@@ -8,7 +8,7 @@ Validators protect the Gnosis Chain by staking on the Gnosis Beacon Chain. There
 
 ### Run Your Own Node
 
-Please see the [Validator Responsibilities](/validators/get-started/responsibilities) and [Technical Requirements](/validators/get-started/technical-requirements) to learn more about expectations and what you will need to become a validator.Validating the GBC requires 1 GNO per validator process.
+Please see the [Validator Responsibilities](/node/get-started/responsibilities) and [Technical Requirements](/node/get-started/technical-requirements) to learn more about expectations and what you will need to become a validator.Validating the GBC requires 1 GNO per validator process.
 
 :::note
 DappNode now supports the Gnosis Beacon Chain! If you would like to use their services for validation, please see the [guide and instructions here](https://forum.dappnode.io/t/how-to-setup-a-gnosis-beacon-chain-gbc-validator-on-dappnode/1351)

@@ -19,27 +19,27 @@ sGNO and rGNO will be available in various DeFi protocols coming soon!
 
 1) Go to [https://app.stakewise.io](https://app.stakewise.io) and connect your wallet (We use MetaMask in this example, you can also use WalletConnect, Ledger or other options).
 
-![](/img/validators/stakewise-1.png)
+![](/img/node/stakewise-1.png)
 
 2) If your MetaMask is not yet connected to the Gnosis Chain, switch by clicking on the network button, selecting Gnosis Chain, and pressing **Switch**.
 
-![](/img/validators/stakewise-2.png)
+![](/img/node/stakewise-2.png)
 
-![](/img/validators/stakewise-3.png)
+![](/img/node/stakewise-3.png)
 
 3) Confirm the Network switch in MetaMask.
 
-![](/img/validators/stakewise-4.png)
+![](/img/node/stakewise-4.png)
 
 4) Enter the GNO deposit amount into the Stake interface. Enter any amount of GNO to get started.  Note you can also change the recipient address if desired. You will receive the same amount of sGNO tokens relative to the GNO you stake.
 
 Agree to the terms and press confirm.
 
-![](/img/validators/stakewise-5.png)
+![](/img/node/stakewise-5.png)
 
 5) Confirm the deposit transaction in your wallet. You should now see sGNO added in the interface.
 
-![](/img/validators/sGNO.png)
+![](/img/node/sGNO.png)
 
 ## Tokens (sGNO & rGNO)
 
@@ -50,7 +50,7 @@ Agree to the terms and press confirm.
 
 You can [import to Metamask](https://consensys.net/blog/metamask/how-to-add-your-custom-tokens-in-metamask/) as you would other tokens, or click on the 🦊 in Blockscout to add!
 
-![](/img/validators/blockscout-1.png)
+![](/img/node/blockscout-1.png)
 
 At all times the total amount of tokens that have been issued to users is sGNO + rGNO = GNO deposits + GNO rewards \* (100% — 10%), where 10% is StakeWise commission.
 
@@ -64,7 +64,7 @@ rGNO represent earned staking rewards and are updated on a periodic basis.  Cont
 
 The interface shows the time until the next update to your rGNO.
 
-![Time until next rGNO update](/img/validators/next-update.png)
+![Time until next rGNO update](/img/node/next-update.png)
 
 :::note
 **Coming Soon**: Use your rGNO in DeFi protocols on the Gnosis Chain to borrow and stake additional GNO! 

@@ -14,7 +14,7 @@ Deposits occur on the Gnosis Chain. **If you have GNO on Ethereum mainnet, you w
 During the deposit, your GNO will be automatically wrapped into mGNO, the metatoken used for staking on the Gnosis Beacon Chain. **1 GNO = 32 mGNO required to run a validator**.  When [viewing your validator](#view-your-validator) you will see deposit info in mGNO.
 :::
 
-Once you have followed the steps to [Get Started](/validators/get-started/) and your Beacon Chain node is running, you will make a deposit of **1 GNO for each validator**. You can make a bulk deposit for up to 128 validators at a time.
+Once you have followed the steps to [Get Started](/node/get-started/) and your Beacon Chain node is running, you will make a deposit of **1 GNO for each validator**. You can make a bulk deposit for up to 128 validators at a time.
 
 ## Deposit GNO
 
@@ -22,29 +22,29 @@ Once you have followed the steps to [Get Started](/validators/get-started/) and 
 
 In this example we use MetaMask.
 
-![](</img/validators/UI-1A.png>)
+![](</img/node/UI-1A.png>)
 
-![](</img/validators/UI-2A.png>)
+![](</img/node/UI-2A.png>)
 
-2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/validators/get-started/#step-1-generate-validator-account-s-and-deposit-data) It will be located in the same folder as the generated keystores.
+2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/get-started/#step-1-generate-validator-account-s-and-deposit-data) It will be located in the same folder as the generated keystores.
 
-![](/img/validators/upload-info1.png)
+![](/img/node/upload-info1.png)
 
 3) The app will validate the json file and list the number of validator deposits you are making and the required GNO to deposit. Click **Deposit** to continue.
 
-![](/img/validators/deposit-2.png)
+![](/img/node/deposit-2.png)
 
-4) Check that you understand the risks and [ensure you are interacting with the correct contract](/validators/operations/deposit-safety-instructions) before proceeding.
+4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/operations/deposit-safety-instructions) before proceeding.
 
-![](/img/validators/deposit-3.png)
+![](/img/node/deposit-3.png)
 
-![](/img/validators/deposit-4.png)
+![](/img/node/deposit-4.png)
 
 5) Complete the deposit.
 
-![](/img/validators/confirm.png)
+![](/img/node/confirm.png)
 
-![](/img/validators/dep-made.png)
+![](/img/node/dep-made.png)
 
 ## View your Validator
 
@@ -60,7 +60,7 @@ Once live, you can view your validator(s) on the explorer. Copy the pubkey(s)  l
 
 If you need some extra mGNO (for example to top off a balance or for other reasons), you can use the previous swap UI to convert any amount GNO on the Gnosis Chain to mGNO.
 
--> [Instructions](/validators/operations/convert-gno-to-mgno)
+-> [Instructions](/node/operations/convert-gno-to-mgno)
 
 :::caution
 Currently there is not a mechanism to swap mGNO back to GNO.
