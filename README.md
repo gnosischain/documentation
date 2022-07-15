@@ -8,7 +8,9 @@ The website is built using [Docusaurus 2](https://docusaurus.io/).
 
 ## Contributing
 
-The Developers Portal is an ecosystem tool, we welcome everybody to collaborate and improve it!
+The Developers Portal is an ecosystem tool, we welcome everybody to collaborate and improve it! See the [contributing page](CONTRIBUTING.md) for details.
+
+## Run the project
 
 ### Prerequisites
 
@@ -41,7 +43,3 @@ This command generates static content into the `build` directory and can be serv
 * Landing pages are located in the [src/pages](src/pages) directory.
 * The left side-bar of the page is controlled by [sidebars.js](sidebars.js).
 * Docusaurus complete documentation can be found [here](https://docusaurus.io/docs).
-
-### Pull Request (PR)
-* TBD
-
