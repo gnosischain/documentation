@@ -38,7 +38,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Submit an Issue
 
-Start by [submiting an issue](issues/new/choose) to this repository and following the instructions of the template accordingly.
+Start by [searching if an issue already exists](https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments). 
+If a related issue doesn't exist, you can [open a new issue](https://github.com/gnosischain/developers-portal/issues/new/choose) following the instructions of the template accordingly.
 
 Issues are categorized by type:
 
