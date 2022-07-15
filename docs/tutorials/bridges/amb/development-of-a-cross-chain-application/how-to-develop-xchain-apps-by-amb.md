@@ -86,7 +86,7 @@ All methods accept as a parameter the hash of the transaction that originated th
 ## Example of ERC20/ERC677 to ERC677 using AMB bridge
 
 :::info
-Explicit deployment instructions are [available here](/specs/bridges/amb/erc677-to-erc677-bridge-on-top-of-amb)
+Explicit deployment instructions are [available here](/bridges/amb/erc677-to-erc677-bridge-on-top-of-amb)
 :::
 
 We can use the AMB bridge to move ERC20/ERC677 tokens between two chains. To do this, we'll have two contracts that communicate with each other:

@@ -12,7 +12,7 @@ We recommend using Chrome + Metamask + No Ad Blockers to complete the process.
 You will need a **small additional amount of xDai** to process the first transaction, and an **additional amount of Eth** to process the claim transaction on Ethereum.
 :::
 
-1\) Go to [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/). [Connect your web3 wallet](../../wallets/metamask/metamask-setup.md) (MetaMask, Nifty Wallet) to the **Gnosis Chain**. Once connected, you will see your address populated in the header, and your xDai and Dai balance displayed on the page.
+1\) Go to [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/). (TODO: link)Connect your web3 wallet](/wallets/metamask/metamask-setup.md) (MetaMask, Nifty Wallet) to the **Gnosis Chain**. Once connected, you will see your address populated in the header, and your xDai and Dai balance displayed on the page.
 
 _Note: If you change the dropdown on the page (Gnosis Chain) but not in MetaMask, the interface will shift but your wallet will not auto-connect to the chain. Switching chains in MM will automatically shift the interface._
 
@@ -45,5 +45,5 @@ _Note: If you change the dropdown on the page (Gnosis Chain) but not in MetaMask
 ![](/img/bridges/xdai/xdai7.png)
 
 :::info
-If you are interested in converting Dai to xDai without the UI see [How to use xDai Bridge without UI](/specs/bridges/xdai/use/without-ui)
+If you are interested in converting Dai to xDai without the UI see [How to use xDai Bridge without UI](/bridges/xdai/use/without-ui)
 :::
