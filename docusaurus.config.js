@@ -118,8 +118,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Quick Start',
-                to: '/quick-start',
+                label: 'About',
+                to: '/about',
               },
             ],
           },
