@@ -10,8 +10,8 @@ Organizations are represented by an individual within that organization who is r
 :::info
 **Instructions for Bridge Validators**
 
-* [New Node Setup](/bridges/xdai/node/node-setup)
-* [Adding a New Validator](/bridges/xdai/node/add)
+* [New Node Setup](/bridges/xdai/validators/node-setup)
+* [Adding a New Validator](/bridges/xdai/validators/add)
 * [Bridge Contracts Management](/bridges/xdai/contracts-management)
 :::
 
