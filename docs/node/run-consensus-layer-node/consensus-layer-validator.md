@@ -27,6 +27,10 @@ Since GBC is a lower-stakes environment, it is a great place to learn and refine
 * **Using the Terminal**:  You will be required to enter commands into a terminal window. These will be simple copy-paste instructions, but familiarity with using a terminal is helpful.
 * **Key Management**: You will use the command line to derive a key-pair for validating blocks, as well as a mnemonic you will use later to derive a withdrawal pair. It is important to store these safely (offline ledger highly recommended).
 
+![](/img/node/Gnosis-Validator-diagram.png)
+<p align = "center"> Visualization of Gnosis Node</p>
+
+
 ### Connectivity
 
 A reliable internet connection is key: bandwidth should not be throttled or capped. Upload bandwidth should be a minimum of 700 MB/hour with increases likely. Brief periods offline may result in small inactivity penalties, but this will typically be recouped quickly as long as the outage is short.
@@ -125,7 +129,7 @@ For better understanding of the network throughput requirements, a benchmark was
 
 The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
 
-Validators are advised to consider those numbers when planning their infrastrusture and budget. With growth of the overall validator set, inshallah these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
+Validators are advised to consider those numbers when planning their infrastrusture and budget. With growth of the overall validator set, these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
 
 | Number of validators | Inbound traffic | Outbound traffic | Approximate monthly traffic |
 | -------------------- | --------------- | ---------------- | --------------------------- |
@@ -207,6 +211,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
 1.  Pull the docker image for the data generator.
 
     ```
+    cd
     docker pull ghcr.io/gnosischain/validator-data-generator:latest
     ```
 2. If this is your first time running the process and there is no an existing mnemonic to generate keystores and deposit data, replace the variables below with your info then run the follwoing command with these variables:
@@ -296,23 +301,24 @@ The Lighthouse client natively supports Gnosis Beacon Chain. Further instruction
     ```
 3. Switch to the cloned directory: `cd gbc`.
 4. Copy validators’ keystore files generated on _the Step 1_ to the `keys/validator_keys` directory. **Keystores should only be used on a single node.**\
+    `sudo cp -r /home/<user>/vkeys/validator_keys/validator_keys /home/<user>/gbc/keys/`
    ****_Note: You may need to_ [_change file ownership parameters_](https://linuxize.com/post/chmod-command-in-linux/) _to copy._
 5. Write the keystore password from Step 1 to  `keys/keystore_password.txt` file (create this file).
-6.  Create an `.env` file from the example at `.env.example`. (note the `.` in front makes it hidden, either enable hidden files or use `ls -la` to find). \
+6.  Create an `.env` file from the example at `.env.example`. (note the `.` in front makes it hidden, either enable hidden files or use `ls -la` to find). `sudo cp /home/<user>/gbc/.env.example /home/<user>/gbc/.env`
+Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
+1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
+2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC.
 
 
-    Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
-
-    1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-    2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC.
-
-
-7.  Run the following command to import all added keystore files:
+7.  Run the following commands to import all added keystore files:
 
     ```
+    cd /home/<user>/gbc 
     docker-compose up validator-import; docker-compose down
     ```
-
+:::note
+If you have errors, ensure that your decryt key is correct in the earlier seps (it is case sensitive). The previous command imports the keys from `/home/<user>/gbc/keys/validator_keys` to `/home/<user>/gbc/validators` .  After imoprting, it's a good idea to archive the old keystores from `/home/<user>/gbc/keys/validator_keys` somewhere safe. 
+:::
 ### Nimbus
 
 Official binaries or docker images for Ethereum Mainnet **do not** currently support Gnosis Beacon Chain, however, the Nimbus client can be specifically built from source to support the Gnosis Beacon Chain. Use the process below to run a Nimbus beacon node on the Gnosis Beacon Chain.
@@ -338,6 +344,20 @@ Official binaries or docker images for Ethereum Mainnet **do not** currently sup
     ```
     docker-compose run validator-import; docker-compose down
     ```
+7. Edit docker-compose files for restart. If your device goes down/restarts for any reason, we want our nodes to start back up as soon as they can. to do this, edit the docker-compose to have the restart field set to `always` like so:
+```
+version: '3.3'
+services:
+  node:
+    image: sigp/lighthouse:v2.2.1-modern
+    hostname: node
+    restart: always
+    command: |
+      lighthouse beacon_node
+      --network gnosis
+      --checkpoint-sync-url https://rpc-gbc.gnosischain.com
+```
+
 
 ## Step 3) Run the Beacon Chain node with the attached Validator Process
 
@@ -362,8 +382,7 @@ A similar command can be used to look at the validator process logs: `docker-com
 
 ## Step 4) Make a Deposit
 
-Making deposits is a 2 part process. See the [Validator Deposits section](/node/validator-deposits/validator-deposits) for details.
-
+Once your node has synced (can take a few hours depending on setup) and the node and validator are running without any errors, you are ready to make a deposit. To check if your validator is synced, open the logs and you should see a message saying that the validator is awaiting activation. Making deposits is a 2 part process. See the [Validator Deposits section](/node/validator-deposits) for details.
 ##
 
 

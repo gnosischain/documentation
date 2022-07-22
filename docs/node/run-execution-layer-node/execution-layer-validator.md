@@ -2,7 +2,7 @@
 ---
 # Run a Gnosis Chain Execution Layer Node
 
-You can also run a Gnosis Chain Execution Layer Node on the same machine as your Beacon Chain node(s). This is reccomeneded for more experienced node runners, but is highly encouraged as it increases decentralization of the network. You can link Gnosis Beacon Chain to an existing node through a JSON RPC endpoint. This is the easiest method when you first setup your node. You will be encouraged to update your setup once the merge happens. If you have experience and want to setup your own GC node now, read on!
+You can also run a Gnosis Chain Execution Layer Node on the same machine as your Beacon Chain node(s). This is reccomeneded for more experienced node runners, but is highly encouraged as it increases decentralization of the network. If you don't wish to do this, you can just ignore this section and connect your node through an existing JSON RPC endpoint. Using an existing RPC is the easiest method when you first setup your node. It is also encouraged to use an existing RPC during setup as it can take a while (up to 3 days, depeneding on your setup) for your execution layer node to fully sync. You will be encouraged to update your setup once the merge happens. If you have experience and want to setup your own GC node now, read on!
 
 ## Technical Requirements
 
@@ -46,6 +46,79 @@ When you start the Launcher choose the following options to sync a node:
 * Select network: **xDai**
 * Select sync: **Fast sync**
 :::
+
+### Setup Instructions (Linux)
+
+#### 1) Set up directories and docker-compose.yml file
+
+*Replace `<user>` with your username on your device*
+```
+    cd 
+    mkdir /home/<user>/nethermind
+    mkdir /home/<user>/nethermind/nethermind_db
+    mkdir /home/<user>/nethermind/keystore
+    mkdir /home/<user>/nethermind/logs
+```
+Create docker-compose.yml:
+```
+nano /home/<user>/nethermind/docker-compose.yml
+```
+Add the following text:
+```
+version: "3.7"
+services:
+
+  nethermind:
+    hostname: nethermind
+    container_name: nethermind
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    networks:
+      net:
+        ipv4_address: 192.168.32.100
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+    volumes:
+      - /home/<user>/nethermind/nethermind_db:/nethermind/nethermind_db
+      - /home/<user>/nethermind/keystore:/nethermind/keystore
+      - /home/<user>/nethermind/logs:/nethermind/logs
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - NETHERMIND_CONFIG=xdai
+    logging:
+      driver: "local"
+ 
+networks:
+  net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.32.0/24"
+```
+:::note
+Be mindful of spacing, yaml is very particular and the error messages for malformed yaml aren't always intuitive. Also, for those unfamiliar with nano, `Ctl-o` to save and `Ctl-x` to close :)
+:::
+
+#### 2) Start Nethermind
+
+```
+cd nethermind
+docker-compose up
+```
+To check logs:
+```
+sudo docker ps -a
+sudo docker-compose logs -f <container name> 
+```
+Container name should in this case be 'nethermind'
+
+:::note
+This can take 1-3 days to sync, so in the meantime you can connect your Beacon chain node to a public RPC
+:::
+
 
 ### **Sharing machines for GC and GBC clients**
 

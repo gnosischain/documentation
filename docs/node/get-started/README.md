@@ -16,7 +16,7 @@ DappNode now supports the Gnosis Beacon Chain! If you would like to use their se
 
 ### 💧 Liquid Staking
 
-Liquid staking providers allow anyone to stake without running the infrastructure themselves. Liquid staking has arrived on the GBC with [Stakewise](https://app.stakewise.io). Connect your wallet to the GC to start staking __ today! [Instructions here](https://stakewise.medium.com/stakewise-liquid-staking-now-on-gnosis-beacon-chain-b732d81480b9).
+Liquid staking providers allow anyone to stake without running the infrastructure themselves. Liquid staking can be done on the GBC with [Stakewise](https://app.stakewise.io). Connect your wallet to the GC to start staking. [Instructions here](https://stakewise.medium.com/stakewise-liquid-staking-now-on-gnosis-beacon-chain-b732d81480b9).
 
 :::note
 :bulb:Want to learn the basics about validating on the beacon chain? [This is a good first article to start](https://medium.com/alethio/ethereum-2-a-validators-journey-through-the-beacon-chain-843f70aaab2e) (covers the Ethereum Beacon Chain, but processes are similar on GBC only faster: 5 sec blocks and 16 slots per epoch).
