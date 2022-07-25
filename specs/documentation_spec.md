@@ -1,10 +1,32 @@
-# Spec: Make Gnosis Docs Great Again 
+# Spec: Gnosis Chain Documentation
 
->![homepage](img/homepage.png)
+>![](https://i.imgur.com/Z6KwkxA.png)
 
-## Objectives
+# Objectives
 
-### Improving Developers Experience
+## Training our Team
+
+- Many of our own team are getting up to speed on how Gnosis Chain works
+    - e.g. xDai Bridge and tight coupling with the chain as native token
+    - e.g. How GC is different from Ethereum from a developer's perspective
+    - e.g. AuRa Consensus and DOS mitigation (and how GBC will replace it)
+    - e.g. Fee market of the chain (and MEV)
+    - e.g. Security risk for the bridges
+    - e.g. What is the current ecosystem of DApps, Bridges, Onramps
+    - e.g. Tokenomics of GNO
+- Docs as a forcing function for us to find narrative clarity
+  - "About Gnosis Chain" as a way to refine pitch
+  - Forces internal team to master how the chain works
+- Good exercise to expand "Core Dev" and "Ecosystem" expertise
+    - Write docs as we triage inbound queries (figure out and document)
+  - e.g. Understanding AuRa consensus and previous hard forks
+  - e.g. xDai-as-native-gas minting process and how it's tied to block rewards
+  - e.g. Understanding how current bridges are set up, and security attack vectors
+- Develop processes to triage Technial issues
+  - i.e. Process for triaging inbound technical issues
+  - i.e. Where can we ask for help? (e.g. ask Blockscout or Nethermind team)
+
+## Improving Developers Experience
 
 - The success of Gnosis Chain depends on developer adoption
   - Novel DApps are critical for user adoption
@@ -23,19 +45,7 @@
   - What are the DevTools I have available for GC?
   - What are the existing DApps on GC and how can I build on them?
 
-### Training our Team
-
-- New Team members need to get up to speed on Gnosis Chain
-  - Writing docs is a fantastic driving exercise
-- Good exercise to expand "Core Dev" and "Ecosystem" expertise
-  - e.g. Understanding AuRa consensus and previous hard forks
-  - e.g. xDai-as-native-gas minting process and how it's tied to block rewards
-  - e.g. Understanding how current bridges are set up, and security attack vectors
-- Develop processes to triage Technial issues
-  - i.e. Process for triaging inbound technical issues
-  - i.e. Where can we ask for help? (e.g. ask Blockscout or Nethermind team)
-
-### More than Developers
+## More than Developers
 
 - Documentation should organize all the existing information on the site
   - "End-user" focused home page
@@ -46,7 +56,7 @@
   - End-user site (i.e. gnosischain.com)
   - Governance-focused site (i.e. Gnosis DAO?)
 
-## How we Organize
+# How we Organize
 
 - People
   - Ale (Lead)
@@ -57,14 +67,15 @@
 - Tools
   - [Project Board](https://github.com/orgs/gnosischain/projects/3/views/1) 
   - #gc-devrel on Slack
+  - [Figma Wireframes](https://www.figma.com/file/mkWykfebPV2G4LeI1iFKAC/Developer-Portal-Planning?node-id=0%3A1)
 - Staging
   - https://developers-portal.staging.gnosisdev.com/
 
-## Specs
+# Specs
 
-> ![homepage](img/homepage.png)
+>![](https://i.imgur.com/GCejCkp.png)
 
-### Features
+## Features
 
 **Docusaurus Functionality**
 - [ ] Search Functionality (Algolia or equivalent)
@@ -83,9 +94,9 @@
 - [ ] SEO-optimized for crawlability
 - [ ] Later on, set up 302 redirects from legacy xdaichain.com URLs to new pages on docs.gnosischain.com
 
-### Info Architecture
+## Info Architecture
 
->![info-architecture](img/info-architecture.png)
+>![](https://i.imgur.com/mrCU110.png)
 
 **Site Map**
 - What is Gnosis Chain
@@ -98,34 +109,40 @@
 - Community
 - Ecosystem
 
-### About Gnosis Chain
+## About Gnosis Chain
 
->![about-gnosis-wireframe](img/about-page.png)
+**Structure**
+>![](https://i.imgur.com/s766O4p.png)
 
 **User Stories**
 
 - [ ] What is special about GC?
   - [ ] How is GC different from  Ethereum?
-  - [ ] Why does GC need to exist? What value does it bring to Ethereum?
+  - [ ] Why does GC need to exist? 
+  - [ ] What value does GC bring to Ethereum?
+  - [ ] Why is gas paid in xDai instead of Ethereum?
 - [ ] Who are the people and community associated with GC?
   - [ ] What is the culture of the chain?
   - [ ] Who is the community around the chain?
 - [ ] How does the "xDai-as-native-token" work in GC? 
   - [ ] Conceptually, how is it implemented? 
+  - [ ] Why is the xDai Bridge so tightly coupled with the chain?
   - [ ] Where can I go to look for more information?
 - [ ] Can I understand conceptually how GC works?
   - [ ] I heard GC is a Proof-of-Authority Network, is that still the case?
   - [ ] I heard GC is a Canary Network for Ethereum, is that still the case?
-  - [ ] Conceptually, how do the Beacon Chain, EVM Chain, and Rollups work?
+  - [ ] Conceptually, how do the GC Beacon Chain, GC EVM Chain, and GC Rollups work?
 - [ ] Can I understand the Roadmap for Gnosis Chain?
   - [ ] What are the upcoming features I should expect for the chain?
 - [ ] What are the different networks within the GC Ecosystem?
   - [ ] Why do I connect to Optimism on GC when playing Dark Forest?
 - [ ] What is the use of the GNO and xDai Token?
   - [ ] Where can I get GNO?
+  - [ ] Why is GNO not usable as gas on Gnosis Chain?
   - [ ] Where can I get xDai?
 - [ ] How is xDai minted?
-  - [ ] Isn't xDai just bridged Dai?
+  - [ ] Isn't xDai just bridged Dai? Why is it different from other bridged ERC-20 tokens? 
+  - [ ] How is xDai burnt from the chain when it is bridged back to Ethereum?
   - [ ] What happens to my Dai on Ethereum once I bridge it to Gnosis Chain?
 - [ ] What are the fees associated with using xDai?
   - [ ] How might these change in the future?
@@ -134,9 +151,10 @@
   - [ ] As a holder of GNO, how can I expect to earn on GNO in the future?
   - [ ] What is the inflation and issuance of GNO?
 
-### User Guide
+## User Guide
 
->![user-guide-wireframe](img/user-guide-page.png)
+**Structure**
+>![](https://i.imgur.com/KdIR1Nf.png)
 
 **User Objectives**
 - [ ] How do I start using GC, as someone new to blockchain?
@@ -149,9 +167,10 @@
   - [ ] On Mobile?
 - [ ] What can I do once I'm on Gnosis Chain?
 
-### Developers
+## Developers
 
->![developers-wireframe](img/developers-page.png)
+**Structure**
+>![](https://i.imgur.com/CEzQedj.png)
 
 **User Objectives**
 - [ ] As a Developer coming from Ethereum, what are key things I need to know about GC?
@@ -163,9 +182,10 @@
   - [ ] FeeTooLowToCompete
 - [ ] As a Developer, where can I go to ask for help and get a response from the DevRel team?
 
-### Run a Node
+## Run a Node
 
->![validators-wireframe](img/validators-page.png)
+**Structure**
+>![](https://i.imgur.com/ZZ7KZFV.png)
 
 - [ ] How do I run a Validator in the GC Network?
 - [ ] How much can I expect to earn as a Validator on the Network?
@@ -179,9 +199,10 @@
 - [ ] How do I upgrade my client from OpenEthereum to Nethermind?
   - [ ] Why did we move away from OpenEthereum/Parity?
 
-### Bridges
+## Bridges
 
->![bridges-wireframe](img/bridges-page.png)
+**Structure**
+>![](https://i.imgur.com/hlbB3PU.png)
 
 **Nomenclature**
 
@@ -228,9 +249,10 @@
 
 - [ ] There is a talk by Alex on the AMB at ETHCC in 2019
 
-### Tools
+## Tools
 
->![tools-wireframe](img/tools-page.png)
+**Structure**
+>![](https://i.imgur.com/3hT6kYt.png)
 
 - [ ] What are the Block Explorers I can use?
   - [ ] How do I learn more about Blockscout?
@@ -242,11 +264,12 @@
   - [ ] Network analytics?
 - [ ] etc. 
 
-### Integrations
+## Integrations
 
 > Should this be "Guides" instead, where we put all the guides that don't quite fit into other sections? Integrations can then just be one sub-section of Guides
 
->![integrations-wireframe](img/integrations-page.png)
+**Structure**
+>![](https://i.imgur.com/SczuzA5.png)
 
 **User Stories**
 
@@ -259,11 +282,12 @@
 **Developer**
 - [ ] How do I deploy a contract with the exact same address as Ethereum mainnet? (i.e. CREATE2)
 
-### Ecosystem
+## Ecosystem
 
 > This is a novel idea I had, which I haven't seen in other chains, but could supercharge the composability and growth in ours. 
 
->![ecosystem-wireframe](img/ecosystems-page.png)
+**Structure**
+>![](https://i.imgur.com/PWCULy1.png)
 
 **User Stories**
 
@@ -274,7 +298,7 @@
 - [ ] DAOs: [Youtube: DAO Tooling on Gnosis Chain](https://www.youtube.com/watch?v=uAw1paJKcqc)
 - [ ] DeFi: [Youtube: DeFi Ecosystem on Gnosis Chain](https://www.youtube.com/watch?v=yPYYKz0u9K0)
 
-### Other Notes
+## Other Notes
 
 - There will be work required to convert from Gitbook-flavored Markdown to Docusaurus-flavored Markdown
   - e.g. Tabs
