@@ -6,7 +6,7 @@
 Migrating validators from one node to another (or from one vm instance to another) requires careful attention to avoid slashing. If you accidentally run the same validator key on 2 instances at the same time, even for a very short time period, you risk being slashed for an Attestation Violation. If this occurs, you will be removed as a validator and your GNO will be frozen and unavailable for withdrawal until after the GC/GBC merge.
 
 :::note
-Curious about validators who have been slashed? You can find them here: [https://beacon.gnosischain.com/node/slashings](https://beacon.gnosischain.com/node/slashings)
+Curious about validators who have been slashed? You can find them here: [https://beacon.gnosischain.com/validators/slashings](https://beacon.gnosischain.com/validators/slashings)
 :::
 
 ## Order of Operations
@@ -28,5 +28,5 @@ Specific instructions will differ depending on the client you are running. In ge
 \-> [Prysm](https://docs.prylabs.network/docs/advanced/migrating-keys/) docs
 
 :::danger
-Best practice to minimize slashing risks is to wait > 1 epoch following any actions taken by the original validator before starting the new (migrated) validator. This will happen naturally if you stop the original validator at the beginning of the process.
+Best practice to minimize slashing risks is to wait > 1 epoch [(you can check here to see epoch)](https://beacon.gnosischain.com/epochs) following any actions taken by the original validator before starting the new (migrated) validator. This will happen naturally if you stop the original validator at the beginning of the process.
 :::

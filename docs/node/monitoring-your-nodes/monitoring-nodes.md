@@ -7,3 +7,6 @@ Please see the [Etherum Setup Instructions ](https://launchpad.ethereum.org/en/)
 
 * Lighthouse: [https://github.com/sigp/lighthouse-metrics](https://github.com/sigp/lighthouse-metrics)
 * Prysm: [https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/](https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/)
+
+
+You can also view your validator status on the [Gnosis Beacon Chain explorer](https://beacon.gnosischain.com/validators). To view your validator, you can search for it by using its public key. 

@@ -86,6 +86,28 @@ const sidebars = {
         "node/voluntary-exit/voluntary-exit",
       ],
     },
+    {
+      type: 'category',
+      label: 'Testnets',
+      collapsed: false,
+      link: {type: 'doc', id: 'node/testnets/testnets-README'},
+      items: [
+        "node/testnets/consensus-layer-testnets",
+        "node/testnets/execution-layer-testnets",
+        
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Network Analytics',
+      collapsed: false,
+      link: {type: 'doc', id: 'node/network-analytics/network-analytics-README'},
+      items: [
+        "node/network-analytics/consensus-layer-analytics",
+        "node/network-analytics/execution-layer-analytics",
+        
+      ],
+    },
     // {
     //   type: 'category',
     //   label: 'Client setup',
