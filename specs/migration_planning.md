@@ -13,7 +13,6 @@ This is used for the planning for the new Gnosis Chain DevHub
 The current version of this can be found at [developers.gnosischain.com](https://developers.gnosischain.com/)
 
 * [ ] Top-level links
-<<<<<<< HEAD
   * [ ] [Omni Bridge](https://omni.gnosischain.com/) #bridge
   * [ ] [xDai Bridge](https://bridge.gnosischain.com/) #bridge
   * [ ] [Gnosis Beacon Chain Docs](https://docs.gnosischain.com/) #validators
