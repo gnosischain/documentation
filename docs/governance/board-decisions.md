@@ -191,7 +191,7 @@ Increase the amount of blocks required for confirmation on the Ethereum Mainnet 
 
 ### Include Compounding for xDai Bridge
 
-​🗳️ **Justification:** Add compounding to support bridge operations. (TODO: LINK)Details here](./specs/bridges/dai-compounding)
+​🗳️ **Justification:** Add compounding to support bridge operations. (TODO: LINK)Details here](./bridges/dai-compounding)
 
 ​✅ **Implemented:** October 6**,** 2021
 

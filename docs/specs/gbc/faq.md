@@ -22,7 +22,7 @@ The deposit contract keeps track of validators and staking amounts. The GBC depo
 
 ### How much do validators earn in rewards?
 
-This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/validators/incentives).
+This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/node/incentives).
 
 You can view the current reward yield and other statistics on the [Gnosis Beacon Chain Dune Analytics dashboard](https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-\(Deposits\)).
 
@@ -42,7 +42,7 @@ mGNO is the staking token used by validators in the Gnosis Beacon Chain.
 
 mGNO is typically wrapped behind the scenes during a deposit. If you need extra mGNO to top off a balance for example, you can access the previous swap UI at [https://gbc-deposit-old.herokuapp.com/](https://gbc-deposit-old.herokuapp.com). Go to the **Swap Tab** to swap GNO to mGNO on the Gnosis Chain.
 
-![](/img/validators/swap-12.png)
+![](/img/node/swap-12.png)
 
 You must have GNO on the Gnosis Chain (**not on the Ethereum mainnet**) to convert to mGNO. You can move GNO from Ethereum to Gnosis Chain using the [OmniBridge](https://omni.gnosischain.com/bridge).
 
@@ -58,13 +58,13 @@ No, not currently. Once withdrawals are activated, mGNO will be swapped back to 
 
 ### Which clients are supported by GBC?
 
-Modified versions of [Lighthouse](/validators/client/lighthouse) and [Prysm](/validators/client/prysm). DAppNode will initially support the Prysm implementation only.
+Modified versions of [Lighthouse](/node/client/lighthouse) and [Prysm](/node/client/prysm). DAppNode will initially support the Prysm implementation only.
 
 ### How long does it take to sync the Gnosis Chain?
 
 Along with running the GBC client you can also consider running a Gnosis Chain Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis Chain using Nethermind](/validators/client/nethermind-node-setup/) requires \~75GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing the [Gnosis Chain using Nethermind](/node/client/nethermind-node-setup/) requires \~75GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
 ### Can I use a node provider to run a Gnosis Chain node?
 
