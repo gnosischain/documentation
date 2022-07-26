@@ -10,7 +10,7 @@ Before getting started, it is important to have an understanding of your respons
 :::
 
 ## Before Starting 
-On GBC you can validate blocks with a more reasonable staking amount, providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
+On GBC you can validate blocks while staking less capital than Ethereum or many other prrof-of-stake chains. By doing this, you are providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
 
 1. The validator deposit is a **non-reversible, one-way transaction**. Withdrawal will not be possible until the Gnosis Chain merge occurs joining the execution layer with the consensus layer.
 2. You are **responsible for your node**, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
@@ -22,7 +22,7 @@ If you are ready to proceed, please see the technical prerequisites which includ
 
 ## The Basics
 
-Since GBC is a lower-stakes environment, it is a great place to learn and refine new skills. Be sure to read the instructions carefully and ask questions ([discord channel](https://discord.com/invite/pjHjQwycV8)) as needed.
+Since GBC is a lower-stakes environment, it is a great place to learn and refine new skills. Be sure to read the instructions carefully and ask questions ([discord channel](https://discord.com/invite/pjHjQwycV8)) as needed. **TODO: NEED NEW INVITE LINK**
 
 * **Using the Terminal**:  You will be required to enter commands into a terminal window. These will be simple copy-paste instructions, but familiarity with using a terminal is helpful.
 * **Key Management**: You will use the command line to derive a key-pair for validating blocks, as well as a mnemonic you will use later to derive a withdrawal pair. It is important to store these safely (offline ledger highly recommended).
@@ -35,7 +35,7 @@ Since GBC is a lower-stakes environment, it is a great place to learn and refine
 
 A reliable internet connection is key: bandwidth should not be throttled or capped. Upload bandwidth should be a minimum of 700 MB/hour with increases likely. Brief periods offline may result in small inactivity penalties, but this will typically be recouped quickly as long as the outage is short.
 
-Note that synching the execution layer Gnosis Chain may take up to 12 hours depending on your setup.
+Note that synching the execution layer of Gnosis Chain may take up to 1-3 days, depending on your setup.
 
 ### Security
 
@@ -172,7 +172,7 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 
 ****
 
-## Setup Instructions
+## Setup Instructions Overview
 
 
 1. [Generate Validator Keystores and Deposit Data](#step-1-generate-validator-accounts-and-deposit-data): On an offline machine, generate up to 128 separate validator keys per node.

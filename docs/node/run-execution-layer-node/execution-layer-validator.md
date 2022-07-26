@@ -10,8 +10,8 @@ GC Nodes can be run with Nethermind client and the following recommended minimum
 
 * OS: Ubuntu, Windows & MacOs
 * CPU: 2 cores
-* RAM: 4GB
-* Disk: 100gb SSD
+* RAM: 8GB
+* Disk: 500gb SSD
 * Git installed `git --version`
 
 ## Setup on Nethermind
@@ -32,7 +32,7 @@ Nethermind Launcher is a self-contained app - you do not need to install .NET se
 
 🛑 **To stop Nethermind:** `Control + c`
 
-### **Configuration**
+### Configuration
 
 * [Supported Platforms](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/supported-platforms) (macOS, Windows, Linux)
 * [Platform-specific instructions for running the client](https://docs.nethermind.io/nethermind/ethereum-client/running-nethermind/running-the-client)
@@ -120,11 +120,30 @@ This can take 1-3 days to sync, so in the meantime you can connect your Beacon c
 :::
 
 
-### **Sharing machines for GC and GBC clients**
+
+## Node Maintenence
+
+Once Nethermind has fully synced, you can point your validator nodes to it to use as an RPC to increase decentralization of the network. To do this or any other maintenence, you will have to take down your nodes, so make sure you closely follow the restart procedure closely to avoid slashing. 
+
+### Restart Procedure
+
+ **Stop all running containers and remove them**
+ ```
+ docker stop <container name> && sudo docker remove <container name>
+ sudo docker ps -a
+ ```
+ No containers should be runnning. If you have seperate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenence can cause your keypairs to be run on seperate instances, leading to slashing.
+
+
+**Make Changes**
+Once containers are stopped and removed, you can make your changes. This can be adding new validators, or changing configuration settings such as your RPC.
+
+**Restart the Containers**
+Restart the containers using `docker-compose up` as you did initially when setting up. Make sure you check the logs to ensure your nodes are running without errors using `sudo docker-compose logs -f <container name>`
+
+### Sharing machines for GC and GBC clients
 
 As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
 If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8)
-
-
 

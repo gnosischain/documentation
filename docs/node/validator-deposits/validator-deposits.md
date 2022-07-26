@@ -44,6 +44,9 @@ In this example we use MetaMask.
 ![](</img/node/UI-2A.png>)
 
 2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/get-started/#step-1-generate-validator-account-s-and-deposit-data) It will be located in the same folder as the generated keystores.
+:::note
+If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
+:::
 
 ![](/img/node/upload-info1.png)
 

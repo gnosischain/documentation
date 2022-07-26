@@ -6,7 +6,7 @@ description: Validators protect the Gnosis Chain by staking on the Gnosis Beacon
 
 Validators protect the Gnosis Chain by staking on the Gnosis Beacon Chain. There are several options now available for staking.
 
-### Run Your Own Node
+## Run Your Own Node
 
 Please see the [Validator Responsibilities](/node/get-started/responsibilities) and [Technical Requirements](/node/get-started/technical-requirements) to learn more about expectations and what you will need to become a validator.Validating the GBC requires 1 GNO per validator process.
 
@@ -14,7 +14,7 @@ Please see the [Validator Responsibilities](/node/get-started/responsibilities) 
 DappNode now supports the Gnosis Beacon Chain! If you would like to use their services for validation, please see the [guide and instructions here](https://forum.dappnode.io/t/how-to-setup-a-gnosis-beacon-chain-gbc-validator-on-dappnode/1351)
 :::
 
-### 💧 Liquid Staking
+## 💧 Liquid Staking
 
 Liquid staking providers allow anyone to stake without running the infrastructure themselves. Liquid staking can be done on the GBC with [Stakewise](https://app.stakewise.io). Connect your wallet to the GC to start staking. [Instructions here](https://stakewise.medium.com/stakewise-liquid-staking-now-on-gnosis-beacon-chain-b732d81480b9).
 
