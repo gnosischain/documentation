@@ -125,18 +125,18 @@ const sidebars = {
     {
       type: 'category',
       label: 'Explorers',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'link',
           label: 'Blockscout',
           href: 'https://blockscout.com/xdai/mainnet/',
         },
-        {
+        /*{
           type: 'link',
           label: 'GnosisScan',
           href: 'https://gnosisscan.io/',
-        },
+        },*/
         {
           type: 'link',
           label: 'Beacon Chain',
@@ -150,7 +150,8 @@ const sidebars = {
       collapsed: true,
       items: [
         'tools/analytics/dune',
-        'tools/beacon-chain/analytics',
+        'tools/analytics/anyblock',
+        'tools/analytics/beacon-chain',
       ],
     },
     {
@@ -158,13 +159,39 @@ const sidebars = {
       label: 'Beacon Chain',
       collapsed: true,
       items: [
-        'tools/beacon-chain/analytics',
         {
           type: 'link',
           label: 'Deposit Tool',
           href: 'https://deposit.gnosischain.com/',
         },
         'tools/beacon-chain/liquid-staking',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Other Tools',
+      collapsed: true,
+      items: [
+        {
+          type: 'link',
+          label: 'Crypto Tax Calculator',
+          href: 'https://cryptotaxcalculator.io/exchanges/xdai-tax/',
+        },
+        {
+          type: 'link',
+          label: 'Wrapeth',
+          href: 'https://wrapeth.com/',
+        },
+        {
+          type: 'link',
+          label: 'CryptoFees',
+          href: 'https://cryptofees.info/',
+        },
+        {
+          type: 'link',
+          label: 'DeFi Lama',
+          href: 'https://defillama.com/chain/Gnosis',
+        },
       ],
     },
   ],

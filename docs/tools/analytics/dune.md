@@ -2,7 +2,7 @@
 description: Dune Supports Gnosis Chain and Ethereum for cross-chain and custom dashboards
 ---
 
-# Dune Analytics
+# Dune
 
 Dune Analytics offers native support for contracts deployed to Gnosis Chain. Create and share custom dashboards and queries from both Ethereum and GC. It is possible to mix-and-match between chains on the same dashboard.
 
