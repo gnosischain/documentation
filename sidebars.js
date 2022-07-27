@@ -146,6 +146,23 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'RPC Nodes',
+      collapsed: true,
+      items: [
+        'tools/rpc/README',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Wallets',
+      collapsed: true,
+      items: [
+        'tools/wallets/README',
+        'tools/wallets/metamask',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Analytics',
       collapsed: true,
       items: [
