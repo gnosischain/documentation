@@ -16,9 +16,9 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [ ] [Omni Bridge](https://omni.gnosischain.com/) #bridge
   * [ ] [xDai Bridge](https://bridge.gnosischain.com/) #bridge
   * [ ] [Gnosis Beacon Chain Docs](https://docs.gnosischain.com/) #validators
-  * [ ] [Block Explorer](https://blockscout.com/xdai/mainnet/) #tools
+  * [x] [Block Explorer](https://blockscout.com/xdai/mainnet/) #tools
 * [ ] Welcome to Gnosis Chain #about
-  * [ ] Chain Usage (Dune Analytics Dashboards) #tools
+  * [x] Chain Usage (Dune Analytics Dashboards) #tools
   * [ ] [Why Gnosis/xDai section](https://blockscout.com/xdai/mainnet/) #about
 * [ ] Community Updates #community
   * [ ] [Youtube Channel](https://www.youtube.com/GnosisChain) #community
@@ -32,7 +32,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Weekly News #blog
     * [ ] Energy Efficiency #about
     * [ ] Comparisons #about
-    * [ ] Analytics #tools
+    * [x] Analytics #tools
     * [ ] Research Articles #about
     * [ ] Interviews & Media Articles #about
       * [ ] xDai Chain: Basic Overview Presentation #about
@@ -40,7 +40,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
       * [ ] Dai Derivatives: How xDai fits into the DeFi ecosystem #about
   * [ ] FAQs
     * [ ] GC Chain Basics #about
-    * [ ] Ecosystem Tools: Explorer, Wallets, DApps #user #tools
+    * [x] Ecosystem Tools: Explorer, Wallets, DApps #user #tools
     * [ ] xDai Native Coin/ Token FAQ #about
     * [ ] Public Staking (Validators & Delegators) #validators
     * [ ] Bridges: xDai Bridge & Omnibridge #bridges
@@ -72,14 +72,13 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Bridge FAQs #bridges
   * [ ] Wallets #users
     * [ ] Tutorials for each wallet #users
-  * [ ] Applications & Metrics #tools
-    * [ ] Dune Dashboards for Analytics #tools
-    * [ ] Random tools (revoke, etc) #tools
-  * [ ] Block Explorers #tools
-    * [ ] Blockscout #tools
-    * [ ] Anyblock Analytics #tools
+  * [x] Applications & Metrics #tools
+    * [x] Dune Dashboards for Analytics #tools
+    * [x] Random tools (revoke, etc) #tools
+  * [x] Block Explorers #tools
+    * [x] Blockscout #tools
+    * [x] Anyblock Analytics #tools
     * [ ] Gnosis Beacon Chain #validators
-    * [ ] Tokenview #tools
   * [ ] Governance #?
     * [ ] Community Governance #?
     * [ ] Bridge Governance Board #?
@@ -89,7 +88,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Yield Farming #ecosystem
     * [ ] Lending & Money Markets #ecosystem
     * [ ] Yield Aggregators #ecosystem
-    * [ ] Tracking #ecosystem #tools
+    * [x] Tracking #ecosystem #tools
 * [ ] For Stakers #validators 
   * [ ] Staking with GNO on Gnosis Beacon Chain #validators 
     * [ ] POSDAO Staking and STAKE (archived) #validators #about
@@ -108,7 +107,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Pocket Portal #developers #validators #tools 
     * [ ] Ankr API #developers 
     * [ ] Getblock Node Access #developers #tools #validators
-    * [ ] Dune Analytics #developers #tools 
+    * [x] Dune Analytics #developers #tools 
     * [ ] TheGraph Data Indexing #developers #tools 
     * [ ] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
     * [ ] MEV & Flashbots #validators
@@ -189,7 +188,7 @@ The current version of the GBC Docs can be found at [docs.gnosischain.com](https
 * [ ] Incentives #validators
 * [ ] Contracts, Addresses, Parameters #validators 
   * [ ] Upgradeability #validators 
-* [ ] Beacon Chain Analytics #validators #tools 
+* [x] Beacon Chain Analytics #validators #tools 
 * [ ] Security Audit #validators 
 * [ ] FAQ #validators 
 * [ ] Media Kit #validators 
