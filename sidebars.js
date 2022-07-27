@@ -192,6 +192,21 @@ const sidebars = {
           label: 'DeFi Lama',
           href: 'https://defillama.com/chain/Gnosis',
         },
+        {
+          type: 'link',
+          label: 'DeBank',
+          href: 'https://debank.com/',
+        },
+        {
+          type: 'link',
+          label: 'Zerion',
+          href: 'https://app.zerion.io/',
+        },
+        {
+          type: 'link',
+          label: 'Zapper',
+          href: 'https://zapper.fi/',
+        },
       ],
     },
   ],
