@@ -149,6 +149,7 @@ const sidebars = {
       label: 'Analytics',
       collapsed: true,
       items: [
+        'tools/analytics/dune',
         'tools/beacon-chain/analytics',
       ],
     },
