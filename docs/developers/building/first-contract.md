@@ -24,11 +24,15 @@ In general you can choose almost any development enviornment you wish as they al
 
 ### Hardhat Deployment
 
-TODO, need to go through more dev practice to get this rollin
+Following the [Official Hardhat documentation](https://hardhat.org/hardhat-runner/docs/guides/project-setup),
 
-```bash showLineNumbers
-    truffle migrate --network xdai
-```
+- For Gnosis network Config, you have to export an object from ```hardhat.config.js```
+
+- The ```networks``` config field an optional object where network names map to their configuration.
+
+- There are two kinds of networks in Hardhat: [JSON-RPC](https://eth.wiki/json-rpc/API) based networks, and the built-in Hardhat Network.
+
+- You can customize which network is used by default when running Hardhat by setting the config's ```defaultNetwork``` field. If you omit this config, its default value is ```"hardhat"```.
 
 ### Truffle Deployment
 
