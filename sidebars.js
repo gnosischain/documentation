@@ -129,6 +129,11 @@ const sidebars = {
       items: [
         {
           type: 'link',
+          label: 'AnyBlock',
+          href: 'https://explorer.anyblock.tools/ethereum/poa/xdai/',
+        },
+        {
+          type: 'link',
           label: 'Blockscout',
           href: 'https://blockscout.com/xdai/mainnet/',
         },
@@ -146,10 +151,30 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'RPC Nodes',
+      label: 'RPC Providers',
       collapsed: true,
+      link: {type: 'doc', id: 'tools/rpc/README'},
       items: [
-        'tools/rpc/README',
+        {
+          type: 'link',
+          label: 'Ankr API',
+          href: 'https://app.ankr.com/',
+        },
+        {
+          type: 'link',
+          label: 'Blast',
+          href: 'https://blastapi.io/public-api/gnosis',
+        },
+        {
+          type: 'link',
+          label: 'GetBlock',
+          href: 'https://getblock.io/',
+        },
+        {
+          type: 'link',
+          label: 'Pokt',
+          href: 'https://docs.pokt.network/home/use/public-rpc/gnosis-chain',
+        },
       ],
     },
     {
@@ -241,6 +266,11 @@ const sidebars = {
           type: 'link',
           label: 'Zapper',
           href: 'https://zapper.fi/',
+        },
+        {
+          type: 'link',
+          label: 'Revoke',
+          href: 'https://revoke.cash/',
         },
       ],
     },
