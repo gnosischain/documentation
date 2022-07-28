@@ -158,7 +158,25 @@ const sidebars = {
       collapsed: true,
       items: [
         'tools/wallets/README',
-        'tools/wallets/metamask',
+        {
+          type: 'category',
+          label: 'Metamask',
+          collapsed: true,
+          link: {type: 'doc', id: 'tools/wallets/metamask/README'},
+          items: [
+            {
+              type: 'link',
+              label: 'Add custom tokens',
+              href: 'https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask',
+            },
+            'tools/wallets/metamask/change-rpc-url',
+            {
+              type: 'link',
+              label: 'With a Ledger or Trezor',
+              href: 'https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet',
+            },
+          ],
+        },
       ],
     },
     {
