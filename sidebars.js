@@ -202,6 +202,7 @@ const sidebars = {
             },
           ],
         },
+        'tools/wallets/safe',
       ],
     },
     {
