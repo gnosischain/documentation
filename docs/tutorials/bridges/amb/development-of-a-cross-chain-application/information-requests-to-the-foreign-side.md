@@ -1,4 +1,4 @@
----
+<!-- ---
 description: Getting information from the Foreign side with a contract call
 ---
 
@@ -218,4 +218,4 @@ The following examples use contracts deployed on the Sokol chain. The Kovan-Soko
     5. Use the transaction hash to get the deserialized receipt by calling `transactions`
 
   </TabItem>
-</Tabs>
+</Tabs> -->
