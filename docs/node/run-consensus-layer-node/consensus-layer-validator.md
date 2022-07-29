@@ -97,14 +97,14 @@ Minimum & recommended specifications for running GBC clients are as follows:
 * Operating System: 64-bit Linux, Mac OS X 10.14+, Windows 64-bit
 * Processor: Intel Core i5–760 or AMD FX-8100 or better
 * Memory: 8GB RAM
-* Storage: 128GB available space SSD
+* Storage: 500GB available space SSD
 * Internet: Broadband connection
 
 **Prysm Recommended**
 
 * Processor: Intel Core i7–4770 or AMD FX-8310 or better
 * Memory: 16GB RAM
-* Storage: 256GB available space SSD
+* Storage: 1 TB available space SSD
 * Internet: Broadband connection
 
 ### Lighthouse Client
@@ -113,14 +113,14 @@ Minimum & recommended specifications for running GBC clients are as follows:
 
 * Dual-core CPU, 2015 or newer
 * 8 GB RAM
-* 128 GB solid state storage
+* 500 GB SSD
 * 10 Mb/s download, 5 Mb/s upload broadband connection
 
 **Lighthouse Recommended**
 
 * Quad-core AMD Ryzen, Intel Broadwell, ARMv8 or newer
 * 16 GB RAM
-* 256 GB solid state storage
+* 1 TB SSD
 * 100 Mb/s download, 20 Mb/s upload broadband connection
 
 **Network utilization benchmark**
@@ -145,15 +145,32 @@ Validators are advised to consider those numbers when planning their infrastrust
 
 * Dual-core CPU, 2015 or newer
 * 4 GB RAM
-* 128 GB solid state storage
+* 500 GB solid state storage
 * 10 Mb/s download, 5 Mb/s upload broadband connection
 
 **Nimbus Recommended**
 
 * Quad-core CPU
 * 8 GB RAM
-* 256 GB solid state storage
+* 1 TB solid state storage
 * 100 Mb/s download, 20 Mb/s upload broadband connection
+
+
+### Teku Client 
+
+**Teku Minimum**
+
+* Dual Core CPU, i5-760 or AMD FX-8100 or better
+* 8 GB RAM
+* 500 GB SSD
+* \>1 Mb/s broadband connection
+
+**Teku Recommended**
+
+* Quad core CPU, Intel Core i7–4770 or AMD FX-8310 or better
+* 16 GB RAM
+* 1 TB SSD
+* 10 Mb/s broadband connection
 
 ### Additional Options:
 
@@ -357,7 +374,9 @@ services:
       --network gnosis
       --checkpoint-sync-url https://rpc-gbc.gnosischain.com
 ```
+### Teku
 
+Teku client natively supports Gnosis chain and requires Java 11+. [See the Teku docs here to view setup instructions](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Installation-Options/Install-Binaries/).
 
 ## Step 3) Run the Beacon Chain node with the attached Validator Process
 

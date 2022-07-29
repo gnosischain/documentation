@@ -22,15 +22,15 @@ You are responsible for the transaction. Fraudulent websites might try to lure y
 
 1. Check that transaction makes a call to GNO token contract on Gnosis Chain: [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://blockscout.com/xdai/mainnet/address/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb/transactions)
 
-![](/img/node/safety-1.png)
+<img src="/img/node/safety-1.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 2. Check that the transaction uses the `transferAndCall` method.
-
-![](/img/node/safety-2.png)
+<img src="/img/node/safety-2.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 3. Check that transaction data (HEX tab) includes Wrapper Proxy Contract address [0x647507A70Ff598F386CB96ae5046486389368C66](https://blockscout.com/xdai/mainnet/address/0x647507A70Ff598F386CB96ae5046486389368C66/transactions) in this form:
    `0x4000aea0000000000000000000000000647507a70ff598f386cb96ae5046486389368c66`
-   ![](/img/node/safety-3.png)
+
+<img src="/img/node/safety-3.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 
 ## Deposit GNO
@@ -38,33 +38,29 @@ You are responsible for the transaction. Fraudulent websites might try to lure y
 1) Go to [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) and connect your web3 wallet on the Gnosis Chain to the application.
 
 In this example we use MetaMask.
-
-![](</img/node/UI-1A.png>)
-
-![](</img/node/UI-2A.png>)
+<img src="/img/node/UI-1A.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
+<img src="/img/node/UI-2A.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/get-started/#step-1-generate-validator-account-s-and-deposit-data) It will be located in the same folder as the generated keystores.
+
 :::note
 If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
 :::
-
-![](/img/node/upload-info1.png)
+<img src="/img/node/upload-info1.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 3) The app will validate the json file and list the number of validator deposits you are making and the required GNO to deposit. Click **Deposit** to continue.
-
-![](/img/node/deposit-2.png)
+<img src="/img/node/deposit-2.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/operations/deposit-safety-instructions) before proceeding.
+<img src="/img/node/deposit-3.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
-![](/img/node/deposit-3.png)
-
-![](/img/node/deposit-4.png)
+<img src="/img/node/deposit-4.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 5) Complete the deposit.
+<img src="/img/node/confirm.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
+<br/>
+<img src="/img/node/dep-made.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
-![](/img/node/confirm.png)
-
-![](/img/node/dep-made.png)
 
 ## View your Validator
 
@@ -153,21 +149,26 @@ Note that currently there is not a mechanism to swap mGNO back to GNO.
 
 In this example we use MetaMask.
 
-![](/img/node/UI-1A.png)
+<img src="/img/node/UI-1A.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
-![](/img/node/UI-2A.png)
+
+<img src="/img/node/UI-2A.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
+
 
 2\) Select the Swap tab. Enter the amount you would like to convert and click **Convert**. You can convert any amount, be sure to **start with a leading 0 to convert less than 1 GNO. For example, 0.1 GNO will be converted to 3.2 mGNO.**
 
-![](/img/node/swap-1.png)
+<img src="/img/node/swap-1.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
+
 
 3\) Sign 2 transactions in your wallet. The first is a free signature request to allow the application to make the conversion.
 
-![](/img/node/pt2.png)
+<img src="/img/node/pt2.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
+
 
 The second processes the transaction. This will require a small amount of xDai to complete.
 
-![](/img/node/2tx.png)
+<img src="/img/node/2tx.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
+
 
 4\) The transaction should be initiated and completed within a few seconds. Once completed you can click the link to see the tx in BlockScout and add mGNO to your MetaMask wallet. The mGNO contract address is 0x722fc4DAABFEaff81b97894fC623f91814a1BF68.
 

@@ -132,7 +132,7 @@ Once Nethermind has fully synced, you can point your validator nodes to it to us
  docker stop <container name> && sudo docker remove <container name>
  sudo docker ps -a
  ```
- No containers should be runnning. If you have seperate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenence can cause your keypairs to be run on seperate instances, leading to slashing.
+ No containers should be runnning. If you have separate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenence can cause your key pairs to be run on separate instances, leading to slashing.
 
 
 **Make Changes**
@@ -143,7 +143,7 @@ Restart the containers using `docker-compose up` as you did initially when setti
 
 ### Sharing machines for GC and GBC clients
 
-As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
+As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse, Teku, Nimbus or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
 If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8)
 

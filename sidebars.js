@@ -97,17 +97,7 @@ const sidebars = {
         
       ],
     },
-    {
-      type: 'category',
-      label: 'Network Analytics',
-      collapsed: false,
-      link: {type: 'doc', id: 'node/network-analytics/network-analytics-README'},
-      items: [
-        "node/network-analytics/consensus-layer-analytics",
-        "node/network-analytics/execution-layer-analytics",
-        
-      ],
-    },
+   
     // {
     //   type: 'category',
     //   label: 'Client setup',
