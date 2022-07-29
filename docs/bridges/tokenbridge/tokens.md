@@ -46,3 +46,10 @@ USDC from Binance Smart Chain
 - New ERC677 contract is created for each new token bridged over
 
 ## Bridge Revenue
+
+
+## Analytics
+
+https://dune.com/maxaleks/Omnibridge-Stablecoins
+https://dune.com/maxaleks/Omnibridge
+https://dune.com/maxaleks/Bridge-gas-fees

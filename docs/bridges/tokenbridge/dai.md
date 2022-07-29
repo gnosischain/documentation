@@ -32,4 +32,6 @@ https://medium.com/bankless-dao/canonical-dai-stablecoin-upgrade-aims-to-help-mo
 
 ## Bridge Revenue
 
+## Analytics
 
+https://dune.com/maxaleks/xDai-Bridge
