@@ -315,7 +315,7 @@ Teku client natively supports Gnosis chain and requires Java 11+. [See the Teku 
 
 ## Step 3) Run the Beacon Chain node with the attached Validator Process
 
-**Lighthouse & Prysm**\
+### Lighthouse & Prysm
 On the same machine as _Step 2_ run the following commands:
 
 ```
@@ -323,7 +323,7 @@ docker-compose up -d node
 docker-compose up -d validator
 ```
 
-**Nimbus** \
+### Nimbus 
 The validator client and beacon node run inside a single container, so you only need to start one container (on the same machine as _step 2_):
 
 ```
@@ -344,16 +344,16 @@ Once your node has synced (can take a few hours depending on setup) and the node
 
 If you choose not to use the public RPC and want to connect to a different Gnosis Chain node ([including a 3rd party provider](/node/client/nethermind-node-setup)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
 
-### **Fallback IPs (Lighthouse only)**
+### Fallback IPs (Lighthouse only)
 
 Use comma-separated RPC urls for the `XDAI_RPC_URL` variable to set fallback IPs in Lighthouse. This is useful if your node goes offline. For example:
 
 * `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;, [https://rpc.gnosischain.com](https://rpc.gnosischain.com)
 
-### **Sharing machines for GC and GBC clients**
+### Sharing machines for GC and GBC clients
 
 If you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
 If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8) **TODO INVITE INVALID**
 
-s
+
