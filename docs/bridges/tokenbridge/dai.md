@@ -20,3 +20,16 @@ https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/
 https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding
 
 Needs a link to the ALM?
+
+Canonical Dai
+https://medium.com/bankless-dao/canonical-dai-stablecoin-upgrade-aims-to-help-move-dai-off-chain-2a8de6a815c1
+
+## Parameters
+
+## xDai Bridge Validators
+
+## Block Rewards Contract
+
+## Bridge Revenue
+
+

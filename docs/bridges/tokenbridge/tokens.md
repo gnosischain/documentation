@@ -1,8 +1,12 @@
 ---
-title: Bridging ERC-20 Tokens
+title: Bridging Tokens
 ---
 
 - Need to identify what is happening with ERC677 - with the hardfork, do we still mint ERC677 on Gnosis Chain? Or are they vanilla ERC20s?
+
+Diagrams
+https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals
+
 - https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/4134
 
 Bridged tokens are non-standard and hav a hook that calls token receiver on every transfer
@@ -28,7 +32,17 @@ USDC from Ethereum
 USDC from Binance Smart Chain
 ```
 
-## Token Registries
+## Bridged Token Registries
 
 - [Bridged Tokens from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
 - [Bridged Tokens from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+
+
+## Hardfork
+
+## ERC-677
+- Hardfork
+- What is the actual representation
+- New ERC677 contract is created for each new token bridged over
+
+## Bridge Revenue

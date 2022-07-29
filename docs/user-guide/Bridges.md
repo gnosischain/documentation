@@ -1,6 +1,10 @@
+---
+title: Bridges
+---
+
 ## Bridges
 
-### End-user Bridges
+## 3rd-party Bridges
 
 - [Hop](https://app.hop.exchange/)
 - [Connext Bridge](https://bridge.connext.network/)
