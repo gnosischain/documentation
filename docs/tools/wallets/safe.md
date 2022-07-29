@@ -87,7 +87,7 @@ You can connect to WalletConnect to interact with supported DApps using Gnosis S
 
 ![Follow instructions on right side to complete the process](/img/tools/safe/safewallet2.jpg)
 
-3) Visit the application and connect to your wallet. This will differ based on the application (the DApp must be deployed on xDai). Here we use Nifty.ink.
+3) Visit the application and connect to your wallet. This will differ based on the application (the DApp must be deployed on Gnosis). Here we use Nifty.ink.
 
 ![](/img/tools/safe/safewallet3.jpg)
 
