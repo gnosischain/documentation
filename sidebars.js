@@ -241,6 +241,15 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Oracles',
+      collapsed: true,
+      items: [
+        'tools/oracles/chainlink',
+        'tools/oracles/gas-price',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Analytics',
       collapsed: true,
       items: [
