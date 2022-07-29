@@ -101,12 +101,12 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Blocknative Notifications #developers #tools 
     * [ ] Airdrops: Creating & Receiving #guides
     * [ ] Burner Wallet Factory #?
-    * [ ] Chainlink Price Feeds #tools #developers
+    * [x] Chainlink Price Feeds #tools #developers
     * [ ] Chainbeat Smart Contract Dashboard #tools #developers 
     * [ ] Curvegrid MultiBaas Smart Contract Interaction #developers #tools 
     * [ ] Pocket Portal #developers #validators #tools 
     * [ ] Ankr API #developers 
-    * [ ] Getblock Node Access #developers #tools #validators
+    * [x] Getblock Node Access #developers #tools #validators
     * [x] Dune Analytics #developers #tools 
     * [ ] TheGraph Data Indexing #developers #tools 
     * [ ] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
@@ -115,7 +115,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] ERC20 Test Token Faucet #developers #tools 
     * [ ] Wrapped xDai (wxDai) #developers #tools #about 
     * [ ] ENS Compatibility #developers #tools 
-    * [ ] Gas Price Oracle #developers #tools 
+    * [x] Gas Price Oracle #developers #tools 
     * [ ] AoX: Arbitrum on GC #about 
   * [ ] Optimistic Rollups on Gnosis Chain #about 
     * [ ] L1 Contract Addresses #about 
