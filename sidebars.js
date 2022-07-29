@@ -181,8 +181,8 @@ const sidebars = {
       type: 'category',
       label: 'Wallets',
       collapsed: true,
+      link: {type: 'doc', id: 'tools/wallets/README'},
       items: [
-        'tools/wallets/README',
         {
           type: 'category',
           label: 'Metamask',
