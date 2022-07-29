@@ -2,7 +2,7 @@
 ---
 # Run a Gnosis Chain Execution Layer Node
 
-You can also run a Gnosis Chain Execution Layer Node on the same machine as your Beacon Chain node(s). This is reccomeneded for more experienced node runners, but is highly encouraged as it increases decentralization of the network. If you don't wish to do this, you can just ignore this section and connect your node through an existing JSON RPC endpoint. Using an existing RPC is the easiest method when you first setup your node. It is also encouraged to use an existing RPC during setup as it can take a while (up to 3 days, depeneding on your setup) for your execution layer node to fully sync. You will be encouraged to update your setup once the merge happens. If you have experience and want to setup your own GC node now, read on!
+You can also run a Gnosis Chain Execution Layer Node on the same machine as your Beacon Chain node(s). This is recommended for more experienced node runners, but is highly encouraged as it increases decentralization of the network. If you don't wish to do this, you can just ignore this section and connect your node through an existing JSON RPC endpoint. Using an existing RPC is the easiest method when you first setup your node. It is also encouraged to use an existing RPC during setup as it can take a while (up to 3 days, depending on your setup) for your execution layer node to fully sync. You will be encouraged to update your setup once the merge happens. If you have experience and want to setup your own GC node now, read on!
 
 ## Technical Requirements
 
@@ -121,7 +121,7 @@ This can take 1-3 days to sync, so in the meantime you can connect your Beacon c
 
 
 
-## Node Maintenence
+## Node Maintenance
 
 Once Nethermind has fully synced, you can point your validator nodes to it to use as an RPC to increase decentralization of the network. To do this or any other maintenence, you will have to take down your nodes, so make sure you closely follow the restart procedure closely to avoid slashing. 
 
@@ -132,7 +132,7 @@ Once Nethermind has fully synced, you can point your validator nodes to it to us
  docker stop <container name> && sudo docker remove <container name>
  sudo docker ps -a
  ```
- No containers should be runnning. If you have separate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenence can cause your key pairs to be run on separate instances, leading to slashing.
+ No containers should be running. If you have separate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenence can cause your key pairs to be run on separate instances, leading to slashing.
 
 
 **Make Changes**

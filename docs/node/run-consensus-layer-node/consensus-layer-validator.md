@@ -279,101 +279,36 @@ Make sure your machine conforms to the [Technical Requirements](/node/run-consen
 * **12000 UDP, 13000 TCP**
 :::
 
+:::note
+The instructions below frequently reference external dos that make frequent mention of Ethereum. They are linked because Gnosis is very similar to Ethereum. Minor differences in setup instructions are noted and often included in the client docs.
+:::
+
 ### Prysm
 
 The Prysm client has been modified slightly. The underlying go-ethereum library used for execution layer block hash calculation is adapted to account for a different block structure. No other changes are made to the client, however, **the original Prysm binary will not work as expected for the Gnosis Chain - use the binary below**.
 
-1. Go to a root directory where the node configuration and data will be stored. E.g. `cd /opt`.
-2.  Clone the repo that includes the required configs.
-
-    ```
-    git clone https://github.com/gnosischain/prysm-launch.git gbc
-    ```
-3. Switch to the cloned directory: `cd gbc`.
-4. Copy the validator keystore files generated in _Step 1_ to the `keys/validator_keys` directory. **Keystores should only be used on a single node.**\
-   ****_Note: Depending on your setup, you may need to_ [_change file ownership parameters_](https://linuxize.com/post/chmod-command-in-linux/) _to copy keys._
-5. Write the keystore password from Step 1 to  `keys/keystore_password.txt` file (create this file).
-6. Generate a wallet password and place it in  `./keys/wallet_password.txt`. Create a strong password (1 uppercase, 1 number, 1 special character, at least 8 characters long) using any password generation method and save it as `wallet_password.txt`. This password will be used by Prysm to access the validator's private keys following the import. [More info](https://docs.prylabs.network/docs/wallet/nondeterministic/#usage)
-7. Create an `.env` file from the example at `.env.example` (note the `.` in front makes it hidden, either enable hidden files or use `ls -la` to find). \
-    \
-   Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
-   1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-   2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC.\
-
-8.  Run the following command to import all added keystore files:
-
-    ```
-    docker-compose up validator-import; docker-compose down
-    ```
+```
+git clone https://github.com/gnosischain/prysm-launch.git gbc
+```
+[View the Prysm docs here for more information](https://docs.prylabs.network/docs/getting-started). 
 
 ### Lighthouse
 
 The Lighthouse client natively supports Gnosis Beacon Chain. Further instructions are using officially distributed binaries and docker images.
 
-1. Go to a root directory where the node configuration and data will be stored. E.g. `cd /opt`.
-2.  Clone the repo that includes the required configs.
-
-    ```
-    git clone https://github.com/gnosischain/lighthouse-launch.git gbc
-    ```
-3. Switch to the cloned directory: `cd gbc`.
-4. Copy validators’ keystore files generated on _the Step 1_ to the `keys/validator_keys` directory. **Keystores should only be used on a single node.**\
-    `sudo cp -r /home/<user>/vkeys/validator_keys/validator_keys /home/<user>/gbc/keys/`
-   ****_Note: You may need to_ [_change file ownership parameters_](https://linuxize.com/post/chmod-command-in-linux/) _to copy._
-5. Write the keystore password from Step 1 to  `keys/keystore_password.txt` file (create this file).
-6.  Create an `.env` file from the example at `.env.example`. (note the `.` in front makes it hidden, either enable hidden files or use `ls -la` to find). `sudo cp /home/<user>/gbc/.env.example /home/<user>/gbc/.env`
-Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
-1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC.
-
-
-7.  Run the following commands to import all added keystore files:
-
-    ```
-    cd /home/<user>/gbc 
-    docker-compose up validator-import; docker-compose down
-    ```
+Lighthouse is a secure and fast consensus layer client built byy sigma prime. Lighthouse natively supports Gnosis chain since the 2.1.2 release. [View the Lighthouse docs here](https://lighthouse-book.sigmaprime.io/). [Link to Lighthouse Repository](https://github.com/sigp/lighthouse)
 :::note
-If you have errors, ensure that your decryt key is correct in the earlier seps (it is case sensitive). The previous command imports the keys from `/home/<user>/gbc/keys/validator_keys` to `/home/<user>/gbc/validators` .  After imoprting, it's a good idea to archive the old keystores from `/home/<user>/gbc/keys/validator_keys` somewhere safe. 
+If you have errors, ensure that your decrypt key is correct in the earlier steps (it is case sensitive). The previous command imports the keys from `/home/<user>/gbc/keys/validator_keys` to `/home/<user>/gbc/validators` .  After importing, it's a good idea to archive the old keystores from `/home/<user>/gbc/keys/validator_keys` somewhere safe. 
 :::
 ### Nimbus
 
-Official binaries or docker images for Ethereum Mainnet **do not** currently support Gnosis Beacon Chain, however, the Nimbus client can be specifically built from source to support the Gnosis Beacon Chain. Use the process below to run a Nimbus beacon node on the Gnosis Beacon Chain.
-
-1. Go to a root directory where the node configuration and data will be stored. E.g. `cd /opt`.
-2.  Clone the repo that includes the required configs.
-
-    ```
-    git clone https://github.com/gnosischain/nimbus-launch.git gbc
-    ```
-3. Switch to the cloned directory: `cd gbc`.
-4. Copy validators’ keystore files generated in _Step 1_ to the `keys/validator_keys` directory. **Keystores should only be used on a single node.**\
-   ****_Note: You may need to_ [_change file ownership parameters_](https://linuxize.com/post/chmod-command-in-linux/) _to copy._
-5.  Create an `.env` file from the example at `.env.example`. (note the `.` in front makes it hidden, either enable hidden files or use `ls -la` to find). \
-
-
-    Fill in the valid external `PUBLIC_IP` __ address of your node, this will help other peers find you.
-
-    1. Use the `curl ifconfig.me ; echo ''` command to get the IP of your node.
-    2. Other values can remain unchanged. **If you are experienced and want to run your own GC node,** [**connect to your own node**](/node/client/connect-to-a-gc-node) **** rather than the public RPC. Make sure to use a WSS connection instead of HTTPS.
-6.  Run the following command to import all added keystore files, you will be interactively prompted to enter a keystore password:
-
-    ```
-    docker-compose run validator-import; docker-compose down
-    ```
-7. Edit docker-compose files for restart. If your device goes down/restarts for any reason, we want our nodes to start back up as soon as they can. to do this, edit the docker-compose to have the restart field set to `always` like so:
+Official binaries or docker images for Ethereum Mainnet **do not** currently support Gnosis Beacon Chain, however, the Nimbus client can be specifically built from source to support the Gnosis Beacon Chain when built with the correct options. Use the following command to clone the correct repository:
 ```
-version: '3.3'
-services:
-  node:
-    image: sigp/lighthouse:v2.2.1-modern
-    hostname: node
-    restart: always
-    command: |
-      lighthouse beacon_node
-      --network gnosis
-      --checkpoint-sync-url https://rpc-gbc.gnosischain.com
+git clone https://github.com/gnosischain/nimbus-launch.git gbc
 ```
+[For more information, view the Nimbus docs here](https://nimbus.guide/). 
+
+
 ### Teku
 
 Teku client natively supports Gnosis chain and requires Java 11+. [See the Teku docs here to view setup instructions](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Installation-Options/Install-Binaries/).
@@ -419,6 +354,6 @@ Use comma-separated RPC urls for the `XDAI_RPC_URL` variable to set fallback IPs
 
 If you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
-If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8)
+If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8) **TODO INVITE INVALID**
 
-
+s
