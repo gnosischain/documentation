@@ -3,3 +3,6 @@
 
 # Known Issues
 
+```PermissionDenied``` 
+
+```FeeTooLowToCompete```
