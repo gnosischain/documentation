@@ -12,7 +12,7 @@ Notes: You will need some Dai to transfer (minimum of 0.005 Dai) AND some ETH fo
 Bridge may take some time to update chain stats, try refreshing or waiting a minute if you receive any errors. You can also use a different RPC from the Settings dropdown.
 :::
 
-1\) Go to [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/). (TODO: link)Connect your web3 wallet](/wallets/metamask/metamask-setup.md) (MetaMask, Nifty Wallet) to the **Ethereum Mainnet**. Once connected, you will see your address populated in the header, and your DAI and xDai balance displayed on the page.
+1\) Go to [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/). [Connect your web3 wallet](/tools/wallets/metamask/#2-configure) to the **Ethereum Mainnet**. Once connected, you will see your address populated in the header, and your DAI and xDai balance displayed on the page.
 
 _Note: If you change the dropdown on the page (ETH Mainnet) but not in MetaMask, the interface will shift but your wallet will not auto-connect to the chain. Switching chains in MM will automatically shift the interface._
 

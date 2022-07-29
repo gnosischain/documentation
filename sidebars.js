@@ -91,7 +91,7 @@ const sidebars = {
         "node/client/lighthouse",
         "node/client/nimbus",
         "node/client/prysm",
-        "node/client/nethermind-node-setup",
+        "node/client/nethermind",
         "node/client/connect-to-a-gc-node",
         "node/client/node-monitoring",
         "node/client/migrate-clients",
