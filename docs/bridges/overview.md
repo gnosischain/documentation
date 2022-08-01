@@ -5,9 +5,9 @@ description: Architecture of Gnosis' Bridges
 
 # Bridges Overview
 
-Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](./tokenbridge/amb-bridge.md#bridge-validators). There is a [roadmap](./roadmap.md) to move towards [trustless bridges](./roadmap.md#trustless-bridges). 
+Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](./tokenbridge/amb-bridge.md#bridge-validators). There is a [roadmap](./roadmap.md) to move towards [trustless bridges](./roadmap.md#trustless-bridges).
 
-There is a growing ecosystem of [3rd-party Bridges](../user-guide/bridges.md) that build on top of native bridges, that provide users with fast liquidity and user experience.  
+There is a growing ecosystem of [3rd-party Bridges](../user-guide/bridges.md) that build on top of native bridges, that provide users with fast liquidity and user experience.
 
 Gnosis' native bridges are first-class citizens the chain's architecture, as the chain's native gas stablecoin ([xDai](../about/xdai-token.md)) is minted and burned through the integration of the [native xDai bridge](./tokenbridge/xdai-bridge.md) with the consensus algorithm.
 ## Conceptual Architecture
