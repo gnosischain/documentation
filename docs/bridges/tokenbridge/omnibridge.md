@@ -14,7 +14,7 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 ## Overview
 
-[Omnibridge](tokenbridge/omnibridge.md) a native token bridge that mints the canonical representations of bridged assets on Gnosis. It is built on top of the [Arbitrary Message Bridge (AMB)](./amb-bridge.md) and thus relies on the same group of [Trusted Bridge Validators](tokenbridge/amb-bridge.md#bridge-validators) as the AMB. 
+[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. It is built on top of the [Arbitrary Message Bridge (AMB)](./amb-bridge.md) and thus relies on the same group of [Trusted Bridge Validators](./amb-bridge.md#bridge-validators) as the AMB. 
 
 The Omnibridge currently connects Gnosis to Ethereum and Binance Smart Chain.
 
@@ -58,7 +58,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ## Bridge Revenue
 
-The Omnibridge currently generates [bridge revenue](tokenbridge/omnibridge.md#bridge-revenue) through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../about/treasury.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/treasury.md) to fund Gnosis development. 
 
 ## Resources
 - [Omnibridge Docs](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension)

@@ -10,7 +10,7 @@ title: AMB Bridge
 
 You can also send arbitrary data between Gnosis and Ethereum using the native Arbitrary Message Bridge (AMB). This allows Gnosis contracts to send data and trigger contract functions on Ethereum and other chains, and vice-versa. 
 
-The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](tokenbridge/omnibridge.md).
+The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](./omnibridge.md).
 
 The AMB currently supports Ethereum and Binance Smart Chain, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
 
