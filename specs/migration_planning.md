@@ -62,9 +62,30 @@ The current version of this can be found at [developers.gnosischain.com](https:/
       * [ ] Ramp Network: Fiat Gateway #users
       * [ ] Mt Pelerin: Fiat Gateway #users 
       * [ ] Buying xDai via Wyre (Inactive) #users
-  * [ ] Bridges #bridges
+  * [x] Bridges #bridges
     * [ ] xDai Bridge: Dai to xDai #bridges
+      * [ ] Moving Dai to xDai
+      * [ ] Moving xDai to Dai
+      * [ ] Alternate Receiver (send Dai to another xDai Address)
+      * [ ] Use Alternate or Custom JSON RPC Endpoints
+      * [ ] Find a Transaction Hash
+      * [ ] Transfer Dai without a UI (using a web3 wallet and Blockscout/Etherscan)
+      * [ ] View Inbound (Dai to xDai) Transactions
+      * [ ] xDai Bridge + Gnosis Safe App
+      * [ ] Troubleshoot Bridge Transactions, UI, xdai.io, xmoon.exchange, metamask
+      * [ ] xDai Mechanics: how xDai is minted
+      * [ ] Dai & Stablecoin Compounding
     * [ ] OmniBridge: ERC20 Token Transfers #bridges
+      * [ ] Exceptions & Special Cases
+      * [ ] Alternate Receiver
+      * [ ] Set Custom RPC Endpoints
+      * [ ] Infinite Unlock
+      * [ ] Reverse Briding
+      * [ ] OmniBridge + Gnosis Safe App
+      * [ ] Binance Smart Chain
+        * [ ] BSC Omnibridge Example
+        * [ ] wBNB Auto-convesion to BNB
+        * [ ] Binance-Peg Dai Token on xDai
     * [ ] NFT OmniBridge #bridges
     * [ ] HOP Stablecoin Bridge (Polygon/Eth/xDai) #bridges
     * [ ] State Channels Bridge (xDai/Polygon/BSC/Fantom) #bridges

@@ -1,4 +1,4 @@
----
+<!-- ---
 description: Developing a cross-blockchain application with the arbitrary message bridge
 ---
 
@@ -241,4 +241,4 @@ function fixFailedMessage(bytes32 _messageId) external {
 :::success
 Instruction is migrated from the POA forum [https://forum.poa.network/t/how-to-develop-a-cross-blockchain-application-by-using-amb-bridge/2963](https://forum.poa.network/t/how-to-develop-a-cross-blockchain-application-by-using-amb-bridge/2963)
 :::
-
+ -->
