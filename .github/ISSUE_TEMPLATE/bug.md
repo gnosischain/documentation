@@ -1,18 +1,21 @@
 ---
-name: "Bug"
-about: "Select this template for reporting issues with the current behaviour and help us improve!"
+name: Bug
+about: Select this template for reporting issues with the current behaviour and help
+  us improve!
 title: "bug: ..."
-labels: "triage, bug"
+labels: bug, triage
+assignees: ''
+
 ---
 
 ## What
 
-- (describe the current behaviour)
-- (describe the expected behaviour)
+- (describe the current behavior)
+- (describe the expected behavior)
 
 ## Why
 
-- (the reason why the behaviour needs to change)
+- (the reason why the behavior needs to change)
 
 ## Refs
 

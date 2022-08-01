@@ -2,7 +2,9 @@
 name: Suggest a new content
 about: Suggest a content to our developers portal
 title: "content: ..."
-labels: "content"
+labels: documentation
+assignees: ''
+
 ---
 
 **Tutorial title**
