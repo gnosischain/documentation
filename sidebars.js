@@ -203,6 +203,108 @@ const sidebars = {
           ],
         },
         'tools/wallets/safe',
+        {
+          type: 'category',
+          label: 'Hardware',
+          collapsed: true,
+          items: [
+            'tools/wallets/dcent',
+            'tools/wallets/ledger',
+            'tools/wallets/trezor',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Software',
+          collapsed: true,
+          items: [
+            {
+              type: 'link',
+              label: 'Alpha Wallet',
+              href: 'https://alphawallet.com/asset/the-best-wallet-for-xdai/',
+            },
+            {
+              type: 'link',
+              label: 'Ambire Wallet',
+              href: 'https://www.ambire.com/',
+            },
+            {
+              type: 'link',
+              label: 'Coinbase Wallet',
+              href: 'https://www.coinbase.com/wallet',
+            },
+            {
+              type: 'link',
+              label: 'DEX Wallet',
+              href: 'https://www.dexwallet.io/',
+            },
+            {
+              type: 'link',
+              label: 'DinoWallet',
+              href: 'https://dinowallet.org/',
+            },
+            {
+              type: 'link',
+              label: 'Frame',
+              href: 'https://frame.sh/',
+            },
+            {
+              type: 'link',
+              label: 'Mt Pelerin',
+              href: 'https://www.mtpelerin.com/bridge-wallet',
+            },
+            {
+              type: 'link',
+              label: 'Minerva Wallet',
+              href: 'https://minerva.digital/',
+            },
+            {
+              type: 'link',
+              label: 'MyCrypto',
+              href: 'https://app.mycrypto.com/',
+            },
+            {
+              type: 'link',
+              label: 'Nabox Wallet',
+              href: 'https://nabox.io/',
+            },
+            {
+              type: 'link',
+              label: 'O3Labs',
+              href: 'https://o3.network/',
+            },
+            {
+              type: 'link',
+              label: 'Pillar Wallet',
+              href: 'https://www.pillar.fi/',
+            },
+            {
+              type: 'link',
+              label: 'Poketto Cash',
+              href: 'https://poketto.cash/',
+            },
+            {
+              type: 'link',
+              label: 'Portis Wallet',
+              href: 'https://wallet.portis.io/',
+            },
+            {
+              type: 'link',
+              label: 'Rabby Wallet',
+              href: 'https://rabby.io/',
+            },
+            {
+              type: 'link',
+              label: 'TokenPocket',
+              href: 'https://tokenpocket-gm.medium.com/how-to-add-xdai-chain-through-adding-custom-network-72d95597b017',
+            },
+            {
+              type: 'link',
+              label: 'Wallet3',
+              href: 'https://wallet3.io/',
+            }
+          ],
+        },
       ],
     },
     {
