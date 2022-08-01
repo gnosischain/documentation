@@ -10,7 +10,7 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 :::
 
-![](../diagrams/token-bridge.svg)
+![](/img/bridges/diagrams/token-bridge.svg)
 
 ## Overview
 

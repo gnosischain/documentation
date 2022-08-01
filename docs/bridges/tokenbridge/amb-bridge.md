@@ -6,7 +6,7 @@ title: AMB Bridge
 
 ## Overview
 
-![](../diagrams/amb-bridge.svg)
+![](/img/bridges/diagrams/amb-bridge.svg)
 
 You can also send arbitrary data between Gnosis and Ethereum using the native Arbitrary Message Bridge (AMB). This allows Gnosis contracts to send data and trigger contract functions on Ethereum and other chains, and vice-versa. 
 

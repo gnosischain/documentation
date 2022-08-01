@@ -18,7 +18,7 @@ Gnosis has three main types of bridges:
 - **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for [canonical tokens](#canonical-tokens) created by native bridges
 - **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own [canonical token](#canonical-tokens) on Gnosis
 
-![Diagrams overview of Bridges](./diagrams/bridge-overview.svg)
+![Diagrams overview of Bridges](/img/bridges/diagrams/bridge-overview.svg)
 ## Native Bridges
 
 Gnosis has two native bridges:

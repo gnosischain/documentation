@@ -13,7 +13,7 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 
 The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/xdai-token.md) on Gnosis, the native asset used for gas and transaction fees. 
 
-![xDai Bridge Diagram](../diagrams/dai-bridge.svg) 
+![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
 Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis mints and sends xDai to the user's corresponding address on Gnosis. This is done through the  [block rewards contract](#block-rewards-contract) and minted in the next block by the consensus algorithm. 
 
