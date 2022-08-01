@@ -241,21 +241,61 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Data & Analytics',
+      collapsed: true,
+      items: [
+        'tools/analytics/the-graph',
+        'tools/analytics/dune',
+        {
+          type: 'category',
+          label: 'AnyBlock',
+          collapsed: true,
+          link: {type: 'doc', id: 'tools/analytics/anyblock/README'},
+          items: [
+            'tools/analytics/anyblock/api-sql',
+          ],
+        },
+        'tools/analytics/beacon-chain',
+        {
+          type: 'link',
+          label: 'Blocknative',
+          href: 'https://docs.blocknative.com/',
+        },
+        {
+          type: 'link',
+          label: 'Chainbeat',
+          href: 'https://chainbeat.io/',
+        },
+        {
+          type: 'link',
+          label: 'Curvegrid',
+          href: 'https://www.curvegrid.com/docs/introduction-to-multibaas',
+        },
+        {
+          type: 'link',
+          label: 'DappQuery',
+          href: 'https://dappquery.com/',
+        },
+        {
+          type: 'link',
+          label: 'Tenderly',
+          href: 'https://tenderly.co/',
+        },
+        {
+          type: 'link',
+          label: 'TrueBlocks',
+          href: 'https://trueblocks.io/',
+        },
+
+      ],
+    },
+    {
+      type: 'category',
       label: 'Oracles',
       collapsed: true,
       items: [
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Analytics',
-      collapsed: true,
-      items: [
-        'tools/analytics/dune',
-        'tools/analytics/anyblock',
-        'tools/analytics/beacon-chain',
       ],
     },
     {
