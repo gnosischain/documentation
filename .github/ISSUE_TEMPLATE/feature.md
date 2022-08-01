@@ -1,7 +1,7 @@
 ---
 name: Feature
 about: Select this template to suggest an idea to make this a better project
-title: ''
+title: "feat: ..."
 labels: enhancement, triage
 assignees: ''
 

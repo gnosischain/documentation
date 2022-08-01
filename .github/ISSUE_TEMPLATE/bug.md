@@ -2,7 +2,7 @@
 name: Bug
 about: Select this template for reporting issues with the current behaviour and help
   us improve!
-title: ''
+title: "bug: ..."
 labels: bug, triage
 assignees: ''
 
