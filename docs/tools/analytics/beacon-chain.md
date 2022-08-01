@@ -1,7 +1,7 @@
 ---
 ---
 
-# Beacon Chain
+# Beacon Chain Analytics
 
 In addition to the chain explorer at [https://beacon.gnosischain.com/](https://beacon.gnosischain.com), several analytics tools are available to view node-relevant Gnosis Beacon Chain statistics.
 
