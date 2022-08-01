@@ -3,7 +3,7 @@
 
 # Connect to a GC Node
 
-If you choose not to use the public RPC and want to connect to a different Gnosis Chain node ([including a 3rd party provider](/node/client/nethermind-node-setup)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
+If you choose not to use the public RPC and want to connect to a different Gnosis Chain node ([including a 3rd party provider](/node/client/nethermind)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
 
 ### **Fallback IPs (Lighthouse only)**
 

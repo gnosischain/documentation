@@ -5,4 +5,4 @@ package-lock.json
 build
 yarn.lock
 .obsidian
-
+docs/.obsidian
