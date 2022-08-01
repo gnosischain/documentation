@@ -86,24 +86,10 @@ const sidebars = {
         "node/voluntary-exit/voluntary-exit",
       ],
     },
+    
     {
       type: 'category',
-      label: 'Client setup',
-      collapsed: true,
-      link: {type: 'doc', id: 'node/client/README'},
-      items: [
-        "node/client/lighthouse",
-        "node/client/nimbus",
-        "node/client/prysm",
-        "node/client/nethermind",
-        "node/client/connect-to-a-gc-node",
-        "node/client/node-monitoring",
-        "node/client/migrate-clients",
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Operations',
+      label: 'Testnets',
       collapsed: true,
       //link: {type: 'doc', id: 'node/operations/README'},
       items: [
@@ -113,36 +99,6 @@ const sidebars = {
       ],
     },
    
-    // {
-    //   type: 'category',
-    //   label: 'Client setup',
-    //   collapsed: true,
-    //   link: {type: 'doc', id: 'node/client/README'},
-    //   items: [
-    //     "node/client/lighthouse",
-    //     "node/client/nimbus",
-    //     "node/client/prysm",
-    //     "node/client/nethermind-node-setup",
-    //     "node/client/connect-to-a-gc-node",
-    //     "node/client/node-monitoring",
-    //     "node/client/migrate-clients",
-    //   ],
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Operations',
-    //   collapsed: true,
-    //   //link: {type: 'doc', id: 'node/operations/README'},
-    //   items: [
-    //     "node/operations/README",
-    //     "node/operations/deposit-safety-instructions",
-    //     "node/operations/manual-deposit-method",
-    //     "node/operations/convert-gno-to-mgno",
-    //     "node/operations/validator-withdrawals",
-    //     "node/operations/voluntary-exit",
-    //     "node/operations/migrating-a-validator",
-    //   ],
-    // },
     {
       type: 'link',
       label: 'Landing Page',

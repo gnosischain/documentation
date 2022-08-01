@@ -18,7 +18,6 @@ Gnosis Chain runs a consensus protocol known as [Proof of Stake](https://www.inv
 A 'node' on Gnosis chain is very similar to a node on Ethereum. [Read more here](https://ethereum.org/en/run-a-node/)
 
 ## What is Meant by 'Consensus Layer' and 'Execution Layer'?
-
 The ***Consensus Layer*** is responsible for the blockchain's consensus. Pre-merge, this is known as the ***Beacon Chain***. This is where the validators check and make sure that blocks are valid. To run this, we can use clients such as [Lighthouse](https://github.com/sigp/lighthouse), [Prysm](https://github.com/prysmaticlabs/prysm), [Nimbus](https://github.com/status-im/nimbus-eth2), or [Teku](https://github.com/ConsenSys/teku).
 
 The ***Execution Layer*** is responsible for transaction bundling and execution. To run this, we use clients like Nethermind. 
@@ -31,6 +30,6 @@ In order to check validity, the Consensus Layer sends a list of transactions and
 :::
 
 :::tip
-💧 Liquid staking is the easiest way to participate, and it has arrived with [Stakewise](https://app.stakewise.io). Connect your wallet to the GC to start staking __ today! [Instructions here](https://stakewise.medium.com/stakewise-liquid-staking-now-on-gnosis-beacon-chain-b732d81480b9).
+💧 Liquid staking is the easiest way to participate, and you can do so with [Stakewise](https://app.stakewise.io). Connect your wallet to the GC to start staking. [Instructions here](https://stakewise.medium.com/stakewise-liquid-staking-now-on-gnosis-beacon-chain-b732d81480b9).
 :::
 

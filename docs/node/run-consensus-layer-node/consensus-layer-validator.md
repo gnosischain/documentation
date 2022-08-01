@@ -172,7 +172,7 @@ Validators are advised to consider those numbers when planning their infrastrust
 * 1 TB SSD
 * 10 Mb/s broadband connection
 
-### Additional Options:
+### Additional Options
 
 If preferred, you can use pre-configured hardware to easily run a node with minimal setup.
 
@@ -198,7 +198,7 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 4. [Deposit to your Validator(s)](/node/operations/): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
 5. [View on Explorer](/node/operations/#view-your-validator): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
 
-### Additional Software/Access Requirements:
+### Additional Software/Access Requirements
 
 * Terminal access on your node and cli familiarity
 * Admin level access on your local network to set up a port forward
