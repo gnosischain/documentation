@@ -1,0 +1,65 @@
+---
+---
+
+# MetaMask
+
+```mdx-code-block
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+```
+
+[MetaMask](https://metamask.io/) is a web browser extension and mobile app that allows you to manage your Gnosis private keys. By doing so, it serves as a wallet for xDai, GNO and other tokens, and allows you to interact with decentralized applications, or dapps.
+
+:::info New to MetaMask?
+Read their article: [Getting started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-started-with-MetaMask)
+:::
+
+## 1. Download
+
+The official [MetaMask Download](https://metamask.io/download/) page will detect your browser and link to the correct extension store. It supports Chrome, Firefox, Opera, Edge and Brave. It also has Android and iOS versions.
+
+## 2. Configure
+
+After the installation, MetaMask require a configuration to work with Gnosis, follow one of the instructions:
+
+### Quick configuration
+
+<Tabs>
+  <TabItem value="chainlist" label="Chain List">Use <a href="https://chainlist.org/?search=gnosis">ChainList</a> for a one-click configuration and follow the instructions.
+  </TabItem>
+  <TabItem value="deeplink" label="Deeplink">Click on <a href="https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x64&params[0][chainName]=Gnosis&params[0][rpcUrls][0]=https://rpc.gnosischain.com&params[0][nativeCurrency][name]=xDAI&params[0][nativeCurrency][symbol]=xDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout.com/xdai/mainnet">this deeplink</a> to auto-configure MetaMask and follow the instructions.</TabItem>
+</Tabs>
+
+### Manual Configuration
+
+1) Open Metamask, and select **Custom RPC** from the Network Dropdown.
+
+![](/img/tools/custom-rpc.png)
+
+2) In the **Custom RPC** Settings, add in the Gnosis network details and click **Save**:
+
+```jsx title="Network Name"
+Gnosis
+```
+
+```jsx title="New RPC URL"
+https://rpc.gnosischain.com
+```
+
+```jsx title="Chain ID"
+100
+```
+
+```jsx title="Symbol"
+xDai
+```
+
+```jsx title="Block Explorer URL"
+https://blockscout.com/xdai/mainnet/
+```
+
+## More configurations
+
+- [Add custom tokens](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask)
+- [Change RPC URL](/tools/wallets/metamask/change-rpc-url)
+- [Using MetaMask with a Ledger or Trezor](https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet)
