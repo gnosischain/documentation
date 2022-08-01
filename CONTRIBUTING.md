@@ -39,7 +39,7 @@ This command generates static content into the `build` directory and can be serv
 ## Submit an Issue
 
 Start by [searching if an issue already exists](https://docs.github.com/en/github/searching-for-information-on-github/searching-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments). 
-If a related issue doesn't exist, you can [open a new issue](https://github.com/gnosischain/developers-portal/issues/new/choose) following the instructions of the template accordingly.
+If a related issue doesn't exist, you can [open a new issue](https://github.com/gnosischain/documentation/issues/new/choose) following the instructions of the template accordingly.
 
 Issues are categorized by type:
 
@@ -51,7 +51,7 @@ Issues are categorized by type:
 
 For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
-- Submit a PR against the `main` branch of the `gnosischain/developers-portal` repo
+- Submit a PR against the `main` branch of the `gnosischain/documentation` repo
 - Follow the PR template instructions carefuly
 
 ## Writing style
