@@ -144,9 +144,10 @@ const sidebars = {
       label: 'Native Bridges',
       collapsed: false,
       items: [
-        'bridges/tokenbridge/dai',
-        'bridges/tokenbridge/data',
-        'bridges/tokenbridge/tokens'
+        'bridges/tokenbridge/xdai-bridge',
+        'bridges/tokenbridge/amb-bridge',
+        'bridges/tokenbridge/omnibridge',
+        'bridges/tokenbridge/nft-bridge'
       ] 
     },
     'bridges/roadmap'
