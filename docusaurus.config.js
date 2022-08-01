@@ -93,18 +93,6 @@ const config = {
             label: 'Tools',
           },
           {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'integrations',
-            label: 'Integrations',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'ecosystems',
-            label: 'Ecosystems',
-          },
-          {
             href: 'https://github.com/gnosischain/developers-portal',
             label: 'GitHub',
             position: 'right',

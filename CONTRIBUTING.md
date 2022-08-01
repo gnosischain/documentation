@@ -137,3 +137,7 @@ Place files in ```/static/files/```
 ### Tabs
 
 Refer to [docusaurus docs](https://docusaurus.io/docs/next/markdown-features/tabs) for details on tabs.
+
+## Useful Tools
+
+- [Markdown Link Updater](https://marketplace.visualstudio.com/items?itemName=mathiassoeholm.markdown-link-updater)
