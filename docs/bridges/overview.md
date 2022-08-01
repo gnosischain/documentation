@@ -15,8 +15,8 @@ Gnosis' native bridges are first-class citizens the chain's architecture, as the
 Gnosis has three main types of bridges: 
 
 - **Native Bridges**: built into the chain itself, and mint the [canonical token](#canonical-tokens) representation of the original asset on Gnosis (e.g. "Canonical Dai", "Canonical ETH")
-- **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for [canonical tokens](#canonical-token) created by native bridges
-- **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own [canonical token](#canonical-token) on Gnosis
+- **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for [canonical tokens](#canonical-tokens) created by native bridges
+- **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own [canonical token](#canonical-tokens) on Gnosis
 
 ![Diagrams overview of Bridges](./diagrams/bridge-overview.svg)
 ## Native Bridges
