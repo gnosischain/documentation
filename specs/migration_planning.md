@@ -97,21 +97,21 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Smart Contract Deployment #developers 
     * [ ] Update RPC URL #developers
     * [ ] Connect to GC with Ethers.js #developers
-    * [ ] API & SQL Access with Anyblock Analytics #developers #tools
-    * [ ] Blocknative Notifications #developers #tools 
+    * [x] API & SQL Access with Anyblock Analytics #developers #tools
+    * [x] Blocknative Notifications #developers #tools 
     * [ ] Airdrops: Creating & Receiving #guides
     * [ ] Burner Wallet Factory #?
     * [x] Chainlink Price Feeds #tools #developers
-    * [ ] Chainbeat Smart Contract Dashboard #tools #developers 
-    * [ ] Curvegrid MultiBaas Smart Contract Interaction #developers #tools 
+    * [x] Chainbeat Smart Contract Dashboard #tools #developers 
+    * [x] Curvegrid MultiBaas Smart Contract Interaction #developers #tools 
     * [x] Pocket Portal #developers #validators #tools 
     * [x] Ankr API #developers #tools 
     * [x] Getblock Node Access #developers #tools #validators
     * [x] Dune Analytics #developers #tools 
-    * [ ] TheGraph Data Indexing #developers #tools 
-    * [ ] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
+    * [x] TheGraph Data Indexing #developers #tools 
+    * [x] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
     * [ ] MEV & Flashbots #validators
-    * [ ] Meta Transactions & Gas Station Network #developers #tools 
+    * [d] Meta Transactions & Gas Station Network #developers #tools 
     * [x] ERC20 Test Token Faucet #developers #tools 
     * [x] Wrapped xDai (wxDai) #developers #tools #about 
     * [ ] ENS Compatibility #developers #about 
@@ -125,10 +125,10 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Multi-Client Support #validators 
     * [ ] Nethermind #validators 
     * [ ] OpenEthereum (formerly Parity) #validators 
-  * [ ] On-Chain Random Numbers #tools #about
-    * [ ] RandomAura RNG Explainer #tools #about
-    * [ ] Accessing a Random Seed with a Smart Contract #tools #about 
-    * [ ] Randomness FAQ #tools #about
+  * [d] On-Chain Random Numbers #tools #about
+    * [d] RandomAura RNG Explainer #tools #about
+    * [d] Accessing a Random Seed with a Smart Contract #tools #about 
+    * [d] Randomness FAQ #tools #about
   * [ ] Immunefi Bug Bounty #about
     * [ ] Omnibridge Bounty #bridges #about
   * [ ] Security Audits #about #bridges
