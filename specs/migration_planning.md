@@ -104,17 +104,17 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [x] Chainlink Price Feeds #tools #developers
     * [ ] Chainbeat Smart Contract Dashboard #tools #developers 
     * [ ] Curvegrid MultiBaas Smart Contract Interaction #developers #tools 
-    * [ ] Pocket Portal #developers #validators #tools 
-    * [ ] Ankr API #developers 
+    * [x] Pocket Portal #developers #validators #tools 
+    * [x] Ankr API #developers #tools 
     * [x] Getblock Node Access #developers #tools #validators
     * [x] Dune Analytics #developers #tools 
     * [ ] TheGraph Data Indexing #developers #tools 
     * [ ] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
     * [ ] MEV & Flashbots #validators
     * [ ] Meta Transactions & Gas Station Network #developers #tools 
-    * [ ] ERC20 Test Token Faucet #developers #tools 
-    * [ ] Wrapped xDai (wxDai) #developers #tools #about 
-    * [ ] ENS Compatibility #developers #tools 
+    * [x] ERC20 Test Token Faucet #developers #tools 
+    * [x] Wrapped xDai (wxDai) #developers #tools #about 
+    * [ ] ENS Compatibility #developers #about 
     * [x] Gas Price Oracle #developers #tools 
     * [ ] AoX: Arbitrum on GC #about 
   * [ ] Optimistic Rollups on Gnosis Chain #about 
