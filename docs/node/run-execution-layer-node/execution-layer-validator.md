@@ -132,7 +132,7 @@ Once Nethermind has fully synced, you can point your validator nodes to it to us
  docker stop <container name> && sudo docker remove <container name>
  sudo docker ps -a
  ```
- No containers should be running. If you have separate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenence can cause your key pairs to be run on separate instances, leading to slashing.
+ No containers should be running. If you have separate containers for the GC and GBC clients, make sure you stop and remove them both. Every container you were running for both your GC and GBC clients should be stopped and removed. This is very important - not shutting them down properly before setting up new clients after maintenance can cause your key pairs to be run on separate instances, leading to slashing.
 
 
 **Make Changes**

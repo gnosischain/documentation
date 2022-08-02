@@ -9,10 +9,10 @@ Gnosis Beacon Chain (GBC) brings extendable and accelerated beacon-network funct
 
 GBC is optimized for certain parameters (block/epoch time) and can serve in a frontrunning capacity to important Ethereum consensus-layer updates. For example, the merge will first take place on testnets. Once thorough testing is complete, updates can then move to a production-level, real-world value environment (Gnosis Beacon Chain).
 
-[Validating on the GBC](/node/client/) only requires the equivalent of 1 GNO, opening up validation opportunities for diverse groups of individuals across the globe. When you go to make the deposit, that 1 GNO is split into 32 mGNO to more closely mirror Ethereum, where you stake 32 ETH.
+Validating on the GBC only requires the equivalent of 1 GNO, opening up validation opportunities for diverse groups of individuals across the globe. When you go to make the deposit, that 1 GNO is split into 32 mGNO to more closely mirror Ethereum, where you stake 32 ETH.
 
 ## What is Staking?
-Gnosis Chain runs a consensus protocol known as [Proof of Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp). To secure the network and disincentivize bad actors from validating invalid or non-existent transactions, validators "stake" a non-trivial amount of assets. If they are caught lying by other validators, their stake gets "slashed" (taken away), and they can be permanently removed from the validator pool. In order for the network to be compromised, bad actors would have to control 51% of the staked assets, in what's known as a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp). Therefore, the more validators, the more coins there are being staked, and the more expensive and infeasible a 51% attack becomes. In exchange for being a good validator, a portion of transaction fees are paid out. On Gnosis chain, rewards are paid out in mGNO (1 mGNO = 1/32 GNO).  
+Currently, Gnosis Chain uses Parity's [AuRa](https://openethereum.github.io/Aura) proof-of-authority consensus model. In this model, selected validators (selected through the POSDAO dPOS process) take turns signing blocks. However, after the merge, Gnosis Chain will be running a consensus protocol known as [Proof of Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp). To secure the network and disincentivize bad actors from validating invalid or non-existent transactions, validators "stake" a non-trivial amount of assets. If they are caught lying by other validators, their stake gets "slashed" (taken away), and they can be permanently removed from the validator pool. In order for the network to be compromised, bad actors would have to control 51% of the staked assets, in what's known as a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp). Therefore, the more validators, the more coins there are being staked, and the more expensive and infeasible a 51% attack becomes. In exchange for being a good validator, a portion of transaction fees are paid out. On Gnosis chain, rewards are paid out in mGNO (1 mGNO = 1/32 GNO).  
 
 ## What is a Node?
 A 'node' on Gnosis chain is very similar to a node on Ethereum. [Read more here](https://ethereum.org/en/run-a-node/)
@@ -30,6 +30,6 @@ In order to check validity, the Consensus Layer sends a list of transactions and
 :::
 
 :::tip
-💧 Liquid staking is the easiest way to participate, and you can do so with [Stakewise](https://app.stakewise.io). Connect your wallet to the GC to start staking. [Instructions here](https://stakewise.medium.com/stakewise-liquid-staking-now-on-gnosis-beacon-chain-b732d81480b9).
+💧 Liquid staking is the easiest way to participate, and you can do so with [Stakewise](https://app.stakewise.io). [Read more here](/tools/beacon-chain/liquid-staking).
 :::
 

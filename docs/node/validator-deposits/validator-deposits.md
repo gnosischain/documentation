@@ -69,21 +69,6 @@ Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosi
 
 Once live, you can view your validator(s) on the explorer. Copy the pubkey(s)  listed in the deposit\_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://beacon.gnosischain.com/](https://beacon.gnosischain.com).
 
-
-:::
-
-## Previous UI for GNO to mGNO swap
-
-If you need some extra mGNO (for example to top off a balance or for other reasons), you can use the previous swap UI to convert any amount GNO on the Gnosis Chain to mGNO.
-
--> [Instructions](/node/operations/convert-gno-to-mgno)
-
-:::caution
-Currently there is not a mechanism to swap mGNO back to GNO.
-:::
-
-:::note
-A UI is available for deposits at [https://deposit.gnosischain.com/](https://deposit.gnosischain.com).  If preferred, you can use the method below to interact with contracts via BlockScout and use the deposit script to complete.
 :::
 
 ### Deposit GNO
@@ -138,7 +123,7 @@ Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosi
 ## Convert GNO to mGNo (special cases)
 
 ::: note
-GNO is automatically wrapped by the deposit contract, you only need to do this to top off your balance or idk. The following instructions use the older swap UI
+GNO is automatically wrapped by the deposit contract, you only need to do this to top off your balance. The following instructions use the older swap UI
 :::
 
 :::danger

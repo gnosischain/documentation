@@ -45,10 +45,10 @@ All other processes are the same. See the [Dune Documentation](https://hackmd.io
 
 ![](</img/tools/perpetual-on-dune.png>)
 
-### Gnosis Chain Usage Dashboard
+### Gnosis Chain Usage Dashboards
 
-* Total Txs per day, transactions by project and active accounts
-* Link: [https://duneanalytics.com/maxaleks/xDai-Usage](https://duneanalytics.com/maxaleks/xDai-Usage)
+* Total Txs per day, transactions by project: [https://dune.com/cjnith/gnosis-transactions](https://dune.com/cjnith/gnosis-transactions)
+* Unique Active Addresses: [https://dune.com/cjnith/gnosis-unique-active-addresses](https://dune.com/cjnith/gnosis-unique-active-addresses)
 
 :::info
 Look for more GC-relevant dashboards from our resident Dune expert at [https://duneanalytics.com/maxaleks](https://duneanalytics.com/maxaleks/xDai-Usage)

@@ -1,7 +1,7 @@
 ---
 ---
 
-# Running a Conensus Layer (Beacon Chain) Node
+# Running a Consensus Layer (Beacon Chain) Node
 
 Before getting started, it is important to have an understanding of your responsibilities as a validator. As an Ethereum-mirrored environment with lower stakes, validating on the GBC involves many of the same responsibilities as validating on the Ethereum Beacon Chain.
 
@@ -10,7 +10,7 @@ Before getting started, it is important to have an understanding of your respons
 :::
 
 ## Before Starting 
-On GBC you can validate blocks while staking less capital than Ethereum or many other prrof-of-stake chains. By doing this, you are providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
+On GBC you can validate blocks while staking less capital than Ethereum or many other proof-of-stake chains. By doing this, you are providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
 
 1. The validator deposit is a **non-reversible, one-way transaction**. Withdrawal will not be possible until the Gnosis Chain merge occurs joining the execution layer with the consensus layer.
 2. You are **responsible for your node**, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
@@ -195,14 +195,14 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 1. [Generate Validator Keystores and Deposit Data](#step-1-generate-validator-accounts-and-deposit-data): On an offline machine, generate up to 128 separate validator keys per node.
 2. [Choose your Gnosis Beacon Chain (GBC) Client:](#step-2-choose-your-beacon-chain-client--import-validator-keys) Choose to run either Prysm, Lighthouse or Nimbus. Add keystores and env variables.
 3. [Start up your GBC Node](#step-3-run-the-beacon-chain-node-with-the-attached-validator-process): Run in the docker container.
-4. [Deposit to your Validator(s)](/node/operations/): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
-5. [View on Explorer](/node/operations/#view-your-validator): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
+4. [Deposit to your Validator(s)](/node/validator-deposits): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
+5. [View on Explorer](/node/monitoring-your-nodes/monitoring-nodes): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
 
 ### Additional Software/Access Requirements
 
 * Terminal access on your node and cli familiarity
 * Admin level access on your local network to set up a port forward
-* [MetaMask](https://metamask.io) (or equivalent) connected to the Gnosis Chain with 1 GNO per validator and a small amount of xDai for transaction costs.
+* [A Gnosis compatible wallet](/tools/wallets/) connected to the Gnosis Chain with 1 GNO per validator and a small amount of xDai for transaction costs.
 * Recent [Docker](https://www.docker.com) version (Docker v20.10+)
 * Docker compose 2.2.3 (_note default version installed with apt-get may give an error_). To fix:
 ```
@@ -231,7 +231,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
     cd
     docker pull ghcr.io/gnosischain/validator-data-generator:latest
     ```
-2. If this is your first time running the process and there is no an existing mnemonic to generate keystores and deposit data, replace the variables below with your info then run the follwoing command with these variables:
+2. If this is your first time running the process and there is no an existing mnemonic to generate keystores and deposit data, replace the variables below with your info then run the following command with these variables:
    __
    1. `NUM` The number of signing keys (validators) to generate.
    2. `START_NUM` Index for the first validator key. If this is the first time generating keys with this mnemonic, use 0. If keys were previously generated with this mnemonic, use the subsequent index number (eg, if 4 keys have been generated before (keys #0, #1, #2, #3, then enter 4 here).
@@ -342,13 +342,18 @@ Once your node has synced (can take a few hours depending on setup) and the node
 
 ## Connect to a GC Node
 
-If you choose not to use the public RPC and want to connect to a different Gnosis Chain node ([including a 3rd party provider](/node/client/nethermind-node-setup)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
+If you choose not to use the public RPC and want to connect to a different Gnosis Chain node ([including a 3rd party provider](/node/run-execution-layer-node/execution-layer-validator)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
+
+:::note
+If you are having issues connecting to a public RPC, you can try some of the other endpoints listed [here](/tools/rpc/).
+:::
 
 ### Fallback IPs (Lighthouse only)
 
 Use comma-separated RPC urls for the `XDAI_RPC_URL` variable to set fallback IPs in Lighthouse. This is useful if your node goes offline. For example:
 
 * `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;, [https://rpc.gnosischain.com](https://rpc.gnosischain.com)
+
 
 ### Sharing machines for GC and GBC clients
 
