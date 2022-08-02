@@ -1,7 +1,7 @@
 ---
 ---
 
-# Running a local Development Enviornment
+# Localnet
 
 [Ethereum Documentation for Setting up Local Enviornment](https://ethereum.org/en/developers/local-environment/)
 

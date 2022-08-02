@@ -1,7 +1,7 @@
 ---
 ---
 
-# Known Issues
+# Common Issues
 
 ```PermissionDenied``` 
 
