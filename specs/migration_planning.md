@@ -16,9 +16,9 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [ ] [Omni Bridge](https://omni.gnosischain.com/) #bridge
   * [ ] [xDai Bridge](https://bridge.gnosischain.com/) #bridge
   * [ ] [Gnosis Beacon Chain Docs](https://docs.gnosischain.com/) #validators
-  * [ ] [Block Explorer](https://blockscout.com/xdai/mainnet/) #tools
+  * [x] [Block Explorer](https://blockscout.com/xdai/mainnet/) #tools
 * [ ] Welcome to Gnosis Chain #about
-  * [ ] Chain Usage (Dune Analytics Dashboards) #tools
+  * [x] Chain Usage (Dune Analytics Dashboards) #tools
   * [ ] [Why Gnosis/xDai section](https://blockscout.com/xdai/mainnet/) #about
 * [ ] Community Updates #community
   * [ ] [Youtube Channel](https://www.youtube.com/GnosisChain) #community
@@ -32,7 +32,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Weekly News #blog
     * [ ] Energy Efficiency #about
     * [ ] Comparisons #about
-    * [ ] Analytics #tools
+    * [x] Analytics #tools
     * [ ] Research Articles #about
     * [ ] Interviews & Media Articles #about
       * [ ] xDai Chain: Basic Overview Presentation #about
@@ -40,7 +40,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
       * [ ] Dai Derivatives: How xDai fits into the DeFi ecosystem #about
   * [ ] FAQs
     * [ ] GC Chain Basics #about
-    * [ ] Ecosystem Tools: Explorer, Wallets, DApps #user #tools
+    * [x] Ecosystem Tools: Explorer, Wallets, DApps #user #tools
     * [ ] xDai Native Coin/ Token FAQ #about
     * [ ] Public Staking (Validators & Delegators) #validators
     * [ ] Bridges: xDai Bridge & Omnibridge #bridges
@@ -62,9 +62,30 @@ The current version of this can be found at [developers.gnosischain.com](https:/
       * [ ] Ramp Network: Fiat Gateway #users
       * [ ] Mt Pelerin: Fiat Gateway #users 
       * [ ] Buying xDai via Wyre (Inactive) #users
-  * [ ] Bridges #bridges
+  * [x] Bridges #bridges
     * [ ] xDai Bridge: Dai to xDai #bridges
+      * [ ] Moving Dai to xDai
+      * [ ] Moving xDai to Dai
+      * [ ] Alternate Receiver (send Dai to another xDai Address)
+      * [ ] Use Alternate or Custom JSON RPC Endpoints
+      * [ ] Find a Transaction Hash
+      * [ ] Transfer Dai without a UI (using a web3 wallet and Blockscout/Etherscan)
+      * [ ] View Inbound (Dai to xDai) Transactions
+      * [ ] xDai Bridge + Gnosis Safe App
+      * [ ] Troubleshoot Bridge Transactions, UI, xdai.io, xmoon.exchange, metamask
+      * [ ] xDai Mechanics: how xDai is minted
+      * [ ] Dai & Stablecoin Compounding
     * [ ] OmniBridge: ERC20 Token Transfers #bridges
+      * [ ] Exceptions & Special Cases
+      * [ ] Alternate Receiver
+      * [ ] Set Custom RPC Endpoints
+      * [ ] Infinite Unlock
+      * [ ] Reverse Briding
+      * [ ] OmniBridge + Gnosis Safe App
+      * [ ] Binance Smart Chain
+        * [ ] BSC Omnibridge Example
+        * [ ] wBNB Auto-convesion to BNB
+        * [ ] Binance-Peg Dai Token on xDai
     * [ ] NFT OmniBridge #bridges
     * [ ] HOP Stablecoin Bridge (Polygon/Eth/xDai) #bridges
     * [ ] State Channels Bridge (xDai/Polygon/BSC/Fantom) #bridges
@@ -72,14 +93,13 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Bridge FAQs #bridges
   * [ ] Wallets #users
     * [ ] Tutorials for each wallet #users
-  * [ ] Applications & Metrics #tools
-    * [ ] Dune Dashboards for Analytics #tools
-    * [ ] Random tools (revoke, etc) #tools
-  * [ ] Block Explorers #tools
-    * [ ] Blockscout #tools
-    * [ ] Anyblock Analytics #tools
+  * [x] Applications & Metrics #tools
+    * [x] Dune Dashboards for Analytics #tools
+    * [x] Random tools (revoke, etc) #tools
+  * [x] Block Explorers #tools
+    * [x] Blockscout #tools
+    * [x] Anyblock Analytics #tools
     * [ ] Gnosis Beacon Chain #validators
-    * [ ] Tokenview #tools
   * [ ] Governance #?
     * [ ] Community Governance #?
     * [ ] Bridge Governance Board #?
@@ -89,7 +109,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Yield Farming #ecosystem
     * [ ] Lending & Money Markets #ecosystem
     * [ ] Yield Aggregators #ecosystem
-    * [ ] Tracking #ecosystem #tools
+    * [x] Tracking #ecosystem #tools
 * [ ] For Stakers #validators 
   * [ ] Staking with GNO on Gnosis Beacon Chain #validators 
     * [ ] POSDAO Staking and STAKE (archived) #validators #about
@@ -98,25 +118,25 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Smart Contract Deployment #developers 
     * [ ] Update RPC URL #developers
     * [ ] Connect to GC with Ethers.js #developers
-    * [ ] API & SQL Access with Anyblock Analytics #developers #tools
-    * [ ] Blocknative Notifications #developers #tools 
+    * [x] API & SQL Access with Anyblock Analytics #developers #tools
+    * [x] Blocknative Notifications #developers #tools 
     * [ ] Airdrops: Creating & Receiving #guides
     * [ ] Burner Wallet Factory #?
-    * [ ] Chainlink Price Feeds #tools #developers
-    * [ ] Chainbeat Smart Contract Dashboard #tools #developers 
-    * [ ] Curvegrid MultiBaas Smart Contract Interaction #developers #tools 
-    * [ ] Pocket Portal #developers #validators #tools 
-    * [ ] Ankr API #developers 
-    * [ ] Getblock Node Access #developers #tools #validators
-    * [ ] Dune Analytics #developers #tools 
-    * [ ] TheGraph Data Indexing #developers #tools 
-    * [ ] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
+    * [x] Chainlink Price Feeds #tools #developers
+    * [x] Chainbeat Smart Contract Dashboard #tools #developers 
+    * [x] Curvegrid MultiBaas Smart Contract Interaction #developers #tools 
+    * [x] Pocket Portal #developers #validators #tools 
+    * [x] Ankr API #developers #tools 
+    * [x] Getblock Node Access #developers #tools #validators
+    * [x] Dune Analytics #developers #tools 
+    * [x] TheGraph Data Indexing #developers #tools 
+    * [x] Dappquery Smart Contract Analytics & Visualizations #developers #tools 
     * [ ] MEV & Flashbots #validators
-    * [ ] Meta Transactions & Gas Station Network #developers #tools 
-    * [ ] ERC20 Test Token Faucet #developers #tools 
-    * [ ] Wrapped xDai (wxDai) #developers #tools #about 
-    * [ ] ENS Compatibility #developers #tools 
-    * [ ] Gas Price Oracle #developers #tools 
+    * [d] Meta Transactions & Gas Station Network #developers #tools 
+    * [x] ERC20 Test Token Faucet #developers #tools 
+    * [x] Wrapped xDai (wxDai) #developers #tools #about 
+    * [ ] ENS Compatibility #developers #about 
+    * [x] Gas Price Oracle #developers #tools 
     * [ ] AoX: Arbitrum on GC #about 
   * [ ] Optimistic Rollups on Gnosis Chain #about 
     * [ ] L1 Contract Addresses #about 
@@ -126,10 +146,10 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Multi-Client Support #validators 
     * [ ] Nethermind #validators 
     * [ ] OpenEthereum (formerly Parity) #validators 
-  * [ ] On-Chain Random Numbers #tools #about
-    * [ ] RandomAura RNG Explainer #tools #about
-    * [ ] Accessing a Random Seed with a Smart Contract #tools #about 
-    * [ ] Randomness FAQ #tools #about
+  * [d] On-Chain Random Numbers #tools #about
+    * [d] RandomAura RNG Explainer #tools #about
+    * [d] Accessing a Random Seed with a Smart Contract #tools #about 
+    * [d] Randomness FAQ #tools #about
   * [ ] Immunefi Bug Bounty #about
     * [ ] Omnibridge Bounty #bridges #about
   * [ ] Security Audits #about #bridges
@@ -189,7 +209,7 @@ The current version of the GBC Docs can be found at [docs.gnosischain.com](https
 * [ ] Incentives #validators
 * [ ] Contracts, Addresses, Parameters #validators 
   * [ ] Upgradeability #validators 
-* [ ] Beacon Chain Analytics #validators #tools 
+* [x] Beacon Chain Analytics #validators #tools 
 * [ ] Security Audit #validators 
 * [ ] FAQ #validators 
 * [ ] Media Kit #validators 
