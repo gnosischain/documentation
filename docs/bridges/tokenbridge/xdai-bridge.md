@@ -78,7 +78,7 @@ In the case where the amount of Dai requested for withdrawal is not available in
 
    The xDai token is minted when Dai is transferred from Ethereum to the Gnosis Chain using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers. [See this diagram above for a visualization of the process](/bridges/tokenbridge/xdai-bridge#overview).
 ### Basic Process
-**Ethereum -> Gnosis**
+#### Ethereum -> Gnosis 
 1. User sends a transaction to the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum
 2. The transfer is approved on the Ethereum side and the user's Dai balance is reduced
 3. Bridge validator oracles invoke the `executeAffirmation` function to confirm the transfer request
@@ -87,13 +87,24 @@ In the case where the amount of Dai requested for withdrawal is not available in
 6. The block reward contract is called by the AuRa consensus engine (post-merge this will be the PoS consensus algorithm) to update the EVM state and update the user's xDai balance.
 
 
-**How to View Your Transaction**
+####  How to View Your Transaction
 You can view a receiver's address and amount of xDai received in the block reward contract logs. Whenever the `executeAffirmation` method is called, it registers the following:
 `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)`
 Example: https://blockscout.com/xdai/mainnet/tx/0x5892a695860f6087a2d93140f05e6365142ff77fd7128e39dbc03128d5797ac4/logs
 
-**How xDai is Burned When Transferring Back to Ethereum**
-When xDai is bridged back over the bridge into Dai again, the xDai is burned. The process to burn xDai is fairly straightforward: it's sent to address 0x0000000000000000000000000000000000000000 where it cannot be withdrawn. 
+
+#### Gnosis -> Ethereum 
+1. User sends a transaction to the bridge contract on xDai to initiate a withdrawal.  
+2. The requested xDai withdrawal amount is "burned" (sent to address 0x0 where it can never be withdrawn), and the `UserRequestForSignature` method is called. Example tx: https://blockscout.com/xdai/mainnet/tx/0x8e23cf0ab01476c2df5b71a72603f2c229d3d9a63ad6ca71ce164798f3733826/internal-transactions
+3. The request generates an event on the xDai side.
+4. Bridge validator nodes catch this event and send confirmation (signatures) to the contract on the xDai side.
+5. Once enough signatures are collected (currently 4 of 6), one of the bridge validators* sends the signatures and message to Ethereum. * Anyone can extract this information and send to Ethereum. If a transaction stalls due to congestion, this transaction can be re-submitted by any user with a higher gas price. 
+6. The bridge contract on Ethereum checks that the signatures are valid. If they are,  the requested Dai is unlocked for the user.  
+:::note
+This final step may be delayed if Ethereum mainnet is congested.
+:::
+
+
 
 ## Roadmap
 
