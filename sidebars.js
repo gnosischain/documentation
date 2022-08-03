@@ -125,7 +125,6 @@ const sidebars = {
         "developers/building/nft",
         "developers/building/token",
         "developers/building/first-contract",
-        "developers/building/tools",
         "developers/building/testnet-deployment",
       ],
     },
