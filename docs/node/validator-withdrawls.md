@@ -5,7 +5,7 @@
 
 Withdrawals are not available until after the merge, when the Gnosis Beacon Chain consensus layer merges with the Gnosis Chain execution layer. After the merge, there will have to be another upgrade (like Ethereum) to enable withdrawls. Until that time, any mGNO deposits made will remain in the beacon chain.
 
-If you decide you want to stop validating prior to the merge, you can perform a [voluntary exit](/node/operations/voluntary-exit), which will freeze your balance at the current value.
+If you decide you want to stop validating prior to the merge, you can perform a [voluntary exit](/node/voluntary-exit), which will freeze your balance at the current value.
 
 We will post more on the withdrawal instructions as the merge approaches. You can find more info in the[ FAQs](/specs/gbc/faq).
 

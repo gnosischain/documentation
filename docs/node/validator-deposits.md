@@ -51,7 +51,7 @@ If you can't upload the file, you may want to check the file permissions to make
 3) The app will validate the json file and list the number of validator deposits you are making and the required GNO to deposit. Click **Deposit** to continue.
 <img src="/img/node/deposit-2.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
-4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/operations/deposit-safety-instructions) before proceeding.
+4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/validator-deposits) before proceeding.
 <img src="/img/node/deposit-3.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
 
 <img src="/img/node/deposit-4.png" style={{ display:"block", marginLeft:"auto", marginRight:"auto", width:"50%", height:"50%"}} />
