@@ -64,7 +64,7 @@ Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](/node/#what-is-mea
 
 Along with running the GBC client you can also consider running a Gnosis Chain Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis Chain using Nethermind](/node/run-execution-layer-node/execution-layer-validator) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing the [Gnosis Chain using Nethermind](/node/execution-layer-validator) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
 ### Can I use a node provider to run a Gnosis Chain node?
 
