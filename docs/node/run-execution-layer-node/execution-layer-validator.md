@@ -145,5 +145,5 @@ Restart the containers using `docker-compose up` as you did initially when setti
 
 As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse, Teku, Nimbus or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
-If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8)
+If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.gg/VQb3WzsywU)
 

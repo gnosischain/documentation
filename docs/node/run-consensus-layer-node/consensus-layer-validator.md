@@ -22,7 +22,7 @@ If you are ready to proceed, please see the technical prerequisites which includ
 
 ## The Basics
 
-Since GBC is a lower-stakes environment, it is a great place to learn and refine new skills. Be sure to read the instructions carefully and ask questions ([discord channel](https://discord.com/invite/pjHjQwycV8)) as needed. **TODO: NEED NEW INVITE LINK**
+Since GBC is a lower-stakes environment, it is a great place to learn and refine new skills. Be sure to read the instructions carefully and ask questions ([discord channel](https://discord.gg/VQb3WzsywU)) as needed. **TODO: NEED NEW INVITE LINK**
 
 * **Using the Terminal**:  You will be required to enter commands into a terminal window. These will be simple copy-paste instructions, but familiarity with using a terminal is helpful.
 * **Key Management**: You will use the command line to derive a key-pair for validating blocks, as well as a mnemonic you will use later to derive a withdrawal pair. It is important to store these safely (offline ledger highly recommended).
@@ -359,6 +359,6 @@ Use comma-separated RPC urls for the `XDAI_RPC_URL` variable to set fallback IPs
 
 If you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
-If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.com/invite/pjHjQwycV8) **TODO INVITE INVALID**
+If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.gg/VQb3WzsywU) **TODO INVITE INVALID**
 
 

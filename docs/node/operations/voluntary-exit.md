@@ -25,7 +25,7 @@ docker run --rm -it -v "$(pwd)/config:/tmp/config" -v "$(pwd)/wallet:/home/.eth2
 
 ### Lighthouse
 
-Native support for voluntary exit is in process. If you need to request a voluntary exit prior to native support, please [contact us in discord](https://discord.com/invite/pjHjQwycV8) in the beacon-chain channel.
+Native support for voluntary exit is in process. If you need to request a voluntary exit prior to native support, please [contact us in discord](https://discord.gg/VQb3WzsywU) in the beacon-chain channel.
 
 * For more info, see the [Lighthouse Voluntary Exit docs](https://lighthouse-book.sigmaprime.io/voluntary-exit.html)
 
