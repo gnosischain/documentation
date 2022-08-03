@@ -73,7 +73,7 @@ const sidebars = {
       type: 'category',
       label: 'Platform Overview',
       collapsed: false,
-      link: {type: 'doc', id: 'developers/platform-overview/gnosis-differences'},
+      link: {type: 'doc', id: 'developers/platform-overview/README'},
       items: [
         "developers/platform-overview/gnosis-differences",
         "developers/platform-overview/transaction-fees",
