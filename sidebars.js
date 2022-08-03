@@ -72,7 +72,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Platform Overview',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/platform-overview/gnosis-differences'},
       items: [
         "developers/platform-overview/gnosis-differences",
@@ -82,7 +82,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Environments',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/environments/README'},
       items: [
         "developers/environments/mainnet",
@@ -93,7 +93,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Deploying a Smart Contract',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/smart-contracts/README'},
       items: [
         "developers/smart-contracts/truffle",
@@ -105,7 +105,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Interacting with Gnosis Chain',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/gnosis-interaction/README'},
       items: [
         "developers/gnosis-interaction/metamask",
@@ -116,7 +116,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Building DApps',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/building/full-stack-dapp'},
       items: [
         "developers/building/full-stack-dapp",
@@ -130,7 +130,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Bridging Ethereum and Gnosis',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/bridging/basics'},
       items: [
         "developers/bridging/bridging-tokens",
@@ -141,7 +141,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Verifying Contracts',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'developers/verifying-contracts/README'},
       items: [
         "developers/verifying-contracts/gnosis-scan",
