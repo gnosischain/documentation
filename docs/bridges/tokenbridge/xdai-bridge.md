@@ -120,4 +120,4 @@ This final step may be delayed if Ethereum mainnet is congested.
 
 - [ ] Synthesize [xDai Bridge Docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
 - [ ] Synthesize [Tokenbridge xDai Docs](https://docs.tokenbridge.net/xdai-bridge/about)
-- [ ] Does xDai Bridge have an ALM? 
+- [ ] Does xDai Bridge have an ALM? No
