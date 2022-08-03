@@ -9,7 +9,7 @@ description: A list of community channels for Gnosis Chain
 | Channel|URL|
 | - | - |
 | Twitter | [https://twitter.com/gnosischain](https://twitter.com/gnosischain) |
-| Discord (Technical Support) | [https://discord.com/invite/pjHjQwycV8](https://discord.com/invite/pjHjQwycV8) |
+| Discord (Technical Support) | [https://discord.gg/VQb3WzsywU](https://discord.gg/VQb3WzsywU) |
 | Telegram (Community Chat)   | [https://t.me/gnosischain](https://t.me/gnosischain)|
 | GitHub                      | [https://github.com/gnosischain](https://github.com/gnosischain)|
 | Governance Forum            | [https://forum.gnosis.io/](https://forum.gnosis.io/)|
