@@ -62,28 +62,28 @@ IPFS ([InterPlanetary File System](https://en.wikipedia.org/wiki/InterPlanetary_
     ```
     ipfs init
     ```
-3. Open another terminal window and run the following:
-    ```
-    ipfs daemon
-    ```
+3. Open another terminal window and run the following
+```
+ipfs daemon
+```
 Now open the first terminal window and run the following to add your art file (art.png) to ipfs:
-    ```
-    ipfs add art.png
-    ```
+```
+ipfs add art.png
+```
 This will output a hash prefixed by a "Qm". copy that and add the “https://ipfs.io/ipfs/” prefix to it. For example, this was mine: https://ipfs.io/ipfs/QmVUZDRXPLPToKVCfhWQ9hPT31ZUu3XDVuQr1XvQKqz1f1
 
 4. Create a JSON file and add it to IPFS:
-    ```
+```
     {
         "name": "Gnosis NFT",
         "description":"hoot hoot"
         "image":"https://ipfs.io/ipfs/QmVUZDRXPLPToKVCfhWQ9hPT31ZUu3XDVuQr1XvQKqz1f1",
     }
-    ```
+```
 and then run:
-    ```
+```
     ipfs add nft.json
-    ```
+```
 Another "Qm" prefixed hash string will be generated. Copy that down and add the same “https://ipfs.io/ipfs/” prefix to it. Mine looks like this: https://ipfs.io/ipfs/QmdtHvwsGNjVejuXHyCnM3r4UP8cJonf8DgSveejGfNhvU .
 
 ### Step 3: Implement the ERC-721 Token Contract
@@ -93,25 +93,44 @@ Another "Qm" prefixed hash string will be generated. Copy that down and add the 
     cd contracts && touch GnosisNft.sol
     ```
 2. Open Nft.sol in your favorite text editor or IDE (VS Code has a [Hardhat extension](https://hardhat.org/hardhat-vscode/docs/overview)).
-To keep it simple for the sake of this tutorial, we're going to import Nibbstack's [ERC-721 Implementation](https://github.com/nibbstack/erc721).If you go and take a look at the repository, you'll notice they implement the ERC-721 standard. Edit GnosisNft.sol to look like this:
+To keep it simple for the sake of this tutorial, we're going to import OpenZeppelin's [ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721). To use this, quickly run:
+```
+npm install @openzeppelin/contracts
+```
+If you go and take a look at the repository, you'll notice how they implement the ERC-721 standard as mentioned above. Take some time to look through the code, and then edit GnosisNft.sol to look like this:
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.9;
  
-import "https://github.com/nibbstack/ethereum-erc721/src/contracts/tokens/nf-token-metadata.sol";
-import "https://github.com/nibbstack/erc721/src/contracts/ownership/ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract gnosisNft is Ownable, ERC721("GnosisNft", "GNOT") {
  
-contract gnosisNft is NFTokenMetadata, Ownable {
- 
-  constructor() {
-    nftName = "Gnosis NFT";
-    nftSymbol = "GNO";
+  uint tokenId;
+
+  mapping(address=>tokenMetaData[]) public ownershipRecord;
+
+  struct tokenMetaData{
+    uint tokenId;
+    uint timeStamp;
+    string tokenURI; //this will be the nft artwork
   }
- 
-  function mint(address _to, uint256 _tokenId, string calldata _uri) external onlyOwner {
-    super._mint(_to, _tokenId);
-    super._setTokenUri(_tokenId, _uri);
+
+  function mintToken(address recipient) onlyOwner public {
+
+    require(owner()!=recipient, "Recipient cannot be the owner of the contract");
+    _safeMint(recipient, tokenId);
+    ownershipRecord[recipient].push(tokenMetaData(tokenId,
+                                    block.timestamp,
+                                    "https://ipfs.io/ipfs/QmdtHvwsGNjVejuXHyCnM3r4UP8cJonf8DgSveejGfNhvU" //Make this your IPFS link you generated in step 2!
+                                  ));
+    tokenId = tokenId + 1;
   }
  
 }
+```
+3. Now that you've got that all coded up, it's time to compile and deploy. Run from project root:
+```
+npx hardhart compile
 ```
