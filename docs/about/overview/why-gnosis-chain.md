@@ -21,7 +21,8 @@ title: Why Gnosis Chain?
     - Fund core client development without too many changes (vs other forks)
     - Commitment to using treasury to further Ethereum development
     - All improvements to be submitted as EIPs (vs GIPs)
-  - Selectively use Gnosis to trial improvements
+  - We see the need for chain where we can push the limits of Ethereum 
+    - Selectively use Gnosis to trial improvements
     - Erigon as an execution layer, with view to reduce txn fees
     - BLS signatures, etc
     - MEV resistance - https://ethresear.ch/t/shutterized-beacon-chain/12249 
@@ -44,6 +45,8 @@ title: Why Gnosis Chain?
 - A People-run Network
   - Lower the price of running a validator so that as many people around the globe can run one (vs Ethereum)
   - Vision: run a node in every country
+  - Decentralization is very important
+  - Working towards a more equitable token distribution: there are some projects where Jump has 70% of all tokens
 - Expanding access
   - Commit to work with EF to fund developer and user education efforts in emerging markets
   - Cheap, mostly empty blocks allows for devs in emerging markets to play with cheap transactions on an interface which mostly looks and feels like Ethereum
