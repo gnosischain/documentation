@@ -11,7 +11,7 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 :::
 ## Overview
 
-The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/xdai-token.md) on Gnosis, the native asset used for gas and transaction fees. 
+The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/tokens/xdai-token.md) on Gnosis, the native asset used for gas and transaction fees. 
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
@@ -29,7 +29,7 @@ This process relies on a trusted group of xDai Bridge Validators to perform the 
 There is a roadmap to move towards [trustless bridges](../roadmap.md). 
 ### Bridge Revenue
 
-The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/treasury.md) to fund Gnosis development. 
+The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
 
 - [ ] [Explanation on Bridge Revenue](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
 - [ ] [Dune dashboard for Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges)
