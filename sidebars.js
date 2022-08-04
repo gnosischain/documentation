@@ -75,8 +75,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Platform Overview',
-      collapsed: true,
-      link: {type: 'doc', id: 'developers/platform-overview/gnosis-differences'},
+      collapsed: false,
+      link: {type: 'doc', id: 'developers/platform-overview/README'},
       items: [
         "developers/platform-overview/gnosis-differences",
         "developers/platform-overview/transaction-fees",
@@ -196,6 +196,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Explorers',
+      link: {type: 'doc', id: 'tools/explorers'},
       collapsed: true,
       items: [
         {
@@ -208,11 +209,11 @@ const sidebars = {
           label: 'Blockscout',
           href: 'https://blockscout.com/xdai/mainnet/',
         },
-        /*{
+        {
           type: 'link',
           label: 'GnosisScan',
           href: 'https://gnosisscan.io/',
-        },*/
+        },
         {
           type: 'link',
           label: 'Beacon Chain',
