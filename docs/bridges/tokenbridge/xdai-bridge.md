@@ -36,7 +36,7 @@ OVERALL
 - [ ] Does xDai Bridge have an ALM? No
 
 
-The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/xdai-token.md) on Gnosis, the native asset used for gas and transaction fees. 
+The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/tokens/xdai-token.md) on Gnosis, the native asset used for gas and transaction fees. 
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
@@ -100,7 +100,7 @@ Bridge transaction execution currently requires signatures from 4 of 6 validator
 
 ### Bridge Revenue
 
-The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/treasury.md) to fund Gnosis development. 
+The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
 
 ### Analytics
 

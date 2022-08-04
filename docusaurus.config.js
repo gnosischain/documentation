@@ -60,7 +60,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'about',
-            label: 'About Gnosis Chain',
+            label: 'About',
           },
           {
             type: 'docSidebar',
@@ -120,7 +120,7 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discord.com/invite/pjHjQwycV8',
+                href: 'https://discord.gg/VQb3WzsywU',
               },
               {
                 label: 'Twitter',

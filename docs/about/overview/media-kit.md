@@ -1,7 +1,6 @@
 ---
+title: Media Kit
 ---
-
-# Media Kit
 
 ## Gnosis Chain
 

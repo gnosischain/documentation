@@ -48,3 +48,10 @@ footer.footer--dark{
 .theme-doc-markdown.markdown a{
   font-weight: bold;
 }
+
+.theme-doc-markdown.markdown img,
+.theme-doc-markdown.markdown iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}

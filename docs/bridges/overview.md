@@ -9,7 +9,7 @@ Gnosis' native bridges allow for sending tokens and data, and are run by a group
 
 There is a growing ecosystem of [3rd-party Bridges](../user-guide/bridges.md) that build on top of native bridges, that provide users with fast liquidity and user experience.
 
-Gnosis' native bridges are first-class citizens the chain's architecture, as the chain's native gas stablecoin ([xDai](../about/xdai-token.md)) is minted and burned through the integration of the [native xDai bridge](./tokenbridge/xdai-bridge.md) with the consensus algorithm.
+Gnosis' native bridges are first-class citizens the chain's architecture, as the chain's native gas stablecoin ([xDai](../about/tokens/xdai-token.md)) is minted and burned through the integration of the [native xDai bridge](./tokenbridge/xdai-bridge.md) with the consensus algorithm.
 ## Conceptual Architecture
 
 Gnosis has three main types of bridges: 

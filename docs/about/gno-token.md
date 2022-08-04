@@ -1,5 +1,0 @@
-
-
-
-
-sGNO (stakewise)
