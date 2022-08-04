@@ -1,5 +1,5 @@
 ---
-title: Bridge Architecture
+title: Overview
 description: Architecture of Gnosis' Bridges
 ---
 

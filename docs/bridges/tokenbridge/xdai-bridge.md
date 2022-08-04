@@ -13,23 +13,28 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 ## Docs Wishlist
 
 INDIVIDUAL DOCS
-- [ ] https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/xdai-mechanics-how-xdai-is-minted
-- [ ] https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding
-- [ ] https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits
-- [ ] How should we summarize the Bridge Governance Model in Key Parameters?
+- [ ] [How xDai is minted](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/xdai-mechanics-how-xdai-is-minted)
+- [ ] [Dai Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
+- [ ] [Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+- [ ] [About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
+- [ ] Bridge Governance Parameters
+  - [ ] What are the actual parameters that can be amended?
 - [ ] Bridge validators
   - [ ] Need to verify addresses for each of the organizations - which are on Ethereum, and which are on Gnosis?
 - [ ] Roadmap
   - [ ] Link to Roadmap
 - [ ] How it works
   - [ ] How does the reverse bridge-out process work?
+  - [ ] [xDai Withdrawal Flow](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/withdrawal-authorization-flow)
+- [ ] What is the address 0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd do?
+	- [ ] Owner of the Validator Management proxy on Gnosis Chain
 
 
 OVERALL
 - [ ] Synthesize [xDai Bridge Docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
 - [ ] Synthesize [Tokenbridge xDai Docs](https://docs.tokenbridge.net/xdai-bridge/about)
 - [ ] Does xDai Bridge have an ALM? No
-## Overview
+
 
 The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/xdai-token.md) on Gnosis, the native asset used for gas and transaction fees. 
 
@@ -39,24 +44,45 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis min
 
 ## Key Information
 
-### Bridge Params
+### Overview
 
-| Bridge Type                 | ERC-20 on Eth to Native Token                                                                                                                                    |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bridge Governance Model     | WIP                                                                                                                                                              |
-| Bridge Trust Model          | [4-of-6 Validator Multisig](#bridge-validators)                                                                                                                  |
-| Ethereum Bridge Contract     | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract)                      |
-| Gnosis Bridge Contract | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy#address-tabs) |
+|            | Detail                  |
+| --------------------- | ----------------------------------------------- |
+| Frontend URL             | https://bridge.gnosischain.com                  |
+| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators) |
+| Governance Model      | 7-of-16 Multisig TODO                               |
+| Governance Parameters | Validator Set, Daily Limits, Fees               |
+| Bug Bounty                      |  TODO                                               |
+| Bug Reporting         | TODO                                            |
 
-### Daily Limits
 
-| Type               | From Ethereum         | From Gnosis        |
-| ------------------ | --------------------- | ------------------ |
-| Transfer Fees      | 0%                    | 0%                 |
-| Minimum Transfer   | 0.005 Dai             | 10 xDai            |
-| Max per Day        | 10,000,000 per day    | 10,000,000 per day |
-| Max Single Deposit | 9,999,999 Dai         | 9,999,999 xDai     |
-| Transaction Fees   | Variable, paid in Eth | paid in xDai       |
+### Contract Addresses
+
+#### Ethereum
+
+| Contract                      | Ethereum Address                                                                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Proxy Contract               | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
+| Validator Management Contract | [eth:0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#code)                                                                                                                                            |
+
+#### Gnosis
+| Contract                      | Gnosis Address                                                                                                                                                   |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Proxy Contract               | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy#address-tabs) |
+| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                         |
+| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://blockscout.com/xdai/mainnet/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                                                                                                                                                                 |
+
+### Fees & Daily Limits
+
+| Type               | Ethereum -> Gnosis | Gnosis -> Ethereum |
+| ------------------ | ------------------ | ------------------ |
+| Bridge Fees        | 0%                 | 0%                 |
+| Approx. Gas Cost   | TODO               | TODO               |
+| Min Transfer   | 0.005 Dai          | 10 xDai            |
+| Max Single Deposit | 9,999,999 Dai      | 9,999,999 xDai     |
+| Daily Limit        | 10,000,000 Dai     | 10,000,000 Dai     |
+| Daily Limit Reset  | 00:00 UTC          | 00:00 UTC          |
+
 ### Bridge Validators
 
 This process relies on a trusted group of xDai Bridge Validators to perform the role of a cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](../roadmap.md). 
@@ -85,7 +111,7 @@ The xDai bridge currently generates bridge revenue through earned yield on stabl
 
 ## How it Works
 
-   The xDai token is minted when Dai is transferred from Ethereum to the Gnosis Chain using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers. [See this diagram above for a visualization of the process](/bridges/tokenbridge/xdai-bridge#overview).
+The xDai token is minted when Dai is transferred from Ethereum to the Gnosis Chain using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers. [See this diagram above for a visualization of the process](/bridges/tokenbridge/xdai-bridge#overview).
 
 ### Ethereum -> Gnosis
 1. User sends a transaction to the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum
@@ -95,9 +121,16 @@ The xDai bridge currently generates bridge revenue through earned yield on stabl
 5. The block reward contract records the receiver(s) and amount(s) of xDai to mint. There may be more than 1 bridge transaction per block.
 6. The block reward contract is called by the AuRa consensus engine (post-merge this will be the PoS consensus algorithm) to update the EVM state and update the user's xDai balance.
 
-####  How to View Your Transaction
-You can view a receiver's address and amount of xDai received in the block reward contract logs. Whenever the `executeAffirmation` method is called, it registers the following:
-`AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)`
+You can view a receiver's address and amount of xDai received in the [block reward contract's](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called, it registers the following:
+
+```
+AddedReceiver(
+	uint256 amount, 
+	address indexed receiver, 
+	address indexed bridge
+)
+```
+
 Example: https://blockscout.com/xdai/mainnet/tx/0x5892a695860f6087a2d93140f05e6365142ff77fd7128e39dbc03128d5797ac4/logs
 
 ### Gnosis -> Ethereum 
@@ -126,8 +159,21 @@ Bridge withdrawal requests from xDai to Ethereum first use the Dai in the reserv
 Interest earned on the Dai supplied to Compound and COMP tokens will be collected periodically (approximately monthly) and transferred to an EOA through a manual method call. Funds will be used to support bridge operations such as gas refunds for users or other tbd mechanisms which can be discussed and decided on by the bridge governors.
 In the case where the amount of Dai requested for withdrawal is not available in Compound (likely due to high borrowing demand), the user will need to wait until Compound liquidity is available to execute the request. 
 
-## More Resources
+## Smart Contracts
+
+- [ ] xDai Bridge Contracts Management
+  - [ ] [xDai Contracts Management](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management)
+  - [ ] [Upgrading xDai Bridge Contracts](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/upgrade-contracts)
+  - [ ] [Configuring Contracts](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/configuration)
+  - [ ] [Admin Privilege Manaement](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/admin-privileges-management)
+  - [ ] [ERC20 Token Release](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release)
+  - [ ] [xDai Bridge Management API](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api)
+
+## Run a Bridge Validator
+
+- [ ] xDai Validator Guide
+  - [ ] [Migrating a xDai Validator](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
+## Resources
 
 - [Tokenbridge Docs on xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
 - [xDai Bridge docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
-- [Video Tutorial on how to use the xDai Bridge](https://www.youtube.com/watch?v=oKdh2cOOqUs)

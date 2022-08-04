@@ -466,7 +466,9 @@ const sidebars = {
       label: 'Overview',
       collapsed: false,
       items: [
-        'bridges/architecture',
+        'bridges/overview',
+        'bridges/governance',
+        'bridges/audits',
         'bridges/roadmap'
       ]
     },
