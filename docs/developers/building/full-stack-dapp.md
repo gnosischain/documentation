@@ -19,13 +19,9 @@ Throughout the tutorial, feel free to refrence other pages in our documentation 
 
 ## Wallet
 
-While there are many options for wallets, one great wallet is **MetaMask**. With MetaMask you can connect to many networks, including Gnosis Chain, and run dApps in-browser. Install it in your browser [here.](https://metamask.io/download/)
-
-TODO Update this stuff with new Gnosis Configuration: [link](https://shanejonas.github.io/metamask-link/?method=wallet_addEthereumChain&params[0][chainId]=0x64&params[0][chainName]=xDAI%20Chain&params[0][rpcUrls][0]=https://dai.poa.network&params[0][iconUrls][0]=https://xdaichain.com/fake/example/url/xdai.svg&params[0][iconUrls][1]=https://xdaichain.com/fake/example/url/xdai.png&params[0][nativeCurrency][name]=xDAI&params[0][nativeCurrency][symbol]=xDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout.com/poa/xdai/)
-
-Use this [1-click link](https://metamask.io/) for automatic MetaMask configuration with Gnosis Chain
-
-For further information or manual configuration of Gnosis on MetaMask, visit this [page](../gnosis-interaction/metamask.md).
+- Select one of the [wallets](/tools/wallets/) to store Gnosis gas token (xDai).
+- Fund your wallet with xDai using one of the [faucets](/tools/faucets/).
+- To interact with dApps, we recommend to [setup and configure MetaMask](/tools/wallets/metamask/).
 
 ## Setting up your project
 
@@ -39,7 +35,7 @@ First lets initialize your project:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs>
+<Tabs groupId="package-manager">
 <TabItem value="yarn" label="yarn">
 
 ```bash
@@ -57,7 +53,7 @@ npm init
 
 then install required packages:
 
-<Tabs>
+<Tabs groupId="package-manager">
 <TabItem value="yarn" label="yarn">
 
 ```bash
