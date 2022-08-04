@@ -40,7 +40,7 @@ title: Why Gnosis Chain?
     - There needs to be additional dimensions apart from "only rollups", and we see the need to fund alternative design decisions  
       - Trustless bridges
       - Merge mining and establishing synchrony between chains 
-    - It is possible that Gnosis may itself become a rollup in the future as tech matures
+    - It is possible that Gnosis may itself become some form of a rollup in the future as tech matures
 - A People-run Network
   - Lower the price of running a validator so that as many people around the globe can run one (vs Ethereum)
   - Vision: run a node in every country

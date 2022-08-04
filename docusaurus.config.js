@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gnosis Chain',
-  tagline: 'Developers Portal',
+  tagline: 'Documentation',
   url: 'https://developers-portal.staging.gnosisdev.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
