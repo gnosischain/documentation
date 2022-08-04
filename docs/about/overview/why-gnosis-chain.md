@@ -24,7 +24,7 @@ title: Why Gnosis Chain?
   - Selectively use Gnosis to trial improvements
     - Erigon as an execution layer, with view to reduce txn fees
     - BLS signatures, etc
-    - MEV resistance
+    - MEV resistance - https://ethresear.ch/t/shutterized-beacon-chain/12249 
   - More useful to Ethereum development than EVM forks
     - More eyes on deck, minimal changes to core client code
     - Funding used to supplement existing Ethereum client teams
@@ -32,19 +32,36 @@ title: Why Gnosis Chain?
     - Competitors: non-Beacon chain based EVMs (e.g. Fantom, Polygon PoS, Moonbeam)
   - Continue to push boundaries on sidechains (vs only scaling via rollups)
     - Rollups continue to be experimental technology
-    - Data availability and state rent
-    - Trustless bridges
-    - Merge mining and establishing synchrony between chains 
+    - Rollup transactions are still likely to cost a high amount 
+      - due to data availability and state rent
+      - a rollup without DA might as well be a side chain) - 16 gas per byte
+      - the xDai transaction today costs - ?
+      - a rollup on xDai costs - ?
+    - There needs to be additional dimensions apart from "only rollups", and we see the need to fund alternative design decisions  
+      - Trustless bridges
+      - Merge mining and establishing synchrony between chains 
     - It is possible that Gnosis may itself become a rollup in the future as tech matures
 - A People-run Network
   - Lower the price of running a validator so that as many people around the globe can run one (vs Ethereum)
   - Vision: run a node in every country
 - Expanding access
-  - Commit to developer and user education efforts in emerging markets
+  - Commit to work with EF to fund developer and user education efforts in emerging markets
   - Cheap, mostly empty blocks allows for devs in emerging markets to play with cheap transactions on an interface which mostly looks and feels like Ethereum
   - Native stablecoin-as-gas allows for Venmo like experience (easier onboarding for people to Web3)
+  - Possibly use the treasury to subsidize validator network, to run nodes
   - Circles UBI project
 - Culture
   - Weird, experimental and novel projects
   - Dark Forest, zk experiments etc, Perpetual protocol, POAPs, HOPR
   - Where weird and quirky lives on, even as Web3 puts on a shirt and a tie and becomes more corporate
+
+- Community + Culture narrative
+  - “The DAO Chain”, “Chain that the OGs deploy on”
+  - “Hipster Chain”,
+  - ZK Stuff (?)
+  - “We want to be the home of experimentation”
+- Privacy
+  - HOPR is on Gnosis Chain
+  - zkBridge can have optional privacy when bridging in or out
+- Dai as a native coin
+  - Can leverage the MakerDAO 

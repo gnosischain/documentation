@@ -58,7 +58,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ## Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/tokens/treasury.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
 
 ## Resources
 - [Omnibridge Docs](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension)
