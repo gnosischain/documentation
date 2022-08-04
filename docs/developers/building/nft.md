@@ -2,3 +2,116 @@
 ---
 
 # Launching an NFT on Gnosis
+
+## Overview
+
+As is the case with many other things on Gnosis, launching an NFT collection follows very similar steps to how you would on Ethereum. As is the case with Ethereum, you will need to implement the [ERC721 standard](https://eips.ethereum.org/EIPS/eip-721) to create a Non-Fungible Token. For those familiar with Object-Oriented Programming, it's much like implementing an interface. You need to implement each of the following events/functions:
+
+```
+interface ERC721 /* is ERC165 */ {
+    event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);=
+    event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);
+    event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
+
+    function balanceOf(address _owner) external view returns (uint256);
+    function ownerOf(uint256 _tokenId) external view returns (address);
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data) external payable;
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external payable;
+    function transferFrom(address _from, address _to, uint256 _tokenId) external payable;
+    function approve(address _approved, uint256 _tokenId) external payable;
+    function setApprovalForAll(address _operator, bool _approved) external;
+    function getApproved(uint256 _tokenId) external view returns (address);
+    function isApprovedForAll(address _owner, address _operator) external view returns (bool);
+}
+
+interface ERC165 {
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+```
+:::note
+NFTs are not necessarily ERC-721 tokens, they can also be [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155), for example.
+:::
+:::tip
+If you're looking for a way to create NFTs without coding, check out [Nifty.Ink](https://nifty.ink/explore)
+:::
+
+## Steps
+For this walk through, we're going to be using [Hardhat](https://hardhat.org/).
+
+### Prerequisites 
+To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/developers/building/first-contract).
+You will also need to have a working Node.js >=16.0 installation and a small amount of xDai for gas.
+
+
+### Step 1: Set up your environment
+```
+mkdir gnosis-nft
+cd gnosis-nft && npm init && npm install --save-dev hardhat && npx hardhat
+```
+Select `Create an empty hardhat.config.js` and hit enter.
+Now, install the `hardhat-toolbox` plugin:
+```
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+```
+and add the line `require("@nomicfoundation/hardhat-toolbox");` to the top of your `hardhat.config.js` file.
+
+### Step 2: Host NFT Art on IPFS
+IPFS ([InterPlanetary File System](https://en.wikipedia.org/wiki/InterPlanetary_File_System)) is the decentralized way to store files. Nft artwork tends to be pretty large, so storing them on-chain isn't an option. 
+1. Download the IPFS CLI by following the instructions [here](https://ipfs.tech/#install).
+2. Create IPFS repository
+    ```
+    ipfs init
+    ```
+3. Open another terminal window and run the following:
+    ```
+    ipfs daemon
+    ```
+Now open the first terminal window and run the following to add your art file (art.png) to ipfs:
+    ```
+    ipfs add art.png
+    ```
+This will output a hash prefixed by a "Qm". copy that and add the “https://ipfs.io/ipfs/” prefix to it. For example, this was mine: https://ipfs.io/ipfs/QmVUZDRXPLPToKVCfhWQ9hPT31ZUu3XDVuQr1XvQKqz1f1
+
+4. Create a JSON file and add it to IPFS:
+    ```
+    {
+        "name": "Gnosis NFT",
+        "description":"hoot hoot"
+        "image":"https://ipfs.io/ipfs/QmVUZDRXPLPToKVCfhWQ9hPT31ZUu3XDVuQr1XvQKqz1f1",
+    }
+    ```
+and then run:
+    ```
+    ipfs add nft.json
+    ```
+Another "Qm" prefixed hash string will be generated. Copy that down and add the same “https://ipfs.io/ipfs/” prefix to it. Mine looks like this: https://ipfs.io/ipfs/QmdtHvwsGNjVejuXHyCnM3r4UP8cJonf8DgSveejGfNhvU .
+
+### Step 3: Implement the ERC-721 Token Contract
+1. Create a new directory called contracts and create a file called GnosisNft.sol
+    ```
+    mkdir contracts
+    cd contracts && touch GnosisNft.sol
+    ```
+2. Open Nft.sol in your favorite text editor or IDE (VS Code has a [Hardhat extension](https://hardhat.org/hardhat-vscode/docs/overview)).
+To keep it simple for the sake of this tutorial, we're going to import Nibbstack's [ERC-721 Implementation](https://github.com/nibbstack/erc721).If you go and take a look at the repository, you'll notice they implement the ERC-721 standard. Edit GnosisNft.sol to look like this:
+```
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.9;
+ 
+import "https://github.com/nibbstack/ethereum-erc721/src/contracts/tokens/nf-token-metadata.sol";
+import "https://github.com/nibbstack/erc721/src/contracts/ownership/ownable.sol";
+ 
+contract gnosisNft is NFTokenMetadata, Ownable {
+ 
+  constructor() {
+    nftName = "Gnosis NFT";
+    nftSymbol = "GNO";
+  }
+ 
+  function mint(address _to, uint256 _tokenId, string calldata _uri) external onlyOwner {
+    super._mint(_to, _tokenId);
+    super._setTokenUri(_tokenId, _uri);
+  }
+ 
+}
+```
