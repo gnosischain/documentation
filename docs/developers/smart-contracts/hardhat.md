@@ -9,10 +9,10 @@ Follow the [Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getti
 
 ## Config Hardhat for Gnosis
 
-1. Change the default Network to xdai.
+1. Change the default Network to Gnosis.
 
 ```tsx title="/packages/hardhat-ts/hardhat.config.ts"
-const defaultNetwork = 'xdai';
+const defaultNetwork = 'gnosis';
 ```
 2. Update the config with Gnosis credentials
 
@@ -28,8 +28,7 @@ const defaultNetwork = 'xdai';
     localhost: {
       url: 'http://localhost:8545',
     },
-    xdai: {
-      // deprecated url: 'https://rpc.xdaichain.com/',
+    gnosis: {
       url: 'https://rpc.gnosischain.com/',
       gasPrice: 1000000000,
       accounts: {
@@ -61,27 +60,33 @@ const defaultNetwork = 'xdai';
 };
 ```
 
-3. Change the TNetworkInfo variable to xdai
+3. Change the TNetworkInfo variable to gnosis
 
 ```tsx title="/packages/[your-app]/hardhat.config.ts"
-export const targetNetworkInfo: TNetworkInfo = NETWORKS.xdai;
+export const targetNetworkInfo: TNetworkInfo = NETWORKS.gnosis;
 ```
 
 ## Compile your Gnosis contract
 
-```npx hardhat compile```
+```
+npx hardhat compile
+```
 
 ## Deploy your Contract
 
-```npx hardhat run --network <your-network> scripts/deploy.js```
+```
+npx hardhat run --network <your-network> scripts/deploy.js
+```
 
-View your contract with [AnyBlock](https://explorer.anyblock.tools/ethereum/poa/xdai/), [Blockscout](https://blockscout.com/xdai/mainnet/), or [Beacon Chain](https://beacon.gnosischain.com/).
+View your deployed contract any of the [explorers](/tools/explorers).
 
 Visit our [Tools page](../../tools) for other support.
 
 ## Verify Contract
 
-``` hardhat --network mainnet sourcify ```
+```
+hardhat --network mainnet sourcify
+```
 
 Visit our [Contract Verfication Page](../verifying-contracts/) for more documentation on verification tools.
 

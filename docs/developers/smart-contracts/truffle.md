@@ -12,14 +12,14 @@ Follow the [Truffle documentation](https://trufflesuite.com/docs/truffle/) for g
 - Update the config with Gnosis credentials
 
 ```tsx
-    require('dotenv').config();
+require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider');
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // for more about customizing your Truffle configuration!
   networks: {
-    xdai: {
+    gnosis: {
           provider: function() {
                 return new HDWalletProvider(
                process.env.MNEMONIC,
@@ -40,15 +40,19 @@ module.exports = {
 
 ## Compile your Gnosis contract
 
-```truffle compile [--list <filter>] [--all] [--network xdai] [--quiet]```
+```
+truffle compile [--list <filter>] [--all] [--network gnosis] [--quiet]
+```
 
 ## Deploy your Contract
 
-```truffle migrate --network xdai```
+```
+truffle migrate --network gnosis
+```
 
-View your contract with [AnyBlock](https://explorer.anyblock.tools/ethereum/poa/xdai/), [Blockscout](https://blockscout.com/xdai/mainnet/), or [Beacon Chain](https://beacon.gnosischain.com/).
+View your deployed contract any of the [explorers](/tools/explorers).
 
-Visit our [Tools page](../../tools) for other support.
+Visit our [Tools page](/tools) for other support.
 
 ## Verify Contract
 
@@ -58,6 +62,6 @@ Visit our [Contract Verfication Page](../verifying-contracts/) for more document
 
 ## Additional Truffle Documentation
 
-- For more contract verification documentation, refer to this [page.](../../developers/verifying-contracts/README.md)
+- For more contract verification documentation, refer to this [page](../../developers/verifying-contracts/README.md).
 
-- Additonal Truffle command documenation is located [here.](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy)
+- Additonal Truffle command documenation is located [here](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy).
