@@ -1,8 +1,7 @@
 ---
+title: Community
 description: A list of community channels for Gnosis Chain
 ---
-
-# Community Links
 
 ## Official Channels
 

@@ -1,0 +1,40 @@
+--- 
+title: Why Gnosis Chain?
+---
+
+- [ ] WIP
+
+- About Gnosis Chain
+  - High-level explanation of sidechain that is as similar to Ethereum as possible
+  - Culture of experimentation and weird, wonderful dapps, an indie chain for creators and builders
+  - Former xDai network, with long history since 2017 as one of the earliest sidechains of Ethereum, and fondly used by many of the early adopters of Ethereum (link to History)
+  - Inspired many copycats, many of which went on to define the industry (Polygon, Binance Smart Chain, Terra - copied the stablecoin-as-native-asset)
+- Why Gnosis Chain?
+  - Why yet another sidechain?
+  - Why not just throw away xDai and move towards a rollup?
+- Mission: help Ethereum succeed
+  - Gnosis is one of the largest holders of ETH and is aligned to make it succeed - previously stewarded OpenEthereum, Gnosis Safe
+  - Help drive technological improvements - funding core devs, divergent ideas, trying experiments to help Ethereum escape the innovator's dillemma
+  - Help onboard next billion users to Ethereum and Web3 - a "play" network for devs to learn, build fun projects, that might otherwise be priced out of mainnet or even rollups (should we include a price target?)
+- How are we helping Ethereum succeed?
+  - A fork that is as-close to native Ethereum as possible
+    - Fund core client development without too many changes (vs other forks)
+    - Commitment to using treasury to further Ethereum development
+    - All improvements to be submitted as EIPs
+  - Selectively use Gnosis to trial improvements
+    - Erigon execution layer
+    - BLS signatures
+  - More useful to Ethereum development than EVM forks
+    - More eyes on deck
+    - Funding used to supplement existing Ethereum client teams
+    - Benchmark: Binance Smart Chain
+    - Competitors: non-Beacon chain based EVMs (e.g. Fantom, Polygon PoS, Moonbeam)
+  - Continue to push boundaries on sidechains (vs only having rollups)
+    - Data availability and state rent
+    - Trustless bridges
+    - Merge mining and establishing synchrony between chains 
+- A People-run Network
+  - Lower the price of running a validator so that as many people around the globe can run one (vs Ethereum)
+- Culture
+  - Native stablecoin-as-gas allows for Venmo like experience (easier onboarding for people to Web3)
+  - Cheap, mostly empty blocks allows for devs in emerging markets to play with cheap transactions on an interface which mostly looks and feels like Ethereum

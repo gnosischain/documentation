@@ -1,2 +1,0 @@
-
-companion chain to ethereum
