@@ -114,7 +114,7 @@ cd contracts && touch GnosisNft.sol
 ```
 
 2. Open Nft.sol in your favorite text editor or IDE (VS Code has a [Hardhat extension](https://hardhat.org/hardhat-vscode/docs/overview)).
-To keep it simple for the sake of this tutorial, we're going to import OpenZeppelin's [ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721). To use this, quickly run:
+To keep it simple for the sake of this tutorial, we're going to import OpenZeppelin's [ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721). To use this, quickly run in the terminal:
 
 ```bash
 npm install @openzeppelin/contracts
@@ -143,17 +143,81 @@ contract gnosisNft is Ownable, ERC721("GnosisNft", "GNOT") {
   function mintToken(address recipient) onlyOwner public {
 
     require(owner()!=recipient, "Recipient cannot be the owner of the contract");
+
     _safeMint(recipient, tokenId);
+
     ownershipRecord[recipient].push(tokenMetaData(tokenId,
                                     block.timestamp,
                                     "https://ipfs.io/ipfs/QmdtHvwsGNjVejuXHyCnM3r4UP8cJonf8DgSveejGfNhvU" //Make this your IPFS link you generated in step 2!
                                   ));
+
     tokenId = tokenId + 1;
   }
  
 }
 ```
-3. Now that you've got that all coded up, it's time to compile and deploy. Run from project root:
-```
+3. Now that you've got that all coded up, it's time to compile and deploy. You can also [see here](/developers/smart-contracts/hardhat) for more deployment info. Run from project root:
+```bash
 npx hardhart compile
 ```
+This should compile without errors. Create a directory called scripts, and within it add a file called deploy.js. Add the following:
+```javascript showLineNumbers
+async function main() {
+    const [deployer] = await ethers.getSigners();
+  
+    console.log("Deploying contracts with the account:", deployer.address);
+  
+    console.log("Account balance:", (await deployer.getBalance()).toString());
+  
+    const Token = await ethers.getContractFactory("gnosisNft"); //this will be whatever you named your contract
+    const token = await Token.deploy();
+  
+    console.log("Token address:", token.address);
+}
+  
+  main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+      console.error(error);
+      process.exit(1);
+    });
+```
+Now, edit your hardhat.config.js to look something like this:
+```javascript showLineNumbers
+require("@nomicfoundation/hardhat-toolbox");
+const fs = require("fs");
+
+module.exports = {
+  solidity: "0.8.9",
+  defaultNetwork : 'gnosis',
+  networks: {
+    
+    gnosis: {
+      url: 'https://rpc.gnosischain.com/',
+      gasPrice: 1000000000,
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+    },
+  },
+};
+function mnemonic() {
+  try {
+    return fs.readFileSync("./mnemonic.txt").toString().trim();
+  } catch (e) {
+    console.log(e);
+      console.log(
+        "WARNING: No mnemonic file created for a deploy account."
+      );
+  }
+  return "";
+};
+```
+:::danger
+Proper private key management is critical. To safeguard the mnemonic, it has been added to a file called mnemonic.txt in this case. DO NOT PUSH THIS TO GITHUB OR COMMIT TO SOURCE CONTROL. Even if you delete it after, assume it will live on forever after being committed and is compromised. Add mnemonic.txt to your .gitignore if you plan on committing, or store securely it in an environment variable.
+:::
+To deploy, run:
+```bash
+npx hardhat run scripts/deploy.js --network gnosis
+```
+Congrats, you have deployed a basic ERC-721 contract to Gnosis Chain! If you like, you can build out a front end to view your NFT. For now, you can view your token in [Blockscout](https://blockscout.com/xdai/mainnet/). 
