@@ -196,6 +196,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Explorers',
+      link: {type: 'doc', id: 'tools/explorers'},
       collapsed: true,
       items: [
         {
@@ -208,11 +209,11 @@ const sidebars = {
           label: 'Blockscout',
           href: 'https://blockscout.com/xdai/mainnet/',
         },
-        /*{
+        {
           type: 'link',
           label: 'GnosisScan',
           href: 'https://gnosisscan.io/',
-        },*/
+        },
         {
           type: 'link',
           label: 'Beacon Chain',
