@@ -20,21 +20,31 @@ title: Why Gnosis Chain?
   - A fork that is as-close to native Ethereum as possible
     - Fund core client development without too many changes (vs other forks)
     - Commitment to using treasury to further Ethereum development
-    - All improvements to be submitted as EIPs
+    - All improvements to be submitted as EIPs (vs GIPs)
   - Selectively use Gnosis to trial improvements
-    - Erigon execution layer
-    - BLS signatures
+    - Erigon as an execution layer, with view to reduce txn fees
+    - BLS signatures, etc
+    - MEV resistance
   - More useful to Ethereum development than EVM forks
-    - More eyes on deck
+    - More eyes on deck, minimal changes to core client code
     - Funding used to supplement existing Ethereum client teams
     - Benchmark: Binance Smart Chain
     - Competitors: non-Beacon chain based EVMs (e.g. Fantom, Polygon PoS, Moonbeam)
-  - Continue to push boundaries on sidechains (vs only having rollups)
+  - Continue to push boundaries on sidechains (vs only scaling via rollups)
+    - Rollups continue to be experimental technology
     - Data availability and state rent
     - Trustless bridges
     - Merge mining and establishing synchrony between chains 
+    - It is possible that Gnosis may itself become a rollup in the future as tech matures
 - A People-run Network
   - Lower the price of running a validator so that as many people around the globe can run one (vs Ethereum)
-- Culture
-  - Native stablecoin-as-gas allows for Venmo like experience (easier onboarding for people to Web3)
+  - Vision: run a node in every country
+- Expanding access
+  - Commit to developer and user education efforts in emerging markets
   - Cheap, mostly empty blocks allows for devs in emerging markets to play with cheap transactions on an interface which mostly looks and feels like Ethereum
+  - Native stablecoin-as-gas allows for Venmo like experience (easier onboarding for people to Web3)
+  - Circles UBI project
+- Culture
+  - Weird, experimental and novel projects
+  - Dark Forest, zk experiments etc, Perpetual protocol, POAPs, HOPR
+  - Where weird and quirky lives on, even as Web3 puts on a shirt and a tie and becomes more corporate
