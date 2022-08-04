@@ -58,13 +58,13 @@ No, not currently. Once withdrawals are activated, mGNO will be swapped back to 
 
 ### Which clients are supported by GBC?
 
-Modified versions of [Lighthouse](/node/client/lighthouse) and [Prysm](/node/client/prysm). DAppNode will initially support the Prysm implementation only.
+Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](/node/#what-is-meant-by-consensus-layer-and-execution-layer). DAppNode will initially support the Prysm implementation only.
 
 ### How long does it take to sync the Gnosis Chain?
 
 Along with running the GBC client you can also consider running a Gnosis Chain Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis Chain using Nethermind](/node/client/nethermind/) requires \~75GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing the [Gnosis Chain using Nethermind](/node/execution-layer-validator) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
 ### Can I use a node provider to run a Gnosis Chain node?
 
@@ -84,7 +84,7 @@ Yes! [DappNode](https://dappnode.io) is a partner and full-featured service prov
 
 ### When will withdrawals be active?
 
-Following the merge between Gnosis Beacon Chain and Gnosis Chain. This is currently scheduled to occur \~1 week prior to the Ethereum merge (scheduled for Q3 2022).
+Following the merge between Gnosis Beacon Chain and Gnosis Chain. This is currently scheduled to occur \~1 week prior to the Ethereum merge.
 
 ### **What are withdrawal credentials?**
 

@@ -5,13 +5,12 @@
 
 Development wise, since Gnosis Chain is an Ethereum Virtual Machine based chain, development is nearly identical.
 
-## **Why Gnosis/xDai?**
+## **Why Gnosis?**
 
 * ✅Fast transaction times (5 seconds) & low transaction fees (500 tx for $.01).
 * ✅A stable token for transactions & gas fees.
-* ✅Permissionless delegated Proof-Of-Stake based consensus with public [POSDAO](for-validators/posdao-whitepaper.md).
-* ✅Wide-ranging Community Support (see [xDai Validator Organizations](broken-reference)).
-* ✅Growing ecosystem designed to support stable person-to-person transactions, micro transactions, [conference currencies](about-gc/use-cases/cryptocurrency-for-events-and-conferences/), [community currencies](about-gc/use-cases/community-currencies.md), DeFi, NFTs, DAOs, games and more.
+* ✅Permissionless delegated Proof-Of-Stake based consensus with public [POSDAO](/specs/consensus/posdao).
+* ✅Wide-ranging Community Support.
+* ✅Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.
 * ✅Full-featured  [BlockScout Explorer](https://blockscout.com/xdai/mainnet).
-* ✅On-chain, decentralized [Random Number Generator](for-developers/on-chain-random-numbers/).
 * ✅Smart Contract, DApp & toolset compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
