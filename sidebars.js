@@ -98,16 +98,6 @@ const sidebars = {
     'developers/README',
     {
       type: 'category',
-      label: 'Platform Overview',
-      collapsed: false,
-      link: {type: 'doc', id: 'developers/platform-overview/README'},
-      items: [
-        "developers/platform-overview/gnosis-differences",
-        "developers/platform-overview/transaction-fees",
-      ],
-    },
-    {
-      type: 'category',
       label: 'Environments',
       collapsed: true,
       link: {type: 'doc', id: 'developers/environments/README'},
