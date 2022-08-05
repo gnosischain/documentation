@@ -173,6 +173,13 @@ const config = {
             }
           ],
         },
+        '@docusaurus/preset-classic',
+        {
+          gtag: {
+            trackingID: 'G-YVPQSCP6S7', //staging trackingID
+            anonymizeIP: true,
+          },
+        },
       ],
     ],
 };
