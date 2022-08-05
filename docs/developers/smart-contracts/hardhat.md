@@ -88,10 +88,10 @@ Visit our [Tools page](/tools) for other support.
 hardhat --network mainnet sourcify
 ```
 
-Visit our [Contract Verfication Page](/developers/verifying-contracts/) for more documentation on verification tools.
+Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
 
 ## Additional Hardhat Documentation
 
-- For more contract verification documentation, refer to this [page.](/developers/verifying-contracts/README.md)
+- For more contract verification documentation, refer to this [page.](/developers/verify/README.md)
 
 - Additonal Hardhat deployment documenation is located [here.](https://hardhat.org/hardhat-runner/docs/guides/deploying)

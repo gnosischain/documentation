@@ -467,6 +467,11 @@ const sidebars = {
         },
         {
           type: 'link',
+          label: 'GnosisScan',
+          href: 'https://gnosisscan.io/charts/',
+        },
+        {
+          type: 'link',
           label: 'Tenderly',
           href: 'https://tenderly.co/',
         },

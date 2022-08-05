@@ -7,7 +7,7 @@ To increase transparency and trust, you can verify your deployed contracts. Veri
 
 Verification providers:
 
-- [Blockscout](/verify/blockscout)
-- [GnosisScan](/verify/gnosisscan)
-- [Sourcify](/verify/sourcify)
-- [Truffle](/verify/truffle)
+- [Blockscout](/developers/verify/blockscout)
+- [GnosisScan](/developers/verify/gnosisscan)
+- [Sourcify](/developers/verify/sourcify)
+- [Truffle](/developers/verify/truffle)
