@@ -47,6 +47,7 @@ title: Why Gnosis Chain?
   - Vision: run a node in every country
   - Decentralization is very important
   - Working towards a more equitable token distribution: there are some projects where Jump has 70% of all tokens
+  - Anyone can be a infrastructure operator, Community-owned infrastructure
 - Expanding access
   - Commit to work with EF to fund developer and user education efforts in emerging markets
   - Cheap, mostly empty blocks allows for devs in emerging markets to play with cheap transactions on an interface which mostly looks and feels like Ethereum
@@ -57,6 +58,7 @@ title: Why Gnosis Chain?
   - Weird, experimental and novel projects
   - Dark Forest, zk experiments etc, Perpetual protocol, POAPs, HOPR
   - Where weird and quirky lives on, even as Web3 puts on a shirt and a tie and becomes more corporate
+  - A place for experimentation. The early days of Ethereum were more fun with artists, hackers and weirdos. 
 
 - Community + Culture narrative
   - “The DAO Chain”, “Chain that the OGs deploy on”
