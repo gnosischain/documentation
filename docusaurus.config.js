@@ -43,6 +43,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-YVPQSCP6S7', //staging trackingID
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -172,13 +176,6 @@ const config = {
               }
             }
           ],
-        },
-        '@docusaurus/preset-classic',
-        {
-          gtag: {
-            trackingID: 'G-YVPQSCP6S7', //staging trackingID
-            anonymizeIP: true,
-          },
         },
       ],
     ],
