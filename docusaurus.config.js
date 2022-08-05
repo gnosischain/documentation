@@ -60,7 +60,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'about',
-            label: 'About Gnosis Chain',
+            label: 'About',
           },
           {
             type: 'docSidebar',
