@@ -58,10 +58,10 @@ Visit our [Tools page](/tools) for other support.
 
 Verify with Truffle by using [Truffle Plugin Verify](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy)
 
-Visit our [Contract Verfication Page](../verifying-contracts/) for more documentation on verification tools.
+Visit our [Contract Verfication Page](/developers/verifying-contracts/) for more documentation on verification tools.
 
 ## Additional Truffle Documentation
 
-- For more contract verification documentation, refer to this [page](../../developers/verifying-contracts/README.md).
+- For more contract verification documentation, refer to this [page](/developers/verifying-contracts/).
 
 - Additonal Truffle command documenation is located [here](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy).

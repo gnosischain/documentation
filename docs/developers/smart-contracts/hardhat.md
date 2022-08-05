@@ -80,7 +80,7 @@ npx hardhat run --network <your-network> scripts/deploy.js
 
 View your deployed contract any of the [explorers](/tools/explorers).
 
-Visit our [Tools page](../../tools) for other support.
+Visit our [Tools page](/tools) for other support.
 
 ## Verify Contract
 
@@ -88,10 +88,10 @@ Visit our [Tools page](../../tools) for other support.
 hardhat --network mainnet sourcify
 ```
 
-Visit our [Contract Verfication Page](../verifying-contracts/) for more documentation on verification tools.
+Visit our [Contract Verfication Page](/developers/verifying-contracts/) for more documentation on verification tools.
 
 ## Additional Hardhat Documentation
 
-- For more contract verification documentation, refer to this [page.](../../developers/verifying-contracts/README.md)
+- For more contract verification documentation, refer to this [page.](/developers/verifying-contracts/README.md)
 
 - Additonal Hardhat deployment documenation is located [here.](https://hardhat.org/hardhat-runner/docs/guides/deploying)
