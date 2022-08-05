@@ -1,4 +1,5 @@
 ---
+title: Launching an NFT
 ---
 
 # Launching an NFT on Gnosis

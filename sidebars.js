@@ -96,7 +96,7 @@ const sidebars = {
 
   developers: [
     'developers/README',
-    {
+    /*{
       type: 'category',
       label: 'Environments',
       collapsed: true,
@@ -106,11 +106,11 @@ const sidebars = {
         "developers/environments/testnet",
         "developers/environments/local-enviornment",
       ],
-    },
+    },*/
     {
       type: 'category',
       label: 'Deploying a Smart Contract',
-      collapsed: true,
+      collapsed: false,
       link: {type: 'doc', id: 'developers/smart-contracts/README'},
       items: [
         "developers/smart-contracts/truffle",
@@ -123,29 +123,29 @@ const sidebars = {
       type: 'category',
       label: 'Interacting with Gnosis Chain',
       collapsed: true,
-      link: {type: 'doc', id: 'developers/gnosis-interaction/README'},
+      link: {type: 'doc', id: 'developers/interact/README'},
       items: [
-        "developers/gnosis-interaction/metamask",
-        "developers/gnosis-interaction/web3-js",
-        "developers/gnosis-interaction/ethers-js",
+        "developers/interact/metamask",
+        "developers/interact/web3-js",
+        "developers/interact/ethers-js",
       ],
     },
     {
       type: 'category',
       label: 'Building DApps',
-      collapsed: true,
-      link: {type: 'doc', id: 'developers/building/full-stack-dapp'},
+      collapsed: false,
+      link: {type: 'doc', id: 'developers/building/first-contract'},
       items: [
-        "developers/building/full-stack-dapp",
-        "developers/building/nft",
-        "developers/building/token",
         "developers/building/first-contract",
-        "developers/building/testnet-deployment",
+        "developers/building/full-stack-dapp",
+        "developers/building/token",
+        "developers/building/nft",
+        //"developers/building/testnet-deployment",
       ],
     },
     {
       type: 'category',
-      label: 'Bridging Ethereum and Gnosis',
+      label: 'Bridging to Ethereum',
       collapsed: true,
       link: {type: 'doc', id: 'developers/bridging/basics'},
       items: [
@@ -157,7 +157,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Verify Contracts',
-      collapsed: true,
+      collapsed: false,
       link: {type: 'doc', id: 'developers/verify/README'},
       items: [
         "developers/verify/blockscout",
@@ -166,8 +166,11 @@ const sidebars = {
         "developers/verify/sourcify",
       ],
     },
-    'developers/help',
-    'developers/common-issues',
+    {
+      type: 'link',
+      label: 'Get Help!',
+      href: 'https://discord.gg/VQb3WzsywU',
+    },
   ],
 
   node: [
@@ -267,7 +270,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Wallets',
-      collapsed: true,
+      collapsed: false,
       link: {type: 'doc', id: 'tools/wallets/README'},
       items: [
         {

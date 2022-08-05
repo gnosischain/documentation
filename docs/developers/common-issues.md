@@ -1,8 +1,0 @@
----
----
-
-# Common Issues
-
-```PermissionDenied``` 
-
-```FeeTooLowToCompete```

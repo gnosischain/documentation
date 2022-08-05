@@ -1,4 +1,5 @@
 ---
+title: Launching an ERC-20 Token
 ---
 
 # Launching an ERC-20 token on Gnosis
