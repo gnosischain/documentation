@@ -71,7 +71,7 @@ contract OwlToken is ERC20 {
     }
 }
 ```
-Now, you are ready to deploy your token contract. Be sure to properly store your mnemonic/private key! The deploy script will be the same[ as when we deployed the NFT](/developers/building/nft#step-3-implement-the-erc-721-token-contract). Also, [see here for more info on deploying contracts with Hardhat](/developers/smart-contracts/hardhat). 
+Now, you are ready to deploy your token contract. Be sure to properly store your mnemonic/private key! The deploy script will be the same [as when we deployed the NFT](/developers/building/nft#step-3-implement-the-erc-721-token-contract). Also, [see here for more info on deploying contracts with Hardhat](/developers/smart-contracts/hardhat). 
 
 ## Step 3: Add the token to your wallet to view your balance
 To view your new tokens you have just minted, you'll have to add the ERC-20 contract address of the token to the wallet that you deployed from (the `msg.sender` address). If you are using Metamask, scroll to the bottom of the wallet window and you will see an option to "Import Tokens"
