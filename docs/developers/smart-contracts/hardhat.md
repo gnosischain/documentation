@@ -29,6 +29,7 @@ const defaultNetwork = 'gnosis';
       url: 'http://localhost:8545',
     },
     gnosis: {
+      // deprecated url: 'https://rpc.xdaichain.com/',
       url: 'https://rpc.gnosischain.com/',
       gasPrice: 1000000000,
       accounts: {
@@ -59,6 +60,14 @@ const defaultNetwork = 'gnosis';
   },
 };
 ```
+:::note
+On line 17:
+```tsx 
+mnemonic: GetMnemonic()
+```
+```GetMnemonic()``` is a key management function of [Scaffold-ETH](https://docs.scaffoldeth.io/scaffold-eth/), an EVM stack for development.  
+:::
+
 
 3. Change the TNetworkInfo variable to gnosis
 
@@ -74,9 +83,7 @@ npx hardhat compile
 
 ## Deploy your Contract
 
-```
-npx hardhat run --network <your-network> scripts/deploy.js
-```
+```npx hardhat run --network gnosis scripts/deploy.js```
 
 View your deployed contract any of the [explorers](/tools/explorers).
 
@@ -84,9 +91,7 @@ Visit our [Tools page](/tools) for other support.
 
 ## Verify Contract
 
-```
-hardhat --network mainnet sourcify
-```
+``` hardhat --network gnosis sourcify ```
 
 Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
 
