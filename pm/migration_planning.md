@@ -15,14 +15,14 @@ The current version of this can be found at [developers.gnosischain.com](https:/
 * [ ] Top-level links
   * [ ] [Omni Bridge](https://omni.gnosischain.com/) #bridge
   * [ ] [xDai Bridge](https://bridge.gnosischain.com/) #bridge
-  * [ ] [Gnosis Beacon Chain Docs](https://docs.gnosischain.com/) #validators
+  * [x] [Gnosis Beacon Chain Docs](https://docs.gnosischain.com/) #validators
   * [x] [Block Explorer](https://blockscout.com/xdai/mainnet/) #tools
 * [ ] Welcome to Gnosis Chain #about
   * [x] Chain Usage (Dune Analytics Dashboards) #tools
   * [ ] [Why Gnosis/xDai section](https://blockscout.com/xdai/mainnet/) #about
-* [ ] Community Updates #community
-  * [ ] [Youtube Channel](https://www.youtube.com/GnosisChain) #community
-  * [ ] [Substack Newsletter](https://gnosischain.substack.com/) #community
+* [x] Community Updates #community
+  * [x] [Youtube Channel](https://www.youtube.com/GnosisChain) #community
+  * [x] [Substack Newsletter](https://gnosischain.substack.com/) #community
 * [ ] About Gnosis Chain #about
   * [ ] Features #about
   * [ ] Projects & DApps #about
@@ -47,9 +47,9 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [ ] Roadmaps #about
     * [ ] Base Roadmap #about
     * [ ] The Road to Ethereum 2.0 #about
-    * [ ] EIP-1559 #about
+    * [x] EIP-1559 #about
     * [ ] Decentralization Planning #about
-    * [ ] 2020 Roadmap (Completed Items) #about
+    * [x] 2020 Roadmap (Completed Items) #about
 * [ ] For Users #users
   * [ ] Get Started with GC #users
     * [ ] Reference Sheet #?
@@ -91,8 +91,8 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] State Channels Bridge (xDai/Polygon/BSC/Fantom) #bridges
     * [ ] Daily Bridge Limits #bridges
     * [ ] Bridge FAQs #bridges
-  * [ ] Wallets #users
-    * [ ] Tutorials for each wallet #users
+  * [x] Wallets #users
+    * [x] Tutorials for each wallet #users
   * [x] Applications & Metrics #tools
     * [x] Dune Dashboards for Analytics #tools
     * [x] Random tools (revoke, etc) #tools
@@ -105,18 +105,18 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Bridge Governance Board #?
     * [ ] Governance Board Summary of Decisions #?
   * [ ] Incentives #about
-    * [ ] Liquid Staking #about #validators
+    * [x] Liquid Staking #about #validators
     * [ ] Yield Farming #ecosystem
     * [ ] Lending & Money Markets #ecosystem
     * [ ] Yield Aggregators #ecosystem
     * [x] Tracking #ecosystem #tools
-* [ ] For Stakers #validators 
-  * [ ] Staking with GNO on Gnosis Beacon Chain #validators 
-    * [ ] POSDAO Staking and STAKE (archived) #validators #about
+* [x] For Stakers #validators 
+  * [x] Staking with GNO on Gnosis Beacon Chain #validators 
+    * [d] POSDAO Staking and STAKE (archived) #validators #about
 * [ ] For Developers #developers
   * [ ] Developer Resources & Tools #developers 
     * [ ] Smart Contract Deployment #developers 
-    * [ ] Update RPC URL #developers
+    * [x] Update RPC URL #developers
     * [ ] Connect to GC with Ethers.js #developers
     * [x] API & SQL Access with Anyblock Analytics #developers #tools
     * [x] Blocknative Notifications #developers #tools 
@@ -141,11 +141,11 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [ ] Optimistic Rollups on Gnosis Chain #about 
     * [ ] L1 Contract Addresses #about 
     * [ ] L2 Contract Addresses #about 
-  * [ ] Install Gnosis Chain Client - Run a Non-Validator Node #validators 
-    * [ ] Migrate to Nethermind from OpenEthereum #validators 
-    * [ ] Multi-Client Support #validators 
-    * [ ] Nethermind #validators 
-    * [ ] OpenEthereum (formerly Parity) #validators 
+  * [x] Install Gnosis Chain Client - Run a Non-Validator Node #validators 
+    * [x] Migrate to Nethermind from OpenEthereum #validators 
+    * [x] Multi-Client Support #validators 
+    * [x] Nethermind #validators 
+    * [d] OpenEthereum (formerly Parity) #validators 
   * [d] On-Chain Random Numbers #tools #about
     * [d] RandomAura RNG Explainer #tools #about
     * [d] Accessing a Random Seed with a Smart Contract #tools #about 
@@ -170,8 +170,8 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] List of all Hard Forks #about 
   * [ ] POSDAO Whitepaper #about 
 * [ ] Contact & Media Info #about 
-  * [ ] Social Media & Community Channels #about 
-  * [ ] Media Kit #about 
+  * [x] Social Media & Community Channels #about 
+  * [x] Media Kit #about 
 
 # Gnosis Beacon Chain Docs
 
@@ -181,35 +181,35 @@ The current version of the GBC Docs can be found at [docs.gnosischain.com](https
   * [ ] [Beacon Chain Analytics](https://beacon.gnosischain.com/) #validators 
   * [ ] [GBC Landing Page](https://www.gnosischain.com/) #about 
   * [ ] [Liquid Staking](https://app.stakewise.io/) #about #validators 
-* [ ] Gnosis Beacon Chain Introduction  #validators 
-  * [ ] Video by Kirill Fedoseev on Gnosis Beacon Chain at DevConnect #validators 
-* [ ] Clients #validators 
-  * [ ] Lighthouse #validators 
-  * [ ] Prysm #validators 
-  * [ ] Nimbus #validators 
-  * [ ] Gnosis Chain Node (OpenEthereum and Nethermind) #validators 
-    * [ ] Nethermind Node Setup #validators 
-    * [ ] OpenEthereum Node Setup #validators 
-* [ ] Validator Info #validators 
-  * [ ] Validator Requirements & Responsibilities #validators 
-  * [ ] Technical Requirements #validators 
-  * [ ] Get Started: Node Setup #validators 
-    * [ ] Optional: Setup and run a Gnosis Chain (formerly xDai) Node #validators 
-    * [ ] Connect to a GC Node #validators 
-    * [ ] Migrate Clients #validators 
-  * [ ] Validator Deposits #validators 
-    * [ ] Deposit Safety Instructions #validators 
-    * [ ] Manual Deposit Method #validators 
-    * [ ] Convert GNO to mGNO #validators 
-    * [ ] Node Monitoring #validators 
-  * [ ] Validator Withdrawals #validators 
-  * [ ] Voluntary Exit #validators 
-  * [ ] Migrating a Validator #validators 
-* [ ] Liquid Staking #validators 
-* [ ] Incentives #validators
-* [ ] Contracts, Addresses, Parameters #validators 
-  * [ ] Upgradeability #validators 
+* [x] Gnosis Beacon Chain Introduction  #validators 
+  * [x] Video by Kirill Fedoseev on Gnosis Beacon Chain at DevConnect #validators 
+* [x] Clients #validators 
+  * [x] Lighthouse #validators 
+  * [x] Prysm #validators 
+  * [x] Nimbus #validators 
+  * [x] Gnosis Chain Node (OpenEthereum and Nethermind) #validators 
+    * [x] Nethermind Node Setup #validators 
+    * [d] OpenEthereum Node Setup #validators 
+* [x] Validator Info #validators 
+  * [x] Validator Requirements & Responsibilities #validators 
+  * [x] Technical Requirements #validators 
+  * [x] Get Started: Node Setup #validators 
+    * [x] Optional: Setup and run a Gnosis Chain (formerly xDai) Node #validators 
+    * [x] Connect to a GC Node #validators 
+    * [x] Migrate Clients #validators 
+  * [x] Validator Deposits #validators 
+    * [x] Deposit Safety Instructions #validators 
+    * [x] Manual Deposit Method #validators 
+    * [x] Convert GNO to mGNO #validators 
+    * [x] Node Monitoring #validators 
+  * [x] Validator Withdrawals #validators 
+  * [x] Voluntary Exit #validators 
+  * [x] Migrating a Validator #validators 
+* [x] Liquid Staking #validators 
+* [x] Incentives #validators
+* [x] Contracts, Addresses, Parameters #validators 
+  * [x] Upgradeability #validators 
 * [x] Beacon Chain Analytics #validators #tools 
-* [ ] Security Audit #validators 
-* [ ] FAQ #validators 
-* [ ] Media Kit #validators 
+* [x] Security Audit #validators 
+* [x] FAQ #validators 
+* [x] Media Kit #validators 
