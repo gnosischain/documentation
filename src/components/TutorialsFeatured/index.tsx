@@ -16,7 +16,7 @@ const Tutorials = [
         ),
         },
         {
-            name: '⚡ StackBlitz 🆕',
+            name: 'Contract verification in Gnosisscan',
             image: require('@site/static/img/developers/verify/gnosisscan.png'),
             url: '/developers/verify/gnosisscan',
             description: (
