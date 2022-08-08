@@ -94,8 +94,7 @@ Visit our [Tools page](/tools) for other support.
 
 ``` hardhat --network gnosis sourcify ```
 
-<!-- This is causing a weird error on `yarn build` and thus has been suppressed -->
-<!-- Visit our [Contract Verfication Page](../verify/README.md) for more documentation on verification tools. -->
+Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
 
 ## Additional Hardhat Documentation
 
