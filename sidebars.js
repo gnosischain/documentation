@@ -229,7 +229,7 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'GnosisScan',
+          label: 'Gnosisscan',
           href: 'https://gnosisscan.io/',
         },
         {
@@ -470,7 +470,7 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'GnosisScan',
+          label: 'Gnosisscan',
           href: 'https://gnosisscan.io/charts/',
         },
         {

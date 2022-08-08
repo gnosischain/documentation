@@ -9,5 +9,5 @@ Gnosis supports the following explorers:
 
 - [AnyBlock](https://explorer.anyblock.tools/ethereum/poa/xdai/)
 - [Blockscout](https://blockscout.com/xdai/mainnet/)
-- [GnosisScan](https://gnosisscan.io/)
+- [Gnosisscan](https://gnosisscan.io/)
 - [Beacon Chain](https://beacon.gnosischain.com/)
