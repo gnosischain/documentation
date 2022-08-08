@@ -1,6 +1,6 @@
 ---
 name: Suggest a new content
-about: Suggest a content to our developers portal
+about: Suggest a content to our Documentation
 title: "content: ..."
 labels: documentation
 assignees: ''
