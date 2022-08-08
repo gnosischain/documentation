@@ -104,7 +104,7 @@ const sidebars = {
       items: [
         "developers/environments/mainnet",
         "developers/environments/testnet",
-        "developers/environments/local-enviornment",
+        "developers/environments/local-environment",
       ],
     },*/
     {
