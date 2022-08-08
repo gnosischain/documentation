@@ -40,13 +40,13 @@ module.exports = {
 
 ## Compile your Gnosis contract
 
-```
+```bash
 truffle compile [--list <filter>] [--all] [--network gnosis] [--quiet]
 ```
 
 ## Deploy your Contract
 
-```
+```bash
 truffle migrate --network gnosis
 ```
 

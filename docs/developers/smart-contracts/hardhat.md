@@ -78,7 +78,7 @@ export const targetNetworkInfo: TNetworkInfo = NETWORKS.gnosis;
 
 ## Compile your Gnosis contract
 
-```
+```bash
 npx hardhat compile
 ```
 

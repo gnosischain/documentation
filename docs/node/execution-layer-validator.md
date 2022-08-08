@@ -52,7 +52,7 @@ When you start the Launcher choose the following options to sync a node:
 #### 1) Set up directories and docker-compose.yml file
 
 *Replace `<user>` with your username on your device*
-```
+```bash
     cd 
     mkdir /home/<user>/nethermind
     mkdir /home/<user>/nethermind/nethermind_db
@@ -60,11 +60,11 @@ When you start the Launcher choose the following options to sync a node:
     mkdir /home/<user>/nethermind/logs
 ```
 Create docker-compose.yml:
-```
+```bash
 nano /home/<user>/nethermind/docker-compose.yml
 ```
 Add the following text:
-```
+```bash
 version: "3.7"
 services:
 
@@ -104,12 +104,12 @@ Be mindful of spacing, yaml is very particular and the error messages for malfor
 
 #### 2) Start Nethermind
 
-```
+```bash
 cd nethermind
 docker-compose up
 ```
 To check logs:
-```
+```bash
 sudo docker ps -a
 sudo docker-compose logs -f <container name> 
 ```
@@ -128,7 +128,7 @@ Once Nethermind has fully synced, you can point your validator nodes to it to us
 ### Restart Procedure
 
  **Stop all running containers and remove them**
- ```
+ ```bash
  docker stop <container name> && sudo docker remove <container name>
  sudo docker ps -a
  ```
@@ -143,7 +143,6 @@ Restart the containers using `docker-compose up` as you did initially when setti
 
 ### Sharing machines for GC and GBC clients
 
-As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse, Teku, Nimbus or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
+As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse, Teku, Nimbus or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml](https://docs.docker.com/compose/extends/) file to enable RPC access by container name.
 
 If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.gg/VQb3WzsywU)
-

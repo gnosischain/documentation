@@ -44,7 +44,7 @@ const web3 = new Web3(Web3.givenProvider);
 [Official Docs here](https://web3js.readthedocs.io/en/v1.7.5/web3-eth-contract.html).
 
 To connect to and interact with a deployed contract, you can do the following:
-```
+```javascript
 var contract = new web3.eth.Contract(jsonInterface[, address][, options])
 ```
 More on the parameters [here](https://web3js.readthedocs.io/en/v1.7.5/web3-eth-contract.html#new-contract).

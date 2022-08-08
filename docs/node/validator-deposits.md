@@ -82,12 +82,12 @@ A modification to the Gnosis Chain deposit contract allows you to deposit in bat
 
 1.  Pull the docker image with the deposit script:
 
-    ```
+    ```bash
     docker pull ghcr.io/gnosischain/deposit-script:latest
     ```
 2.  Prepare `.env` file with the following lines:
 
-    ```
+    ```bash
     STAKING_ACCOUNT_PRIVATE_KEY=0000000000000000000000000000000000000000000000000000000000000000
 
     RPC_URL=https://rpc.gnosischain.com
@@ -115,7 +115,7 @@ A modification to the Gnosis Chain deposit contract allows you to deposit in bat
 3. Copy the `deposit_data.json` generated during [Step 2 of Get Started ](/node/get-started/#step-2-choose-your-beacon-chain-client--import-validator-keys)to the current directory.
 4.  Run the deposit script (`/path/to/` should be a valid path to the .env file you have created):
 
-    ```
+    ```bash
     docker run --rm --env-file /path/to/.env \
       -v $(pwd)/deposit_data-xxxxxxxxxx.json:/tmp/deposit_data.json \
       ghcr.io/gnosischain/deposit-script:latest /tmp/deposit_data.json

@@ -42,7 +42,7 @@ There are several ways to create a new file. Here we:
 
 ### Example Code
 
-```
+```solidity
 /** This example code is designed to quickly deploy an example contract using Remix.
  *  If you have never used Remix, try our example walkthrough: https://docs.chain.link/docs/example-walkthrough
  *  You will need xDai to deploy on Gnosis.
@@ -87,7 +87,7 @@ The code below uses the Chainlink standard Price Consumer contract along with se
 
 * We initialize the ETH/USD xDai Price Feed in the constructor
 
-```
+```solidity
 priceFeed = AggregatorV3Interface(0xa767f745331D267c7751297D982b050c93985627);
 ```
 
