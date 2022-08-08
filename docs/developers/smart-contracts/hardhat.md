@@ -14,6 +14,7 @@ Follow the [Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getti
 ```tsx title="/packages/hardhat-ts/hardhat.config.ts"
 const defaultNetwork = 'gnosis';
 ```
+
 2. Update the config with Gnosis credentials
 
 ```tsx showLineNumbers  title="/packages/hardhat-ts/hardhat.config.ts"
@@ -93,10 +94,9 @@ Visit our [Tools page](/tools) for other support.
 
 ``` hardhat --network gnosis sourcify ```
 
-Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
+<!-- This is causing a weird error on `yarn build` and thus has been suppressed -->
+<!-- Visit our [Contract Verfication Page](../verify/README.md) for more documentation on verification tools. -->
 
 ## Additional Hardhat Documentation
-
-- For more contract verification documentation, refer to this [page.](/developers/verify/README.md)
 
 - Additonal Hardhat deployment documenation is located [here.](https://hardhat.org/hardhat-runner/docs/guides/deploying)

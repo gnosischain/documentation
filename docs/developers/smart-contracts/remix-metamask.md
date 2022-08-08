@@ -39,4 +39,4 @@ Follow the directions in the diagram below:
 
 ![Diagram3](deploying-remix.drawio.png)
 
-Visit our [Contract Verfication Page](../verifying-contracts/) for more documentation on verification tools.
+Visit our [Contract Verfication Page](../verify/README.md) for more documentation on verification tools.

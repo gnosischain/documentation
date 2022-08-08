@@ -1,4 +1,5 @@
 ---
+title: Contract Verification
 ---
 
 # Contract Verification
