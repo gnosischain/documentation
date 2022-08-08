@@ -43,6 +43,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-YVPQSCP6S7', //staging trackingID
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -162,7 +166,7 @@ const config = {
                 var params = code.split(',');
                 var videoId = params[0];
                 var query = params.length > 1 ? params[1] : "";
-                return '<iframe width="785" height="440" type="text/html" frameborder="0" src="https://www.youtube.com/embed/' + videoId + '/?' + query + '"></iframe>'
+                return '<iframe width="785" height="440" type="text/html" frameborder="0" src="https://www.youtube.com/embed/' + videoId + '/?' + query + '"></iframe><br>'
               }
             },
             {
