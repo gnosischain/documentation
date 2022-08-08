@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e">
+    <diagram id="bJ6w8_KXXNXvjhIi6CUn" name="Page-1">
+        <mxGraphModel dx="2810" dy="1223" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontColor=none;noLabel=1;labelBackgroundColor=none;fillColor=#c6c5d4;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="140" width="384" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeWidth=2;strokeColor=#0A0A0A;" vertex="1" parent="1">
+                    <mxGeometry x="115" y="260" width="320" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Ethereum" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="257" y="140" width="135" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="7" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="184" width="150" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Total Locked - 1m Dai in Compound" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="209.5" y="194.25" width="125" height="35.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="130" y="275" width="92" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" vertex="1" parent="10">
+                    <mxGeometry x="2" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Total Dai Locked (&amp;gt;1m)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="10">
+                    <mxGeometry y="12.25" width="92" height="35.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="270" y="270" width="110" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;" vertex="1" parent="16">
+                    <mxGeometry x="2.391304347826087" width="107.6086956521739" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="1M Dai Reserve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="16">
+                    <mxGeometry y="14.291666666666668" width="110" height="41.41666666666667" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="To Gnosis" style="strokeWidth=2;outlineConnect=0;dashed=0;align=center;html=1;fontSize=12;shape=mxgraph.eip.messaging_bridge;verticalLabelPosition=middle;verticalAlign=middle;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;labelPosition=center;" vertex="1" parent="1">
+                    <mxGeometry x="-15" y="290" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="12" target="18">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="650" as="sourcePoint"/>
+                        <mxPoint x="450" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=classic;html=1;fontSize=12;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="12" target="7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="650" as="sourcePoint"/>
+                        <mxPoint x="450" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

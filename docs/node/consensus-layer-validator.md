@@ -205,7 +205,8 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 * [A Gnosis compatible wallet](/tools/wallets/) connected to the Gnosis Chain with 1 GNO per validator and a small amount of xDai for transaction costs.
 * Recent [Docker](https://www.docker.com) version (Docker v20.10+)
 * Docker compose 2.2.3 (_note default version installed with apt-get may give an error_). To fix:
-```
+
+```bash
 sudo apt-get remove docker-compose 
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose 
 sudo chmod +x /usr/local/bin/docker-compose 
@@ -227,7 +228,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
 
 1.  Pull the docker image for the data generator.
 
-    ```
+    ```bash
     cd
     docker pull ghcr.io/gnosischain/validator-data-generator:latest
     ```
@@ -239,7 +240,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
    4. `/path/to/` should be replaced with a valid and existing path where you want to create the validator\_keys folder. Or, to create the validator\_keys folder in your current working directory, use `$(PWD)/validator_keys:/app/validator_keys`
    5. More details about command line arguments can be found[ here.](https://github.com/gnosischain/validator-data-generator/)
 
-```
+```bash
 docker run -it --rm -v /path/to/validator_keys:/app/validator_keys \
   ghcr.io/gnosischain/validator-data-generator:latest new-mnemonic \
   --num_validators=NUM --mnemonic_language=english \
@@ -248,7 +249,7 @@ docker run -it --rm -v /path/to/validator_keys:/app/validator_keys \
 
 3\. If you have run the process before, you can prompt the mnemonic during execution:
 
-```
+```bash
 docker run -it --rm -v /path/to/validator_keys:/app/validator_keys \
   ghcr.io/gnosischain/validator-data-generator:latest existing-mnemonic \
   --validator_start_index=START_NUM --num_validators=NUM \
@@ -287,9 +288,10 @@ The instructions below frequently reference external dos that make frequent ment
 
 The Prysm client has been modified slightly. The underlying go-ethereum library used for execution layer block hash calculation is adapted to account for a different block structure. No other changes are made to the client, however, **the original Prysm binary will not work as expected for the Gnosis Chain - use the binary below**.
 
-```
+```bash
 git clone https://github.com/gnosischain/prysm-launch.git gbc
 ```
+
 [View the Prysm docs here for more information](https://docs.prylabs.network/docs/getting-started). 
 
 ### Lighthouse
@@ -300,14 +302,16 @@ Lighthouse is a secure and fast consensus layer client built byy sigma prime. Li
 :::note
 If you have errors, ensure that your decrypt key is correct in the earlier steps (it is case sensitive). The previous command imports the keys from `/home/<user>/gbc/keys/validator_keys` to `/home/<user>/gbc/validators` .  After importing, it's a good idea to archive the old keystores from `/home/<user>/gbc/keys/validator_keys` somewhere safe. 
 :::
+
 ### Nimbus
 
 Official binaries or docker images for Ethereum Mainnet **do not** currently support Gnosis Beacon Chain, however, the Nimbus client can be specifically built from source to support the Gnosis Beacon Chain when built with the correct options. Use the following command to clone the correct repository:
-```
+
+```bash
 git clone https://github.com/gnosischain/nimbus-launch.git gbc
 ```
-[For more information, view the Nimbus docs here](https://nimbus.guide/). 
 
+[For more information, view the Nimbus docs here](https://nimbus.guide/). 
 
 ### Teku
 
@@ -318,7 +322,7 @@ Teku client natively supports Gnosis chain and requires Java 11+. [See the Teku 
 ### Lighthouse & Prysm
 On the same machine as _Step 2_ run the following commands:
 
-```
+```bash
 docker-compose up -d node
 docker-compose up -d validator
 ```
@@ -326,7 +330,7 @@ docker-compose up -d validator
 ### Nimbus 
 The validator client and beacon node run inside a single container, so you only need to start one container (on the same machine as _step 2_):
 
-```
+```bash
 docker-compose up -d node
 ```
 

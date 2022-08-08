@@ -19,7 +19,7 @@ title: "API & SQL Access"
 
 For example, this curl query will show us data about the last 2 blocks.
 
-```
+```bash
 curl -X POST
 https://api.eth.events/ethereum/xdai/mainnet/es/block/search/
 -H 'Authorization: Bearer $mytoken'
@@ -74,7 +74,7 @@ https://api.eth.events/ethereum/xdai/mainnet/es/block/search/
 
 **Example Query to find transactions for the EternalStorageProxy token contract**
 
-```
+```sql
 SELECT * FROM tx
 WHERE tx.to = '0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6'
 LIMIT 50

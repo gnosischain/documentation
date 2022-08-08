@@ -13,21 +13,21 @@ This guide assumes that you're running this playbook from the same machine you u
 
 1\) If you already have a cloned version of the poa-devops repository ([https://github.com/poanetwork/poa-devops.git](https://github.com/poanetwork/poa-devops.git)), pull the latest changes:
 
-```
+```bash
 cd poa-devops
 git pull origin master
 ```
 
 otherwise, clone this repository:
 
-```
+```bash
 git clone https://github.com/poanetwork/poa-devops.git
 cd poa-devops
 ```
 
 1\) create `group_vars/all` file:
 
-```
+```bash
 cp group_vars/hf-spec-change.example group_vars/all
 ```
 
@@ -39,13 +39,13 @@ and set the following variables:
 
 2\) Create/edit `hosts` file:
 
-```
+```bash
 echo "" > hosts
 ```
 
 and put your node's ip address (assuming it's 192.0.2.1) as follows:
 
-```
+```bash
 [hf-spec-change]
 192.0.2.1
 ```
@@ -63,6 +63,7 @@ For those who host multiple nodes:
     192.0.2.3
     192.0.2.4
     ```
+
 *   if you host nodes of different types you can set `poa_role` individually against the corresponding ip address like so:
 
     ```
@@ -77,7 +78,7 @@ For those who host multiple nodes:
 
 3\) Run the playbook:
 
-```
+```bash
 ansible-playbook -i hosts site.yml
 ```
 
@@ -89,27 +90,27 @@ ansible-playbook -i hosts site.yml
 
 5\) connect to the node
 
-```
+```bash
 ssh root@192.0.2.1
 ```
 
 switch to the home folder of corresponding role:
 
-```
+```bash
 # substitute validator with your node's role (bootnode, moc, ...)
 cd /home/validator
 ```
 
 and check the update time of `spec.json` (should be about the time you started the playbook)
 
-```
+```bash
 ls -lh
 # a long list should appear here, look for spec.json in the rightmost column and check the date and time on the same row
 ```
 
 also check that backup was created:
 
-```
+```bash
 ls -lh spec-hfs/
 # look for a file named similar to spec-hf-20180108-174649.json Numbers represent date and time in UTC when the playbook was started
 ```

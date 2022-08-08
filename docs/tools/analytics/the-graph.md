@@ -23,17 +23,16 @@ See [The Graph Documentation](https://thegraph.com/docs/en/) for more details, l
 
 3) Install Graph CLI on your machine (using either npm or yarn)
 
-```
+```bash
 $ npm install -g @graphprotocol/graph-cli
 $ yarn global add @graphprotocol/graph-cli
-
 ```
 
 4) The following command creates a subgraph that indexes all events of an existing contract. It attempts to fetch the contract ABI from BlockScout and falls back to requesting a local file path. If any of the optional arguments are missing, it takes you through an interactive form.
 
 _*Note: The interactive form does not currently include Gnosis Chain in the dropdown of networks, so using the following flags is useful for a Gnosis deployment._
 
-```
+```bash
 graph init
   --from-contract <CONTRACT_ADDRESS>
   [--network xdai ]
@@ -55,7 +54,7 @@ More details are here: [https://thegraph.com/docs/en/developer/create-subgraph-h
 
 5)  Authenticate with the hosted service
 
-```
+```bash
 graph auth https://api.thegraph.com/deploy/ <your-access-token>
 ```
 
@@ -63,7 +62,7 @@ graph auth https://api.thegraph.com/deploy/ <your-access-token>
 
 7) When you are ready, deploy your subgraph. You can always test and redeploy as needed.
 
-```
+```bash
 yarn deploy
 ```
 

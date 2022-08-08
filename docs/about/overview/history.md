@@ -2,7 +2,8 @@
 title: History
 ---
 
-- [ ] History
-  - [ ] POA Network
-  - [ ] EthDenver 2019 and messages from everyone
-  - [ ] Merger with GnosisDAO
+TODO
+
+References: 
+
+- [xDai Docs: History](https://developers.gnosischain.com/about-gc/faqs/xdai-chain-basics#history)
