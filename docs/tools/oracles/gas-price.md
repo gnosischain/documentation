@@ -12,7 +12,7 @@ The BlockScout gas price api endpoint shows a recommended gas price for average,
 
 ### Example response
 
-```
+```json
 {"average":3.08,"fast":30.0,"slow":1.0}
 ```
 

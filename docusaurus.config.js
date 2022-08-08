@@ -151,6 +151,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['solidity'], //all languages: https://prismjs.com/#supported-languages
       },
     }),
     
