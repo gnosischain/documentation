@@ -9,7 +9,7 @@ Gnosis' native bridges allow for sending tokens and data, and are run by a group
 
 There is a growing ecosystem of [3rd-party Bridges](../user-guide/bridges.md) that build on top of native bridges, that provide users with fast liquidity and user experience.
 
-Gnosis' native bridges are first-class citizens the chain's architecture, as the chain's native gas stablecoin ([xDai](../about/tokens/xdai-token.md)) is minted and burned through the integration of the [native xDai bridge](./tokenbridge/xdai-bridge.md) with the consensus algorithm.
+Gnosis' native bridges are first-class citizens in the chain's architecture due to the [native xDai bridge's](./tokenbridge/xdai-bridge.md) integral role in minting and burning the native [xDai token](../about/tokens/xdai-token.md) used for gas. 
 ## Conceptual Architecture
 
 Gnosis has three main types of bridges: 
@@ -36,17 +36,13 @@ See the [Arbitrary Message Passing Bridge](./tokenbridge/amb-bridge.md) or AMB B
 
 See the [Omnibridge](./tokenbridge/omnibridge.md), which is built on top of the [Arbitrary Message Passing Bridge](./tokenbridge/amb-bridge.md).
 
-## Canonical Tokens
+## Canonical Bridged Tokens
 
-- [Native Bridged Tokens from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
-- [Native Bridged Tokens from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+Tokens that are bridged using [Omnibridge](./tokenbridge/omnibridge.md) are regarded as  canonical representations of the origin token on Gnosis Chain. 
+
+- [Canonical Bridged Tokens from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
+- [Canonical Bridged Tokens from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
 
 ## Roadmap
 
 Gnosis has a [long-term roadmap](./roadmap.md) to move towards trustless bridges, and is actively funding research and development in this area.
-
-
-
-
-
-

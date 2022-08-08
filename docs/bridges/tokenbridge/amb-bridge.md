@@ -6,7 +6,7 @@ title: Arbitrary Message Bridge
 
 - [ ] [AMB Monitoring Application](https://docs.tokenbridge.net/about-tokenbridge/components/amb-live-monitoring-application)
 
-## Overview
+
 
 ![](/img/bridges/diagrams/amb-bridge.svg)
 
@@ -16,7 +16,30 @@ The AMB is a key bridge primitive that is used inside higher-order bridges like 
 
 The AMB currently supports Ethereum and Binance Smart Chain, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
 
-### Parameters
+## Key Information
+
+### Overview
+
+### Key Contracts
+
+#### Ethereum
+
+| Contract                      | Ethereum Address |
+| ----------------------------- | ---------------- |
+| Proxy Contract                |                  |
+| Validator Management Contract |                  |
+
+#### Gnosis
+
+| Contract                      | Gnosis Address |
+| ----------------------------- | -------------- |
+| Proxy Contract                |                |
+| Block Reward Contract         |                |
+| Validator Management Contract |                |
+
+### Fees & Daily Limits
+
+As the Arbitrary Message Bridge is a message passing bridge, there are no fees or daily limits associated with it.
 
 ### Bridge Validators
 
@@ -26,17 +49,27 @@ You can see the [current list of AMB & Omnibridge Validators](https://developers
 
 The [long-term roadmap](../roadmap.md) is to move towards [trustless bridges](../roadmap.md#trustless-bridges) using [zero-knowledge proofs from light clients](../roadmap.md#zero-knowledge-light-clients) or other trust-minimized techniques.
 
+### Bridge Governance
+
+* See [Bridge Governance](../governance.md)
+
+References: 
+- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
+- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+
+### Bridge Revenue
+
 ### Analytics
 
-- [ ] Analytics for AMB? (how many messages passed?)
-
+References: 
 ## How it works
+
+## Managing Bridge Contracts
+
+## Managing Bridge Validators
 ## Resources
 
 - [Arbitrary Message Bridge Documentation](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge)
 - [Diagrams illustrating how AMB Bridge works](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals)
 
-## Docs Wishlist
 
-- [ ] Zodiac module for DAOs - L2 to L1 sending of data from Gnosis Chain to Ethereum
-- [ ] Synthesize AMB docs from Tokenbridge
