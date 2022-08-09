@@ -214,7 +214,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Explorers',
-      link: {type: 'doc', id: 'tools/explorers'},
+      link: {type: 'doc', id: 'tools/explorers/README'},
       collapsed: true,
       items: [
         {
@@ -222,11 +222,7 @@ const sidebars = {
           label: 'AnyBlock',
           href: 'https://explorer.anyblock.tools/ethereum/poa/xdai/',
         },
-        {
-          type: 'link',
-          label: 'Blockscout',
-          href: 'https://blockscout.com/xdai/mainnet/',
-        },
+        'tools/explorers/blockscout',
         {
           type: 'link',
           label: 'Gnosisscan',
