@@ -554,6 +554,7 @@ const sidebars = {
           label: 'Revoke',
           href: 'https://revoke.cash/',
         },
+        'tools/token-distribution',
       ],
     },
   ],
