@@ -3,7 +3,7 @@
 
 # Using Remix and Metamask
 
-#### Remix is an integrated development enviornment used for smart contract compiling, deploying, testing and debugging.
+#### Remix is an integrated development environment used for smart contract compiling, deploying, testing and debugging.
 
 View the official [Remix documentation](https://hardhat.org/hardhat-runner/docs/getting-started#installation) for general installation and overview.
 

@@ -3,7 +3,7 @@
 
 # Using Truffle
 
-#### Truffle is a development enviornment used for smart contract compiling, deploying, testing and debugging.
+#### Truffle is a development environment used for smart contract compiling, deploying, testing and debugging.
 
 Follow the [Truffle documentation](https://trufflesuite.com/docs/truffle/) for general installation and overview. 
 

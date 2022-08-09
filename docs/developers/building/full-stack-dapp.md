@@ -28,7 +28,7 @@ Throughout the tutorial, feel free to refrence other pages in our documentation 
 
 ### Tech Stack:
 * [Waffle](https://ethereum-waffle.readthedocs.io/en/latest/), a library for writing and testing smart contracts.
-* [Hardhat](https://hardhat.org/), a development enviornment used for smart contract compiling, deploying, testing and debugging.
+* [Hardhat](https://hardhat.org/), a development environment used for smart contract compiling, deploying, testing and debugging.
 * [Ethers.js](https://docs.ethers.io/v5/), a library for interacting with Ethereum Virtual Machine (EVM) chains.
 
 First lets initialize your project:
