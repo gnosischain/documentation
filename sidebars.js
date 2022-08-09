@@ -261,6 +261,11 @@ const sidebars = {
           label: 'Pokt',
           href: 'https://docs.pokt.network/home/use/public-rpc/gnosis-chain',
         },
+        {
+          type: 'link',
+          label: 'QuickNode',
+          href: 'https://www.quicknode.com/docs/gnosis',
+        },
       ],
     },
     {
