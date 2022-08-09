@@ -446,6 +446,11 @@ const sidebars = {
         'tools/analytics/beacon-chain',
         {
           type: 'link',
+          label: 'Gnosis Netstats',
+          href: 'http://dai-netstat.poa.network',
+        },
+        {
+          type: 'link',
           label: 'Blocknative',
           href: 'https://docs.blocknative.com/',
         },
