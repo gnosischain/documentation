@@ -115,7 +115,7 @@ const sidebars = {
       items: [
         "developers/smart-contracts/truffle",
         "developers/smart-contracts/hardhat",
-        "developers/smart-contracts/remix-metamask",
+        "developers/smart-contracts/remix",
         "developers/smart-contracts/foundry",
       ],
     },
