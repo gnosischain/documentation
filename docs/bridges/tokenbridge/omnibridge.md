@@ -32,8 +32,8 @@ References:
 | Trust Model           | [4-of-6 Validator Multisig](#bridge-validators) |
 | Governance            | [7-of-16 Multisig](#bridge-governance)          |
 | Governance Parameters | Validator Set, Daily Limits, Fees               |
-| Bug Bounty            | TODO                                            |
-| Bug Reporting         | TODO                                            |
+| Bug Bounty            | TODO $2m?                                           |
+| Bug Reporting         | TODO see above                                  |
 
 References: 
 
