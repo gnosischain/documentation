@@ -79,8 +79,8 @@
 
 **Docusaurus Functionality**
 - [ ] Search Functionality (Algolia or equivalent)
-- [ ] Broken Links checker (prevent merging if link is 404 - critical for migration)
-- [ ] SEO support (ensure crawlability)
+- [x] Broken Links checker (prevent merging if link is 404 - critical for migration)
+- [x] SEO support (ensure crawlability)
 - [ ] Translation and i18n support (can KIV in first phase)
 
 **Leadgen**
@@ -88,11 +88,11 @@
 - [ ] Telegram Bot Integration?
 
 **Analytics**
-- [ ] Google Analytics (or open source, non-privacy infringing alternative?)
+- [x] Google Analytics (or open source, non-privacy infringing alternative?)
 
 **SEO**
-- [ ] SEO-optimized for crawlability
-- [ ] Later on, set up 302 redirects from legacy xdaichain.com URLs to new pages on docs.gnosischain.com
+- [x] SEO-optimized for crawlability
+- [x] Later on, set up 302 redirects from legacy xdaichain.com URLs to new pages on docs.gnosischain.com
 
 ## Info Architecture
 
