@@ -4,7 +4,7 @@ title: Governance
 
 
 References: 
-- [xDai Docs: What is the Bridge Governance Board?](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#what-is-the-bridge-governance-board)
+- [xDai Docs: What is the Bridge Governance Board?](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#what-is-the-bridge-governance-board)
 
 ## Key Information
 
@@ -41,40 +41,40 @@ There are currently 16 Bridge Governors, of which 7-of-16 are required to pass a
 | Protofire       |         |
 
 References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
+- [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
 ## Governance Process
 
 References: 
-- [xDai Docs: Community Governance](https://developers.gnosischain.com/for-users/governance/community-governance)
+- [xDai Docs: Community Governance](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/community-governance)
 
 ### Phase 1: Ideation
 
 References: 
-- [xDai Docs: Community Governance](https://developers.gnosischain.com/for-users/governance/community-governance)
+- [xDai Docs: Community Governance](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/community-governance)
 
 ### Phase 2: Specification
 
 References: 
-- [xDai Docs: Community Governance](https://developers.gnosischain.com/for-users/governance/community-governance)
+- [xDai Docs: Community Governance](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/community-governance)
 
 ### Phase 3: Multisig Voting & Execution
 
 References: 
-- [xDai Docs: Community Governance](https://developers.gnosischain.com/for-users/governance/community-governance)
+- [xDai Docs: Community Governance](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/community-governance)
 
 ## Governance Parameters
 
 ### Bridge Validators
 
 References:
-- [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators)
+- [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators)
 
 ### Bridge Limits
 
 References: 
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+- [xDai Docs: Bridge Daily Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 
 ## Governance Decisions
 
 References: 
-- [xDai Docs: Governance Decisions](https://developers.gnosischain.com/for-users/governance/governance-board-summary-of-decisions)
+- [xDai Docs: Governance Decisions](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/governance-board-summary-of-decisions)

@@ -8,4 +8,4 @@ title: xDai Token
 
 References: 
 
-- [xDai Docs: xDai Native Coin / Token FAQ](https://developers.gnosischain.com/about-gc/faqs/xdai-native-coin-token)
+- [xDai Docs: xDai Native Coin / Token FAQ](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/xdai-native-coin-token)

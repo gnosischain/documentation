@@ -11,7 +11,7 @@ title: Hop Bridge
 - https://hop.exchange/
 
 References: 
-- [xDai Docs: Hop Stablecoin Bridge](https://developers.gnosischain.com/for-users/bridges/hop-stablecoin-bridge-polygon-eth-xdai)
+- [xDai Docs: Hop Stablecoin Bridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/hop-stablecoin-bridge-polygon-eth-xdai)
 
 TODO: 
 - [ ] Bridge Addresses

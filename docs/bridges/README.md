@@ -40,7 +40,7 @@ Docs to Merge
 - [ ] What is the address 0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd do?
 	- [ ] Owner of the Validator Management proxy on Gnosis Chain
 - Overall
-  - - [ ] Synthesize [xDai Bridge Docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
+  - - [ ] Synthesize [xDai Bridge Docs](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge)
   - [ ] Synthesize [Tokenbridge xDai Docs](https://docs.tokenbridge.net/xdai-bridge/about)
   - [ ] Does xDai Bridge have an ALM? No
 
