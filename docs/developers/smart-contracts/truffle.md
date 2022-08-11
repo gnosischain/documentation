@@ -1,7 +1,10 @@
 --- 
+title: Using Truffle
+description: Using Truffle with Gnosis Chain
+keywords: [Truffle, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide]
 ---
 
-# Using Truffle
+# Using Truffle with Gnosis Chain
 
 #### Truffle is a development environment used for smart contract compiling, deploying, testing and debugging.
 
@@ -11,10 +14,7 @@ Follow the [Truffle documentation](https://trufflesuite.com/docs/truffle/) for g
 
 - Update the config with Gnosis credentials
 
-```tsx
-require('dotenv').config();
-const HDWalletProvider = require('truffle-hdwallet-provider');
-
+```js showLineNumbers title=truffle-config.js
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // for more about customizing your Truffle configuration!
@@ -29,16 +29,19 @@ module.exports = {
           gas: 500000,
           gasPrice: 1000000000
     },
-    development: {
-          host: "127.0.0.1",
-          port: 8545,
-          network_id: "*" // Match any network id
-    }
   }
 };
 ```
 
 ## Compile your Gnosis contract
+
+### Default Compile
+
+```bash
+truffle compile --network gnosis
+```
+
+### Compile with Options
 
 ```bash
 truffle compile [--list <filter>] [--all] [--network gnosis] [--quiet]
@@ -61,7 +64,5 @@ Verify with Truffle by using [Truffle Plugin Verify](https://trufflesuite.com/do
 Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
 
 ## Additional Truffle Documentation
-
-- For more contract verification documentation, refer to this [page](/developers/verify/).
 
 - Additonal Truffle command documenation is located [here](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy).
