@@ -4,7 +4,7 @@ title: Using Truffle
 
 # Truffle Verify
 
-This [truffle plugin](https://www.npmjs.com/package/truffle-plugin-verify) allows you to automatically verify your smart contracts' source code on GnosisScan (by Etherscan), straight from the Truffle CLI.
+This [truffle plugin](https://www.npmjs.com/package/truffle-plugin-verify) allows you to automatically verify your smart contracts' source code on Gnosisscan (by Etherscan), straight from the Truffle CLI.
 
 ## Installation
 

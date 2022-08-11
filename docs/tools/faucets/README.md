@@ -20,3 +20,4 @@ A faucet is a service that provides small amounts of xDai tokens to users who ar
 ## Token Faucet
 
 - [ERC20 Token Faucet](/tools/faucets/tokens)
+- [Weenus ERC20](https://github.com/bokkypoobah/WeenusTokenFaucet)
