@@ -61,7 +61,7 @@ Visit our [Tools page](/tools) for other support.
 
 Verify with Truffle by using [Truffle Plugin Verify](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy)
 
-Visit our [Contract Verfication Page](../verify/) for more documentation on verification tools.
+Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
 
 ## Additional Truffle Documentation
 
