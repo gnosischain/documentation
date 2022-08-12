@@ -19,27 +19,22 @@ The AMB currently supports Ethereum and Binance Smart Chain, and is part of the 
 ## Key Information
 
 ### Overview
+|                       | Detail                                          |
+| --------------------- | ----------------------------------------------- |
+| Frontend URL          | https://bridge.gnosischain.com                  |
+| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators) |
+| Governance            | [7-of-16 Multisig](#bridge-governance)          |
+| Governance Parameters |                |
+| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/)  |
+| Bug Reporting         | On the Immunefi site [here](https://immunefi.com/bounty/gnosischain/)   |
 
-### Key Contracts
 
-#### Ethereum
 
-| Contract                      | Ethereum Address |
-| ----------------------------- | ---------------- |
-| Proxy Contract                |                  |
-| Validator Management Contract |                  |
-
-#### Gnosis
-
-| Contract                      | Gnosis Address |
-| ----------------------------- | -------------- |
-| Proxy Contract                |                |
-| Block Reward Contract         |                |
-| Validator Management Contract |                |
 
 ### Fees & Daily Limits
 
 As the Arbitrary Message Bridge is a message passing bridge, there are no fees or daily limits associated with it.
+
 
 ### Bridge Validators
 
@@ -57,14 +52,71 @@ References:
 - [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
 - [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 
-### Bridge Revenue
+ 
 
-### Analytics
-
-References: 
 ## How it works
+### Terminology
+* __Home (Native) Network__: Of the two networks being bridged between, the home or native network is the one with fast and inexpensive operations. All bridge operations to collect validator confirmations are performed on this side of the bridge.
+* __Foreign Network__: Can be any EVM chain, generally it refers to Ethereum.
+
+### Call a cross-chain method via AMB:
+
+```solidity
+function requireToPassMessage (address _contract, bytes _data, uint256 _gas) external;
+```
+| param   | details                   |
+| ------- | --------------------------|
+ | \_contract       |  address of contract on other network |
+ |  \_data   |    encoded bytes of the method selector and the params that will be called in the contract on the other side     |
+ | \_gas | gas to be provided in execution of the method call on the other side |
+ 
+
+### Security Considerations for Receiving a Call
+| Concern | Remediation |
+| ----- | ----- |
+| Authorization | Check the address of invoking contract using `messageSender()` |
+| Authorization | Check that `msg.sender` is the address of the bridge contract |
+| Replay Attack | `transactionHash()` allows for checking of a hash of the transaction that invoked the `requireToPassMessage()` call. The invoking contract (in some cases, the mediator contract) is responsible for providing a *unique sequence* (can be a nonce) as part of the `_data` param in the `requireToPassMessage()` function call |
+
+
+### Mediator Contracts
+ 
+ A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20. First, a user has to call the NFT Contract's approve() function, and then calls the mediator contract's transferToken() function. The mediator then calls transferFrom() on the NFT contract to transfer approved token(s), and in NFT example would then call getMetaData(). After, it can then proceed with the flow from the foreign bridge contract. 
+ ![](/img/bridges/diagrams/amb-bridge-contract-flow-mediator.svg)
+
+### AMB Components
+| Component | Description |
+| ------------- | ------------- |
+| System Contracts | AMB Implementation Contracts (Home Bridge and Foreign Bridge), Governance Multisigs, gas limit helpers, failed call management helpers (for when gas estimate was insufficient), and fee management helpers to collect fees |
+| Oracles | Containerized microservices that listen for on-chain events and send confirmations to relay messages. [More on them here](https://github.com/omni/tokenbridge/blob/master/oracle/README.md).
+| DevOps | [Bridge monitoring](https://github.com/omni/tokenbridge/blob/master/monitor/README.md), [ALM](https://github.com/omni/tokenbridge/tree/master/alm), docker compose, ansible playbooks |
+| dApp Contracts | extensions (pair mediator contracts on both sides of the AMB), such as the Omnibridge |
+
+#### Bridge Modes
+* `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint wrapped ERC-667 tokens on the Home Network, and transfer ERC20 or ERC-667 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network. This is used by the [Omnibridge](omnibridge).
+* `ERC-TO-NATIVE` mode: The home network nodes must support consensus engine that allows using a smart contract for block reward calculation. This mode is used by the [xDai Bridge](xdai-bridge)
+* `ARBITRARY-MESSAGE` mode:  Invoke Home/Foreign Bridge to send a message that will be executed on the other Network as an arbitrary contract method invocation.
+
 
 ## Managing Bridge Contracts
+### Bridge Roles
+- **Administrator** role (representation of a multisig contract):
+  - add/remove validators
+  - set daily limits on either direction
+  - set maximum per transaction limit on both bridges
+  - set minimum per transaction limit on both bridges
+  - upgrade contracts in case of vulnerability
+  - set minimum required signatures from validators in order to relay a user's transaction
+- **Validator** role:
+  - provide 100% uptime to relay transactions
+  - listen for `UserRequestForSignature` events on Home Bridge and sign an approval to relay assets on Foreign network
+  - listen for `CollectedSignatures` events on Home Bridge. As soon as enough signatures are collected, transfer all collected signatures to the Foreign Bridge contract.
+  - listen for `UserRequestForAffirmation` or `Transfer` (depending on the bridge mode) events on the Foreign Bridge and send approval to Home Bridge to relay assets from Foreign Network to Home
+- **User** role:
+  - sends assets to Bridge contracts:
+    - in `ERC-TO-NATIVE` mode: send ERC20 tokens to the Foreign Bridge to receive native coins from the Home Bridge, send native coins to the Home Bridge to unlock ERC20 tokens from the Foreign Bridge;
+    - in `ARBITRARY-MESSAGE` mode: Invoke Home/Foreign Bridge to send a message that will be executed on the other Network as an arbitrary contract method invocation;
+    - in `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home Network, transfer ERC20 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network.
 
 ## Managing Bridge Validators
 ## Resources
