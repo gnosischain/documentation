@@ -78,7 +78,6 @@ function requireToPassMessage (address _contract, bytes _data, uint256 _gas) ext
 | Authorization | Check that `msg.sender` is the address of the bridge contract |
 | Replay Attack | `transactionHash()` allows for checking of a hash of the transaction that invoked the `requireToPassMessage()` call. The invoking contract (in some cases, the mediator contract) is responsible for providing a *unique sequence* (can be a nonce) as part of the `_data` param in the `requireToPassMessage()` function call |
 
-
 ### Mediator Contracts
  
  A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20. First, a user has to call the NFT Contract's approve() function, and then calls the mediator contract's transferToken() function. The mediator then calls transferFrom() on the NFT contract to transfer approved token(s), and in NFT example would then call getMetaData(). After, it can then proceed with the flow from the foreign bridge contract. 
@@ -119,6 +118,7 @@ function requireToPassMessage (address _contract, bytes _data, uint256 _gas) ext
     - in `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home Network, transfer ERC20 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network.
 
 ## Managing Bridge Validators
+Bridge admins can vote to add/remove validators. Read more about governance [here](../governance.md)
 ## Resources
 
 - [Arbitrary Message Bridge Documentation](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge)
