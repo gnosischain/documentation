@@ -27,13 +27,13 @@ References:
 ### Overview
 
 |                       | Detail                                          |
-| --------------------- | ----------------------------------------------- |
-| Frontend URL          | https://omni.gnosischain.com                  |
+|-----------------------|-------------------------------------------------|
+| Frontend URL          | https://omni.gnosischain.com                    |
 | Trust Model           | [4-of-6 Validator Multisig](#bridge-validators) |
 | Governance            | [7-of-16 Multisig](#bridge-governance)          |
 | Governance Parameters | Validator Set, Daily Limits, Fees               |
-| Bug Bounty            | TODO $2m?                                           |
-| Bug Reporting         | TODO see above                                  |
+| Bug Bounty            | [upp to $2m](https://immunefi.com/bounty/gnosischain/) |
+| Bug Reporting         | On the Immunefi site [here](https://immunefi.com/bounty/gnosischain/) |
 
 References: 
 
@@ -43,23 +43,24 @@ References:
 
 #### Ethereum
 
-| Contract                      | Ethereum Address |
-| ----------------------------- | ---------------- |
-| Proxy Contract                |                  |
-| Validator Management Contract |                  |
+| Contract                        | Ethereum Address                           |
+|---------------------------------|--------------------------------------------|
+| Omnibridge Multi-Token Mediator | 0x88ad09518695c6c3712AC10a214bE5109a655671 |
+| AMB Proxy Contract (Foreign)    | 0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e |
+| Validator Management Contract   | 0xed84a648b3c51432ad0fD1C2cD2C45677E9d4064 |
 
 #### Gnosis
 
-| Contract                      | Gnosis Address |
-| ----------------------------- | -------------- |
-| Proxy Contract                |                |
-| Block Reward Contract         |                |
-| Validator Management Contract |                |
+| Contract                      | Gnosis Address                             |
+|-------------------------------|--------------------------------------------|
+| Proxy Contract                | 0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59 |
+| AMB/Omnibridge Multi-Token Mediator | 0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
+| Validator Management Contract | 0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008 |
 
 ### Fees & Daily Limits
 
 | Token              | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ------------------ | ------------------ | ------------------ |
+|--------------------|--------------------|--------------------|
 | Approx. Gas Cost   |                    |                    |
 | Bridge Fees        | 0%                 | 0%                 |
 | Daily Limit Reset  | 00:00 UTC          | 00:00 UTC          |
@@ -111,10 +112,25 @@ References:
 ## How it works
 
 ![](/img/bridges/diagrams/token-bridge.svg)
+### Ethereum -> Gnosis
+1. User approves token balance to be transferred in the token registry
+2. Token's `transferFrom()` function is called by the mediator contract
+3. Mediator contract calls bridge contract's `requireToPassMessage()` function
+4. `UserRequestForAffirmation` event is emitted, listening validators relay the message to the other network where signatures are collected
+5.  `executeAffirmation` is called on the bridge contract by a validator and signatures are collected.  
+6. When enough signatures have been collected, the message is relayed to the mediator contract
+7. If the token being bridged does not yet have a representation on the Home network, the mediator contract will deploy a new token registry for it for it and mint the relayed amount to the address specified. If the token registry already exists, the target address is minted the required amount.
+### Gnosis -> Ethereum
+1. User calls `transferAndCall` method on ERC-677 token contract to send tokens to bridge contract
+2. Bridge contract's `onTokenTransfer` method is called
+3. `UseRequestForSignature` event is emitted and received by bridge oracles
+4. Signatures are submitted to confirm transaction
+5. `CollectedSignatures` event is emitted
+6. Transaction is relayed to Ethereum bridge contract, which triggers the mediator contract to unlock the specified tokens
 
 The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md). 
 
-The Omnibridge does not allow the [bridging of rebasing tokens and inflationary tokenns](https://developers.gnosischain.com/for-users/bridges/omnibridge/exceptions). 
+The Omnibridge does not allow the [bridging of rebasing tokens and inflationary tokens](https://developers.gnosischain.com/for-users/bridges/omnibridge/exceptions). 
 
 References: 
 
@@ -133,8 +149,8 @@ In a multi-chain world, some assets (e.g. USDC) can be bridged over from differe
 
 For example, there are two different representations of USDC on Gnosis Chain: 
 
-| Asset              |  Token Contract                                                                                                     |
-| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| Asset              | Token Contract                                                                                                                       |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://blockscout.com/xdai/mainnet/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
 | USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://blockscout.com/xdai/mainnet/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
 
