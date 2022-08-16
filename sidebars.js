@@ -28,16 +28,17 @@ const sidebars = {
         'about/overview/media-kit',
       ]
     },
-    /*{ 
+    { 
       type: 'category',
       label: 'Networks',
+      link: {type: 'doc', id: 'about/networks/README'},
       collapsed: false,
       items: [
-        "about/networks/mainnet",
-        "about/networks/testnets",
-        "about/networks/rollups"
+        "about/networks/chiado",
+        //"about/networks/testnets",
+        //"about/networks/rollups"
       ]
-    },*/
+    },
     {
       type: 'category',
       label: 'Tokens',
