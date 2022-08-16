@@ -10,7 +10,7 @@ Development wise, since Gnosis Chain is an Ethereum Virtual Machine based chain,
 ## Why Gnosis?
 
 * Fast transaction times (5 seconds) & low transaction fees (500 tx for $.01).
-* A [stable token for transactions](/about/tokens/xdai-token) & gas fees.
+* A [stable token for transactions](/about/tokens/xdai) & gas fees.
 * Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
 * Full-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).
 * Wide-ranging [Community Support](/about/overview/community).
