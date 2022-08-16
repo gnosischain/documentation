@@ -19,14 +19,14 @@ The AMB currently supports Ethereum and Binance Smart Chain, and is part of the 
 ## Key Information
 
 ### Overview
-|                       | Detail                                          |
-| --------------------- | ----------------------------------------------- |
-| Frontend URL          | https://bridge.gnosischain.com                  |
-| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators) |
-| Governance            | [7-of-16 Multisig](#bridge-governance)          |
-| Governance Parameters |                |
-| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/)  |
-| Bug Reporting         | On the Immunefi site [here](https://immunefi.com/bounty/gnosischain/)   |
+|                       | Detail                                                                |
+|-----------------------|-----------------------------------------------------------------------|
+| Frontend URL          | https://bridge.gnosischain.com                                        |
+| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)                       |
+| Governance            | [7-of-16 Multisig](#bridge-governance)                                |
+| Governance Parameters |                                                                       |
+| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/)                 |
+| Bug Reporting         | On the Immunefi site [here](https://immunefi.com/bounty/gnosischain/) |
 
 
 
@@ -52,7 +52,20 @@ References:
 - [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
 - [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 
- 
+## Key Contracts
+
+### Ethereum
+
+| Contract                            | Address                                    |
+|-------------------------------------|--------------------------------------------|
+| AMB/Omnibridge Multi-Token Mediator | 0x88ad09518695c6c3712AC10a214bE5109a655671 |
+| AMB Contract Proxy (Foreign)        | 0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e |
+
+### Gnosis
+| Contract                            | Address                                    |
+|-------------------------------------|--------------------------------------------|
+| AMB/Omnibridge Multi-Token Mediator | 0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
+| AMB Contract Proxy (Home)           | 0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59 |
 
 ## How it works
 ### Terminology
@@ -62,30 +75,48 @@ References:
 ### Call a cross-chain method via AMB:
 
 ```solidity
-function requireToPassMessage (address _contract, bytes _data, uint256 _gas) external;
+function requireToPassMessage (address _contract,
+                                bytes _data,
+                                uint256 _gas) external;
 ```
-| param   | details                   |
-| ------- | --------------------------|
- | \_contract       |  address of contract on other network |
- |  \_data   |    encoded bytes of the method selector and the params that will be called in the contract on the other side     |
- | \_gas | gas to be provided in execution of the method call on the other side |
+ | param      | details                                                                                                   |
+ |------------|-----------------------------------------------------------------------------------------------------------|
+ | \_contract | address of contract on other network                                                                      |
+ | \_data     | encoded bytes of the method selector and the params that will be called in the contract on the other side |
+ | \_gas      | gas to be provided in execution of the method call on the other side                                      |
  
+ ![](/img/bridges/diagrams/amb-bridge-contract-flow.png)
 
+#### Foreign Network -> Home Network
+1. User calls `foo()` on an originator contract
+2. Originator contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas. 
+3. `UserRequestForAffirmation` event is emitted, and listening validators relay the message to the Home side where signatures are collected
+4. `executeAffirmation()` is called on the Home Bridge contract by a validator once enough signatures are collected. 
+5. Home bridge contract decodes the message and calls `foo()` on the target contract. 
+#### Home Network -> Foreign Network
+1. User calls `foo()` on an originator contract
+2. Originator contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
+3. Signatures are collected from validators, and once enough are collected `requireToConfirmMessage()` is called
+4. Message is relayed to the Foreign Bridge contract, and `executeSignatures()` is called
+5. Foreign bridge contract decodes the message and calls `foo()` on target contract
+
+AMB Bridge proxy contact on Ethereum can be viewed [here](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e)  
+AMB Bridge Proxy Contract and Gnosis can be viewed [here](https://blockscout.com/xdai/mainnet/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59)  
 ### Security Considerations for Receiving a Call
-| Concern | Remediation |
-| ----- | ----- |
-| Authorization | Check the address of invoking contract using `messageSender()` |
-| Authorization | Check that `msg.sender` is the address of the bridge contract |
+| Concern       | Remediation                                                                                                                                                                                                                                                                                                                    |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization | Check the address of invoking contract using `messageSender()`                                                                                                                                                                                                                                                                 |
+| Authorization | Check that `msg.sender` is the address of the bridge contract                                                                                                                                                                                                                                                                  |
 | Replay Attack | `transactionHash()` allows for checking of a hash of the transaction that invoked the `requireToPassMessage()` call. The invoking contract (in some cases, the mediator contract) is responsible for providing a *unique sequence* (can be a nonce) as part of the `_data` param in the `requireToPassMessage()` function call |
 
 ### Mediator Contracts
  
- A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20. First, a user has to call the NFT Contract's approve() function, and then calls the mediator contract's transferToken() function. The mediator then calls transferFrom() on the NFT contract to transfer approved token(s), and in NFT example would then call getMetaData(). After, it can then proceed with the flow from the foreign bridge contract. 
- ![](/img/bridges/diagrams/amb-bridge-contract-flow-mediator.svg)
+ A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20. For a more in-depth explanation, see the [Omnibridge page](omnibridge).  
+
 
 ### AMB Components
-| Component | Description |
-| ------------- | ------------- |
+| Component        | Description                                                                                                                                                                                                                 |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | System Contracts | AMB Implementation Contracts (Home Bridge and Foreign Bridge), Governance Multisigs, gas limit helpers, failed call management helpers (for when gas estimate was insufficient), and fee management helpers to collect fees |
 | Oracles | Containerized microservices that listen for on-chain events and send confirmations to relay messages. [More on them here](https://github.com/omni/tokenbridge/blob/master/oracle/README.md).
 | DevOps | [Bridge monitoring](https://github.com/omni/tokenbridge/blob/master/monitor/README.md), [ALM](https://github.com/omni/tokenbridge/tree/master/alm), docker compose, ansible playbooks |
