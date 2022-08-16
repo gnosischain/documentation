@@ -29,6 +29,16 @@ module.exports = {
           gas: 500000,
           gasPrice: 1000000000
     },
+    chiado: {
+          provider: function() {
+                return new HDWalletProvider(
+               process.env.MNEMONIC,
+               "https://rpc-chiado.gnosistestnet.com")
+          },
+          network_id: 100100,
+          gas: 500000,
+          gasPrice: 1000000000
+    },
   }
 };
 ```
