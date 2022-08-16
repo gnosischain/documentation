@@ -10,7 +10,7 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 
 :::
 
-The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/tokens/xdai-token.md), the native asset used for gas and transaction fees on Gnosis. 
+The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis. 
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
