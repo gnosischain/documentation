@@ -21,7 +21,7 @@ The AMB currently supports Ethereum and Binance Smart Chain, and is part of the 
 ### Overview
 |                       | Detail                                                                |
 |-----------------------|-----------------------------------------------------------------------|
-| Frontend URL          | https://bridge.gnosischain.com                                        |
+| Frontend URL          | N/A                                                                   |
 | Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)                       |
 | Governance            | [7-of-16 Multisig](#bridge-governance)                                |
 | Governance Parameters |                                                                       |
