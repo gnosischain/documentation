@@ -20,7 +20,7 @@ For testing purposes, it is recommended to first deploy to testnet. After functi
 
 ## Tutorials
 
-In general you can choose almost any development enviornment you wish as they all have their own benefits. A few of the most used enviornments are shown below. Using the [official ethereum documentation](https://ethereum.org/en/developers/tutorials/hello-world-smart-contract/), you can change the network to Gnosis and deploy a hello world contract.
+In general you can choose almost any development environment you wish as they all have their own benefits. A few of the most used environments are shown below. Using the [official ethereum documentation](https://ethereum.org/en/developers/tutorials/hello-world-smart-contract/), you can change the network to Gnosis and deploy a hello world contract.
 
 ### Hardhat Deployment
 

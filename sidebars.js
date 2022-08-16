@@ -104,7 +104,7 @@ const sidebars = {
       items: [
         "developers/environments/mainnet",
         "developers/environments/testnet",
-        "developers/environments/local-enviornment",
+        "developers/environments/local-environment",
       ],
     },*/
     {
@@ -115,7 +115,7 @@ const sidebars = {
       items: [
         "developers/smart-contracts/truffle",
         "developers/smart-contracts/hardhat",
-        "developers/smart-contracts/remix-metamask",
+        "developers/smart-contracts/remix",
         "developers/smart-contracts/foundry",
       ],
     },
@@ -214,7 +214,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Explorers',
-      link: {type: 'doc', id: 'tools/explorers'},
+      link: {type: 'doc', id: 'tools/explorers/README'},
       collapsed: true,
       items: [
         {
@@ -222,14 +222,10 @@ const sidebars = {
           label: 'AnyBlock',
           href: 'https://explorer.anyblock.tools/ethereum/poa/xdai/',
         },
+        'tools/explorers/blockscout',
         {
           type: 'link',
-          label: 'Blockscout',
-          href: 'https://blockscout.com/xdai/mainnet/',
-        },
-        {
-          type: 'link',
-          label: 'GnosisScan',
+          label: 'Gnosisscan',
           href: 'https://gnosisscan.io/',
         },
         {
@@ -264,6 +260,11 @@ const sidebars = {
           type: 'link',
           label: 'Pokt',
           href: 'https://docs.pokt.network/home/use/public-rpc/gnosis-chain',
+        },
+        {
+          type: 'link',
+          label: 'QuickNode',
+          href: 'https://www.quicknode.com/docs/gnosis',
         },
       ],
     },
@@ -450,6 +451,11 @@ const sidebars = {
         'tools/analytics/beacon-chain',
         {
           type: 'link',
+          label: 'Gnosis Netstats',
+          href: 'http://dai-netstat.poa.network',
+        },
+        {
+          type: 'link',
           label: 'Blocknative',
           href: 'https://docs.blocknative.com/',
         },
@@ -470,7 +476,7 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'GnosisScan',
+          label: 'Gnosisscan',
           href: 'https://gnosisscan.io/charts/',
         },
         {
@@ -553,6 +559,7 @@ const sidebars = {
           label: 'Revoke',
           href: 'https://revoke.cash/',
         },
+        'tools/token-distribution',
       ],
     },
   ],
