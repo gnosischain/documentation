@@ -32,8 +32,8 @@ References:
 | Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)                       |
 | Governance            | [7-of-16 Multisig](#bridge-governance)                                |
 | Governance Parameters | Validator Set, Daily Limits, Fees                                     |
-| Bug Bounty            | [upp to $2m](https://immunefi.com/bounty/gnosischain/)                |
-| Bug Reporting         | On the Immunefi site [here](https://immunefi.com/bounty/gnosischain/) |
+| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/)                |
+| Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/) |
 
 References: 
 
@@ -114,7 +114,7 @@ The Omnibridge currently generates bridge revenue through earned yield on stable
 
 #### Compounding
 Currently, Stable Coins (USDC & USDT) locked in the OmniBridge contract are allocated to the Aave interest market. Locked funds will accumulate interest as well as COMP and AAVE tokens. These funds can then be used to support bridge operations.   
-Compounding analytics are available in [Dune]((https://dune.com/maxaleks/Omnibridge-Stablecoins))  
+Compounding analytics are available in [Dune](https://dune.com/maxaleks/Omnibridge-Stablecoins)  
 **Allocation:**   
 USDC:  `(Current Amount Locked - 2,500,000 USDC)` transferred to Aave. 2.5M is held in initial reserve.  
 USDT:  `(Current Amount Locked - 750,000 USDT)` transferred to Aave. 750K is held in initial reserve.  
