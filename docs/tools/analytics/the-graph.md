@@ -4,7 +4,7 @@ title: "The Graph"
 
 # The Graph Data Indexing
 
-[The Graph](https://thegraph.com/) is a decentralized protocol for indexing and querying chain data, supports the Gnosis chain. Data defined through subgraphs is easy to query and explore. Subgraphs can be created locally, or use a free hosted explorer for indexing and data display.
+[The Graph](https://thegraph.com/) is a decentralized protocol for indexing and querying chain data, supports Gnosis. Data defined through subgraphs is easy to query and explore. Subgraphs can be created locally, or use a free hosted explorer for indexing and data display.
 
 ## Setting up a hosted project with TheGraph & Gnosis
 
@@ -30,7 +30,7 @@ $ yarn global add @graphprotocol/graph-cli
 
 4) The following command creates a subgraph that indexes all events of an existing contract. It attempts to fetch the contract ABI from BlockScout and falls back to requesting a local file path. If any of the optional arguments are missing, it takes you through an interactive form.
 
-_*Note: The interactive form does not currently include Gnosis Chain in the dropdown of networks, so using the following flags is useful for a Gnosis deployment._
+_*Note: The interactive form does not currently include Gnosis in the dropdown of networks, so using the following flags is useful for a Gnosis deployment._
 
 ```bash
 graph init

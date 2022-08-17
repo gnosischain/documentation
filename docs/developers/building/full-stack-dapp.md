@@ -5,15 +5,15 @@ title: Full Stack Dapp
 
 # Building a Full Stack Dapp
 
-Welcome to the Gnosis Full stack Dapp tutorial! In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis Chain! This tutorial is designed for either new developers interested in Dapp development or existing devs interested in migrating to Gnosis Chain development.
+Welcome to the Gnosis Full stack Dapp tutorial! In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis! This tutorial is designed for either new developers interested in Dapp development or existing devs interested in migrating to Gnosis development.
 
 Throughout the tutorial, feel free to refrence other pages in our documentation for information with greater depth - however this tutorial will give you a basic understand of how to get up and running!
 
-This Dapp will allow you to wave at Gnosis Chain, and see how many times you have waved!
+This Dapp will allow you to wave at Gnosis, and see how many times you have waved!
 
 ## Guideline Overview
 
-1. Creating and connecting your wallet to Gnosis Chain
+1. Creating and connecting your wallet to Gnosis
 2. Setting up your project
 3. Smart-contract development
 4. Using Hardhat for contract devlopment
@@ -139,7 +139,7 @@ contract WavePortal {
 ```
 ## Deploying your Contract
 
-To deploy your contract to Gnosis Chain, lets update your config file at  ```hardhat.config.js```.
+To deploy your contract to Gnosis, lets update your config file at  ```hardhat.config.js```.
 
 ```js showLineNumbers title=hardhat.config.js
 require("@nomiclabs/hardhat-waffle");
@@ -230,7 +230,7 @@ const main = async () => {
 
 Now before you deploy, make sure you have funds in your wallet! Visit the [funds page](../../tools/faucets/), if you don't have funds!
 
-Deploy to Gnosis Chain with the following command:
+Deploy to Gnosis with the following command:
 
 ```npx hardhat run scripts/deploy.js --network gnosis```
 
@@ -251,7 +251,7 @@ You can verify the deployment on https://gnosisscan.io/, by putting your contrac
 
 To get your front end up and running quickly, vist this [Replit link](https://replit.com/@nitric1/Gnosis-Chain-Hello-World?v=1#README.md) and fork it by clicking the **Use Template** Button on the right side of the page.
 
-![Diagram](../../../static/img/full-stack-dapp/replit-fork.drawio.png)
+![Diagram](/img/full-stack-dapp/replit-fork.drawio.png)
 
 Navigate to the ```App.jsx``` file in Replit and follow the directions below:
 
@@ -287,8 +287,8 @@ The file should look something like this:
 ```
 ## Interacting with Contract
 
-Congrats! You have created a full-stack DApp on Gnosis Chain.
+Congrats! You have created a full-stack DApp on Gnosis.
 
-Make sure to wave at Gnosis Chain!
+Make sure to wave at Gnosis!
 
-![Diagram2](../../../static/img/full-stack-dapp/full-stack-dapp-finished.JPG)
+![Diagram2](/img/full-stack-dapp/full-stack-dapp-finished.JPG)

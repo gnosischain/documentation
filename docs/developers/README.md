@@ -3,9 +3,9 @@
 
 # Developers Overview
 
-## Differences between Gnosis Chain and Ethereum
+## Differences between Gnosis and Ethereum
 
-Development wise, since Gnosis Chain is an Ethereum Virtual Machine based chain, development is nearly identical. Check out the [protocol specification](/specs) for more details.
+Development wise, since Gnosis is an Ethereum Virtual Machine based chain, development is nearly identical. Check out the [protocol specification](/specs) for more details.
 
 ## Why Gnosis?
 

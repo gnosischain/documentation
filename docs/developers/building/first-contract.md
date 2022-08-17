@@ -7,7 +7,7 @@ Follows the same process as deploying to Ethereum
 
 ---
 
-The Gnosis Chain is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains. The required changes consist of directing deployment to the proper RPC and network id.
+Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains. The required changes consist of directing deployment to the proper RPC and network id.
 
 - **RPC**: https://rpc.gnosischain.com ([more RPCs available here](/tools/rpc))
 - **Network_ID**: 100
@@ -15,7 +15,7 @@ The Gnosis Chain is an EVM based chain, meaning deployment steps are the same as
 
 :::note
 You will also need a [small amount of Gnosis](/tools/faucets) to deploy a contract, and for any contract functions. There is no current Gnosis testnet, so your contracts will be live! 
-For testing purposes, it is recommended to first deploy to testnet. After functionality is tested and confirmed, deploy to the Gnosis Chain!
+For testing purposes, it is recommended to first deploy to testnet. After functionality is tested and confirmed, deploy to Gnosis!
 :::
 
 ## Tutorials
@@ -38,7 +38,7 @@ Following the [Official Hardhat documentation](https://hardhat.org/hardhat-runne
 
 [This Tutorial on Kauri](https://kauri.io/#collections/POA%20Tutorial%20series/poa-part-1-develop-and-deploy-a-smart-contract/) shows how to deploy a DApp to the test network. It can be adapted to the Gnosis network with a few minor tweaks.
 
-1. For Gnosis Chain, edit the truffle.js file to the following:
+1. For Gnosis, edit the truffle.js file to the following:
 
 ```js showLineNumbers
 require('dotenv').config();
@@ -67,7 +67,7 @@ module.exports = {
 };
 ```
 
-2. Run the Truffle deployment to the gnosis Chain.
+2. Run the Truffle deployment to Gnosis.
 
 ```bash
 truffle migrate --network gnosis

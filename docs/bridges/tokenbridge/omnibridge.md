@@ -129,9 +129,9 @@ References:
 
 ### Multiple Representations
 
-In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis Chain, even if the underlying asset is the same. 
+In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis, even if the underlying asset is the same. 
 
-For example, there are two different representations of USDC on Gnosis Chain: 
+For example, there are two different representations of USDC on Gnosis: 
 
 | Asset              |  Token Contract                                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------ |

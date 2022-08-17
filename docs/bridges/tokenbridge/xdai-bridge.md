@@ -111,7 +111,7 @@ References:
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
-The xDai token is minted when Dai is transferred from Ethereum to the Gnosis Chain using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+The xDai token is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
 1. User sends a transaction to the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum
 2. The transfer is approved on the Ethereum side and the user's Dai balance is reduced
@@ -139,8 +139,8 @@ References:
 
 1. User sends a transaction to the bridge contract on xDai to initiate a withdrawal.  
 2. The requested xDai withdrawal amount is "burned" (sent to address 0x0 where it can never be withdrawn), and the `UserRequestForSignature` method is called (see [example transaction](https://blockscout.com/xdai/mainnet/tx/0x8e23cf0ab01476c2df5b71a72603f2c229d3d9a63ad6ca71ce164798f3733826/internal-transactions))
-3. The request generates an event on the xDai side.
-4. Bridge validator nodes catch this event and send confirmation (signatures) to the contract on the xDai side.
+3. The request generates an event on the Gnosis side.
+4. Bridge validator nodes catch this event and send confirmation (signatures) to the contract on the Gnosis side.
 5. Once enough signatures are collected (currently 4 of 6), one of the bridge validators* sends the signatures and message to Ethereum. * Anyone can extract this information and send to Ethereum. If a transaction stalls due to congestion, this transaction can be re-submitted by any user with a higher gas price. 
 6. The bridge contract on Ethereum checks that the signatures are valid. If they are,  the requested Dai is unlocked for the user.  
 

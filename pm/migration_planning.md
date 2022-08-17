@@ -99,7 +99,7 @@ The current version of this can be found at [developers.gnosischain.com](https:/
   * [x] Block Explorers #tools
     * [x] Blockscout #tools
     * [x] Anyblock Analytics #tools
-    * [ ] Gnosis Beacon Chain #validators
+    * [x] Gnosis Beacon Chain #validators
   * [ ] Governance #?
     * [ ] Community Governance #?
     * [ ] Bridge Governance Board #?
@@ -150,9 +150,9 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [d] RandomAura RNG Explainer #tools #about
     * [d] Accessing a Random Seed with a Smart Contract #tools #about 
     * [d] Randomness FAQ #tools #about
-  * [ ] Immunefi Bug Bounty #about
-    * [ ] Omnibridge Bounty #bridges #about
-  * [ ] Security Audits #about #bridges
+  * [x] Immunefi Bug Bounty #about
+    * [x] Omnibridge Bounty #bridges #about
+  * [x] Security Audits #about #bridges
 * [ ] For Validators #validators 
   * [ ] Gnosis Beacon Chain Validators (GNO) #validators 
     * [ ] Beacon Chain Validator Rewards #validators 
@@ -161,15 +161,15 @@ The current version of this can be found at [developers.gnosischain.com](https:/
     * [ ] Current Bridge Validators #bridges 
     * [ ] New Validators: Bridge Node Setup #bridges 
     * [ ] Current Validators: How to add a New Bridge Validator #bridges 
-  * [ ] Consensus Info: AuRa, POSDAO, SBC #about 
-    * [ ] AuRa with POSDAO Consensus #about 
-    * [ ] POSDAO: Proof of Stake Decentralized Autonomous Organization #about 
-    * [ ] HoneyBadger BFT Consensus #about 
-    * [ ] Gnosis Beacon Chain #about 
-  * [ ] Hard Forks #about 
-    * [ ] List of all Hard Forks #about 
-  * [ ] POSDAO Whitepaper #about 
-* [ ] Contact & Media Info #about 
+  * [x] Consensus Info: AuRa, POSDAO, SBC #about 
+    * [x] AuRa with POSDAO Consensus #about 
+    * [x] POSDAO: Proof of Stake Decentralized Autonomous Organization #about 
+    * [d] HoneyBadger BFT Consensus #about 
+    * [x] Gnosis Beacon Chain #about 
+  * [x] Hard Forks #about 
+    * [x] List of all Hard Forks #about 
+  * [x] POSDAO Whitepaper #about 
+* [d] Contact & Media Info #about 
   * [x] Social Media & Community Channels #about 
   * [x] Media Kit #about 
 

@@ -1,6 +1,6 @@
 ---
 title: Using Foundry
-description: Using Foundry with Gnosis Chain
+description: Using Foundry with Gnosis
 keywords: [Foundry, Forge, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide] 
 ---
 
@@ -33,7 +33,7 @@ Forge can only deploy one contract at a time.
 
 Because Solidity files may contain multiple contracts, ```:<YourContract>``` (Seen below) specifies which contract to deploy.
 
-#### Deploy your contract on Gnosis Chain with the following Forge command:
+#### Deploy your contract on Gnosis with the following Forge command:
 
 ```bash
 forge create --rpc-url https://rpc.gnosischain.com --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
@@ -50,7 +50,7 @@ forge create --rpc-url https://rpc.gnosischain.com \
 
 ## Verify your Contract
 
-#### Verify your Gnosis Chain contract on deployment using Etherscan:
+#### Verify your Gnosis contract on deployment using Etherscan:
 
  Use the ```--verify``` flag as shown below:
 

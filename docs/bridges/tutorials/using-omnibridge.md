@@ -7,7 +7,7 @@ title: Using the Omnibridge
 - [Tokenbridge Docs: Using the Omnibridge UI](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens)
 - [Tokenbridge Docs: Transfer any ERC20 from Ethereum to xDai](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20)
 - [Tokenbridge Docs: Transfer tokens without the UI](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens)
-- [xDai Docs: Bridging tokens minted on Gnosis Chain](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/reverse-bridging)
+- [xDai Docs: Bridging tokens minted on Gnosis](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/reverse-bridging)
 
 ## Token Registry
 
@@ -18,7 +18,7 @@ title: Using the Omnibridge
 
 ## Specific Tokens
 
-- [Tokenbridge Docs: Bridging WETH on Gnosis Chain back to Ethereum](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/transfer-weth-from-xdai-to-eth-on-mainnet)
+- [Tokenbridge Docs: Bridging WETH on Gnosis back to Ethereum](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/transfer-weth-from-xdai-to-eth-on-mainnet)
 
 ## Debugging Omnibridge Transactions
 
@@ -34,6 +34,6 @@ title: Using the Omnibridge
 ## BNB Chain
 
 - [xDai Docs: Using Omnibridge to transfer to BNB Chain](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/binance-smart-chain-omnibridge)
-- [xDai Docs: Example transfer from Gnosis Chain to BNB Chain](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/bsc-omnibridge-example)
+- [xDai Docs: Example transfer from Gnosis to BNB Chain](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/bsc-omnibridge-example)
 - [xDai Docs: WBNB auto-conversion to BNB](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/wbnb-auto-conversion-to-bnb)
-- [xDai Docs: Binance-pegged Dai token on Gnosis Chain](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/dai-token-on-xdai-bsc)
+- [xDai Docs: Binance-pegged Dai token on Gnosis](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/dai-token-on-xdai-bsc)

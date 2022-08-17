@@ -1,6 +1,6 @@
 --- 
 title: Using Remix and MetaMask
-description: Using Remix and Metamask with Gnosis Chain
+description: Using Remix and Metamask with Gnosis
 keywords: [Remix, MetaMask, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide]
 ---
 

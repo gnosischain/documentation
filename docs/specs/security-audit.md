@@ -1,11 +1,11 @@
 ---
-description: Audits of Gnosis Chain and Related Infrastructure
+description: Audits of Gnosis and Related Infrastructure
 ---
 
 # Security Audits
 
 :::info
-Most Audits were completed prior to the rebrand from xDai Chain to Gnosis Chain, and will refer to the xDai chain as well as the STAKE token, the previous governance token of the chain (the chain is in the process of transferring to GNO-only security).
+Most Audits were completed prior to the rebrand from xDai Chain to Gnosis, and will refer to the xDai chain as well as the STAKE token, the previous governance token of the chain (the chain is in the process of transferring to GNO-only security).
 :::
 
 ## Stake Beacon Chain by ChainSecurity <a href="#omnibridge-audit-by-chainsecurity" id="omnibridge-audit-by-chainsecurity"></a>

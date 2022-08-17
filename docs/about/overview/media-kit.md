@@ -2,7 +2,7 @@
 title: Media Kit
 ---
 
-## Gnosis Chain
+## Gnosis
 
 Links to different colored assets as well as zip file of general assets below:
 
@@ -16,4 +16,4 @@ Links to different colored assets as well as zip file of general assets below:
 
 ## xDai Token
 
-{@file: /media-kit/xDai Stablecoin Brand Assets.zip}
+Check the [xDai Token page](/about/tokens/xdai) for brand assets and details.

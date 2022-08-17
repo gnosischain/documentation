@@ -127,7 +127,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Interacting with Gnosis Chain',
+      label: 'Interacting with Gnosis',
       collapsed: true,
       link: {type: 'doc', id: 'developers/interact/README'},
       items: [

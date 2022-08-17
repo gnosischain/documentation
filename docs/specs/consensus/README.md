@@ -5,7 +5,7 @@
 
 # Gnosis (beacon) chain merge
 
-Gnosis chain will soon merge with [Gnosis beacon chain (GBC)](/specs/consensus/gbc) proof-of-stake system. This will mark the end of Gnosis chain Proof of Authority era and become completely permission-less. This sets up a future of greater Ethereum compatibility with its bright future and further updates to come. For more technical details, all content existing regarding the Ethereum merge applies. You can read more on[ https://ethereum.org/en/upgrades/merge/](https://ethereum.org/en/upgrades/merge/).
+Gnosis will soon merge with [Gnosis beacon chain (GBC)](/specs/consensus/gbc) proof-of-stake system. This will mark the end of Gnosis Proof of Authority era and become completely permission-less. This sets up a future of greater Ethereum compatibility with its bright future and further updates to come. For more technical details, all content existing regarding the Ethereum merge applies. You can read more on[ https://ethereum.org/en/upgrades/merge/](https://ethereum.org/en/upgrades/merge/).
 
 
 ## **What do you need to do to be ready?**
