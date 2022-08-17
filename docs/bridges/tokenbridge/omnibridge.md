@@ -14,7 +14,7 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 ## Key Information
 
-[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](./amb-bridge.md) and thus relies on the same group of [Trusted Bridge Validators](./amb-bridge.md#bridge-validators) and trust model as the AMB. 
+[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. 
 
 The Omnibridge currently connects Gnosis to Ethereum and Binance Smart Chain.
 
@@ -79,14 +79,14 @@ Todo:
 
 ### Bridge Validators
 
-Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](./amb-bridge.md#bridge-validators) as the Omnibridge is built on top of the AMB. 
+Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) as the Omnibridge is built on top of the AMB. 
 
 References: 
 * [xDai Docs: Omnibridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
 
 ### Bridge Governance
 
-* See [Bridge Governance](../governance.md)
+* See [Bridge Governance](/bridges/governance)
 
 References: 
 - [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
@@ -94,7 +94,7 @@ References:
 
 ### Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 
 References: 
 
@@ -112,7 +112,7 @@ References:
 
 ![](/img/bridges/diagrams/token-bridge.svg)
 
-The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md). 
+The Omnibridge is built on top of the [Arbitrary Message Bridge](/bridges/tokenbridge/amb-bridge). 
 
 The Omnibridge does not allow the [bridging of rebasing tokens and inflationary tokenns](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/exceptions). 
 
@@ -142,7 +142,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ### Earning Yield on Bridge Deposits
 
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 
 ## Managing Bridge Contracts
 

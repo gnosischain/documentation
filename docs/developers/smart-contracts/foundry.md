@@ -63,4 +63,4 @@ forge create --rpc-url https://rpc.gnosischain.com \
 
 For information regarding pre-existing contract verification, visit the [offical Forge documentation](https://book.getfoundry.sh/forge/deploying#verifying-a-pre-existing-contract).
 
-For further Contract Verification information, visit our [official page](/developers/smart-contracts/verify/)
+For further Contract Verification information, visit our [official page](/developers/verify/)

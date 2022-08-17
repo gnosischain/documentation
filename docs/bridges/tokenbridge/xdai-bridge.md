@@ -69,7 +69,7 @@ References:
 * [xDai Docs: Daily Bridge Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 ### Bridge Validators
 
-The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](../roadmap.md). 
+The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](/bridges/roadmap). 
 
 Bridge transactions currently requires signatures from 4 of 6 validators.
 
@@ -86,7 +86,7 @@ References:
 * [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#current-xdai-bridge-validators)
 ### Bridge Governance
 
-* See [Bridge Governance](../governance.md)
+* See [Bridge Governance](/bridges/governance)
 
 References: 
 - [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
@@ -94,7 +94,7 @@ References:
 
 ### Bridge Revenue
 
-The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 
 References: 
 

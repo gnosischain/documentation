@@ -12,7 +12,7 @@ title: Arbitrary Message Bridge
 
 You can also send arbitrary data between Gnosis and Ethereum using the native Arbitrary Message Bridge (AMB). This allows Gnosis contracts to send data and trigger contract functions on Ethereum and other chains, and vice-versa. 
 
-The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](./omnibridge.md).
+The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](/bridges/tokenbridge/omnibridge).
 
 The AMB currently supports Ethereum and Binance Smart Chain, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
 
@@ -47,11 +47,11 @@ The AMB bridge relies on a trusted group of [AMB Bridge Validators](https://gith
 
 You can see the [current list of AMB & Omnibridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#amb-omnibridge). 
 
-The [long-term roadmap](../roadmap.md) is to move towards [trustless bridges](../roadmap.md#trustless-bridges) using [zero-knowledge proofs from light clients](../roadmap.md#zero-knowledge-light-clients) or other trust-minimized techniques.
+The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
 
 ### Bridge Governance
 
-* See [Bridge Governance](../governance.md)
+* See [Bridge Governance](/bridges/governance)
 
 References: 
 - [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
