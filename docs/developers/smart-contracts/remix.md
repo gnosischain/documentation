@@ -10,7 +10,7 @@ keywords: [Remix, MetaMask, Gnosis, Deployment, Smart, Chain, Contract, EVM, Eth
 
 View the official [Remix documentation](https://hardhat.org/hardhat-runner/docs/getting-started#installation) for general installation and overview.
 
-Vist our [MetaMask page](../../tools/wallets/metamask/) for installation and general information.
+Vist our [MetaMask page](/tools/wallets/metamask/) for installation and general information.
 
 ## Connecting Remix to Gnosis via MetaMask
 

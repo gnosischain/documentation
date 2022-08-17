@@ -228,7 +228,7 @@ const main = async () => {
   runMain();
 ```
 
-Now before you deploy, make sure you have funds in your wallet! Visit the [funds page](../../tools/faucets/), if you don't have funds!
+Now before you deploy, make sure you have funds in your wallet! Visit the [funds page](/tools/faucets/), if you don't have funds!
 
 Deploy to Gnosis with the following command:
 
