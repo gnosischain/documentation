@@ -7,9 +7,6 @@
 
 ## Adding Ethers.js to your Project
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <Tabs groupId="package-manager">
 <TabItem value="yarn" label="yarn">
 
