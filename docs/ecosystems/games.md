@@ -8,6 +8,10 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, Defiville, Darkforest, Galleass, GUS
 zkSNARK space warfare game
 [https://zkga.me/](https://zkga.me/)
 
+## GUStakes
+Raise the stakes in Classic and Arena match duels, or Create & Join Tournaments 
+https://gustakes.gg/
+
 ## Defiville
 Defiville is a community-driven metaverse and yield farming game with always something new to do
 [defiville.finance](defiville.finance)
@@ -15,10 +19,6 @@ Defiville is a community-driven metaverse and yield farming game with always som
 ## Galleass
 Decentralized resource management game
 https://galleass.io/
-
-## GUStakes
-Raise the stakes in Classic and Arena match duels, or Create & Join Tournaments 
-https://gustakes.gg/
 
 ## FunFair Labs
 Web3 Game Studio

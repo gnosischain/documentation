@@ -1,7 +1,7 @@
 ---
 title: DeFi
 description: Decentralized Finance DApps on Gnosis Chain
-keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance, Swapr, Xion Finance, UniCrypt Network, pNetwork, Deus Finance DAO, Mixsome, Agave, Hedgey, DeBank, CLV, DxSale, Rubic, Fraction, Minerva, Curve, UniDex, Cowswap] 
+keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance, Swapr, Xion Finance, UniCrypt Network, pNetwork, Deus Finance DAO, Mixsome, Agave, Hedgey, DeBank, CLV, DxSale, Rubic, Fraction, Minerva, Curve, UniDex, Cowswap, CryptEx Locker,] 
 ---
 
 # DeFi DApps
@@ -97,4 +97,8 @@ DeFi Trading And Portfolio Management
 ## Cowswap
 COWs (Coincidence of Wants) or MEV protected trades
 https://cowswap.exchange/
+
+## CryptEx Locker
+We protect funs from rugs and team abuse
+https://cryptexlock.me/
 
