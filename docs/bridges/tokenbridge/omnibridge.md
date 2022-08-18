@@ -26,14 +26,14 @@ References:
 
 ### Overview
 
-|                       | Detail                                                                |
-|-----------------------|-----------------------------------------------------------------------|
-| Frontend URL          | https://omni.gnosischain.com                                          |
-| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)                       |
-| Governance            | [7-of-16 Multisig](#bridge-governance)                                |
-| Governance Parameters | Validator Set, Daily Limits, Fees                                     |
-| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/)                |
-| Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/) |
+|                       | Detail                                                |
+|-----------------------|-------------------------------------------------------|
+| Frontend URL          | https://omni.gnosischain.com                          |
+| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)       |
+| Governance            | [7-of-16 Multisig](#bridge-governance)                |
+| Governance Parameters | Validator Set, Daily Limits, Fees                     |
+| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
+| Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
 
 References: 
 
@@ -43,19 +43,19 @@ References:
 
 #### Ethereum
 
-| Contract                              | Ethereum Address                           |
-|---------------------------------------|--------------------------------------------|
-| AMB Proxy Contract (Foreign)          | 0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e |
-| Omnibridge Multi-Token Mediator Proxy | 0x88ad09518695c6c3712AC10a214bE5109a655671 |
-| Validator Management Contract         | 0xed84a648b3c51432ad0fD1C2cD2C45677E9d4064 |
+| Contract                              | Ethereum Address                                                                                                                         |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| AMB Proxy Contract (Foreign)          | [0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract) |
+| Omnibridge Multi-Token Mediator Proxy | [0x88ad09518695c6c3712AC10a214bE5109a655671](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract) |
+| Validator Management Contract         | [0xed84a648b3c51432ad0fD1C2cD2C45677E9d4064](https://etherscan.io/address/0xed84a648b3c51432ad0fD1C2cD2C45677E9d4064#writeProxyContract) |
 
 #### Gnosis
 
-| Contract                              | Gnosis Address                             |
-|---------------------------------------|--------------------------------------------|
-| Proxy Contract                        | 0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59 |
-| Omnibridge Multi-Token Mediator Proxy | 0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
-| Validator Management Contract         | 0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008 |
+| Contract                              | Gnosis Address                                                                                                                            |
+|---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Proxy Contract                        | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
+| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
+| Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
 
 ### Fees & Daily Limits
 
@@ -93,14 +93,14 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 
 
 ### Current Bridge Validators
-| Address                                    | Organization Name |
-|--------------------------------------------|-------------------|
-| 0x459A3bd49F1ff109bc90b76125533699AaAAf9A6 | Protofire         |
-| 0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d | Giveth            |
-| 0x19aC7c69e5F1AC95b8d49b30Cbb79e81f1ab0dba | Syncnode          |
-| 0x9adB7385B598843c36Fa057e45BC70542516E35d | GnosisDAO         |
-| 0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a | Cow Protocol      |
-| 0x5333588897CE6DE00031dC30CD2d6881e5C517Fb | Gnosis Safe       |
+| Address                                                                                                                | Organization Name |
+|------------------------------------------------------------------------------------------------------------------------|-------------------|
+| [0x459A3bd49F1ff109bc90b76125533699AaAAf9A6](https://gnosisscan.io/address/0x459A3bd49F1ff109bc90b76125533699AaAAf9A6) | Protofire         |
+| [0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d) | Giveth            |
+| [0x19aC7c69e5F1AC95b8d49b30Cbb79e81f1ab0dba](https://gnosisscan.io/address/0x19ac7c69e5f1ac95b8d49b30cbb79e81f1ab0dba) | Syncnode          |
+| [0x9adB7385B598843c36Fa057e45BC70542516E35d](https://gnosisscan.io/address/0x9adB7385B598843c36Fa057e45BC70542516E35d) | GnosisDAO         |
+| [0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a](https://gnosisscan.io/address/0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a) | Cow Protocol      |
+| [0x5333588897CE6DE00031dC30CD2d6881e5C517Fb](https://gnosisscan.io/address/0x5333588897CE6DE00031dC30CD2d6881e5C517Fb) | Gnosis Safe       |
 
 
 ### Bridge Governance
@@ -239,10 +239,10 @@ The Omnibridge currently generates bridge revenue through yield on stablecoins d
 
 Bridge administrators can perform 4 groups of operations with the xDai bridge. All operations are performed by owners of the Multisignature Wallet which requires several accounts to confirm the operation transaction. 
 
-| Network     | Multisignature Wallet Address              |
-|-------------|--------------------------------------------|
-| ETH Mainnet | 0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd |
-| Gnosis      | 0x0d3726e5a9f37234d6b55216fc971d30f150a60f |
+| Network     | Multisignature Wallet Address                                                                                          |
+|-------------|------------------------------------------------------------------------------------------------------------------------|
+| ETH Mainnet | [0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)  |
+| Gnosis      | [0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://gnosisscan.io/address/0x0d3726e5a9f37234d6b55216fc971d30f150a60f) |
 
 ### Example Administrative Action Flow:
 1. One of the multisig wallet owners encodes the method call with a set of parameters (if any). For example, this can be done with the [ABI Encoding Service](https://abi.hashex.org/).
