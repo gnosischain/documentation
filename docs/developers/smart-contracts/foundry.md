@@ -35,18 +35,43 @@ Because Solidity files may contain multiple contracts, ```:<YourContract>``` (Se
 
 #### Deploy your contract on Gnosis with the following Forge command:
 
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```bash
+forge create --rpc-url https://rpc-chiado.gnosistestnet.com --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
 ```bash
 forge create --rpc-url https://rpc.gnosischain.com --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
 ```
+</TabItem>
+</Tabs>
+
 #### Deploy with constructor arguments:
 
 Use the ```--constructor-args``` flag to pass arguments to the constructor:
+
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```bash
+forge create --rpc-url https://rpc-chiado.gnosistestnet.com \
+    --constructor-args <argument-1> <argument-2...>\
+    --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
 
 ```bash
 forge create --rpc-url https://rpc.gnosischain.com \
     --constructor-args <argument-1> <argument-2...>\
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
 ```
+</TabItem>
+</Tabs>
 
 ## Verify your Contract
 
@@ -54,12 +79,26 @@ forge create --rpc-url https://rpc.gnosischain.com \
 
  Use the ```--verify``` flag as shown below:
 
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```bash
+forge create --rpc-url https://rpc-chiado.gnosistestnet.com \
+    --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
+    --etherscan-api-key <your_etherscan_api_key> \
+    --verify
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
 ```bash
 forge create --rpc-url https://rpc.gnosischain.com \
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
     --etherscan-api-key <your_etherscan_api_key> \
     --verify
 ```
+</TabItem>
+</Tabs>
 
 For information regarding pre-existing contract verification, visit the [offical Forge documentation](https://book.getfoundry.sh/forge/deploying#verifying-a-pre-existing-contract).
 
