@@ -23,14 +23,14 @@ References:
 
 ### Overview
 
-|                       | Detail                                          |
-| --------------------- | ----------------------------------------------- |
-| Frontend URL          | https://bridge.gnosischain.com                  |
-| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators) |
-| Governance            | [7-of-16 Multisig](#bridge-governance)          |
-| Governance Parameters | Validator Set, Daily Limits, Fees               |
-| Bug Bounty            | TODO                                            |
-| Bug Reporting         | TODO                                            |
+|                       | Detail                                                |
+|-----------------------|-------------------------------------------------------|
+| Frontend URL          | https://bridge.gnosischain.com                        |
+| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)       |
+| Governance            | [7-of-16 Multisig](#bridge-governance)                |
+| Governance Parameters | Validator Set, Daily Limits, Fees                     |
+| Bug Bounty            | [Up to $2m](https://immunefi.com/bounty/gnosischain/) |
+| Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
 
 References: 
 * [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about) 
@@ -39,16 +39,18 @@ References:
 #### Ethereum
 
 | Contract                      | Ethereum Address                                                                                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Proxy Contract                | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
 | Validator Management Contract | [eth:0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#code)              |
+| Admin Multisignature Wallet   | [eth:0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)                   |
 
 #### Gnosis
 | Contract                      | Gnosis Address                                                                                                                                                   |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Proxy Contract                | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy#address-tabs) |
 | Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                         |
 | Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://blockscout.com/xdai/mainnet/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)              |
+| Admin Multisignature Wallet   | [gno:0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://blockscout.com/xdai/mainnet/address/0x0D3726e5a9f37234D6B55216fC971D30F150a60F/transactions#address-tabs) |
 
 References: 
 * [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
@@ -56,8 +58,8 @@ References:
 ### Fees & Daily Limits
 
 | Type               | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ------------------ | ------------------ | ------------------ |
-| Approx. Gas Cost   |                |                |
+|--------------------|--------------------|--------------------|
+| Approx. Gas Cost   |                    |                    |
 | Bridge Fees        | 0%                 | 0%                 |
 | Daily Limit Reset  | 00:00 UTC          | 00:00 UTC          |
 | Min Transfer       | 0.005 Dai          | 10 xDai            |
@@ -73,14 +75,15 @@ The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge o
 
 Bridge transactions currently requires signatures from 4 of 6 validators.
 
-| Organization | Ethereum Address | Gnosis Address                                                                                                                           |
-| ------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| GnosisDao    | TODO             | [gno:0x32e6C5e2132792B407424EBa19e48668Ebf80B14](https://blockscout.com/xdai/mainnet/address/0x32e6C5e2132792B407424EBa19e48668Ebf80B14) |
-| Protofire    | TODO             | [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://blockscout.com/xdai/mainnet/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051) |
-| CowProtocol  | TODO             | [gno:0xF81A2768BEDB8Ab805A2DF5Fb7D58685C224b9b6](https://blockscout.com/xdai/mainnet/address/0xF81A2768BEDB8Ab805A2DF5Fb7D58685C224b9b6) |
-| Giveth       | TODO             | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://blockscout.com/xdai/mainnet/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
-| GnosisSafe   | TODO             | [gno:0xebd33d099Dd31D32923f0A033Df6F7FC264Ef214](https://blockscout.com/xdai/mainnet/address/0xebd33d099Dd31D32923f0A033Df6F7FC264Ef214) |
-| Syncnode     | TODO             | [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
+
+| Organization | Gnosis Address                                                                                                                           |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| GnosisDao    |  [gno:0x32e6C5e2132792B407424EBa19e48668Ebf80B14](https://blockscout.com/xdai/mainnet/address/0x32e6C5e2132792B407424EBa19e48668Ebf80B14) |
+| Protofire    |  [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://blockscout.com/xdai/mainnet/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051) |
+| CowProtocol  |  [gno:0xF81A2768BEDB8Ab805A2DF5Fb7D58685C224b9b6](https://blockscout.com/xdai/mainnet/address/0xF81A2768BEDB8Ab805A2DF5Fb7D58685C224b9b6) |
+| Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://blockscout.com/xdai/mainnet/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
+| GnosisSafe   | [gno:0xebd33d099Dd31D32923f0A033Df6F7FC264Ef214](https://blockscout.com/xdai/mainnet/address/0xebd33d099Dd31D32923f0A033Df6F7FC264Ef214) |
+| Syncnode     |  [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
 
 References: 
 * [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#current-xdai-bridge-validators)
@@ -171,6 +174,44 @@ References:
 * [xDai Docs: Dai & Stablecoin Compounding](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
 * [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
 ## Managing Bridge Contracts
+### Upgrading a Contract
+There are two possible scenarios for how the bridge or validators contracts can be upgraded:
+* a security fix when only the contract implementation is changed
+* an improvement when the contract implementation upgrade requires initialization of storage values.
+
+#### Security Upgrade
+1. Deploy a new implementation of the bridge or validators contract.
+2. Depending on the contract and the chain use one of the links below to get the current version of the contract implementation:
+    * The bridge contract on _ETH Mainnet_: [Etherscan](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#readContract), 
+    * The validators contract on _ETH Mainnet_: [Etherscan](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#readContract) 
+    * The bridge contract on _Gnosis_: [Blockscout](https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-contract)
+    * The validators contract on _Gnosis_: [Blockscout](https://blockscout.com/poa/xdai/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-contract)
+3. Use the upgradeTo method from EternalStorageProxy ABI, the address of the new implementation, and the incremented version number to encode the data for the transaction. Example of the data: `3ad06d160000000000000000000000000000000000000000000000000000000000000004000000000000000000000000f097137c7ec5e582b5704065f72ac5903d0b526d`.
+4. Invoke `submitTransaction` of the multisig wallet contract (`0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd` on Mainnet ETH, `0x0d3726e5a9f37234d6b55216fc971d30f150a60f` on Gnosis chain). The data field must be filled with the bytes received from the previous step. The destination depends on the contract:
+    * `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016` if the security upgrade is made for the bridge contract on  ETH Mainnet. 
+    * `0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E` if the security upgrade is made for the validators contract on the ETH Mainnet. 
+    * `0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6` if the security upgrade is made for the bridge contract on the xDai chain.
+    * `0xb289f0e6fbdff8eee340498a56e1787b303f1b6d` if the security upgrade is made for the validators contract on the xDai chain.
+5. Identify the index of the transaction returned in the `Submission` event as soon as the transaction from the previous step is included into a block and share it with the other multisig wallet owners.
+6. (for the rest of owners) Invoke `confirmTransaction` on the multisig wallet contract (`0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd` on the Mainnet ETH, `0x0d3726e5a9f37234d6b55216fc971d30f150a60f` on Gnosis chain). Set the gas limit to _three times bigger_ than the gas estimator function suggests.
+
+#### Bridge Improvement
+1. Identify the method to call as part of the new implementation initialization. In the following steps we assume that the method's name is `upgradeFrom3to4()` which takes no arguments. 
+2. Use the method mentioned above from the new contract implementation code or ABI to encode the data to be passed to `upgradeToAndCall()` method. Example of the data: `50d28adb`. 
+3. Deploy a new implementation of the bridge or validators contract.
+4. Depending on the contract and the chain, use one of the links below to get the current `version` of the contract implementation:
+    * The bridge contract on _the ETH Mainnet_: [Etherscan](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#readContract), 
+    * The validators contract on _the ETH Mainnet_: [Etherscan](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#readContract) 
+    * The bridge contract on _Gnosis Chain_: [Blockscout](https://blockscout.com/poa/xdai/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-contract)
+    * The validators contract on _Gnosis chain_: [Blockscout](https://blockscout.com/poa/xdai/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-contract)
+5. Use the upgradeToAndCall method from the EternalStorageProxy ABI, the address of the new implementation, and the incremented version number to encode the data for the transaction. Example of the data: `0xa9c45fcb0000000000000000000000000000000000000000000000000000000000000004000000000000000000000000692a70d2e424a56d2c6c27aa97d1a86395877b3a0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000450d28adb00000000000000000000000000000000000000000000000000000000`.
+6. Invoke `submitTransaction` on the multisig wallet contract (`0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd` on Mainnet ETH, `0x0d3726e5a9f37234d6b55216fc971d30f150a60f` on Gnosis chain). The data field must be filled with the bytes received on the previous step. The destination depends on the contract:
+    * `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016` if the security upgrade is made for the bridge contract on ETH Mainnet. 
+    * `0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E` if the security upgrade is made for the validators contract on ETH Mainnet. 
+    * `0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6` if the security upgrade is made for the bridge contract on Gnosis chain.
+    * `0xb289f0e6fbdff8eee340498a56e1787b303f1b6d` if the security upgrade is made for the validators contract on Gnosis chain.
+7. Identify the index of the transaction returned in the `Submission` event as soon as the transaction from the previous step is included into a block and share it with other multisig wallet owners.
+8. (for the rest of owners) Invoke `confirmTransaction()` of the multisig wallet contract (`0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd` on Mainnet ETH, `0x0d3726e5a9f37234d6b55216fc971d30f150a60f` on Gnosis chain). Set the gas limit to _four times bigger_ than the gas estimator suggests.
 
 References: 
 * [TokenBridge Docs: xDai Contracts Management](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management)
@@ -179,6 +220,7 @@ References:
 * [TokenBridge Docs: Admin Privilege Management](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/admin-privileges-management)
 * [TokenBridge Docs: ERC20 Token Release](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release)
 * [TokenBridge Docs: xDai Bridge Management API](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api)
+
 
 ## Managing Bridge Validators
 
