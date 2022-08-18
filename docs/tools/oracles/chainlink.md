@@ -34,7 +34,7 @@ Go to [https://remix.ethereum.org/](https://remix.ethereum.org/)
 
 There are several ways to create a new file. Here we:
 
-1. Create a folder called xDai Price Feed.
+1. Create a folder called Gnosis Price Feed.
 2. Create a file in the folder called `PriceFeedTest.sol`.
 3. Paste in the example code below the image.
 
@@ -46,7 +46,7 @@ There are several ways to create a new file. Here we:
 /** This example code is designed to quickly deploy an example contract using Remix.
  *  If you have never used Remix, try our example walkthrough: https://docs.chain.link/docs/example-walkthrough
  *  You will need xDai to deploy on Gnosis.
- *     - xDai Faucet: https://www.gnosischain.com/tools/faucets
+ *     - xDai Faucet: https://docs.gnosischain.com/tools/faucets
  *     - LINK address on xDai: 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2
  */
 
@@ -85,7 +85,7 @@ contract PriceConsumerV3 {
 
 The code below uses the Chainlink standard Price Consumer contract along with several modifications:
 
-* We initialize the ETH/USD xDai Price Feed in the constructor
+* We initialize the ETH/USD Gnosis Price Feed in the constructor
 
 ```solidity
 priceFeed = AggregatorV3Interface(0xa767f745331D267c7751297D982b050c93985627);
@@ -104,7 +104,7 @@ Click on the Compiler Icon, adjust items (if necessary, we keep defaults here) a
 1. Select **Deploy** Icon.
 2. Change Environment to Web3.
 3. Click **Deploy**.
-4. Confirm the transaction in MetaMask. You account must be connected to the Gnosis Chain and have a small amount of xDai (see steps 1 and 2).
+4. Confirm the transaction in MetaMask. You account must be connected to Gnosis and have a small amount of xDai (see steps 1 and 2).
 
 ![](</img/tools/chainlink/chain3.png>)
 

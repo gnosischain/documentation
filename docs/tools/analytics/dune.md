@@ -1,12 +1,12 @@
 ---
-description: Dune Supports Gnosis Chain and Ethereum for cross-chain and custom dashboards
+description: Dune Supports Gnosis and Ethereum for cross-chain and custom dashboards
 ---
 
 # Dune
 
-Dune Analytics offers native support for contracts deployed to Gnosis Chain. Create and share custom dashboards and queries from both Ethereum and GC. It is possible to mix-and-match between chains on the same dashboard.
+Dune Analytics offers native support for contracts deployed to Gnosis. Create and share custom dashboards and queries from both Ethereum and GC. It is possible to mix-and-match between chains on the same dashboard.
 
-![xDai STAKE Staking Dashboard](/img/tools/dune1.png)
+![xDai Staking Dashboard](/img/tools/dune1.png)
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ Dune Analytics offers native support for contracts deployed to Gnosis Chain. Cre
 
 3) Once in the app, you can create a custom query.
 
-1. Switch the data source to Gnosis Chain.
+1. Switch the data source to Gnosis.
 2. Write your query.
 3. Execute the query (execution can take some time depending on query complexity).
 4. Query results appear once complete. From here you can create visualizations with data on Gnosis.
@@ -45,7 +45,7 @@ All other processes are the same. See the [Dune Documentation](https://hackmd.io
 
 ![](</img/tools/perpetual-on-dune.png>)
 
-### Gnosis Chain Usage Dashboards
+### Gnosis Usage Dashboards
 
 * Total Txs per day, transactions by project: [https://dune.com/cjnith/gnosis-transactions](https://dune.com/cjnith/gnosis-transactions)
 * Unique Active Addresses: [https://dune.com/cjnith/gnosis-unique-active-addresses](https://dune.com/cjnith/gnosis-unique-active-addresses)
@@ -61,7 +61,7 @@ Look for more GC-relevant dashboards from our resident Dune expert at [https://d
 * Staking on Ethereum (EasyStaking) and GC. Total Staked, # of Participants, Rewards, Delegators.
 * [https://duneanalytics.com/maxaleks/xdai-staking](https://duneanalytics.com/maxaleks/xdai-staking)
 
-![Validator Pools, Total STAKE Staked on GC, Amount Staked/Unstaked per day](/img/tools/xdai-staking.png)
+![Validator Pools, Total Staked on GC, Amount Staked/Unstaked per day](/img/tools/xdai-staking.png)
 
 ### xDai Bridge
 

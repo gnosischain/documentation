@@ -7,10 +7,10 @@
 
 | Block Size | Block Speed | Gas price | Patchset | Native token | Network ID |
 | ---------- | ----------- | -------- | -------- | ------------ | ---------- |
-| 30M gas    | 5 sec  | check [gas price oracle](/tools/oracles/gas-price) | London | xDai | 100 (hexa 0x64) |
+| 30M gas    | 5 sec  | check [gas price oracle](/tools/oracles/gas-price) | London | [xDai](/about/tokens/xdai) | 100 (hexa 0x64) |
 
 
-TODO: replace this links with the post merge info
+<!-- TODO: replace this links with the post merge info -->
 
 - Chain spec files: [https://github.com/poanetwork/poa-chain-spec/blob/dai/spec.json](https://github.com/poanetwork/poa-chain-spec/blob/dai/spec.json)
 - Bootnodes: [https://github.com/poanetwork/poa-chain-spec/blob/dai/bootnodes.txt](https://github.com/poanetwork/poa-chain-spec/blob/dai/bootnodes.txt)

@@ -1,8 +1,8 @@
 ---
 ---
-# Run a Gnosis Chain Execution Layer Node
+# Run a Gnosis Execution Layer Node
 
-You can also run a Gnosis Chain Execution Layer Node on the same machine as your Beacon Chain node(s). This is recommended for more experienced node runners, but is highly encouraged as it increases decentralization of the network. If you don't wish to do this, you can just ignore this section and connect your node through an existing JSON RPC endpoint. Using an existing RPC is the easiest method when you first setup your node. It is also encouraged to use an existing RPC during setup as it can take a while (up to 3 days, depending on your setup) for your execution layer node to fully sync. You will be encouraged to update your setup once the merge happens. If you have experience and want to setup your own GC node now, read on!
+You can also run a Gnosis Execution Layer Node on the same machine as your Beacon Chain node(s). This is recommended for more experienced node runners, but is highly encouraged as it increases decentralization of the network. If you don't wish to do this, you can just ignore this section and connect your node through an existing JSON RPC endpoint. Using an existing RPC is the easiest method when you first setup your node. It is also encouraged to use an existing RPC during setup as it can take a while (up to 3 days, depending on your setup) for your execution layer node to fully sync. You will be encouraged to update your setup once the merge happens. If you have experience and want to setup your own GC node now, read on!
 
 ## Technical Requirements
 
@@ -17,7 +17,7 @@ GC Nodes can be run with Nethermind client and the following recommended minimum
 ## Setup on Nethermind
 
 :::caution
-A majority of Gnosis Chain validators are now running the Nethermind client. The latest version 1.12.7 includes support for the latest Gnosis Chain HF.
+A majority of Gnosis validators are now running the Nethermind client. The latest version 1.12.7 includes support for the latest Gnosis HF.
 
 Version [https://github.com/NethermindEth/nethermind/releases/tag/1.12.7](https://github.com/NethermindEth/nethermind/releases/tag/1.12.7)
 
@@ -143,6 +143,6 @@ Restart the containers using `docker-compose up` as you did initially when setti
 
 ### Sharing machines for GC and GBC clients
 
-As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse, Teku, Nimbus or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml](https://docs.docker.com/compose/extends/) file to enable RPC access by container name.
+As was mentioned on the doc page for running a beacon chain node, if you decide to run a Gnosis client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse, Teku, Nimbus or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml](https://docs.docker.com/compose/extends/) file to enable RPC access by container name.
 
 If you have questions about config details for this type of setup, please [ask in our discord.](https://discord.gg/VQb3WzsywU)

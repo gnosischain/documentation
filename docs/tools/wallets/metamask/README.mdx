@@ -3,11 +3,6 @@
 
 # MetaMask
 
-```mdx-code-block
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-```
-
 [MetaMask](https://metamask.io/) is a web browser extension and mobile app that allows you to manage your Gnosis private keys. By doing so, it serves as a wallet for xDai, GNO and other tokens, and allows you to interact with decentralized applications, or dapps.
 
 :::info New to MetaMask?
@@ -22,21 +17,25 @@ The official [MetaMask Download](https://metamask.io/download/) page will detect
 
 After the installation, MetaMask require a configuration to work with Gnosis, follow one of the instructions:
 
-### Quick configuration
+### A. Quick configuration
 
 <Tabs>
-  <TabItem value="chainlist" label="Chain List">Use <a href="https://chainlist.org/?search=gnosis">ChainList</a> for a one-click configuration and follow the instructions.
-  </TabItem>
-  <TabItem value="deeplink" label="Deeplink">Click on <a href="https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x64&params[0][chainName]=Gnosis&params[0][rpcUrls][0]=https://rpc.gnosischain.com&params[0][nativeCurrency][name]=xDAI&params[0][nativeCurrency][symbol]=xDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout.com/xdai/mainnet">this deeplink</a> to auto-configure MetaMask and follow the instructions.</TabItem>
+  <TabItem value="chainlist" label="Chain List">Use <a href="https://chainlist.org/?search=gnosis">ChainList</a> for a one-click configuration and follow the instructions.</TabItem>
+  <TabItem value="deeplink-gnosis" label="Deeplink (Gnosis Mainnet)">Click on <a href="https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x64&params[0][chainName]=Gnosis&params[0][rpcUrls][0]=https://rpc.gnosischain.com&params[0][nativeCurrency][name]=xDAI&params[0][nativeCurrency][symbol]=xDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout.com/xdai/mainnet">this deeplink</a> to auto-configure Gnosis in MetaMask and follow the instructions.</TabItem>
+  <TabItem value="deeplink-chiado" label="Deeplink (Chiado Testnet)">Click on <a href="https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x18704&params[0][chainName]=Chiado&params[0][rpcUrls][0]=https://rpc-chiado.gnosistestnet.com&params[0][nativeCurrency][name]=Chiado xDAI&params[0][nativeCurrency][symbol]=xDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout-chiado.gnosistestnet.com">this deeplink</a> to auto-configure Chiado Testnet in MetaMask and follow the instructions.</TabItem>
 </Tabs>
 
-### Manual Configuration
+### B. Manual Configuration
 
 1) Open Metamask, and select **Custom RPC** from the Network Dropdown.
 
 ![](/img/tools/custom-rpc.png)
 
 2) In the **Custom RPC** Settings, add in the Gnosis network details and click **Save**:
+
+
+<Tabs>
+  <TabItem value="gmain" label="Gnosis Mainnet">
 
 ```jsx title="Network Name"
 Gnosis
@@ -55,8 +54,36 @@ xDai
 ```
 
 ```jsx title="Block Explorer URL"
-https://blockscout.com/xdai/mainnet/
+https://gnosisscan.io
 ```
+
+  </TabItem>
+  <TabItem value="ctest" label="Chiado Testnet">
+
+```jsx title="Network Name"
+Chiado
+```
+
+```jsx title="New RPC URL"
+https://rpc-chiado.gnosistestnet.com
+```
+
+```jsx title="Chain ID"
+100100
+```
+
+```jsx title="Symbol"
+Chiado xDai
+```
+
+```jsx title="Block Explorer URL"
+https://blockscout-chiado.gnosistestnet.com
+```
+
+
+  </TabItem>
+</Tabs>
+
 
 ## More configurations
 

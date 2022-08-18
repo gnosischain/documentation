@@ -3,7 +3,7 @@
 
 # Explorers
 
-Explorers are pieces of software that scans Gnosis chain and make easier for users to search for blocks, transactions, addresses, contracts.
+Explorers are pieces of software that scans Gnosis and make easier for users to search for blocks, transactions, addresses, contracts.
 
 Gnosis supports the following explorers:
 

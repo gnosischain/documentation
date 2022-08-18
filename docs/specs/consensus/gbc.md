@@ -4,11 +4,13 @@ description: Distributed Community Validation
 
 # Gnosis Beacon Chain (GBC)
 
-:::info
-Gnosis Beacon Chain (GBC) is live based on a Q4 soft launch for small-scale, distributed staking.
+:::caution The merge
+Gnosis is transitioning to PoS, this page defines the pre-merge. Learn more [about The Merge](/specs/consensus/) and the near future consensus model.
+:::
 
+:::info
 * A security audit has been completed and is [available here](/specs/security-audit)
-* Docs related to the GBC are here: [https://docs.gnosischain.com](https://docs.gnosischain.com/)
+* Docs related to the GBC are here: [Run a Node](/node)
 * GBC Explorer: [https://beacon.gnosischain.com](https://beacon.gnosischain.com/)
 :::
 
