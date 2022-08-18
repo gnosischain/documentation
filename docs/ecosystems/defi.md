@@ -102,3 +102,5 @@ https://cowswap.exchange/
 We protect funs from rugs and team abuse
 https://cryptexlock.me/
 
+## Tornado Cash
+Non-custodial anonymous transactions 
