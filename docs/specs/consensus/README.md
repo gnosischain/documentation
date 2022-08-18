@@ -25,7 +25,7 @@ Please be vigilant of scammers who may use this occasion to launch scam tokens, 
 
 ### Developers
 
-Gnosis Chain’s “Merge” will be near 1:1 to the Ethereum Merge in its impact on developers. 
+Gnosis' “Merge” will be near 1:1 to the Ethereum Merge in its impact on developers. 
 
 For a full understanding of the changes, please read “[How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/)”. 
 
