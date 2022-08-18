@@ -4,10 +4,10 @@
 # Deposits
 
 :::caution
-Deposits occur on the Gnosis Chain. **If you have GNO on Ethereum mainnet, you will need to bridge it to GC**.
+Deposits occur on Gnosis. **If you have GNO on Ethereum mainnet, you will need to bridge it to Gnosis**.
 
-* [Use the OmniBridge](https://omni.gnosischain.com/bridge) to move GNO from Ethereum to GNO on GC.
-* Add Gnosis Chain Network to your wallet with [https://chainlist.org/](https://chainlist.org) or [with these manual instructions](https://developers.gnosischain.com/for-users/wallets/metamask/metamask-setup).
+* [Use the OmniBridge](https://omni.gnosischain.com/bridge) to move GNO from Ethereum to GNO on Gnosis.
+* Add Gnosis to your wallet with [https://chainlist.org/](https://chainlist.org) or [with these manual instructions](/tools/wallets/metamask).
 :::
 
 :::note
@@ -135,7 +135,7 @@ GNO is automatically wrapped by the deposit contract, you only need to do this t
 Note that currently there is not a mechanism to swap mGNO back to GNO.
 :::
 
-1\) Go to [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) and connect your web3 wallet on the Gnosis Chain to the application.
+1\) Go to [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) and connect your web3 wallet toGnosis on the application.
 
 In this example we use MetaMask.
 

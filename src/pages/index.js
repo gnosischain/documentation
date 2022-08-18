@@ -4,15 +4,14 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-//import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">Gnosis Chain Docs</h1>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -30,8 +29,10 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Gnosis Chain provides stability, scalability and an extendable beacon chain framework.">
+      description="Gnosis provides stability, scalability and an extendable beacon chain framework.">
       <HomepageHeader />
+
+      <HomepageFeatures />
     </Layout>
   );
 }

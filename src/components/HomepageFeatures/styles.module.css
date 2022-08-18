@@ -3,9 +3,19 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  background: white;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 140px;
+  width: 140px;
+}
+
+[data-theme='dark'] .features {
+  background: #111111;
+}
+
+[data-theme='dark'] .features svg {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }

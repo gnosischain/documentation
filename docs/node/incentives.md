@@ -5,7 +5,7 @@
 
 ## Gnosis Beacon Chain Validator Rewards
 
-The minimum requirement to run a validator is 1 GNO (staked as 32 mGNO tokens).  Rewards are based on the number of validators securing the chain.
+The minimum requirement to run a validator is 1 [GNO](/about/tokens/gno) (staked as 32 mGNO tokens).  Rewards are based on the number of validators securing the chain.
 
 | GNO staked | % of GNO validating | reward for validators | Total GNO rewards | Overall inflation p.a. |
 | ---------- | ------------------- | --------------------- | ----------------- | ---------------------- |
@@ -18,7 +18,7 @@ The minimum requirement to run a validator is 1 GNO (staked as 32 mGNO tokens). 
 | 1800000    | 100.00%             | 4.00%                 | 72000             | 4.00%                  |
 
 :::note
-\*[APY Calculator](https://www.desmos.com/calculator/7pzueggivw) for the rewards curve. The Y axis is APR and the X axis is the number of validators multiplied by 100.
+[APY Calculator](https://www.desmos.com/calculator/7pzueggivw) for the rewards curve. The Y axis is APR and the X axis is the number of validators multiplied by 100.
 
 Following parameters set for the calculation.
 

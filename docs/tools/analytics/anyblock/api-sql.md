@@ -56,7 +56,7 @@ https://api.eth.events/ethereum/xdai/mainnet/es/block/search/
 
 5) You will see a list of all databases.
 
-1. Click on **ethereum_poa_xdai** to interact with xDai data.
+1. Click on **ethereum_poa_xdai** to interact with Gnosis data.
 2. To Query the DB, go to Tools -> Query Tool
 
 ![Access the Query Tool](/img/tools/anyblock/query-tool.png)

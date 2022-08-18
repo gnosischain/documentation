@@ -7,9 +7,6 @@
 
 ## Adding web3.js to your Project
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <Tabs groupId="package-manager">
 <TabItem value="yarn" label="yarn">
 
@@ -31,7 +28,7 @@ Link the `dist/web3.min.js`
 </TabItem>
 </Tabs>
 
-After installing, you need to create a web3 instance and set a provider. Most Ethereum supported wallets, such as Metamask, have an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compliant provider at `window.ethereum`. This works for connecting to Gnosis Chain as well. 
+After installing, you need to create a web3 instance and set a provider. Most Ethereum supported wallets, such as Metamask, have an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compliant provider at `window.ethereum`. This works for connecting to Gnosis as well. 
 
 ```javascript
 // From web3.js docs:
@@ -51,6 +48,17 @@ More on the parameters [here](https://web3js.readthedocs.io/en/v1.7.5/web3-eth-c
 
 ## Setting Gnosis as a Custom Chain
 When using web3.js, the default chain for signing transactions locally will be Ethereum mainnet. You can, however, [set a custom chain using the default common property](https://web3js.readthedocs.io/en/v1.7.5/web3-eth.html#id19):
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
 ```javascript
-web3.eth.defaultCommon = {customChain: {name: 'Gnosis Chain', chainId: 100, networkId: 100}};
+web3.eth.defaultCommon = {customChain: {name: 'Chiado Testnet', chainId: 100100, networkId: 100100}};
 ```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
+```javascript
+web3.eth.defaultCommon = {customChain: {name: 'Gnosis', chainId: 100, networkId: 100}};
+```
+</TabItem>
+</Tabs>

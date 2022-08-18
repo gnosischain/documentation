@@ -6,7 +6,7 @@ One differentiator for the Gnosis Beacon Chain relative to the Ethereum Beacon c
 
 However, this also introduces issues of administrative responsibility. No one entity should solely control contract updates.
 
-A multi-sig Gnosis Safe is used to expand admin responsibilities to a larger entity. The controlling assembly is a Governance Board consisting of known and active projects who have contributed to the Gnosis Chain and Ethereum community for some time.
+A multi-sig Gnosis Safe is used to expand admin responsibilities to a larger entity. The controlling assembly is a Governance Board consisting of known and active projects who have contributed to the Gnosis and Ethereum community for some time.
 
 A proposed upgrade is presented to this board and a minimum of 7 signatures are required to enact any proposal.
 

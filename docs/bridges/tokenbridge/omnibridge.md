@@ -14,15 +14,15 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 ## Key Information
 
-[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](./amb-bridge.md) and thus relies on the same group of [Trusted Bridge Validators](./amb-bridge.md#bridge-validators) and trust model as the AMB. 
+[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. 
 
 The Omnibridge currently connects Gnosis to Ethereum and Binance Smart Chain.
 
 The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://github.com/ethereum/EIPs/issues/677) token standard, with all bridged tokens tracked in the canonical [Bridged Token Registries](#bridged-token-registries). 
 
 References: 
-* [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
-* [xDai Docs: Omnibridge FAQs](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-faqs)
+* [xDai Docs: Omnibridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge)
+* [xDai Docs: Omnibridge FAQs](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-faqs)
 
 ### Overview
 
@@ -37,7 +37,7 @@ References:
 
 References: 
 
-* [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
+* [xDai Docs: Omnibridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge)
 
 ### Key Contracts
 
@@ -101,26 +101,25 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 | [0x9adB7385B598843c36Fa057e45BC70542516E35d](https://gnosisscan.io/address/0x9adB7385B598843c36Fa057e45BC70542516E35d) | GnosisDAO         |
 | [0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a](https://gnosisscan.io/address/0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a) | Cow Protocol      |
 | [0x5333588897CE6DE00031dC30CD2d6881e5C517Fb](https://gnosisscan.io/address/0x5333588897CE6DE00031dC30CD2d6881e5C517Fb) | Gnosis Safe       |
+* [Daily Bridge Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
+
+### Bridge Validators
+
+Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) as the Omnibridge is built on top of the AMB. 
+
+References: 
+* [xDai Docs: Omnibridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
 
 ### Bridge Governance
 
-* See [Bridge Governance](../governance.md)
+* See [Bridge Governance](/bridges/governance)
 
+References: 
+- [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
+- [xDai Docs: Bridge Daily Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 ### Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
-
-#### Compounding
-Currently, Stable Coins (USDC & USDT) locked in the OmniBridge contract are allocated to the Aave interest market. Locked funds will accumulate interest as well as COMP and AAVE tokens. These funds can then be used to support bridge operations.   
-Compounding analytics are available in [Dune](https://dune.com/maxaleks/Omnibridge-Stablecoins)  
-**Allocation:**   
-USDC:  `(Current Amount Locked - 2,500,000 USDC)` transferred to Aave. 2.5M is held in initial reserve.  
-USDT:  `(Current Amount Locked - 750,000 USDT)` transferred to Aave. 750K is held in initial reserve.  
-If the requested withdrawal amount exceeds the reserve balance, then the requested amount plus the initial reserve amount is requested to be withdrawn from Aave.
-##### Risks 
-1. If the unlikely event isn't enough liquidity on Aave to fulfill the withdrawal request (likely due to high borrowing demand), then the user will have to wait until there is.
-2. Aave is a trusted entity. If compromised, the protocol could attack the bridge in various ways, e.g. through reentrency or by stealing funds. 
-
+The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 ### Analytics
 
 - [Dune Analytics: Omnibridge Stablecoins](https://dune.com/maxaleks/Omnibridge-Stablecoins)
@@ -207,7 +206,7 @@ A partial token list of inflationary tokens is included below:
 
 Additional References: 
 
-* [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/413)_(also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
+* [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/413) (also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
 
 ### Canonical Token Registries
 
@@ -216,9 +215,9 @@ Additional References:
 
 ### Multiple Representations
 
-In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis Chain, even if the underlying asset is the same. 
+In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis, even if the underlying asset is the same. 
 
-For example, there are two different representations of USDC on Gnosis Chain: 
+For example, there are two different representations of USDC on Gnosis: 
 
 | Asset              | Token Contract                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -227,9 +226,24 @@ For example, there are two different representations of USDC on Gnosis Chain:
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
 
-### Earning Yield on Bridge Deposits
+### Interest on Bridge Deposits
 
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
+
+Currently, Stable Coins (USDC & USDT) locked in the OmniBridge contract are allocated to the Aave interest market. Locked funds will accumulate interest as well as COMP and AAVE tokens. These funds can then be used to support bridge operations.   
+Compounding analytics are available in [Dune](https://dune.com/maxaleks/Omnibridge-Stablecoins)  
+
+USDC:  `(Current Amount Locked - 2,500,000 USDC)` transferred to Aave. 2.5M is held in initial reserve.  
+USDT:  `(Current Amount Locked - 750,000 USDT)` transferred to Aave. 750K is held in initial reserve.  
+
+If the requested withdrawal amount exceeds the reserve balance, then the requested amount plus the initial reserve amount is requested to be withdrawn from Aave.
+1. If the unlikely event isn't enough liquidity on Aave to fulfill the withdrawal request (likely due to high borrowing demand), then the user will have to wait until there is.
+2. Aave is a trusted entity. If compromised, the protocol could attack the bridge in various ways, e.g. through reentrency or by stealing funds. 
+
+References: 
+
+* [xDai Docs: Dai & Stablecoin Compounding](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
+* [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
 
 ## Managing the Bridge
 
@@ -267,6 +281,10 @@ Before starting, current validators should determine:
 2. Coordinate a time when the other validators will confirm the transaction, as the bridge will be stopped to complete the upgrade.
 3. Ask the Omnibridge team to add a new bridge validator to the Certifier contract and confirm it has been added. This enables the node to relay bridge transactions with zero gas price.
 :::
+* [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators)
+* [xDai Docs: Bridge Node Setup](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators/bridge-node-setup)
+* [xDai Docs: How to add a new Bridge Validator](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
+* [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 
 Additional steps for adding a validator can be found [here](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
 

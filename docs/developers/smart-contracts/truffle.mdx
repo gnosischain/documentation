@@ -1,18 +1,18 @@
 --- 
 title: Using Truffle
-description: Using Truffle with Gnosis Chain
+description: Using Truffle with Gnosis
 keywords: [Truffle, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide]
 ---
 
-# Using Truffle with Gnosis Chain
+# Using Truffle with Gnosis
 
-#### Truffle is a development environment used for smart contract compiling, deploying, testing and debugging.
+Truffle is a development environment used for smart contract compiling, deploying, testing and debugging.
 
 Follow the [Truffle documentation](https://trufflesuite.com/docs/truffle/) for general installation and overview. 
 
 ## Config Truffle for Gnosis
 
-- Update the config with Gnosis credentials
+Update the config with Gnosis credentials
 
 ```js showLineNumbers title=truffle-config.js
 module.exports = {
@@ -29,6 +29,16 @@ module.exports = {
           gas: 500000,
           gasPrice: 1000000000
     },
+    chiado: {
+          provider: function() {
+                return new HDWalletProvider(
+               process.env.MNEMONIC,
+               "https://rpc-chiado.gnosistestnet.com")
+          },
+          network_id: 100100,
+          gas: 500000,
+          gasPrice: 1000000000
+    },
   }
 };
 ```
@@ -37,21 +47,55 @@ module.exports = {
 
 ### Default Compile
 
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```bash
+truffle compile --network chiado
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
 ```bash
 truffle compile --network gnosis
 ```
+</TabItem>
+</Tabs>
+
 
 ### Compile with Options
+
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```bash
+truffle compile [--list <filter>] [--all] [--network chiado] [--quiet]
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
 
 ```bash
 truffle compile [--list <filter>] [--all] [--network gnosis] [--quiet]
 ```
+</TabItem>
+</Tabs>
 
 ## Deploy your Contract
+
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```bash
+truffle migrate --network chiado
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
 
 ```bash
 truffle migrate --network gnosis
 ```
+</TabItem>
+</Tabs>
 
 View your deployed contract any of the [explorers](/tools/explorers).
 

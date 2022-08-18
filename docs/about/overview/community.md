@@ -1,6 +1,6 @@
 ---
 title: Community
-description: A list of community channels for Gnosis Chain
+description: A list of community channels for Gnosis
 ---
 
 ## Official Channels
