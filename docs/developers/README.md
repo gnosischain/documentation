@@ -3,20 +3,18 @@
 
 # Developers Overview
 
-## Differences between Gnosis Chain and Ethereum
+## Differences between Gnosis and Ethereum
 
-Development wise, since Gnosis Chain is an Ethereum Virtual Machine based chain, development is nearly identical. Check out the [protocol specification](/specs) for more details.
+Development wise, since Gnosis is an Ethereum Virtual Machine based chain, development is nearly identical. Check out the [protocol specification](/specs) for more details.
 
 ## Why Gnosis?
 
 * Fast transaction times (5 seconds) & low transaction fees (500 tx for $.01).
-* A [stable token for transactions](/about/tokens/xdai-token) & gas fees.
+* A [stable token for transactions](/about/tokens/xdai) & gas fees.
 * Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
 * Full-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).
 * Wide-ranging [Community Support](/about/overview/community).
 * Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.
-
-
 
 ## Transaction Fees
 

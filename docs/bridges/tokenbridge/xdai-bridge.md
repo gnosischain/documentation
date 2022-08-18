@@ -10,7 +10,7 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 
 :::
 
-The [xDai bridge](https://bridge.gnosischain.comd) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](../../about/tokens/xdai-token.md), the native asset used for gas and transaction fees on Gnosis. 
+The [xDai bridge](https://bridge.gnosischain.com) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis. 
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
@@ -18,7 +18,7 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 References: 
 
-* [xDai Docs: xDai Bridge FAQs](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#xdai-bridge-faqs)
+* [xDai Docs: xDai Bridge FAQs](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#xdai-bridge-faqs)
 ## Key Information
 
 ### Overview
@@ -66,10 +66,10 @@ References:
 
 References: 
 
-* [xDai Docs: Daily Bridge Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+* [xDai Docs: Daily Bridge Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 ### Bridge Validators
 
-The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](../roadmap.md). 
+The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](/bridges/roadmap). 
 
 Bridge transactions currently requires signatures from 4 of 6 validators.
 
@@ -83,22 +83,22 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 | Syncnode     | TODO             | [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
 
 References: 
-* [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators)
+* [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#current-xdai-bridge-validators)
 ### Bridge Governance
 
-* See [Bridge Governance](../governance.md)
+* See [Bridge Governance](/bridges/governance)
 
 References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+- [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
+- [xDai Docs: Bridge Daily Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 
 ### Bridge Revenue
 
-The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 
 References: 
 
-* [xDai Docs: Dai & Stablecoin Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
+* [xDai Docs: Dai & Stablecoin Compounding](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
 * [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
 
 ### Analytics
@@ -111,7 +111,7 @@ References:
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
-The xDai token is minted when Dai is transferred from Ethereum to the Gnosis Chain using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+The [xDai token](/about/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
 1. User sends a transaction to the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum
 2. The transfer is approved on the Ethereum side and the user's Dai balance is reduced
@@ -134,13 +134,13 @@ Example: https://blockscout.com/xdai/mainnet/tx/0x5892a695860f6087a2d93140f05e63
 
 References: 
 
-* [xDai Docs: How xDai is Minted](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/xdai-mechanics-how-xdai-is-minted)
+* [xDai Docs: How xDai is Minted](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge/xdai-mechanics-how-xdai-is-minted)
 ### Gnosis -> Ethereum 
 
 1. User sends a transaction to the bridge contract on xDai to initiate a withdrawal.  
 2. The requested xDai withdrawal amount is "burned" (sent to address 0x0 where it can never be withdrawn), and the `UserRequestForSignature` method is called (see [example transaction](https://blockscout.com/xdai/mainnet/tx/0x8e23cf0ab01476c2df5b71a72603f2c229d3d9a63ad6ca71ce164798f3733826/internal-transactions))
-3. The request generates an event on the xDai side.
-4. Bridge validator nodes catch this event and send confirmation (signatures) to the contract on the xDai side.
+3. The request generates an event on the Gnosis side.
+4. Bridge validator nodes catch this event and send confirmation (signatures) to the contract on the Gnosis side.
 5. Once enough signatures are collected (currently 4 of 6), one of the bridge validators* sends the signatures and message to Ethereum. * Anyone can extract this information and send to Ethereum. If a transaction stalls due to congestion, this transaction can be re-submitted by any user with a higher gas price. 
 6. The bridge contract on Ethereum checks that the signatures are valid. If they are,  the requested Dai is unlocked for the user.  
 
@@ -168,7 +168,7 @@ In the case where the amount of Dai requested for withdrawal is not available in
 
 References: 
 
-* [xDai Docs: Dai & Stablecoin Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
+* [xDai Docs: Dai & Stablecoin Compounding](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
 * [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
 ## Managing Bridge Contracts
 
@@ -184,11 +184,11 @@ References:
 
 References:
 
-* [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators)
-* [xDai Docs: Bridge Node Setup](https://developers.gnosischain.com/for-validators/for-bridge-validators/bridge-node-setup)
-* [xDai Docs: How to setup a new Bridge Validator](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
+* [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators)
+* [xDai Docs: Bridge Node Setup](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators/bridge-node-setup)
+* [xDai Docs: How to setup a new Bridge Validator](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
 * [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 ## Resources
 
 - [Tokenbridge Docs on xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
-- [xDai Bridge docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
+- [xDai Bridge docs](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge)

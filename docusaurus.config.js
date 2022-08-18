@@ -56,7 +56,7 @@ const config = {
     ({
       navbar: {
         logo: {
-          alt: 'Gnosis Chain Logo',
+          alt: 'Gnosis Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -146,7 +146,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Gnosis Chain.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Gnosis.`,
       },
       prism: {
         theme: lightCodeTheme,

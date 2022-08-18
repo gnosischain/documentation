@@ -7,7 +7,7 @@
 
 There are two bridge implementations connecting GC and the Ethereum Mainnet.
 
-\*\*\*\*[**xDai Bridge**](https://docs.tokenbridge.net/xdai-bridge/about): ERC20-to-Native TokenBridge implementation, used for transferring Dai <-> xDai between Ethereum and the Gnosis Chain.
+\*\*\*\*[**xDai Bridge**](https://docs.tokenbridge.net/xdai-bridge/about): ERC20-to-Native TokenBridge implementation, used for transferring Dai <-> xDai between Ethereum and Gnosis.
 
 \*\*\*\*[**ETH-GC Arbitrary Message Bridge**](https://docs.tokenbridge.net/eth-xdai-amb-bridge/about-the-eth-xdai-amb): AMB between Ethereum and GC for data, token and message transfers. Includes the Ominibridge application for transfer of any ERC20 cross-chain.
 

@@ -12,7 +12,7 @@ Before getting started, it is important to have an understanding of your respons
 ## Before Starting 
 On GBC you can validate blocks while staking less capital than Ethereum or many other proof-of-stake chains. By doing this, you are providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
 
-1. The validator deposit is a **non-reversible, one-way transaction**. Withdrawal will not be possible until the Gnosis Chain merge occurs joining the execution layer with the consensus layer.
+1. The validator deposit is a **non-reversible, one-way transaction**. Withdrawal will not be possible until the Gnosis merge occurs joining the execution layer with the consensus layer.
 2. You are **responsible for your node**, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
 3. You are **responsible for your keys** (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
 4. You should follow the instructions and processes outlined here or with a provider of your choosing (ie DAppNode or Liquid Staking provider). **Failure to follow instructions correctly can result in lost funds.**
@@ -35,7 +35,7 @@ Since GBC is a lower-stakes environment, it is a great place to learn and refine
 
 A reliable internet connection is key: bandwidth should not be throttled or capped. Upload bandwidth should be a minimum of 700 MB/hour with increases likely. Brief periods offline may result in small inactivity penalties, but this will typically be recouped quickly as long as the outage is short.
 
-Note that synching the execution layer of Gnosis Chain may take up to 1-3 days, depending on your setup.
+Note that synching the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
 
 ### Security
 
@@ -202,7 +202,7 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 
 * Terminal access on your node and cli familiarity
 * Admin level access on your local network to set up a port forward
-* [A Gnosis compatible wallet](/tools/wallets/) connected to the Gnosis Chain with 1 GNO per validator and a small amount of xDai for transaction costs.
+* [A Gnosis compatible wallet](/tools/wallets/) connected to Gnosis with 1 GNO per validator and a small amount of xDai for transaction costs.
 * Recent [Docker](https://www.docker.com) version (Docker v20.10+)
 * Docker compose 2.2.3 (_note default version installed with apt-get may give an error_). To fix:
 
@@ -236,7 +236,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
    __
    1. `NUM` The number of signing keys (validators) to generate.
    2. `START_NUM` Index for the first validator key. If this is the first time generating keys with this mnemonic, use 0. If keys were previously generated with this mnemonic, use the subsequent index number (eg, if 4 keys have been generated before (keys #0, #1, #2, #3, then enter 4 here).
-   3. `WITHDRAWAL_ADDRESS`  Use this parameter to provide a regular Gnosis Chain `0x` address for mGNO withdrawal. This parameter can also be omitted to generate withdrawal credentials with the mnemonic-derived withdrawal public key in the [EIP-2334 format](https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters) (Eth2 address format). Withdrawals will not be available until after the merge.
+   3. `WITHDRAWAL_ADDRESS`  Use this parameter to provide a regular Gnosis `0x` address for mGNO withdrawal. This parameter can also be omitted to generate withdrawal credentials with the mnemonic-derived withdrawal public key in the [EIP-2334 format](https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters) (Eth2 address format). Withdrawals will not be available until after the merge.
    4. `/path/to/` should be replaced with a valid and existing path where you want to create the validator\_keys folder. Or, to create the validator\_keys folder in your current working directory, use `$(PWD)/validator_keys:/app/validator_keys`
    5. More details about command line arguments can be found[ here.](https://github.com/gnosischain/validator-data-generator/)
 
@@ -286,7 +286,7 @@ The instructions below frequently reference external dos that make frequent ment
 
 ### Prysm
 
-The Prysm client has been modified slightly. The underlying go-ethereum library used for execution layer block hash calculation is adapted to account for a different block structure. No other changes are made to the client, however, **the original Prysm binary will not work as expected for the Gnosis Chain - use the binary below**.
+The Prysm client has been modified slightly. The underlying go-ethereum library used for execution layer block hash calculation is adapted to account for a different block structure. No other changes are made to the client, however, **the original Prysm binary will not work as expected for Gnosis - use the binary below**.
 
 ```bash
 git clone https://github.com/gnosischain/prysm-launch.git gbc
@@ -298,7 +298,7 @@ git clone https://github.com/gnosischain/prysm-launch.git gbc
 
 The Lighthouse client natively supports Gnosis Beacon Chain. Further instructions are using officially distributed binaries and docker images.
 
-Lighthouse is a secure and fast consensus layer client built byy sigma prime. Lighthouse natively supports Gnosis chain since the 2.1.2 release. [View the Lighthouse docs here](https://lighthouse-book.sigmaprime.io/). [Link to Lighthouse Repository](https://github.com/sigp/lighthouse)
+Lighthouse is a secure and fast consensus layer client built byy sigma prime. Lighthouse natively supports Gnosis since the 2.1.2 release. [View the Lighthouse docs here](https://lighthouse-book.sigmaprime.io/). [Link to Lighthouse Repository](https://github.com/sigp/lighthouse)
 :::note
 If you have errors, ensure that your decrypt key is correct in the earlier steps (it is case sensitive). The previous command imports the keys from `/home/<user>/gbc/keys/validator_keys` to `/home/<user>/gbc/validators` .  After importing, it's a good idea to archive the old keystores from `/home/<user>/gbc/keys/validator_keys` somewhere safe. 
 :::
@@ -315,7 +315,7 @@ git clone https://github.com/gnosischain/nimbus-launch.git gbc
 
 ### Teku
 
-Teku client natively supports Gnosis chain and requires Java 11+. [See the Teku docs here to view setup instructions](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Installation-Options/Install-Binaries/).
+Teku client natively supports Gnosis and requires Java 11+. [See the Teku docs here to view setup instructions](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Installation-Options/Install-Binaries/).
 
 ## Step 3) Run the Beacon Chain node with the attached Validator Process
 
@@ -344,9 +344,9 @@ Once your node has synced (can take a few hours depending on setup) and the node
 ##
 
 
-## Connect to a GC Node
+## Connect to a Gnosis Node
 
-If you choose not to use the public RPC and want to connect to a different Gnosis Chain node ([including a 3rd party provider](/node/execution-layer-validator)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
+If you choose not to use the public RPC and want to connect to a different Gnosis node ([including a 3rd party provider](/node/execution-layer-validator)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
 
 :::note
 If you are having issues connecting to a public RPC, you can try some of the other endpoints listed [here](/tools/rpc/).
@@ -361,6 +361,6 @@ Use comma-separated RPC urls for the `XDAI_RPC_URL` variable to set fallback IPs
 
 ### Sharing machines for GC and GBC clients
 
-If you decide to run a Gnosis Chain client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
+If you decide to run a Gnosis client (Nethermind) and a Gnosis Beacon Chain client (Lighthouse or Prysm) on the same machine, we recommend [running both in the same docker-compose.yml ](https://docs.docker.com/compose/extends/)file to enable RPC access by container name.
 
 If you have questions about config details for this type of setup, please [ask in our discord](https://discord.gg/VQb3WzsywU).

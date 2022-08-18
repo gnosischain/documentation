@@ -14,15 +14,15 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 ## Key Information
 
-[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](./amb-bridge.md) and thus relies on the same group of [Trusted Bridge Validators](./amb-bridge.md#bridge-validators) and trust model as the AMB. 
+[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. 
 
 The Omnibridge currently connects Gnosis to Ethereum and Binance Smart Chain.
 
 The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://github.com/ethereum/EIPs/issues/677) token standard, with all bridged tokens tracked in the canonical [Bridged Token Registries](#bridged-token-registries). 
 
 References: 
-* [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
-* [xDai Docs: Omnibridge FAQs](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-faqs)
+* [xDai Docs: Omnibridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge)
+* [xDai Docs: Omnibridge FAQs](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-faqs)
 
 ### Overview
 
@@ -37,7 +37,7 @@ References:
 
 References: 
 
-* [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
+* [xDai Docs: Omnibridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge)
 
 ### Key Contracts
 
@@ -72,33 +72,33 @@ References:
 | Max Single Deposit |                    |                    |
 
 References: 
-* [Daily Bridge Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+* [Daily Bridge Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 
 Todo: 
 - [ ] Update with new values after governance decision
 
 ### Bridge Validators
 
-Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](./amb-bridge.md#bridge-validators) as the Omnibridge is built on top of the AMB. 
+Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) as the Omnibridge is built on top of the AMB. 
 
 References: 
-* [xDai Docs: Omnibridge Validators](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
+* [xDai Docs: Omnibridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
 
 ### Bridge Governance
 
-* See [Bridge Governance](../governance.md)
+* See [Bridge Governance](/bridges/governance)
 
 References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+- [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
+- [xDai Docs: Bridge Daily Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
 
 ### Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 
 References: 
 
-* [xDai Docs: Dai & Stablecoin Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
+* [xDai Docs: Dai & Stablecoin Compounding](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
 * [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
 
 ### Analytics
@@ -112,13 +112,13 @@ References:
 
 ![](/img/bridges/diagrams/token-bridge.svg)
 
-The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md). 
+The Omnibridge is built on top of the [Arbitrary Message Bridge](/bridges/tokenbridge/amb-bridge). 
 
-The Omnibridge does not allow the [bridging of rebasing tokens and inflationary tokenns](https://developers.gnosischain.com/for-users/bridges/omnibridge/exceptions). 
+The Omnibridge does not allow the [bridging of rebasing tokens and inflationary tokenns](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/exceptions). 
 
 References: 
 
-* [xDai Docs: Exceptions and Special Cases](https://developers.gnosischain.com/for-users/bridges/omnibridge/exceptions)
+* [xDai Docs: Exceptions and Special Cases](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge/exceptions)
 * [TokenBridge Docs: Diagrams showing how Omnibridge works](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals)
 * [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/413)_(also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
 
@@ -129,9 +129,9 @@ References:
 
 ### Multiple Representations
 
-In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis Chain, even if the underlying asset is the same. 
+In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis, even if the underlying asset is the same. 
 
-For example, there are two different representations of USDC on Gnosis Chain: 
+For example, there are two different representations of USDC on Gnosis: 
 
 | Asset              |  Token Contract                                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------ |
@@ -142,7 +142,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ### Earning Yield on Bridge Deposits
 
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
 
 ## Managing Bridge Contracts
 
@@ -158,13 +158,13 @@ References:
 
 References: 
 
-* [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators)
-* [xDai Docs: Bridge Node Setup](https://developers.gnosischain.com/for-validators/for-bridge-validators/bridge-node-setup)
-* [xDai Docs: How to add a new Bridge Validator](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
+* [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators)
+* [xDai Docs: Bridge Node Setup](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators/bridge-node-setup)
+* [xDai Docs: How to add a new Bridge Validator](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
 * [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 
 ## Resources
 
-- [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
+- [xDai Docs: Omnibridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/omnibridge)
 - [TokenBridge Docs: Omnibridge](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension)
 - [Diagrams showing how Omnibridge works](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals)

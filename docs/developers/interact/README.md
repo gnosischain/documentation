@@ -1,4 +1,4 @@
 --- 
 ---
 
-# Interacting with the Gnosis Chain
+# Interacting with Gnosis
