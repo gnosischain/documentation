@@ -1,0 +1,63 @@
+<mxfile host="65bd71144e">
+    <diagram id="1EBe2tYzhHy3d0gjnNcR" name="Page-1">
+        <mxGraphModel dx="1960" dy="1223" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="42" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=18;direction=south;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry y="20" width="380" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="1. approve()" style="edgeStyle=none;html=1;labelBackgroundColor=none;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry y="18" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="" style="edgeStyle=none;html=1;labelBackgroundColor=#FFFFFF;fontSize=18;fontColor=#F7F7F7;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;labelBackgroundColor=#FFFFFF;fontSize=18;fontColor=#F7F7F7;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="edgeStyle=none;html=1;labelBackgroundColor=#FFFFFF;fontSize=18;fontColor=#F7F7F7;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;font style=&quot;font-size: 13px&quot;&gt;2. relayTokens()&lt;/font&gt;" style="edgeStyle=none;html=1;labelBackgroundColor=none;" parent="1" source="2" target="43" edge="1">
+                    <mxGeometry x="-0.1424" y="-31" relative="1" as="geometry">
+                        <mxPoint x="30" y="250" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="&amp;nbsp;User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="105" width="40" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Token Contract" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="97.5" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;font style=&quot;font-size: 13px&quot;&gt;relay to other side&lt;/font&gt;" style="edgeStyle=none;html=1;entryX=0.885;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;" edge="1" parent="1" source="7" target="42">
+                    <mxGeometry x="0.0225" y="12" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Bridge Contract" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="410" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;font style=&quot;font-size: 13px&quot;&gt;3. transferFrom()&lt;br&gt;4. name(), symbol(), decimals()&lt;br&gt;&lt;/font&gt;" style="edgeStyle=none;html=1;labelBackgroundColor=none;" parent="1" source="43" target="3" edge="1">
+                    <mxGeometry x="0.1907" y="-96" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; display: inline ; float: none&quot;&gt;5. requireToPassMessage()&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="edgeStyle=none;html=1;labelBackgroundColor=none;fontSize=13;" parent="1" source="43" target="7" edge="1">
+                    <mxGeometry x="-0.039" y="-82" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="Mediator Contract" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="132.5" y="253.75" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Basic Mediator Example" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="30" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
