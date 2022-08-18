@@ -4,9 +4,9 @@
 # Deposits
 
 :::caution
-Deposits occur on Gnosis. **If you have GNO on Ethereum mainnet, you will need to bridge it to GC**.
+Deposits occur on Gnosis. **If you have GNO on Ethereum mainnet, you will need to bridge it to Gnosis**.
 
-* [Use the OmniBridge](https://omni.gnosischain.com/bridge) to move GNO from Ethereum to GNO on GC.
+* [Use the OmniBridge](https://omni.gnosischain.com/bridge) to move GNO from Ethereum to GNO on Gnosis.
 * Add Gnosis to your wallet with [https://chainlist.org/](https://chainlist.org) or [with these manual instructions](/tools/wallets/metamask).
 :::
 
