@@ -1,7 +1,7 @@
 ---
 title: DAOs
 description: DAOs integrated with Gnosis Chain
-keywords: [Gnosis, Chain, Crypto, Ethereum, DAOHaus, Colony, LexDAO, Raid Guild, DAOSquare, Aragon, PrimeDAO, DXDAO, Peerion, Bright DAO, Gardens] 
+keywords: [Gnosis, Chain, Crypto, Ethereum, DAOHaus, Gnosis Safe, Colony, LexDAO, Raid Guild, DAOSquare, Aragon, PrimeDAO, DXDAO, Peerion, Bright DAO, Gardens] 
 ---
 
 # DAOs
@@ -9,6 +9,11 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, DAOHaus, Colony, LexDAO, Raid Guild,
 ## DAOHaus
 The no code platform for launching magic internet communities
 https://daohaus.club/
+
+## Gnosis Safe
+The most trusted platform to manage digital assets on Ethereum
+https://gnosis-safe.io/
+
 
 ## Colony
 The best way to build your DAO
