@@ -65,6 +65,11 @@ References:
 | Bridge Fees       | 0%                 | 0%                 |
 | Daily Limit Reset | 00:00 UTC          | 00:00 UTC          |
 #### Single Transaction Limits
+
+:::warning
+Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want native xDai, use the [xDai Bridge](xdai-bridge)
+:::
+
 | Token  | Ethereum -> Gnosis | Gnosis -> Ethereum |
 |--------|--------------------|--------------------|
 | Dai*** | 1,000,000,000      | 1,000,000,000      |
@@ -86,12 +91,7 @@ References:
 | GNO    | No Limit           | 5000               |
 | Eth    | No Limit           | 250 wEth           |
 
-##### ***Bridging Dai Using Omnibridge
-:::warning
-Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want native xDai, use the [xDai Bridge](xdai-bridge)
-:::                                           
-
-
+*** Bridging Dai Using Omnibridge
 ### Current Bridge Validators
 | Address                                                                                                                | Organization Name |
 |------------------------------------------------------------------------------------------------------------------------|-------------------|
@@ -102,11 +102,9 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 | [0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a](https://gnosisscan.io/address/0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a) | Cow Protocol      |
 | [0x5333588897CE6DE00031dC30CD2d6881e5C517Fb](https://gnosisscan.io/address/0x5333588897CE6DE00031dC30CD2d6881e5C517Fb) | Gnosis Safe       |
 
-
 ### Bridge Governance
 
 * See [Bridge Governance](../governance.md)
-
 
 ### Bridge Revenue
 
@@ -130,7 +128,7 @@ If the requested withdrawal amount exceeds the reserve balance, then the request
 - [Dune Analytics: Bridge Gas Fees](https://dune.com/maxaleks/Bridge-gas-fees)
 - [Dune Analytics on Omnibridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges)
 
-## How it works
+## Bridge Design
 
 ![](/img/bridges/diagrams/token-bridge.svg)
 ### Ethereum -> Gnosis
@@ -141,6 +139,7 @@ If the requested withdrawal amount exceeds the reserve balance, then the request
 5.  `executeAffirmation` is called on the bridge contract by a validator and signatures are collected.  
 6. When enough signatures have been collected, the message is relayed to the mediator contract
 7. If the token being bridged does not yet have a representation on the Home network, the mediator contract will deploy a new token registry for it for it and mint the relayed amount to the address specified. If the token registry already exists, the target address is minted the required amount.
+
 ![](/img/bridges/diagrams/token-bridge-withdraw.svg)
 ### Gnosis -> Ethereum
 1. User calls `transferAndCall` method on ERC-677 token contract to send tokens to bridge contract
@@ -204,10 +203,7 @@ A partial token list of inflationary tokens is included below:
 | Cream ETH 2             | CRETH2 | 0xcbc1065255cbc3ab41a6868c22d1f1c573ab89fd |
 | Binance ETH staking     | BETH   | 0x250632378e573c6be1ac2f97fcdf00515d0aa91b |
 
-
-
 </details>
-
 
 Additional References: 
 
@@ -235,7 +231,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](../../about/overview/about-gnosis-dao.md) to fund Gnosis development. 
 
-## Managing Bridge Contracts
+## Managing the Bridge
 
 Bridge administrators can perform 4 groups of operations with the xDai bridge. All operations are performed by owners of the Multisignature Wallet which requires several accounts to confirm the operation transaction. 
 
@@ -244,27 +240,29 @@ Bridge administrators can perform 4 groups of operations with the xDai bridge. A
 | ETH Mainnet | [0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)  |
 | Gnosis      | [0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://gnosisscan.io/address/0x0d3726e5a9f37234d6b55216fc971d30f150a60f) |
 
-### Example Administrative Action Flow:
+### Interacting with Bridge Contracts
+
 1. One of the multisig wallet owners encodes the method call with a set of parameters (if any). For example, this can be done with the [ABI Encoding Service](https://abi.hashex.org/).
 2. The encoded sequence of bytes is used to create a transaction for the multisig wallet contract. This is done with the `submitTransaction()` method of the multisig wallet contract. The method raises the event `Submission` containing the index of the registered transaction. The index is shared with the other owners of the wallet.
 3. The rest of the owners confirm the transaction by invoking `confirmTransaction` from the multisig wallet contract. As soon as enough confirmations are received, the method encoded in step 1 is invoked automatically. This is important because adequate gas limits must be set for that transaction and for the set of confirmations sent by the wallet owner finalizing the operation.
 4. If the method is not invoked because the gas limit is exceeded, the owners can execute the confirmed transaction manually by sending `executeTransaction()`.  
 This process can vary depending on the action being taken.  
 
-### Upgrading a Contract
+### Upgrading Bridge Contract
 There are two possible scenarios for how the bridge or validators contracts can be upgraded:
-* a security fix when only the contract implementation is changed
-* an improvement when the contract implementation upgrade requires initialization of storage values.  
-A more detailed explanation can be found on the [xDai Bridge page](xdai-bridge). The steps are the same but the contract addresses differ. 
+* Security fix when only the contract implementation is changed
+* Improvement when the contract implementation upgrade requires initialization of storage values.  
 
+A more detailed explanation can be found on the [xDai Bridge page](./xdai-bridge.md). The steps are the same but the contract addresses differ. 
 
-## Managing Bridge Validators
+### Managing Bridge Validators
+
 Bridge validators are separate from chain validators, and currently composed of a subset of Gnosis Chain validators. This is a dynamic set, as the bridge governors can vote to increase the current set as well as propose and vote on other bridge related measures.  
 After a ballot is finalized, the new validator is added to the bridge management multisignature wallets (one on each side of the bridge).
 The submitter will execute these methods: `addValidator` and (optionally if the voting threshold is to be changed) the `setRequiredSignatures` method. After encoding the data for each of these methods, it is sent to each contract (one on either side of the bridge) using the `submitTransaction()` execution method.
 
 :::info
-Before starting, current validators should determine (through Slack or other means):
+Before starting, current validators should determine:
 1. Who will add the new validator (the submitter)
 2. Coordinate a time when the other validators will confirm the transaction, as the bridge will be stopped to complete the upgrade.
 3. Ask the Omnibridge team to add a new bridge validator to the Certifier contract and confirm it has been added. This enables the node to relay bridge transactions with zero gas price.
