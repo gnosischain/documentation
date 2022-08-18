@@ -1,4 +1,7 @@
 --- 
+title: Using Remix and MetaMask
+description: Using Remix and Metamask with Gnosis Chain
+keywords: [Remix, MetaMask, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide]
 ---
 
 # Using Remix and Metamask
@@ -39,4 +42,4 @@ Follow the directions in the diagram below:
 
 ![Diagram3](deploying-remix.drawio.png)
 
-Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
+Visit our [Contract Verification Page](/developers/verify/) for more documentation on verification tools.
