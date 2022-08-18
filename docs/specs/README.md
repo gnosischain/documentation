@@ -7,7 +7,7 @@
 
 | Block Size | Block Speed | Gas price | Patchset | Native token | Network ID |
 | ---------- | ----------- | -------- | -------- | ------------ | ---------- |
-| 30M gas    | 5 sec  | check [gas price oracle](/tools/oracles/gas-price) | London | xDai | 100 (hexa 0x64) |
+| 30M gas    | 5 sec  | check [gas price oracle](/tools/oracles/gas-price) | London | [xDai](/about/tokens/xdai) | 100 (hexa 0x64) |
 
 
 <!-- TODO: replace this links with the post merge info -->
