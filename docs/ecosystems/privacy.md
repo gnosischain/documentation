@@ -3,5 +3,3 @@ title: Privacy
 ---
 
 # DAOs
-
-# as

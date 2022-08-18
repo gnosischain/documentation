@@ -98,11 +98,11 @@ const sidebars = {
     'ecosystems/README',
     'ecosystems/daos',
     'ecosystems/defi',
-    'ecosystems/zero-knowledge',
-    'ecosystems/privacy',
-    'ecosystems/nfts',
     'ecosystems/games',
+    'ecosystems/nfts',
+    'ecosystems/privacy',
     'ecosystems/tools-resources',
+    'ecosystems/zero-knowledge',
   ],
 
   developers: [
