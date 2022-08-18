@@ -5,7 +5,7 @@
 
 ## Strategy
 
-- For Gnosis Chain, there should just be one bridge that transfers Dai, Tokens, and Data (special hook for native xDai)
+- For Gnosis, there should just be one bridge that transfers Dai, Tokens, and Data (special hook for native xDai)
 - Bridge Validators can just run the same docker image for all types of tokens
 - Bridge Governance would govern all tokens
 
@@ -18,8 +18,8 @@
     - Get rid of the `how to see pending transactions`?
 - Should each of the Native Bridges have their own section (possibly be governed separately?)
 - Should AMB Bridge have separate section for
-  - Ethereum -> Gnosis Chain AMB (and Omnibridge)
-  - BNB Chain -> Gnosis Chain AMB (and Omnibridge)
+  - Ethereum -> Gnosis AMB (and Omnibridge)
+  - BNB Chain -> Gnosis AMB (and Omnibridge)
 
 ## xDai Bridge
 
@@ -38,15 +38,15 @@ Docs to Merge
 - [ ] Managing Bridge Validators
   - Should convert links into documentation
 - [ ] What is the address 0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd do?
-	- [ ] Owner of the Validator Management proxy on Gnosis Chain
+	- [ ] Owner of the Validator Management proxy on Gnosis
 - Overall
-  - - [ ] Synthesize [xDai Bridge Docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
+  - - [ ] Synthesize [xDai Bridge Docs](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/converting-xdai-via-bridge)
   - [ ] Synthesize [Tokenbridge xDai Docs](https://docs.tokenbridge.net/xdai-bridge/about)
   - [ ] Does xDai Bridge have an ALM? No
 
 ## Arbitrary Message Bridge
 
-- [ ] Zodiac module for DAOs - L2 to L1 sending of data from Gnosis Chain to Ethereum
+- [ ] Zodiac module for DAOs - L2 to L1 sending of data from Gnosis to Ethereum
 - [ ] Synthesize AMB docs from Tokenbridge
 ## Omnibridge
 

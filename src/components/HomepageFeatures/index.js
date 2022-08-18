@@ -4,44 +4,33 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    //Svg: require('@site/static/img/').default,
-    description: (
-      <>
-        ABC
-      </>
-    ),
+    title: 'Tutorials',
+    link: '/developers',
+    Svg: require('@site/static/img/home/tutorials.svg').default,
   },
   {
-    title: 'Focus on What Matters',
-    //Svg: require('@site/static/img/').default,
-    description: (
-      <>
-        DEF
-      </>
-    ),
+    title: 'Tools',
+    link: '/tools',
+    Svg: require('@site/static/img/home/tools.svg').default,
   },
   {
-    title: 'Powered by React',
-    //Svg: require('@site/static/img/').default,
-    description: (
-      <>
-        GHI
-      </>
-    ),
+    title: 'Run your node',
+    link: '/node',
+    Svg: require('@site/static/img/home/node.svg').default,
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, link}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+      <a href={link}>
+        <div className="text--center">
+          <Svg className={styles.featureSvg} role="img" />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <h3>{title}</h3>
+        </div>
+      </a>
     </div>
   );
 }

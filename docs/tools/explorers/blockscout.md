@@ -3,7 +3,7 @@
 
 # BlockScout
 
-BlockScout is a full-featured, open-source explorer for Gnosis Chain and many other chains. [The Gnosis Chain explorer is available here](https://blockscout.com/xdai/mainnet).
+BlockScout is a full-featured, open-source explorer for Gnosis and many other chains. [The Gnosis explorer is available here](https://blockscout.com/xdai/mainnet).
 
 With BlockScout you can:
 

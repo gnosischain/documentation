@@ -1,5 +1,5 @@
 --- 
-title: Why Gnosis Chain?
+title: Why Gnosis?
 ---
 
 TODO

@@ -103,7 +103,7 @@ export default function MetaMaskAddButton() {
           <p>Chain ID: {chainId}</p>
           <p><a href='#' onClick={getAccount}>Get account</a></p>
           <p>{account}</p>
-          <p> Now Add the GNO token!</p>
+          <p> Now Add the <a href={'/about/tokens/gno'} target="_blank">GNO token</a>!</p>
           <p><a href='#' onClick={addGno}>Add GNO</a></p>
           <p><a href={samplesLink} target="_blank">View all live samples code in Github.</a></p>
           <p> <a href={'/tools/beacon-chain/liquid-staking'} target="_blank">P.S.: Got GNO? Stake it!</a></p>

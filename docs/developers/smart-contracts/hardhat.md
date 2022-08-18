@@ -1,4 +1,7 @@
---- 
+---
+title: Using Hardhat
+description: Using Hardhat with Gnosis
+keywords: [Hardhat, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide] 
 ---
 
 # Using Hardhat
@@ -11,70 +14,63 @@ Follow the [Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getti
 
 1. Change the default Network to Gnosis.
 
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```tsx title="/packages/hardhat-ts/hardhat.config.ts"
+const defaultNetwork = 'chiado';
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
 ```tsx title="/packages/hardhat-ts/hardhat.config.ts"
 const defaultNetwork = 'gnosis';
 ```
+</TabItem>
+</Tabs>
 
 2. Update the config with Gnosis credentials
 
-```tsx showLineNumbers  title="/packages/hardhat-ts/hardhat.config.ts"
+```js showLineNumbers  title="hardhat.config.js"
     const config: HardhatUserConfig = {
-  defaultNetwork,
-  namedAccounts: {
-    deployer: {
-      default: 0, 
-    },
-  },
   networks: {
     localhost: {
       url: 'http://localhost:8545',
     },
     gnosis: {
-      // deprecated url: 'https://rpc.xdaichain.com/',
       url: 'https://rpc.gnosischain.com/',
       gasPrice: 1000000000,
       accounts: {
-        mnemonic: getMnemonic(),
+        mnemonic: Mnemonic,
+      },
+    },
+    chiado: {
+      url: 'https://rpc-chiado.gnosistestnet.com',
+      gasPrice: 1000000000,
+      accounts: {
+        mnemonic: Mnemonic,
       },
     },
   },
-  solidity: {
-    compilers: [
-      {
-        version: '0.8.6',
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 200,
-          },
-        },
-      },
-    ],
-  },
-  paths: {
-    cache: './generated/cache',
-    artifacts: './generated/artifacts',
-    deployments: './generated/deployments',
-  },
-  typechain: {
-    outDir: '../vite-app-ts/src/generated/contract-types',
-  },
 };
 ```
-:::note
-On line 17:
-```tsx 
-mnemonic: GetMnemonic()
-```
-```GetMnemonic()``` is a key management function of [Scaffold-ETH](https://docs.scaffoldeth.io/scaffold-eth/), an EVM stack for development.  
-:::
-
 
 3. Change the TNetworkInfo variable to gnosis
 
-```tsx title="/packages/[your-app]/hardhat.config.ts"
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
+
+```js title=hardhat.config.js
+export const targetNetworkInfo: TNetworkInfo = NETWORKS.chiado;
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
+```js title=hardhat.config.js
 export const targetNetworkInfo: TNetworkInfo = NETWORKS.gnosis;
 ```
+</TabItem>
+</Tabs>
 
 ## Compile your Gnosis contract
 
@@ -84,18 +80,44 @@ npx hardhat compile
 
 ## Deploy your Contract
 
-```npx hardhat run --network gnosis scripts/deploy.js```
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
 
-View your deployed contract any of the [explorers](/tools/explorers).
+```bash
+hardhat run --network chiado scripts/deploy.js
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
+```bash
+hardhat run --network gnosis scripts/deploy.js
+```
+</TabItem>
+</Tabs>
+
+View your deployed contract on any of the [explorers](/tools/explorers).
 
 Visit our [Tools page](/tools) for other support.
 
 ## Verify Contract
 
-``` hardhat --network gnosis sourcify ```
+<Tabs groupId="networks">
+<TabItem value="chiado" label="Chiado Testnet">
 
-Visit our [Contract Verfication Page](/developers/verify/) for more documentation on verification tools.
+```bash
+hardhat --network chiado sourcify
+```
+</TabItem>
+<TabItem value="gnosis" label="Gnosis Mainnet">
+
+```bash
+hardhat --network gnosis sourcify
+```
+</TabItem>
+</Tabs>
+
+Visit our [Contract Verification Page](/developers/verify/) for more documentation on verification tools.
 
 ## Additional Hardhat Documentation
 
-- Additonal Hardhat deployment documenation is located [here.](https://hardhat.org/hardhat-runner/docs/guides/deploying)
+- Additonal Hardhat deployment documentation is located [here.](https://hardhat.org/hardhat-runner/docs/guides/deploying)

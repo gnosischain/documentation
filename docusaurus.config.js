@@ -41,7 +41,7 @@ const config = {
             'https://github.com/gnosischain/documentation/tree/main',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
         gtag: {
           trackingID: 'G-YVPQSCP6S7', //staging trackingID
@@ -56,7 +56,7 @@ const config = {
     ({
       navbar: {
         logo: {
-          alt: 'Gnosis Chain Logo',
+          alt: 'Gnosis Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -146,7 +146,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Gnosis Chain.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Gnosis.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -179,7 +179,7 @@ const config = {
           ],
         },
       ],
-      [
+      [ 
         'ideal-image',
         /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
         ({
@@ -190,6 +190,9 @@ const config = {
           // Use false to debug, but it incurs huge perf costs
           disableInDev: true,
         }),
+      ],
+      [
+        require.resolve('docusaurus-plugin-sass'),{}
       ],
     ],
 };
