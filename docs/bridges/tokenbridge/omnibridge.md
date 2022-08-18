@@ -168,3 +168,7 @@ References:
 - [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
 - [TokenBridge Docs: Omnibridge](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension)
 - [Diagrams showing how Omnibridge works](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/extension-internals)
+
+placeholder so the links don't break:
+
+## Mediator Contracts

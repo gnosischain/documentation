@@ -19,14 +19,14 @@ The AMB currently supports Ethereum and Binance Smart Chain, and is part of the 
 ## Key Information
 
 ### Overview
-|                       | Detail                                                                |
-|-----------------------|-----------------------------------------------------------------------|
-| Frontend URL          | N/A                                                                   |
-| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)                       |
-| Governance            | [7-of-16 Multisig](#bridge-governance)                                |
-| Governance Parameters |                                                                       |
-| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/)                 |
-| Bug Reporting         | On the Immunefi site [here](https://immunefi.com/bounty/gnosischain/) |
+|                       | Detail                                                |
+|-----------------------|-------------------------------------------------------|
+| Frontend URL          | N/A                                                   |
+| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)       |
+| Governance            | [7-of-16 Multisig](#bridge-governance)                |
+| Governance Parameters |                                                       |
+| Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
+| Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
 
 
 
@@ -48,24 +48,20 @@ The [long-term roadmap](../roadmap.md) is to move towards [trustless bridges](..
 
 * See [Bridge Governance](../governance.md)
 
-References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
-
 ## Key Contracts
 
 ### Ethereum
 
-| Contract                            | Address                                    |
-|-------------------------------------|--------------------------------------------|
-| AMB/Omnibridge Multi-Token Mediator | 0x88ad09518695c6c3712AC10a214bE5109a655671 |
-| AMB Contract Proxy (Foreign)        | 0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e |
+| Contract                            | Address                                                                                                                                  |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| AMB/Omnibridge Multi-Token Mediator | [0x88ad09518695c6c3712AC10a214bE5109a655671](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract) |
+| AMB Contract Proxy (Foreign)        | [0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract) |
 
 ### Gnosis
-| Contract                            | Address                                    |
-|-------------------------------------|--------------------------------------------|
-| AMB/Omnibridge Multi-Token Mediator | 0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
-| AMB Contract Proxy (Home)           | 0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59 |
+| Contract                            | Address                                                                                                                                   |
+|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| AMB/Omnibridge Multi-Token Mediator | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
+| AMB Contract Proxy (Home)           | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
 
 ## How it works
 ### Terminology
@@ -100,8 +96,8 @@ function requireToPassMessage (address _contract,
 4. Message is relayed to the Foreign Bridge contract, and `executeSignatures()` is called
 5. Foreign bridge contract decodes the message and calls `foo()` on target contract
 
-AMB Bridge proxy contact on Ethereum can be viewed [here](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e)  
-AMB Bridge Proxy Contract and Gnosis can be viewed [here](https://blockscout.com/xdai/mainnet/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59)  
+[AMB Bridge proxy contact on Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract)  
+[AMB Bridge Proxy Contract in Gnosis](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract)  
 ### Security Considerations for Receiving a Call
 | Concern       | Remediation                                                                                                                                                                                                                                                                                                                    |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -111,7 +107,7 @@ AMB Bridge Proxy Contract and Gnosis can be viewed [here](https://blockscout.com
 
 ### Mediator Contracts
  
- A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20. For a more in-depth explanation, see the [Omnibridge page](omnibridge).  
+ A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20 token. For a more in-depth explanation, see the [Omnibridge page](omnibridge#mediator-contracts).  
 
 
 ### AMB Components
@@ -122,10 +118,10 @@ AMB Bridge Proxy Contract and Gnosis can be viewed [here](https://blockscout.com
 | DevOps | [Bridge monitoring](https://github.com/omni/tokenbridge/blob/master/monitor/README.md), [ALM](https://github.com/omni/tokenbridge/tree/master/alm), docker compose, ansible playbooks |
 | dApp Contracts | extensions (pair mediator contracts on both sides of the AMB), such as the Omnibridge |
 
-#### Bridge Modes
-* `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint wrapped ERC-667 tokens on the Home Network, and transfer ERC20 or ERC-667 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network. This is used by the [Omnibridge](omnibridge).
-* `ERC-TO-NATIVE` mode: The home network nodes must support consensus engine that allows using a smart contract for block reward calculation. This mode is used by the [xDai Bridge](xdai-bridge)
-* `ARBITRARY-MESSAGE` mode:  Invoke Home/Foreign Bridge to send a message that will be executed on the other Network as an arbitrary contract method invocation.
+### Uses of AMB
+* ERC-to-ERC Bridges: `AMB-ERC-TO-ERC` mode enables the transfer of ERC tokens to the Foreign Mediator, which will interact with Foreign AMB Bridge to mint wrapped ERC-667 tokens on the Home Network. Complimentarily, the mode enables the transfer ERC20 or ERC-667 tokens to the Home Mediator, which will interact with Home AMB Bridge to unlock ERC20 tokens on the Foreign network. This is used by the [Omnibridge](omnibridge).
+* ERC-to-Native Bridges: `ERC-TO-NATIVE` mode enables the user to send ERC20 tokens to the Foreign Bridge and receive native coins from the Home Bridge Complimentarily, then can send native coins to the Home Bridge to unlock ERC20 tokens from the Foreign Bridge. The home network nodes must support a consensus engine that allows using a smart contract for block reward calculation. This mode is used by the [xDai Bridge](xdai-bridge)
+* Message Passing: `ARBITRARY-MESSAGE` mode enables the capability to invoke a Home/Foreign Bridge contract to send a message that will be executed on the other Network. This can be an arbitrary contract method invocation.
 
 
 ## Managing Bridge Contracts
@@ -146,7 +142,7 @@ AMB Bridge Proxy Contract and Gnosis can be viewed [here](https://blockscout.com
   - sends assets to Bridge contracts:
     - in `ERC-TO-NATIVE` mode: send ERC20 tokens to the Foreign Bridge to receive native coins from the Home Bridge, send native coins to the Home Bridge to unlock ERC20 tokens from the Foreign Bridge;
     - in `ARBITRARY-MESSAGE` mode: Invoke Home/Foreign Bridge to send a message that will be executed on the other Network as an arbitrary contract method invocation;
-    - in `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home Network, transfer ERC20 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network.
+    - in `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home Network, and transfer ERC20 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network.
 
 ## Managing Bridge Validators
 Bridge admins can vote to add/remove validators. Read more about governance [here](../governance.md)
