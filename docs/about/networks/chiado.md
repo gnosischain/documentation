@@ -10,7 +10,7 @@ Chiado is the official testnet of Gnosis. It has the same execution layer, and i
 
 ### Fee token
 
-Name: `Chiado xDAI`
+Name: `Chiado xDai`
 
 Icon: <a href="/img/tokens/chiado-xdai.png"><img src="/img/tokens/chiado-xdai.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
