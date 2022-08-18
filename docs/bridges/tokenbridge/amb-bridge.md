@@ -67,6 +67,7 @@ The [long-term roadmap](../roadmap.md) is to move towards [trustless bridges](..
 ### Terminology
 * __Home (Native) Network__: Of the two networks being bridged between, the home or native network is the one with fast and inexpensive operations. All bridge operations to collect validator confirmations are performed on this side of the bridge.
 * __Foreign Network__: Can be any EVM chain, generally it refers to Ethereum.
+* __Originating Contract__: An arbitrary contract where the message originates, typically this is where the user interacts and requests for a function to be invoked on another network.
 
 ### Call a cross-chain method via AMB:
 
@@ -84,14 +85,14 @@ function requireToPassMessage (address _contract,
  ![](/img/bridges/diagrams/amb-bridge-contract-flow.png)
 
 #### Foreign Network -> Home Network
-1. User calls `foo()` on an originator contract
-2. Originator contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas. 
+1. User calls `foo()` on the originating contract
+2. Originating contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas. 
 3. `UserRequestForAffirmation` event is emitted, and listening validators relay the message to the Home side where signatures are collected
 4. `executeAffirmation()` is called on the Home Bridge contract by a validator once enough signatures are collected. 
 5. Home bridge contract decodes the message and calls `foo()` on the target contract. 
 #### Home Network -> Foreign Network
-1. User calls `foo()` on an originator contract
-2. Originator contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
+1. User calls `foo()` on an originating contract
+2. Originating contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
 3. Signatures are collected from validators, and once enough are collected `requireToConfirmMessage()` is called
 4. Message is relayed to the Foreign Bridge contract, and `executeSignatures()` is called
 5. Foreign bridge contract decodes the message and calls `foo()` on target contract
