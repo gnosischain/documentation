@@ -7,15 +7,11 @@ Follows the same process as deploying to Ethereum
 
 ---
 
-Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains. The required changes consist of directing deployment to the proper RPC and network id.
-
-- **RPC**: https://rpc.gnosischain.com ([more RPCs available here](/tools/rpc))
-- **Network_ID**: 100
-
+Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains. Check the [network specifications](/about/networks/).
 
 :::note
-You will also need a [small amount of Gnosis](/tools/faucets) to deploy a contract, and for any contract functions. There is no current Gnosis testnet, so your contracts will be live! 
-For testing purposes, it is recommended to first deploy to testnet. After functionality is tested and confirmed, deploy to Gnosis!
+You will also need a [small amount of Gnosis](/tools/faucets) to deploy a contract, and for any contract functions.
+For testing purposes, it is recommended to first deploy to [Chiado testnet](/about/networks/chiado). After functionality is tested and confirmed, deploy to Gnosis mainnet!
 :::
 
 ## Tutorials
@@ -24,7 +20,7 @@ In general you can choose almost any development environment you wish as they al
 
 ### Hardhat Deployment
 
-Following the [Official Hardhat documentation](https://hardhat.org/hardhat-runner/docs/guides/project-setup),
+Following the [Official Hardhat documentation](https://hardhat.org/hardhat-runner/docs/guides/project-setup), also how to [configure Hardhat to Gnosis](/developers/smart-contracts/hardhat).
 
 - For Gnosis network Config, you have to export an object from ```hardhat.config.js```
 
