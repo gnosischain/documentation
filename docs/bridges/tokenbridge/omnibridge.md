@@ -152,13 +152,22 @@ The Omnibridge currently generates bridge revenue through [earned yield on stabl
 
 The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
 
-### Exceptions and Special Cases
+### Mediator Contracts
+To handle the approval of token transfers, the Omnibridge makes use of what is called a mediator contract. 
+![](/img/bridges/diagrams/amb-bridge-contract-flow-mediator.svg)
+1. User calls token contract's `approve()` function to approve the balance to be transferred.
+2. `relayTokens()` is called on the Mediator contract
+3. Mediator calls `transferFrom()` on the token contract, transferring the approved balance
+4. If this is the first time that token is being bridged to the destination network, it will also query the token's name, symbol and decimals so a new contract can be deployed on the destination network
+5. Mediator contract then calls `requireToPassMessage()` on the bridge contract
+
+## Exceptions and Special Cases
 
 While most tokens can be freely transferred between chains, there are several exceptions where token properties create bridge-related issues.  
 * Bridge operations are disabled for Rebasing tokens.
 * Inflationary tokens can still be bridged, but any accrued inflation IS NOT returned to the user upon bridge exit. 
 
-#### Rebasing Tokens
+### Rebasing Tokens
 Rebasing tokens include an elastic function where supply can be increased or decreased at regular intervals. If these tokens are bridged, supply impacts could result in inequities on either side of the bridge. In some cases this could result in a bridge balance reduction and the inability for users to exit.
 To prevent this, we have disabled bridging capability for rebasing type tokens. A partial token list is included below:
 
@@ -186,7 +195,7 @@ To prevent this, we have disabled bridging capability for rebasing type tokens. 
 
 </details>
 
-#### Inflationary (Staking) Tokens
+### Inflationary (Staking) Tokens
 Inflationary tokens accrue additional value over time. While they are locked in the bridge contract this value will accrue, but will remain on the balance of the bridge upon exit. Inflation will not be returned to a user's balance. This maintains the 1 to 1 ratio of bridged tokens necessary for OmniBridge functionality.
 Users are free to bridge these tokens but need to be aware that any accrued inflation will not be added to their balances. Usage of the accumulated inflation will be determined at a later time by bridge governors.
 A partial token list of inflationary tokens is included below:
