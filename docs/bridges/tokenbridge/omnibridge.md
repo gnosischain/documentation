@@ -297,3 +297,5 @@ Before starting, current validators should determine:
 
 Additional steps for adding a validator can be found [here](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
 
+
+
