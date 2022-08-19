@@ -45,11 +45,11 @@ References:
 | Admin Multisignature Wallet   | [eth:0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)                   |
 
 #### Gnosis
-| Contract                      | Gnosis Address                                                                                                                                                   |
-|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Proxy Contract                | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy#address-tabs) |
-| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                         |
-| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://blockscout.com/xdai/mainnet/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)              |
+| Contract                      | Gnosis Address                                                                                                                                                     |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Proxy Contract                | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy#address-tabs)   |
+| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
+| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://blockscout.com/xdai/mainnet/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
 | Admin Multisignature Wallet   | [gno:0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://blockscout.com/xdai/mainnet/address/0x0D3726e5a9f37234D6B55216fC971D30F150a60F/transactions#address-tabs) |
 
 References: 
@@ -78,12 +78,12 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 
 | Organization | Gnosis Address                                                                                                                           |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| GnosisDao    |  [gno:0x32e6C5e2132792B407424EBa19e48668Ebf80B14](https://blockscout.com/xdai/mainnet/address/0x32e6C5e2132792B407424EBa19e48668Ebf80B14) |
-| Protofire    |  [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://blockscout.com/xdai/mainnet/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051) |
-| CowProtocol  |  [gno:0xF81A2768BEDB8Ab805A2DF5Fb7D58685C224b9b6](https://blockscout.com/xdai/mainnet/address/0xF81A2768BEDB8Ab805A2DF5Fb7D58685C224b9b6) |
+| GnosisDao    | [gno:0x97630e2ae609d4104abda91f3066c556403182dd](https://blockscout.com/xdai/mainnet/address/0x97630e2ae609d4104abda91f3066c556403182dd) |
+| Protofire    | [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://blockscout.com/xdai/mainnet/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051) |
+| CowProtocol  | [gno:0x587c0d02b40822f15f05301d87c16f6a08aaddde](https://blockscout.com/xdai/mainnet/address/0x587c0d02b40822f15f05301d87c16f6a08aaddde) |
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://blockscout.com/xdai/mainnet/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
-| GnosisSafe   | [gno:0xebd33d099Dd31D32923f0A033Df6F7FC264Ef214](https://blockscout.com/xdai/mainnet/address/0xebd33d099Dd31D32923f0A033Df6F7FC264Ef214) |
-| Syncnode     |  [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
+| GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://blockscout.com/xdai/mainnet/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
+| Syncnode     | [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
 
 References: 
 * [xDai Docs: Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#current-xdai-bridge-validators)
@@ -178,6 +178,13 @@ References:
 There are two possible scenarios for how the bridge or validators contracts can be upgraded:
 * a security fix when only the contract implementation is changed
 * an improvement when the contract implementation upgrade requires initialization of storage values.
+
+#### Basic Process
+![](/img/bridges/diagrams/xdaibridge-contract-mgmt.svg)
+1. One of the multisig wallet owners ABI encodes a method call with parameters (if any). This can be done with the [ABI Encoding Service](https://abi.hashex.org/). The encoded sequence of bytes is used to create a transaction for the multisig wallet contract. This is done with the `submitTransaction` method of the multisig wallet contract.
+2. The method raises the event `Submission` containing the index of the registered transaction. The index is shared with the other owners of the wallet.
+3. The rest of the owners confirm the transaction by invoking `confirmTransaction` from the multisig wallet contract.
+4.  As soon as enough confirmations are received, the method encoded in step 1 is invoked automatically. This is important because adequate gas limits must be set for that transaction and set of confirmations sent by the wallet owner finalizing the operation. If the method is not invoked because the gas limit is exceeded, the owners can execute the confirmed transaction manually by sending `executeTransaction`. 
 
 #### Security Upgrade
 1. Deploy a new implementation of the bridge or validators contract.
