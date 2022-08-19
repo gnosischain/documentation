@@ -17,7 +17,7 @@ https://gnosis-safe.io/
 
 ## Colony
 The best way to build your DAO
-[colony.io](colony.io)
+https://colony.io
 
 ## LexDAO
 The decentralized legal engineering guild
