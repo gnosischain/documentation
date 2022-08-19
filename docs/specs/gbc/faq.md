@@ -40,11 +40,11 @@ mGNO is the staking token used by validators in the Gnosis Beacon Chain.
 
 ### How do I get mGNO?
 
-mGNO is typically wrapped behind the scenes during a deposit. If you need extra mGNO to top off a balance for example, you can access the previous swap UI at [https://gbc-deposit-old.herokuapp.com/](https://gbc-deposit-old.herokuapp.com). Go to the **Swap Tab** to swap GNO to mGNO on the Gnosis Chain.
+mGNO is typically wrapped behind the scenes during a deposit. If you need extra mGNO to top off a balance for example, you can access the previous swap UI at [https://gbc-deposit-old.herokuapp.com/](https://gbc-deposit-old.herokuapp.com). Go to the **Swap Tab** to swap GNO to mGNO on Gnosis.
 
 ![](/img/node/swap-12.png)
 
-You must have GNO on the Gnosis Chain (**not on the Ethereum mainnet**) to convert to mGNO. You can move GNO from Ethereum to Gnosis Chain using the [OmniBridge](https://omni.gnosischain.com/bridge).
+You must have GNO on the Gnosis (**not on the Ethereum mainnet**) to convert to mGNO. You can move GNO from Ethereum to Gnosis using the [OmniBridge](https://omni.gnosischain.com/bridge).
 
 ### How much mGNO do I need to stake to become a validator?
 
@@ -60,15 +60,15 @@ No, not currently. Once withdrawals are activated, mGNO will be swapped back to 
 
 Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](/node/#what-is-meant-by-consensus-layer-and-execution-layer). DAppNode will initially support the Prysm implementation only.
 
-### How long does it take to sync the Gnosis Chain?
+### How long does it take to sync the Gnosis?
 
-Along with running the GBC client you can also consider running a Gnosis Chain Node to connect with (_optional - recommended for experienced node runners only_).
+Along with running the GBC client you can also consider running a Gnosis Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis Chain using Nethermind](/node/execution-layer-validator) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing the [Gnosis using Nethermind](/node/execution-layer-validator) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
-### Can I use a node provider to run a Gnosis Chain node?
+### Can I use a node provider to run a Gnosis node?
 
-Yes you can. Providers who currently support Gnosis Chain:
+Yes you can. Providers who currently support Gnosis:
 
 * **QuikNode** [https://blog.quiknode.io/xdai-network-is-live-on-quiknode/](https://blog.quicknode.com/xdai-network-is-live-on-quiknode/)
 * **Ankr** [https://www.ankr.com/](https://www.ankr.com/protocol/public/gnosis/)
@@ -103,7 +103,7 @@ Withdrawals are currently not available, even if you've accidentally sent extra 
 
 ### What types of addresses can be used for withdrawals? EOA, contact, Gnosis Safe, proxy, stub?
 
-**Yes!** It should be safe to use any type of supported withdrawal credentials, either an ETH EVM - `eth1` - address (i.e. Gnosis Chain address) or a BLS credential.
+**Yes!** It should be safe to use any type of supported withdrawal credentials, either an ETH EVM - `eth1` - address (i.e. Gnosis address) or a BLS credential.
 
 For BLS withdrawal credentials, make sure to keep the mnemonic phrase from the key generation process. Once withdrawals are enabled, you will need to use it to sign a withdrawal request message.
 

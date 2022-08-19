@@ -7,7 +7,7 @@
 
 Bounties are an important tool for testing and enhancing application and contract security. We appreciate the skilled hackers and programmers within the community and believe in rewarding those working to protect and strengthen the ecosystem. Working in partnership with [Immunefi](https://immunefi.com/),  we will be releasing additional bounties in the near future, and invite the community to help identify any possible exploits we may have missed.
 
-Security is the #1 priority of the Gnosis Chain team. This bounty program is not being enacted in response to any know exploits, we are proactively implementing to ensure safety and soundness of our applications and protect users and their funds.
+Security is the #1 priority of the Gnosis team. This bounty program is not being enacted in response to any know exploits, we are proactively implementing to ensure safety and soundness of our applications and protect users and their funds.
 
 ## OmniBridge Bounty
 

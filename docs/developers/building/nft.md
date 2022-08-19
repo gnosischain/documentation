@@ -38,7 +38,7 @@ NFTs are not necessarily ERC-721 tokens, they can also be [ERC-1155](https://eip
 If you're looking for a way to create NFTs without coding, check out [Nifty.Ink](https://nifty.ink/explore)
 :::
 
-For this walk through, we're going to be using [Hardhat](https://hardhat.org/).
+For this walk through, we're going to be using [Hardhat](https://hardhat.org/) ([configure it with Gnosis](/developers/smart-contracts/hardhat#config-hardhat-for-gnosis)).
 
 ## Prerequisites 
 To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/developers/building/first-contract).
@@ -221,4 +221,4 @@ To deploy, run:
 ```bash
 npx hardhat run scripts/deploy.js --network gnosis
 ```
-Congrats, you have deployed a basic ERC-721 contract to Gnosis Chain! If you like, you can build out a front end to view your NFT. For now, you can view your token in [Blockscout](https://blockscout.com/xdai/mainnet/). 
+Congrats, you have deployed a basic ERC-721 contract to Gnosis! If you like, you can build out a front end to view your NFT. For now, you can view your token in [Blockscout](https://blockscout.com/xdai/mainnet/). 

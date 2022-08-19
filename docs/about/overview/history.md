@@ -6,4 +6,4 @@ TODO
 
 References: 
 
-- [xDai Docs: History](https://developers.gnosischain.com/about-gc/faqs/xdai-chain-basics#history)
+- [xDai Docs: History](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/xdai-chain-basics#history)
