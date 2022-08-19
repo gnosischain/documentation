@@ -197,7 +197,7 @@ To prevent this, we have disabled bridging capability for rebasing type tokens. 
 ### Inflationary (Staking) Tokens
 Inflationary tokens accrue additional value over time. While they are locked in the bridge contract this value will accrue, but will remain on the balance of the bridge upon exit. Inflation will not be returned to a user's balance. This maintains the 1 to 1 ratio of bridged tokens necessary for OmniBridge functionality.
 Users are free to bridge these tokens but need to be aware that any accrued inflation will not be added to their balances. Usage of the accumulated inflation will be determined at a later time by bridge governors.
-A partial token list of inflationary tokens is included below:
+A partial token list of inflationary tokens is included below:  
 
 <details>
     <summary>Click to View List</summary>
