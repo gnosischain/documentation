@@ -98,14 +98,13 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 | [0x459A3bd49F1ff109bc90b76125533699AaAAf9A6](https://gnosisscan.io/address/0x459A3bd49F1ff109bc90b76125533699AaAAf9A6) | Protofire         |
 | [0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d) | Giveth            |
 | [0x19aC7c69e5F1AC95b8d49b30Cbb79e81f1ab0dba](https://gnosisscan.io/address/0x19ac7c69e5f1ac95b8d49b30cbb79e81f1ab0dba) | Syncnode          |
-| [0x9adB7385B598843c36Fa057e45BC70542516E35d](https://gnosisscan.io/address/0x9adB7385B598843c36Fa057e45BC70542516E35d) | GnosisDAO         |
-| [0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a](https://gnosisscan.io/address/0x13F3912ea00878cdB63EE5F02cF8Ab65988efd2a) | Cow Protocol      |
-| [0x5333588897CE6DE00031dC30CD2d6881e5C517Fb](https://gnosisscan.io/address/0x5333588897CE6DE00031dC30CD2d6881e5C517Fb) | Gnosis Safe       |
-* [Daily Bridge Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
+| [0x9adB7385B598843c36Fa057e45BC70542516E35d](https://gnosisscan.io/address/0x9adB7385B598843c36Fa057e45BC70542516E35d) | GnosisDAO *        | 
+| [0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
+| [0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
 
 ### Bridge Validators
 
-Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) as the Omnibridge is built on top of the AMB. 
+Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](amb-bridge#bridge-validators) as the Omnibridge is built on top of the AMB. 
 
 References: 
 * [xDai Docs: Omnibridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
@@ -198,7 +197,7 @@ To prevent this, we have disabled bridging capability for rebasing type tokens. 
 ### Inflationary (Staking) Tokens
 Inflationary tokens accrue additional value over time. While they are locked in the bridge contract this value will accrue, but will remain on the balance of the bridge upon exit. Inflation will not be returned to a user's balance. This maintains the 1 to 1 ratio of bridged tokens necessary for OmniBridge functionality.
 Users are free to bridge these tokens but need to be aware that any accrued inflation will not be added to their balances. Usage of the accumulated inflation will be determined at a later time by bridge governors.
-A partial token list of inflationary tokens is included below:
+A partial token list of inflationary tokens is included below:  
 
 <details>
     <summary>Click to View List</summary>
