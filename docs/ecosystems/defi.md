@@ -1,7 +1,7 @@
 ---
 title: DeFi
 description: Decentralized Finance DApps on Gnosis Chain
-keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance, Swapr, Xion Finance, UniCrypt Network, pNetwork, Deus Finance DAO, Mixsome, Agave, Hedgey, DeBank, CLV, DxSale, Rubic, Fraction, Minerva, Curve, UniDex, Cowswap, CryptEx Locker,] 
+keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance, Swapr, Xion Finance, UniCrypt Network, pNetwork, Deus Finance DAO, Mixsome, Agave, Hedgey, DeBank, CLV, DxSale, Rubic, Fraction, Minerva, Curve, UniDex, Cowswap, CryptEx Locker, Tornado Cash, Elk Finance, Synapse Network, apy vision, DeHive, DeFi Watch, DeFi Yield, Carrot, Autofarm Network, OpenOcean, Li Finance] 
 ---
 
 # DeFi DApps
@@ -105,3 +105,43 @@ https://cryptexlock.me/
 ## Tornado Cash
 Non-custodial anonymous transactions 
 [tornado.cash](tornado.cash)
+
+## Elk Finance
+Decentralized network for cross-chain liquidity. Any chain, anytime, anywhere.
+[https://linktr.ee/elk_finance](https://linktr.ee/elk_finance)
+
+## Synapse Network
+The centre of DeFi revolution. Connect with all the major networks thanks to our cross-chain technology
+[synapse.network](synapse.network)
+
+## APY Vision
+Historical P+L tool in DeFi for tracking your LP & rewards cross-chain.
+[apy.vision](apy.vision)
+
+## DeHive
+Create and grow your tokenized portfolios
+[dehive.finance](dehive.finance)
+
+## DeFi Watch
+The best way to make money in DeFi. Track perfomance of your crypto portfolio and find the best opportunities to earn more in DeFi.
+[defi.watch](defi.watch)
+
+## DEFIYIELD
+Asset Management Dashboard secured by a Security Blockchain.
+[https://defiyield.app/](https://defiyield.app/)
+
+## Carrot
+Carrot grants permissionless access to create community-driven programmable incentives, distributing rewards when set criteria are met.
+[carrot.eth.limo](carrot.eth.limo)
+
+## Autofarm
+One-stop DeFi platform | Lowest fee Multi-chain DEX & yield aggregator
+[autofarm.network](autofarm.network)
+
+## OpenOcean
+The leading DEX Aggregator, offering the best swap returns across 17 chains. 
+[openocean.finance](openocean.finance)
+
+## Li.Finance
+Developer Solution Providing Advanced Bridge Aggregation with DEX Connectivity 
+[li.fi](li.fi)

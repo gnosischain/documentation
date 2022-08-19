@@ -100,9 +100,8 @@ const sidebars = {
     'ecosystems/defi',
     'ecosystems/games',
     'ecosystems/nfts',
-    'ecosystems/privacy',
     'ecosystems/tools-resources',
-    'ecosystems/zero-knowledge',
+    'ecosystems/infrastructure'
   ],
 
   developers: [
