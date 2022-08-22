@@ -8,7 +8,8 @@ on:
   push:
     branches:
       - main
-      - dev
+      - release
+      - feature/release-ci
   # Launches build when release is published
   release:
     types: [published]
@@ -49,6 +50,16 @@ jobs:
           yarn install
           pip install awscli --upgrade --user
 
+      - name: Configure Staging Google Analytics ID
+        if: github.ref == 'refs/heads/main'
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
+
+      - name: Configure Prod Google Analytics ID
+        if: (github.ref == 'refs/heads/release') || (github.ref == 'refs/heads/feature/release-ci')
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
+
       - name: Build app
         run: yarn build
 
@@ -60,24 +71,31 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
       # Script to deploy to staging environment
-      # https://guardians.staging.gnosisdev.com
       - name: 'Deploy to S3: Staging'
         if: github.ref == 'refs/heads/main'
         run: |
           aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/staging/current --exclude "*.html" --cache-control max-age=0,no-cache,no-store,public
           aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/staging/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+
       # Script to package release files
       - name: 'Package release version'
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/releases/${{ github.event.release.tag_name }} --delete --exclude "*.html" --cache-control max-age=31536000,public
           aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/releases/${{ github.event.release.tag_name }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-      # Script to prepare production deployments
-      # https://guardians.gnosis-safe.io
-      - name: 'Prepare production deployment flow'
-        if: success() && startsWith(github.ref, 'refs/tags/v')
-        run: bash ./scripts/github/production_deployment.sh
-        env:
-          PROD_DEPLOYMENT_HOOK_TOKEN: ${{ secrets.PROD_DEPLOYMENT_HOOK_TOKEN }}
-          PROD_DEPLOYMENT_HOOK_URL: ${{ secrets.PROD_DEPLOYMENT_HOOK_URL }}
-          VERSION_TAG: ${{ github.event.release.tag_name }}
+
+      # Script to deploy to release environment
+      - name: 'Deploy to S3: Release'
+        if: (github.ref == 'refs/heads/relase') || (github.ref == 'refs/heads/feature/release-ci')
+        run: |
+          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*.html" --cache-control max-age=31536000,public
+          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+
+      # # Script to prepare production deployments
+      # - name: 'Prepare production deployment flow'
+      #   if: success() && startsWith(github.ref, 'refs/tags/v')
+      #   run: bash ./scripts/github/production_deployment.sh
+      #   env:
+      #     PROD_DEPLOYMENT_HOOK_TOKEN: ${{ secrets.PROD_DEPLOYMENT_HOOK_TOKEN }}
+      #     PROD_DEPLOYMENT_HOOK_URL: ${{ secrets.PROD_DEPLOYMENT_HOOK_URL }}
+      #     VERSION_TAG: ${{ github.event.release.tag_name }}
