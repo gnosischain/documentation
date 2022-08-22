@@ -9,7 +9,6 @@ on:
     branches:
       - main
       - release
-      - feature/release-ci
   # Launches build when release is published
   release:
     types: [published]
@@ -52,7 +51,7 @@ jobs:
 
       - name: Build app
         run: yarn build
-        if: (github.ref == 'refs/heads/release') || (github.ref == 'refs/heads/feature/release-ci')
+        if: github.ref == 'refs/heads/release'
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
 
@@ -79,7 +78,7 @@ jobs:
 
       # Script to deploy to release environment
       - name: 'Deploy to S3: Release'
-        if: (github.ref == 'refs/heads/relase') || (github.ref == 'refs/heads/feature/release-ci')
+        if: github.ref == 'refs/heads/relase'
         run: |
           aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*.html" --cache-control max-age=31536000,public
           aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
