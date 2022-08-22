@@ -32,9 +32,9 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-The AMB bridge relies on a trusted group of [AMB Bridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#current-amb-bridge-validators), who are known Gnosis community members. 
+The AMB bridge relies on a trusted group of [AMB Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-amb-bridge-validators), who are known Gnosis community members. 
 
-You can see the [current list of AMB & Omnibridge Validators](https://github.com/gnosischain/xdaichain.com/tree/master/for-validators/for-bridge-validators#amb-omnibridge). 
+You can see the [current list of AMB & Omnibridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#amb-omnibridge). 
 
 The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
 
@@ -45,8 +45,8 @@ The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges]
 ## Key Contracts
 
 References: 
-- [xDai Docs: Bridge Governance Board](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/bridge-daily-limits)
+- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
+- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 
 ### Ethereum
 

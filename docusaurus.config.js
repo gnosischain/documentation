@@ -66,12 +66,12 @@ const config = {
             sidebarId: 'about',
             label: 'About',
           },
-          {
+          /*{
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'userguide',
             label: 'User Guide',
-          },
+          },*/
           {
             type: 'docSidebar',
             position: 'left',

@@ -7,7 +7,7 @@ title: Connext Bridge
 - Analytics: https://connextscan.io/gnosis
 
 References: 
-- [xDai Docs: Connext Bridge](https://github.com/gnosischain/xdaichain.com/tree/master/for-users/bridges/xdai-matic-connext-bridge)
+- [xDai Docs: Connext Bridge](https://developers.gnosischain.com/for-users/bridges/xdai-matic-connext-bridge)
 
 TODO: 
 - [ ] Bridge Addresses

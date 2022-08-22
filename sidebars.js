@@ -23,7 +23,7 @@ const sidebars = {
         //'about/overview/why-gnosis-chain',
         //'about/overview/history',
         //'about/overview/roadmap',
-        'about/overview/about-gnosis-dao',
+        //'about/overview/about-gnosis-dao',
         'about/overview/community',
         'about/overview/media-kit',
       ]
@@ -105,9 +105,9 @@ const sidebars = {
     'ecosystems/daos',
     'ecosystems/defi',
     'ecosystems/games',
+    'ecosystems/infrastructure',
     'ecosystems/nfts',
     'ecosystems/tools-resources',
-    'ecosystems/infrastructure'
   ],
 
   developers: [
@@ -159,7 +159,8 @@ const sidebars = {
         //"developers/building/testnet-deployment",
       ],
     },
-    {
+    'developers/bridging/basics',
+    /*{
       type: 'category',
       label: 'Bridging to Ethereum',
       collapsed: true,
@@ -169,7 +170,7 @@ const sidebars = {
         "developers/bridging/bridging-data",
         "developers/bridging/bridging-dai",
       ],
-    },
+    },*/
     {
       type: 'category',
       label: 'Verify Contracts',
