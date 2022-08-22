@@ -50,17 +50,13 @@ keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance
 
 * [Hedgey](https://hedgey.finance/): Financial infrastructure for DAO treasuries. Escrowless OTC. D2D Swaps. Time-locked token distributions and more
 
-* [CLV](https://clv.org/): Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable. Infrastructure made ready for scaling dApps in the multi-chain universe.
-
 * [Carrot](https://carrot.eth.limo): Carrot grants permissionless access to create community-driven programmable incentives, distributing rewards when set criteria are met
 
-* [CryptEx Locker](https://cryptexlock.me/): We protect funds from rugs and team abuse
+* [CryptEx Locker](https://cryptexlock.me/): We protect funds from rugs and team 
+abuse
 
-* [Synapse](https://synapse.network): The centre of DeFi revolution. Connect with all the major networks thanks to our cross-chain technology
+ * [Circles](https://joincircles.net): A UBI system for communities
 
-* [pnetwork](https://p.network/): A multi-chain routing protocol for DeFi, NFTs & gaming 
-
-* [CelerNetwork](https://celer.network): Building the best inter-blockchain and cross-layer communication platform
 
 ## Lending
 
@@ -84,7 +80,7 @@ keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance
 
 * [APY Vision](https://apy.vision): Historical P+L tool in DeFi for tracking your LP & rewards cross-chain
 
-## Token
+## Tokens
 
 * [Minerva Wallet SuperToken](https://docs.minerva.digital/miva-and-xdai-chain/miva-token): Streamable utility token for Minerva Wallet Users
 

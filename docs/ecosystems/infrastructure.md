@@ -18,39 +18,22 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, 1Hive, WrapETH, Punk Domains, Origin
 
 * [Origin Trail](https://origintrail.io/): Organize your most important assets making them discoverable and verifiable using the groundbreaking decentralized network.
 
+* [Streamr](https://streamr.network): The decentralized P2P real-time data pub/sub network
 
-# Wrappers
+* [Request](https://request.network): The open network for all payment requests 
+
+* [Hopr](https://hoprnet.org): Changing Data Privacy For Good
+
+
+## Wrappers
 
 * [WrapEth](https://wrapeth.com/): xDai wrapper to convert native xDai to wrapped wxDai
 
-## Punk Domains
-Get domain extensions for your DAO or NFT community
-[punk.domains](https://punk.domains)
+## Development
 
+* [Punk Domains](https://punk.domains): Get domain extensions for your DAO or NFT community
 
+* [DAppNode](https://dappnode.io): DAppNode is an OS and hardware to advance decentralization, taking complexity out of hosting nodes & DApps
 
-## Streamr Network
-The decentralized P2P real-time data pub/sub network
-[streamr.network](https://streamr.network)
+* [Cardstack](https://cardstack.com): Building the Collaborative OS for Web3
 
-
-
-## Hopr
-Changing Data Privacy For Good
-[hoprnet.org](https://hoprnet.org)
-
-## DAppNode
-DAppNode is an OS and hardware to advance decentralization, taking complexity out of hosting nodes & DApps
-[dappnode.io](https://dappnode.io)
-
-## Circles
-A UBI system for communities
-[joincircles.net](https://joincircles.net)
-
-## Cardstack
-Building the Collaborative OS for Web3
-[cardstack.com](https://cardstack.com)
-
-## Request
-The open network for all payment requests 
-[request.network](https://request.network)
