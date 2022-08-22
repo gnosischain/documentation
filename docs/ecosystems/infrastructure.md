@@ -6,33 +6,34 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, 1Hive, WrapETH, Punk Domains, Origin
 
 # Infrastructure
 
-## 1Hive
-A community of web3 builders
-[1hive.org](https://1hive.org)
+## Networks
 
-## WrapEth
-xDai wrapper to convert native xDai to wrapped wxDai
-[wrapeth.com](https://wrapeth.com/)
+* [CLV](https://clv.org/): Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable. Infrastructure made ready for scaling dApps in the multi-chain universe.
+
+* [Synapse](https://synapse.network): The centre of DeFi revolution. Connect with all the major networks thanks to our cross-chain technology
+
+* [pnetwork](https://p.network/): A multi-chain routing protocol for DeFi, NFTs & gaming 
+
+* [CelerNetwork](https://celer.network): Building the best inter-blockchain and cross-layer communication platform
+
+* [Origin Trail](https://origintrail.io/): Organize your most important assets making them discoverable and verifiable using the groundbreaking decentralized network.
+
+
+# Wrappers
+
+* [WrapEth](https://wrapeth.com/): xDai wrapper to convert native xDai to wrapped wxDai
 
 ## Punk Domains
 Get domain extensions for your DAO or NFT community
 [punk.domains](https://punk.domains)
 
-## Origin Trail
-The ecosystem behind the Decentralized Knowledge Graph
-[origintrail.io](https://origintrail.io/)
+
 
 ## Streamr Network
 The decentralized P2P real-time data pub/sub network
 [streamr.network](https://streamr.network)
 
-## Orchid
-Keep your data private and access content anywhere! Download our VPN to protect your privacy and explore the Internet freely
-[orchid.com](https://orchid.com)
 
-## Colony
-The best way to build your DAO
-[colony.io](https://colony.io)
 
 ## Hopr
 Changing Data Privacy For Good
