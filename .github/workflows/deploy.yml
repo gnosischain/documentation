@@ -50,18 +50,11 @@ jobs:
           yarn install
           pip install awscli --upgrade --user
 
-      - name: Configure Staging Google Analytics ID
-        if: github.ref == 'refs/heads/main'
-        env:
-          GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
-
-      - name: Configure Prod Google Analytics ID
+      - name: Build app
+        run: yarn build
         if: (github.ref == 'refs/heads/release') || (github.ref == 'refs/heads/feature/release-ci')
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
-
-      - name: Build app
-        run: yarn build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
