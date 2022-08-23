@@ -14,11 +14,11 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, DAOHaus, Gnosis Safe, Colony, LexDAO
 
 * [Aragon](https://andao.aragon.org/): Build your Decentralized Autonomous Organization on open-source infrastructure with governance plugins
 
-* [Gardens](https://t.co/cyzuXlywAd): Gardens are composable, sufficiently decentralized, and self-improving DAOs.
+* [Gardens](https://t.co/cyzuXlywAd): Gardens are composable, sufficiently decentralized, and self-improving DAOs
 
 ## Development
 
-* [1Hive]((https://1hive.org): A community of web3 builders
+* [1Hive](https://1hive.org): A community of web3 builders
 
 * [DAOSquare](https://daosquare.io/): Incubator for Web3
 

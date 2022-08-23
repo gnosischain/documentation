@@ -86,4 +86,4 @@ abuse
 
 * [Fraction](https://fraction.fyi/): A streamable xDai-Token with a total supply of 1
 
-* [Dx](https://dx.app): Mint and launch your tokens with no coding required in minutes across 16 blockchain networks 
+* [Dx](https://dx.app): Mint and launch your tokens with no coding required in minutes across 16 blockchain networks

@@ -8,7 +8,7 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 
 ## Marketplaces
 
-* [Unique One Network](https://uniqueone.network): A multichain DeFi-enabled network of NFT Marketplaces with Metaverse integration.
+* [Unique One Network](https://uniqueone.network): A multichain DeFi-enabled network of NFT Marketplaces with Metaverse integration
 
 * [Foundation](https://foundation.app/): NFT artist marketplace
 
@@ -17,7 +17,7 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 
 ## Infrastructure
 
-* [POAP](https://poap.xyz): POAPs are digital mementos, minted in celebration of life's remarkable moments.
+* [POAP](https://poap.xyz): POAPs are digital mementos, minted in celebration of life's remarkable moments
 
 * [NFT Calendar](https://nftcalendar.io): The first NFT Calendar
 
