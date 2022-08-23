@@ -6,51 +6,36 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, OmniBridge, xDai Bridge, HopProtocol
 
 # Tools and Resources
 
-## OmniBridge
-ERC20 Token Bridge, Ethereum -> xDai, BSC -> xDai
-[omni.gnosischain.com](https://omni.gnosischain.com/)
+## Data Analytics and Tracking
 
-## xDai Bridge
-Dai -> xDai bridge
-[bridge.gnosischain.com](https://bridge.gnosischain.com/)
+* [Dune Analytics](https://dune.com): Cross-chain dashboard creator
 
-## HopProtocol
-A protocol for sending tokens across rollups and their shared layer-1 network in a quick and trustless manner
-[hop.exchange](https://hop.exchange)
+* [DIA](https://diadata.org): DIA is an end-to-end, open-source data platform for Web3
 
-## Dune Analytics
-Cross-chain dashboard creator
-[dune.com](https://dune.com)
+* [DEX Screener](https://dexscreener.com/xdai): Tracking and charting your favorite DEX in realtime
 
-## Connext
-Connext powers fast, secure bridging between blockchains and L2s for composable, trust-minimized value
-[connext.network](https://connext.network)
+* [Zapper](https://zapper.fi/): Zapper is your home to Web3. Track your wallets. Follow other wallets. Discover NFTs, DAOs, DeFi...
 
-## DIA
-DIA is an end-to-end, open-source data platform for Web3
-[diadata.org](https://diadata.org)
+## Bridges
 
-## CelerNetwork
-Building the best inter-blockchain and cross-layer communication platform
-[celer.network](https://celer.network)
+* [OmniBridge](https://omni.gnosischain.com/): ERC20 Token Bridge, Ethereum -> xDai, BSC -> xDai
 
+* [xDai Bridge](https://bridge.gnosischain.com/): Dai -> xDai bridge
 
-## Elk Bridge
-ElkNet - Cross-Chain Bridge
-[app.elk.finance](https://app.elk.finance)
+* [Connext](https://connext.network): Connext powers fast, secure bridging between blockchains and L2s for composable, trust-minimized value
 
-## PolyBridge
-polyBridge from Poly Network
-[bridge.poly.network](https://bridge.poly.network/)
+* [Elk Bridge](https://app.elk.finance): ElkNet - Cross-Chain Bridge
 
-## XP.NETWORK
-The world’s most powerful NFT bridge. Go multichain effortlessly
-[xp.network](https://xp.network)
+* [PolyBridge](https://bridge.poly.network/): polyBridge from Poly Network
 
-## DEX Screener
-Tracking and charting your favorite DEX in realtime
-[dexscreener.com/xdai](https://dexscreener.com/xdai)
+* [XP.NETWORK](https://xp.network): The world’s most powerful NFT bridge. Go multichain effortlessly
 
-## Zapper
-Zapper is your home to Web3. Track your wallets. Follow other wallets. Discover NFTs, DAOs, DeFi...
-[zapper.fi/](https://zapper.fi/)
+## Privacy and Identity
+
+* [Orchid](https://orchid.com): Keep your data private and access content anywhere! Download our VPN to protect your privacy and explore the Internet freely
+
+* [HopProtocol](https://hop.exchange): A protocol for sending tokens across rollups and their shared layer-1 network in a quick and trustless manner
+
+* [Tornado Cash](https://tornado.cash): Non-custodial anonymous transactions 
+
+* [Bright DAO](https://www.brightid.org/): Decentralized proof of unique humanity

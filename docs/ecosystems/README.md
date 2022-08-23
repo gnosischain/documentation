@@ -4,9 +4,7 @@ title: Overview
 
 # Ecosystem Overview
 
-These pages can give you a view of the Gnosis DApp Ecosystem!
-
-To get started, start viewing DApp pages on the left to find something you may use!
+These pages can give you a view of some of the [Gnosis DApp Ecosystem](https://gnosischain.world/).
 
 <div class="row">
 <box href="/ecosystems/daos" title="Metamask" />

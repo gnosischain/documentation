@@ -6,143 +6,84 @@ keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance
 
 # DeFi DApps
 
-## Honeyswap
-Honeyswap is a Decentralized Exchange
-[honeyswap.org](https://honeyswap.org)
+## Decentralized Exchanges (DEXes)
 
-## 1Hive
-A Community of web3 builders
-[1hive.io](https://1hive.io/#/farm)
+* [Sushi](https://sushi.com): Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform
 
-## Perpetual Protocol
-On-chain perpetual futures DEX with deep liquidity and builder-ready composability
-[perp.com](https://perp.com)
+* [Uniswap](https://app.uniswap.org/): Swap, earn, and build on the leading decentralized crypto trading protocol
 
-## Sushi
-Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform
-[sushi.com](https://sushi.com)
+* [Honeyswap](https://honeyswap.org): Honeyswap is a Decentralized Exchange
 
-## Bao Finance
-Stake Sushiswap and Baoswap LP tokens to earn BAO
-[bao.finance](https://bao.finance)
+* [Swapr](https://swapr.eth.limo/): Swapr is a multichain, governance-enabled Aitomated Market Maker (AMM) based on a fork of Uniswap, governed by DXDAO
 
-## Swapr
-Swapr is a multichain, governance-enabled AMM based on a fork of Uniswap, governed by DXDAO
-[swapr.eth.limo](https://swapr.eth.limo/)
+* [Rubic](https://rubic.exchange/): One-Click Cross-Chain Swap. Rubic can swap any of 15,000+ tokens, on and between 13 blockchains in one transaction
 
-## Xion Finance
-DEX Aggregator, Staking, Governance and Multi-Chain Launchpad Protocol
-[xion.finance](https://xion.finance)
+* [Cowswap](https://cowswap.exchange/): COWs (Coincidence of Wants) or MEV protected trades
+
+* [Symmetric](https://symmetric.finance): DeFi Trading And Portfolio Management
+
+* [Elk Finance](https://elk.finance/): Decentralized network for cross-chain liquidity. Any chain, anytime, anywhere.
+
+## DEX Aggregators
+
+* [1inch](https://1inch.io/): Optimize your trades across hundreds of DEXes on multiple networks
+
+* [Xion Finance](https://xion.finance): DEX Aggregator, Staking, Governance and Multi-Chain Launchpad Protocol
+
+* [UniDex](https://www.unidex.exchange/): The power to aggregate all activity in DeFi at your fingertips. We aggregate AMMs, derivatives, aggregators, and more for you
+
+* [LI.FI](https://li.fi): Developer Solution Providing Advanced Bridge Aggregation with DEX Connectivity 
+
+* [OpenOcean](https://openocean.finance): The leading DEX Aggregator, offering the best swap returns across 17 chains. 
+
+* [Autofarm](https://autofarm.network): One-stop DeFi platform | Lowest fee Multi-chain DEX & yield aggregator
+
+* [Curve](https://xdai.curve.fi/): Creating deep on-chain liquidity using advanced bonding curves
+
+## Derivatives
+
+* [Perp](https://perp.com): On-chain perpetual futures DEX with deep liquidity and builder-ready composability
+
+* [Deus](https://deus.finance): World-first decentralized bilateral OTC derivatives platform
+
+## Infrastructure
+
+* [Hedgey](https://hedgey.finance/): Financial infrastructure for DAO treasuries. Escrowless OTC. D2D Swaps. Time-locked token distributions and more
+
+* [Carrot](https://carrot.eth.limo): Carrot grants permissionless access to create community-driven programmable incentives, distributing rewards when set criteria are met
+
+* [CryptEx Locker](https://cryptexlock.me/): We protect funds from rugs and team 
+abuse
+
+ * [Circles](https://joincircles.net): A UBI system for communities
 
 
-## UniCrypt Network
-DeFi Services Provider
-[app.unicrypt.network](https://app.unicrypt.network)
+## Lending
 
-## pNetwork
-A multi-chain routing protocol for DeFi, NFTs & gaming
-[p.network](https://p.network/)
+* [Agave](https://agave.finance): A decentralized, non-custodial money market and lending protocol on Gnosis Chain
 
-## Deus Finance DAO
-World-first decentralized bilateral OTC derivatives platform.
-[deus.finance](https://deus.finance)
+## Yield Farming
 
-## Hedgey
-Financial infrastructure for DAO treasuries. Escrowless OTC. D2D Swaps. Time-locked token distributions and more
-[hedgey.finance](https://hedgey.finance/)
+* [Bao Finance](https://bao.finance): Stake Sushiswap and Baoswap LP tokens to earn BAO
 
-## Agave
-A decentralized, non-custodial money market and lending protocol on Gnosis Chain
-[agave.finance](https://agave.finance)
+* [Mixsome](https://mixsome.cash/): Create yield generating flows with DeFi Money Blocks
 
-## DeBank
-The leading Web3 portfolio tracker that supports the LARGEST number of DeFi protocols across 30+ chains.
-[Debank.com](https://Debank.com)
+* [DeHive](https://dehive.finance): Create and grow your tokenized portfolios
 
-## Mixsome
-Create yield generating flows with DeFi Money Blocks
-[mixsome.cash](https://mixsome.cash/)
+## Asset Management
 
-## CLV
-Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable. Infrastructure made ready for scaling dApps in the multi-chain universe.
-[clv.org](https://clv.org/)
+* [Debank.com](https://Debank.com): The leading Web3 portfolio tracker that supports the LARGEST number of DeFi protocols across 30+ chains
 
-## DxSale
-Mint and launch your tokens with no coding required in minutes across 16 blockchain networks 
-[dx.app](https://dx.app)
+* [DEFIYIELD](https://defiyield.app/): Asset Management Dashboard secured by a Security Blockchain
 
-## Rubic
-One-Click Cross-Chain Swap. Rubic can swap any of 15,000+ tokens, on and between 13 blockchains in one transaction
-[rubic.exchange](https://rubic.exchange/)
+* [DEFI WATCH](https://defi.watch): The best way to make money in DeFi. Track perfomance of your crypto portfolio and find the best opportunities to earn more in DeFi.
 
-## Fraction
-A streamable xDai-Token with a total supply of 1
-[fraction.fyi](https://fraction.fyi/)
+* [APY Vision](https://apy.vision): Historical P+L tool in DeFi for tracking your LP & rewards cross-chain
 
-## Minerva
-Streamable utility token for Minerva Wallet Users
-https://docs.minerva.digital/miva-and-xdai-chain/miva-token
+## Tokens
 
-## Curve
-Creating deep on-chain liquidity using advanced bonding curves
-[xdai.curve.fi](https://xdai.curve.fi/)
+* [Minerva Wallet SuperToken](https://docs.minerva.digital/miva-and-xdai-chain/miva-token): Streamable utility token for Minerva Wallet Users
 
-## UniDex
-The power to aggregate all activity in DeFi at your fingertips. We aggregate AMMs, derivatives, aggregators, and more for you.
-[unidex.exchange](https://www.unidex.exchange/)
+* [Fraction](https://fraction.fyi/): A streamable xDai-Token with a total supply of 1
 
-## Symmetric
-DeFi Trading And Portfolio Management
-[symmetric.finance](https://symmetric.finance)
-
-## Cowswap
-COWs (Coincidence of Wants) or MEV protected trades
-[cowswap.exchange](https://cowswap.exchange/)
-
-## CryptEx Locker
-We protect funs from rugs and team abuse
-[cryptexlock.me](https://cryptexlock.me/)
-
-## Tornado Cash
-Non-custodial anonymous transactions 
-[tornado.cash](https://tornado.cash)
-
-## Elk Finance
-Decentralized network for cross-chain liquidity. Any chain, anytime, anywhere.
-[linktr.ee/elk_finance](https://linktr.ee/elk_finance)
-
-## Synapse Network
-The centre of DeFi revolution. Connect with all the major networks thanks to our cross-chain technology
-[synapse.network](https://synapse.network)
-
-## APY Vision
-Historical P+L tool in DeFi for tracking your LP & rewards cross-chain.
-[apy.vision](https://apy.vision)
-
-## DeHive
-Create and grow your tokenized portfolios
-[dehive.finance](https://dehive.finance)
-
-## DeFi Watch
-The best way to make money in DeFi. Track perfomance of your crypto portfolio and find the best opportunities to earn more in DeFi.
-[defi.watch](https://defi.watch)
-
-## DEFIYIELD
-Asset Management Dashboard secured by a Security Blockchain.
-[defiyield.app](https://defiyield.app/)
-
-## Carrot
-Carrot grants permissionless access to create community-driven programmable incentives, distributing rewards when set criteria are met.
-[carrot.eth.limo](https://carrot.eth.limo)
-
-## Autofarm
-One-stop DeFi platform | Lowest fee Multi-chain DEX & yield aggregator
-[autofarm.network](https://autofarm.network)
-
-## OpenOcean
-The leading DEX Aggregator, offering the best swap returns across 17 chains. 
-[openocean.finance](https://openocean.finance)
-
-## Li.Finance
-Developer Solution Providing Advanced Bridge Aggregation with DEX Connectivity 
-[li.fi](https://li.fi)
+* [Dx](https://dx.app): Mint and launch your tokens with no coding required in minutes across 16 blockchain networks
