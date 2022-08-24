@@ -5,7 +5,7 @@
 
 Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains.
 
-Deploying your Ethereum Dapp on only takes you a few steps:
+Deploying your Ethereum Dapp on Gnosis only takes you a few steps:
 
 1. Direct deployment to the proper RPC by replacing the RPC address with a Gnosis specific ones
     - For further RPC information, please refer to the [RPC page](/tools/rpc/)
