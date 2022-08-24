@@ -45,37 +45,10 @@ module.exports = {
   /* ... rest of truffle-config */
 
   api_keys: {
-    etherscan: 'MY_API_KEY'
+    gnosisscan: 'MY_API_KEY'
   }
 }
 ```
-
-## Configure Gnosis
-
-:::danger Gnosisscan release
-This [pull request](https://github.com/rkalis/truffle-plugin-verify/pull/175) adds native Gnosis support to Truffle Verify. Before it is merged, configure gnosis as follow.
-:::
-
-Add the relevant settings to your truffle-config under `networks.gnosis.verify`.
-
-```js
-module.exports = {
-  /* ... rest of truffle-config */
-
-  networks: {
-    /* ... other networks */
-
-    gnosis: {
-      verify: {
-        apiUrl: 'https://api.gnosisscan.io/api',
-        apiKey: 'MY_API_KEY',
-        explorerUrl: 'https://gnosisscan.io/address',
-      }
-    }
-  }
-}
-```
-
 
 ## Useful links
 
