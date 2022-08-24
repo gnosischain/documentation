@@ -49,7 +49,13 @@ jobs:
           yarn install
           pip install awscli --upgrade --user
 
-      # This step is run when the tag is release-XXX
+      - name: Sets Google Analytics for main
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Setup Google Analytics ID for main"
+
       - name: Sets Google Analytics for release
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
