@@ -105,4 +105,4 @@ Liquid staking providers allow anyone to stake without running the infrastructur
 
 ## GNO Token Audit
 
-* [View the GNO Token v2.0.0 here ](https://hackmd.io/@verilog/gno-token-v2-audit)
+- [View the GNO Token v2.0.0 here](https://hackmd.io/@verilog/gno-token-v2-audit)
