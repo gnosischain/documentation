@@ -154,6 +154,11 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Gnosis.`,
       },
+      algolia: {
+        appId: 'KEY',
+        apiKey: 'KEY',
+        indexName: 'index',
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
