@@ -32,11 +32,10 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-The AMB bridge relies on a trusted group of [AMB Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-amb-bridge-validators), who are known Gnosis community members. 
+The AMB bridge relies on a trusted group of [AMB Bridge Validators](omnibridge#current-bridge-validators), who are known Gnosis community members. The same [validator set](omnibridge#current-bridge-validators) is used by the OmniBridge.
 
-You can see the [current list of AMB & Omnibridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#amb-omnibridge). 
 
-The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
+
 
 ### Bridge Governance
 
