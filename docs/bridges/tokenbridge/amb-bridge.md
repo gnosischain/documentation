@@ -32,9 +32,36 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-The AMB bridge relies on a trusted group of [AMB Bridge Validators](omnibridge#current-bridge-validators), who are known Gnosis community members. The same [validator set](omnibridge#current-bridge-validators) is used by the OmniBridge.
+For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
 
+### Current Bridge Validators
+<Tabs groupId="bridge-validators">
+<TabItem value="eth-gc" label="Eth <-> Gnosis">
 
+| GC Address                                                                                                                | Organization Name |
+|------------------------------------------------------------------------------------------------------------------------|-------------------|
+| [gno:0x459a3bd49f1ff109bc90b76125533699aaaaf9a6](https://gnosisscan.io/address/0x459a3bd49f1ff109bc90b76125533699aaaaf9a6) | Protofire         |
+| [gno:0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d) | Giveth            |
+| [gno:0x19aC7c69e5F1AC95b8d49b30Cbb79e81f1ab0dba](https://gnosisscan.io/address/0x19ac7c69e5f1ac95b8d49b30cbb79e81f1ab0dba) | Syncnode          |
+| [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde) | GnosisDAO         |
+| [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
+| [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
+</TabItem>
+
+<TabItem value="bnb-gno" label="Binance Smart Chain <-> Gnosis">
+
+| GC Address                                                                                                                | Organization Name |
+|------------------------------------------------------------------------------------------------------------------------|-------------------|
+| [gno:0x459a3bd49f1ff109bc90b76125533699aaaaf9a6](https://gnosisscan.io/address/0x459a3bd49f1ff109bc90b76125533699aaaaf9a6) | Protofire         |
+| [gno:0x105cd22ed3d089bf5589c59b452f9de0796ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d) | Giveth            |
+| [gno:0x19ac7c69e5f1ac95b8d49b30cbb79e81f1ab0dba](https://gnosisscan.io/address/0x19ac7c69e5f1ac95b8d49b30cbb79e81f1ab0dba) | Syncnode          |
+| [gno:0x9adb7385b598843c36fa057e45bc70542516e35d](https://gnosisscan.io/address/0x9adb7385b598843c36fa057e45bc70542516e35d) | GnosisDAO         |
+| [gno:0x13f3912ea00878cdb63ee5f02cf8ab65988efd2a](https://gnosisscan.io/address/0x13f3912ea00878cdb63ee5f02cf8ab65988efd2a) | Cow Protocol      |
+| [gno:0x5333588897ce6de00031dc30cd2d6881e5c517fb](https://gnosisscan.io/address/0x5333588897ce6de00031dc30cd2d6881e5c517fb) | Gnosis Safe       |
+
+</TabItem>
+
+</Tabs>
 
 
 ### Bridge Governance
