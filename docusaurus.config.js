@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Gnosis Chain',
   tagline: 'Documentation',
-  url: 'https://developers-portal.staging.gnosisdev.com',
+  url: 'https://docs.gnosischain.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -44,7 +44,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.scss'),
         },
         gtag: {
-          trackingID: 'G-YVPQSCP6S7', //staging trackingID
+          trackingID: process.env.GOOGLE_ANALYTICS_ID ?? 'G-YVPQSCP6S7', //staging by default
           anonymizeIP: true,
         },
       }),

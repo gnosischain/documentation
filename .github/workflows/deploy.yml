@@ -49,10 +49,9 @@ jobs:
           yarn install
           pip install awscli --upgrade --user
 
-      - name: Sets Google Analytics for main
+      - name: Sets Google Analytics
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
-        if: github.ref == 'refs/heads/main'
         run: |
           echo "Setup Google Analytics ID for main"
 
