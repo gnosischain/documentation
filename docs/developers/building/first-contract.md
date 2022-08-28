@@ -10,7 +10,7 @@ Follows the same process as deploying to Ethereum
 Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains. Check the [network specifications](/about/networks/).
 
 :::note
-You will also need a [small amount of Gnosis](/tools/faucets) to deploy a contract, and for any contract functions.
+You will also need a [small amount of xDai](/tools/faucets) to deploy a contract, and for any contract functions.
 For testing purposes, it is recommended to first deploy to [Chiado testnet](/about/networks/chiado). After functionality is tested and confirmed, deploy to Gnosis mainnet!
 :::
 
