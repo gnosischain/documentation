@@ -155,9 +155,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Gnosis.`,
       },
       algolia: {
-        appId: 'KEY',
-        apiKey: 'KEY',
-        indexName: 'index',
+        appId: process.env.ALGOLIA_ID ?? 'key',
+        apiKey: process.env.ALGOLIA_KEY ?? 'key',
+        indexName: process.env.ALGOLIA_INDEX ?? 'index',
       },
       prism: {
         theme: lightCodeTheme,
