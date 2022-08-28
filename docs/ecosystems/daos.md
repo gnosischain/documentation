@@ -6,51 +6,34 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, DAOHaus, Gnosis Safe, Colony, LexDAO
 
 # DAOs
 
-## DAOHaus
-The no code platform for launching magic internet communities
-https://daohaus.club/
+## Infrastructure
 
-## Gnosis Safe
-The most trusted platform to manage digital assets on Ethereum
-https://gnosis-safe.io/
+* [DAOHaus](https://daohaus.club/): The no code platform for launching magic internet communities
 
+* [Colony](https://colony.io): The best way to build your DAO
 
-## Colony
-The best way to build your DAO
-https://colony.io
+* [Aragon](https://andao.aragon.org/): Build your Decentralized Autonomous Organization on open-source infrastructure with governance plugins
 
-## LexDAO
-The decentralized legal engineering guild
-https://www.lexdao.coop/
+* [Gardens](https://t.co/cyzuXlywAd): Gardens are composable, sufficiently decentralized, and self-improving DAOs
 
-## Raid Guild
-A decentralized collective of mercenaries ready to slay your web3 product demons
-https://www.raidguild.org/
+## Development
 
-## DAOSquare
-Incubator for Web3
-https://daosquare.io/
+* [1Hive](https://1hive.org): A community of web3 builders
 
-## Aragon
-Build your Decentralized Autonomous Organization on open-source infrastructure with governance plugins
-https://andao.aragon.org/
+* [DAOSquare](https://daosquare.io/): Incubator for Web3
 
-## PrimeDAO
-Builder collective committed to systemic DeFi advancement
-https://www.prime.xyz/
+* [Raid Guild](https://www.raidguild.org/): A decentralized collective of mercenaries ready to slay your web3 product demons
 
-## DXDAO
-A soverign collective bringing decentralization to DeFi
-https://dxdao.eth.limo/
+## Legal
 
-## Peerion
-DAO-owned DeFi liquidity provider and staking service
-https://t.co/OgxRAV6CHB
+* [LexDAO](https://www.lexdao.coop/): The decentralized legal engineering guild
 
-## Bright DAO
-Decentralized proof of unique humanity
-https://www.brightid.org/
+## DeFi
 
-## Gardens
-Gardens are composable, sufficiently decentralized, and self-improving DAOs.
-https://t.co/cyzuXlywAd 
+* [Gnosis Safe](https://gnosis-safe.io/): The most trusted platform to manage digital assets on Ethereum
+
+* [DXDAO](https://dxdao.eth.limo/): A soverign collective bringing decentralization to DeFi
+
+* [PrimeDAO](https://www.prime.xyz/): Builder collective committed to systemic DeFi advancement
+
+* [Peerion](https://t.co/OgxRAV6CHB): DAO-owned DeFi liquidity provider and staking service

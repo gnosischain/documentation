@@ -101,3 +101,8 @@ Liquid staking providers allow anyone to stake without running the infrastructur
 - [GnosisDAO Governance Forum](https://forum.gnosis.io/)
 - [GNO Utility and Value Proposition](https://forum.gnosis.io/t/gno-utility-and-value-proposition/2344)
 - [Community](/about/overview/community)
+
+
+## GNO Token Audit
+
+- [GNO Token v2.0.0 Audit](https://hackmd.io/@verilog/gno-token-v2-audit) by Verilog Solutions

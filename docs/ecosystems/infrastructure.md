@@ -6,50 +6,34 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, 1Hive, WrapETH, Punk Domains, Origin
 
 # Infrastructure
 
-## 1Hive
-A community of web3 builders
-[1hive.org](https://1hive.org)
+## Networks
 
-## WrapEth
-xDai wrapper to convert native xDai to wrapped wxDai
-[wrapeth.com](https://wrapeth.com/)
+* [CLV](https://clv.org/): Substrate-based specialized Layer 1 chain that is EVM compatible and cross-chain interoperable. Infrastructure made ready for scaling dApps in the multi-chain universe.
 
-## Punk Domains
-Get domain extensions for your DAO or NFT community
-[punk.domains](https://punk.domains)
+* [Synapse](https://synapse.network): The centre of DeFi revolution. Connect with all the major networks thanks to our cross-chain technology
 
-## Origin Trail
-The ecosystem behind the Decentralized Knowledge Graph
-[origintrail.io](https://origintrail.io/)
+* [pnetwork](https://p.network/): A multi-chain routing protocol for DeFi, NFTs & gaming 
 
-## Streamr Network
-The decentralized P2P real-time data pub/sub network
-[streamr.network](https://streamr.network)
+* [CelerNetwork](https://celer.network): Building the best inter-blockchain and cross-layer communication platform
 
-## Orchid
-Keep your data private and access content anywhere! Download our VPN to protect your privacy and explore the Internet freely
-[orchid.com](https://orchid.com)
+* [Origin Trail](https://origintrail.io/): Organize your most important assets making them discoverable and verifiable using the groundbreaking decentralized network.
 
-## Colony
-The best way to build your DAO
-[colony.io](https://colony.io)
+* [Streamr](https://streamr.network): The decentralized P2P real-time data pub/sub network
 
-## Hopr
-Changing Data Privacy For Good
-[hoprnet.org](https://hoprnet.org)
+* [Request](https://request.network): The open network for all payment requests 
 
-## DAppNode
-DAppNode is an OS and hardware to advance decentralization, taking complexity out of hosting nodes & DApps
-[dappnode.io](https://dappnode.io)
+* [Hopr](https://hoprnet.org): Changing Data Privacy For Good
 
-## Circles
-A UBI system for communities
-[joincircles.net](https://joincircles.net)
 
-## Cardstack
-Building the Collaborative OS for Web3
-[cardstack.com](https://cardstack.com)
+## Wrappers
 
-## Request
-The open network for all payment requests 
-[request.network](https://request.network)
+* [WrapEth](https://wrapeth.com/): xDai wrapper to convert native xDai to wrapped wxDai
+
+## Development
+
+* [Punk Domains](https://punk.domains): Get domain extensions for your DAO or NFT community
+
+* [DAppNode](https://dappnode.io): DAppNode is an OS and hardware to advance decentralization, taking complexity out of hosting nodes & DApps
+
+* [Cardstack](https://cardstack.com): Building the Collaborative OS for Web3
+

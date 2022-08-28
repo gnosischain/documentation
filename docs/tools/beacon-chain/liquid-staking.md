@@ -50,7 +50,7 @@ At all times the total amount of tokens that have been issued to users is sGNO +
 
 ### sGNO
 
-sGNO represents your initial stake of GNO deposited to the pool. Exchanging or transferring your sETH2 balance will result in lower rGNO earned to your account, as you will have a smaller proportional amount staked that is earning rewards.
+sGNO represents your initial stake of GNO deposited to the pool. Exchanging or transferring your sGNO balance will result in lower rGNO earned to your account, as you will have a smaller proportional amount staked that is earning rewards.
 
 ### rGNO
 
@@ -63,6 +63,6 @@ The interface shows the time until the next update to your rGNO.
 :::note
 **Coming Soon**: Use your rGNO in DeFi protocols on Gnosis to borrow and stake additional GNO! 
 
-Since rGNO tokens represent your rewards in a StakeWise Pool, exchanging or transfering your rETH2 will mean that you transferred your rewards to someone else. It will not impact your future earnings.
+Since rGNO tokens represent your rewards in a StakeWise Pool, exchanging or transfering your rGNO will mean that you transferred your rewards to someone else. It will not impact your future earnings.
 :::
 
