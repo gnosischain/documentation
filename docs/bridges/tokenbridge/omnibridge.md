@@ -92,19 +92,12 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 | Eth    | No Limit           | 250 wEth           |
 
 *** Bridging Dai Using Omnibridge
-### Current Bridge Validators
-| Address                                                                                                                | Organization Name |
-|------------------------------------------------------------------------------------------------------------------------|-------------------|
-| [0x459A3bd49F1ff109bc90b76125533699AaAAf9A6](https://gnosisscan.io/address/0x459A3bd49F1ff109bc90b76125533699AaAAf9A6) | Protofire         |
-| [0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d) | Giveth            |
-| [0x19aC7c69e5F1AC95b8d49b30Cbb79e81f1ab0dba](https://gnosisscan.io/address/0x19ac7c69e5f1ac95b8d49b30cbb79e81f1ab0dba) | Syncnode          |
-| [0x9adB7385B598843c36Fa057e45BC70542516E35d](https://gnosisscan.io/address/0x9adB7385B598843c36Fa057e45BC70542516E35d) | GnosisDAO *        | 
-| [0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
-| [0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
+
+
 
 ### Bridge Validators
-
-Please refer to the [Arbitrary Message Bridge (AMB) Bridge Validators](amb-bridge#bridge-validators) as the Omnibridge is built on top of the AMB. 
+ 
+ For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
 
 References: 
 * [xDai Docs: Omnibridge Validators](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
