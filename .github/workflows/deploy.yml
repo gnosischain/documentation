@@ -56,6 +56,7 @@ jobs:
           echo ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }} >> .env
           echo ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }} >> .env
 
+      - name: Sets ENV variables by environment
         run: |
           if [ ${{ github.ref }} != 'refs/heads/relase' ]; then
             echo "Is not prod"
