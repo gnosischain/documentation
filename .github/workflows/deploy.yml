@@ -56,7 +56,7 @@ jobs:
           echo ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }} >> .env
           echo ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }} >> .env
 
-     - name: Sets ENV variables for Staging
+      - name: Sets ENV variables for Staging
         run: |
           echo GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }} >> .env
 
