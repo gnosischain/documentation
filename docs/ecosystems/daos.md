@@ -32,7 +32,7 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, DAOHaus, Gnosis Safe, Colony, LexDAO
 
 * [Gnosis Safe](https://gnosis-safe.io/): The most trusted platform to manage digital assets on Ethereum
 
-* [DXDAO](https://dxdao.eth.limo/): A soverign collective bringing decentralization to DeFi
+* [DXDAO](https://dxdao.eth.limo/): A sovereign collective bringing decentralization to DeFi
 
 * [PrimeDAO](https://www.prime.xyz/): Builder collective committed to systemic DeFi advancement
 
