@@ -62,6 +62,14 @@ jobs:
         run: |
           echo "Setup Google Analytics ID for release"
 
+      - name: Configure search
+        env:
+          ALGOLIA_ID: ${{ secrets.ALGOLIA_ID }}
+          ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
+          ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
+        run: |
+          echo "Setup Algolia secrets"
+
       - name: Build app
         run: yarn build
 
