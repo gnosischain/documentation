@@ -58,7 +58,7 @@ jobs:
 
       - name: Sets ENV variables by environment
         run: |
-          if [ ${{ github.ref }} != 'refs/heads/relase' ]; then
+          if [ ${{ github.ref }} != 'refs/heads/release' ]; then
             echo "Is not prod"
             export GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
           else
