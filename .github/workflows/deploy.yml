@@ -56,14 +56,15 @@ jobs:
           echo ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }} >> .env
           echo ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }} >> .env
 
-      - name: Sets ENV variables for Staging
         run: |
-          echo GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }} >> .env
-
-      - name: Sets ENV variables for Release
-        if: github.ref == 'refs/heads/release'
-        run: |
-          echo GOOGLE_ANALYTICS_ID=${{ secrets.PROD_GOOGLE_ANALYTICS_ID }} >> .env
+          if [ ${{ github.ref }} != 'refs/heads/relase' ]; then
+            echo "Is not prod"
+            export GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
+          else
+            echo "Is prod"
+            export GOOGLE_ANALYTICS_ID=${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
+          fi
+          echo GOOGLE_ANALYTICS_ID=${{ env.GOOGLE_ANALYTICS_ID }} >> .env
 
       - name: Build app
         run: yarn build
