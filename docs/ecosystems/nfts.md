@@ -12,8 +12,10 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 
 * [Foundation](https://foundation.app/): NFT artist marketplace
 
-
 * [Rare Gems](https://raregems.io): Multichain NFT marketplace
+
+* [Epor.io](https://epor.io/): Multichain NFT marketplace
+
 
 ## Infrastructure
 
@@ -35,7 +37,7 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 
 * [xDai Tigers](https://www.xdaitigers.com/): NFT club of 5555 Tigers on Gnosis Chain. Transform Tigers from 2D to 3D 
 
-* [NFBeez](https://www.nfbeez.xyz/): The first open and decentralized NFT project made by some members of 
-1hiveorg
+* [NFBeez](https://www.nfbeez.xyz/): The first open and decentralized NFT project made by members of 
+1HiveOrg
 
 
