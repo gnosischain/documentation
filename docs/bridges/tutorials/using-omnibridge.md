@@ -63,7 +63,7 @@ The instructions below use the Etherscan UI and the Blockscout UI to demonstrate
 There is an [OMNIBRIDGE UI](https://omni.gnosischain.com/bridge) also available which calls the methods of the multi-token mediators contracts described below. 
 
 #### General Case: ERC-20 Token Transfer
-The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see the [separate section below](#using-omnibridge-to-transfer-to-bnb-chain).
+The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see the [separate section below](#simplification-for-erc677erc827-tokens).
 ##### Ethereum -> Gnosis Chain
 The steps below assume:
 * The account performing the actions owns some amount of an ERC20 token on Ethereum.
@@ -87,11 +87,11 @@ Next, open the mediator contract ([`0x88ad09518695c6c3712AC10a214bE5109a655671`]
 ![](/img/bridges/omni-erc20manual6.png)
 The mediator contract is a proxy contract; Click contract then click the "Write as Proxy" tab.
 ![](/img/bridges/omni-erc20manual7.png)
-Since you are opening a new contract in Etherscan, you will connect to the Web3 provider (MetaMask/NiftyWallet) again. Then, in the `relayTokens` method enter the token contract address and the amount of tokens to transfer.
+Since you are opening a new contract in Etherscan, you will connect to the Web3 provider (your wallet of choice) again. Then, in the `relayTokens` method enter the token contract address and the amount of tokens to transfer.
 ![](/img/bridges/omni-erc20manual8.png)
 Press the "Write" button to send the transaction.
 ![](/img/bridges/omni-erc20manual9.png)  
-The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in the MetaMask/NiftyWallet, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
+The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in the MetaMask, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
 Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to Gnosis chain to invoke the multi-token mediator contract and complete the tokens transfer.
 You can monitor the confirmation and AMB request execution with the [AMB Live Monitoring tool](https://alm-xdai.herokuapp.com/). Specify the hash (tx id) of the transaction used to call `relayTokens` in the ALM entry page to check the status of the AMB request initiated by this transaction in real time. If the AMB request is executed successfully:
  * __If token has not been transferred with AMB before:__ If this is the first transaction for this particular token using the AMB, a new ERC677 token contract will be deployed to the xDai chain. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
@@ -104,35 +104,132 @@ Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account
 Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow the steps to verify the contract before starting.
 :::
 
-- [Tokenbridge Docs: Transfer tokens without the UI](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens)
+1. __Call the transferAndCall method to transfer tokens__
+The token contract deployed by the mutli-token mediator supports the ERC677 standard, so instead of calling `approve` and `relayTokens`, a single method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it regarding this action at the same time.
+Go to the "Write Proxy" tab of the token contract in BlockScout
+![](/img/bridges/omni-gno-eth-manual1.png)
+In the transferAndCall method enter the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`), amount of tokens to transfer, and "0x" in the _data field. Press Write to send the transaction.
+![](/img/bridges/omni-gno-eth-manual2.png)
+The MetaMask window will appear. Gas price should be 1 GWei, adjust if needed. Once the transaction is confirmed in MetaMask, wait for verification by the Gnosis chain validators. This is typically completed in a few seconds.
+Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations on Gnosis chain and transfer them to Ethereum. The transaction sent by a validator to Ethereum will execute the request to unlock the tokens.  
+You can monitor this process using the [AMB Live Monitoring tool](https://alm-xdai.herokuapp.com/). Specify the hash (tx id) of the transaction used to call transferAndCall in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time. The requested amount of tokens minus any fees will be unlocked on Ethereum.
+
+##### Simplification for ERC677/ERC827 tokens
+If the token on Ethereum is ERC677 or ERC827 compatible it is possible to omit the approve method call and only call the `transferAndCall` method in the token contract.
+:::note
+This example uses the STAKE token, [whose utility will be depreciated after the merge](https://forum.gnosis.io/t/gip-16-gnosis-chain-xdai-gnosis-merge/1904). However, the token will still exist and these steps are still relevant.
+:::
+Below is example with the STAKE token contract:
+![](/img/bridges/omni-erc667-simplification1.png)  
+Click Write Contract and specify the multi-token mediator contract address on Ethereum (0x88ad09518695c6c3712AC10a214bE5109a655671) as the recipient of the tokens, the amount of tokens in wei the "value" field, and `0x` in the "data" field. Click Write to execute.
+![](/img/bridges/omni-erc667-simplification2.png) 
+
+https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc677-erc827-tokens
+
 
 
 ### Bridging Tokens Minted on Gnosis
-- [xDai Docs: Bridging tokens minted on Gnosis](https://developers.gnosischain.com/for-users/bridges/omnibridge/reverse-bridging)
+Tokens minted natively on xDai are now available to bridge to other destination chains, including Ethereum, BSC and POA. Note that you will need to pay gas costs for the destination chain (which can be quite high for Ethereum) with the destination currency (such as ETH or BSC) when bridging.
+Bridging requires 2 steps:
+1. Unlock the Token (allow the application to transfer)
+2. Request the Transfer (requires 2 transactions, 1 from sending chain and a second on destination chain to claim)
+Please see the [previous section on bridging from Gnosis to Ethereum](#gnosis---ethereum) for specific instructions, as the steps are the same.
 
 ## Token Registry
 
 ### Getting corresponding Token Address
+There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on Gnosis chain.
+#### __Approch 1: BlockScout__
+BlockScout allows you to see if a token was bridged using the multi-token extension. First, search the token and go it's contract page:
+![](/img/bridges/omni-bridged-tokens1.png)
+This view contains information that this token was bridged and a link to the original token.
+![](/img/bridges/omni-bridged-tokens2.png)
+If you go to the top bar, you will notice that the token dropdown allows you to filter between tokens based off where they were bridged from: 
+![](/img/bridges/omni-bridged-tokens3.png)
 
-- [Tokenbridge Docs: Getting corresponding Token Address](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens)
+#### __Approach 2: Mediator Storage__
+The [multi-token mediator on Gnosis chain](https://blockscout.com/xdai/mainnet/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d/read-proxy#address-tabs) provides methods for viewing correspondence of bridgeable tokens:
+* `foreignTokenAddress` - returns the address of the token contract on the Ethereum Mainnet by specifying the address the token contract on Gnosis Chain.
+* `homeTokenAddress`- returns the address of the token contract on Gnosis chain by specifying the address of the token contract on Ethereum.
+Pass in the token address to get the corresponding address on the other chain:  
+![](/img/bridges/omni-mediatorstorage1.png)
+
 
 ### Verifying a Canonical Bridged Token on GnosisScan
 - [Tokenbridge Docs: Verifying a Canonical Bridged Token on Blockscout](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout)
 
 ### Bridged Tokens List
-- [Tokenbridge Docs: Bridged Tokens List](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list)
+A dynamic list of bridged tokens is now available.
+* [Tokens Bridged from Ethereum]( https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
+* [Tokens Bridged from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to Gnosis. A second instance bridges tokens to and from the Binance Smart Chain. When a token is bridged, the name is appended with "on xDai" or "from Ethereum/BSC". On a token page, you can also find the link to the original token on Ethereum.
 
 ### Getting bridged tokens from Omnibridge Smart Contracts
 
-- [Tokenbridge Docs: Getting bridged tokens from Omnibridge Smart Contracts](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/the-bridged-tokens-list/token-list-compilation)
+The Token list is queried dynamically with BlockScout. The list is compiled by following these steps:
+1. Find all transactions to the [AMB Contract on Gnosis](https://blockscout.com/xdai/mainnet/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59/transactions#address-tabs)
+2. Check all internal transactions for each transaction.
+3. If an internal transaction creates a contract from the AMB mediator address (0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d), and this contract exposes the `getTokenInterfacesVersion()` getter, it is safe to assume that this contract’s address is a bridged token address.
 
 ## Specific Tokens
 
 - [Tokenbridge Docs: Bridging WETH on Gnosis back to Ethereum](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/transfer-weth-from-xdai-to-eth-on-mainnet)
 
 ## Debugging Omnibridge Transactions
+:::info
+This page is mostly for the application developers, if you sent tokens through the OmniBridge and would like to get the status whether the tokens were sent successfully or not, please use [AMB Live Monitoring application](https://alm-xdai.herokuapp.com/) instead.
+:::
+Firstly, the [Foreign Arbitrary Message Bridge contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e) which is used by the OmniBridge, emits the `UserRequestForAffirmation` event as part of the a deposit request made by user (on the Ethereum side).  
+```
+event UserRequestForAffirmation(bytes32 indexed messageId, bytes encodedData);
+```   
+For example, [this is the event in the OmniBridge transaction](https://etherscan.io/tx/0x804a4b28520faad8b68d122cafdffedd2e185a9aa734b69f264a652d5c53afa4#eventlog), and the topic `0x482515ce3d9494a37ce83f18b72b363449458435fafdd7a53ddea7460fe01b58`
+![](/img/bridges/omni-debugging1.png)  
+In the event definition and from the example, the Id of the AMB message is trackable as part of the event. The event from the example shows the message Id: `0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402`.  
+On the other side of the bridge, if the message was executed successfully the [AMB contract](https://blockscout.com/xdai/mainnet/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59/logs#address-tabs) emits the `AffirmationCompleted` event.  
+```
+event AffirmationCompleted(
+    address indexed sender,
+    address indexed executor,
+    bytes32 indexed messageId,
+    bool status
+);
+```
+Here is [the event corresponding to the example](https://blockscout.com/xdai/mainnet/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs)  
+![](/img/bridges/omni-debugging2.png) 
+The topic of the event is `0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7`. And the message Id is represented as a separate topic in the event.
+That's why it is possible to use different ways to filter out the corresponding transaction if the message Id of the OmniBridge deposit is known (it always can be received from the deposit transaction).
+For example, you can use the BlockScout API for this: https://blockscout.com/xdai/mainnet/api-docs. Example of the request to the BlockScout:
+```
+https://blockscout.com/xdai/mainnet/api?module=logs&action=getLogs&fromBlock=1&toBlock=latest&address=0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59&topic0=0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7&topic3=0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402&topic0_3_opr=and
+```
+It will return the JSON with the transaction hash correlated to the emission of the event `AffirmationCompleted` with the message Id:
+```
+{
+  "message": "OK",
+  "result": [
+    {
+      "address": "0x75df5af045d91108662d8080fd1fefad6aa0bb59",
+      "blockNumber": "0xbc8133",
+      "data": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "gasPrice": "0x3b9aca00",
+      "gasUsed": "0x2d572",
+      "logIndex": "0x8",
+      "timeStamp": "0x5f7ab6dd",
+      "topics": [
+        "0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7",
+        "0x00000000000000000000000088ad09518695c6c3712ac10a214be5109a655671",
+        "0x000000000000000000000000f6a78083ca3e2a662d6dd1703c939c8ace2e268d",
+        "0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402"
+      ],
+      "transactionHash": "0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b",
+      "transactionIndex": "0x5"
+    }
+  ],
+  "status": "1"
+}
+```
 
-- [TokenBridge Docs: Getting Status of Omnibridge Deposit](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/get-status-of-the-omnibridge-deposit)
   
 ## Advanced
 ### Alternate Receiver
