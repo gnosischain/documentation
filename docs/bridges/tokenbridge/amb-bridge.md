@@ -80,6 +80,7 @@ References:
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | AMB/Omnibridge Multi-Token Mediator | [0x88ad09518695c6c3712AC10a214bE5109a655671](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract) |
 | AMB Contract Proxy (Foreign)        | [0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract) |
+| AMB/OmniBridge wETH Router Helper | [0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038) |
 
 ### Gnosis
 | Contract                            | Address                                                                                                                                   |
