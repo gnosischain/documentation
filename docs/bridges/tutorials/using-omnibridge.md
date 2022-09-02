@@ -101,7 +101,7 @@ Once the process is complete and indexed by BlockScout, it is possible to find t
 The steps below assume that the account performing the actions is funded with some xDai to cover gas fees.  
 Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BlockScout.
 :::info
-Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, follow the steps to verify the contract before starting.
+Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, [follow the steps](#verifying-a-canonical-bridged-token-on-blockscout) to verify the contract before starting.
 :::
 
 1. __Call the transferAndCall method to transfer tokens__
@@ -120,12 +120,19 @@ If the token on Ethereum is ERC677 or ERC827 compatible it is possible to omit t
 This example uses the STAKE token, [whose utility will be depreciated after the merge](https://forum.gnosis.io/t/gip-16-gnosis-chain-xdai-gnosis-merge/1904). However, the token will still exist and these steps are still relevant.
 :::
 Below is example with the STAKE token contract:
-![](/img/bridges/omni-erc667-simplification1.png)  
+![](/img/bridges/omni-erc677-simplification1.png)  
 Click Write Contract and specify the multi-token mediator contract address on Ethereum (0x88ad09518695c6c3712AC10a214bE5109a655671) as the recipient of the tokens, the amount of tokens in wei the "value" field, and `0x` in the "data" field. Click Write to execute.
-![](/img/bridges/omni-erc667-simplification2.png) 
+![](/img/bridges/omni-erc677-simplification2.png) 
 
-https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/how-to-transfer-tokens#simplification-for-erc677-erc827-tokens
+##### Simplification for token transfers from the Gnosis Chain side
+:::danger
+Do Not Use the `transfer` method to send tokens to the multi-token mediator on Ethereum. It will lead to loss of tokens.
+:::
+The token contact deployed on Gnosis Chain is a customized version of ERC677 standard. It contains the changes that allow calling the transfer method to withdraw tokens from the xDai chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
 
+:::warning
+The method described above works only for tokens deployed by the multi-token mediator on Gnosis chain.
+:::
 
 
 ### Bridging Tokens Minted on Gnosis
@@ -139,7 +146,7 @@ Please see the [previous section on bridging from Gnosis to Ethereum](#gnosis---
 
 ### Getting corresponding Token Address
 There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on Gnosis chain.
-#### __Approch 1: BlockScout__
+#### __Approach 1: BlockScout__
 BlockScout allows you to see if a token was bridged using the multi-token extension. First, search the token and go it's contract page:
 ![](/img/bridges/omni-bridged-tokens1.png)
 This view contains information that this token was bridged and a link to the original token.
@@ -155,8 +162,201 @@ Pass in the token address to get the corresponding address on the other chain:
 ![](/img/bridges/omni-mediatorstorage1.png)
 
 
-### Verifying a Canonical Bridged Token on GnosisScan
-- [Tokenbridge Docs: Verifying a Canonical Bridged Token on Blockscout](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/new-token-contract-verification-in-blockscout)
+### Verifying a Canonical Bridged Token on BlockScout
+New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract (e.g. to transfer tokens back to the Ethereum Mainnet). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.
+
+1. Find the token contract by the token symbol using the search bar. The following example follows the verification of the STAKE token, which [recently had its staking utility deprecated](https://forum.gnosis.io/t/gip-16-gnosis-chain-xdai-gnosis-merge/1904). However, these steps are still relevant. The bridgeable token name is extended by "on xDai":
+![](/img/bridges/omni-verify-token1.png)
+2. Verify the contract:
+![](/img/bridges/omni-verify-token2.png)
+![](/img/bridges/omni-verify-token3.png)
+Click on the Code tab, click Verify and Publish, then fill the form following the recommendations below (see solidity contract code below this image).   Press the "Verify & publish" button at the bottom of the form to finish.
+![](/img/bridges/omni-verify-token4.png)
+
+<details>
+
+  <summary>Click to View Solidity Contract Code used in the Example</summary>
+
+  __Code__:
+
+  ```solidity showLineNumbers
+
+    pragma solidity 0.4.24;
+
+    /**
+    * @title Proxy
+    * @dev Gives the possibility to delegate any call to a foreign implementation.
+    */
+    contract Proxy {
+        /**
+        * @dev Tells the address of the implementation where every call will be delegated.
+        * @return address of the implementation to which it will be delegated
+        */
+        /* solcov ignore next */
+        function implementation() public view returns (address);
+
+        /**
+        * @dev Fallback function allowing to perform a delegatecall to the given implementation.
+        * This function will return whatever the implementation call returns
+        */
+        function() public payable {
+            // solhint-disable-previous-line no-complex-fallback
+            address _impl = implementation();
+            require(_impl != address(0));
+            assembly {
+                /*
+                    0x40 is the "free memory slot", meaning a pointer to next slot of empty memory. mload(0x40)
+                    loads the data in the free memory slot, so `ptr` is a pointer to the next slot of empty
+                    memory. It's needed because we're going to write the return data of delegatecall to the
+                    free memory slot.
+                */
+                let ptr := mload(0x40)
+                /*
+                    `calldatacopy` is copy calldatasize bytes from calldata
+                    First argument is the destination to which data is copied(ptr)
+                    Second argument specifies the start position of the copied data.
+                        Since calldata is sort of its own unique location in memory,
+                        0 doesn't refer to 0 in memory or 0 in storage - it just refers to the zeroth byte of calldata.
+                        That's always going to be the zeroth byte of the function selector.
+                    Third argument, calldatasize, specifies how much data will be copied.
+                        calldata is naturally calldatasize bytes long (same thing as msg.data.length)
+                */
+                calldatacopy(ptr, 0, calldatasize)
+                /*
+                    delegatecall params explained:
+                    gas: the amount of gas to provide for the call. `gas` is an Opcode that gives
+                        us the amount of gas still available to execution
+
+                    _impl: address of the contract to delegate to
+
+                    ptr: to pass copied data
+
+                    calldatasize: loads the size of `bytes memory data`, same as msg.data.length
+
+                    0, 0: These are for the `out` and `outsize` params. Because the output could be dynamic,
+                            these are set to 0, 0 so the output data will not be written to memory. The output
+                            data will be read using `returndatasize` and `returdatacopy` instead.
+
+                    result: This will be 0 if the call fails and 1 if it succeeds
+                */
+                let result := delegatecall(gas, _impl, ptr, calldatasize, 0, 0)
+                /*
+
+                */
+                /*
+                    ptr current points to the value stored at 0x40,
+                    because we assigned it like ptr := mload(0x40).
+                    Because we use 0x40 as a free memory pointer,
+                    we want to make sure that the next time we want to allocate memory,
+                    we aren't overwriting anything important.
+                    So, by adding ptr and returndatasize,
+                    we get a memory location beyond the end of the data we will be copying to ptr.
+                    We place this in at 0x40, and any reads from 0x40 will now read from free memory
+                */
+                mstore(0x40, add(ptr, returndatasize))
+                /*
+                    `returndatacopy` is an Opcode that copies the last return data to a slot. `ptr` is the
+                        slot it will copy to, 0 means copy from the beginning of the return data, and size is
+                        the amount of data to copy.
+                    `returndatasize` is an Opcode that gives us the size of the last return data. In this case, that is the size of the data returned from delegatecall
+                */
+                returndatacopy(ptr, 0, returndatasize)
+
+                /*
+                    if `result` is 0, revert.
+                    if `result` is 1, return `size` amount of data from `ptr`. This is the data that was
+                    copied to `ptr` from the delegatecall return data
+                */
+                switch result
+                    case 0 {
+                        revert(ptr, returndatasize)
+                    }
+                    default {
+                        return(ptr, returndatasize)
+                    }
+            }
+        }
+    }
+
+    interface IPermittableTokenVersion {
+        function version() external pure returns (string);
+    }
+
+    /**
+    * @title TokenProxy
+    * @dev Helps to reduces the size of the deployed bytecode for automatically created tokens, by using a proxy contract.
+    */
+    contract TokenProxy is Proxy {
+        // storage layout is copied from PermittableToken.sol
+        string internal name;
+        string internal symbol;
+        uint8 internal decimals;
+        mapping(address => uint256) internal balances;
+        uint256 internal totalSupply;
+        mapping(address => mapping(address => uint256)) internal allowed;
+        address internal owner;
+        bool internal mintingFinished;
+        address internal bridgeContractAddr;
+        // string public constant version = "1";
+        bytes32 internal DOMAIN_SEPARATOR;
+        // bytes32 public constant PERMIT_TYPEHASH = 0xea2aa0a1be11a07ed86d755c93467f4f82362b452371d1ba94d1715123511acb;
+        mapping(address => uint256) internal nonces;
+        mapping(address => mapping(address => uint256)) internal expirations;
+
+        /**
+        * @dev Creates a non-upgradeable token proxy for PermitableToken.sol, initializes its eternalStorage.
+        * @param _tokenImage address of the token image used for mirrowing all functions.
+        * @param _name token name.
+        * @param _symbol token symbol.
+        * @param _decimals token decimals.
+        * @param _chainId chain id for current network.
+        */
+        constructor(address _tokenImage, string memory _name, string memory _symbol, uint8 _decimals, uint256 _chainId)
+            public
+        {
+            string memory version = IPermittableTokenVersion(_tokenImage).version();
+
+            assembly {
+                // EIP 1967
+                // bytes32(uint256(keccak256('eip1967.proxy.implementation')) - 1)
+                sstore(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc, _tokenImage)
+            }
+            name = _name;
+            symbol = _symbol;
+            decimals = _decimals;
+            owner = msg.sender; // msg.sender == HomeMultiAMBErc20ToErc677 mediator
+            bridgeContractAddr = msg.sender;
+            DOMAIN_SEPARATOR = keccak256(
+                abi.encode(
+                    keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
+                    keccak256(bytes(_name)),
+                    keccak256(bytes(version)),
+                    _chainId,
+                    address(this)
+                )
+            );
+        }
+
+        /**
+        * @dev Retrieves the implementation contract address, mirrowed token image.
+        * @return token image address.
+        */
+        function implementation() public view returns (address impl) {
+            assembly {
+                impl := sload(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc)
+            }
+        }
+    }
+  ```
+
+
+</details>
+After verification is successful, the number tabs in the contract window will be extended to allow users to "Read Contract", "Write Contract", "Read Proxy" and "Write Proxy".  
+
+![](/img/bridges/omni-verify-token5.png)
+
+
+
 
 ### Bridged Tokens List
 A dynamic list of bridged tokens is now available.
@@ -173,9 +373,41 @@ The Token list is queried dynamically with BlockScout. The list is compiled by f
 
 ## Specific Tokens
 
-- [Tokenbridge Docs: Bridging WETH on Gnosis back to Ethereum](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/transfer-weth-from-xdai-to-eth-on-mainnet)
+In some cases it is convenient to use ETH, the native token for the Ethereum Mainnet, in the form of a wrapped ERC20 token. This allows to unify interfaces for operations with assets. The recent Wrapped ETH token contract is [WETH9](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2). 
+When the ETH-Gnosis OmniBridge first started, wrapped ETH was bridged to the Gnosis chain in form of ERC677 token: Wrapped ETH on xDai.
+Although the bridged token can be transferred back to ETH, it is still be in form of the ERC20 token, and it cannot be used in transactions to pay for gas fees. In this case, if a user has no ETH, it is impossible for them to unwrap these ETH tokens.
+This set of instructions demonstrates how the Wrapped ETH can be bridged from Gnosis chain directly to ETH tokens using a new `relay-and-call` feature implemented in the OmniBridge contracts. In the last part of this guide there is also an instruction on how to transfer ETH to WETH on Gnosis chain using a single operation. This may not be used often but some users may find it handy.
+This instruction assumes that you have access to BlockScout and Etherscan. You also must have a bit of xDai to pay for gas fees for a bridge transaction on Gnosis chain. 
+### Bridge wEth on Gnosis to Native Eth on Ethereum
+1. Change the chain to Gnosis in MetaMask
+2. Find the wEth token in [BlockScount](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/GnosisScan, and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
+![](/img/bridges/omni-bridge-to-native-eth1.png)
+3. Scroll to the `transferAndCall` method: 
+![](/img/bridges/omni-bridge-to-native-eth2.png)
+4. Enter the following information as parameters to call the method:
+* `_to`(address): `0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d` . This is sthe address of the OmniBridge contract on Gnosis.
+* `_value`(uint256): amount of wETH to be bridged (bridge fees wikll be subtracted from this value).
+* `_data`(bytes): the concatenation of the following:
+ * the address of the wETH OmniBridge helper contract on the Ethereum Mainnet (`0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a`)
+ * he address of the ETH recipient without the leading `0x`
+ For example, for the recipient `0xbf3d6f830ce263cae987193982192cd990442b53`, the value in `_data` field is `0xa6439ca0fcba1d0f80df0be6a17220fed9c9038abf3d6f830ce263cae987193982192cd990442b53`
+Click __Write__ to send the transaction.
+5. When the transaction is included in the block, click on the transaction link to get the transaction details
+![](/img/bridges/omni-bridge-to-native-eth3.png)
+6. Use the "View in ALM App" link on the page with transaction details, or use the transaction hash and go the the [ALM site](https://alm-xdai.herokuapp.com/) and enter it manually to track status of the transfer and finalize bridge operations if required.   
+![](/img/bridges/omni-bridge-to-native-eth4.png)
+7. Eventually, when an executing transaction on the Mainnet is processed, the WETH will be unlocked and unwrapped to ETH native tokens:
+![](/img/bridges/omni-bridge-to-native-eth5.png)
 
-## Debugging Omnibridge Transactions
+### Bridge Eth to Gnosis Chain
+1. Visit the WETH OmniBridge helper contract on [Etherscan](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038a#writeContract) and connect your wallet.
+2. Scroll to the `wrapAndRelayTokens` method and enter the amount of ETH to bridge to Gnosis chain:
+![](/img/bridges/omni-bridge-from-native-eth1.png)
+Click __Write__ to send the transaction
+3. When the transaction is included in the block, press the "View you transaction" button to get the transaction hash which can be used in the [AMB Live Monitoring app](https://alm-xdai.herokuapp.com/) to track the status of the transaction.
+
+
+## Debugging OmniBridge Transactions
 :::info
 This page is mostly for the application developers, if you sent tokens through the OmniBridge and would like to get the status whether the tokens were sent successfully or not, please use [AMB Live Monitoring application](https://alm-xdai.herokuapp.com/) instead.
 :::
