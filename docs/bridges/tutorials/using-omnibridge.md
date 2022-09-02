@@ -380,7 +380,7 @@ This set of instructions demonstrates how the Wrapped ETH can be bridged from Gn
 This instruction assumes that you have access to BlockScout and Etherscan. You also must have a bit of xDai to pay for gas fees for a bridge transaction on Gnosis chain. 
 ### Bridge wEth on Gnosis to Native Eth on Ethereum
 1. Change the chain to Gnosis in MetaMask
-2. Find the wEth token in [BlockScount](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/GnosisScan, and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
+2. Find the wEth token in [BlockScount](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/, and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
 ![](/img/bridges/omni-bridge-to-native-eth1.png)
 3. Scroll to the `transferAndCall` method: 
 ![](/img/bridges/omni-bridge-to-native-eth2.png)
@@ -465,22 +465,91 @@ It will return the JSON with the transaction hash correlated to the emission of 
   
 ## Advanced
 ### Alternate Receiver
+The default bridge mode sends funds to the same address across chains, as the same algorithm is used to derive an address from a private key across the chains where the OmniBridge is deployed. However, it is easy to specify another address to receive funds on the chain you are bridging to. This may be desirable when sending funds from a multi-sig wallet (like Gnosis Safe), or as a transfer method to another address on a secondary chain.
+#### Set and Alternate Receiver
+1. Click on the "Advanced" link on the Omnibridge UI. A text field will appear.
+2. Paste the `0x...` address you are transferring funds to on the receiving chain.
+3. Proceed with the Request
+![](/img/bridges/omni-alternate-receiver.gif) 
+  
+:::info
+Claims on the receiving chain can be completed using any address with enough funds. Copy the tx hash from the first transaction (it will be linked during tx processing or when complete in the history tab of the bridge. You can also find in your MetaMask wallet) and paste into https://alm-xdai.herokuapp.com/ to search and execute.
+:::
 
-- [xDai Docs: Alternate Receiver](https://developers.gnosischain.com/for-users/bridges/omnibridge/alternate-receiver)
 
 ### Set Custom RPC Endpoints
-- [xDai Docs: Set Custom RPC Endpoints](https://developers.gnosischain.com/for-users/bridges/omnibridge/set-custom-rpc-endpoints)
+If you are experiencing an issue with an Ethereum or Gnosis Chain RPC endpoint when trying to bridge you can easily set your own endpoint in the interface.
+Note that these are Read Only, if you need to use the RPCs to process transactions, you can [set custom RPCs in your web3 wallet like MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-Network-RPC-and-or-Block-Explorer) as well.
+#### RPC Endpoints:
+* [Gnosis RPC's](/tools/rpc/)
+* [Ethereum Default RPC's](https://mainnet.infura.io/), [Alternate Ethereum RPC's](https://ethereumnodes.com/)
+1. Go to [the bridge UI](https://omni.gnosischain.com/bridge) and click settings at the top.
+2. Add your RPC of choice and click __Save__. Note that the URL options change based off which networks you have selected to bridge between.
+![](/img/bridges/omni-custom-rpc1.png)
+
 
 ### Infinite Unlock
-- [xDai Docs: Infinite Unlock](https://developers.gnosischain.com/for-users/bridges/omnibridge/infinite-unlock)
+You must give approval to the bridge contracts to access and send ERC-20 tokens. This is similar to Uniswap or another DEX that asks for approval to spend your tokens.
+You can give this permission on a per transaction basis, or you can unlock an unlimited amount to transfer with the infinite unlock option. Infinite unlock saves on transaction fees, but does introduce security risk if the contract is compromised. If compromised, a malicious 3rd party may have the ability to access all funds rather than a finite approved amount.
+
+#### Set Infinite Unlock
+1. Go to Settings on the top of the page
+2. Toggle "Infinite Unlock" and click __Save__. When you process your next unlock, the transaction will allow all transfers of that token without needing to unlock again.
+![](/img/bridges/omni-infinite-unlock1.png)
+3. If you don't wish to use infinite unlock but would like te instead set a custom limit, when the MetaMask window pops up to ask for approval you have the option to set a spend limit. Click "Edit Permission" and it will take you to the following screen:
+![](/img/bridges/omni-custom-limit.png)
+
 
 ### Using Omnibridge with Gnosis Safe
-- [xDai Docs: Using Omnibridge in Gnosis Safe](https://developers.gnosischain.com/for-users/bridges/omnibridge/omnibridge-+-gnosis-safe-app)
+OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging ERC20s between Ethereum and the xDai chain. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe instructions](using-xdai-bridge).
+:::danger
+Each Gnosis Safe is deployed independently on Gnosis chain and/or Ethereum. Cross-chain safes do not share the same contract addresses (even when they have the same owners etc), so it is important to use the Alternate Recipient Address feature when bridging with a safe.
+:::
+#### Add the App
+1. Go to your Gnosis Safe and login and connect as you normally would
+* [Gnosis Safe on Gnosis Chain](https://gnosis-safe.io/app/gno)
+* [Gnosis Safe on Ethereum](https://gnosis-safe.io/app/)
+2. Go to Apps -> Add Custom App, and add the app url https://omni.gnosischain.com/ . The App name should populate as OmniBridge
+![](/img/bridges/omni-gnosis-safe1.png)
+3. Agree to the terms and click "Add". The app will now be added to the interface.
+
+#### Bridge App on Receiving Chain: Claiming a Bridge Transaction
+In this example, we sent STAKE from xDai to a Gnosis Safe address on Ethereum. To claim this transaction, login to Gnosis Safe on Ethereum and open the OmniBridge Application (you may need to add it using the [steps above](#add-the-app) if you have not added previously)
+1. You should see the claim screen, click the __Claim__ button to begin the process. If you do not see this screen, click on __History__ at the top of the OmniBridge app.
+![](/img/bridges/omni-gnosis-safe2.png)
+2. Click the __Claim__ button
+![](/img/bridges/omni-gnosis-safe3.png)
+3. All required owners must confirm the transaction before it is processed. Once completed, the funds will be added to the safe. 
+![](/img/bridges/omni-gnosis-safe4.png)
+
 
 ## BNB Chain
 
 ### Using Omnibridge to transfer to BNB Chain
-- [xDai Docs: Using Omnibridge to transfer to BNB Chain](https://developers.gnosischain.com/for-users/bridges/omnibridge/binance-smart-chain-omnibridge)
+The Binance Smart Chain (BSC) Omnibridge allows users to move ERC20 tokens between Gnosis Chain and BSC. It is available as a dropdown item from the OmniBridge UI in the top right corner.
+:::info
+BSC OmniBridge and OmniBridge UI are beta software, use at your own risk.
+You will need xDai on Gnosis Chain and BNB on the Binance Smart Chain to complete a bridge transfer.  
+__Bridge Interfaces:__
+* [OmniBridge UI](https://omni.gnosischain.com/bridge)
+* [OmniBridge BSC Transaction Monitor](https://alm-bsc-xdai.herokuapp.com/)
+* [BSC Bridged Tokens on GC List](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+:::
+  
+:::caution
+Tokens bridged cross-chain are appended with the "on xDai" or "on BSC". There are instances where bridging across multiple chains creates token names such as "STAKE on xDai on BSC" for example.
+
+Double bridging also can result in multiple instances of the same token on a single chain. For example, USDC can be bridged to xDai from Ethereum and also bridged to xDai from BSC. This results in 2 separate USDC token instances on xDai. These tokens cannot be merged into a single instance after they are minted.
+:::
+  
+:::info
+[Component.Finance](https://xdai.component.finance/) is an available tool to swap between stable tokens. This can be used to convert:
+* [Binance-Peg Dai Token](https://bscscan.com/token/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3) / [wxDai](https://blockscout.com/xdai/mainnet/tokens/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d/token-transfers)
+* [Binance-Peg USDC Token](https://blockscout.com/xdai/mainnet/tokens/0xD10Cc63531a514BBa7789682E487Add1f15A51E2/token-transfers) / [USDC on xDai](https://blockscout.com/xdai/mainnet/tokens/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83/token-transfers).
+* 💡 [More info on this process is available here](#binance-pegged-dai-token-on-gnosis).
+:::
+[__Additional Information__](https://yostari.medium.com/traversing-the-eth-polygon-xdai-bsc-cross-chain-bridges-cfe3b29d49d4)
+
 
 ### Example transfer from Gnosis to BNB Chain
 - [xDai Docs: Example transfer from Gnosis to BNB Chain](https://developers.gnosischain.com/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/bsc-omnibridge-example)
