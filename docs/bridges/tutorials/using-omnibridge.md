@@ -616,4 +616,69 @@ You may see an Insufficient Funds warning in MetaMask for a few moments while un
 :::
 
 ### Binance-pegged Dai token on Gnosis
-- [xDai Docs: Binance-pegged Dai token on Gnosis](https://developers.gnosischain.com/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/dai-token-on-xdai-bsc)
+
+The [Binance-Peg Dai Token](https://bscscan.com/token/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3) can be bridged to xDai using the beta BSC-xDai Omnibridge. __However, this process DOES NOT mint native xDai__. Instead, the Dai Token from BSC is bridged across networks.
+![](/img/bridges/omni-pegged-dai1.png)
+Using xDai tools, it only takes a few steps to convert Binance-Peg Dai to xDai. The process can also be completed in the reverse direction where xDai is converted to Binance-Peg Dai. Once converted from xDai, Binance-Peg Dai can be bridged back to the BSC.  
+This option gives users the ability to convert Dai/xDai when mainnet bridging fees are expensive. A similar process should also be considered for Binance-Peg USDC tokens.
+#### Token Addresses
+##### Dai:
+* [Binance-Peg Dai Token on Binance](https://bscscan.com/token/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3)
+* [Binance-Peg Dai Token on xDai (Named Dai Token from BSC)](https://blockscout.com/xdai/mainnet/tokens/0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC/token-transfers)
+##### USDC:
+* [Binance-Peg USDC Token on Binance](https://bscscan.com/token/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d)
+* [Binance-Peg USDC Token on xDai (Named USDC Coin from BSC)](https://blockscout.com/xdai/mainnet/tokens/0xD10Cc63531a514BBa7789682E487Add1f15A51E2/token-transfers)
+##### Tools Used:
+* [Wrapeth](https://wrapeth.com/): Convert xDai to wrapped xDai / unwrap wrapped xDai
+* [Component Finance](https://xdai.component.finance/): Swap stable tokens on xDai
+* [OmniBridge](https://bsc-to-xdai-omnibridge.web.app/): Bridge with option(in Beta) to bridge between Gnosis Chain and Binance Smart Chain.
+
+#### Gnosis -> BSC: Swap xDai to Binance-Peg DAI Example
+1. Go to [https://wrapeth.com/](https://wrapeth.com/)
+2. set MetaMask to the Gnosis Chain Network
+3. Enter the amount of xDai to wrap
+![](/img/bridges/omni-pegged-dai1.png)
+4. Press Submit.
+5. Once the tx is complete, and wxDai is deposited, you can add wxDai ([0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d](https://blockscout.com/xdai/mainnet/address/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d/transactions)) [as a custom Custom Token](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) in MetaMask.
+
+#### 2) Swap wxDai for Binance-Peg Dai on Gnosis using Component.
+
+1. Go to [https://xdai.component.finance/](https://xdai.component.finance/)
+2. Connect your Web3 Wallet (MetaMask) to the application and confirm you are connected to the Gnosis network.
+3. Press the Swap tab and select the **WXDAI/DAI \[BSC]** pair.
+4. Press Swap. You will need to approve the first transaction with amount to swap or you can select unlimited.
+5. Complete this first approve transaction in Metamask.
+6. Press Swap again and confirm the second transaction to swap.
+7. Once complete, add Binance-Peg Dai on Gnosis to your MetaMask custom tokens. The address is [0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC](https://blockscout.com/xdai/mainnet/tokens/0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC/token-transfers). In BlockScout it is called Dai Token from BSC.
+:::info
+The same process can be used to swap USDC to USDC (BSC)
+:::
+
+#### 3) Move to BSC (if desired) with the BSC Bridge
+
+You can [follow this tutorial](#example-bridging-stake-fro-gnosis-chain-to-bsc) to bridge with the Omnibridge. Note you will need some BNB on the Binance Smart Chain to complete the process (to pay the claiming fee). If you have BNB on BEP2 you will need to swap it to BSC.
+
+##### BSC -> xDai: Swap Binance-Peg Dai to Gnosis
+
+You will follow the same process in reverse to convert Binance-Peg Dai from BSC to xDai.
+
+###### 1) Bridge Dai from BSC to Gnosis.
+
+You can [follow this tutorial](#example-transfer-from-gnosis-to-bnb-chain) to bridge with the [Omnibridge](https://omni.gnosischain.com/bridge).
+
+###### 2) Swap Dai (BSC) token for wxDai using Component.
+
+1. Go to [https://xdai.component.finance/](https://xdai.component.finance/)
+2. Connect your Web3 Wallet (MetaMask) to the application and select the Gnosis network.
+3. Press the Swap tab and select the Dai \[BSC]/ wxDai pair. Follow the instructions in section 2 above to approve 2 transactions and swap.
+
+##### 3) Unwrap wxDai into xDai with Wrapeth.
+
+1. Go to [https://wrapeth.com/](https://wrapeth.com/)
+2. Set MetaMask to the Gnosis Chain Network.
+3. Select the Unwrap wxDai tab and enter the amount of wxDai to wrap.
+4. Press Submit.
+
+
+
+
