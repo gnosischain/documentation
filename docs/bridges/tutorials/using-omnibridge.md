@@ -568,7 +568,7 @@ If planning to bridge so you can trade an asset on BSC or xDai (Honeyswap, BaoSw
 :::note
 As mentioned above, bridging STAKe has been disabled. However, this example is still relevant and is still a useful resource.
 :::
-1. Go to the [Omnibridge UI](), connect your wallet and Select BSC <-> Gnosis in the top right corner dropdown.
+1. Go to the [Omnibridge UI](https://omni.gnosischain.com/bridge), connect your wallet and Select BSC <-> Gnosis in the top right corner dropdown.
 2. Select the token you wish to bridge
 3. Select the amount
 4. Click unlock. (_you can also[ enable infinite unlocks](#infinite-unlock)_)
