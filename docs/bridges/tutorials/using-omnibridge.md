@@ -91,7 +91,7 @@ Since you are opening a new contract in Etherscan, you will connect to the Web3 
 ![](/img/bridges/omni-erc20manual8.png)
 Press the "Write" button to send the transaction.
 ![](/img/bridges/omni-erc20manual9.png)  
-The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in the MetaMask, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
+The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in MetaMask, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
 Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to Gnosis chain to invoke the multi-token mediator contract and complete the tokens transfer.
 You can monitor the confirmation and AMB request execution with the [AMB Live Monitoring tool](https://alm-xdai.herokuapp.com/). Specify the hash (tx id) of the transaction used to call `relayTokens` in the ALM entry page to check the status of the AMB request initiated by this transaction in real time. If the AMB request is executed successfully:
  * __If token has not been transferred with AMB before:__ If this is the first transaction for this particular token using the AMB, a new ERC677 token contract will be deployed to the xDai chain. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
@@ -537,7 +537,7 @@ __Bridge Interfaces:__
 :::
   
 :::caution
-Tokens bridged cross-chain are appended with the "on xDai" or "on BSC". There are instances where bridging across multiple chains creates token names such as "STAKE on xDai on BSC" for example.
+Tokens bridged cross-chain are appended with the "from Ethereum" or "on BSC". There are instances where bridging across multiple chains creates token names such as "GNO from Ethereum on BSC" for example.
 
 Double bridging also can result in multiple instances of the same token on a single chain. For example, USDC can be bridged to xDai from Ethereum and also bridged to xDai from BSC. This results in 2 separate USDC token instances on xDai. These tokens cannot be merged into a single instance after they are minted.
 :::
@@ -552,7 +552,41 @@ Double bridging also can result in multiple instances of the same token on a sin
 
 
 ### Example transfer from Gnosis to BNB Chain
-- [xDai Docs: Example transfer from Gnosis to BNB Chain](https://developers.gnosischain.com/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/bsc-omnibridge-example)
+
+In the following steps, we walk through the steps to transfer STAKE from Ethereum. __Currently, the bridging of STAKE tokens has been disabled. GNO tokens are now used for staking. However, the example is still relevant as the steps are the same__ . 
+
+#### What you will need
+* Tokens on Gnosis Chain that you would like to swap
+* a small amount of xDai to complete the transfer. [You can use a faucet for a small amount of free tokens if you need some](/tools/faucets/). 
+* BNB tokens on the Binance Smart Chain for the gas needed to claim/transfer
+* RPC setup in Metamask for BSC (Network Name: BSC Mainnet New RPC URL: https://bsc-dataseed.binance.org/ ChainID: 56 Symbol: BNB Block Explorer URL: https://bscscan.com/) and [Gnosis Chain](/tools/wallets/metamask/). 
+:::info
+If planning to bridge so you can trade an asset on BSC or xDai (Honeyswap, BaoSwap etc), check liquidity for that asset on the chain where you want to trade prior to bridging.
+:::
+
+## Example: Bridging STAKE fro Gnosis Chain to BSC
+:::note
+As mentioned above, bridging STAKe has been disabled. However, this example is still relevant and is still a useful resource.
+:::
+1. Go to the [Omnibridge UI](), connect your wallet and Select BSC <-> Gnosis in the top right corner dropdown.
+2. Select the token you wish to bridge
+3. Select the amount
+4. Click unlock. (_you can also[ enable infinite unlocks](#infinite-unlock)_)
+![](/img/bridges/omni-bsc1.png)
+5. Confirm the Unlock transaction in Metamask
+6. Once the unlock transaction is complete, the request button will become active. Click request, and then confirm in Metamask.
+![](/img/bridges/omni-bsc2.png)
+7. Continue with the transfer (noting that there are 2 transactions to complete, on on Gnosis Chain and one on the BSC).
+![](/img/bridges/omni-bsc3.png)
+8. Confirm in Metamask, then wait for Block Confirmations and Signature Collections. Once complete, you will see the message to switch the network to the Binance Smart Chain
+![](/img/bridges/omni-bsc4.png)
+9. Once you switch networks, you will see the claim button
+ 1. Click Claim to initiate claim the process.
+ 2. If the claim button does not work for some reason, you can click on the linked sending tx hash to process execute the transaction in the [live monitor](https://alm-bsc.herokuapp.com/).
+ ![](/img/bridges/omni-bsc5.png)
+ 3. If using the ALM, click on the execute button to finalize the claim. Make sure you have enough BNB tokens to complete the transaction, and be sure to add the tokens to your BSC wallet.
+ ![](/img/bridges/omni-bsc6.png)
+
 
 ### WBNB auto-conversion to BNB
 
