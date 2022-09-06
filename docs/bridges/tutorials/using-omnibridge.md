@@ -615,7 +615,7 @@ Use a DEX to swap your token on Gnosis for WBNB. In this example we use [HoneySw
 You may see an Insufficient Funds warning in MetaMask for a few moments while unwrap is processed, added to your account and reflected on MM. This should resolve fairly quickly and you can proceed. Once the claim is processed, you will have native BNB in your wallet on the Binance Smart Chain. You can use this for transactions as needed, and to pay tx costs for bridging over other tokens from Gnosis Chain.
 :::
 
-### Binance-pegged Dai token on Gnosis
+### Binance-peg Dai token on Gnosis
 
 The [Binance-Peg Dai Token](https://bscscan.com/token/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3) can be bridged to xDai using the beta BSC-xDai Omnibridge. __However, this process DOES NOT mint native xDai__. Instead, the Dai Token from BSC is bridged across networks.
 ![](/img/bridges/omni-pegged-dai1.png)
