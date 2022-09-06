@@ -564,7 +564,7 @@ In the following steps, we walk through the steps to transfer STAKE from Ethereu
 If planning to bridge so you can trade an asset on BSC or xDai (Honeyswap, BaoSwap etc), check liquidity for that asset on the chain where you want to trade prior to bridging.
 :::
 
-## Example: Bridging STAKE fro Gnosis Chain to BSC
+#### Example: Bridging STAKE fro Gnosis Chain to BSC
 :::note
 As mentioned above, bridging STAKe has been disabled. However, this example is still relevant and is still a useful resource.
 :::
@@ -590,7 +590,30 @@ As mentioned above, bridging STAKe has been disabled. However, this example is s
 
 ### WBNB auto-conversion to BNB
 
-- [xDai Docs: WBNB auto-conversion to BNB](https://developers.gnosischain.com/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/wbnb-auto-conversion-to-bnb)
+The Gnosis to BSC Bridge now supports wrapped BNB (WBNB) to BNB conversions directly from Gnosis Chain. Tokens are transferred AND unwrapped to native BNB during the bridging process!  
+Process overview:
+1. __Swap__ your token(s) for WBNB on GNosis CHain
+2. __Bridge__ WBNB to native BNB on the Binance smart chain!
+
+#### 1) Swap for wBNB on Gnosis Chain
+Use a DEX to swap your token on Gnosis for WBNB. In this example we use [HoneySwap](https://app.honeyswap.org/#/swap) to convert xDai to WBNB.
+1. Go to [Honeyswap](https://app.honeyswap.org/#/swap) and connect your wallet. Select the pairs you want to trade (xDai -> wBNB in this example)
+![](/img/bridges/omni-swap-wbnb1.png)
+2. If wBNB is not in the dropdown, you can [add the token contract address](https://blockscout.com/xdai/mainnet/tokens/0xCa8d20f3e0144a72C6B5d576e9Bd3Fd8557E2B04/token-transfers)
+![](/img/bridges/omni-swap-wbnb2.png)
+3. Enter the amount to swap and it will calculate the amount of wBNB you will receive. Click Swap to continue.
+![](/img/bridges/omni-swap-wbnb3.png)
+4. Confirm the swap in Metamask to continue.
+#### 2) Bridge wBNB to BNB on the Binance SMart Chain (BSC)
+1. Go to the [Omnibridge UI](https://omni.gnosischain.com/bridge)
+2. Select BSC <-> GC from the Dropdown. Your MetaMask should still be connected to the Gnosis Chain.
+3. Choose Wrapped BNB on xDai and enter the amount you want to bridge.
+4. Toggle to Receive BNB. When your transaction is bridged, the WBNB is also unwrapped on the Binance Smart Chain as a part of the transaction! This gives you native BNB on BSC.
+![](/img/bridges/omni-swap-wbnb4.png)
+5. Click __Request__ to begin bridging. You can monitor the transaction using the [ALM app](https://alm-bsc.herokuapp.com/). After the process is complete, be sure to claim your token(s)
+:::note
+You may see an Insufficient Funds warning in MetaMask for a few moments while unwrap is processed, added to your account and reflected on MM. This should resolve fairly quickly and you can proceed. Once the claim is processed, you will have native BNB in your wallet on the Binance Smart Chain. You can use this for transactions as needed, and to pay tx costs for bridging over other tokens from Gnosis Chain.
+:::
 
 ### Binance-pegged Dai token on Gnosis
 - [xDai Docs: Binance-pegged Dai token on Gnosis](https://developers.gnosischain.com/for-users/bridges/omnibridge/binance-smart-chain-omnibridge/dai-token-on-xdai-bsc)
