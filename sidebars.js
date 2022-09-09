@@ -529,6 +529,11 @@ const sidebars = {
           href: 'https://deposit.gnosischain.com/',
         },
         'tools/beacon-chain/liquid-staking',
+        {
+          type: 'link',
+          label: 'Nethermind Sedge',
+          href: 'https://docs.sedge.nethermind.io/',
+        },
       ],
     },
     {
