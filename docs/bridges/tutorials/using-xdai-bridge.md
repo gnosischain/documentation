@@ -102,20 +102,24 @@ The xDai Bridge Alternative Receiver functionality. The transfer requires 2 tran
 
 ### Dai to xDai
 
-1. Go to [the bridge UI](https://bridge.gnosischain.com/) and connect your MetaMask Wallet.
+1. Go to [the bridge UI](https://bridge.gnosischain.com/) and connect your MetaMask Wallet.  
+  
 ![](/img/bridges/xdai-alt-rec-dai-xdai1.png)
 
 2. Determine **Single Tx Unlock** or **Infinite Tx Unlock**.  You may want to approve the transfer for a single transaction, or approve the contract to make unlimited transfers from this address to many other addresses. For a Single TX Unlock, proceed directly to step 3 below. For infinite TX unlock, complete the following.
 
-    1. Go to Settings
+    1. Go to Settings  
+      
     ![](/img/bridges/xdai-alt-rec-dai-xdai2.png)
 
-    2. Toggle Infinite Unlock and save. Close the modal and proceed to step 3.
+    2. Toggle Infinite Unlock and save. Close the modal and proceed to step 3.  
+      
+    ![](/img/bridges/xdai-alt-rec-dai-xdai3.png)
 
 
-
-3. Click on **Advanced** and add the Recipients Address and the amount to Dai to transfer to Gnosis. Press **Unlock.**
-
+3. Click on **Advanced** and add the Recipients Address and the amount to Dai to transfer to Gnosis. Press **Unlock.**  
+  
+![](/img/bridges/xdai-alt-rec-dai-xdai4.gif)
 
 4. Confirm the Unlock transaction in MetaMask.
 
@@ -141,7 +145,7 @@ The xDai Bridge Alternative Receiver functionality. The transfer requires 2 tran
     2. Enter the Address that will receive Dai.
     3. Enter Amount.
     4. Click Request.
-
+![](/img/bridges/xdai-alt-rec-xdai-dai1.png)
 
 2. Click Confirm to acknowledge you will need to perform 2 transactions.
 
