@@ -11,3 +11,4 @@ Gnosis supports the following explorers:
 - [Blockscout](/tools/explorers/blockscout)
 - [Gnosisscan](https://gnosisscan.io/)
 - [Beacon Chain](https://beacon.gnosischain.com/)
+- [Tokenview](https://xdai.tokenview.io/)
