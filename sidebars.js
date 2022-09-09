@@ -250,6 +250,11 @@ const sidebars = {
           label: 'Beacon Chain',
           href: 'https://beacon.gnosischain.com/',
         },
+        {
+          type: 'link',
+          label: 'Tokenview',
+          href: 'https://xdai.tokenview.io/',
+        },
       ],
     },
     {
