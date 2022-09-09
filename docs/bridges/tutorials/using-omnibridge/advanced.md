@@ -39,7 +39,7 @@ You can give this permission on a per transaction basis, or you can unlock an un
 
 
 ## Using Omnibridge with Gnosis Safe
-OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging ERC20s between Ethereum and Gnosis. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe instructions](using-xdai-bridge).
+OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging ERC20s between Ethereum and Gnosis. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe instructions](../using-xdai-bridge).
 :::danger
 Each Gnosis Safe is deployed independently on Gnosis chain and/or Ethereum. Cross-chain safes do not share the same contract addresses (even when they have the same owners etc), so it is important to use the Alternate Recipient Address feature when bridging with a safe.
 :::
