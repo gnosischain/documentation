@@ -94,7 +94,7 @@ Press the "Write" button to send the transaction.
 The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in MetaMask, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
 Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to Gnosis chain to invoke the multi-token mediator contract and complete the tokens transfer.
 You can monitor the confirmation and AMB request execution with the [AMB Live Monitoring tool](https://alm-xdai.herokuapp.com/). Specify the hash (tx id) of the transaction used to call `relayTokens` in the ALM entry page to check the status of the AMB request initiated by this transaction in real time. If the AMB request is executed successfully:
- * __If token has not been transferred with AMB before:__ If this is the first transaction for this particular token using the AMB, a new ERC677 token contract will be deployed to the xDai chain. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
+ * __If token has not been transferred with AMB before:__ If this is the first transaction for this particular token using the AMB, a new ERC677 token contract will be deployed to Gnosis. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
  * __If token has been previously transferred with AMB:__ If If the ERC677 token has already been registered by the mediator for the original ERC20 token, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
 Once the process is complete and indexed by BlockScout, it is possible to find the token contract on Gnosis Chain. Check out the [Bridged token registry](https://blockscout.com/xdai/mainnet/bridged-tokens) to view it.
 ##### Gnosis -> Ethereum
@@ -128,7 +128,7 @@ Click Write Contract and specify the multi-token mediator contract address on Et
 :::danger
 Do Not Use the `transfer` method to send tokens to the multi-token mediator on Ethereum. It will lead to loss of tokens.
 :::
-The token contact deployed on Gnosis Chain is a customized version of ERC677 standard. It contains the changes that allow calling the transfer method to withdraw tokens from the xDai chain instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
+The token contact deployed on Gnosis Chain is a customized version of ERC677 standard. It contains the changes that allow calling the transfer method to withdraw tokens from Gnosis instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
 
 :::warning
 The method described above works only for tokens deployed by the multi-token mediator on Gnosis chain.
@@ -380,7 +380,7 @@ This set of instructions demonstrates how the Wrapped ETH can be bridged from Gn
 This instruction assumes that you have access to BlockScout and Etherscan. You also must have a bit of xDai to pay for gas fees for a bridge transaction on Gnosis chain. 
 ### Bridge wEth on Gnosis to Native Eth on Ethereum
 1. Change the chain to Gnosis in MetaMask
-2. Find the wEth token in [BlockScount](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/, and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
+2. Find the wEth token in [BlockScout](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/, and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
 ![](/img/bridges/omni-bridge-to-native-eth1.png)
 3. Scroll to the `transferAndCall` method: 
 ![](/img/bridges/omni-bridge-to-native-eth2.png)
@@ -501,7 +501,7 @@ You can give this permission on a per transaction basis, or you can unlock an un
 
 
 ### Using Omnibridge with Gnosis Safe
-OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging ERC20s between Ethereum and the xDai chain. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe instructions](using-xdai-bridge).
+OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging ERC20s between Ethereum and Gnosis. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe instructions](using-xdai-bridge).
 :::danger
 Each Gnosis Safe is deployed independently on Gnosis chain and/or Ethereum. Cross-chain safes do not share the same contract addresses (even when they have the same owners etc), so it is important to use the Alternate Recipient Address feature when bridging with a safe.
 :::
@@ -561,7 +561,7 @@ In the following steps, we walk through the steps to transfer STAKE from Ethereu
 * BNB tokens on the Binance Smart Chain for the gas needed to claim/transfer
 * RPC setup in Metamask for BSC (Network Name: BSC Mainnet New RPC URL: https://bsc-dataseed.binance.org/ ChainID: 56 Symbol: BNB Block Explorer URL: https://bscscan.com/) and [Gnosis Chain](/tools/wallets/metamask/). 
 :::info
-If planning to bridge so you can trade an asset on BSC or xDai (Honeyswap, BaoSwap etc), check liquidity for that asset on the chain where you want to trade prior to bridging.
+If planning to bridge so you can trade an asset on BSC or Gnosis (Honeyswap, BaoSwap etc), check liquidity for that asset on the chain where you want to trade prior to bridging.
 :::
 
 #### Example: Bridging STAKE fro Gnosis Chain to BSC
@@ -607,7 +607,7 @@ Use a DEX to swap your token on Gnosis for WBNB. In this example we use [HoneySw
 #### 2) Bridge wBNB to BNB on the Binance SMart Chain (BSC)
 1. Go to the [Omnibridge UI](https://omni.gnosischain.com/bridge)
 2. Select BSC <-> GC from the Dropdown. Your MetaMask should still be connected to the Gnosis Chain.
-3. Choose Wrapped BNB on xDai and enter the amount you want to bridge.
+3. Choose Wrapped BNB on Gnosis and enter the amount you want to bridge.
 4. Toggle to Receive BNB. When your transaction is bridged, the WBNB is also unwrapped on the Binance Smart Chain as a part of the transaction! This gives you native BNB on BSC.
 ![](/img/bridges/omni-swap-wbnb4.png)
 5. Click __Request__ to begin bridging. You can monitor the transaction using the [ALM app](https://alm-bsc.herokuapp.com/). After the process is complete, be sure to claim your token(s)
