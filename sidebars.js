@@ -587,7 +587,15 @@ const sidebars = {
       collapsed: false,
       items: [
         'bridges/overview',
-        'bridges/governance',
+        {
+          type: 'category',
+          label: 'Governance',
+          collapsed: false,
+          link: {type: 'doc', id: 'bridges/governance/README'},
+          items: [
+            'bridges/governance/decisions',
+          ] 
+        },
         'bridges/audits',
         'bridges/roadmap'
       ]
