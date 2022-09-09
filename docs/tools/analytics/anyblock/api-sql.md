@@ -12,7 +12,7 @@ title: "API & SQL Access"
 
 ## ElasticSearch
 
-* Your API key is used to replace `$mytoken` in standard queries.&#x20;
+* Your API key is used to replace `$mytoken` in standard queries.
 * Queries to the GC use the xdai eth.events endpoint:   [https://api.eth.events/ethereum/xdai/mainnet/es/](https://api.eth.events/ethereum/xdai/mainnet/es/block/search/)
 * Example Queries are located here: [https://www.anyblockanalytics.com/docs/elastic/example-queries/](https://www.anyblockanalytics.com/docs/elastic/example-queries/)
 * Documentation regarding ElasticSearch API calls is available here: [https://www.anyblockanalytics.com/docs/elastic](https://www.anyblockanalytics.com/docs/elastic/)
