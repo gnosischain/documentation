@@ -250,6 +250,11 @@ const sidebars = {
           label: 'Beacon Chain',
           href: 'https://beacon.gnosischain.com/',
         },
+        {
+          type: 'link',
+          label: 'Tokenview',
+          href: 'https://xdai.tokenview.io/',
+        },
       ],
     },
     {
@@ -529,6 +534,11 @@ const sidebars = {
           href: 'https://deposit.gnosischain.com/',
         },
         'tools/beacon-chain/liquid-staking',
+        {
+          type: 'link',
+          label: 'Nethermind Sedge',
+          href: 'https://docs.sedge.nethermind.io/',
+        },
       ],
     },
     {
@@ -587,7 +597,15 @@ const sidebars = {
       collapsed: false,
       items: [
         'bridges/overview',
-        'bridges/governance',
+        {
+          type: 'category',
+          label: 'Governance',
+          collapsed: false,
+          link: {type: 'doc', id: 'bridges/governance/README'},
+          items: [
+            'bridges/governance/decisions',
+          ] 
+        },
         'bridges/audits',
         'bridges/roadmap'
       ]
