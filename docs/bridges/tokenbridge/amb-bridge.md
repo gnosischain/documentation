@@ -172,7 +172,7 @@ function requireToPassMessage (address _contract,
     - in `AMB-ERC-TO-ERC` mode: transfer ERC20 tokens to the Foreign Mediator which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home Network, and transfer ERC20 tokens to the Home Mediator which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign network.
 
 ## Managing Bridge Validators
-Bridge admins can vote to add/remove validators. Read more about governance [here](../governance.md)
+Bridge admins can vote to add/remove validators. Read more about governance [here](../governance/README.md)
 ## Resources
 
 - [Arbitrary Message Bridge Documentation](https://docs.tokenbridge.net/amb-bridge/about-amb-bridge)
