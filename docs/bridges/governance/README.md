@@ -54,10 +54,10 @@ Post created on the Gnosis Forum in the [GnosisDAO category 108](https://forum.g
 
 Bridge validators are separate from chain validators, and currently composed of a subset of Gnosis Chain validators. This is a dynamic set, as the bridge governors can vote to increase the current set as well as propose and vote on other bridge related measures. 
 Organizations are represented by an individual within that organization who is responsible for node operation & validation duties and/or participation in governance.  
-* [xDai Bridge Validators](tokenbridge/xdai-bridge.md#bridge-validators)  
-* [OmniBridge Validators](tokenbridge/omnibridge#bridge-validators)
+* [xDai Bridge Validators](../tokenbridge/xdai-bridge.md#bridge-validators)  
+* [OmniBridge Validators](../tokenbridge/omnibridge#bridge-validators)
 
 
 ### Bridge Limits
 
-Different limits are set for the [xDai Bridge](tokenbridge/xdai-bridge.md#fees--daily-limits) and the [OmniBridge](tokenbridge/omnibridge.md#fees--daily-limits) by the bridge governors. Please see their respective documentation pages for more information. 
+Different limits are set for the [xDai Bridge](../tokenbridge/xdai-bridge.md#fees--daily-limits) and the [OmniBridge](../tokenbridge/omnibridge.md#fees--daily-limits) by the bridge governors. Please see their respective documentation pages for more information. 
