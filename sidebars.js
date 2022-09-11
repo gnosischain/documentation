@@ -622,7 +622,7 @@ const sidebars = {
           type: 'category',
           label: 'Using the OmniBridge',
           collapsed: true,
-          link: {type: 'doc', id: 'bridges/tutorials/using-omnibridge/basics'},
+          link: {type: 'doc', id: 'bridges/tutorials/using-omnibridge/README'},
           items: [
             {
               type: 'doc',
