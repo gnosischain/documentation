@@ -45,7 +45,7 @@ If you are interested in converting Dai to xDai without the UI see [how to use x
 - [xDai Docs: How to bridge Dai from Gnosis to Ethereum](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/moving-xdai-to-dai)
 
 ### How To Use the xDai Bridge with Safe (formerly Gnosis Safe)
-The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and xDai can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](using-omnibridge) instructions.
+The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](using-omnibridge) instructions.
 #### Initiating a Transaction
 
 1. Go to your [Safe](https://gnosis-safe.io/app), login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the Gnosis one). __Safe addresses are distinct for each chain__. You can toggle which network you are using in the top right corner dropdown.
@@ -74,7 +74,7 @@ The xDai Bridge is included as a native Safe application, and Multisig Wallets o
 
  The final signature owner (required number of signatures are set through the gnosis safe settings) then needs to confirm. Any owner can then execute the tx and pay for the initial transfer transaction with xDai once this quorum has been met. In this example, a second owner goes to the **transactions** menu in their safe to find **transaction needs your confirmation**.
 
-5. Execute the transaction on the xDai chain. A warning message may appear related to the gas limit which is set too low by the application. To fix, go to **Advanced options** and raise the gas limit. You can set it to be higher if desired - the transaction will only use the amount required within the set limit.
+5. Execute the transaction on Gnosis. A warning message may appear related to the gas limit which is set too low by the application. To fix, go to **Advanced options** and raise the gas limit. You can set it to be higher if desired - the transaction will only use the amount required within the set limit.
 
 6. Once confirmed, you can close the safe application on xDai. Find the transaction details on BlockScout by clicking on the transaction in the **MetaMask Activity** tab or by following the transaction history in the safe. _Next, switch to a Safe on Ethereum to complete the claim process._
 
@@ -131,7 +131,7 @@ The xDai Bridge Alternative Receiver functionality. The transfer requires 2 tran
 
     1. 8 of 8 block confirmations.....
     2. Countdown with continue until 1 block confirmation is left.
-    3. Waiting for execution on xDai Chain side.
+    3. Waiting for execution on Gnosis side.
     4. Transfer Complete.
 
 
