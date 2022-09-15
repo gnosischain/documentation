@@ -88,7 +88,3 @@ xDai being a native token of the network does not comply with ERC-20 standard. W
 
 - [CoinMarketCap](https://coinmarketcap.com/currencies/xdaistable/)
 - [CoinGecko](https://www.coingecko.com/en/coins/xdai)
-
-## Media Kit
-
-{@file: /media-kit/xDai Stablecoin Brand Assets.zip}
