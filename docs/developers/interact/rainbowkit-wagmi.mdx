@@ -1,0 +1,404 @@
+--- 
+---
+
+# Using Rainbow Kit + Wagmi
+
+Rainbow Kit + Wagmi is a popular combination of tools to connect the front end to the blockchain.  The following instructions are how to add Gnosis chain to the list of chains to be available to choose from based on Next.js installation.
+
+## Summary of actions
+
+1. Install Rainbow Kit + Wagmi
+2. Configure your _app.js file to add a custom RPC and custom chain (using Next.js)
+3. Show Final Code Layout
+
+## Install Rainbow Kit + Wagmi
+
+Based on the following documentation from [Rainbow Kit](https://rainbowkit.com/docs/installation)
+```js showLineNumbers
+yarn add @rainbow-me/rainbowkit wagmi ethers
+```
+
+## Preparing our _app.js
+
+On a fresh install of Next.js and Wagmi, your code should look pretty bare:
+
+```js showLineNumbers
+import '../styles/globals.css'
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+export default MyApp
+
+```
+
+
+
+You want to import the rainbow kit and wagmi library files:
+
+```js showLineNumbers
+import '../styles/globals.css'
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';  
+import {
+  chain,
+  configureChains,
+  createClient,
+  WagmiConfig,
+} from 'wagmi';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+
+
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+export default MyApp
+
+```
+
+## Understanding the Imports
+
+We are importing the styles for rainbow kit, already built in for us to use
+
+```js showLineNumbers
+import '@rainbow-me/rainbowkit/styles.css';
+```
+
+This imports the Default wallets (Metamask, WalletConnect, Coinbase and Rainbow Wallet) and Brings in the Provider Wrapper for our _app.js object
+
+```js showLineNumbers
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';
+```
+
+This part is for the Wagmi configuration
+
+Chain - brings in default chains included in Wagmi (ethereum, test nets, polygon, etc)
+
+configureChains - lets us modify the providers for our chains (we could use infura, alchemy, Ankr, Pokt, or any of our choosing)
+
+createClient - Lets us manage our Wallets (Metamask, etc) and Providers(alchemy, ankr, etc)
+
+WagmiConfig - This is the wrapper for our entire _app.js object (since rainbow kit is dependent on Wagmi, it wraps over rainbow kit wrapper)
+
+
+```js showLineNumbers
+import {
+  chain,
+  configureChains,
+  createClient,
+  WagmiConfig,
+} from 'wagmi';
+```
+
+The providers can be confusing the wagmi docs and the rainbow docs. In short, a feature of Wagmi is to have failover RPCs. Let's say we start with an infura RPC and that fails, then we can use an Ankr RPC and that fails and finally we can use the Public RPCs so that people can keep using our dapp even if our account API fails. Really useful for Wallet Connect and Coinbase Wallet. So we are literally, just importing providers here (NOTE! Gnosis chain currently does NOT require an API key to deploy):
+
+```js showLineNumbers
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+```
+
+Now Let's configure out imports, if you have been following the docs your code should look like this so far:
+
+
+```js showLineNumbers
+import '../styles/globals.css'
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';  
+import {
+  chain,
+  configureChains,
+  createClient,
+  WagmiConfig,
+} from 'wagmi';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+
+// Newly imported code here
+
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.optimism, chain.arbitrum],
+  [
+    alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), //Alchemy API
+    publicProvider()
+  ]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: 'My RainbowKit App',
+  chains
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider
+})
+
+// new imported code stops here
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+export default MyApp
+```
+
+Breaking down what is happening here in the configuration
+
+Setting up configureChains hook. Here we are using the tool to let our variables "chains" and "provider" know what chains we are using and what providers we are using.
+
+"chains" is taking in mainnet, optimism and arbitrum. (Wagmi has a built in list of chains, if you want to add more you can type chain. and see the list of available prebuilt chains to choose from. We will add Gnosis in a bit)
+
+"provider" is taking in both Alchemy provider (with our API key - Reminder GNOSIS does NOT require an API Key) and public provider. We can also add more providers as well. So it will first go with Alchemy first and if it fails, then the public provider.
+
+
+
+```js showLineNumbers
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum,],
+  [
+    alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }),
+    publicProvider()
+  ]
+);
+```
+
+Setting our Default wallets. This sets up our variable "connectors" to accepts the chains that we just previously set in the "configureChains" and giving the app our name (we can change that to whatever we want, our Dapp Name)
+
+```js showLineNumbers
+const { connectors } = getDefaultWallets({
+  appName: 'My RainbowKit App',
+  chains
+});
+```
+
+The createClient just puts it all together in a single Object call wagmiClient. We take "connectors" we just previously setup (this took in our chains we want to support) and our "Providers" (the RPCs we have setup) and bundle it up for wagmi to refer to. AutoConnect refers to connecting to the wallet on the refresh of the webpage.
+
+```js showLineNumbers
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider
+})
+```
+
+Now that we have all the basic configurations setup, we can now wrap our _app.js object so wagmi and rainbowkit will function throughout our entire website. We are going to turn this part:
+
+```js showLineNumbers
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+```
+to this:
+
+```js showLineNumbers
+function MyApp({ Component, pageProps }) {
+  return (
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains}>
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+    </WagmiConfig>
+  );
+}
+```
+
+We just wrapped out website "object" with the RainbowKit wrapper and let it know we want to support these "chains" (the chains we chose in "configureChains"). Then we wrapped this entire wrapping with the WagmiConfig wrapper and set it to the wagmiClient (that set the type of wallets we will support and the RPC providers). That's alot of wrapping but at the end, your _app.js file should look like this:
+
+```js showLineNumbers
+import "../styles/globals.css";
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
+
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: "My RainbowKit App",
+  chains,
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+});
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains}>
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+    </WagmiConfig>
+  );
+}
+
+export default MyApp;
+```
+
+## Adding Gnosis Chain to List of Chains
+
+On the top of our _app.js file, we will inport jsonRpcProvider
+
+```js showLineNumbers
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'; //<<< new RPC
+
+```
+
+Now that we imported it, we can add it to our "configureChains" hook and set it up. You will see the "jsonRpcProvider" is on the top of alchemy and public. It is manually setup to use the Gnosis Chain RPC (using ANKR for this example, but can use Quicknode or Pokt), but want to show that you can use ANY RPC of your liking for this. You are not limited to the preset RPCs that wagmi supports. So now the order of failure would be , ankr, alchemy and then public RPCs (Note that Alchemy does NOT support Gnosis Chain, just using it as an example to help you understand the concept):
+
+
+```js showLineNumbers
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.optimism, chain.arbitrum],
+  [
+    jsonRpcProvider({ rpc: () => ({ http: "https://rpc.ankr.com/gnosis" }) }),  //<<<< New RPC Provider
+    alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }),
+    publicProvider(),
+    
+  ]
+);
+```
+For simplicity, we will add the chain directly under the imports. (Networks can be setup in a seperate file and imported in for a cleaner setup).
+
+
+```js showLineNumbers
+/* adding gnosis network */
+const GnosisChain = {
+  id: 100,
+  name: 'Gnosis Chain',
+  network: 'Gnosis',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'xDai',
+    symbol: 'xDai',
+  },
+  rpcUrls: {
+    default: 'https://rpc.ankr.com/gnosis',
+  },
+  blockExplorers: {
+    default: { name: 'Gnosis Scan', url: 'https://gnosisscan.io/' },
+  },
+  iconUrls: ["https://images.prismic.io/koinly-marketing/16d1deb7-e71f-48a5-9ee7-83eb0f7038e4_Gnosis+Chain+Logo.png"],
+  testnet: false,
+}
+```
+
+Now we have a variable "GnosisChain" that I can add in in the list of networks I want to support.
+
+```js showLineNumbers
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.optimism, chain.arbitrum, GnosisChain], //  <<<<<< Gnosis Chain Addedd
+  [
+    jsonRpcProvider({ rpc: () => ({ http: "https://rpc.ankr.com/gnosis" }) }),  //<<<< New RPC Provider
+    alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }),
+    publicProvider(),
+  ]
+);
+```
+
+Now Gnosis Chain is supported. Unfortunately, it currently doesn't support icons for some networks such as Gnosis as of yet.
+
+# Final Code
+
+```js showLineNumbers
+import "../styles/globals.css";
+import "@rainbow-me/rainbowkit/styles.css";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+  lightTheme,
+  midnightTheme,
+} from "@rainbow-me/rainbowkit";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
+import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
+
+
+/* adding gnosis network */
+const GnosisChain = {
+  id: 100,
+  name: 'Gnosis Chain',
+  network: 'Gnosis',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'xDai',
+    symbol: 'xDai',
+  },
+  rpcUrls: {
+    default: 'https://rpc.ankr.com/gnosis',
+  },
+  blockExplorers: {
+    default: { name: 'Blockscout', url: 'https://gnosisscan.io/' },
+  },
+  iconUrls: ["https://images.prismic.io/koinly-marketing/16d1deb7-e71f-48a5-9ee7-83eb0f7038e4_Gnosis+Chain+Logo.png"],
+  testnet: false,
+}
+
+
+const { chains, provider } = configureChains(
+  [GnosisChain], //  <<<<<< Gnosis Chain The only option
+  [
+    jsonRpcProvider({ rpc: () => ({ http: "https://rpc.ankr.com/gnosis" }) }),  //<<<< New RPC Provider
+    publicProvider(),
+    // No need to alchemy
+  ]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: "My RainbowKit App",
+  chains,
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+});
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider
+        coolMode
+        chains={chains}
+        theme={lightTheme({
+          accentColor: "#623485", //adjustment of button colors
+          accentColorForeground: "white",
+          borderRadius: "large",
+          fontStack: "system",
+        })}
+      >
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+    </WagmiConfig>
+  );
+}
+
+export default MyApp;
+
+```
+
+With this final setup, you will not be able to support Gnosis chain with Rainbow Kit + Wagmi
