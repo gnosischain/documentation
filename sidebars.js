@@ -144,6 +144,7 @@ const sidebars = {
         "developers/interact/metamask",
         "developers/interact/web3-js",
         "developers/interact/ethers-js",
+        "developers/interact/rainbowkit-wagmi",
       ],
     },
     {
