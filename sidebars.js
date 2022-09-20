@@ -683,7 +683,15 @@ const sidebars = {
           items: [
             'bridges/tutorials/using-xdai-bridge/alternate-receiver',
             'bridges/tutorials/using-xdai-bridge/custom-rpc',
-          
+            {
+              type: 'category',
+              label: 'Troubleshooting',
+              collapsed: true,
+              link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/troubleshooting/README'},
+              items: [
+              
+              ]
+            }
           ]
         }   
       ]
