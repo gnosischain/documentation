@@ -682,6 +682,7 @@ const sidebars = {
           link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/README'},
           items: [
             'bridges/tutorials/using-xdai-bridge/alternate-receiver',
+            'bridges/tutorials/using-xdai-bridge/custom-rpc',
           
           ]
         }   
