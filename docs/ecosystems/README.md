@@ -9,6 +9,7 @@ These pages can give you a view of some of the [Gnosis DApp Ecosystem](https://g
 <div class="row">
 <box href="/ecosystems/daos" title="DAOs" />
 <box href="/ecosystems/defi" title="DeFi" />
+<box href="/ecosystems/enterprise" title="Enterprise" />
 <box href="/ecosystems/games" title="Games" />
 <box href="/ecosystems/infrastructure" title="Infrastructure" />
 <box href="/ecosystems/nfts" title="NFTs" />
