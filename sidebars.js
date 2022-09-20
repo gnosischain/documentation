@@ -679,7 +679,7 @@ const sidebars = {
           type: 'category',
           label: 'Using the xDai Bridge',
           collapsed: true,
-          link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge'},
+          link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/README'},
           items: [
             
           

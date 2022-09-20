@@ -8,7 +8,7 @@ title: Using the xDai Bridge
 
 
 :::note
-You will need some Dai to transfer AND some ETH for gas (transaction fees). [Bridge minimum/maximum amounts](../tokenbridge/xdai-bridge.md#fees--daily-limits) are set by the [bridge governors](../tokenbridge/xdai-bridge.md#bridge-governance). Bridge may take some time to update chain stats, try refreshing or waiting a minute if you receive any errors. You can also select a [different RPC](#custom-rpc) in the Settings dropdown.
+You will need some Dai to transfer AND some ETH for gas (transaction fees). [Bridge minimum/maximum amounts](../../tokenbridge/xdai-bridge.md#fees--daily-limits) are set by the [bridge governors](../../tokenbridge/xdai-bridge.md#bridge-governance). Bridge may take some time to update chain stats, try refreshing or waiting a minute if you receive any errors. You can also select a [different RPC](#custom-rpc) in the Settings dropdown.
 :::
 
 1. Go to the [xDai Bridge UI](https://bridge.gnosischain.com/) and connect your wallet to the Ethereum Mainnet. Once connected, you will see your address populated in the header, and your DAI and xDai balance displayed on the page. If you change the dropdown on the page (ETH Mainnet) but not in MetaMask, the interface will update but your wallet will not auto-connect to the chain. _Switching chains in Metamask_ however will automatically update the interface.
@@ -31,7 +31,7 @@ You will need a __small additional amount of xDai__ to process the first transac
 :::
 
 1. Go to the [xDai Bridge UI](https://bridge.gnosischain.com/) and connect your wallet to Gnosis Chain. Once connected, you will see your address populated in the header, and your DAI and xDai balance displayed on the page. If you change the dropdown on the page but not in MetaMask, the interface will update but your wallet will not auto-connect to the chain. _Switching chains in Metamask_ however will automatically update the interface.
-2. Enter the amount of xDai you would like to transfer to Dai, and click the Request button. Note that there exists a [minimum amount](../tokenbridge/xdai-bridge.md#fees--daily-limits).
+2. Enter the amount of xDai you would like to transfer to Dai, and click the Request button. Note that there exists a [minimum amount](../../tokenbridge/xdai-bridge.md#fees--daily-limits).
 3. Confirm that you will need to perform 2 transactions, and will need xDai and Eth to complete the transfer. Click __Confirm__ to process the transaction on Gnosis Chain. 
 4. Your web3 wallet window will open with transaction details. 
 5. Wait for 8 block confirmations. You will see several popups with block confirmation info.
@@ -45,7 +45,7 @@ If you are interested in converting Dai to xDai without the UI see [how to use x
 - [xDai Docs: How to bridge Dai from Gnosis to Ethereum](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/moving-xdai-to-dai)
 
 ### How To Use the xDai Bridge with Safe (formerly Gnosis Safe)
-The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](using-omnibridge) instructions.
+The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](../using-omnibridge) instructions.
 #### Initiating a Transaction
 
 1. Go to your [Safe](https://gnosis-safe.io/app), login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the Gnosis one). __Safe addresses are distinct for each chain__. You can toggle which network you are using in the top right corner dropdown.
@@ -54,7 +54,7 @@ The xDai Bridge is included as a native Safe application, and Multisig Wallets o
 2. Go to **Apps** and find the [**xDai Bridge** App](https://gnosis-safe.io/app/share/safe-app?appUrl=https://bridge.xdaichain.com&chainId=1). Apps are typically displayed in alphabetical order. Click to access.
 
 
-3. Open the application and interact with the bridge as you normally would to begin the transfer process. **** In the following example we bridge xDai on Gnosis chain to Dai on Ethereum. Note that there exists a [minimum amount](../tokenbridge/xdai-bridge.md#fees--daily-limits). Enter:
+3. Open the application and interact with the bridge as you normally would to begin the transfer process. **** In the following example we bridge xDai on Gnosis chain to Dai on Ethereum. Note that there exists a [minimum amount](../../tokenbridge/xdai-bridge.md#fees--daily-limits). Enter:
 
     1. xDai Amount
     2. Recipient Address
