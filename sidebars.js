@@ -681,7 +681,7 @@ const sidebars = {
           collapsed: true,
           link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/README'},
           items: [
-            
+            'bridges/tutorials/using-xdai-bridge/alternate-receiver',
           
           ]
         }   
