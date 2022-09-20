@@ -104,6 +104,7 @@ const sidebars = {
     'ecosystems/README',
     'ecosystems/daos',
     'ecosystems/defi',
+    'ecosystems/enterprise',
     'ecosystems/games',
     'ecosystems/infrastructure',
     'ecosystems/nfts',
