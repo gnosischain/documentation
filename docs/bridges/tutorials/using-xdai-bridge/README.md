@@ -94,6 +94,7 @@ The xDai Bridge is included as a native Safe application, and Multisig Wallets o
 ## More guides
 
 - [Alternate Receiver](./alternate-receiver.md)
+- [Custom RPC endpoint in Bridge](./custom-rpc.md)
 
 ## Debugging Bridge Errors
 
@@ -101,9 +102,6 @@ The xDai Bridge is included as a native Safe application, and Multisig Wallets o
 - [xDai Docs: How to view see pending xDai bridge transactions to your Gnosis address](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/viewing-inbound-transactions)
 - [xDai Docs: How to troubleshoot xDai bridge transactions](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/troubleshooting)
 
-## Custom RPC
-
-- [xDai Docs: How to bridge using a custom RPC Endpoint](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/use-alternate-or-custom-json-rpc-endpoints)
 
 ## Interacting with Bridge Contracts
 ### Bridge Dai by interacting directly with the xDai Bridge Contract
