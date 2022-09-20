@@ -266,7 +266,7 @@ import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'; //<<< new RPC
 
 ```
 
-Now that we imported it, we can add it to our "configureChains" hook and set it up. You will see the "jsonRpcProvider" is on the top of alchemy and public. **It is manually setup to use the Gnosis Chain RPC (using ANKR for this example, but can use Quicknode or Pokt)**, but want to show that you can use ANY RPC of your liking for this. You are not limited to the preset RPCs that wagmi supports. So now the order of failure would be , ankr, alchemy and then public RPCs (Note that Alchemy **does NOT currently** support Gnosis Chain, just using it as an example to help you understand the concept):
+Now that we imported it, we can add it to our "configureChains" hook and set it up. You will see the "jsonRpcProvider" is on the top of alchemy and public. **It is manually setup to use the Gnosis Chain RPC (using ANKR for this example, but can use the RPCs provided here [RPC](https://docs.gnosischain.com/tools/rpc/) )**, but want to show that you can use ANY RPC of your liking for this. You are not limited to the preset RPCs that wagmi supports. So now the order of failure would be , ankr, alchemy and then public RPCs (Note that Alchemy **does NOT currently** support Gnosis Chain, just using it as an example to help you understand the concept):
 
 
 ```js showLineNumbers
