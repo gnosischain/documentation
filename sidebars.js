@@ -661,6 +661,7 @@ const sidebars = {
               id: 'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns'
 
             },
+            'bridges/tutorials/using-omnibridge/safe',
             {
               type:'doc',
               label: 'Advanced',
@@ -680,10 +681,21 @@ const sidebars = {
           type: 'category',
           label: 'Using the xDai Bridge',
           collapsed: true,
-          link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge'},
+          link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/README'},
           items: [
-            
-          
+            'bridges/tutorials/using-xdai-bridge/safe',
+            'bridges/tutorials/using-xdai-bridge/alternate-receiver',
+            'bridges/tutorials/using-xdai-bridge/custom-rpc',
+            'bridges/tutorials/using-xdai-bridge/no-ui',
+            {
+              type: 'category',
+              label: 'Troubleshooting',
+              collapsed: true,
+              link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/troubleshooting/README'},
+              items: [
+              
+              ]
+            }
           ]
         }   
       ]

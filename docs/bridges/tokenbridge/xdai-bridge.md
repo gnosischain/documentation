@@ -51,6 +51,7 @@ References:
 | Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
 | Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://blockscout.com/xdai/mainnet/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
 | Admin Multisignature Wallet   | [gno:0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://blockscout.com/xdai/mainnet/address/0x0D3726e5a9f37234D6B55216fC971D30F150a60F/transactions#address-tabs) |
+| ERC20ToNative Helper Contract | [gno:0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosisscan.io/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract)                            |
 
 References: 
 * [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
