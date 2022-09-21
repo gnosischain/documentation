@@ -187,7 +187,6 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 > [Easy Guide to Running a Gnosis Validator ](https://mirror.xyz/0xf3bF9DDbA413825E5DdF92D15b09C2AbD8d190dd/wkE51RqApadbSW1GQartYJ5Jz71mnz2y60TNu3XNtNM)
 :::
 
-****
 
 ## Setup Instructions Overview
 
