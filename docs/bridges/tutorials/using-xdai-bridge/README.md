@@ -2,7 +2,7 @@
 title: Using the xDai Bridge
 ---
 
-## Basics
+## xDai Bridge
 
 ### Moving Dai from Ethereum to xDai on Gnosis
 

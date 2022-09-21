@@ -2,7 +2,7 @@
 title: OmniBridge Basics
 ---
 
-# Basics
+# OmniBridge
 :::info
 The OmniBridge and the OmniBridge UI are experimental software in Beta which you use at your own risk. The [OmniBridge UI](https://omni.gnosischain.com/bridge) can be accessed here: https://omni.gnosischain.com/bridge
 :::
