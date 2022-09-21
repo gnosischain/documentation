@@ -596,9 +596,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Overview',
+      link: {type: 'doc', id: 'bridges/README'},
       collapsed: false,
       items: [
-        'bridges/overview',
         {
           type: 'category',
           label: 'Governance',
