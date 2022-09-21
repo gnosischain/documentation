@@ -7,6 +7,13 @@ title: Decisions
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
 
+## Remove Funds from lending protocols AAVE and Compound and disable Interest Function on Omni Bridge and xDAI Bridge
+
+🗳 Justification: reduce risk and exposure during the uncertainty that came with the merge. After the merge, a new strategy must be developed in order to define how to approach this type of investment considering the implications related to transparency to the users and the risk involved.
+
+✅ Implemented: September 14, 2022
+
+
 ## Remove Former xDai Team Validators from AMB & xDAI Bridges
 
 🗳 Justification:  xDai validators were important at the early stages of the project to ensure operational execution and bridge functionality. Now, with increased community involvement and ecosystem maturity, the next step is to further decentralize processes and remove the former xDai team.

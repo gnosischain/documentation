@@ -113,11 +113,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'About',
-                to: '/about',
+                label: 'Developers',
+                to: '/developers',
+              },
+              {
+                label: 'Run a Node',
+                to: '/node',
+              },
+              {
+                label: 'Bridges',
+                to: '/bridges',
+              },
+              {
+                label: 'Tools',
+                to: '/tools',
               },
             ],
           },

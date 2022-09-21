@@ -8,12 +8,12 @@ title: Governance
 ### Overview
 In response to increased usage and value locked in the xDai bridge, a proposal was introduced to extend security and decision making powers to a wider group of participants (governors).
 The proposal was accepted, and governance by means of a multi-signature Gnosis Safe was put into place initially on the Ethereum side on 2 October, 2020. Once Gnosis Safe was deployed to xDai, updated governance was enacted on the xDai chain on 23 October, 2020.  
-The governing board is responsible for managing bridge operations on both sides of the bridge (contracts are deployed on the Ethereum and xDai side). 7 signatures are required to approve any management proposal. 
+The governing board is responsible for managing bridge operations on both sides of the bridge (contracts are deployed on the Ethereum and Gnosis side). 7 signatures are required to approve any management proposal. 
 Operations may include:
 * Bridge contract updates.
 * Contract parameters updates such as bridge limits, finality threshold, gas price fallback etc.
 * Bridge validator parameter updates like changing the validators set or signatures threshold.  
-All actions are managed through Gnosis Safe accounts, one on the Ethereum mainnet for Ethereum contract side operations and one on xDai for xDai contract operations.
+All actions are managed through Gnosis Safe accounts, one on the Ethereum mainnet for Ethereum contract side operations and one on Gnosis for xDai contract operations.
 
 ### Bridge Governor Multisig
 

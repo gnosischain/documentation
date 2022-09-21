@@ -1,62 +1,48 @@
 ---
+title: Overview
+description: Architecture of Gnosis' Bridges
 ---
 
-# Bridges
+# Bridges Overview
 
-## Strategy
+Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](/bridges/tokenbridge/amb-bridge#bridge-validators). There is a [roadmap](/bridges/roadmap) to move towards [trustless bridges](/bridges/roadmap#trustless-bridges).
 
-- For Gnosis, there should just be one bridge that transfers Dai, Tokens, and Data (special hook for native xDai)
-- Bridge Validators can just run the same docker image for all types of tokens
-- Bridge Governance would govern all tokens
+There is a growing ecosystem of [3rd-party Bridges](/user-guide/bridges) that build on top of native bridges, that provide users with fast liquidity and user experience.
 
-## Overall 
+Gnosis' native bridges are first-class citizens in the chain's architecture due to the [native xDai bridge's](/bridges/tokenbridge/xdai-bridge) integral role in minting and burning the native [xDai token](/about/tokens/xdai) used for gas. 
+## Conceptual Architecture
 
-- Once Unified Bridge UI comes out, should rewrite all tutorials
-  - `Using the xDai Bridge` 
-    - Legacy Tutorials linked should be refactored into clear documentation
-    - `How to bridge Dai to a different address on Gnosis` should just be part of `How to bridge Dai` tutorial
-    - Get rid of the `how to see pending transactions`?
-- Should each of the Native Bridges have their own section (possibly be governed separately?)
-- Should AMB Bridge have separate section for
-  - Ethereum -> Gnosis AMB (and Omnibridge)
-  - BNB Chain -> Gnosis AMB (and Omnibridge)
+Gnosis has three main types of bridges: 
 
-## xDai Bridge
+- **Native Bridges**: built into the chain itself, and mint the [canonical token](#canonical-tokens) representation of the original asset on Gnosis (e.g. "Canonical Dai", "Canonical ETH")
+- **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for [canonical tokens](#canonical-tokens) created by native bridges
+- **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own [canonical token](#canonical-tokens) on Gnosis
 
-Docs to Merge
-- Transaction Monitoring
-  - Why xDai Bridge doesn't require an ALM (see Slack convo with Auryn and Alex Kolotov)
-- [ ] Bridge Governance Section
-  - [ ] What are the actual parameters that can be amended?
-  - [ ] Link to previous Bridge Governance Decisions
-- [ ] Bridge validators
-  - [ ] Need to verify addresses for each of the organizations - which are on Ethereum, and which are on Gnosis?
-- [ ] Roadmap
-  - [ ] Link to Roadmap
-- [ ] Managing Bridge Contracts
-  - Should convert links into documentation
-- [ ] Managing Bridge Validators
-  - Should convert links into documentation
-- [ ] What is the address 0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd do?
-	- [ ] Owner of the Validator Management proxy on Gnosis
-- Overall
-  - - [ ] Synthesize [xDai Bridge Docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
-  - [ ] Synthesize [Tokenbridge xDai Docs](https://docs.tokenbridge.net/xdai-bridge/about)
-  - [ ] Does xDai Bridge have an ALM? No
+![Diagrams overview of Bridges](/img/bridges/diagrams/bridge-overview.svg)
+## Native Bridges
 
-## Arbitrary Message Bridge
+Gnosis has two native bridges:
 
-- [ ] Zodiac module for DAOs - L2 to L1 sending of data from Gnosis to Ethereum
-- [ ] Synthesize AMB docs from Tokenbridge
-## Omnibridge
+- **xDai Bridge** that is used to mint the native stablecoin by bridging Dai from Ethereum
+- **Omnibridge** and underlying **Arbitrary Message Bridge** that are used for bridging tokens and data 
 
+### Bridging Dai
 
-## Tutorials
+See the [xDai Bridge](/bridges/tokenbridge/xdai-bridge). 
+### Bridging Data
 
-- Bridge Users
-  - Should this be refactored to User Guide instead?
-- Bridge Validators
-  - How to setup a Bridge Validator for xDai Bridge
-  - How to setup a Bridge Validator for AMB / Omnibridge
-  - How to add a Bridge Validator to the Bridge Committee
-  - How to remove a Bridge Validator to the Bridge Committee
+See the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge) or AMB Bridge for short.
+### Bridging Tokens
+
+See the [Omnibridge](/bridges/tokenbridge/omnibridge), which is built on top of the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge).
+
+## Canonical Bridged Tokens
+
+Tokens that are bridged using [Omnibridge](/bridges/tokenbridge/omnibridge) are regarded as  canonical representations of the origin token on Gnosis Chain. 
+
+- [Canonical Bridged Tokens from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
+- [Canonical Bridged Tokens from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+
+## Roadmap
+
+Gnosis has a [long-term roadmap](/bridges/roadmap) to move towards trustless bridges, and is actively funding research and development in this area.
