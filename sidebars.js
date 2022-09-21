@@ -685,6 +685,7 @@ const sidebars = {
             'bridges/tutorials/using-xdai-bridge/safe',
             'bridges/tutorials/using-xdai-bridge/alternate-receiver',
             'bridges/tutorials/using-xdai-bridge/custom-rpc',
+            'bridges/tutorials/using-xdai-bridge/no-ui',
             {
               type: 'category',
               label: 'Troubleshooting',

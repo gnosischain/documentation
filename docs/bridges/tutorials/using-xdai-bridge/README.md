@@ -89,19 +89,10 @@ The xDai Bridge is included as a native Safe application, and Multisig Wallets o
 
 3. All required owners must confirm the transaction before it is processed. Once the required signatures are collected, an owner can claim the transaction. The claim will require Eth, and can be completed anytime if the current prices are too high. Once completed, you can find the Etherscan link in your MetaMask Activity tab or the pending transaction pop-up.
 
-- [xDai Docs: How to use the xDai Bridge in Gnosis Safe](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/xdai-bridge-+-gnosis-safe-app)
-
 ## More guides
 
 - [Alternate Receiver](./alternate-receiver.md)
 - [Custom RPC endpoint in Bridge](./custom-rpc.md)
+- [Using Safe App](./safe.md)
+- [Without UI](./no-ui.md)
 - [Troubleshooting](./troubleshooting)
-
-## Interacting with Bridge Contracts
-### Bridge Dai by interacting directly with the xDai Bridge Contract
-- [xDai Docs: How to bridge Dai by interacting directly with the xDai Bridge Contract](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/transfer-sai-dai-without-the-ui-using-web3-or-mobile-wallet)
-### Using xDai Bridge without the UI
-- [xDai Docs: How to use xDai Bridge without the UI](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/how-to-use-xdai-bridge-without-ui)
-
-
-

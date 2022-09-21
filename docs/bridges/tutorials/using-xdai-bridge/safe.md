@@ -29,7 +29,7 @@ The Mainnet amount will show 0 DAI, as your Gnosis safe address on the Ethereum 
 When bridging with a safe you will set a **Recipient Address**. This may be a 2nd safe contract on the receiving chain or an individual address to receive the funds. The app will not let you proceed until you set the Recipient Address.
 :::
 
-![](/img/bridges/xdaibridge/set recipient address (1).png)
+![](/img/bridges/xdaibridge/set-recipient-address.png)
 
 Once you request to bridge xDai, you will see this warning reminding you about the claims process. xDai funds are required on one of the owner's wallets to initiate the transfer process, and Eth on Ethereum to claim bridged Dai.
 
