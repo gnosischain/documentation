@@ -5,7 +5,7 @@
 
 Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Try these actions first if your transaction has been **pending for 10 minutes or more** (and you don't want to wait any more time). Actions differ depending on if you are transferring from xDai to Dai or [Dai to xDai](#dai-to-xdai-transaction-is-taking-a-long-time).
 
-If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see the [OmniBridge page](../omnibridge/). **This guide only addresses issues with xDai to Dai transfers.**
+If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see the [OmniBridge page](/bridges/tutorials/using-omnibridge/). **This guide only addresses issues with xDai to Dai transfers.**
 
 :::info
 **Things to know**
@@ -19,7 +19,7 @@ If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see
 
 ## Bridge UI is Offline or in Maintenance Mode
 
-We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/VQb3WzsywU)for up-to-date information.
+We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/VQb3WzsywU) for up-to-date information.
 
 ## I Only See Bridging in 1 Direction
 
@@ -36,13 +36,13 @@ A new bridge decentralization feature means **withdrawals now require 2 steps**.
 
 There are currently different bridging UIs, and depending on the UI you may need to take different steps to complete the process.
 
-* \*\*\*\*[**xDai bridge**](#i-used-the-xdai-bridge-ui) at [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/) (or [http://dai-bridge.poa.network/](http://dai-bridge.poa.network/) - this is another URL for the same app)
-* [**Burner Wallet**](troubleshooting.md#i-used-burner-wallet-at-xdai-io) at [xDai.io](https://xdai.io)
-* \*\*\*\*[**xMoon exchange**](troubleshooting.md#i-used-xmoon-exchange) at [https://xmoon.exchange/](https://xmoon.exchange/)
+* [xDai bridge](#i-used-the-xdai-bridge-ui): [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
+* [Burner Wallet](#i-used-burner-wallet-at-xdai-io): [https://xdai.io](https://xdai.io)
+
 
 ## I Used the xDai Bridge UI
 
-When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](moving-xdai-to-dai.md).
+When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](../README.md).
 
 If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your Metamask wallet with the account you used previously.
 
@@ -61,7 +61,7 @@ If you submitted a tx on Gnosis, but not complete the claim process, return to t
 ![](/img/bridges/xdaibridge/history3.png)
 
 :::info
-You may want to [manually set gas prices for a cheaper exit](troubleshooting.md#gas-fees-for-a-claim-are-very-high-how-can-i-reduce-them).
+You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-an-exit-claim-are-very-high-how-can-i-reduce-them).
 :::
 
 ## I Used **Burner Wallet** at xDai.io
@@ -72,7 +72,7 @@ If you initiated a transfer from Burner Wallet, it likely is stuck on the Waitin
 
 ### I'm connected to the Burner Wallet with MetaMask
 
-You can retrieve the pending transaction using the MetaMask interface. [Learn more here.](find-a-transaction-hash.md#find-transaction-hash-in-metamask)
+You can retrieve the pending transaction using the MetaMask interface. [Learn more here.](#find-transaction-hash-in-metamask)
 
 1. Go to the Bridge UI at [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
 2. Switch your MetaMask wallet to the ETH Mainnet
@@ -81,7 +81,7 @@ You can retrieve the pending transaction using the MetaMask interface. [Learn mo
 5. **Confirm** transaction in MetaMask and wait for tx validation.
 
 :::warning
-You may want to [manually set gas prices for a cheaper exit](troubleshooting.md#gas-fees-for-a-claim-are-very-high-how-can-i-reduce-them).
+You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-an-exit-claim-are-very-high-how-can-i-reduce-them).
 :::
 
 ### I'm using a standalone Burner Wallet
@@ -112,7 +112,7 @@ In this case, you'll want to export your private key into MetaMask to finish the
 4. **Confirm** transaction in MetaMask and wait for tx validation.
 
 :::warning
-You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-a-claim-are-very-high-how-can-i-reduce-them).
+You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-an-exit-claim-are-very-high-how-can-i-reduce-them).
 :::
 
 :::info
@@ -143,7 +143,7 @@ If you want to go ahead with the claim, try setting MetaMask to SLOW. This may t
 2. Clicking Speed Up.
 3. Paying the additional gas to try and get it through more quickly.
 
-Otherwise, it will likely be in a pending state until the congestion breaks up. If it remains in a pending state on MetaMask for a long time, see [Resetting MetaMask](#transaction-not-showing-on-blockscout-or-etherscan-resetting-metamask) below.
+Otherwise, it will likely be in a pending state until the congestion breaks up. If it remains in a pending state on MetaMask for a long time, see [Resetting MetaMask](#transaction-not-showing-on-blockscout-or-etherscan---resetting-metamask) below.
 
 ![](/img/bridges/xdaibridge/speedup.jpg)
 
@@ -174,3 +174,75 @@ To use a Ledger you need to allow contract data in order to interact with smart 
 6. Retry your transaction.
 
 For more help with Ledger, please see their [support docs](https://support.ledger.com/hc/en-us).
+
+## Find a Transaction Hash
+
+Completing a transfer from Gnosis to Ethereum (converting xDai to Dai) requires 2 transactions.
+
+1. Initial withdrawal on Gnosis. Signatures are collected and xDai is burned.
+2. Claim Dai on Ethereum. Submit transaction hash containing validator confirmations.
+
+When transferring with the Bridge UI, the tx from step 1 is copied behind the scenes and used with the claim functionality in step 2.
+
+In some cases, however, step 2 may not process, or a different method may be used (such as a direct transfer without the UI or with another UI like a burner wallet that does not include this claim functionality) and the claim must be processed manually.
+
+### Find Transaction Hash in BlockScout
+
+1. Go to BlockScout at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) and enter the address that originated the transaction (typically your wallet address). If you were using a contract to interact with the bridge (in this case use the contract that called the relayToken method) enter that address.
+
+![](/img/bridges/xdaibridge/xdai-bs.jpg)
+
+2. You will see the transaction in the list (tx sent from your address to the EternalStorageProxy contract (`0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6`). Copy the tx hash.
+
+![](/img/bridges/xdaibridge/xdai-bs2.jpg)
+
+### Find Transaction Hash in MetaMask
+
+The process will be similar for other Ethereum wallets. Find your past transaction history and copy the tx hash for the Contract interaction.
+
+1. Go to MetaMask and [connect to **Gnosis**](/tools/wallets/metamask).
+
+2. Click on the Contract Interaction TX in the activity tab of your account.
+
+![](/img/bridges/xdaibridge/MM1.jpg)
+
+3. Copy the Transaction ID (hash).
+
+![Copy the tx hash for the contract interaction](/img/bridges/xdaibridge/MM2.jpg)
+
+
+## View Inbound (Dai to xDai) Transactions
+
+When Dai is transferred from Ethereum to xDai on Gnosis, the amount of Dai in your wallet will decrease and the corresponding amount of xDai will increase. However, the transaction will not appear on the xDai side of the wallet. The easiest way to track it is in BlockScout with the Coin Balance History view.
+
+1. Copy the account address used for the transaction.
+
+![Copy Address - you can be connected to Ethereum or Gnosis, it is the same address on both chains.](/img/bridges/xdaibridge/tut22.jpg)
+
+2. Paste the address into BlockScout at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet/).
+
+![](/img/bridges/xdaibridge/tut2.jpg)
+
+3. Select Coin Balance History.
+
+![](/img/bridges/xdaibridge/tut3.jpg)
+
+4. Scroll down to see incoming and outgoing amounts. Your transaction should appear here.
+
+Red txs signify outgoing and green are incoming. You can click on the block number to find your transaction in the block if you'd like more information.
+
+![](/img/bridges/xdaibridge/tut5.jpg)
+
+![Click the block for more details](/img/bridges/xdaibridge/tut6.jpg)
+
+5. Select a tx hash to view details.
+
+![](/img/bridges/xdaibridge/tut9.jpg)
+
+6. Here you see the recipient address, the value, and the hash of the initiating tx on Ethereum.
+
+![](/img/bridges/xdaibridge/tut10.jpg)
+
+7. This tx can be copy/pasted into Etherscan to see the initiating tx information.
+
+![](/img/bridges/xdaibridge/tut11.jpg)

@@ -45,7 +45,7 @@ If you are interested in converting Dai to xDai without the UI see [how to use x
 - [xDai Docs: How to bridge Dai from Gnosis to Ethereum](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/moving-xdai-to-dai)
 
 ### How To Use the xDai Bridge with Safe (formerly Gnosis Safe)
-The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](../using-omnibridge) instructions.
+The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](../using-omnibridge/README.md) instructions.
 #### Initiating a Transaction
 
 1. Go to your [Safe](https://gnosis-safe.io/app), login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the Gnosis one). __Safe addresses are distinct for each chain__. You can toggle which network you are using in the top right corner dropdown.
@@ -96,12 +96,6 @@ The xDai Bridge is included as a native Safe application, and Multisig Wallets o
 - [Alternate Receiver](./alternate-receiver.md)
 - [Custom RPC endpoint in Bridge](./custom-rpc.md)
 - [Troubleshooting](./troubleshooting)
-
-## Debugging Bridge Errors
-
-- [xDai Docs: How to find the transaction hash for a xDai Bridge Transaction](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/find-a-transaction-hash)
-- [xDai Docs: How to view see pending xDai bridge transactions to your Gnosis address](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/viewing-inbound-transactions)
-
 
 ## Interacting with Bridge Contracts
 ### Bridge Dai by interacting directly with the xDai Bridge Contract
