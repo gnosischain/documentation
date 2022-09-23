@@ -119,6 +119,57 @@ Container name should in this case be 'nethermind'
 This can take 1-3 days to sync, so in the meantime you can connect your Beacon chain node to a public RPC
 :::
 
+### Setup as Archive node
+
+A Gnosis archive node execute heavy historical sync verifying all the transactions and keeping all the historical state. In Nethermind, the default configuration activates the pruning functionality.
+
+To start a node as an archive node you will need to disable pruning in the config file when running an archive node.
+
+Set the following variable:
+
+```bash
+NETHERMIND_PRUNINGCONFIG_MODE: "None"
+```
+
+Alternatively, if you followed the [setup instructions](#setup-instructions-linux) with Docker, edit the docker compose file with the following:
+
+```js title="docker-compose.yml"
+version: "3.7"
+services:
+
+  nethermind:
+    hostname: nethermind
+    container_name: nethermind
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    networks:
+      net:
+        ipv4_address: 192.168.32.100
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+    volumes:
+      - /home/<user>/nethermind/nethermind_db:/nethermind/nethermind_db
+      - /home/<user>/nethermind/keystore:/nethermind/keystore
+      - /home/<user>/nethermind/logs:/nethermind/logs
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      // highlight-next-line
+      - NETHERMIND_CONFIG=xdai_archive
+    logging:
+      driver: "local"
+ 
+networks:
+  net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.32.0/24"
+```
+
+Read more about the [Nethermind Sync Modes](https://docs.nethermind.io/nethermind/ethereum-client/sync-modes) in the official documentation.
 
 
 ## Node Maintenance
