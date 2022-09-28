@@ -68,13 +68,7 @@ Syncing the [Gnosis using Nethermind](/node/execution-layer-validator) requires 
 
 ### Can I use a node provider to run a Gnosis node?
 
-Yes you can. Providers who currently support Gnosis:
-
-* **QuikNode** [https://blog.quiknode.io/xdai-network-is-live-on-quiknode/](https://blog.quicknode.com/xdai-network-is-live-on-quiknode/)
-* **Ankr** [https://www.ankr.com/](https://www.ankr.com/protocol/public/gnosis/)
-* **GetBlock.io** [https://getblock.io/nodes/stake](https://getblock.io/nodes/stake)
-* **AnyBlock Analytics** [https://www.anyblockanalytics.com/json-rpc](https://www.anyblockanalytics.com/json-rpc/)
-* **Pocket** [https://www.portal.pokt.network](https://www.portal.pokt.network/#1)
+Check the [RPC Providers](/tools/rpc) page for the complete list.
 
 ## Can I use DappNode?
 
