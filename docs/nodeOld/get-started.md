@@ -8,7 +8,7 @@ Validators protect Gnosis by staking on the Gnosis Beacon Chain. There are sever
 
 ## Run Your Own Node
 
-Please view these [important notes](/node/consensus-layer-validator#before-starting) and [Technical Requirements](/node/consensus-layer-validator#beacon-chain-node-requirements) to learn more about expectations and what you will need to become a validator. Validating the GBC requires 1 [GNO](/about/tokens/gno) per validator process.
+Please view these [important notes](/nodeOld/consensus-layer-validator#before-starting) and [Technical Requirements](/nodeOld/consensus-layer-validator#beacon-chain-node-requirements) to learn more about expectations and what you will need to become a validator. Validating the GBC requires 1 [GNO](/about/tokens/gno) per validator process.
 
 :::note
 DappNode now supports the Gnosis Beacon Chain! If you would like to use their services for validation, please see the [guide and instructions here](https://forum.dappnode.io/t/how-to-setup-a-gnosis-beacon-chain-gbc-validator-on-dappnode/1351)

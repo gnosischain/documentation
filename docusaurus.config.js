@@ -82,7 +82,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'node',
-            label: 'Run a Node',
+            label: 'Run Gnosis',
           },
           {
             type: 'docSidebar',

@@ -192,22 +192,22 @@ const sidebars = {
     },
   ],
 
-  node: [
-    'node/README',
-    'node/incentives',
+  nodeOld: [
+    'nodeOld/README',
+    'nodeOld/incentives',
     {
       type: 'category',
       label: 'Validator Guide',
       collapsed: false,
-      link: {type: 'doc', id: 'node/get-started'},
+      link: {type: 'doc', id: 'nodeOld/get-started'},
       items: [
-        "node/consensus-layer-validator",
-        "node/execution-layer-validator",
-        "node/validator-deposits",
-        "node/validator-withdrawls",
-        "node/migrating-a-validator",
-        "node/monitoring-nodes",
-        "node/voluntary-exit",
+        "nodeOld/consensus-layer-validator",
+        "nodeOld/execution-layer-validator",
+        "nodeOld/validator-deposits",
+        "nodeOld/validator-withdrawls",
+        "nodeOld/migrating-a-validator",
+        "nodeOld/monitoring-nodes",
+        "nodeOld/voluntary-exit",
       ],
     },
     /*{
@@ -225,6 +225,66 @@ const sidebars = {
       type: 'link',
       label: 'Landing Page',
       href: 'https://www.gnosischain.com/',
+    },
+  ],
+
+  node: [
+    'node/README',
+    {
+      type: 'category',
+      label: 'Prepare',
+      collapsed: false,
+      items: [
+        "node/incentives",
+        "node/requirements",
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Setup',
+      link: {type: 'doc', id: 'node/setup/README'},
+      collapsed: false,
+      items: [
+        "node/setup/dappnode",
+        {
+          type: 'category',
+          label: 'Execution Layer',
+          collapsed: true,
+          items: [
+            "node/setup/nethermind",
+            "node/setup/besu",
+            "node/setup/erigon",
+            "node/setup/geth",
+            "node/setup/open-ethereum",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Consensus Layer',
+          collapsed: true,
+          items: [
+            "node/setup/lighthouse",
+            "node/setup/prysm",
+            "node/setup/teku",
+            "node/setup/nimbus",
+            "node/setup/lodestar",
+          ],
+        },
+        "node/setup/generate-keys",
+        "node/deposit",
+      ],
+    },
+    {
+      type: 'category',
+      label: 'After Setup',
+      collapsed: false,
+      items: [
+        "node/monitor",
+        "node/update",
+        "node/migrate",
+        "node/exit",
+        "node/withdraw",
+      ],
     },
   ],
 
