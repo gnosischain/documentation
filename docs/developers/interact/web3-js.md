@@ -52,7 +52,7 @@ When using web3.js, the default chain for signing transactions locally will be E
 <TabItem value="chiado" label="Chiado Testnet">
 
 ```javascript
-web3.eth.defaultCommon = {customChain: {name: 'Chiado Testnet', chainId: 100100, networkId: 100100}};
+web3.eth.defaultCommon = {customChain: {name: 'Chiado Testnet', chainId: 10200, networkId: 10200}};
 ```
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">

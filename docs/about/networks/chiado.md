@@ -21,20 +21,20 @@ Name: `Gnosis Token`
 
 Ticker: `GNO`
 
-Chiado Contract Address: [0x7f3e7cDf43E543c6D08bEf131f94aB99b091D2A2](https://blockscout-chiado.gnosistestnet.com/address/0x7f3e7cDf43E543c6D08bEf131f94aB99b091D2A2)  
+Chiado Contract Address: [0x0 TODO](https://blockscout.chiadochain.net/address/0x0)  
 
 
 ## Contracts
 
-SBCTokenProxy = [0x6bE2df1956282d2d1936fCB06B9C3361986a0DEe](https://blockscout-chiado.gnosistestnet.com/address/0x6bE2df1956282d2d1936fCB06B9C3361986a0DEe) 
+SBCTokenProxy = [TBC](https://blockscout.chiadochain.net/address/0x0) 
 
-SBCWrapper = [0x7449F31859a7064eb4B1C3635fD38a8f53fFE8a2](https://blockscout-chiado.gnosistestnet.com/address/0x7449F31859a7064eb4B1C3635fD38a8f53fFE8a2) 
+SBCWrapper = [TBC](https://blockscout.chiadochain.net/address/0x0) 
 
-SBCWrapperProxy = [0x6DD45A261782EAAC28B5c165CABD38a9e1389129](https://blockscout-chiado.gnosistestnet.com/address/0x6DD45A261782EAAC28B5c165CABD38a9e1389129) 
+SBCWrapperProxy = [TBC](https://blockscout.chiadochain.net/address/0x0) 
 
-SBCDepositContract = [0x0693208ef36eb70308FcaE7b7338664f9E5f2246](https://blockscout-chiado.gnosistestnet.com/address/0x0693208ef36eb70308FcaE7b7338664f9E5f2246) 
+SBCDepositContract = [TBC](https://blockscout.chiadochain.net/address/0x0) 
 
-[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [0x2DCa72Dcf9fd65c806726a3F76aC51f3CEf778dc](https://blockscout-chiado.gnosistestnet.com/address/0x2DCa72Dcf9fd65c806726a3F76aC51f3CEf778dc) 
+[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [TBC](https://blockscout.chiadochain.net/address/0x0) 
 
 
 ## Bridges with Goerli
