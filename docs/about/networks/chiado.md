@@ -41,15 +41,15 @@ SBCDepositContract = [TBC](https://blockscout.chiadochain.net/address/0x0)
 
 # AMB Bridges TokenBridge ARBITRARY_MESSAGE
 
-[Home] Chiado: 0x2f018c1118B0DC28E395d054e80fE44c61904892 at block 190695
+[Home] Chiado: 0x0 at block 0
 
-[Foreign] Goerli: 0x5816D9EdC3D30F501A098bC26A313Ae8BeB7B8ad at block 7409708
+[Foreign] Goerli: 0x0 at block 0
 
 ## OmniBridge AMB:
 
-[Home] Chiado Bridge Mediator: 0x27D23dd2Ef62D9b92f8f743c9A29a9d327381900
+[Home] Chiado Bridge Mediator: 0x0
 
-[Foreign] Goerli Bridge Mediator: 0xe18e081f5448aE92E2D66aBBA6b9AbE3f61ea8B0
+[Foreign] Goerli Bridge Mediator: 0x0
 
 	-> Claim Token
 
@@ -58,7 +58,7 @@ SBCDepositContract = [TBC](https://blockscout.chiadochain.net/address/0x0)
 
 Go to:[ https://abi.hashex.org/](https://abi.hashex.org/)
 
-Copy the ABI from [https://etherscan.io/address/0x8eb3b7d8498a6716904577b2579e1c313d48e347#code](https://etherscan.io/address/0x8eb3b7d8498a6716904577b2579e1c313d48e347#code)
+Copy the ABI from [https://etherscan.io/address/0x0#code](https://etherscan.io/address/0x0#code)
 
 
 ## Config Files
