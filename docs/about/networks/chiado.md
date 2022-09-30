@@ -21,7 +21,7 @@ Name: `Gnosis Token`
 
 Ticker: `GNO`
 
-Chiado Contract Address: [0x0 TODO](https://blockscout.chiadochain.net/address/0x0)  
+Chiado Contract Address: [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f)  
 
 
 ## Contracts
@@ -34,7 +34,7 @@ SBCWrapperProxy = [TBC](https://blockscout.chiadochain.net/address/0x0)
 
 SBCDepositContract = [TBC](https://blockscout.chiadochain.net/address/0x0) 
 
-[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [TBC](https://blockscout.chiadochain.net/address/0x0) 
+[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [0xcD0904AcBF79F228E2c0d6D749cC72019D411995](https://blockscout.chiadochain.net/address/0xcD0904AcBF79F228E2c0d6D749cC72019D411995) 
 
 
 ## Bridges with Goerli
