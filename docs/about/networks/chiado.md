@@ -26,16 +26,11 @@ Chiado Contract Address: [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://bl
 
 ## Contracts
 
-SBCTokenProxy = [TBC](https://blockscout.chiadochain.net/address/0x0) 
+mGNO (SBCTokenProxy): [0xe68d8cD2b90bFd08d2Bcf5047A2d9850DA2deFDc](https://blockscout.chiadochain.net/address/0x0) 
 
-SBCWrapper = [TBC](https://blockscout.chiadochain.net/address/0x0) 
+[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21) (SBCDepositContractProxy): [0xcD0904AcBF79F228E2c0d6D749cC72019D411995](https://blockscout.chiadochain.net/address/0xcD0904AcBF79F228E2c0d6D749cC72019D411995) 
 
-SBCWrapperProxy = [TBC](https://blockscout.chiadochain.net/address/0x0) 
-
-SBCDepositContract = [TBC](https://blockscout.chiadochain.net/address/0x0) 
-
-[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [0xcD0904AcBF79F228E2c0d6D749cC72019D411995](https://blockscout.chiadochain.net/address/0xcD0904AcBF79F228E2c0d6D749cC72019D411995) 
-
+SBCWrapper = [0x5159F5ef48310EBdb7daD09A97f4376Bb207A7FE](https://blockscout.chiadochain.net/address/0x5159F5ef48310EBdb7daD09A97f4376Bb207A7FE) 
 
 ## Bridges with Goerli
 
