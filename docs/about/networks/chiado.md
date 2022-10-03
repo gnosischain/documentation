@@ -21,35 +21,30 @@ Name: `Gnosis Token`
 
 Ticker: `GNO`
 
-Chiado Contract Address: [0x7f3e7cDf43E543c6D08bEf131f94aB99b091D2A2](https://blockscout-chiado.gnosistestnet.com/address/0x7f3e7cDf43E543c6D08bEf131f94aB99b091D2A2)  
+Chiado Contract Address: [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f)  
 
 
 ## Contracts
 
-SBCTokenProxy = [0x6bE2df1956282d2d1936fCB06B9C3361986a0DEe](https://blockscout-chiado.gnosistestnet.com/address/0x6bE2df1956282d2d1936fCB06B9C3361986a0DEe) 
+mGNO (SBCTokenProxy): [0xe68d8cD2b90bFd08d2Bcf5047A2d9850DA2deFDc](https://blockscout.chiadochain.net/address/0x0) 
 
-SBCWrapper = [0x7449F31859a7064eb4B1C3635fD38a8f53fFE8a2](https://blockscout-chiado.gnosistestnet.com/address/0x7449F31859a7064eb4B1C3635fD38a8f53fFE8a2) 
+[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21) (SBCDepositContractProxy): [0xcD0904AcBF79F228E2c0d6D749cC72019D411995](https://blockscout.chiadochain.net/address/0xcD0904AcBF79F228E2c0d6D749cC72019D411995) 
 
-SBCWrapperProxy = [0x6DD45A261782EAAC28B5c165CABD38a9e1389129](https://blockscout-chiado.gnosistestnet.com/address/0x6DD45A261782EAAC28B5c165CABD38a9e1389129) 
-
-SBCDepositContract = [0x0693208ef36eb70308FcaE7b7338664f9E5f2246](https://blockscout-chiado.gnosistestnet.com/address/0x0693208ef36eb70308FcaE7b7338664f9E5f2246) 
-
-[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [0x2DCa72Dcf9fd65c806726a3F76aC51f3CEf778dc](https://blockscout-chiado.gnosistestnet.com/address/0x2DCa72Dcf9fd65c806726a3F76aC51f3CEf778dc) 
-
+SBCWrapper = [0x5159F5ef48310EBdb7daD09A97f4376Bb207A7FE](https://blockscout.chiadochain.net/address/0x5159F5ef48310EBdb7daD09A97f4376Bb207A7FE) 
 
 ## Bridges with Goerli
 
 # AMB Bridges TokenBridge ARBITRARY_MESSAGE
 
-[Home] Chiado: 0x2f018c1118B0DC28E395d054e80fE44c61904892 at block 190695
+[Home] Chiado: 0x0 at block 0
 
-[Foreign] Goerli: 0x5816D9EdC3D30F501A098bC26A313Ae8BeB7B8ad at block 7409708
+[Foreign] Goerli: 0x0 at block 0
 
 ## OmniBridge AMB:
 
-[Home] Chiado Bridge Mediator: 0x27D23dd2Ef62D9b92f8f743c9A29a9d327381900
+[Home] Chiado Bridge Mediator: 0x0
 
-[Foreign] Goerli Bridge Mediator: 0xe18e081f5448aE92E2D66aBBA6b9AbE3f61ea8B0
+[Foreign] Goerli Bridge Mediator: 0x0
 
 	-> Claim Token
 
@@ -58,7 +53,7 @@ SBCDepositContract = [0x0693208ef36eb70308FcaE7b7338664f9E5f2246](https://blocks
 
 Go to:[ https://abi.hashex.org/](https://abi.hashex.org/)
 
-Copy the ABI from [https://etherscan.io/address/0x8eb3b7d8498a6716904577b2579e1c313d48e347#code](https://etherscan.io/address/0x8eb3b7d8498a6716904577b2579e1c313d48e347#code)
+Copy the ABI from [https://etherscan.io/address/0x0#code](https://etherscan.io/address/0x0#code)
 
 
 ## Config Files

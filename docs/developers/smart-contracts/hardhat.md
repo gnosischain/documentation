@@ -45,7 +45,7 @@ const defaultNetwork = 'gnosis';
       },
     },
     chiado: {
-      url: 'https://rpc-chiado.gnosistestnet.com',
+      url: 'https://rpc.chiadochain.net',
       gasPrice: 1000000000,
       accounts: {
         mnemonic: Mnemonic,
