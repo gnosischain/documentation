@@ -5,7 +5,7 @@
 
 :::danger
 
-Chiado is current **in-development**. 
+Chiado is current **in-development** and is not ready for public participation. 
 
 Please wait for Core Devs to release official Chiado images before attempting to run a Chiado validator.
 
