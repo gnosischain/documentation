@@ -3,8 +3,29 @@
 
 # Chiado Testnet
 
-Chiado is the official testnet of Gnosis. It has the same execution layer, and it is the first network transitioned to Proof of Stake, in preparation for the Gnosis mainnet merge.
+:::danger
 
+Chiado is current **in-development**. 
+
+Please wait for Core Devs to release official Chiado images before attempting to run a Chiado validator.
+
+:::
+
+Chiado is a Gnosis testnet that is scheduled for launch in Q4 2022. Its primary purpose of testing Gnosis' migration from a [Proof-of-Authority consensus](../../specs/consensus/aura.md) to the [ETH2 Beacon Chain](../../specs/consensus/gbc.md). 
+
+# Key Information
+
+| Network Name       | Chiado                             |
+| ------------------ | ---------------------------------- |
+| Native (fee) token | Chiado-xDAI                        |
+| Staking token      | Chiado-GNO                         |
+| Chain ID           | 10200                              |
+| EL RPC             | https://rpc.chiadochain.net        |
+| EL Explorer        | https://blockscout.chiadochain.net |
+| CL Explorer        | https://beacon.chiadochain.net/    |
+| Fork monitor       | TBA                                |
+| EthStats           | https://ethstats.chiadochain.net/  |
+| Faucet             | https://gnosisfaucet.com           |
 
 ## Native Tokens
 
