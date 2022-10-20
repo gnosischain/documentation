@@ -68,7 +68,7 @@ Warning! These are subject to further changes
 
 :::
 
-[https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/README.md](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/README.md)
+* [https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/README.md](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/README.md)
 
 ### Consensus Layer
 
@@ -95,12 +95,20 @@ Warning! These are subject to further changes
 ## Key Contracts
 
 ### Bridges
-| Bridge             | Goerli | Chiado |
-| ------------------ | ------ | ------ |
-| AMB Bridge         | TBD    | TBD    |
-| Chiado-xDai Bridge | TBD    | TBD    |
-| Omnibridge Mediator         | TBD    | TBD    |
+| Bridge              | Goerli | Chiado |
+| ------------------- | ------ | ------ |
+| AMB Bridge          | TBD    | TBD    |
+| Chiado-xDai Bridge  | TBD    | TBD    |
+| Omnibridge Mediator | TBD    | TBD    |
 
+### Common dApps
+
+| DApp      |     |
+| --------- | --- |
+| Uniswap   |     |
+| Chainlink |     |
+|           |     |
+|           |     |
 
 ### How to Use:
 
