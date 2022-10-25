@@ -14,7 +14,7 @@ Deposits occur on Gnosis. **If you have GNO on Ethereum mainnet, you will need t
 During the deposit, your GNO will be automatically wrapped into mGNO, the metatoken used for staking on the Gnosis Beacon Chain. **1 GNO = 32 mGNO required to run a validator**.  When [viewing your validator](#view-your-validator) you will see deposit info in mGNO.
 :::
 
-Once you have followed the steps to [Get Started](/node/get-started/) and your Beacon Chain node is running, you will make a deposit of **1 GNO for each validator**. You can make a bulk deposit for up to 128 validators at a time.
+Once you have followed the steps to [Get Started](/node/consensus-layer-validator) and your Beacon Chain node is running, you will make a deposit of **1 GNO for each validator**. You can make a bulk deposit for up to 128 validators at a time.
 
 ## Make sure you aren't being phished
 
@@ -43,7 +43,7 @@ In this example we use MetaMask.
 
 ![](/img/node/UI-2A.png)
 
-2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/get-started/#step-1-generate-validator-account-s-and-deposit-data) It will be located in the same folder as the generated keystores.
+2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/consensus-layer-validator#step-1-generate-validator-accounts-and-deposit-data) It will be located in the same folder as the generated keystores.
 
 :::note
 If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
@@ -112,7 +112,7 @@ A modification to the Gnosis Chain deposit contract allows you to deposit in bat
 
     `STAKING_ACCOUNT_PRIVATE_KEY` is the private key of the account which holds the necessary amount of GNO tokens for deposit. Any account may be used for funding, but it must also have a small amount of xDai to process transactions. In the above example, 2 transactions will occur with 256 total deposits of 1 GNO each.
 
-3. Copy the `deposit_data.json` generated during [Step 2 of Get Started ](/node/get-started/#step-2-choose-your-beacon-chain-client--import-validator-keys)to the current directory.
+3. Copy the `deposit_data.json` generated during [Step 2 of Get Started ](/node/consensus-layer-validator#step-2-choose-your-beacon-chain-client--import-validator-keys)to the current directory.
 4.  Run the deposit script (`/path/to/` should be a valid path to the .env file you have created):
 
     ```bash
@@ -127,7 +127,7 @@ Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosi
 
 ## Convert GNO to mGNo (special cases)
 
-::: note
+:::note
 GNO is automatically wrapped by the deposit contract, you only need to do this to top off your balance. The following instructions use the older swap UI
 :::
 
