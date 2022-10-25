@@ -54,7 +54,7 @@ If you can't upload the file, you may want to check the file permissions to make
 
 ![](/img/node/deposit-2.png)
 
-4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/validator-deposits) before proceeding.
+4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/validator-deposits#make-sure-you-arent-being-phished) before proceeding.
 
 ![](/img/node/deposit-3.png)
 
