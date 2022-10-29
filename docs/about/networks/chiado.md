@@ -5,7 +5,7 @@
 
 :::danger
 
-Chiado is current **in-development** and is not ready for public participation. 
+Chiado is current **in-development** and is not ready for public participation.
 
 Please wait for Core Devs to release official Chiado images before attempting to run a Chiado validator.
 
@@ -13,17 +13,17 @@ Please wait for Core Devs to release official Chiado images before attempting to
 
 ## Overview
 
-* Chiado is a Gnosis testnet that is scheduled for launch in Q4 2022. 
-* Chiado's primary purpose is to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../specs/consensus/aura.md) to the [Beacon Chain](../../specs/consensus/gbc.md). 
-* Post-Merge, Chiado will transition to a long-running testnet for developers. 
-* Chiado is named after the [Chiado metro station](https://en.wikipedia.org/wiki/Baixa-Chiado_(Lisbon_Metro)) in Lisbon, Portugal. 
+* Chiado is a Gnosis testnet that is scheduled for launch in Q4 2022.
+* Chiado's primary purpose is to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../specs/consensus/aura.md) to the [Beacon Chain](../../specs/consensus/gbc.md).
+* Post-Merge, Chiado will transition to a long-running testnet for developers.
+* Chiado is named after the [Chiado metro station](https://en.wikipedia.org/wiki/Baixa-Chiado_(Lisbon_Metro)) in Lisbon, Portugal.
 
 ### Key Information
 
 | Network Name                   | Chiado                                                        |
 | ------------------------------ | ------------------------------------------------------------- |
 | Native (fee) token             | Chiado-xDAI                                                   |
-| Staking token                  | Chiado-GNO                                                    |
+| Staking token                  | Chiado-Test GNO                                                    |
 | Chain ID                       | 10200                                                         |
 | Execution Layer RPC (Archival) | https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado |
 | Execution Layer RPC            | https://rpc.chiadochain.net                                   |
@@ -39,7 +39,7 @@ Please wait for Core Devs to release official Chiado images before attempting to
 | Slot Time         | 5s           |
 | Epoch             | 16 slots     |
 | Finalization Time | 2.7 min      |
-| Staking Deposit   | 1 Chiado-GNO |
+| Staking Deposit   | 1 Chiado-Test GNO |
 
 ## Native Tokens
 
@@ -49,12 +49,12 @@ Please wait for Core Devs to release official Chiado images before attempting to
 * Type: Native Asset
 ### Staking Token [^1]
 
-To mimic Ethereum-Gnosis conditions, Chiado uses a "GNO" token that is isseud on Goerli and bridged over via the AMB.
+To mimic Ethereum-Gnosis conditions, Chiado uses a test "GNO" token that is isseud on Goerli and bridged over via the AMB.
 
 | Token            | Address                                                                                                                             |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| GNO on Goerli    | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
-| GNO on Chiado    | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
+| Test GNO on Goerli    | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
+| Test GNO on Chiado    | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
 | mGNO on Chiado   | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 | Deposit Contract | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 
@@ -62,7 +62,7 @@ To mimic Ethereum-Gnosis conditions, Chiado uses a "GNO" token that is isseud on
 
 :::danger
 
-Chiado is current **in-development** and is not ready for public participation. 
+Chiado is current **in-development** and is not ready for public participation.
 
 Please wait for Core Devs to release official Chiado images before attempting to run a Chiado validator.
 
@@ -75,7 +75,7 @@ Warning! These are subject to further changes
 
 :::
 
-Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that is the canonical source for Gnosis Chain networks. 
+Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that is the canonical source for Gnosis Chain networks.
 
 ### Consensus Layer
 
