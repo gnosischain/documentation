@@ -23,7 +23,7 @@ Please wait for Core Devs to release official Chiado images before attempting to
 | Network Name                   | Chiado                                                        |
 | ------------------------------ | ------------------------------------------------------------- |
 | Native (fee) token             | Chiado-xDAI                                                   |
-| Staking token                  | Chiado-Test GNO                                                    |
+| Staking token                  | Chiado-Testnet GNO                                            |
 | Chain ID                       | 10200                                                         |
 | Execution Layer RPC (Archival) | https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado |
 | Execution Layer RPC            | https://rpc.chiadochain.net                                   |
@@ -34,12 +34,12 @@ Please wait for Core Devs to release official Chiado images before attempting to
 | Faucet                         | https://gnosisfaucet.com                                      |
 
 ### Key Parameters
-| Param             | Value        |
-| ----------------- | ------------ |
-| Slot Time         | 5s           |
-| Epoch             | 16 slots     |
-| Finalization Time | 2.7 min      |
-| Staking Deposit   | 1 Chiado-Test GNO |
+| Param             | Value                |
+| ----------------- | -------------------- |
+| Slot Time         | 5s                   |
+| Epoch             | 16 slots             |
+| Finalization Time | 2.7 min              |
+| Staking Deposit   | 1 Chiado-Testnet GNO |
 
 ## Native Tokens
 
@@ -53,8 +53,8 @@ To mimic Ethereum-Gnosis conditions, Chiado uses a test "GNO" token that is isse
 
 | Token            | Address                                                                                                                             |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Test GNO on Goerli    | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
-| Test GNO on Chiado    | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
+| Testnet GNO on Goerli    | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
+| Testnet GNO on Chiado    | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
 | mGNO on Chiado   | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 | Deposit Contract | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 
