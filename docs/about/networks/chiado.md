@@ -25,7 +25,13 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 * 1,000 Testnet GNO on Chiado may be available in the future for community public validator participation
 * Community participation will be limited to 14% of the Chiado Network to ensure network stability
 * 1 Testnet GNO is required to run a validator, similar to Gnosis mainnet
-* Requests for Chiado keys can be made in the #chiado-testnet channel in Discord
+* Requests for Chiado participation keys can be made in the #chiado-testnet channel in Discord
+
+### How to Participate
+
+* [Nethermind Sedge](https://docs.sedge.nethermind.io/) can generate the [Docker Compose files for Chiado](https://docs.sedge.nethermind.io/docs/quickstart/chiado)
+* Note that this will allow you to run a Full Node (but not a validator)
+
 ## Summary
 ### Key Infra
 
@@ -66,8 +72,6 @@ To mimic Ethereum-Gnosis conditions, Chiado uses a "Testnet GNO" token that is i
 | Testnet GNO on Chiado  | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
 | Testnet mGNO on Chiado | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 | Deposit Contract       | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
-
-
 
 ## Network Config
 ### Config Repo
