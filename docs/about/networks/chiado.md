@@ -15,8 +15,8 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 
 ### Validators
 
-* Chiado is not intended for broad public validator participation and has a semi-permissioned validator set similar to Ethereum's [Sepolia testnet](https://blog.ethereum.org/2022/06/30/sepolia-merge-announcement)
-* Chiado is optimized for testnet stability for developers, as frequent cycling of validators affect Testnet stability and make it unreliable for developers
+* Chiado is optimized for testnet stability for developers, and has a semi-permissioned validator set similar to Ethereum's [Sepolia testnet](https://blog.ethereum.org/2022/06/30/sepolia-merge-announcement)
+* Chiado is not intended for broad public validator participation, as frequent cycling of validators affect Testnet stability and make it unreliable for developers (e.g. Ethereum's Prater testnet)
 * Chiado validators are run by core contributor teams at [Nethermind](https://nethermind.io/), [Gateway](https://gateway.fm/) and [Gnosis](https://gnosis.io/) (and possibly more in the future)
 * 6,000 validator keys were defined in the genesis of Chiado Beacon Chain for Gateway, Nethermind and Gnosis to run as validators
 ### Public Participation
