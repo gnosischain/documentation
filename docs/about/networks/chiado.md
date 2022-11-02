@@ -30,7 +30,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ### How to Participate
 
 * [Nethermind Sedge](https://docs.sedge.nethermind.io/) can generate the [Docker Compose files for Chiado](https://docs.sedge.nethermind.io/docs/quickstart/chiado)
-* Note that this will allow you to run a Full Node (but not a validator)
+* Note: allows you to run a Full Node (but not a validator)
 
 ## Summary
 ### Key Infra
