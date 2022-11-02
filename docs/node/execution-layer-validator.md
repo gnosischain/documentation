@@ -17,9 +17,7 @@ GC Nodes can be run with Nethermind client and the following recommended minimum
 ## Setup on Nethermind
 
 :::caution
-A majority of Gnosis validators are now running the Nethermind client. The latest version 1.14.1 includes support for the latest Gnosis HF.
-
-Version [https://github.com/NethermindEth/nethermind/releases/tag/1.14.1](https://github.com/NethermindEth/nethermind/releases/tag/1.14.1)
+A majority of Gnosis validators now run the Nethermind client.
 
 Ethstats: [https://ethstats.gnosischain.com/](https://ethstats.gnosischain.com/)
 :::
