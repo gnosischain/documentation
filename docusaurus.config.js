@@ -182,29 +182,6 @@ const config = {
     }),
     
     plugins: [
-      [
-        'docusaurus-plugin-includes',
-        {
-          embeds: [
-            {
-              key: 'youtube',
-              embedFunction: function(code) {
-                var params = code.split(',');
-                var videoId = params[0];
-                var query = params.length > 1 ? params[1] : "";
-                return '<iframe width="785" height="440" type="text/html" frameborder="0" src="https://www.youtube.com/embed/' + videoId + '/?' + query + '"></iframe><br>'
-              }
-            },
-            {
-              key: 'file',
-              embedFunction: function(url) {
-                var fileName = url.split(/[\\\/]/).pop();
-                return '<p>Download: <a href="' + url + '" target="_blank">' + fileName + '</a></p>';
-              }
-            }
-          ],
-        },
-      ],
       [ 
         'ideal-image',
         /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
