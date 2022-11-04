@@ -10,7 +10,7 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 :::
 
-![](/img/bridges/diagrams/token-bridge.svg)
+![](/img/bridges/diagrams/token-bridge01.png)
 
 ## Key Information
 
@@ -121,28 +121,35 @@ The Omnibridge currently generates bridge revenue through [earned yield on stabl
 
 ## Bridge Design
 
-![](/img/bridges/diagrams/token-bridge.svg)
-### Ethereum -> Gnosis
-1. User approves token balance to be transferred in the token registry
-2. Token's `transferFrom()` function is called by the mediator contract
-3. Mediator contract calls bridge contract's `requireToPassMessage()` function
-4. `UserRequestForAffirmation` event is emitted, listening validators relay the message to the other network where signatures are collected
-5.  `executeAffirmation` is called on the bridge contract by a validator and signatures are collected.  
-6. When enough signatures have been collected, the message is relayed to the mediator contract
-7. If the token being bridged does not yet have a representation on the Home network, the mediator contract will deploy a new token registry for it for it and mint the relayed amount to the address specified. If the token registry already exists, the target address is minted the required amount.
+###  Ethereum -> Gnosis 
+![](/img/bridges/diagrams/token-bridge01.png)
+1. Token spend approval by user.
+2. User call `relayTokens()` on Mediator contract. 
+3. Mediator calls `requireToPassMessage()` on the Bridge.
+4. `UserRequestForAffirmation` event is emitted for validators to validate the message. 
+5. Message is relayed to the mediator contract when consensus is met by calling `executeAffirmation()`. 
+6. ABM calls mediator on Gnosis chain:
+    - token does not exist: the mediator deploys a new token registry and mints the relayed amount.
+    - token exists: the relayed amount is minted in the token address.
 
-![](/img/bridges/diagrams/token-bridge-withdraw.svg)
-### Gnosis -> Ethereum
-1. User calls `transferAndCall` method on ERC-677 token contract to send tokens to bridge contract
-2. Mediator contract's `onTokenTransfer` method is called
-3.  Mediator contract calls bridge contract's `requireToPassMessage()` function.
-4. `UseRequestForSignature` event is emitted and received by bridge oracles, and signatures are submitted to confirm transaction.
-5. `CollectedSignatures` event is emitted and message is relayed. Tokens are burned on the Home bridge side
-6. Foreign Bridge (Ethereum side) receives the relay and calls `handleBridgedTokens()`
-7. Mediator contract unlocks the specified amount of tokens to the specified recipient address
-8. Recipient's token balance is incremented.  
+---
+
+###  Gnosis -> Ethereum. 
+![](/img/bridges/diagrams/token-bridge02.png)
+1. User calls `transferAndCall` on ERC-677 token contract to send tokens to Omnibridge contract
+2. `OnTokenTransfer` is called
+3. Mediator contract burns tokens and calls bridge contract's `requireToPassMessage()` function.
+4. `UseRequestForSignature` event is emitted for validators to validate the message.
+5. Validators listen to the event: call `submitSignature` on Gnosis chain.
+6. `CollectedSignatures` event is emitted when consensus is met.
+7. User calls AMB (Ethereum side) `executeSignatures()`
+8. ABM calls `handleBridgedTokens()` on Mediator. 
+9. Mediator contract unlocks the tokens
 
 The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
+
+
+
 
 ### Mediator Contracts
 To handle the approval of token transfers, the Omnibridge makes use of what is called a mediator contract. 
