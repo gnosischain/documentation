@@ -28,13 +28,11 @@ import InstallInitialPartial from '@site/docs/install/_partials/_install-initial
 
 ## Step 3: Run an execution client
 
-In this step, you'll install an execution-layer client that Prysm's beacon node will connect to.
+In this step, you'll install an execution-layer client that the consensus-layer node will connect to.
 
 import RunExecutionNodePartial from '@site/docs/install/_partials/_run-execution-client.md';
 
 <RunExecutionNodePartial />
-
-Congratulations - you’re now running an <strong>execution node</strong> in Ethereum’s execution layer.
 
 ## Step 4: Run a beacon node
 

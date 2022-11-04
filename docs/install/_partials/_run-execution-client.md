@@ -9,32 +9,23 @@ import TabItem from '@theme/TabItem';
     {label: 'Geth', value: 'geth'}
     ]}>
   <TabItem value="nethermind">
-   <p>aaa</p>
-    <Tabs groupId="network" defaultValue="gnosis" values={[
-        {label: 'Gnosis', value: 'gnosis'},
-        {label: 'Chiado', value: 'chiado'}
-    ]}>
-      <TabItem value="gnosis">
-        <Tabs groupId="protocol" defaultValue="jwt" values={[
-            {label: 'JWT', value: 'jwt'},
-            {label: 'IPC', value: 'ipc'}
-            ]}>
-                <TabItem value="jwt"><pre><code>aa</code></pre></TabItem>
-                <TabItem value="ipc"><pre><code>bb</code></pre></TabItem>
-            </Tabs>
-      </TabItem>
-      <TabItem value="chiado">
-        <Tabs groupId="protocol" defaultValue="jwt" values={[
-            {label: 'JWT', value: 'jwt'},
-            {label: 'IPC', value: 'ipc'}
-            ]}>
-                <TabItem value="jwt"><pre><code>cc</code></pre></TabItem>
-                <TabItem value="ipc"><pre><code>dd</code></pre></TabItem>
-            </Tabs>
-      </TabItem>
-    </Tabs>
-    <p>aa.</p>
-  </TabItem>
-</Tabs>
 
-<p>ccc</p>
+import InstallNethermindPartial from '@site/docs/install/_partials/_install_el_nethermind.md';
+
+<InstallNethermindPartial />
+
+  </TabItem>
+
+  <TabItem value="besu">
+  <p>Besu is not yet supported, use <a href="#select-a-configuration">Nethermind</a> instead.</p>
+  </TabItem>
+
+  <TabItem value="erigon">
+  <p>Erigon is not yet supported, use <a href="#select-a-configuration">Nethermind</a> instead.</p>
+  </TabItem>
+
+  <TabItem value="geth">
+  <p>Geth is not yet supported, use <a href="#select-a-configuration">Nethermind</a> instead.</p>
+  </TabItem>
+  
+</Tabs>
