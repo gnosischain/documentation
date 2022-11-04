@@ -4,7 +4,7 @@ import JWTGenerator from '@site/src/components/JWTGenerator';
 
 The HTTP connection between your beacon node and execution node needs to be authenticated using a [JWT token](https://jwt.io/). There are several ways to generate this JWT token:
 
-1. We generated one random for you (<a href="#generate-jwt" onclick="javascript:window.location.reload();">regenerate</a>), place it into the `jwt.hex` file:
+1. We generated one random for you (<a href="#generate-jwt" onClick={()=>{ javascript:window.location.reload(); }}>regenerate</a>), place it into the `jwt.hex` file:
 
 <JWTGenerator />
 
