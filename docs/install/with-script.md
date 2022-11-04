@@ -42,7 +42,7 @@ import RunBeaconNodePartial from '@site/docs/install/_partials/_run-consensus-cl
 
 <RunBeaconNodePartial />
 
-## Step 5: Run a validator using Prysm
+## Step 5: Run a validator
 
 import InstallValidatorPartial from '@site/docs/install/_partials/_install-validator.md';
 
