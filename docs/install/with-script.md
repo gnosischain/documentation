@@ -20,11 +20,11 @@ import InstallPrereqsPartial from '@site/docs/install/_partials/_install-prereqs
 
 <InstallPrereqsPartial />
 
-## Step 2: Generate JWT Secret
+## Step 2: Initial setup
 
-import InstallJwtSecretPartial from '@site/docs/install/_partials/_install-jwt-secret.md';
+import InstallInitialPartial from '@site/docs/install/_partials/_install-initial.md';
 
-<InstallJwtSecretPartial />
+<InstallInitialPartial />
 
 ## Step 3: Run an execution client
 
