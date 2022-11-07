@@ -12,7 +12,7 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 
 The [xDai bridge](https://bridge.gnosischain.com) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis. 
 
-![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge01.png) 
+![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
 Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis notifies the [block rewards contract](#block-rewards-contract). The consensus algorithm then mints xDai to the user's corresponding address on Gnosis in the next block. 
 
@@ -111,18 +111,18 @@ References:
 - [Dune Analytics on xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges)
 
 ## How it Works
+### Ethereum -> Gnosis
 
-
-###  Ethereum -> Gnosis Chain.  
-![](/img/bridges/diagrams/dai-bridge01.png)
+![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge.svg) 
 
 The [xDai token](/about/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
-1. Users lock an amount of DAI on the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum 
-2. `UserRequestForAffirmation` event is triggered 
-3. Validators observe the deposit and invoke `executeAffirmation` function on Gnosis bridge contract
-4. When enough confirmations are collected (4/6 majority),  the bridge contract on Gnosis Chain calls the block reward contract to  record  the receiver(s) and amount(s) of xDAI to mint. 
-5. The [block reward contract](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. 
+1. User sends a transaction to the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum
+2. The transfer is approved on the Ethereum side and the user's Dai balance is reduced
+3. Bridge validator oracles invoke the `executeAffirmation` function to confirm the transfer request
+4. When enough confirmations are collected (4/6 majority), a message is relayed to the bridge contract on Gnosis to call the [block reward contract](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)
+5. The block reward contract records the receiver(s) and amount(s) of xDai to mint. There may be more than 1 bridge transaction per block.
+6. The block reward contract is called by the AuRa consensus engine (post-merge this will be the PoS consensus algorithm) to update the EVM state and update the user's xDai balance.
 
 You can view a receiver's address and amount of xDai received in the [block reward contract's](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called, it registers the following:
 
@@ -139,18 +139,14 @@ Example: https://blockscout.com/xdai/mainnet/tx/0x5892a695860f6087a2d93140f05e63
 References: 
 
 * [xDai Docs: How xDai is Minted](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/xdai-mechanics-how-xdai-is-minted)
+### Gnosis -> Ethereum 
 
----
-### Gnosis Chain -> Ethereum.
- 
-![](/img/bridges/diagrams/dai-bridge02.png)
-1. User -> Gnosis Chain bridge: initiate a withdrawal: xDAI is burned.
-2. `UserRequestForSignature` event emitted (see [example transaction](https://blockscout.com/xdai/mainnet/tx/0x8e23cf0ab01476c2df5b71a72603f2c229d3d9a63ad6ca71ce164798f3733826/internal-transactions)).
-3. Validators listen to the event: call `submitSignature` on Gnosis chain.
-4. After consensus: `CollectedSignatures` event is emitted
-5. Anyone can execute the withdrawal on Ethereum (user via UI or validator). DAI is unlocked.
-6. `RelayedMessage` emitted on mainnet
-
+1. User sends a transaction to the bridge contract on xDai to initiate a withdrawal.  
+2. The requested xDai withdrawal amount is "burned" (sent to address 0x0 where it can never be withdrawn), and the `UserRequestForSignature` method is called (see [example transaction](https://blockscout.com/xdai/mainnet/tx/0x8e23cf0ab01476c2df5b71a72603f2c229d3d9a63ad6ca71ce164798f3733826/internal-transactions))
+3. The request generates an event on the Gnosis side.
+4. Bridge validator nodes catch this event and send confirmation (signatures) to the contract on the Gnosis side.
+5. Once enough signatures are collected (currently 4 of 6), one of the bridge validators* sends the signatures and message to Ethereum. * Anyone can extract this information and send to Ethereum. If a transaction stalls due to congestion, this transaction can be re-submitted by any user with a higher gas price. 
+6. The bridge contract on Ethereum checks that the signatures are valid. If they are,  the requested Dai is unlocked for the user.  
 
 :::note
 This final step may be delayed if Ethereum mainnet is congested.
@@ -159,9 +155,6 @@ This final step may be delayed if Ethereum mainnet is congested.
 References: 
 
 * [TokenBridge Docs: Withdrawing xDai to Dai](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/withdrawal-authorization-flow)
-
-
-
 
 ### Earning Yield on Bridge Deposits
 
