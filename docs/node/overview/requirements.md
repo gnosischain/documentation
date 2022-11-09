@@ -42,7 +42,6 @@ Requirements vary client to client, For more detail see the associated system re
 Teku \
 [Prysm](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices)
 
-
 **Network utilization benchmark**
 
 For better understanding of the network throughput requirements, a benchmark was conducted on the Lighthouse v2.2.1 client running a GBC on 04.05.22.

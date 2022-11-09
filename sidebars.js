@@ -253,7 +253,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Advanced',
+      label: 'Advanced Setup',
       link: {type: 'doc', id: 'node/advanced/README'},
       collapsed: false,
       items: [
