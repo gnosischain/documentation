@@ -235,8 +235,8 @@ const sidebars = {
       link: {type: 'doc', id: 'node/README'},
       collapsed: false,
       items: [
-        "node/overview/why-run-a-node",
-        "node/overview/requirements",
+        "node/overview/validator-rewards",
+        "node/overview/penalties",
         "node/overview/home-vs-cloud",
       ],
     },
