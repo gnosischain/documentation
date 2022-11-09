@@ -12,7 +12,14 @@ import TabItem from '@theme/TabItem';
         {label: 'Windows', value: 'win'}
     ]}>
     <TabItem value="others"></TabItem>
-    <TabItem value="win"></TabItem>
+    <TabItem value="win">
+<div><ul><li>Download the Windows package from the <a href="https://downloads.nethermind.io/" target="_blank">Nethermind download page</a>.</li><li>Unzip the file in the <code>execution</code> folder created in the previous step.</li>
+<li>Navigate to the <code>execution</code> folder</li>
+<li>Run the following command:</li>
+</ul>
+<pre><code>.\Nethermind.Runner.exe --config xdai --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
+</div>
+    </TabItem>
     </Tabs>
     </TabItem>
     <TabItem value="chiado">
@@ -22,7 +29,14 @@ import TabItem from '@theme/TabItem';
             {label: 'Windows', value: 'win'}
         ]}>
         <TabItem value="others"></TabItem>
-        <TabItem value="win"></TabItem>
+        <TabItem value="win">
+<div><ul><li>Download the Windows package from the <a href="https://downloads.nethermind.io/" target="_blank">Nethermind download page</a>.</li><li>Unzip the file in the <code>execution</code> folder created in the previous step.</li>
+<li>Navigate to the <code>execution</code> folder</li>
+<li>Run the following command:</li>
+</ul>
+<pre><code>.\Nethermind.Runner.exe --config chiado --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
+</div>
+    </TabItem>
         </Tabs>
     </TabItem>
 </Tabs>
