@@ -15,4 +15,3 @@ The HTTP connection between your beacon node and execution node needs to be auth
 ```
 openssl rand -hex 32 | tr -d "\n" > "jwt.hex"
 ```
-
