@@ -235,9 +235,10 @@ const sidebars = {
       link: {type: 'doc', id: 'node/README'},
       collapsed: false,
       items: [
-        "node/overview/validator-rewards",
-        "node/overview/penalties",
+        "node/overview/responsibilities",
+        "node/overview/rewards-penalties",
         "node/overview/home-vs-cloud",
+        "node/overview/types-of-nodes",
       ],
     },
     {

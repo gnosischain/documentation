@@ -3,14 +3,24 @@
 
 # Networks
 
-| Network Name       | Gnosis (mainnet)                  | Chiado (testnet)                            |
-|--------------------|-----------------------------------|---------------------------------------------|
-| Native (fee) token | xDAI                              | Chiado xDAI                                 |
-| Chain ID           | 100                               | 100100                                      |
-| EL RPC             | https://rpc.gnosischain.com/      | https://rpc-chiado.gnosistestnet.com        |
-| EL Explorer        | https://gnosisscan.io/            | https://blockscout-chiado.gnosistestnet.com |
-| CL Explorer        | https://gnosisscan.io/            | https://beacon-chiado.gnosistestnet.com     |
-| Fork monitor       |                                   | https://forkmon-chiado.gnosistestnet.com    |
-| EthStats           | https://dai-netstat.poa.network/  | https://ethstats-chiado.gnosistestnet.com   |
-| Faucet             | https://gnosisfaucet.com          | https://gnosisfaucet.com                    |
+| Network Name       | Gnosis (mainnet)                  | Chiado (testnet)                          |
+|--------------------|-----------------------------------|-------------------------------------------|
+| Native (fee) token | xDAI                              | Chiado xDAI                               |
+| Chain ID           | 100                               | 10200                                     |
+| EL RPC             | https://rpc.gnosischain.com/      | https://rpc.chiadochain.net               |
+| EL Explorer        | https://gnosisscan.io/            | https://blockscout.chiadochain.net        |
+| CL Explorer        | https://gnosisscan.io/            | https://beacon.chiadochain.net/           |
+| Fork monitor       |                                   | TBA                                       |
+| EthStats           | https://dai-netstat.poa.network/  | TBA                                       |
+| Faucet             | https://gnosisfaucet.com          | https://gnosisfaucet.com                  |
 
+## Chiado reset
+
+:::warning 
+Chiado testnet was rebooted with a new chain id, explorer and RPC endpoints.
+:::
+
+If you are developing on Chiado:
+- Re-synchronize your nodes
+- Point your app to the new RPC endpoint
+- Get help on [discord](https://discord.gg/VQb3WzsywU)

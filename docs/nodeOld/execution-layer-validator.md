@@ -17,11 +17,9 @@ GC Nodes can be run with Nethermind client and the following recommended minimum
 ## Setup on Nethermind
 
 :::caution
-A majority of Gnosis validators are now running the Nethermind client. The latest version 1.12.7 includes support for the latest Gnosis HF.
+A majority of Gnosis validators now run the Nethermind client.
 
-Version [https://github.com/NethermindEth/nethermind/releases/tag/1.12.7](https://github.com/NethermindEth/nethermind/releases/tag/1.12.7)
-
-Ethstats: [https://dai-netstat.poa.network/](https://dai-netstat.poa.network)
+Ethstats: [https://ethstats.gnosischain.com/](https://ethstats.gnosischain.com/)
 :::
 
 Nethermind Launcher is a self-contained app - you do not need to install .NET separately to run it.
@@ -53,7 +51,7 @@ When you start the Launcher choose the following options to sync a node:
 
 *Replace `<user>` with your username on your device*
 ```bash
-    cd 
+    cd
     mkdir /home/<user>/nethermind
     mkdir /home/<user>/nethermind/nethermind_db
     mkdir /home/<user>/nethermind/keystore
@@ -90,7 +88,7 @@ services:
       - NETHERMIND_CONFIG=xdai
     logging:
       driver: "local"
- 
+
 networks:
   net:
     ipam:
@@ -111,7 +109,7 @@ docker-compose up
 To check logs:
 ```bash
 sudo docker ps -a
-sudo docker-compose logs -f <container name> 
+sudo docker-compose logs -f <container name>
 ```
 Container name should in this case be 'nethermind'
 
@@ -119,11 +117,66 @@ Container name should in this case be 'nethermind'
 This can take 1-3 days to sync, so in the meantime you can connect your Beacon chain node to a public RPC
 :::
 
+### Setup as Archive node
+
+A Gnosis archive node execute heavy historical sync verifying all the transactions and keeping all the historical state. In Nethermind, the default configuration activates the pruning functionality.
+
+:::caution
+Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is as of today ~1.9 TB.
+:::
+
+To start a node as an archive node you will need to disable pruning in the config file when running an archive node.
+
+Set the following variable:
+
+```bash
+NETHERMIND_PRUNINGCONFIG_MODE: "None"
+```
+
+Alternatively, if you followed the [setup instructions](#setup-instructions-linux) with Docker, edit the docker compose file with the following:
+
+```js title="docker-compose.yml"
+version: "3.7"
+services:
+
+  nethermind:
+    hostname: nethermind
+    container_name: nethermind
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    networks:
+      net:
+        ipv4_address: 192.168.32.100
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+    volumes:
+      - /home/<user>/nethermind/nethermind_db:/nethermind/nethermind_db
+      - /home/<user>/nethermind/keystore:/nethermind/keystore
+      - /home/<user>/nethermind/logs:/nethermind/logs
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      // highlight-next-line
+      - NETHERMIND_CONFIG=xdai_archive
+    logging:
+      driver: "local"
+
+networks:
+  net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.32.0/24"
+```
+
+Read more about the [Nethermind Sync Modes](https://docs.nethermind.io/nethermind/ethereum-client/sync-modes) in the official documentation.
 
 
 ## Node Maintenance
 
-Once Nethermind has fully synced, you can point your validator nodes to it to use as an RPC to increase decentralization of the network. To do this or any other maintenence, you will have to take down your nodes, so make sure you closely follow the restart procedure closely to avoid slashing. 
+Once Nethermind has fully synced, you can point your validator nodes to it to use as an RPC to increase decentralization of the network. To do this or any other maintenence, you will have to take down your nodes, so make sure you closely follow the restart procedure closely to avoid slashing.
 
 ### Restart Procedure
 
