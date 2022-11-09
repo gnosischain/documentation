@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
         {label: 'Chiado', value: 'chiado'}
     ]}>
   <TabItem value="gnosis">
-Create a folder called `gnosis` on your SSD, and then two subfolders within it: `consensus` and `execution`:
+Create a folder called <code>gnosis</code> on your disk, and then two subfolders within it: `consensus` and `execution`:
 
 ```
 📂gnosis
@@ -36,7 +36,10 @@ Create a folder called `chiado` on your SSD, and then two subfolders within it: 
 import JwtGenerationPartial from '@site/docs/install/_partials/_jwt-generation-partial.md';
 
 <JwtGenerationPartial />
-    
+
+:::info
+Place the `jwt.hex` file in the root folder, so it can be referenced in the next steps as `../jwt.hex` from the `consensus` and `execution` folders.
+:::
   </TabItem>
 </Tabs>
 
