@@ -229,61 +229,99 @@ const sidebars = {
   ],
 
   node: [
-    'node/README',
     {
       type: 'category',
-      label: 'Prepare',
+      label: 'Overview',
+      link: {type: 'doc', id: 'node/README'},
       collapsed: false,
       items: [
-        "node/incentives",
-        "node/requirements",
+        "node/overview/why-run-a-node",
+        "node/overview/requirements",
+        "node/overview/home-vs-cloud",
       ],
     },
     {
       type: 'category',
-      label: 'Setup',
-      link: {type: 'doc', id: 'node/setup/README'},
+      label: 'Guided Setup',
+      link: {type: 'doc', id: 'node/guided-setup/README'},
       collapsed: false,
       items: [
-        "node/setup/dappnode",
-        {
-          type: 'category',
-          label: 'Execution Layer',
-          collapsed: true,
-          items: [
-            "node/setup/nethermind",
-            "node/setup/besu",
-            "node/setup/erigon",
-            "node/setup/geth",
-            "node/setup/open-ethereum",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Consensus Layer',
-          collapsed: true,
-          items: [
-            "node/setup/lighthouse",
-            "node/setup/prysm",
-            "node/setup/teku",
-            "node/setup/nimbus",
-            "node/setup/lodestar",
-          ],
-        },
-        "node/setup/generate-keys",
-        "node/deposit",
+        "node/guided-setup/dappnode", 
+        "node/guided-setup/sedge", 
+        "node/guided-setup/stereum", 
       ],
     },
     {
       type: 'category',
-      label: 'After Setup',
+      label: 'Advanced',
+      link: {type: 'doc', id: 'node/advanced/README'},
       collapsed: false,
       items: [
-        "node/monitor",
-        "node/update",
-        "node/migrate",
-        "node/exit",
-        "node/withdraw",
+        "node/advanced/architecture",
+        {
+          type: 'category',
+          label: 'Step 1: Prepare Server',
+          collapsed: true,
+          items: [
+            "node/advanced/server-prep/configure-server",
+            "node/advanced/server-prep/networking",
+            "node/advanced/server-prep/jwt",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 2: Generating Validator Keys',
+          link: {type: 'doc', id: 'node/advanced/generating-validator-keys/README'},
+          collapsed: true,
+          items: [
+            "node/advanced/generating-validator-keys/staking-deposit-cli",
+            "node/advanced/generating-validator-keys/wagyu",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 3: Run Execution Layer',
+          link: {type: 'doc', id: 'node/advanced/execution-layer/README'},
+          collapsed: true,
+          items: [
+            
+            "node/advanced/execution-layer/clients/nethermind",
+            "node/advanced/execution-layer/clients/besu",
+            "node/advanced/execution-layer/clients/erigon",
+            "node/advanced/execution-layer/clients/geth",
+            "node/advanced/execution-layer/clients/open-ethereum",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 4: Run Consensus Layer',
+          link: {type: 'doc', id: 'node/advanced/consensus-layer/README'},
+          collapsed: true,
+          items: [
+            "node/advanced/consensus-layer/clients/lighthouse",
+            "node/advanced/consensus-layer/clients/prysm",
+            "node/advanced/consensus-layer/clients/teku",
+            "node/advanced/consensus-layer/clients/nimbus",
+            "node/advanced/consensus-layer/clients/lodestar",
+          ],
+        },
+        {
+          type: 'doc',
+          id: "node/funding-validator/README",
+          label: 'Step 5: Fund your Validator',
+        }
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Managing your Node',
+      collapsed: false,
+      items: [
+        "node/management/monitoring-node",
+        "node/management/preparing-for-the-merge",
+        "node/management/withdrawals",
+        "node/management/voluntary-exit",
+        "node/management/migrating-validator",
       ],
     },
   ],
@@ -765,59 +803,3 @@ const sidebars = {
 };
 
 module.exports = sidebars;
-/*
-{
-      type: 'category',
-      label: 'Wallets',
-      collapsed: false,
-      link: {type: 'doc', id: 'tools/wallets/README'},
-      items: [
-        {
-          type: 'category',
-          label: 'Metamask',
-          collapsed: true,
-          link: {type: 'doc', id: 'tools/wallets/metamask/README'},
-          items: [
-            {
-              type: 'link',
-              label: 'Add custom tokens',
-              href: 'https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask',
-            },
-            'tools/wallets/metamask/change-rpc-url',
-            {
-              type: 'link',
-              label: 'With a Ledger or Trezor',
-              href: 'https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet',
-            },
-          ],
-        },
-        'tools/wallets/safe',
-        {
-          type: 'category',
-          label: 'Hardware',
-          collapsed: true,
-          items: [
-            'tools/wallets/dcent',
-            'tools/wallets/ledger',
-            'tools/wallets/trezor',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Software',
-          collapsed: true,
-          items: [
-            {
-              type: 'link',
-              label: 'Alpha Wallet',
-              href: 'https://alphawallet.com/asset/the-best-wallet-for-xdai/',
-            },
-            {
-              type: 'link',
-              label: 'Ambire Wallet',
-              href: 'https://www.ambire.com/',
-            },
-            {
-              type: 'link',
-              label: 'Coinbase Wallet',
-              href: 'h*/

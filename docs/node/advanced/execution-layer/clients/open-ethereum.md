@@ -1,5 +1,5 @@
 ---
-description: Setup
+title: OpenEthereum
 ---
 
 # Open Ethereum

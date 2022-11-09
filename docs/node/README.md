@@ -2,4 +2,4 @@
 title: Overview
 ---
 
-# Run Gnosis
+# Run a Node

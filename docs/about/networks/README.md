@@ -1,7 +1,7 @@
 ---
 ---
 
-# Networks Summary
+# Networks
 
 | Network Name       | Gnosis (mainnet)                  | Chiado (testnet)                            |
 |--------------------|-----------------------------------|---------------------------------------------|

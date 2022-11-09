@@ -1,10 +1,8 @@
 ---
-description: Incentives
+title: Why Run a Node?
 ---
 
-# Ways to Stake
-
-# Overview
+# Why Run a Node?
 
 **Staking**
 
@@ -22,8 +20,7 @@ Validator node software, known as a ‘Consensus Layer client’ implements the 
 
 Anyone can run a validator node, provided they have the minimum required stake of 1GNO
 
-
-# Why run a Node
+## Why run a Node
 
 **Censorship resistance:** your own node will ensure access when you need it, as you have direct access to the blockchain without needing a third party.
 
@@ -41,7 +38,7 @@ As a validator, you are providing security and receiving rewards (or penalties) 
 2. You are responsible for your node, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
 3. You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
 
-# Incentives 
+## Validator Rewards
 
 ## Gnosis Beacon Chain Validator Rewards
 

@@ -1,5 +1,5 @@
 ---
-title: Setup
+title: Advanced Setup
 ---
 
 # Setup
