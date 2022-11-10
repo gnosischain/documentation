@@ -72,7 +72,7 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 
 | Token  | Ethereum -> Gnosis | Gnosis -> Ethereum  |
 |--------|--------------------|---------------------|
-| Dai*** | 1,000,000,000      | 1,000,000,000 xDai  |
+| Dai*** | 1,000,000,000      | 1,000,000,000 WXDAI |
 | USDC   | 1,000,000,000      | 10,000,000          |
 | USDT   | 1,000,000,000      | 5,000,000           |
 | WETH   | 1,000,000,000      | 250                 |
