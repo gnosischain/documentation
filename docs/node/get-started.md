@@ -2,6 +2,12 @@
 description: Validators protect Gnosis by staking on the Gnosis Beacon Chain.
 ---
 
+:::tip Merge Updates
+
+Receive up-to-date critical information about the upcoming merge by subscribing to the [Gnosis Chain Merge Newsletter](https://gnosismerge.substack.com/).
+
+::
+
 # Validator Info
 
 Validators protect Gnosis by staking on the Gnosis Beacon Chain. There are several options now available for staking.
@@ -20,3 +26,7 @@ Liquid staking is a great way to help secure Gnosis and earn yield without havin
 :::note
 :bulb:Want to learn the basics about validating on the beacon chain? [This is a good first article to start](https://medium.com/alethio/ethereum-2-a-validators-journey-through-the-beacon-chain-843f70aaab2e) (covers the Ethereum Beacon Chain, but processes are similar on GBC only faster: 5 sec blocks and 16 slots per epoch).
 :::
+
+## Validator Community
+
+Join the community in `#🌐-validators` on the [Gnosis Chain Discord](https://discord.gg/gnosischain). Request the `Gnosis Chain Validator` role and earn GNO through our [Praise Reward System](https://mirror.xyz/0xBcBfF58E166C78a0f7200Cc134b3b358eF0974E9/Cf2tQZdjIfsIiYKhejbC-hsM_IOIs8QVuK6ZO1XWvjw) by helping community members troubleshoot issues and onboard new validators.
