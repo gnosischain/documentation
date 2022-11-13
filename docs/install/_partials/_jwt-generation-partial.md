@@ -15,3 +15,8 @@ The HTTP connection between your beacon node and execution node needs to be auth
 ```
 openssl rand -hex 32 | tr -d "\n" > "jwt.hex"
 ```
+
+After generating your token, create the file by running:
+```
+echo 'PLACE_HERE_YOUR_TOKEN' > jwt.hex
+```
