@@ -6,24 +6,49 @@ import TabItem from '@theme/TabItem';
         {label: 'Chiado', value: 'chiado'}
     ]}>
   <TabItem value="gnosis">
-Create a folder called <code>gnosis</code> on your disk, and then two subfolders within it: `consensus` and `execution`:
+Create a folder called <code>gnosis</code> on your disk, and then two subfolders within it: <code>consensus</code> and <code>execution</code>:
 
 ```
 📂gnosis
 ┣ 📂consensus
 ┣ 📂execution
 ```
+
+```
+mkdir gnosis
+```
+
+```
+cd gnosis
+```
   </TabItem>
   <TabItem value="chiado">
-Create a folder called `chiado` on your SSD, and then two subfolders within it: `consensus` and `execution`:
+Create a folder called <code>chiado</code> on your SSD, and then two subfolders within it: <code>consensus</code> and <code>execution</code>:
 
 ```
 📂chiado
 ┣ 📂consensus
 ┣ 📂execution
 ```
+
+```
+mkdir chiado
+```
+
+```
+cd gnosis
+```
   </TabItem>
 </Tabs>
+
+
+```
+mkdir consensus
+```
+
+```
+mkdir execution
+```
 
 <Tabs groupId="protocol" defaultValue="jwt" values={[
         {label: 'JWT', value: 'jwt'},
