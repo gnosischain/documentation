@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Execute Nethermind
-                            <pre><code>./Nethermind.Runner --config xdai --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
+                            <pre><code>./Nethermind.Runner --config xdai --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.EnginePort=8551 --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
                         <li>Navigate to the <code>execution</code> folder</li>
                         <li>
                             Run the following command:
-                            <pre><code>.\Nethermind.Runner.exe --config xdai --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>    
+                            <pre><code>.\Nethermind.Runner.exe --config xdai --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.EnginePort=8551 --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>    
                         </li>
                     </ul> 
                 </div>
@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Execute Nethermind
-                            <pre><code>./Nethermind.Runner --config chiado --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
+                            <pre><code>./Nethermind.Runner --config chiado --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.EnginePort=8551 --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
                         </li>
                     </ul>
                 </div>
@@ -92,7 +92,7 @@ import TabItem from '@theme/TabItem';
                         <li>Navigate to the <code>execution</code> folder</li>
                         <li>
                             Run the following command:
-                            <pre><code>.\Nethermind.Runner.exe --config chiado --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
+                            <pre><code>.\Nethermind.Runner.exe --config chiado --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.EnginePort=8551 --JsonRpc.JwtSecretFile=../jwt.hex</code></pre>
                         </li>
                     </ul>
                 </div>
