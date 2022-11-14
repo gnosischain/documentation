@@ -1,51 +1,34 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs groupId="os" defaultValue="others" values={[
-    {label: 'Windows', value: 'win'},
-    {label: 'Linux, MacOS, Arm64', value: 'others'}
-]}>
-  <TabItem value="win">
-    <p>windows</p>
-    <Tabs groupId="network" defaultValue="gnosis" values={[
-        {label: 'Gnosis', value: 'gnosis'},
-        {label: 'Chiado', value: 'chiado'}
+<Tabs groupId="consensus-clients" defaultValue="lighthouse" values={[
+  {label: 'Lighthouse', value: 'lighthouse'},
+  {label: 'Lodestar', value: 'lodestar'},
+  {label: 'Nimbus', value: 'nimbus'},
+  {label: 'Prysm', value: 'prysm'},
+  {label: 'Teku', value: 'teku'}
     ]}>
-      <TabItem value="gnosis">
-        <pre><code>gnosis</code></pre>
-      </TabItem>
-      <TabItem value="chiado">
-        <pre><code>chiado</code></pre>
-      </TabItem>
-    </Tabs>
-    <p>aaa</p>
-    <Tabs groupId="network" defaultValue="gnosis" values={[
-        {label: 'Gnosis', value: 'gnosis'},
-        {label: 'Chiado', value: 'chiado'}
-    ]}>
-      <TabItem value="gnosis">
-        <pre><code>gnosis</code></pre>
-        <p>aaa</p>
-      </TabItem>
-      <TabItem value="chiado">
-        <pre><code>chiado</code></pre>
-        <p>aaa</p>
-      </TabItem>
-    </Tabs>
+  <TabItem value="lighthouse">
+
+import InstallLighthouseValidatorPartial from '@site/docs/install/_partials/_install_validator_lighthouse.md';
+
+<InstallLighthouseValidatorPartial />
+
   </TabItem>
-  <TabItem value="others">
-    <p>linux</p>
-    <Tabs groupId="network" defaultValue="gnosis" values={[
-        {label: 'Gnosis', value: 'gnosis'},
-        {label: 'Chiado', value: 'chiado'}
-    ]}>
-      <TabItem value="gnosis">
-        <pre><code>gnosis</code></pre>
-      </TabItem>
-      <TabItem value="chiado">
-        <pre><code>chiado</code></pre>
-      </TabItem>
-    </Tabs>
-    <p>aaa</p>
+
+  <TabItem value="lodestar">
+  <p>WIP</p>
+  </TabItem>
+
+  <TabItem value="nimbus">
+  <p>WIP</p>
+  </TabItem>
+
+  <TabItem value="prysm">
+  <p>WIP</p>
+  </TabItem>
+
+  <TabItem value="teku">
+  <p>WIP</p>
   </TabItem>
 </Tabs>
