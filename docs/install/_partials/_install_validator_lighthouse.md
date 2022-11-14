@@ -7,9 +7,8 @@ import TabItem from '@theme/TabItem';
 ]}>
     <TabItem value="gnosis">
         <div>
-            <p>In a new command line window, navigate to the <code>consensus</code> folder and execute Lighthouse validator client
+            <p>In a new command line window, navigate to the <code>consensus</code> folder and execute Lighthouse validator client</p>
             <pre><code> ./lighthouse --network gnosis vc</code></pre>
-            </p>
         </div>
     </TabItem>
     <TabItem value="chiado">
