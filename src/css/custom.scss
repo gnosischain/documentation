@@ -74,6 +74,12 @@ footer.footer--dark{
   margin: 0 !important;
   padding: 0 !important;
 }
+.hide-tabs .margin-top--md{
+  margin-top: 0 !important;
+}
+.hide-tabs li .tabList_node_modules-\@docusaurus-theme-classic-lib-theme-Tabs-styles-module{
+  margin-bottom: 0 !important; position: absolute;
+}
 
 html[data-theme='dark'] .install-tabs .tabs__item:first-child {
   color: #eee;
