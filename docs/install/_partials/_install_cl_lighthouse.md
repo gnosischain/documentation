@@ -15,12 +15,12 @@ import TabItem from '@theme/TabItem';
                     <ul>
                         <li>Go to the <a href="https://github.com/sigp/lighthouse/releases" target="_blank">lighhouse releases page</a> and copy the url of the latest release based on your OS version.</li>
                         <li>
-                            Download the lighthouse-VERSION-x86_64-unknown-linux-gnu-portable.tar.gz binary.
+                            Download the lighthouse-VERSION-ARQ.tar.gz binary.
                             <pre><code>wget [URL_FROM_PREVIOUS_STEP]</code></pre>
                         </li>
                         <li>
                             Extract the downloaded file
-                            <pre><code>tar -xvf lighthouse-VERSION-x86_64-unknown-linux-gnu.tar.gz --directory  consensus</code></pre>
+                            <pre><code>tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus</code></pre>
                         </li>
                         <li>
                             Get into the folder
@@ -39,12 +39,12 @@ import TabItem from '@theme/TabItem';
                     <ul>
                         <li>Go to the <a href="https://github.com/sigp/lighthouse/releases" target="_blank">lighhouse releases page</a> and copy the url of the latest release based on your OS version.</li>
                         <li>
-                            Download the lighthouse-VERSION-x86_64-unknown-linux-gnu-portable.tar.gz binary.
+                            Download the lighthouse-VERSION-ARQ.tar.gz binary.
                             <pre><code>wget [URL_FROM_PREVIOUS_STEP]</code></pre>
                         </li>
                         <li>
                             Extract the downloaded file
-                            <pre><code>tar -xvf lighthouse-VERSION-x86_64-unknown-linux-gnu.tar.gz --directory  consensus</code></pre>
+                            <pre><code>tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus</code></pre>
                         </li>
                         <li>
                             Get into the folder
@@ -69,12 +69,12 @@ import TabItem from '@theme/TabItem';
                     <ul>
                         <li>Go to the <a href="https://github.com/sigp/lighthouse/releases" target="_blank">lighhouse releases page</a> and copy the url of the latest release based on your OS version.</li>
                         <li>
-                            Download the lighthouse-VERSION-x86_64-unknown-linux-gnu-portable.tar.gz binary.
+                            Download the lighthouse-VERSION-ARQ.tar.gz binary.
                             <pre><code>wget [URL_FROM_PREVIOUS_STEP]</code></pre>
                         </li>
                         <li>
                             Extract the downloaded file
-                            <pre><code>tar -xvf lighthouse-VERSION-x86_64-unknown-linux-gnu.tar.gz --directory  consensus</code></pre>
+                            <pre><code>tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus</code></pre>
                         </li>
                         <li>
                             Get into the folder
@@ -93,12 +93,12 @@ import TabItem from '@theme/TabItem';
                     <ul>
                         <li>Go to the <a href="https://github.com/sigp/lighthouse/releases" target="_blank">lighhouse releases page</a> and copy the url of the latest release based on your OS version.</li>
                         <li>
-                            Download the lighthouse-VERSION-x86_64-unknown-linux-gnu-portable.tar.gz binary.
+                            Download the lighthouse-VERSION-ARQ.tar.gz binary.
                             <pre><code>wget [URL_FROM_PREVIOUS_STEP]</code></pre>
                         </li>
                         <li>
                             Extract the downloaded file
-                            <pre><code>tar -xvf lighthouse-VERSION-x86_64-unknown-linux-gnu.tar.gz --directory  consensus</code></pre>
+                            <pre><code>tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus</code></pre>
                         </li>
                         <li>
                             Get into the folder
