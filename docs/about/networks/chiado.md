@@ -1,99 +1,139 @@
 ---
 ---
 
-# Chiado Testnet
+# Chiado (Testnet)
 
-Chiado is the official testnet of Gnosis. It has the same execution layer, and it is the first network transitioned to Proof of Stake, in preparation for the Gnosis mainnet merge.
+![Chiado Train Station](../../../static/img/about/chiado.jpg)
+Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/people-at-city-1534560/))
 
+## Overview
+### Purpose
+* Chiado is a Gnosis testnet that is scheduled for launch in Q4 2022.
+* Chiado's primary purpose is to be a long-lived testnet with tooling for developers
+* Chiado's secondary purpose is to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../specs/consensus/aura.md) to the [Beacon Chain](../../specs/consensus/gbc.md).
+* Chiado is named after the [Chiado metro station](https://en.wikipedia.org/wiki/Baixa-Chiado_(Lisbon_Metro)) in Lisbon, Portugal.
+
+### Validators
+
+* Chiado is optimized for testnet stability for developers, and has a semi-permissioned validator set similar to Ethereum's [Sepolia testnet](https://blog.ethereum.org/2022/06/30/sepolia-merge-announcement)
+* Chiado is not intended for broad public validator participation, as frequent cycling of validators affect Testnet stability and make it unreliable for developers (e.g. Ethereum's Prater testnet)
+* Chiado validators are run by core contributor teams at [Nethermind](https://nethermind.io/), [Gateway](https://gateway.fm/) and [Gnosis](https://gnosis.io/) (and possibly more in the future)
+* 6,000 validator keys were defined in the genesis of Chiado Beacon Chain for Gateway, Nethermind and Gnosis to run as validators
+### Public Participation
+
+* Community members can still run a full node and go through the Chiado merge as it happens
+* 1,000 Testnet GNO on Chiado may be available in the future for community public validator participation
+* Community participation will be limited to 14% of the Chiado Network to ensure network stability
+* 1 Testnet GNO is required to run a validator, similar to Gnosis mainnet
+* Requests for Chiado participation keys can be made in the #chiado-testnet channel in Discord
+
+### How to Participate
+
+* [Nethermind Sedge](https://docs.sedge.nethermind.io/) can generate the [Docker Compose files for Chiado](https://docs.sedge.nethermind.io/docs/quickstart/chiado)
+* (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or deploy your own [Deposit UI](https://github.com/gnosischain/gbc-deposit-ui) with the updated config files
+## Summary
+### Key Infra
+
+| Network Name                   | Chiado                                                        |
+| ------------------------------ | ------------------------------------------------------------- |
+| Native (fee) token             | Testnet xDai on Chiado                                        |
+| Staking token                  | Testnet GNO on Chiado                                         |
+| Chain ID                       | 10200                                                         |
+| Execution Layer RPC (Archival) | https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado |
+| Execution Layer RPC            | https://rpc.chiadochain.net                                   |
+| Execution Layer Explorer       | https://blockscout.chiadochain.net                            |
+| Consensus Layer Explorer       | https://beacon.chiadochain.net/                               |
+| Fork monitor                   | https://forkmon.chiadochain.net/                              |
+| EthStats                       | https://ethstats.chiadochain.net/                             |
+| Faucet                         | https://gnosisfaucet.com                                      |
+
+### Key Parameters
+| Param             | Value                   |
+| ----------------- | ----------------------- |
+| Slot Time         | 5s                      |
+| Epoch             | 16 slots                |
+| Finalization Time | 2.7 min                 |
+| Staking Deposit   | 1 Testnet GNO on Chiado |
 
 ## Native Tokens
 
-### Fee token
+### Fee Token
 
-Name: `Chiado xDai`
+* Name: Testnet xDai on Chiado
+* Type: Native Asset
+### Staking Token [^1]
 
-Icon: <a href="/img/tokens/chiado-xdai.png"><img src="/img/tokens/chiado-xdai.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+To mimic Ethereum-Gnosis conditions, Chiado uses a "Testnet GNO" token that is isseud on Goerli and bridged over via the AMB.
 
+| Token                  | Address                                                                                                                             |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Testnet GNO on Goerli  | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
+| Testnet GNO on Chiado  | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
+| Testnet mGNO on Chiado | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
+| Deposit Contract       | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 
-### GNO Token
+## Network Config
+### Config Repo
 
-Name: `Gnosis Token`
+Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that is the canonical source for Gnosis Chain networks.
 
-Ticker: `GNO`
+### Consensus Layer
 
-Chiado Contract Address: [0x7f3e7cDf43E543c6D08bEf131f94aB99b091D2A2](https://blockscout-chiado.gnosistestnet.com/address/0x7f3e7cDf43E543c6D08bEf131f94aB99b091D2A2)  
+* [config.yaml](https://github.com/gnosischain/configs/blob/main/chiado/config.yaml)
+* [genesis.ssz](https://github.com/gnosischain/configs/blob/main/chiado/genesis.ssz)
+* [GnosisDAO's Recommended Chiado CL Bootnodes](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes.yaml)
+* [Nethermind's Recommended Chiado CL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/chiado/inventory/data/bootnodes-beacon.json)
 
+### Execution Layer
 
-## Contracts
+* [genesis.json](https://github.com/gnosischain/configs/blob/main/chiado/genesis.json)
+* [nethermind.cfg](https://github.com/gnosischain/configs/blob/main/chiado/nethermind.cfg)
+* [GnosisDAO's Recommended Chiado EL Bootnodes](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/bootnodes_execution.txt)
+* [Nethermind's Recommended Chiado EL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/chiado/inventory/data/bootnodes-execution.json)
 
-SBCTokenProxy = [0x6bE2df1956282d2d1936fCB06B9C3361986a0DEe](https://blockscout-chiado.gnosistestnet.com/address/0x6bE2df1956282d2d1936fCB06B9C3361986a0DEe) 
+## Key Contracts
 
-SBCWrapper = [0x7449F31859a7064eb4B1C3635fD38a8f53fFE8a2](https://blockscout-chiado.gnosistestnet.com/address/0x7449F31859a7064eb4B1C3635fD38a8f53fFE8a2) 
+### Bridges [^2]
 
-SBCWrapperProxy = [0x6DD45A261782EAAC28B5c165CABD38a9e1389129](https://blockscout-chiado.gnosistestnet.com/address/0x6DD45A261782EAAC28B5c165CABD38a9e1389129) 
+Using the [Tokenbridge](https://tokenbridge.net/) nomenclature, Home refers to Chiado while Foreign refers to Goerli
 
-SBCDepositContract = [0x0693208ef36eb70308FcaE7b7338664f9E5f2246](https://blockscout-chiado.gnosistestnet.com/address/0x0693208ef36eb70308FcaE7b7338664f9E5f2246) 
+| Contract                   | Address                                                                                                                             |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Governance Safes**       |                                                                                                                                     |
+| Governance Safe Chiado     | [0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2](https://blockscout.chiadochain.net/address/0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2) |
+| Governance Safe Goerli     | [0xf02796C7B84F10Fa866DAa7d5701A95f3131A727](https://gnosis-safe.io/app/gor:0xf02796C7B84F10Fa866DAa7d5701A95f3131A727/home)        |
+| **Native Bridge**          |                                                                                                                                     |
+| Chiado TokenBridge         | [0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2](https://blockscout.chiadochain.net/address/0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2) |
+| Chiado ValidatorsProxy     | [0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce](https://blockscout.chiadochain.net/address/0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce) |
+| Goerli TokenBridge         | [0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24](https://goerli.etherscan.io/address/0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24)        |
+| Goerli ValidatorsProxy     | [0x1F35121d14ABC91689a7903bf911dce83B0c6EF6](https://goerli.etherscan.io/address/0x1F35121d14ABC91689a7903bf911dce83B0c6EF6)        |
+| **AMB & Omnibridge**       |                                                                                                                                     |
+| Chiado Omnibridge Mediator | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://blockscout.chiadochain.net/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
+| Chiado AMB                 | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://blockscout.chiadochain.net/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
+| Goerli Omnibridge Mediator | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085)        |
+| Goerli AMB                 | [0x87A19d769D875964E9Cd41dDBfc397B2543764E](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6)         |
+| **Bridge Validators**      |                                                                                                                                     |
+| Gnosis DAO                 | 0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49                                                                                          |
+| Bootnode                   | TBD                                                                                                                                 |
 
-[Deposit Contract address](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml#L21): [0x2DCa72Dcf9fd65c806726a3F76aC51f3CEf778dc](https://blockscout-chiado.gnosistestnet.com/address/0x2DCa72Dcf9fd65c806726a3F76aC51f3CEf778dc) 
+### DApps
 
+| DApp      |     |
+| --------- | --- |
+| Uniswap   | TBD |
+| Chainlink | TBD |
 
-## Bridges with Goerli
+## Previous Iterations
 
-# AMB Bridges TokenBridge ARBITRARY_MESSAGE
+### Chiado 0.2
 
-[Home] Chiado: 0x2f018c1118B0DC28E395d054e80fE44c61904892 at block 190695
+Chiado was previously launched with network ID 100100. Soon after launch, the network entered a forked state. The root causes were identified and fixed as part of the Chiado relaunch. 
 
-[Foreign] Goerli: 0x5816D9EdC3D30F501A098bC26A313Ae8BeB7B8ad at block 7409708
+### Chiado 0.1
 
-## OmniBridge AMB:
+TODO
 
-[Home] Chiado Bridge Mediator: 0x27D23dd2Ef62D9b92f8f743c9A29a9d327381900
+### Appendix
 
-[Foreign] Goerli Bridge Mediator: 0xe18e081f5448aE92E2D66aBBA6b9AbE3f61ea8B0
-
-	-> Claim Token
-
-
-### How to Use:
-
-Go to:[ https://abi.hashex.org/](https://abi.hashex.org/)
-
-Copy the ABI from [https://etherscan.io/address/0x8eb3b7d8498a6716904577b2579e1c313d48e347#code](https://etherscan.io/address/0x8eb3b7d8498a6716904577b2579e1c313d48e347#code)
-
-
-## Config Files
-
-[https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/README.md](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/README.md)
-
-Consensus layer files:
-
-
-
-* [config.yaml](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yaml)
-* [genesis.ssz](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/genesis.ssz)
-* [bootnodes_consensus.txt](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/bootnodes_consensus.txt)
-
-Execution layer files:
-
-
-
-* [nethermind_genesis.json](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/nethermind_genesis.json)
-* [bootnodes_execution.txt](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/bootnodes_execution.txt)
-
-
-## Client images
-
-Remember you must run one execution client
-
-[https://github.com/gnosischain/nethermind-client](https://github.com/gnosischain/nethermind-client) 
-
-And one consensus client
-
-[https://github.com/gnosischain/lighthouse-client](https://github.com/gnosischain/lighthouse-client) 
-
-[https://github.com/gnosischain/prysm-client](https://github.com/gnosischain/prysm-client) 
-
-[https://github.com/gnosischain/lodestar-client](https://github.com/gnosischain/lodestar-client) 
-
-[https://github.com/gnosischain/teku-client](https://github.com/gnosischain/teku-client) 
-
+[^1]: See [Github Issue on Testnet GNO on Chiado Staking Contracts](https://github.com/gnosischain/pm/issues/100)
+[^2]: See [Github Issue on Goerli-Chiado Bridge Deployment](https://github.com/gnosischain/pm/issues/40)

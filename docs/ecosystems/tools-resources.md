@@ -39,3 +39,7 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, OmniBridge, xDai Bridge, HopProtocol
 * [Tornado Cash](https://tornado.cash): Non-custodial anonymous transactions 
 
 * [Bright DAO](https://www.brightid.org/): Decentralized proof of unique humanity
+
+## Automation
+
+* [Cask Protocol](https://www.cask.fi): Automated money flows - NFT subscriptions, auto-buys (DCA), recurring peer-to-peer payments, and protocol top-ups 

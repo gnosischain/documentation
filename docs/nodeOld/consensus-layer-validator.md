@@ -288,7 +288,7 @@ The instructions below frequently reference external dos that make frequent ment
 The Prysm client has been modified slightly. The underlying go-ethereum library used for execution layer block hash calculation is adapted to account for a different block structure. No other changes are made to the client, however, **the original Prysm binary will not work as expected for Gnosis - use the binary below**.
 
 ```bash
-git clone https://github.com/gnosischain/prysm-launch.git gbc
+git clone https://github.com/gnosischain/prysm-client.git gbc
 ```
 
 [View the Prysm docs here for more information](https://docs.prylabs.network/docs/getting-started). 
@@ -307,7 +307,7 @@ If you have errors, ensure that your decrypt key is correct in the earlier steps
 Official binaries or docker images for Ethereum Mainnet **do not** currently support Gnosis Beacon Chain, however, the Nimbus client can be specifically built from source to support the Gnosis Beacon Chain when built with the correct options. Use the following command to clone the correct repository:
 
 ```bash
-git clone https://github.com/gnosischain/nimbus-launch.git gbc
+git clone https://github.com/gnosischain/nimbus-client.git gbc
 ```
 
 [For more information, view the Nimbus docs here](https://nimbus.guide/). 

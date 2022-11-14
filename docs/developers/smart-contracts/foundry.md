@@ -39,7 +39,7 @@ Because Solidity files may contain multiple contracts, ```:<YourContract>``` (Se
 <TabItem value="chiado" label="Chiado Testnet">
 
 ```bash
-forge create --rpc-url https://rpc-chiado.gnosistestnet.com --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
+forge create --rpc-url https://rpc.chiadochain.net --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
 ```
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
@@ -58,7 +58,7 @@ Use the ```--constructor-args``` flag to pass arguments to the constructor:
 <TabItem value="chiado" label="Chiado Testnet">
 
 ```bash
-forge create --rpc-url https://rpc-chiado.gnosistestnet.com \
+forge create --rpc-url https://rpc.chiadochain.net \
     --constructor-args <argument-1> <argument-2...>\
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
 ```
@@ -83,7 +83,7 @@ forge create --rpc-url https://rpc.gnosischain.com \
 <TabItem value="chiado" label="Chiado Testnet">
 
 ```bash
-forge create --rpc-url https://rpc-chiado.gnosistestnet.com \
+forge create --rpc-url https://rpc.chiadochain.net \
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
     --etherscan-api-key <your_etherscan_api_key> \
     --verify
