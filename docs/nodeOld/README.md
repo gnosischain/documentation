@@ -1,44 +1,7 @@
 ---
-title: Overview
+description: Gnosis Beacon Chain Documentation
+slug: ./
 ---
-
-# Run a Node
-
-## What is a Node
-
-Node Software, known as a 'Execution layer client', downloads a copy of the blockchain and verifies the validity of every block, then keeps it up-to-date with new blocks and transactions, and helps others download and update their own copies. 
-
-Anyone can run a node: Gnosis chain is designed to run a node on average consumer-grade computers. It's recommended to run a node on dedicated hardware to eliminate the performance impact on their machine and minimize node downtime.
-
-## Why Run a Node?
-
-**Staking**
-
-Proof of Stake (POS): refers to the method of consensus which secures Gnosis chain, this is how the network comes to agreement among many distributed nodes. Validators are responsible for storing data, processing transactions, and adding new blocks to the blockchain. Anyone can become a validator by staking 1 GNO as collateral for security to activate validator node software and earn native block rewards.
-
-**What is a Validator**
-
-Validator node software, known as a ‘Consensus Layer client’ implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client.
-
-Anyone can run a validator node, provided they have the minimum required stake of 1GNO
-
-## Why run a Node
-
-**Censorship resistance:** your own node will ensure access when you need it, as you have direct access to the blockchain without needing a third party.
-
-**Privacy and security:** Stop leaking your personal information to third party nodes.
-
-**Participate in security of the network decentralization:** Don’t trust verify, help strengthening the network and reduce centralized points of failure.
-
-**Earn network rewards as a validator:** running a node (also called an Execution layer client) is the first step in running a validator and earning rewards for securing the network.
-
-:::caution
-As a validator, you are providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
-:::
-
-1. The validator deposit is a non-reversible, one-way transaction. For now, until withdrawals are enabled post merge update.
-2. You are responsible for your node, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
-3. You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
 
 # Gnosis Beacon Chain
 

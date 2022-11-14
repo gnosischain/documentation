@@ -194,8 +194,8 @@ If you prefer a beginner-friendly walkthrough from start to finish, this excelle
 1. [Generate Validator Keystores and Deposit Data](#step-1-generate-validator-accounts-and-deposit-data): On an offline machine, generate up to 128 separate validator keys per node.
 2. [Choose your Gnosis Beacon Chain (GBC) Client:](#step-2-choose-your-beacon-chain-client--import-validator-keys) Choose to run either Prysm, Lighthouse or Nimbus. Add keystores and env variables.
 3. [Start up your GBC Node](#step-3-run-the-beacon-chain-node-with-the-attached-validator-process): Run in the docker container.
-4. [Deposit to your Validator(s)](/node/validator-deposits): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
-5. [View on Explorer](/node/monitoring-nodes): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
+4. [Deposit to your Validator(s)](/node/deposit): Use the Deposit UI to convert GNO to mGNO (metaGNO for staking) and deposit to your validator.
+5. [View on Explorer](/node/monitor): Wait \~1.5-2 hours for your validator(s) to go live and view at [https://beacon.gnosischain.com](https://beacon.gnosischain.com).
 
 ### Additional Software/Access Requirements
 
@@ -274,7 +274,7 @@ _`Want to learn more about Ethereum 2.0 keys and key generation?`_ 💡[Learn mo
 :::note
 To begin, determine which client you want to run, [Lighthouse](https://lighthouse.sigmaprime.io), [Prysm](https://prysmaticlabs.com) or [Nimbus](https://nimbus.guide/intro.html). Instructions differ for the 3 clients, **see below for instructions related to each implementation.**
 
-Make sure your machine conforms to the [Technical Requirements](/node/consensus-layer-validator#beacon-chain-node-requirements) for running a node, including opening the following pair of ports:
+Make sure your machine conforms to the [Technical Requirements](/node/requirements) for running a node, including opening the following pair of ports:
 
 * **12000 UDP, 13000 TCP**
 :::
@@ -339,13 +339,13 @@ A similar command can be used to look at the validator process logs: `docker-com
 
 ## Step 4) Make a Deposit
 
-Once your node has synced (can take a few hours depending on setup) and the node and validator are running without any errors, you are ready to make a deposit. To check if your validator is synced, open the logs and you should see a message saying that the validator is awaiting activation. Making deposits is a 2 part process. See the [Validator Deposits section](/node/validator-deposits) for details.
+Once your node has synced (can take a few hours depending on setup) and the node and validator are running without any errors, you are ready to make a deposit. To check if your validator is synced, open the logs and you should see a message saying that the validator is awaiting activation. Making deposits is a 2 part process. See the [Validator Deposits section](/node/deposit) for details.
 ##
 
 
 ## Connect to a Gnosis Node
 
-If you choose not to use the public RPC and want to connect to a different Gnosis node ([including a 3rd party provider](/node/execution-layer-validator)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
+If you choose not to use the public RPC and want to connect to a different Gnosis node ([including a 3rd party provider](/node/setup#execution-layer)), set `XDAI_RPC_URL`=https://\&lt;your-endpoint&gt;
 
 :::note
 If you are having issues connecting to a public RPC, you can try some of the other endpoints listed [here](/tools/rpc/).

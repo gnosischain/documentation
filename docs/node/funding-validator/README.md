@@ -1,7 +1,10 @@
 ---
+description: Deposit
 ---
 
-# Deposits
+# Deposit
+
+# Deposit For Gnosischain
 
 :::caution
 Deposits occur on Gnosis. **If you have GNO on Ethereum mainnet, you will need to bridge it to Gnosis**.
@@ -14,7 +17,7 @@ Deposits occur on Gnosis. **If you have GNO on Ethereum mainnet, you will need t
 During the deposit, your GNO will be automatically wrapped into mGNO, the metatoken used for staking on the Gnosis Beacon Chain. **1 GNO = 32 mGNO required to run a validator**.  When [viewing your validator](#view-your-validator) you will see deposit info in mGNO.
 :::
 
-Once you have followed the steps to [Get Started](/node/consensus-layer-validator) and your Beacon Chain node is running, you will make a deposit of **1 GNO for each validator**. You can make a bulk deposit for up to 128 validators at a time.
+Once you have followed the steps to [Get Started](/node/) and your Beacon Chain node is running, you will make a deposit of **1 GNO for each validator**. You can make a bulk deposit for up to 128 validators at a time.
 
 ## Make sure you aren't being phished
 
@@ -43,7 +46,7 @@ In this example we use MetaMask.
 
 ![](/img/node/UI-2A.png)
 
-2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/consensus-layer-validator#step-1-generate-validator-accounts-and-deposit-data) It will be located in the same folder as the generated keystores.
+2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/setup) It will be located in the same folder as the generated keystores.
 
 :::note
 If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
@@ -54,7 +57,7 @@ If you can't upload the file, you may want to check the file permissions to make
 
 ![](/img/node/deposit-2.png)
 
-4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/validator-deposits#make-sure-you-arent-being-phished) before proceeding.
+4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/deposit) before proceeding.
 
 ![](/img/node/deposit-3.png)
 
@@ -112,7 +115,7 @@ A modification to the Gnosis Chain deposit contract allows you to deposit in bat
 
     `STAKING_ACCOUNT_PRIVATE_KEY` is the private key of the account which holds the necessary amount of GNO tokens for deposit. Any account may be used for funding, but it must also have a small amount of xDai to process transactions. In the above example, 2 transactions will occur with 256 total deposits of 1 GNO each.
 
-3. Copy the `deposit_data.json` generated during [Step 2 of Get Started ](/node/consensus-layer-validator#step-2-choose-your-beacon-chain-client--import-validator-keys)to the current directory.
+3. Copy the `deposit_data.json` generated during [Step 2 of Get Started](/node/setup/#step-2-choose-your-beacon-chain-client--import-validator-keys)to the current directory.
 4.  Run the deposit script (`/path/to/` should be a valid path to the .env file you have created):
 
     ```bash
@@ -127,7 +130,7 @@ Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosi
 
 ## Convert GNO to mGNo (special cases)
 
-:::note
+::: note
 GNO is automatically wrapped by the deposit contract, you only need to do this to top off your balance. The following instructions use the older swap UI
 :::
 
@@ -156,3 +159,32 @@ The second processes the transaction. This will require a small amount of xDai t
 ![](/img/node/2tx.png)
 
 4\) The transaction should be initiated and completed within a few seconds. Once completed you can click the link to see the tx in BlockScout and add mGNO to your MetaMask wallet. The mGNO contract address is 0x722fc4DAABFEaff81b97894fC623f91814a1BF68.
+
+
+# Deposit For Chiado Test Network
+
+Obtain Chiado xDai: [https://gnosisfaucet.com/](https://gnosisfaucet.com/) 
+
+Chiado GNO: This can be obtained from discord upon request
+
+
+###### Deposit from UI {#deposit-from-ui}
+
+You can run the deposit UI [https://deposit.gnosischain.com](https://deposit.gnosischain.com) locally from here
+
+[https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui](https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui) 
+
+Create an .env file with the following variables for Chiado 
+
+
+```
+REACT_APP_NETWORK_ID=10200
+REACT_APP_RPC_URL="https://rpc.chiadochain.net"
+REACT_APP_WRAPPER_CONTRACT_ADDRESS=0x917947dC7E341d843ab38e91623bcAeb65512b75
+REACT_APP_TOKEN_CONTRACT_ADDRESS=0xf907903Be10FC3a885d331C4E225794436a34c9f
+REACT_APP_WRAPPED_TOKEN_CONTRACT_ADDRESS=0xc5be8bf53755a41c2385e7aa86f6a9e28746f466
+REACT_APP_DEPOSIT_CONTRACT_ADDRESS=0xb97036A26259B7147018913bD58a774cf91acf25
+REACT_APP_DEPOSIT_START_BLOCK_NUMBER=0
+REACT_APP_DAPPNODE_DEPOSIT_CONTRACT_ADDRESS=
+REACT_APP_USE_PERMIT=true
+```
