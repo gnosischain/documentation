@@ -32,5 +32,3 @@ import InstallLighthousePartial from '@site/docs/install/_partials/_install_cl_l
   <p>WIP</p>
   </TabItem>
 </Tabs>
-
-<p>ccc</p>
