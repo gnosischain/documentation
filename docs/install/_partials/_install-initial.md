@@ -15,11 +15,7 @@ Create a folder called <code>gnosis</code> on your disk, and then two subfolders
 ```
 
 ```
-mkdir gnosis
-```
-
-```
-cd gnosis
+mkdir gnosis && cd gnosis && mkdir consensus && mkdir execution
 ```
   </TabItem>
   <TabItem value="chiado">
@@ -32,23 +28,10 @@ Create a folder called <code>chiado</code> on your SSD, and then two subfolders 
 ```
 
 ```
-mkdir chiado
-```
-
-```
-cd gnosis
+mkdir chiado && cd chiado && mkdir consensus && mkdir execution
 ```
   </TabItem>
 </Tabs>
-
-
-```
-mkdir consensus
-```
-
-```
-mkdir execution
-```
 
 <Tabs groupId="protocol" defaultValue="jwt" values={[
         {label: 'JWT', value: 'jwt'},
