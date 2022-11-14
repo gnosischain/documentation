@@ -12,7 +12,7 @@ import InstallIntroPartial from '@site/docs/install/_partials/_install-intro.md'
 
 <InstallIntroPartial />
 
-<div className='hide-tabs-REMOVETHIS'>
+<div className='hide-tabs'>
 
 ## Step 1: Review prerequisites and best practices
 
@@ -40,11 +40,47 @@ import RunBeaconNodePartial from '@site/docs/install/_partials/_run-consensus-cl
 
 <RunBeaconNodePartial />
 
-## Step 5: Run a validator
+## Step 5: Generate validator keys
+
+<Tabs groupId="network" defaultValue="gnosis" values={[
+    {label: 'Gnosis', value: 'gnosis'},
+    {label: 'Chiado', value: 'chiado'}
+]}>
+    <TabItem value="gnosis">
+        <div>
+
+import GenerateValidatorKeysPartial from '@site/docs/install/_partials/_generate_validator_keys.md';
+
+<GenerateValidatorKeysPartial />
+
+## Step 6: Run a validator
 
 import InstallValidatorPartial from '@site/docs/install/_partials/_install-validator.md';
 
 <InstallValidatorPartial />
+
+## Step 7: Fund your validator
+
+import FundValidatorPartial from '@site/docs/install/_partials/_fund-validator.md';
+
+<FundValidatorPartial />
+
+
+## Step 8: Verify validator
+
+import VerifyValidatorPartial from '@site/docs/install/_partials/_verify-validator.md';
+
+<VerifyValidatorPartial />
+        </div>
+    </TabItem>
+    <TabItem value="chiado">
+        <div>
+            <p>Chiado testnet does not support public participation yet.</p>
+            <p>Steps 5-8 are ommited.</p>
+        </div>
+    </TabItem>
+</Tabs>
+
 
 </div>
 </div>
