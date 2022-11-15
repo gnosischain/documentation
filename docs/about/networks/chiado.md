@@ -8,9 +8,9 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 
 ## Overview
 ### Purpose
-* Chiado is a Gnosis testnet that is scheduled for launch in Q4 2022.
+* Chiado is a Gnosis testnet that was launched in October 2022
 * Chiado's primary purpose is to be a long-lived testnet with tooling for developers
-* Chiado's secondary purpose is to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../specs/consensus/aura.md) to the [Beacon Chain](../../specs/consensus/gbc.md).
+* Chiado's secondary purpose was to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../specs/consensus/aura.md) to the [Beacon Chain](../../specs/consensus/gbc.md).
 * Chiado is named after the [Chiado metro station](https://en.wikipedia.org/wiki/Baixa-Chiado_(Lisbon_Metro)) in Lisbon, Portugal.
 
 ### Validators
@@ -30,7 +30,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ### How to Participate
 
 * [Nethermind Sedge](https://docs.sedge.nethermind.io/) can generate the [Docker Compose files for Chiado](https://docs.sedge.nethermind.io/docs/quickstart/chiado)
-* (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or deploy your own [Deposit UI](https://github.com/gnosischain/gbc-deposit-ui) with the updated config files
+* (Here be Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or deploy your own [Deposit UI](https://github.com/gnosischain/gbc-deposit-ui) with the updated config files
 ## Summary
 ### Key Infra
 
