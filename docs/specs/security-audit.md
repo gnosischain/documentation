@@ -25,7 +25,7 @@ Most Audits were completed prior to the rebrand from xDai Chain to Gnosis, and w
 * **Contracts:** [https://github.com/poanetwork/omnibridge](https://github.com/poanetwork/omnibridge)
 * **Audit Report**
 
-{@file: /files/ChainSecurity_POA_Network_Omnibridge_Version_6_0_audit.pdf}
+[ChainSecurity_POA_Network_Omnibridge_Version_6_0_audit.pdf](/files/ChainSecurity_POA_Network_Omnibridge_Version_6_0_audit.pdf)
 
 ## POSDAO Audit by ChainSecurity <a href="#omnibridge-audit-by-chainsecurity" id="omnibridge-audit-by-chainsecurity"></a>
 
@@ -69,7 +69,7 @@ Most Audits were completed prior to the rebrand from xDai Chain to Gnosis, and w
 
 **Conclusion:** All high/medium/low risk issues resolved.
 
-{@file: /files/XDai Easy Staking - Final Report.pdf}
+[XDai-Easy-Staking-Final-Report.pdf](/files/XDai-Easy-Staking-Final-Report.pdf)
 
 ## TokenBridge Audit by Quantstamp (covers xDai bridge functionality)
 

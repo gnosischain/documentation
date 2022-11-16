@@ -9,6 +9,10 @@ Wallets store private keys, keeping your crypto safe and accessible. They also a
 Do you own research while selecting your wallet, keep your seed and funds safely. For extra security, use [safe wallet](/tools/wallets/safe).
 :::
 
+## Gnosis Wallets
+
+Visit [Gnosis Wallets](https://gnosiswallets.com/) to find a wallet that fits your needs. Discover all supported Gnosis Chain wallets and search based on their unique features and compatibility.
+
 ## Software wallets
 
 - [Alpha Wallet](https://alphawallet.com/asset/the-best-wallet-for-xdai/)

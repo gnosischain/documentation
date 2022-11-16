@@ -105,34 +105,6 @@ Message
 ```
 Refer to [docusaurus docs](https://docusaurus.io/docs/next/markdown-features/admonitions) for more admonition types.
 
-### Files
-
-#### Gitbook
-
-```
-{% file src="somepath/somefile.zip" %}
-```
-
-#### Docusaurus
-
-```
-{@file: /somefile.zip}
-```
-Place files in ```/static/files/```
-
-### Youtube Videos
-
-#### Gitbook
-
-```
-{% embed url="https://www.youtube.com/watch?v=yPYYKz0u9K0t=10s" %}
-```
-
-#### Docusaurus
-
-```
-{@youtube: yPYYKz0u9K0t,start=10}
-```
 
 ### Tabs
 
