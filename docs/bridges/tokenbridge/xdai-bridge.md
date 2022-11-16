@@ -58,14 +58,14 @@ References:
 * [TokenBridge Docs: Bridge Contract Management](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management)
 ### Fees & Daily Limits
 
-| Type               | Ethereum -> Gnosis | Gnosis -> Ethereum |
-|--------------------|--------------------|--------------------|
-| Approx. Gas Cost   |                    |                    |
-| Bridge Fees        | 0%                 | 0%                 |
-| Daily Limit Reset  | 00:00 UTC          | 00:00 UTC          |
-| Min Transfer       | 0.005 Dai          | 10 xDai            |
-| Daily Limit        | 10,000,000 Dai     | 10,000,000 Dai     |
-| Max Single Deposit | 9,999,999 Dai      | 9,999,999 xDai     |
+| Type               | Ethereum -> Gnosis | Gnosis -> Ethereum    |
+|--------------------|--------------------|-----------------------|
+| Approx. Gas Cost   |                    |                       |
+| Bridge Fees        | 0%                 | 0%                    |
+| Daily Limit Reset  | 00:00 UTC          | 00:00 UTC             |
+| Min Transfer       | 0.005 Dai          | 10 xDai               |
+| Daily Limit        | 10,000,000 Dai     | 10,000,000 xDai       |
+| Max Single Deposit | 9,999,999 Dai      | 10,000,000 xDai       |
 
 References: 
 
