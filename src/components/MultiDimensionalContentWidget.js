@@ -98,10 +98,10 @@ export const MultiDimensionalContentWidget = () => {
 		else if (isSelectedByText('Teku'))
 			selectedCL = "Teku";
 
-		if (isSelectedByText('IPC'))
-			selectedENBN = "IPC";
-		else
-			selectedENBN = "HTTP-JWT";
+		//if (isSelectedByText('IPC'))
+		//	selectedENBN = "IPC";
+		//else
+		//	selectedENBN = "HTTP-JWT";
 
 		var tabWidget = document.querySelector('.install-tabs');
 		tabWidget.dataset.selectedOS = selectedOS;

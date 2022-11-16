@@ -57,7 +57,7 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   <TabItem value="teku"></TabItem>
 </Tabs>
 
-<Tabs className="tabgroup-with-label enbn-tabgroup" groupId="protocol" defaultValue="jwt" values={[
+<!--Tabs className="tabgroup-with-label enbn-tabgroup" groupId="protocol" defaultValue="jwt" values={[
         {label: 'EN-BN connection:', value: 'label'},
         {label: 'HTTP-JWT', value: 'jwt'},
         {label: 'IPC', value: 'ipc'}
@@ -65,6 +65,6 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
     <TabItem className="unclickable-element" value="label"></TabItem>
     <TabItem value="jwt"></TabItem>
     <TabItem value="ipc"></TabItem>
-</Tabs>
+</Tabs-->
 
 </div>
