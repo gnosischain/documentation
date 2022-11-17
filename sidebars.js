@@ -235,10 +235,8 @@ const sidebars = {
       link: {type: 'doc', id: 'node/README'},
       collapsed: false,
       items: [
-        "node/overview/responsibilities",
         "node/overview/rewards-penalties",
-        "node/overview/home-vs-cloud",
-        "node/overview/types-of-nodes",
+        "node/overview/faq",
       ],
     },
     {
@@ -249,7 +247,6 @@ const sidebars = {
       items: [
         "node/guided-setup/dappnode", 
         "node/guided-setup/sedge", 
-        "node/guided-setup/stereum", 
       ],
     },
     {

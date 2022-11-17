@@ -1,72 +1,104 @@
 ---
-title: Overview
+title: Run a Node
 ---
 
 # Run a Node
 
-## What is a Node
+<img src="/img/node/nodes-map-nov-2022.png" width="100%" />
 
-Node Software, known as a 'Execution layer client', downloads a copy of the blockchain and verifies the validity of every block, then keeps it up-to-date with new blocks and transactions, and helps others download and update their own copies. 
+Image: Gnosis nodes around the world, circa Nov 2022 (source: [Nodewatch](https://nodewatch.gnosischain.com/))
 
-Anyone can run a node: Gnosis chain is designed to run a node on average consumer-grade computers. It's recommended to run a node on dedicated hardware to eliminate the performance impact on their machine and minimize node downtime.
+## A Community-run Chain
 
-## Why Run a Node?
+- Gnosis is a community-run chain that is created by nodes run by thousands of ordinary people around the globe. As a distributed network, a diverse set of nodes ensure that the network is resilient to technical failures. A diversity of nodes run across many countries ensures the network can remain [credibly neutral infrastructure](https://nakamoto.com/credible-neutrality/). 
+- Running a node is perhaps the most profound way to contribute to a blockchain network. By running a node, you -are- the network. Together with other nodes run by others around the planet, you form part of a global network that is anti-fragile and resilient.
+- Gnosis has a strong culture of homestakers running nodes from their homes, that are not reliant on cloud providers or datacenters. 
+- Gnosis has a stretch goal to have a node in every country by 2025. 
 
-**Staking**
+### Gnosis vs. Ethereum
 
-Proof of Stake (POS): refers to the method of consensus which secures Gnosis chain, this is how the network comes to agreement among many distributed nodes. Validators are responsible for storing data, processing transactions, and adding new blocks to the blockchain. Anyone can become a validator by staking 1 GNO as collateral for security to activate validator node software and earn native block rewards.
+- Gnosis runs the same client software and tooling stack as Ethereum
+- In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
+- Gnosis aims to to be a learning ground for a new generation of node runners, requiring only 1 GNO (~$100 at Nov 2022) instead of the 32 ETH (~$38,400 at Nov 2022) minimum required for Ethereum
+- Gnosis runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus. 
 
-**What is a Validator**
-
-Validator node software, known as a ‘Consensus Layer client’ implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client.
-
-Anyone can run a validator node, provided they have the minimum required stake of 1GNO
-
-## Why run a Node
-
-**Censorship resistance:** your own node will ensure access when you need it, as you have direct access to the blockchain without needing a third party.
-
-**Privacy and security:** Stop leaking your personal information to third party nodes.
-
-**Participate in security of the network decentralization:** Don’t trust verify, help strengthening the network and reduce centralized points of failure.
-
-**Earn network rewards as a validator:** running a node (also called an Execution layer client) is the first step in running a validator and earning rewards for securing the network.
+### Proof-of-Stake
 
 :::caution
-As a validator, you are providing security and receiving rewards (or penalties) as you would with Ethereum staking. Primary points to consider:
+
+Validator deposits are currently one-way, non-reversible transactions. Similar to Ethereum, no concrete date has been set for withdrawals of GNO staked in validators. 
+
 :::
 
-1. The validator deposit is a non-reversible, one-way transaction. For now, until withdrawals are enabled post merge update.
-2. You are responsible for your node, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
-3. You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
+- Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
+- 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
+- Nodes receive [rewards](./overview/rewards-penalties.md) for being an active validator, and suffer [penalties](./overview/rewards-penalties.md) for malicious or negligent behavor. 
 
-# Gnosis Beacon Chain
+### Execution vs Consensus
 
-Gnosis Beacon Chain (GBC) brings extendable and accelerated beacon-network functionality to the Ethereum ecosystem. Applications can iterate through real-world strategies, stage important applications, or choose to run DApps in a faster, lower-stakes environment while enjoying the benefits of massive scalability.
+- Gnosis has the same proof-of-stake consensus as Ethereum, and requires validators to run an [Execution Layer client](../node/advanced/execution-layer/README.md) as well as a [Consensus Layer client](../node/advanced/consensus-layer/README.md). 
+- Gnosis and Ethereum utilize two networks that run side-by-side, the Execution Layer and the Consensus Layer, each of which offers users a choice of multiple clients
+- For the **Consensus Layer**, Gnosis currently supports [Lighthouse](https://github.com/sigp/lighthouse), [Prysm](https://github.com/prysmaticlabs/prysm), [Nimbus](https://github.com/status-im/nimbus-eth2), or [Teku](https://github.com/ConsenSys/teku).
+- For the **Execution Layer**, Gnosis currently supports [Nethermind](https://nethermind.io/nethermind-client/). (In progress: [Geth](https://geth.ethereum.org/) and [Erigon](https://github.com/ledgerwatch/erigon))
+- You can refer to [this post](https://hackmd.io/@n0ble/ethereum_consensus_upgrade_mainnet_perspective) on the different responsibilities of the Execution Layer and Consensus Layer, and how they interact with each other. 
 
-GBC is optimized for certain parameters (block/epoch time) and can serve in a frontrunning capacity to important Ethereum consensus-layer updates. For example, the merge will first take place on testnets. Once thorough testing is complete, updates can then move to a production-level, real-world value environment (Gnosis Beacon Chain).
+## How to run a Node
 
-Validating on the GBC only requires the equivalent of 1 [GNO](/about/tokens/gno), opening up validation opportunities for diverse groups of individuals across the globe. When you go to make the deposit, that 1 GNO is split into 32 mGNO to more closely mirror Ethereum, where you stake 32 ETH.
+### Guided Setups
 
-## What is Staking?
-Currently, Gnosis uses Parity's [AuRa](https://openethereum.github.io/Aura) proof-of-authority consensus model. In this model, selected validators (selected through the POSDAO dPOS process) take turns signing blocks. However, after the merge, Gnosis will be running a consensus protocol known as [Proof of Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp). To secure the network and disincentivize bad actors from validating invalid or non-existent transactions, validators "stake" a non-trivial amount of assets. If they are caught lying by other validators, their stake gets "slashed" (taken away), and they can be permanently removed from the validator pool. In order for the network to be compromised, bad actors would have to control 51% of the staked assets, in what's known as a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp). Therefore, the more validators, the more coins there are being staked, and the more expensive and infeasible a 51% attack becomes. In exchange for being a good validator, a portion of transaction fees are paid out. On Gnosis, rewards are paid out in mGNO (1 mGNO = 1/32 GNO).  
+### Advanced Setups
 
-## What is a Node?
-A 'node' on Gnosis is very similar to a node on Ethereum. [Read more here](https://ethereum.org/en/run-a-node/)
+## Technical Requirements
 
-## What is Meant by 'Consensus Layer' and 'Execution Layer'?
-The ***Consensus Layer*** is responsible for the blockchain's consensus. Pre-merge, this is known as the ***Beacon Chain***. This is where the validators check and make sure that blocks are valid. To run this, we can use clients such as [Lighthouse](https://github.com/sigp/lighthouse), [Prysm](https://github.com/prysmaticlabs/prysm), [Nimbus](https://github.com/status-im/nimbus-eth2), or [Teku](https://github.com/ConsenSys/teku).
+### Types of Nodes
+- [ ] Node types
+- [ ] Full Nodes
+- [ ] Validators
+- [ ] Architectural diagram of a node
 
-The ***Execution Layer*** is responsible for transaction bundling and execution. To run this, we use clients like Nethermind. 
+### Hardware
 
-In order to check validity, the Consensus Layer sends a list of transactions and other data required to execute and validate them. The execution layer then assembles whats known as an execution block, verifies some pre-conditions, executes the transactions and then verifies the post-conditions. The result is then sent to the Consensus Layer. [This HackMD post](https://hackmd.io/@n0ble/ethereum_consensus_upgrade_mainnet_perspective) goes into more detail on how the layers interact. Note that any mention of transition from Proof of Work (PoW) does not apply to Gnosis. 
+Gnosis is designed to run on average consumer-grade computers. It's recommended to run a node on dedicated hardware to eliminate the performance impact on their machine and minimize node downtime.
 
+Requirements vary client to client, for more detail see the associated system requirements below.
 
-:::tip
-🙋🏼‍♀️ Want to run a GBC validator node with ease? [DappNode](https://dappnode.io) provides hardware solutions and step-by-step setup, plus an opportunity to get up to 4 validators free with purchase. [Learn More](https://shop.dappnode.io/product/dappnodextreme-gnosis/).
-:::
+#### Execution Layer
 
-:::tip
-Liquid staking is the easiest way to participate, and you can do so with [Stakewise](https://app.stakewise.io). [Read more here](/tools/beacon-chain/liquid-staking).
-:::
+- [Nethermind: System Requirements](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/system-requirements) 
+- [Besu: System Requirements](https://besu.hyperledger.org/en/stable/public-networks/get-started/system-requirements/) 
+- [Erigon: System Requirements](https://github.com/ledgerwatch/erigon#system-requirements)
+- [Geth: Hardware](https://geth.ethereum.org/docs/interface/hardware) 
 
+#### Consensus Layer
+
+- [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/system-requirements.html) 
+- [Lodestar: Specifications](https://chainsafe.github.io/lodestar/#specifications) 
+- [Nimbus: Hardware](https://nimbus.guide/hardware.html) 
+- Teku
+- [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices)
+
+**Storage**
+
+- Disk I/O is very critical as the Execution client relies heavily on IOPS, or "operations per second"
+- NVMe SSDs are recommended, followed by SATA or external USB3.0 SSDs. 
+- HDD drives will not work as they cannot keep up
+
+### Network Connectivity
+
+A reliable internet connection is key: bandwidth should not be throttled or capped. Upload bandwidth should be a minimum of 700 MB/hour with increases likely. Brief periods offline may result in small inactivity penalties, but this will typically be recouped quickly as long as the outage is short.
+
+Note that synching the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
+
+For better understanding of the network throughput requirements, a benchmark was conducted on the Lighthouse v2.2.1 client running a GBC on 04.05.22.
+
+The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
+
+Validators are advised to consider those numbers when planning their infrastructure and budget. With growth of the overall validator set, these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
+
+| Number of validators | Inbound traffic | Outbound traffic | Approximate monthly traffic |
+| -------------------- | --------------- | ---------------- | --------------------------- |
+| 10                   | 1.0 MB/s        | 1.8 MB/s         | 7.2 TB                      |
+| 32                   | 2.4 MB/s        | 3.15 MB/s        | 14.2 TB                     |
+| 64                   | 4.5 MB/s        | 3.8 MB/s         | 21.2 TB                     |
+| 128                  | 4.6 MB/s        | 3.8 MB/s         | 21.5 TB                     |
+| >256                 | 4.6 MB/s        | 3.9 MB/s         | 21.7 TB                     |
