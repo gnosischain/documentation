@@ -62,10 +62,10 @@ To mimic Ethereum-Gnosis conditions, Chiado uses a "GNO" token that is isseud on
 
 | Token            | Address                                                                                                                             |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| GNO on Goerli    | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
-| GNO on Chiado    | [0xf907903Be10FC3a885d331C4E225794436a34c9f](https://blockscout.chiadochain.net/address/0xf907903Be10FC3a885d331C4E225794436a34c9f) |
-| mGNO on Chiado   | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
-| Deposit Contract | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
+| Testnet GNO on Goerli    | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5)        |
+| Testnet GNO on Chiado    | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://blockscout.chiadochain.net/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
+| Testnet mGNO on Chiado   | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.chiadochain.net/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
+| Deposit Contract | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.chiadochain.net/address/0xb97036A26259B7147018913bD58a774cf91acf25) |
 
 ## Network Config
 
