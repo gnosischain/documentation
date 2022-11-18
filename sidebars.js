@@ -255,7 +255,7 @@ const sidebars = {
       link: {type: 'doc', id: 'node/full-setup/README'},
       collapsed: false,
       items: [
-        "node/full-setup/interactive-guide",
+        "node/guide/README",
         "node/full-setup/architecture",
         {
           type: 'category',
