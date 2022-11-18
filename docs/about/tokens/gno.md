@@ -86,13 +86,13 @@ Check out [Chiado Testnet specs](/about/networks/chiado#gno-token) for more info
 
 #### mGNO token
 
-To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a meta-token similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO. Check the [deposit process](/node/deposit) for more details.
+To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a meta-token similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO. Check the [deposit process](/node/funding-validator) for more details.
 
 - mGNO contract on Gnosis: [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)
 
 #### Staking
 
-Stake your GNO tokens to secure Gnosis validating blocks as part of the PoS consensus. Check the [deposit process](/node/deposit) for more details.
+Stake your GNO tokens to secure Gnosis validating blocks as part of the PoS consensus. Check the [deposit process](/node/funding-validator) for more details.
 
 Liquid staking providers allow anyone to stake without running the infrastructure themselves. Check the [Stakewise](/tools/beacon-chain/liquid-staking#tokens-sgno--rgno) page for more details on sGNO and rGNO tokens.
 

@@ -1,6 +1,5 @@
 ---
-id: with-script
-title: "Run a Node"
+title: "Interactive Guide"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 <div className='install'>
 
-import InstallIntroPartial from '@site/docs/install/_partials/_install-intro.md';
+import InstallIntroPartial from '@site/docs/node/guide/_partials/_install-intro.md';
 
 <InstallIntroPartial />
 
@@ -16,13 +15,13 @@ import InstallIntroPartial from '@site/docs/install/_partials/_install-intro.md'
 
 ## Step 1: Review prerequisites and best practices
 
-import InstallPrereqsPartial from '@site/docs/install/_partials/_install-prereqs.md';
+import InstallPrereqsPartial from '@site/docs/node/guide/_partials/_install-prereqs.md';
 
 <InstallPrereqsPartial />
 
 ## Step 2: Initial setup
 
-import InstallInitialPartial from '@site/docs/install/_partials/_install-initial.md';
+import InstallInitialPartial from '@site/docs/node/guide/_partials/_install-initial.md';
 
 <InstallInitialPartial />
 
@@ -30,13 +29,13 @@ import InstallInitialPartial from '@site/docs/install/_partials/_install-initial
 
 In this step, you'll install an execution-layer client that the consensus-layer node will connect to.
 
-import RunExecutionNodePartial from '@site/docs/install/_partials/_run-execution-client.md';
+import RunExecutionNodePartial from '@site/docs/node/guide/_partials/_run-execution-client.md';
 
 <RunExecutionNodePartial />
 
 ## Step 4: Run a beacon node
 
-import RunBeaconNodePartial from '@site/docs/install/_partials/_run-consensus-client.md';
+import RunBeaconNodePartial from '@site/docs/node/guide/_partials/_run-consensus-client.md';
 
 <RunBeaconNodePartial />
 
@@ -49,26 +48,26 @@ import RunBeaconNodePartial from '@site/docs/install/_partials/_run-consensus-cl
     <TabItem value="gnosis">
         <div>
 
-import GenerateValidatorKeysPartial from '@site/docs/install/_partials/_generate_validator_keys.md';
+import GenerateValidatorKeysPartial from '@site/docs/node/guide/_partials/_generate_validator_keys.md';
 
 <GenerateValidatorKeysPartial />
 
 ## Step 6: Run a validator
 
-import InstallValidatorPartial from '@site/docs/install/_partials/_install-validator.md';
+import InstallValidatorPartial from '@site/docs/node/guide/_partials/_install-validator.md';
 
 <InstallValidatorPartial />
 
 ## Step 7: Fund your validator
 
-import FundValidatorPartial from '@site/docs/install/_partials/_fund-validator.md';
+import FundValidatorPartial from '@site/docs/node/guide/_partials/_fund-validator.md';
 
 <FundValidatorPartial />
 
 
 ## Step 8: Verify validator
 
-import VerifyValidatorPartial from '@site/docs/install/_partials/_verify-validator.md';
+import VerifyValidatorPartial from '@site/docs/node/guide/_partials/_verify-validator.md';
 
 <VerifyValidatorPartial />
         </div>

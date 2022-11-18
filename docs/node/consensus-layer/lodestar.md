@@ -8,7 +8,7 @@ description: Setup
 
 #### Overview {#overview}
 
-An Ethereum consensus client by [chainsafe]([https://lodestar.chainsafe.io/](https://lodestar.chainsafe.io/)) 
+An Ethereum consensus client by [chainsafe](https://lodestar.chainsafe.io/)
 
 This project builds a customized version of the lodestar client with Gnosischain modifications.
 Repository: [https://github.com/gnosischain/lodestar-client](https://github.com/gnosischain/lodestar-client) 

@@ -6,7 +6,7 @@
 ### **Contracts & Token Addresses**
 
 :::caution DO NOT send funds directly to the GBC Deposit Contract.
-To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/node/setup/#consensus-layer).
+To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/node/guide).
 :::
 
 | Contract                   | Address                                                                                                                                            |

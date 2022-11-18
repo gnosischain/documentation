@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
     ]}>
   <TabItem value="lighthouse">
 
-import InstallLighthouseValidatorPartial from '@site/docs/install/_partials/_install_validator_lighthouse.md';
+import InstallLighthouseValidatorPartial from '@site/docs/node/guide/_partials/_install_validator_lighthouse.md';
 
 <InstallLighthouseValidatorPartial />
 

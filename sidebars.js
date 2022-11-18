@@ -62,7 +62,6 @@ const sidebars = {
             link: {type: 'doc', id: 'specs/gbc/README'},
             items: [
               'specs/gbc/upgradeability',
-              'specs/gbc/faq',
             ],
           },
           {
@@ -192,42 +191,6 @@ const sidebars = {
     },
   ],
 
-  nodeOld: [
-    'nodeOld/README',
-    'nodeOld/incentives',
-    {
-      type: 'category',
-      label: 'Validator Guide',
-      collapsed: false,
-      link: {type: 'doc', id: 'nodeOld/get-started'},
-      items: [
-        "nodeOld/consensus-layer-validator",
-        "nodeOld/execution-layer-validator",
-        "nodeOld/validator-deposits",
-        "nodeOld/validator-withdrawls",
-        "nodeOld/migrating-a-validator",
-        "nodeOld/monitoring-nodes",
-        "nodeOld/voluntary-exit",
-      ],
-    },
-    /*{
-      type: 'category',
-      label: 'Testnets',
-      collapsed: true,
-      link: {type: 'doc', id: 'node/testnets/README'},
-      items: [
-        "node/testnets/consensus-layer",
-        "node/testnets/execution-layer",
-        
-      ],
-    },*/
-    {
-      type: 'link',
-      label: 'Landing Page',
-      href: 'https://www.gnosischain.com/',
-    },
-  ],
-
   node: [
     {
       type: 'category',
@@ -255,7 +218,7 @@ const sidebars = {
       link: {type: 'doc', id: 'node/full-setup/README'},
       collapsed: false,
       items: [
-        "node/full-setup/interactive-guide",
+        "node/guide/README",
         "node/full-setup/architecture",
         {
           type: 'category',
@@ -269,39 +232,39 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Step 2: Generating Validator Keys',
+          label: 'Step 2: Run Execution Layer',
+          link: {type: 'doc', id: 'node/execution-layer/README'},
+          collapsed: true,
+          items: [
+            
+            "node/execution-layer/nethermind",
+            "node/execution-layer/besu",
+            "node/execution-layer/erigon",
+            "node/execution-layer/geth",
+            "node/execution-layer/open-ethereum",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 3: Run Consensus Layer',
+          link: {type: 'doc', id: 'node/consensus-layer/README'},
+          collapsed: true,
+          items: [
+            "node/consensus-layer/lighthouse",
+            "node/consensus-layer/prysm",
+            "node/consensus-layer/teku",
+            "node/consensus-layer/nimbus",
+            "node/consensus-layer/lodestar",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 4: Generating Validator Keys',
           link: {type: 'doc', id: 'node/full-setup/generating-validator-keys/README'},
           collapsed: true,
           items: [
             "node/full-setup/generating-validator-keys/staking-deposit-cli",
             "node/full-setup/generating-validator-keys/wagyu",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Step 3: Run Execution Layer',
-          link: {type: 'doc', id: 'node/full-setup/execution-layer/README'},
-          collapsed: true,
-          items: [
-            
-            "node/full-setup/execution-layer/clients/nethermind",
-            "node/full-setup/execution-layer/clients/besu",
-            "node/full-setup/execution-layer/clients/erigon",
-            "node/full-setup/execution-layer/clients/geth",
-            "node/full-setup/execution-layer/clients/open-ethereum",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Step 4: Run Consensus Layer',
-          link: {type: 'doc', id: 'node/full-setup/consensus-layer/README'},
-          collapsed: true,
-          items: [
-            "node/full-setup/consensus-layer/clients/lighthouse",
-            "node/full-setup/consensus-layer/clients/prysm",
-            "node/full-setup/consensus-layer/clients/teku",
-            "node/full-setup/consensus-layer/clients/nimbus",
-            "node/full-setup/consensus-layer/clients/lodestar",
           ],
         },
         {
@@ -314,6 +277,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Managing your Node',
+      link: {type: 'doc', id: 'node/management/README'},
       collapsed: false,
       items: [
         "node/management/monitoring-node",
