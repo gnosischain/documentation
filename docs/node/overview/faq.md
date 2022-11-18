@@ -27,7 +27,7 @@ The deposit contract keeps track of validators and staking amounts. The GBC depo
 
 ### How much do validators earn in rewards?
 
-This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/node/incentives).
+This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/node/overview/rewards-penalties).
 
 You can view the current reward yield and other statistics on the [Gnosis Beacon Chain Dune Analytics dashboard](https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-\(Deposits\)).
 
@@ -69,7 +69,7 @@ Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](/node/#what-is-mea
 
 Along with running the GBC client you can also consider running a Gnosis Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis using Nethermind](/node/setup#execution-layer) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing the [Gnosis using Nethermind](/node/guide) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
 ### Can I use a node provider to run a Gnosis node?
 

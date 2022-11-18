@@ -191,38 +191,6 @@ const sidebars = {
     },
   ],
 
-  nodeOld: [
-    'nodeOld/README',
-    'nodeOld/incentives',
-    {
-      type: 'category',
-      label: 'Validator Guide',
-      collapsed: false,
-      link: {type: 'doc', id: 'nodeOld/get-started'},
-      items: [
-        "nodeOld/consensus-layer-validator",
-        "nodeOld/execution-layer-validator",
-        "nodeOld/validator-deposits",
-      ],
-    },
-    /*{
-      type: 'category',
-      label: 'Testnets',
-      collapsed: true,
-      link: {type: 'doc', id: 'node/testnets/README'},
-      items: [
-        "node/testnets/consensus-layer",
-        "node/testnets/execution-layer",
-        
-      ],
-    },*/
-    {
-      type: 'link',
-      label: 'Landing Page',
-      href: 'https://www.gnosischain.com/',
-    },
-  ],
-
   node: [
     {
       type: 'category',

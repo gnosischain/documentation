@@ -8,7 +8,7 @@ description: Setup
 
 #### Overview {#overview}
 
-Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku]([https://consensys.net/knowledge-base/ethereum-2/teku/](https://consensys.net/knowledge-base/ethereum-2/teku/))
+Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
 This project builds a customized version of the Teku client with Gnosischain modifications.
 Repository:[https://github.com/gnosischain/teku-client](https://github.com/gnosischain/teku-client) 
