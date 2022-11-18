@@ -1,19 +1,21 @@
 ---
 title: Rewards & Penalties
 ---
-1. The validator deposit is a non-reversible, one-way transaction. For now, until withdrawals are enabled post merge update.
-2. You are responsible for your node, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
-3. You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
+
+## Rewards
 
 
-## What is Staking?
-Currently, Gnosis uses Parity's [AuRa](https://openethereum.github.io/Aura) proof-of-authority consensus model. In this model, selected validators (selected through the POSDAO dPOS process) take turns signing blocks. However, after the merge, Gnosis will be running a consensus protocol known as [Proof of Stake](https://www.investopedia.com/terms/p/proof-stake-pos.asp). To secure the network and disincentivize bad actors from validating invalid or non-existent transactions, validators "stake" a non-trivial amount of assets. If they are caught lying by other validators, their stake gets "slashed" (taken away), and they can be permanently removed from the validator pool. In order for the network to be compromised, bad actors would have to control 51% of the staked assets, in what's known as a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp). Therefore, the more validators, the more coins there are being staked, and the more expensive and infeasible a 51% attack becomes. In exchange for being a good validator, a portion of transaction fees are paid out. On Gnosis, rewards are paid out in mGNO (1 mGNO = 1/32 GNO).  
+### Staking
 
-## Current Yield
+To secure the network and disincentivize bad actors from validating invalid or non-existent transactions, validators "stake" a non-trivial amount of assets. If they are caught lying by other validators, their stake gets "slashed" (taken away), and they can be permanently removed from the validator pool. 
+
+In order for the network to be compromised, bad actors would have to control 51% of the staked assets, in what's known as a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp). Therefore, the more validators, the more coins there are being staked, and the more expensive and infeasible a 51% attack becomes. In exchange for being a good validator, a portion of transaction fees are paid out. On Gnosis, rewards are paid out in mGNO (1 mGNO = 1/32 GNO).  
+
+### Current Yield
 
 To view the current validator reward percentage and other deposit statistics, see the [Gnosis Beacon Chain Dune Analytics dashboard](https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-\(Deposits\)).
 
-## Beacon Chain Rewards Curve
+### Rewards Curve
 
 The minimum requirement to run a validator is 1 [GNO](/about/tokens/gno) (staked as 32 mGNO tokens).  Rewards are based on the number of validators securing the chain.
 
@@ -44,3 +46,5 @@ N: amount of validators required for the launch = 4096
 1. The validator deposit is a non-reversible, one-way transaction. For now, until withdrawals are enabled post merge update.
 2. You are responsible for your node, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
 3. You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
+
+## Penalties
