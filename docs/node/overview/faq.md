@@ -2,15 +2,23 @@
 title: FAQs
 ---
 
+:::info
 
+FAQs are a work-in-progress and will be updated continually.
 
-1. The validator deposit is a non-reversible, one-way transaction. For now, until withdrawals are enabled post merge update.
-2. You are responsible for your node, including ensuring uptime, correct behavior, and monitoring. If your node is not responding properly, or is displaying dishonest behavior (like running keys on 2 nodes at the same time), you will be penalized in the form of deposit slashing.
-3. You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
-
-:::note
-FAQs are in progress.
 :::
+
+## Security
+
+### Help! I've lost my validator keys
+
+You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
+
+## Withdrawals
+
+### When can I make a withdrawal from a validator?
+
+There is currently no concrete date for withdrawals of staked GNO. Please note that validator deposits are a non-reversible, one-way transaction. Gnosis will likely follow a similar timeline to Ethereum in enabling withdrawals post-merge. 
 
 ## General
 
