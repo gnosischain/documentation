@@ -2,7 +2,7 @@
 title: Validator Withdrawals
 ---
 
-Withdrawals are not available until after the merge, when the Gnosis Beacon Chain consensus layer merges with the Gnosis execution layer. After the merge, there will have to be another upgrade (like Ethereum) to enable withdrawls. Until that time, any mGNO deposits made will remain in the beacon chain.
+Withdrawals are not available until after the merge, when the Gnosis Beacon Chain consensus layer merges with the Gnosis execution layer. After the merge, there will have to be another upgrade (like Ethereum) to enable withdrawals. Until that time, any mGNO deposits made will remain in the beacon chain.
 
 If you decide you want to stop validating prior to the merge, you can perform a [voluntary exit](/node/exit), which will freeze your balance at the current value.
 
