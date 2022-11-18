@@ -269,17 +269,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Step 2: Generating Validator Keys',
-          link: {type: 'doc', id: 'node/full-setup/generating-validator-keys/README'},
-          collapsed: true,
-          items: [
-            "node/full-setup/generating-validator-keys/staking-deposit-cli",
-            "node/full-setup/generating-validator-keys/wagyu",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Step 3: Run Execution Layer',
+          label: 'Step 2: Run Execution Layer',
           link: {type: 'doc', id: 'node/execution-layer/README'},
           collapsed: true,
           items: [
@@ -293,7 +283,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Step 4: Run Consensus Layer',
+          label: 'Step 3: Run Consensus Layer',
           link: {type: 'doc', id: 'node/consensus-layer/README'},
           collapsed: true,
           items: [
@@ -302,6 +292,16 @@ const sidebars = {
             "node/consensus-layer/teku",
             "node/consensus-layer/nimbus",
             "node/consensus-layer/lodestar",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 4: Generating Validator Keys',
+          link: {type: 'doc', id: 'node/full-setup/generating-validator-keys/README'},
+          collapsed: true,
+          items: [
+            "node/full-setup/generating-validator-keys/staking-deposit-cli",
+            "node/full-setup/generating-validator-keys/wagyu",
           ],
         },
         {
