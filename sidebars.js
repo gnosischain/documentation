@@ -204,10 +204,6 @@ const sidebars = {
         "nodeOld/consensus-layer-validator",
         "nodeOld/execution-layer-validator",
         "nodeOld/validator-deposits",
-        "nodeOld/validator-withdrawls",
-        "nodeOld/migrating-a-validator",
-        "nodeOld/monitoring-nodes",
-        "nodeOld/voluntary-exit",
       ],
     },
     /*{
