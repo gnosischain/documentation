@@ -310,6 +310,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Managing your Node',
+      link: {type: 'doc', id: 'node/management/README'},
       collapsed: false,
       items: [
         "node/management/monitoring-node",
