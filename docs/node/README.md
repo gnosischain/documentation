@@ -36,7 +36,7 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 
 ### Execution vs Consensus
 
-- Gnosis has the same proof-of-stake consensus as Ethereum, and requires validators to run an [Execution Layer client](full-setup/execution-layer/README.md) as well as a [Consensus Layer client](full-setup/consensus-layer/README.md). 
+- Gnosis has the same proof-of-stake consensus as Ethereum, and requires validators to run an [Execution Layer client](execution-layer/README.md) as well as a [Consensus Layer client](consensus-layer/README.md). 
 - Gnosis and Ethereum utilize two networks that run side-by-side, the Execution Layer and the Consensus Layer, each of which offers users a choice of multiple clients
 - For the **Consensus Layer**, Gnosis currently supports [Lighthouse](https://github.com/sigp/lighthouse), [Prysm](https://github.com/prysmaticlabs/prysm), [Nimbus](https://github.com/status-im/nimbus-eth2), or [Teku](https://github.com/ConsenSys/teku).
 - For the **Execution Layer**, Gnosis currently supports [Nethermind](https://nethermind.io/nethermind-client/). (In progress: [Geth](https://geth.ethereum.org/) and [Erigon](https://github.com/ledgerwatch/erigon))
@@ -64,13 +64,13 @@ Gnosis supports several beginner-friendly "1-click" tools for running a node. Th
 
 :::
 
-* [Dappnode](1-click-tools/dappnode.md) is a dashboard that abstracts away all the technical complexity of running a node. Users pick which client to run, and install and manage it with a click of a button. Users can purchase pre-configured hardware with Dappnode installed, or install it on any Linux machine.
-* [Nethermind Sedge](1-click-tools/sedge.md) is a tool that allows users to generate [Dockerfiles](https://docs.docker.com/engine/reference/builder/) based on their desired configuration and client choices. More advanced users can also use this as a starting point and modify the Dockerfiles to their needs. 
+* [Dappnode](tools/dappnode.md) is a dashboard that abstracts away all the technical complexity of running a node. Users pick which client to run, and install and manage it with a click of a button. Users can purchase pre-configured hardware with Dappnode installed, or install it on any Linux machine.
+* [Nethermind Sedge](tools/sedge.md) is a tool that allows users to generate [Dockerfiles](https://docs.docker.com/engine/reference/builder/) based on their desired configuration and client choices. More advanced users can also use this as a starting point and modify the Dockerfiles to their needs. 
 * [Stereum](https://stereum.net/) (in progress)
 
 ### Full Setup
 
-See our [full end-to-end setup guide](full-setup/README). 
+See our [full end-to-end setup guide](/node/full-setup). 
 
 <!-- ## Home vs Cloud?
 
@@ -112,7 +112,7 @@ Running a node requires a reliable internet connection, as nodes are constantly 
 
 A Gnosis node with an average number of peers consumes approximately 700 mb/hour of upload bandwidth, and this may increase with time. Note that synching the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
 
-For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](../node/full-setup/consensus-layer/clients/lighthouse.md) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
+For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](/node/consensus-layer/lighthouse) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
 
 Validators are advised to consider those numbers when planning their infrastructure and budget. With growth of the overall validator set, these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
 

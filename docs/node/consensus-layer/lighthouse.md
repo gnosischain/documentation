@@ -7,7 +7,7 @@ description: Setup
 
 #### Overview {#overview}
 
-Lighthouse is an Ethereum and Gnosischain consensus client written in Rust by [Sigma Prime]([https://lighthouse.sigmaprime.io/](https://lighthouse.sigmaprime.io/)) 
+Lighthouse is an Ethereum and Gnosischain consensus client written in Rust by [Sigma Prime](https://lighthouse.sigmaprime.io/)
 
 This project builds a customized version of the Lighthouse client with Gnosischain modifications.
 Repository:[https://github.com/gnosischain/lighthouse-client](https://github.com/gnosischain/lighthouse-client) 

@@ -11,7 +11,7 @@ Repository: https://github.com/NethermindEth/sedge
 
 **Quickstart with Nethermind Sedge:** 
 
-Instructions to get started with Nethermind Sedge found [here]([https://docs.sedge.nethermind.io/docs/quickstart/complete-guide](https://docs.sedge.nethermind.io/docs/quickstart/complete-guide)) 
+Instructions to get started with Nethermind Sedge found [here](https://docs.sedge.nethermind.io/docs/quickstart/complete-guide)
 
 **For Chiado Test network:**
 

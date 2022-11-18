@@ -46,7 +46,7 @@ In this example we use MetaMask.
 
 ![](/img/node/UI-2A.png)
 
-2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/setup) It will be located in the same folder as the generated keystores.
+2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/guide) It will be located in the same folder as the generated keystores.
 
 :::note
 If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
@@ -57,7 +57,7 @@ If you can't upload the file, you may want to check the file permissions to make
 
 ![](/img/node/deposit-2.png)
 
-4) Check that you understand the risks and [ensure you are interacting with the correct contract](/node/deposit) before proceeding.
+4) Check that you understand the risks and [ensure you are interacting with the correct contract](#make-sure-you-arent-being-phished) before proceeding.
 
 ![](/img/node/deposit-3.png)
 
@@ -115,7 +115,7 @@ A modification to the Gnosis Chain deposit contract allows you to deposit in bat
 
     `STAKING_ACCOUNT_PRIVATE_KEY` is the private key of the account which holds the necessary amount of GNO tokens for deposit. Any account may be used for funding, but it must also have a small amount of xDai to process transactions. In the above example, 2 transactions will occur with 256 total deposits of 1 GNO each.
 
-3. Copy the `deposit_data.json` generated during [Step 2 of Get Started](/node/setup/#step-2-choose-your-beacon-chain-client--import-validator-keys)to the current directory.
+3. Copy the `deposit_data.json` generated during [Step 2 of Get Started](/node/guide)to the current directory.
 4.  Run the deposit script (`/path/to/` should be a valid path to the .env file you have created):
 
     ```bash
