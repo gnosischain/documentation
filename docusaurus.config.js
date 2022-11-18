@@ -197,6 +197,16 @@ const config = {
       [
         require.resolve('docusaurus-plugin-sass'),{}
       ],
+      //see: https://github.com/rdilweb/docusaurus-plugin-remote-content#docusaurus-plugin-remote-content
+      [
+        "docusaurus-plugin-remote-content",
+        {
+            name: "validator-data-generator-readme",
+            sourceBaseUrl: "https://raw.githubusercontent.com/gnosischain/validator-data-generator/master/",
+            outDir: "docs/node/full-setup/generating-validator-keys/staking-deposit-cli",
+            documents: ["README.md"],
+        },
+      ],
     ],
 };
 

@@ -295,7 +295,7 @@ const sidebars = {
           link: {type: 'doc', id: 'node/full-setup/generating-validator-keys/README'},
           collapsed: true,
           items: [
-            "node/full-setup/generating-validator-keys/staking-deposit-cli",
+            { id: 'node/full-setup/generating-validator-keys/staking-deposit-cli/README', label: 'Validator Data Generator', type: 'doc', },
             "node/full-setup/generating-validator-keys/wagyu",
           ],
         },
