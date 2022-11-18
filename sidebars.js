@@ -62,7 +62,6 @@ const sidebars = {
             link: {type: 'doc', id: 'specs/gbc/README'},
             items: [
               'specs/gbc/upgradeability',
-              'specs/gbc/faq',
             ],
           },
           {
