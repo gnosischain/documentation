@@ -17,14 +17,7 @@
       </ul> 
       </td>
       <td>
-        <ul> 
-          <li><strong>Software</strong>: Execution client, beacon node client (instructions for clients below), <a href='https://curl.se/download.html'>curl</a></li>
-          <li><strong>OS</strong>: 64-bit Linux, Mac OS X 10.14+, Windows 10+ 64-bit</li>   
-          <li><strong>CPU</strong>: 4+ cores @ 2.8+ GHz</li> 
-          <li><strong>Memory</strong>: 16GB+ RAM</li> 
-          <li><strong>Storage</strong>: SSD with at least 2TB free space</li> 
-          <li><strong>Network</strong>: 8 MBit/sec broadband</li> 
-        </ul> 
+        Check <a href="/node/#requirements" target="_blank">requirements</a> section.
       </td>
     </tr> 
     <tr>
