@@ -20,7 +20,7 @@ Gnosis started out as a [proof-of-authority ](../specs/consensus/aura.md) sidech
 
 Gnosis (post-merge) will utilize the same [composite layer architecture](https://hackmd.io/@n0ble/the-merge-terminology) as Ethereum. Gnosis' network is created through the interaction of two layers: an Execution Layer (EL) network and a Consensus Layer (CL) network. 
 
-To run a Gnosis node, you will need to run a [Execution Layer node](./guide/execution/README.md) and [Consensus Layer](./guide/beacon/README.md), and allow them to communicate with each other. The combined EL-CL network works together to function as a Gnosis node. 
+To run a Gnosis node, you will need to run an Execution Layer and Consensus Layer clients, and allow them to communicate with each other. The combined EL-CL network works together to function as a Gnosis node. 
 
 ### Execution Layer
 
