@@ -17,7 +17,7 @@ Image: Gnosis nodes around the world, circa Nov 2022 (source: [Nodewatch](https:
 
 ### Gnosis vs. Ethereum
 
-- Gnosis runs the same client software and tooling stack as Ethereum
+- Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
 - Gnosis aims to to be a learning ground for a new generation of node runners, requiring only 1 GNO (~$100 at Nov 2022) instead of the 32 ETH (~$38,400 at Nov 2022) minimum required for Ethereum
 - Gnosis runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus. 
@@ -34,22 +34,6 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 - 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
 - Nodes receive [rewards](./overview/rewards-penalties.md) for being an active validator, and suffer [penalties](./overview/rewards-penalties.md) for malicious or negligent behavor. 
 
-### Execution vs Consensus
-
-- Gnosis has the same proof-of-stake consensus as Ethereum, and requires validators to run an [Execution Layer client](execution-layer/README.md) as well as a [Consensus Layer client](consensus-layer/README.md). 
-- Gnosis and Ethereum utilize two networks that run side-by-side, the Execution Layer and the Consensus Layer, each of which offers users a choice of multiple clients
-- For the **Consensus Layer**, Gnosis currently supports [Lighthouse](https://github.com/sigp/lighthouse), [Prysm](https://github.com/prysmaticlabs/prysm), [Nimbus](https://github.com/status-im/nimbus-eth2), or [Teku](https://github.com/ConsenSys/teku).
-- For the **Execution Layer**, Gnosis currently supports [Nethermind](https://nethermind.io/nethermind-client/). (In progress: [Geth](https://geth.ethereum.org/) and [Erigon](https://github.com/ledgerwatch/erigon))
-- You can refer to [this post](https://hackmd.io/@n0ble/ethereum_consensus_upgrade_mainnet_perspective) on the different responsibilities of the Execution Layer and Consensus Layer, and how they interact with each other. 
-
-### Types of Nodes
-
-Gnosis is similar to Ethereum in the types of nodes available: 
-
-- [Light Nodes](https://ethereum.org/en/developers/docs/nodes-and-clients/#light-node)
-- [Full Nodes](https://ethereum.org/en/developers/docs/nodes-and-clients/#full-node)
-- Full Nodes (w/o Validator)
-- [Archival Nodes](https://ethereum.org/en/developers/docs/nodes-and-clients/#archive-node)
 ## Approaches
 
 Running a node involves significant technical complexity. Gnosis provides both beginner-friendly "1-click" tools that abstract the complexity in favor of defaults, and a full advanced guide for technical users. 
