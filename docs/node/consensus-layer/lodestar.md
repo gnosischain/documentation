@@ -45,115 +45,119 @@ mkdir /home/$USER/gnosis/jwtsecret
 
 Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
-
+```mdx-code-block
 <details>
   <summary>Example Docker Compose file</summary>
   <div>
-  <pre>
-    version: "3"<br/>
-    services:<br/>
-    <br/>
-    &nbsp;&nbsp;el-client:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;hostname: el-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;container_name: el-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;image: nethermind/nethermind:latest<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;restart: always<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;stop_grace_period: 1m<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;command: |<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--config xdai<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--datadir /data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.Enabled true<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.Host 192.168.32.100<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.Port 8545<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.JwtSecretFile /jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.EngineHost 192.168.32.100<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.EnginePort 8551<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Merge.Enabled true<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;networks:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipv4_address: 192.168.32.100<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;ports:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "30303:30303/tcp"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "30303:30303/udp"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;volumes:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/el-client:/data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/timezone:/etc/timezone:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/localtime:/etc/localtime:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;logging:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: "local"<br/>
-    <br/>
-    &nbsp;&nbsp;cl-client:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;hostname: cl-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;container_name: cl-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;image: chainsafe/lodestar:latest<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;restart: always<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- el-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;command: |<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beacon<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--network gnosis<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--dataDir /data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--rest<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--rest.address 0.0.0.0<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--execution.urls http://192.168.32.100:8551<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--jwt-secret /jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--logFile none<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--checkpointSyncUrl $CHECKPOINT_URL<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;networks:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipv4_address: 192.168.32.101<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;ports:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "9000:9000" #p2p<br/>
-    #      - "9596:9596" # REST API port<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;volumes:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/cl-client/data:/data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/timezone:/etc/timezone:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/localtime:/etc/localtime:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;environment:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NODE_OPTIONS=--max-old-space-size=4096<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;logging:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: "local"<br/>
-    <br/>
-    &nbsp;&nbsp;validator:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;hostname: validator<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;container_name: validator<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;image: chainsafe/lodestar:latest<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;restart: always<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- cl-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;command: |<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validator<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--network gnosis<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--dataDir /data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--importKeystores /keystores<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--importKeystoresPassword /keystores/password.txt<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--server http://192.168.32.101:9596<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--logFile none<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;networks:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipv4_address: 192.168.32.102<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;volumes:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/cl-client/validators:/data/validators<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/cl-client/keystores:/keystores<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/timezone:/etc/timezone:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/localtime:/etc/localtime:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;environment:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NODE_OPTIONS=--max-old-space-size=4096<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;logging:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: "local"<br/>
-    <br/>
-    networks:<br/>
-    &nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;pam:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: default<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- subnet: 192.168.32.0/24<br/>
-  </pre>
+```
+
+```yaml
+version: "3"
+services:
+
+  el-client:
+    hostname: el-client
+    container_name: el-client
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    command: |
+      --config xdai
+      --datadir /data
+      --JsonRpc.Enabled true
+      --JsonRpc.Host 192.168.32.100
+      --JsonRpc.Port 8545
+      --JsonRpc.JwtSecretFile /jwtsecret.json
+      --JsonRpc.EngineHost 192.168.32.100
+      --JsonRpc.EnginePort 8551
+      --Merge.Enabled true
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.100
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+    volumes:
+      - /home/$USER/gnosis/el-client:/data
+      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "local"
+
+  cl-client:
+    hostname: cl-client
+    container_name: cl-client
+    image: chainsafe/lodestar:latest
+    restart: always
+    depends_on:
+      - el-client
+    command: |
+      beacon
+      --network gnosis
+      --dataDir /data
+      --rest
+      --rest.address 0.0.0.0
+      --execution.urls http://192.168.32.100:8551
+      --jwt-secret /jwtsecret.json
+      --logFile none
+      --checkpointSyncUrl $CHECKPOINT_URL
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.101
+    ports:
+      - "9000:9000" #p2p
+#      - "9596:9596" # REST API port
+    volumes:
+      - /home/$USER/gnosis/cl-client/data:/data
+      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=4096
+    logging:
+      driver: "local"
+
+  validator:
+    hostname: validator
+    container_name: validator
+    image: chainsafe/lodestar:latest
+    restart: always
+    depends_on:
+      - cl-client
+    command: |
+      validator
+      --network gnosis
+      --dataDir /data
+      --importKeystores /keystores
+      --importKeystoresPassword /keystores/password.txt
+      --server http://192.168.32.101:9596
+      --logFile none
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.102
+    volumes:
+      - /home/$USER/gnosis/cl-client/validators:/data/validators
+      - /home/$USER/gnosis/cl-client/keystores:/keystores
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=4096
+    logging:
+      driver: "local"
+
+networks:
+  gnosis_net:
+    pam:
+      driver: default
+      config:
+        - subnet: 192.168.32.0/24
+```
+
+```mdx-code-block
   </div>
 </details>
-
+```
 
 ### 3. Environment Variables
 
