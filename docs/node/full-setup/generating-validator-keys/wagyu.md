@@ -1,3 +1,0 @@
-# Wagyu Keygen
-
-- [ ] wagyu-keygen
