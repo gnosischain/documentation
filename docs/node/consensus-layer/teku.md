@@ -57,7 +57,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
   <div>
 ```
 
-```
+```yaml
 version: "3"
 services:
 
