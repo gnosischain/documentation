@@ -55,89 +55,94 @@ mkdir /home/$USER/gnosis/jwtsecret
 
 Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
-
+```mdx-code-block
 <details>
   <summary>Example Docker Compose file</summary>
   <div>
-    <pre>
-    version: "3"<br/>
-    services:<br/>
-    <br/>
-    &nbsp;&nbsp;el-client:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;hostname: el-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;container_name: el-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;image: nethermind/nethermind:latest<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;restart: always<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;stop_grace_period: 1m<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;command: |<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--config xdai<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--datadir /data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.Enabled true<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.Host 192.168.32.100<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.Port 8545<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.JwtSecretFile /jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.EngineHost 192.168.32.100<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--JsonRpc.EnginePort 8551<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Merge.Enabled true<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;networks:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipv4_address: 192.168.32.100<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;ports:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "30303:30303/tcp"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "30303:30303/udp"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;volumes:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/el-client:/data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/timezone:/etc/timezone:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/localtime:/etc/localtime:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;logging:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: "local"<br/>
-    <br/>
-    &nbsp;&nbsp;cl-client:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;user: "$&#123;PUID:-1000&#125;"<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;hostname: cl-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;container_name: cl-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;image: consensys/teku:latest<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;restart: always<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- el-client<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;command: |<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--network=gnosis<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--data-base-path=/data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--ee-endpoint=http://192.168.32.100:8551<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--ee-jwt-secret-file=/jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--eth1-deposit-contract-max-request-size=8000<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--p2p-advertised-ip=$WAN_IP<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-destination=CONSOLE<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--validator-keys=/data/validator/keys:/data/validator/passwords<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--validators-proposer-default-fee-recipient=$FEE_RECIPIENT<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--validators-keystore-locking-enabled=false<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--validators-graffiti=$GRAFFITI<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--initial-state=$&#123;CHECKPOINT_URL&#125;/eth/v2/debug/beacon/states/finalized<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;networks:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipv4_address: 192.168.32.101<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;ports:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 9000:9000 # p2p<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;volumes:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/cl-client:/data<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/timezone:/etc/timezone:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /etc/localtime:/etc/localtime:ro<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;environment:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- JAVA_OPTS=-Xmx4g<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;logging:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: "local"<br/>
-    <br/>
-    networks:<br/>
-    &nbsp;&nbsp;gnosis_net:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;pam:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: default<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config:<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- subnet: 192.168.32.0/24<br/>
-    </pre>
+```
+
+```
+version: "3"
+services:
+
+  el-client:
+    hostname: el-client
+    container_name: el-client
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    command: |
+      --config xdai
+      --datadir /data
+      --JsonRpc.Enabled true
+      --JsonRpc.Host 192.168.32.100
+      --JsonRpc.Port 8545
+      --JsonRpc.JwtSecretFile /jwtsecret.json
+      --JsonRpc.EngineHost 192.168.32.100
+      --JsonRpc.EnginePort 8551
+      --Merge.Enabled true
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.100
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+    volumes:
+      - /home/$USER/gnosis/el-client:/data
+      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "local"
+
+  cl-client:
+    user: "$&#123;PUID:-1000&#125;"
+    hostname: cl-client
+    container_name: cl-client
+    image: consensys/teku:latest
+    restart: always
+    depends_on:
+      - el-client
+    command: |
+      --network=gnosis
+      --data-base-path=/data
+      --ee-endpoint=http://192.168.32.100:8551
+      --ee-jwt-secret-file=/jwtsecret.json
+      --eth1-deposit-contract-max-request-size=8000
+      --p2p-advertised-ip=$WAN_IP
+      --log-destination=CONSOLE
+      --validator-keys=/data/validator/keys:/data/validator/passwords
+      --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
+      --validators-keystore-locking-enabled=false
+      --validators-graffiti=$GRAFFITI
+      --initial-state=$&#123;CHECKPOINT_URL&#125;/eth/v2/debug/beacon/states/finalized
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.101
+    ports:
+      - 9000:9000 # p2p
+    volumes:
+      - /home/$USER/gnosis/cl-client:/data
+      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - JAVA_OPTS=-Xmx4g
+    logging:
+      driver: "local"
+
+networks:
+  gnosis_net:
+    pam:
+      driver: default
+      config:
+        - subnet: 192.168.32.0/24
+```
+
+```mdx-code-block
   </div>
 </details>
+```
 
 
 **3. Environment Variables**
