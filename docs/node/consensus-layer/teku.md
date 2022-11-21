@@ -5,7 +5,7 @@ description: Setup
 # Teku
 
 
-#### Overview {#overview}
+## Overview {#overview}
 
 Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
 
@@ -16,16 +16,12 @@ Teku is a consensus client built to meet institutional needs and security requir
 - [CLI Reference](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/)
 
 
-### Option 1: with docker
+## Using Docker
 
 
 Images are referenced under the following pattern `consensys/teku:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/consensys/teku/tags).
 
-
-# Starting Teku
-
-
-**1. Folder Structure**
+### 1. Folder Structure
 
 Create your folder structure:
 
@@ -51,7 +47,7 @@ mkdir /home/$USER/gnosis/jwtsecret
 ```
 
 
-**2. Docker Compose**
+### 2. Docker Compose
 
 Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
@@ -145,7 +141,7 @@ networks:
 ```
 
 
-**3. Environment Variables**
+### 3. Environment Variables
 
 Add an `.env` file with your WAN IP (`curl https://ipinfo.io/ip`), fee recepient (your Gnosis address), graffiti, checkpoint url, and your user id (PUID, `id --user`) in `/home/$USER/gnosis/.env`.
 
@@ -158,7 +154,7 @@ PUID=1000
 ```
 
 
-**4. Keystore Location**
+### 4. Keystore Location
 
 Add your keystores in `/home/$USER/gnosis/cl-client/validator/keys/` and their password in a file `/home/$USER/gnosis/cl-client/validator/passwords` to get this file structure:
 
@@ -185,7 +181,7 @@ When specifying directories, Teku expects to find identically named keystore and
 ```
 
 
-**5. JWT Secret**
+### 5. JWT Secret
 
 Create a new `jwtsecret.json` token:
 
@@ -194,7 +190,7 @@ openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwtsecret.json
 ```
 
 
-**6. Import Keystores**
+### 6. Import Keystores
 
 Import your validators:
 
@@ -205,7 +201,7 @@ When specifying directories, Teku expects to find identically named keystore and
 :::
 
 
-**7. Start Containers**
+### 7. Start Containers
 
 Start the execution layer client and consensus layer client listed in the compose file:
 
@@ -215,7 +211,7 @@ docker-compose up -d
 ```
 
 
-**8. Monitor Logs**
+### 8. Monitor Logs
 
 Check your logs for each service (`el-client` or `cl-client`) with:
 
@@ -224,7 +220,7 @@ docker logs -f --tail 500 <service>
 ```
 
 
-**9. Make a Deposit**
+### 9. Make a Deposit
 
 Make deposit once your node is fully synced (this can take a few hours depending on setup).
 
@@ -235,7 +231,7 @@ Make deposit once your node is fully synced (this can take a few hours depending
 _See section Fund your Validator_ 
 
 
-**10. Updating your Node**
+### 10. Updating your Node
 
 To update, just pull the new images, then stop and restart your docker-compose file:
 
