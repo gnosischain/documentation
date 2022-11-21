@@ -45,6 +45,12 @@ Gnosis follows Ethereum's Proof-of-Stake penalties.
 
 ### "Offline" Penalties
 
+:::caution
+
+Read more: [Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/) 
+
+:::
+
 The most common "penalty" validators encounter is if they are offline, or are late in performing their duties of attesting or proposing blocks. 
 
 - Generally speaking, the penalties for being offline (or late) are equal to the rewards that a validator would have received if they were online
@@ -53,19 +59,27 @@ The most common "penalty" validators encounter is if they are offline, or are la
 - There is no penalty for missing the head vote.
 - There is no penalty for failing to propose a block.
 - There is no penalty for missing a sync committee (except the lost rewards).
-
-Read more: [Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/) 
-
 ### Inactivity Leak
+
+:::caution
+
+Read more:  [Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
+
+:::
 
 Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of validators are offline at the same time causing the network to not finalize. 
 
 - "Offline" validators receive increasingly large penalties based on their track records
 - This is designed to restore finality by reducing the stake of "offline" validators, who may get ejected from the network if their stake drops below the minimum required (i.e. 16 mGNO)
-
-Read more:  [Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
-
 ### Slashings
+
+:::caution
+
+Read more:
+- [Ethereum.org: Slashing](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing)
+- [Upgrading Ethereum: Slashing](https://eth2book.info/bellatrix/part2/incentives/slashing/)
+
+:::
 
 Slashing is the most serious penalty and results in losing a potentially significant amount of stake, and possible ejection of a validator from the network. This is when validators break very specific protocol rules that prevent the network from functioning effectively. 
 
@@ -74,11 +88,6 @@ In these cases, 1/32 of a validator's staked GNO is immediately burned, and the 
 - "Double signing" is the most common slashing offence, where a validator proposes and signs two different blocks at the same slot. This often happens when a validator is run in two machines at once (e.g. redundancy). 
 - "Double voting" by attesting to two candidates for the same block
 - Attesting to a block that "surrounds" another one (i.e. changing history)
-
-Read more:
-- [Ethereum.org: Slashing](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing)
-- [Upgrading Ethereum: Slashing](https://eth2book.info/bellatrix/part2/incentives/slashing/)
-
 ### Resources
 
 We recommend the following readings for a more in-depth understanding of validator penalties. 

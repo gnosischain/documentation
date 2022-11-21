@@ -1,5 +1,5 @@
 ---
-description: Deposit
+title: Validator Deposit
 ---
 
 # Deposit
