@@ -45,10 +45,8 @@ Gnosis follows Ethereum's Proof-of-Stake penalties.
 
 ### "Offline" Penalties
 
-:::caution
-
-Read more: [Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/) 
-
+:::tip Read more
+[Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/) 
 :::
 
 The most common "penalty" validators encounter is if they are offline, or are late in performing their duties of attesting or proposing blocks. 
@@ -61,10 +59,8 @@ The most common "penalty" validators encounter is if they are offline, or are la
 - There is no penalty for missing a sync committee (except the lost rewards).
 ### Inactivity Leak
 
-:::caution
-
-Read more:  [Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
-
+:::tip Read more
+[Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
 :::
 
 Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of validators are offline at the same time causing the network to not finalize. 
@@ -73,12 +69,9 @@ Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of
 - This is designed to restore finality by reducing the stake of "offline" validators, who may get ejected from the network if their stake drops below the minimum required (i.e. 16 mGNO)
 ### Slashings
 
-:::caution
-
-Read more:
+:::tip Read more
 - [Ethereum.org: Slashing](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing)
 - [Upgrading Ethereum: Slashing](https://eth2book.info/bellatrix/part2/incentives/slashing/)
-
 :::
 
 Slashing is the most serious penalty and results in losing a potentially significant amount of stake, and possible ejection of a validator from the network. This is when validators break very specific protocol rules that prevent the network from functioning effectively. 
