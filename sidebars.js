@@ -219,7 +219,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "node/guide/README",
-        "node/full-setup/architecture",
+        "node/overview/architecture",
         {
           type: 'category',
           label: 'Step 1: Prepare Server',
