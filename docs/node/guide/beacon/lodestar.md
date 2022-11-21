@@ -1,11 +1,7 @@
 ---
-description: Setup
 ---
 
 # Lodestar
-
-
-## Overview
 
 An Ethereum consensus client by [ChainSafe](https://lodestar.chainsafe.io/).
 

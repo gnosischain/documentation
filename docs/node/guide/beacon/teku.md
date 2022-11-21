@@ -1,11 +1,7 @@
 ---
-description: Setup
 ---
 
 # Teku
-
-
-## Overview {#overview}
 
 Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
 

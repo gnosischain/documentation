@@ -1,11 +1,7 @@
 ---
-description: Setup
 ---
 
 # Lighthouse
-
-
-## Overview {#overview}
 
 Lighthouse is an Ethereum and Gnosis Chain consensus client written in Rust by [Sigma Prime](https://lighthouse.sigmaprime.io/).
 
