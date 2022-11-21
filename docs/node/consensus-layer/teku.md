@@ -46,10 +46,7 @@ mkdir /home/$USER/gnosis/jwtsecret
     ├── beacon/
     └── validators/
         ├── keys/
-        │   ├── keystore-001.json
-        │   └── keystore-002.json
         ├── passwords/
-        │   └── password.txt
         └── slashprotection/
 ```
 
