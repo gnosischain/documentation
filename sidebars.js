@@ -198,9 +198,9 @@ const sidebars = {
       link: {type: 'doc', id: 'node/README'},
       collapsed: false,
       items: [
-        "node/overview/architecture",
-        "node/overview/rewards-penalties",
-        "node/overview/faq",
+        "node/architecture",
+        "node/rewards-penalties",
+        "node/faq",
       ],
     },
     {

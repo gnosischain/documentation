@@ -8,7 +8,7 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 
 ### Proof-of-Stake
 - Gnosis (and Ethereum) utilize a Proof-of-Stake cryptoeconomic incentive system to secure the network and disincentivize malicious behavior by nodes. 
-- Nodes that play an active role in validating the network are required to stake [32 mGNO](../../about/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties. 
+- Nodes that play an active role in validating the network are required to stake [32 mGNO](../about/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties. 
 - However, if they engage in malicious or disruptive activity on the network, their stake gets "slashed", and they can also be permanently removed from the validator pool. 
 - Nodes that go offline also attract a penalty for "inactivity leaks", although these are significantly less harsh if the node is offline only for a short period of time. 
 
@@ -88,6 +88,7 @@ In these cases, 1/32 of a validator's staked GNO is immediately burned, and the 
 - "Double signing" is the most common slashing offence, where a validator proposes and signs two different blocks at the same slot. This often happens when a validator is run in two machines at once (e.g. redundancy). 
 - "Double voting" by attesting to two candidates for the same block
 - Attesting to a block that "surrounds" another one (i.e. changing history)
+
 ### Resources
 
 We recommend the following readings for a more in-depth understanding of validator penalties. 
