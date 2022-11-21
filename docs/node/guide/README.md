@@ -13,19 +13,19 @@ import InstallIntroPartial from '@site/docs/node/guide/_partials/_install-intro.
 
 <div className='hide-tabs'>
 
-## Step 1: Review prerequisites and best practices
+## Step 0: Review prerequisites and best practices
 
 import InstallPrereqsPartial from '@site/docs/node/guide/_partials/_install-prereqs.md';
 
 <InstallPrereqsPartial />
 
-## Step 2: Initial setup
+## Step 1: Prepare Server
 
 import InstallInitialPartial from '@site/docs/node/guide/_partials/_install-initial.md';
 
 <InstallInitialPartial />
 
-## Step 3: Run an execution client
+## Step 2: Run an Execution client
 
 In this step, you'll install an execution-layer client that the consensus-layer node will connect to.
 
@@ -33,13 +33,14 @@ import RunExecutionNodePartial from '@site/docs/node/guide/_partials/_run-execut
 
 <RunExecutionNodePartial />
 
-## Step 4: Run a beacon node
+## Step 3: Run a Beacon Node
 
 import RunBeaconNodePartial from '@site/docs/node/guide/_partials/_run-consensus-client.md';
 
 <RunBeaconNodePartial />
 
-## Step 5: Generate validator keys
+## Step 4: Run a Validator
+### Step 4a: Generate Validator Keys
 
 <Tabs groupId="network" defaultValue="gnosis" values={[
     {label: 'Gnosis', value: 'gnosis'},
@@ -52,20 +53,20 @@ import GenerateValidatorKeysPartial from '@site/docs/node/guide/_partials/_gener
 
 <GenerateValidatorKeysPartial />
 
-## Step 6: Run a validator
+### Step 4b: Run a Validator
 
 import InstallValidatorPartial from '@site/docs/node/guide/_partials/_install-validator.md';
 
 <InstallValidatorPartial />
 
-## Step 7: Fund your validator
+### Step 4c: Fund your validator
 
 import FundValidatorPartial from '@site/docs/node/guide/_partials/_fund-validator.md';
 
 <FundValidatorPartial />
 
 
-## Step 8: Verify validator
+### Step 4d: Verify Validator
 
 import VerifyValidatorPartial from '@site/docs/node/guide/_partials/_verify-validator.md';
 
