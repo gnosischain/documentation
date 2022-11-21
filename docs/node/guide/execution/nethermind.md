@@ -2,7 +2,7 @@
 title: Nethermind
 ---
 
-### Nethermind {#nethermind}
+# Nethermind {#nethermind}
 
 Execution layer client developed by nethermind team [https://nethermind.io/nethermind-client/](https://nethermind.io/nethermind-client/) 
 
@@ -15,14 +15,14 @@ Nethermind can be configured to run different types of nodes:
 * Archival Node
 
 
-#### Option 1: Running as System Process {#option-1-running-as-system-process}
+## Option 1: Running as System Process {#option-1-running-as-system-process}
 
-##### Installing Nethermind {#installing-nethermind}
+### Installing Nethermind {#installing-nethermind}
 
 [https://downloads.nethermind.io/](https://downloads.nethermind.io/) 
 
 
-##### Running Nethermind {#running-nethermind}
+### Running Nethermind {#running-nethermind}
 
 Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure your node from release. 
 
@@ -46,15 +46,15 @@ nethermind --config xDai --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 ```
 
-#### Option 2: Using Docker {#option-2-using-docker}
+## Option 2: Using Docker {#option-2-using-docker}
 
 
-##### Pulling Nethermind Docker Images {#pulling-nethermind-docker-images}
+### Pulling Nethermind Docker Images {#pulling-nethermind-docker-images}
 
 [https://docs.nethermind.io/nethermind/installing-nethermind/docker](https://docs.nethermind.io/nethermind/installing-nethermind/docker) 
 
 
-##### Using Docker to run Nethermind {#using-docker-to-run-nethermind}
+### Using Docker to run Nethermind {#using-docker-to-run-nethermind}
 
 **Ensure the prerequisite steps have been completed in ‘Advanced> Initial Set up’ section.**
 
@@ -68,7 +68,7 @@ mkdir /home/<USER>/nethermind
 
 **make the JWT Secret **
 
-This is the token that allows the EL client to communicate with the CL client, we use `rand` to create a random string, and store the `jwt.hex `to `/var/lib/jwtsecret/ `this directory can be changed, if so you need to reflect the correct directory.
+This is the token that allows the EL client to communicate with the CL client, we use `rand` to create a random string, and store the `jwt.hex` to `/var/lib/jwtsecret/ `this directory can be changed, if so you need to reflect the correct directory.
 
 ```
 sudo mkdir -p /var/lib/jwtsecret
@@ -141,12 +141,12 @@ sudo docker-compose up -d
 sudo docker-compose logs nethermind -f
 ```
 
-#### Nethermind Archival Node {#nethermind-archival-node}
+## Nethermind Archival Node {#nethermind-archival-node}
 
 An archival node executes heavy historical sync verifying all the transactions and keeping all the historical state. In Nethermind, the default configuration activates the pruning functionality.
 
 :::caution
-Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is as of today +2 TB.
+Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is +2 TB (Nov 2022).
 :::
 
 Select Network: `xdai_archive`
