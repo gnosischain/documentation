@@ -6,7 +6,7 @@ title: Run a Node
 
 <img src="/img/node/nodes-map-nov-2022.png" width="100%" />
 
-Image: Gnosis nodes around the world, circa Nov 2022 (source: [Nodewatch](https://nodewatch.gnosischain.com/))
+**Image:** Gnosis nodes around the world, circa Nov 2022 (source: [Nodewatch](https://nodewatch.gnosischain.com/))
 
 ## A Community-run Chain
 
@@ -32,7 +32,7 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 
 - Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
 - 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
-- Nodes receive [rewards](./overview/rewards-penalties.md) for being an active validator, and suffer [penalties](./overview/rewards-penalties.md) for malicious or negligent behavor. 
+- Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavor. 
 
 ## Approaches
 
@@ -44,7 +44,7 @@ Gnosis supports several beginner-friendly "1-click" tools for running a node. Th
 
 :::caution
 
-1-click tools are fine for running a basic validator or node. For more complex use cases which require customization, please refer to the [Full Setup](#full-setup)
+1-click tools are fine for running a basic validator or node. For more complex use cases which require customization, please refer to the [Guide](./guide/README.md))
 
 :::
 
@@ -52,9 +52,9 @@ Gnosis supports several beginner-friendly "1-click" tools for running a node. Th
 * [Nethermind Sedge](tools/sedge.md) is a tool that allows users to generate [Dockerfiles](https://docs.docker.com/engine/reference/builder/) based on their desired configuration and client choices. More advanced users can also use this as a starting point and modify the Dockerfiles to their needs. 
 * [Stereum](https://stereum.net/) (in progress)
 
-### Full Setup
+### Guide
 
-See our [full end-to-end setup guide](/node/full-setup). 
+See our [full end-to-end setup guide](./guide/README.md). 
 
 <!-- ## Home vs Cloud?
 
@@ -92,11 +92,11 @@ Requirements vary client to client, for more detail see the associated system re
 
 ### Network Connectivity
 
-Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./overview/rewards-penalties), but this will typically be recouped quickly as long as the outage is short. 
+Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./rewards-penalties), but this will typically be recouped quickly as long as the outage is short. 
 
 A Gnosis node with an average number of peers consumes approximately 700 mb/hour of upload bandwidth, and this may increase with time. Note that syncing the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
 
-For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](/node/consensus-layer/lighthouse) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
+For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](./guide/beacon/lighthouse.md) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
 
 Validators are advised to consider those numbers when planning their infrastructure and budget. With growth of the overall validator set, these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
 
