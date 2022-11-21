@@ -55,108 +55,108 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
   <div>
 ```
 
-```
-    version: "3"
-    services:
-    
-      el-client:
-        hostname: el-client
-        container_name: el-client
-        image: nethermind/nethermind:latest
-        restart: always
-        stop_grace_period: 1m
-        command: |
-          --config xdai
-          --datadir /data
-          --JsonRpc.Enabled true
-          --JsonRpc.Host 192.168.32.100
-          --JsonRpc.Port 8545
-          --JsonRpc.JwtSecretFile /jwtsecret.json
-          --JsonRpc.EngineHost 192.168.32.100
-          --JsonRpc.EnginePort 8551
-          --Merge.Enabled true
-        networks:
-          gnosis_net:
-            ipv4_address: 192.168.32.100
-        ports:
-          - "30303:30303/tcp"
-          - "30303:30303/udp"
-        volumes:
-          - /home/$USER/gnosis/el-client:/data
-          - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
-          - /etc/timezone:/etc/timezone:ro
-          - /etc/localtime:/etc/localtime:ro
-        logging:
-          driver: "local"
-    
-      cl-client:
-        hostname: cl-client
-        container_name: cl-client
-        image: sigp/lighthouse:latest-modern
-        restart: always
-        depends_on:
-          - el-client
-        command: |
-          lighthouse beacon_node
-          --network gnosis
-          --discovery-port 12000
-          --port 13000
-          --execution-endpoint http://192.168.32.100:8551
-          --execution-jwt /jwtsecret.json
-          --datadir /data
-          --http
-          --http-address 192.168.32.101
-          --enr-address $WAN_IP
-          --enr-udp-port 12000
-          --target-peers 80
-          --debug-level info
-          --suggested-fee-recipient $FEE_RECIPIENT
-          --checkpoint-sync-url $CHECKPOINT_URL
-        networks:
-          gnosis_net:
-            ipv4_address: 192.168.32.101
-        ports:
-          - "12000:12000/udp" #p2p
-          - "13000:13000/tcp" #p2p
-        volumes:
-          - /home/$USER/gnosis/cl-client/data:/data
-          - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
-          - /etc/timezone:/etc/timezone:ro
-          - /etc/localtime:/etc/localtime:ro
-        logging:
-          driver: "local"
-    
-      validator:
-        hostname: validator
-        container_name: validator
-        image: sigp/lighthouse:latest-modern
-        restart: always
-        depends_on:
-          - cl-client
-        command: |
-          lighthouse validator_client
-          --network gnosis
-          --enable-doppelganger-protection
-          --validators-dir /data/validators
-          --beacon-nodes http://192.168.32.101:5052
-          --suggested-fee-recipient $FEE_RECIPIENT
-          --graffiti $GRAFFITI
-        networks:
-          gnosis_net:
-            ipv4_address: 192.168.32.102
-        volumes:
-          - /home/$USER/gnosis/cl-client/validators:/data/validators
-          - /etc/timezone:/etc/timezone:ro
-          - /etc/localtime:/etc/localtime:ro
-        logging:
-          driver: "local"
-    
+```yaml
+version: "3"
+services:
+
+  el-client:
+    hostname: el-client
+    container_name: el-client
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    command: |
+      --config xdai
+      --datadir /data
+      --JsonRpc.Enabled true
+      --JsonRpc.Host 192.168.32.100
+      --JsonRpc.Port 8545
+      --JsonRpc.JwtSecretFile /jwtsecret.json
+      --JsonRpc.EngineHost 192.168.32.100
+      --JsonRpc.EnginePort 8551
+      --Merge.Enabled true
     networks:
       gnosis_net:
-        pam:
-          driver: default
-          config:
-            - subnet: 192.168.32.0/24
+        ipv4_address: 192.168.32.100
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+    volumes:
+      - /home/$USER/gnosis/el-client:/data
+      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "local"
+
+  cl-client:
+    hostname: cl-client
+    container_name: cl-client
+    image: sigp/lighthouse:latest-modern
+    restart: always
+    depends_on:
+      - el-client
+    command: |
+      lighthouse beacon_node
+      --network gnosis
+      --discovery-port 12000
+      --port 13000
+      --execution-endpoint http://192.168.32.100:8551
+      --execution-jwt /jwtsecret.json
+      --datadir /data
+      --http
+      --http-address 192.168.32.101
+      --enr-address $WAN_IP
+      --enr-udp-port 12000
+      --target-peers 80
+      --debug-level info
+      --suggested-fee-recipient $FEE_RECIPIENT
+      --checkpoint-sync-url $CHECKPOINT_URL
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.101
+    ports:
+      - "12000:12000/udp" #p2p
+      - "13000:13000/tcp" #p2p
+    volumes:
+      - /home/$USER/gnosis/cl-client/data:/data
+      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "local"
+
+  validator:
+    hostname: validator
+    container_name: validator
+    image: sigp/lighthouse:latest-modern
+    restart: always
+    depends_on:
+      - cl-client
+    command: |
+      lighthouse validator_client
+      --network gnosis
+      --enable-doppelganger-protection
+      --validators-dir /data/validators
+      --beacon-nodes http://192.168.32.101:5052
+      --suggested-fee-recipient $FEE_RECIPIENT
+      --graffiti $GRAFFITI
+    networks:
+      gnosis_net:
+        ipv4_address: 192.168.32.102
+    volumes:
+      - /home/$USER/gnosis/cl-client/validators:/data/validators
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "local"
+
+networks:
+  gnosis_net:
+    pam:
+      driver: default
+      config:
+        - subnet: 192.168.32.0/24
 ```
 
 ```mdx-code-block
