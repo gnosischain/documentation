@@ -265,11 +265,11 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: '(Optional) Step 4: Run Validator',
+              label: 'Generate Validator Keys',
               link: {type: 'doc', id: 'node/guide/validator/generate-keys'},
               collapsed: true,
               items: [
-                { id: 'node/full-setup/generating-validator-keys/staking-deposit-cli/README', label: 'Validator Data Generator', type: 'doc', },
+                { id: 'node/guide/validator/generate-keys-cli-tool/README', label: 'CLI Tool', type: 'doc', },
               ],
             },
             "node/guide/validator/deposit",

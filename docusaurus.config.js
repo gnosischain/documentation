@@ -203,7 +203,7 @@ const config = {
         {
             name: "validator-data-generator-readme",
             sourceBaseUrl: "https://raw.githubusercontent.com/gnosischain/validator-data-generator/master/",
-            outDir: "docs/node/full-setup/generating-validator-keys/staking-deposit-cli",
+            outDir: "docs/node/guide/validator/generate-keys-cli-tool",
             documents: ["README.md"],
         },
       ],
