@@ -160,6 +160,10 @@ PUID=1000
 
 Add your keystores in `/home/$USER/gnosis/cl-client/validator/keys/` and their password in a file `/home/$USER/gnosis/cl-client/validator/passwords` to get this file structure:
 
+:::note
+When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validator-keys))
+:::
+
 ```
 /home/$USER/gnosis/
 ├── docker-compose.yml
@@ -173,7 +177,8 @@ Add your keystores in `/home/$USER/gnosis/cl-client/validator/keys/` and their p
         │   ├── keystore-001.json
         │   └── keystore-002.json
         ├── passwords/
-        │   └── password.txt
+        │   └── keystore-001.txt
+        │   └── keystore-002.txt
         └── slashprotection/
 ```
 
@@ -192,6 +197,10 @@ openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwtsecret.json
 Import your validators:
 
 When the Teku `cl-client` container starts, it will search the directories for keystores and passwords, and import them automatically.
+
+:::note
+When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validator-keys))
+:::
 
 
 **7. Start Containers**
