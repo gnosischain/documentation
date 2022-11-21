@@ -206,7 +206,7 @@ const sidebars = {
     {
       type: 'category',
       label: '1-click Tools',
-      link: {type: 'doc', id: 'node/tools/README'},
+      link: { type: 'generated-index', title: '1-click Tools' },
       collapsed: false,
       items: [
         "node/tools/dappnode", 
@@ -222,6 +222,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Step 1: Prepare Server',
+          link: { type: 'generated-index', title: 'Prepare Server' },
           collapsed: true,
           items: [
             "node/guide/server/configure-server",
@@ -232,7 +233,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Step 2: Run Execution Client',
-          // link: {type: 'doc', id: 'node/guide/execution/README'},
+          link: { type: 'generated-index', title: 'Execution Clients' },
           collapsed: true,
           items: [
             
@@ -246,7 +247,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Step 3: Run Beacon Node',
-          // link: {type: 'doc', id: 'node/beacon/README'},
+          link: { type: 'generated-index', title: 'Beacon Clients' },
           collapsed: true,
           items: [
             "node/guide/beacon/lodestar",
@@ -259,7 +260,7 @@ const sidebars = {
         {
           type: 'category',
           label: '(Optional) Step 4: Run Validator',
-          // link: {type: 'doc', id: 'node/guide/generating-validator-keys/README'},
+          link: { type: 'generated-index', title: 'Run Validator' },
           collapsed: true,
           items: [
             "node/guide/validator/generate-keys",
