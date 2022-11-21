@@ -32,7 +32,7 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 
 - Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
 - 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
-- Nodes receive [rewards](./overview/rewards-penalties.md) for being an active validator, and suffer [penalties](./overview/rewards-penalties.md) for malicious or negligent behavor. 
+- Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavor. 
 
 ## Approaches
 
@@ -92,7 +92,7 @@ Requirements vary client to client, for more detail see the associated system re
 
 ### Network Connectivity
 
-Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./overview/rewards-penalties), but this will typically be recouped quickly as long as the outage is short. 
+Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./rewards-penalties), but this will typically be recouped quickly as long as the outage is short. 
 
 A Gnosis node with an average number of peers consumes approximately 700 mb/hour of upload bandwidth, and this may increase with time. Note that syncing the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
 

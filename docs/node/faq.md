@@ -35,7 +35,7 @@ The deposit contract keeps track of validators and staking amounts. The GBC depo
 
 ### How much do validators earn in rewards?
 
-This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/node/overview/rewards-penalties).
+This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/node/rewards-penalties).
 
 You can view the current reward yield and other statistics on the [Gnosis Beacon Chain Dune Analytics dashboard](https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-\(Deposits\)).
 

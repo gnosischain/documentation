@@ -8,7 +8,7 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 
 ### Proof-of-Stake
 - Gnosis (and Ethereum) utilize a Proof-of-Stake cryptoeconomic incentive system to secure the network and disincentivize malicious behavior by nodes. 
-- Nodes that play an active role in validating the network are required to stake [32 mGNO](../../about/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties. 
+- Nodes that play an active role in validating the network are required to stake [32 mGNO](../about/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties. 
 - However, if they engage in malicious or disruptive activity on the network, their stake gets "slashed", and they can also be permanently removed from the validator pool. 
 - Nodes that go offline also attract a penalty for "inactivity leaks", although these are significantly less harsh if the node is offline only for a short period of time. 
 
@@ -45,10 +45,8 @@ Gnosis follows Ethereum's Proof-of-Stake penalties.
 
 ### "Offline" Penalties
 
-:::caution
-
-Read more: [Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/) 
-
+:::tip Read more
+[Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/) 
 :::
 
 The most common "penalty" validators encounter is if they are offline, or are late in performing their duties of attesting or proposing blocks. 
@@ -61,10 +59,8 @@ The most common "penalty" validators encounter is if they are offline, or are la
 - There is no penalty for missing a sync committee (except the lost rewards).
 ### Inactivity Leak
 
-:::caution
-
-Read more:  [Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
-
+:::tip Read more
+[Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
 :::
 
 Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of validators are offline at the same time causing the network to not finalize. 
@@ -73,12 +69,9 @@ Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of
 - This is designed to restore finality by reducing the stake of "offline" validators, who may get ejected from the network if their stake drops below the minimum required (i.e. 16 mGNO)
 ### Slashings
 
-:::caution
-
-Read more:
+:::tip Read more
 - [Ethereum.org: Slashing](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing)
 - [Upgrading Ethereum: Slashing](https://eth2book.info/bellatrix/part2/incentives/slashing/)
-
 :::
 
 Slashing is the most serious penalty and results in losing a potentially significant amount of stake, and possible ejection of a validator from the network. This is when validators break very specific protocol rules that prevent the network from functioning effectively. 
@@ -88,6 +81,7 @@ In these cases, 1/32 of a validator's staked GNO is immediately burned, and the 
 - "Double signing" is the most common slashing offence, where a validator proposes and signs two different blocks at the same slot. This often happens when a validator is run in two machines at once (e.g. redundancy). 
 - "Double voting" by attesting to two candidates for the same block
 - Attesting to a block that "surrounds" another one (i.e. changing history)
+
 ### Resources
 
 We recommend the following readings for a more in-depth understanding of validator penalties. 
