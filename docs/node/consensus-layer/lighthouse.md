@@ -57,7 +57,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
 <details>
   <summary>Example Docker Compose file</summary>
   <div>
-    <pre>
+  <pre>
     version: "3"<br/>
     services:<br/>
     <br/>
@@ -159,7 +159,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;driver: default<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config:<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- subnet: 192.168.32.0/24<br/>
-    </pre>
+  </pre>
   </div>
 </details>
 
