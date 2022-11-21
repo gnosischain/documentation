@@ -73,7 +73,7 @@ services:
       --JsonRpc.Enabled true
       --JsonRpc.Host 192.168.32.100
       --JsonRpc.Port 8545
-      --JsonRpc.JwtSecretFile /jwtsecret.json
+      --JsonRpc.JwtSecretFile /jwt.hex
       --JsonRpc.EngineHost 192.168.32.100
       --JsonRpc.EnginePort 8551
       --Merge.Enabled true
@@ -85,14 +85,14 @@ services:
       - "30303:30303/udp"
     volumes:
       - /home/$USER/gnosis/el-client:/data
-      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     logging:
       driver: "local"
 
   cl-client:
-    user: "$&#123;PUID:-1000&#125;"
+    user: "${PUID:-1000}"
     hostname: cl-client
     container_name: cl-client
     image: consensys/teku:latest
@@ -103,7 +103,7 @@ services:
       --network=gnosis
       --data-base-path=/data
       --ee-endpoint=http://192.168.32.100:8551
-      --ee-jwt-secret-file=/jwtsecret.json
+      --ee-jwt-secret-file=/jwt.hex
       --eth1-deposit-contract-max-request-size=8000
       --p2p-advertised-ip=$WAN_IP
       --log-destination=CONSOLE
@@ -111,7 +111,7 @@ services:
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validators-keystore-locking-enabled=false
       --validators-graffiti=$GRAFFITI
-      --initial-state=$&#123;CHECKPOINT_URL&#125;/eth/v2/debug/beacon/states/finalized
+      --initial-state=${CHECKPOINT_URL}/eth/v2/debug/beacon/states/finalized
     networks:
       gnosis_net:
         ipv4_address: 192.168.32.101
@@ -119,7 +119,7 @@ services:
       - 9000:9000 # p2p
     volumes:
       - /home/$USER/gnosis/cl-client:/data
-      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
@@ -129,7 +129,7 @@ services:
 
 networks:
   gnosis_net:
-    pam:
+    ipam:
       driver: default
       config:
         - subnet: 192.168.32.0/24
@@ -183,10 +183,10 @@ When specifying directories, Teku expects to find identically named keystore and
 
 ### 5. JWT Secret
 
-Create a new `jwtsecret.json` token:
+Create a new JWT secret file:
 
 ```
-openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwtsecret.json
+openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
 ```
 
 
