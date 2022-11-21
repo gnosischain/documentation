@@ -14,7 +14,7 @@ We highly recommend generating keystores on a safe, completely offline device.
     <TabItem value="others">
         <div>
             <ul>
-                <li>Copy the download link for Linux, MacOS or Arm64 package from the <a href="https://github.com/gnosischain/validator-data-generator/releases" target="_blank">validator data generation tool</a>.</li>
+                <li>Copy the download link for Linux, MacOS or Arm64 package from the <a href="https://github.com/gnosischain/validator-data-generator/releases">validator data generation tool</a>.</li>
                 <li>
                     Download the Validator Data Generation tool
                     <pre><code>wget [URL_FROM_PREVIOUS_STEP]</code></pre>
@@ -29,7 +29,7 @@ We highly recommend generating keystores on a safe, completely offline device.
                 </li>
                 <li>
                     Execute Validator Data Generation tool and follow the instructions.
-                    In case of doubts, check the <a href="https://github.com/gnosischain/validator-data-generator#gnosis-chain-validators-data-generator" target="_blank">tool documentation</a>.
+                    In case of doubts, check the <a href="/node/guide/validator/generate-keys-cli-tool/" target="_blank">tool documentation</a>.
                     <ul>
                         <li>
                             If you want to generate a new mnemonic:
@@ -53,7 +53,7 @@ We highly recommend generating keystores on a safe, completely offline device.
                 </li>
                 <li>
                     Execute Validator Data Generation tool and follow the instructions.
-                    In case of doubts, check the <a href="https://github.com/gnosischain/validator-data-generator#gnosis-chain-validators-data-generator" target="_blank">tool documentation</a>.
+                    In case of doubts, check the <a href="/node/guide/validator/generate-keys-cli-tool/">tool documentation</a>.
                     <ul>
                         <li>
                             If you want to generate a new mnemonic:
@@ -96,5 +96,5 @@ We highly recommend generating keystores on a safe, completely offline device.
 </ul>
 
 :::success
-For custom setup and more instructions, check the [Validator Data Generation tool documentation](https://github.com/gnosischain/validator-data-generator#gnosis-chain-validators-data-generator).
+For custom setup and more instructions, check the [Validator Data Generation tool documentation](/node/guide/validator/generate-keys-cli-tool/).
 :::
