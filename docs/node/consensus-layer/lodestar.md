@@ -5,9 +5,9 @@ description: Setup
 # Lodestar
 
 
-#### Overview {#overview}
+## Overview
 
-An Ethereum consensus client by [chainsafe](https://lodestar.chainsafe.io/).
+An Ethereum consensus client by [ChainSafe](https://lodestar.chainsafe.io/).
 
 
 **Lodestar reference:**
@@ -16,16 +16,11 @@ An Ethereum consensus client by [chainsafe](https://lodestar.chainsafe.io/).
 - [CLI Reference](https://chainsafe.github.io/lodestar/reference/cli/)
 
 
-### Option 1: with docker
-
+## Using Docker
 
 Images are referenced under the following pattern `chainsafe/lodestar:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/chainsafe/lodestar/tags).
 
-
-# Starting Lodestar
-
-
-**1. Folder Structure**
+### 1. Folder Structure
 
 Create your folder structure:
 
@@ -46,7 +41,7 @@ mkdir /home/$USER/gnosis/jwtsecret
 ```
 
 
-**2. Docker Compose**
+### 2. Docker Compose
 
 Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
@@ -160,7 +155,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
 </details>
 
 
-**3. Environment Variables**
+### 3. Environment Variables
 
 Add an `.env` file with your WAN IP (`curl https://ipinfo.io/ip`), fee recepient (your Gnosis address), graffiti, and checkpoint url in `/home/$USER/gnosis/.env`.
 
@@ -172,7 +167,7 @@ CHECKPOINT_URL=https://checkpoint.gnosischain.com/
 ```
 
 
-**4. Keystore Location**
+### 4. Keystore Location
 
 Add your keystores in `/home/$USER/gnosis/cl-client/keystores/` and their password in a file `/home/$USER/gnosis/cl-client/keystores/password.txt` to get this file structure:
 
@@ -191,7 +186,7 @@ Add your keystores in `/home/$USER/gnosis/cl-client/keystores/` and their passwo
 ```
 
 
-**5. JWT Secret**
+### 5. JWT Secret
 
 Create a new `jwtsecret.json` token:
 
@@ -200,14 +195,14 @@ openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwtsecret.json
 ```
 
 
-**6. Import Keystores**
+### 6. Import Keystores
 
 Import your validators:
 
 When the Lodestar `validator` container starts, it will search the directories for keystores and passwords, and import them automatically.
 
 
-**7. Start Containers**
+### 7. Start Containers
 
 Start the execution layer client, consensus layer client, and validator service listed in the compose file:
 
@@ -217,7 +212,7 @@ docker-compose up -d
 ```
 
 
-**8. Monitor Logs**
+### 8. Monitor Logs
 
 Check your logs for each service (`el-client`, `cl-client`, or `validator`) with:
 
@@ -226,7 +221,7 @@ docker logs -f --tail 500 <service>
 ```
 
 
-**9. Make a Deposit**
+### 9. Make a Deposit
 
 Make deposit once your node is fully synced (this can take a few hours depending on setup).
 
@@ -237,7 +232,7 @@ Make deposit once your node is fully synced (this can take a few hours depending
 _See section Fund your Validator_ 
 
 
-**10. Updating your Node**
+### 10. Updating your Node
 
 To update, just pull the new images, then stop and restart your docker-compose file:
 
