@@ -2,7 +2,7 @@
 title: Nethermind
 ---
 
-# Nethermind {#nethermind}
+# Nethermind
 
 Execution layer client developed by nethermind team [https://nethermind.io/nethermind-client/](https://nethermind.io/nethermind-client/) 
 
