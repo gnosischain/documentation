@@ -67,7 +67,7 @@ services:
       --JsonRpc.Enabled true
       --JsonRpc.Host 192.168.32.100
       --JsonRpc.Port 8545
-      --JsonRpc.JwtSecretFile /jwtsecret.json
+      --JsonRpc.JwtSecretFile /jwt.hex
       --JsonRpc.EngineHost 192.168.32.100
       --JsonRpc.EnginePort 8551
       --Merge.Enabled true
@@ -79,7 +79,7 @@ services:
       - "30303:30303/udp"
     volumes:
       - /home/$USER/gnosis/el-client:/data
-      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     logging:
@@ -99,7 +99,7 @@ services:
       --rest
       --rest.address 0.0.0.0
       --execution.urls http://192.168.32.100:8551
-      --jwt-secret /jwtsecret.json
+      --jwt-secret /jwt.hex
       --logFile none
       --checkpointSyncUrl $CHECKPOINT_URL
     networks:
@@ -110,7 +110,7 @@ services:
 #      - "9596:9596" # REST API port
     volumes:
       - /home/$USER/gnosis/cl-client/data:/data
-      - /home/$USER/gnosis/jwtsecret/jwtsecret.json:/jwtsecret.json
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
@@ -148,7 +148,7 @@ services:
 
 networks:
   gnosis_net:
-    pam:
+    ipam:
       driver: default
       config:
         - subnet: 192.168.32.0/24
@@ -192,10 +192,10 @@ Add your keystores in `/home/$USER/gnosis/cl-client/keystores/` and their passwo
 
 ### 5. JWT Secret
 
-Create a new `jwtsecret.json` token:
+Create a new JWT secret file:
 
 ```
-openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwtsecret.json
+openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
 ```
 
 
