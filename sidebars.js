@@ -206,7 +206,7 @@ const sidebars = {
     {
       type: 'category',
       label: '1-click Tools',
-      link: { type: 'generated-index', title: '1-click Tools' },
+      link: { slug: 'node/tools', type: 'generated-index', title: '1-click Tools' },
       collapsed: false,
       items: [
         "node/tools/dappnode", 
@@ -222,7 +222,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Step 1: Prepare Server',
-          link: { type: 'generated-index', title: 'Prepare Server' },
+          link: { slug: 'node/guide/server', type: 'generated-index', title: 'Prepare Server' },
           collapsed: true,
           items: [
             "node/guide/server/configure-server",
@@ -233,7 +233,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Step 2: Run Execution Client',
-          link: { type: 'generated-index', title: 'Execution Clients' },
+          link: { slug: 'node/guide/execution', type: 'generated-index', title: 'Execution Clients' },
           collapsed: true,
           items: [
             
@@ -247,7 +247,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Step 3: Run Beacon Node',
-          link: { type: 'generated-index', title: 'Beacon Clients' },
+          link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
           collapsed: true,
           items: [
             "node/guide/beacon/lodestar",
@@ -260,7 +260,7 @@ const sidebars = {
         {
           type: 'category',
           label: '(Optional) Step 4: Run Validator',
-          link: { type: 'generated-index', title: 'Run Validator' },
+          link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
           collapsed: true,
           items: [
             "node/guide/validator/generate-keys",
@@ -273,7 +273,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Managing your Node',
-      link: {type: 'doc', id: 'node/management/README'},
+      link: { slug: 'node/management/', type: 'generated-index', title: 'Managing your Node' },
       collapsed: false,
       items: [
         "node/management/monitoring-node",
