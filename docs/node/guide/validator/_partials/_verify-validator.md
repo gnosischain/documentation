@@ -1,11 +1,11 @@
 
-After [depositing](../validator/deposit.md) and [starting your validator](../validator/), you can verify the status of your validators following these steps:
+After [depositing](../deposit.md) and [starting your validator](../run.md), you can verify the status of your validators following these steps:
 
 1. Navigate to the [deposit tool](https://deposit.gnosischain.com) and click on the `Validator Status` tab.
 
 ![](/img/node/verify/verify-1.jpg)
 
-2. Upload your `deposit_data.json` file used during the [deposit](../validator/deposit.md) step.
+2. Upload your `deposit_data.json` file used during the [deposit](../deposit.md) step.
 
 ![](/img/node/verify/verify-2.jpg)
 
