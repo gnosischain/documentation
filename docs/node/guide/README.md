@@ -88,10 +88,7 @@ import VerifyValidatorPartial from '@site/docs/node/guide/_partials/_verify-vali
 
 -------
 
-## Frequently asked questions
-
-**Question A** <br />
-Answer
-
-**Question B** <br />
-Answer
+## More Resources
+- [Frequently Asked Questions](../faq.md)
+- [1-click tools](../tools/)
+- [Managing your Node](../management/)
