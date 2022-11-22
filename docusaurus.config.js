@@ -198,6 +198,7 @@ const config = {
         require.resolve('docusaurus-plugin-sass'),{}
       ],
       //see: https://github.com/rdilweb/docusaurus-plugin-remote-content#docusaurus-plugin-remote-content
+      //IMPORTANT: all outDir+documents paths should be included in the .gitignore file
       [
         "docusaurus-plugin-remote-content",
         {
