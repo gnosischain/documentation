@@ -219,17 +219,7 @@ const sidebars = {
       link: {type: 'doc', id: 'node/guide/README'},
       collapsed: false,
       items: [
-        {
-          type: 'category',
-          label: 'Step 1: Prepare Server',
-          link: { slug: 'node/guide/server', type: 'generated-index', title: 'Prepare Server' },
-          collapsed: true,
-          items: [
-            "node/guide/server/configure-server",
-            "node/guide/server/networking",
-            "node/guide/server/jwt",
-          ],
-        },
+        'node/guide/server/README',
         {
           type: 'category',
           label: 'Step 2: Run Execution Client',
