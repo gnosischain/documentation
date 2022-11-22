@@ -3,6 +3,10 @@
 
 # Nimbus
 
+:::danger
+This client is not yet ready for public use. Validators are encouraged to run Teku, Lodestar, or Lighthouse in the interim.
+:::
+
 Nimbus is a client implementation that strives to be as lightweight as possible in terms of resources used. Nimbus has consensus layer clients for Ethereum and Gnosischain. [https://dev.nimbus.team/#about](https://dev.nimbus.team/#about) 
 
 This project builds a customized version of the Nimbus client with Gnosischain modifications.
