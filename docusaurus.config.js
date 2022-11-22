@@ -197,6 +197,22 @@ const config = {
       [
         require.resolve('docusaurus-plugin-sass'),{}
       ],
+      //see: https://github.com/rdilweb/docusaurus-plugin-remote-content#docusaurus-plugin-remote-content
+      [
+        "docusaurus-plugin-remote-content",
+        {
+            name: "validator-data-generator-readme",
+            sourceBaseUrl: "https://raw.githubusercontent.com/gnosischain/validator-data-generator/master/",
+            outDir: "docs/node/guide/validator/generate-keys-cli-tool",
+            documents: ["README.md"],
+            modifyContent(filename, content) {
+              if (filename.includes("README")) {
+                  return { content: "# CLI Tool \n\n #" + content }
+              }
+              return undefined
+          },
+        },
+      ],
     ],
 };
 

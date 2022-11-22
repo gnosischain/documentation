@@ -263,7 +263,15 @@ const sidebars = {
           link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
           collapsed: true,
           items: [
-            "node/guide/validator/generate-keys",
+            {
+              type: 'category',
+              label: 'Generate Validator Keys',
+              link: {type: 'doc', id: 'node/guide/validator/generate-keys'},
+              collapsed: true,
+              items: [
+                { id: 'node/guide/validator/generate-keys-cli-tool/README', label: 'CLI Tool', type: 'doc', },
+              ],
+            },
             "node/guide/validator/deposit",
             "node/guide/validator/verify"
           ],

@@ -40,7 +40,6 @@ import RunBeaconNodePartial from '@site/docs/node/guide/_partials/_run-consensus
 <RunBeaconNodePartial />
 
 ## Step 4: Run a Validator
-### Step 4a: Generate Validator Keys
 
 <Tabs groupId="network" defaultValue="gnosis" values={[
     {label: 'Gnosis', value: 'gnosis'},
@@ -48,6 +47,8 @@ import RunBeaconNodePartial from '@site/docs/node/guide/_partials/_run-consensus
 ]}>
     <TabItem value="gnosis">
         <div>
+
+### Step 4a: Generate Validator Keys
 
 import GenerateValidatorKeysPartial from '@site/docs/node/guide/_partials/_generate_validator_keys.md';
 
