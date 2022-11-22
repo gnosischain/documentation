@@ -36,7 +36,7 @@ In this example we use MetaMask.
 ![](/img/node/UI-2A.png)
 ### Step 2: Upload `deposit_data.json`
 
-2) Select the Deposit tab. Upload your `deposit_data.json` file from [step 1 in the Get Started section.](/node/guide) It will be located in the same folder as the generated keystores.
+2) Select the Deposit tab. Upload your `deposit_data.json` file from [Step 4 of the interactive guide](/node/guide#step-4-run-a-validator) It will be located in the same folder as the generated keystores.
 
 :::note
 If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
@@ -51,7 +51,7 @@ If you can't upload the file, you may want to check the file permissions to make
 
 ### Step 4: Acknowledge Risks
 
-4) Check that you understand the risks and [ensure you are interacting with the correct contract](#make-sure-you-arent-being-phished) before proceeding.
+4) Check that you understand the risks and [ensure you are interacting with the correct contract](#step-5-verify-transaction-parameters) before proceeding.
 
 <img src="/img/node/deposit-3.png" width="500" />
 <br />
@@ -149,7 +149,7 @@ START_BLOCK_NUMBER=19469077
 
 ### Step 3: Import `deposit_data.json` files
 
-Copy the `deposit_data.json` generated during [Step 2 of Get Started](/node/guide)to the current directory.
+Copy the `deposit_data.json` generated during [Step 4 of the interactive guide](/node/guide#step-4-run-a-validator) to the current directory.
 
 ### Step 4: Run Deposit script
 
@@ -177,16 +177,15 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 ### Depositing For Chiado Testnet
 
-Obtain Chiado xDai: [https://gnosisfaucet.com/](https://gnosisfaucet.com/) 
-
-Chiado GNO: This can be obtained from discord upon request
+Required:
+1. Chiado Testnet xDai: [https://gnosisfaucet.com/](https://gnosisfaucet.com/) 
+2. Chiado Testnet GNO: This can be obtained from discord upon request
 
 You can run the deposit UI [https://deposit.gnosischain.com](https://deposit.gnosischain.com) locally from here
 
 [https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui](https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui) 
 
 Create an .env file with the following variables for Chiado 
-
 
 ```
 REACT_APP_NETWORK_ID=10200
