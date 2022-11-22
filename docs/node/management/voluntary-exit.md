@@ -36,7 +36,7 @@ account validator voluntary-exit --publicKey 0xF00
 
 ### Nimbus
 
-Follow the syntax of the Lodestar CLI commands and their options.
+To perform a voluntary exit, make sure your beacon node is running, then run:
 
 ```bash
 build/nimbus_beacon_node deposits exit --data-dir=build/data/shared_gnosis_0 --validator=<VALIDATOR_PUBLIC_KEY>
