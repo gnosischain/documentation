@@ -12,19 +12,56 @@ Voluntary exit procedures vary depending on your client.
 Exits are non-reversible; once you have exited you cannot restart your validator.
 :::
 
+### Lighthouse
+
+In order to initiate an exit, users can use the lighthouse account validator exit command.
+
+```bash
+lighthouse --network gnosis account validator exit --keystore /path/to/keystore --beacon-node http://consensus:5052
+```
+
+* For more info, see the [Lighthouse Voluntary Exit docs](https://lighthouse-book.sigmaprime.io/voluntary-exit.html).
+
+
+### Lodestar
+
+Follow the syntax of the Lodestar CLI commands and their options.
+
+```bash
+account validator voluntary-exit --publicKey 0xF00
+```
+
+* For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/reference/cli/#validator-voluntary-exit).
+
+
+### Nimbus
+
+Follow the syntax of the Lodestar CLI commands and their options.
+
+```bash
+build/nimbus_beacon_node deposits exit --data-dir=build/data/shared_gnosis_0 --validator=<VALIDATOR_PUBLIC_KEY>
+```
+
+* For more info, see the Nimbus [Perform a voluntary exit](https://nimbus.guide/voluntary-exit.html) docs.
+
+
 ### Prysm
 
 Login to your node and use the following command to request a voluntary exit. Replace \<PUBKEY\_1> with each public key you want to exit.
 
 ```bash
-docker run --rm -it -v "$(pwd)/config:/tmp/config" -v "$(pwd)/wallet:/home/.eth2validators/prysm-wallet-v2" --network host ghcr.io/gnosischain/gbc-prysm-validator:v2.0.5-gbc accounts voluntary-exit --accept-terms-of-use --wallet-password-file /tmp/config/wallet_password.txt --beacon-rpc-provider localhost:4000 --public-keys "<PUBKEY_1>,<PUBKEY_2>,...,<PUBKEY_N>"
+prysm.sh validator accounts voluntary-exit
 ```
 
-* For more info, see the Prysm Voluntary Exit docs [here](https://docs.prylabs.network/docs/wallet/exiting-a-validator/)
+* For more info, see the Prysm [Exit your validator](https://docs.prylabs.network/docs/wallet/exiting-a-validator/) doc.
 
-### Lighthouse
+### Teku
 
-Native support for voluntary exit is in process. If you need to request a voluntary exit prior to native support, please [contact us in discord](https://discord.gg/VQb3WzsywU) in the beacon-chain channel.
+Use the voluntary-exit subcommand to initiate a voluntary exit for specified validators.
 
-* For more info, see the Lighthouse Voluntary Exit docs [here](https://lighthouse-book.sigmaprime.io/voluntary-exit.html)
+```bash
+teku voluntary-exit --beacon-node-api-endpoint=http://consensus:5051 \
+--validator-keys=validator/keys/validator_ABC.json:validator/passwords/validator_ABC.txt
+```
 
+* For more info, see the Teku [Voluntarily exit a validator](https://docs.teku.consensys.net/en/latest/HowTo/Voluntary-Exit/) docs.
