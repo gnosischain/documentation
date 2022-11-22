@@ -250,11 +250,11 @@ const sidebars = {
           link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
           collapsed: true,
           items: [
+            "node/guide/beacon/lighthouse",
             "node/guide/beacon/lodestar",
             "node/guide/beacon/nimbus",
-            "node/guide/beacon/teku",
-            "node/guide/beacon/lighthouse",
             "node/guide/beacon/prysm",
+            "node/guide/beacon/teku",
           ],
         },
         {
