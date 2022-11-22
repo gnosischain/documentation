@@ -56,20 +56,20 @@ import GenerateValidatorKeysPartial from '@site/docs/node/guide/_partials/_gener
 
 ### Step 4b: Run a Validator
 
-import InstallValidatorPartial from '@site/docs/node/guide/_partials/_install-validator.md';
+import InstallValidatorPartial from '@site/docs/node/guide/validator/_partials/_install-validator.md';
 
 <InstallValidatorPartial />
 
 ### Step 4c: Fund your validator
 
-import FundValidatorPartial from '@site/docs/node/guide/_partials/_fund-validator.md';
+import FundValidatorPartial from '@site/docs/node/guide/validator/_partials/_fund-validator.md';
 
 <FundValidatorPartial />
 
 
 ### Step 4d: Verify Validator
 
-import VerifyValidatorPartial from '@site/docs/node/guide/_partials/_verify-validator.md';
+import VerifyValidatorPartial from '@site/docs/node/guide/validator/_partials/_verify-validator.md';
 
 <VerifyValidatorPartial />
         </div>
