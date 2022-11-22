@@ -1,11 +1,6 @@
-# Sedge
+# Nethermind Sedge
 
-- [ ] Sedge and how Nethermind created it
-- [ ] Autogenerates Dockerfiles
-
-## Nethermind Sedge {#nethermind-sedge}
-
-A one-click setup tool for PoS network/chain validators, this includes support for Gnosis chain (and chiado testnet). **Sedge** takes care of the entire on-premise full node setup based on the chosen client, using generated docker-compose scripts based on the desired configuration.
+A one-click setup tool for PoS network/chain validators, this includes support for Gnosis chain mainnet and chiado testnet. **Sedge** takes care of the entire on-premise full node setup based on the chosen client, using generated docker-compose scripts based on the desired configuration.
 
 Repository: https://github.com/NethermindEth/sedge
 
