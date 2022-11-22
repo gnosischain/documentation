@@ -6,7 +6,7 @@ description: Validators protect Gnosis by staking on the Gnosis Beacon Chain.
 
 Receive up-to-date critical information about the upcoming merge by subscribing to the [Gnosis Chain Merge Newsletter](https://gnosismerge.substack.com/).
 
-::
+:::
 
 # Validator Info
 
