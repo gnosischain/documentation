@@ -285,9 +285,9 @@ const sidebars = {
       collapsed: false,
       items: [
         "node/management/monitoring-node",
-        "node/management/withdrawals",
-        "node/management/voluntary-exit",
         "node/management/migrating-validator",
+        "node/management/voluntary-exit",
+        "node/management/withdrawals",
         "node/management/preparing-for-the-merge",
       ],
     },
