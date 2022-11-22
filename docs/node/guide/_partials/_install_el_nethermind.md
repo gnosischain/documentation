@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs groupId="network" defaultValue="gnosis" values={[
+<Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
     {label: 'Gnosis', value: 'gnosis'},
     {label: 'Chiado', value: 'chiado'}
 ]}>

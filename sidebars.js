@@ -272,6 +272,7 @@ const sidebars = {
                 { id: 'node/guide/validator/generate-keys-cli-tool/README', label: 'CLI Tool', type: 'doc', },
               ],
             },
+            "node/guide/validator/run",
             "node/guide/validator/deposit",
             "node/guide/validator/verify"
           ],

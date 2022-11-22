@@ -162,3 +162,8 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 .install-tabs .tabgroup-with-label.updated:after {
   color: var(--ifm-color-primary);
 }
+
+.hide-tabs-os .os-tabgroup,
+.hide-tabs-network .network-tabgroup{
+  display: none;
+}

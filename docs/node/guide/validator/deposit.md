@@ -1,5 +1,5 @@
 ---
-title: Validator Deposit
+title: Fund Validator
 ---
 
 # Deposit

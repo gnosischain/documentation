@@ -74,7 +74,7 @@ We highly recommend generating keystores on a safe, completely offline device.
     <li>Select the language of the UI and mnemonic.</li>
     <li>Choose the number of validators. Remember: 1 GNO = 1 validator. You can run many validators in the same machine.</li>
     <li>
-        <Tabs groupId="network" defaultValue="gnosis" values={[
+        <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
             {label: 'Gnosis', value: 'gnosis'},
             {label: 'Chiado', value: 'chiado'}
         ]}>
