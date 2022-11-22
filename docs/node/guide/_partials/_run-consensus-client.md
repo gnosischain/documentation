@@ -4,9 +4,9 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="consensus-clients" defaultValue="lighthouse" values={[
   {label: 'Lighthouse', value: 'lighthouse'},
   {label: 'Lodestar', value: 'lodestar'},
+  {label: 'Teku', value: 'teku'},
   {label: 'Nimbus', value: 'nimbus'},
-  {label: 'Prysm', value: 'prysm'},
-  {label: 'Teku', value: 'teku'}
+  {label: 'Prysm', value: 'prysm'}
     ]}>
   <TabItem value="lighthouse">
 
@@ -20,6 +20,10 @@ import InstallLighthousePartial from '@site/docs/node/guide/_partials/_install_c
   <p>WIP</p>
   </TabItem>
 
+  <TabItem value="teku">
+  <p>WIP</p>
+  </TabItem>
+
   <TabItem value="nimbus">
   <p>WIP</p>
   </TabItem>
@@ -28,7 +32,4 @@ import InstallLighthousePartial from '@site/docs/node/guide/_partials/_install_c
   <p>WIP</p>
   </TabItem>
 
-  <TabItem value="teku">
-  <p>WIP</p>
-  </TabItem>
 </Tabs>

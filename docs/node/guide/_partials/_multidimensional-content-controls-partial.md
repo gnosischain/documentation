@@ -45,16 +45,16 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Consensus client:', value: 'label'},
   {label: 'Lighthouse', value: 'lighthouse'},
   {label: 'Lodestar', value: 'lodestar'},
+  {label: 'Teku', value: 'teku'},
   {label: 'Nimbus', value: 'nimbus'},
-  {label: 'Prysm', value: 'prysm'},
-  {label: 'Teku', value: 'teku'}
+  {label: 'Prysm', value: 'prysm'}
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="lighthouse"></TabItem>
   <TabItem value="lodestar"></TabItem>
+  <TabItem value="teku"></TabItem>
   <TabItem value="nimbus"></TabItem>
   <TabItem value="prysm"></TabItem>
-  <TabItem value="teku"></TabItem>
 </Tabs>
 
 <!--Tabs className="tabgroup-with-label enbn-tabgroup" groupId="protocol" defaultValue="jwt" values={[
