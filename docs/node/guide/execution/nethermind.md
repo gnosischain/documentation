@@ -7,15 +7,15 @@ title: Nethermind
 Execution layer client developed by nethermind team [https://nethermind.io/nethermind-client/](https://nethermind.io/nethermind-client/) 
 
 There are 2 main options for running Nethermind:
-* Option 1: As a system process
-* Option 2: Using Docker
+* Option 1: [As a system process](#as-system-process)
+* Option 2: [Using Docker](#using-docker)
 
 Nethermind can be configured to run different types of nodes: 
 * Full Node
-* Archival Node
+* [Archival Node](#archival-node)
 
 
-## Option 1: Running as System Process {#option-1-running-as-system-process}
+## Option 1: Running as System Process {#as-system-process}
 
 ### Installing Nethermind {#installing-nethermind}
 
@@ -46,7 +46,7 @@ nethermind --config xDai --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 ```
 
-## Option 2: Using Docker {#option-2-using-docker}
+## Option 2: Using Docker {#using-docker}
 
 
 ### Pulling Nethermind Docker Images {#pulling-nethermind-docker-images}
@@ -141,7 +141,7 @@ sudo docker-compose up -d
 sudo docker-compose logs nethermind -f
 ```
 
-## Nethermind Archival Node {#nethermind-archival-node}
+## Nethermind Archival Node {#archival-node}
 
 An archival node executes heavy historical sync verifying all the transactions and keeping all the historical state. In Nethermind, the default configuration activates the pruning functionality.
 
