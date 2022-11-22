@@ -19,7 +19,11 @@ import InstallPrereqsPartial from '@site/docs/node/guide/_partials/_install-prer
 
 <InstallPrereqsPartial />
 
-## Step 1: Prepare Server
+## Step 1: Configure Server
+
+:::tip
+Check out all recommended steps to [configure server](./configure-server.md)
+:::
 
 import InstallInitialPartial from '@site/docs/node/guide/_partials/_install-initial.md';
 

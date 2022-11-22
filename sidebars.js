@@ -219,7 +219,7 @@ const sidebars = {
       link: {type: 'doc', id: 'node/guide/README'},
       collapsed: false,
       items: [
-        'node/guide/server/README',
+        'node/guide/configure-server',
         {
           type: 'category',
           label: 'Step 2: Run Execution Client',
