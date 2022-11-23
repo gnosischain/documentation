@@ -290,7 +290,6 @@ const sidebars = {
         "node/management/migrating-validator",
         "node/management/voluntary-exit",
         "node/management/withdrawals",
-        "node/management/preparing-for-the-merge",
       ],
     },
   ],
