@@ -2,7 +2,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs groupId="execution-clients" defaultValue="geth" values={[
-     {label: 'Execution client:', value: 'label'},
     {label: 'Nethermind', value: 'nethermind'},
     {label: 'Besu', value: 'besu'},
     {label: 'Erigon', value: 'erigon'},
