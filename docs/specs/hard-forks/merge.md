@@ -56,12 +56,24 @@ Similar to Ethereum, the Gnosis Beacon Chain will have a [Bellatrix epoch](https
 
 :::caution
 
-Core Devs have not released merge-ready Client Images yet. Please wait for further announcements
+Core Devs are in the process of releasing merge-ready Client Images. Announcements will be made in the #validators channel in Gnosis Discord and on Twitter.
 
 :::
 
-- On 23 Nov 2022, Core Devs will be releasing merge-ready Client Images with Bellatrix epoch and TTD values baked in
-- Announcements will be made in the #validators channel in Gnosis Discord and on Twitter
+**EL client**
+| Client | Merge ready release | Status |
+| ------ | ------------------- | ------ |
+| Nethermind | v1.14.6 | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6
+
+**CL client**
+
+| Client | Merge ready release | Status |
+| ------ | ------------------- | ------ |
+| Teku       | v22.11.0 | ✅ Available https://github.com/ConsenSys/teku/releases/tag/22.11.0 
+| Lodestar   | v1.2.2 | ✅ Available https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2)
+| Lighthouse | v3.3.0 | ⌛ Coming soon
+| Nimbus     | TBA    | ⌛ Coming soon
+| Prysm      | N/A    | ❌ Advised to switch to other clients.
 
 ### For DApps
 
