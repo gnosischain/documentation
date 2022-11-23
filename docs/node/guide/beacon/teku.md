@@ -1,24 +1,39 @@
 ---
+title: Teku
 ---
 
-# Teku
+# Run Beacon Node: Teku
 
 Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
 
+:::tip Learn more about Teku
 
-**Teku reference:**
+- [Teku Docs](https://docs.teku.consensys.net/en/latest/)
+- [Teku CLI Reference](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/)
 
-- [General Docs](https://docs.teku.consensys.net/en/latest/)
-- [CLI Reference](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/)
+:::
 
+:::info 
 
-## Using Docker
+- Gnosis' Teku repo has sample Dockerfiles and configs
+- [https://github.com/gnosischain/teku-client](https://github.com/gnosischain/teku-client)
 
+:::
+
+## Option 1: Run as a System Process 
+
+:::caution
+
+In progress
+
+:::
+
+## Option 2: Run using Docker
 
 Images are referenced under the following pattern `consensys/teku:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/consensys/teku/tags).
 
-:::note
-The Beacon Node requires an Execution client in order to operate. See **Step 2: Run Execution Client** for more information.
+:::caution
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
 :::
 
 ### 1. Folder Structure
@@ -44,13 +59,7 @@ Including the folders from your Execution client, your folder structure should n
 
 Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
-```mdx-code-block
-<details>
-  <summary>Example Docker Compose file</summary>
-  <div>
-```
-
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
 services:
 
@@ -90,6 +99,7 @@ services:
     logging:
       driver: "local"
 
+// highlight-start
   consensus:
     user: "${PUID:-1000}"
     container_name: consensus
@@ -137,17 +147,12 @@ services:
       --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
     logging:
       driver: "local"
+// highlight-end
 
 networks:
   gnosis_net:
     name: gnosis_net
 ```
-
-```mdx-code-block
-  </div>
-</details>
-```
-
 
 ### 3. Environment Variables
 

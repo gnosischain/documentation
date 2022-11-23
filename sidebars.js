@@ -240,11 +240,11 @@ const sidebars = {
           link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
           collapsed: true,
           items: [
-            "node/guide/beacon/lighthouse",
             "node/guide/beacon/lodestar",
+            "node/guide/beacon/teku",
+            "node/guide/beacon/lighthouse",
             "node/guide/beacon/nimbus",
             "node/guide/beacon/prysm",
-            "node/guide/beacon/teku",
           ],
         },
         {
@@ -262,7 +262,17 @@ const sidebars = {
                 { id: 'node/guide/validator/generate-keys-cli-tool/README', label: 'CLI Tool', type: 'doc', },
               ],
             },
-            "node/guide/validator/run",
+            {
+              type: 'category',
+              label: 'Run Validator',
+              link: { slug: 'node/guide/validator/run', type: 'generated-index', title: 'Run Validator' },
+              collapsed: true,
+              items: [
+                "node/guide/validator/run/lodestar",
+                "node/guide/validator/run/teku",
+                "node/guide/validator/run/lighthouse",
+              ]
+            },
             "node/guide/validator/deposit",
             "node/guide/validator/verify"
           ],

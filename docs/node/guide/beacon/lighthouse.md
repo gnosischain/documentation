@@ -1,25 +1,40 @@
 ---
+title: Lighthouse
 ---
 
-# Lighthouse
+# Run Beacon Node: Lighthouse
 
-Lighthouse is an Ethereum and Gnosis Chain consensus client written in Rust by [Sigma Prime](https://lighthouse.sigmaprime.io/).
+Lighthouse is an Ethereum and Gnosis consensus layer client written in Rust by [Sigma Prime](https://lighthouse.sigmaprime.io/).
 
+:::tip Learn More about Lighthouse
 
-**Lighthouse reference:**
+- Lighthouse Repo: [https://github.com/sigp/lighthouse](https://github.com/sigp/lighthouse)
+- Lighthouse Documentation: [https://lighthouse-book.sigmaprime.io/](https://lighthouse-book.sigmaprime.io/) 
 
-[https://lighthouse-book.sigmaprime.io/](https://lighthouse-book.sigmaprime.io/) 
+:::
 
+:::info 
+- Gnosis' Lighthouse repo has sample Dockerfiles and configs
+- [https://github.com/gnosischain/lighthouse-client](https://github.com/gnosischain/lighthouse-client)
+:::
+## Option 1: Run as a System Process
 
-## Using Docker
+:::caution
 
+In progress
+
+:::
+
+## Option 2: Run using Docker
 
 Images are referenced under the following pattern `sigp/lighthouse:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/sigp/lighthouse/tags).
 
 Most users should use the `latest-modern` tag, which corresponds to the latest stable release of Lighthouse with optimizations enabled. If you are running on older hardware then the default latest image bundles a portable version of Lighthouse which is slower but with better hardware compatibility.
 
-:::note
-The Beacon Node requires an Execution client in order to operate. See **Step 2: Run Execution Client** for more information.
+:::caution
+
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
+
 :::
 
 
@@ -33,7 +48,7 @@ mkdir -p /home/$USER/gnosis/consensus/data
 
 Including the folders from your Execution client, your folder structure should now look like:
 
-```
+```shell
 /home/$USER/gnosis/
 ├── jwtsecret/
 ├── execution/
@@ -41,18 +56,11 @@ Including the folders from your Execution client, your folder structure should n
     └── data/
 ```
 
-
 ### 2. Docker Compose
 
 Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
-```mdx-code-block
-<details>
-  <summary>Example Docker Compose file</summary>
-  <div>
-```
-
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
 services:
 
@@ -92,6 +100,7 @@ services:
     logging:
       driver: "local"
 
+// highlight-start
   consensus:
     container_name: consensus
     image: sigp/lighthouse:latest-modern
@@ -132,15 +141,11 @@ services:
       --checkpoint-sync-url=https://checkpoint.gnosischain.com/
     logging:
       driver: "local"
+// highlight-end
 
 networks:
   gnosis_net:
     name: gnosis_net
-```
-
-```mdx-code-block
-  </div>
-</details>
 ```
 
 
@@ -153,7 +158,6 @@ cd /home/$USER/gnosis
 docker-compose up -d
 ```
 
-
 ### 4. Monitor Logs
 
 Check your logs for each service (`execution` and `consensus`) with:
@@ -161,7 +165,6 @@ Check your logs for each service (`execution` and `consensus`) with:
 ```shell
 docker logs -f --tail 500 <service>
 ```
-
 
 ### 5. Updating your Node
 
