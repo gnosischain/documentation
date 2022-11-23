@@ -1,5 +1,5 @@
 
-After [depositing](../deposit.md) and [starting your validator](../run.md), you can verify the status of your validators following these steps:
+After [depositing](../deposit.md) and [starting your validator](../run), you can verify the status of your validators following these steps:
 
 1. Navigate to the [deposit tool](https://deposit.gnosischain.com) and click on the `Validator Status` tab.
 
