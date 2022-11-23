@@ -22,7 +22,7 @@ This client is not yet ready for public use. Validators are encouraged to run Te
 
 :::
 
-## Option 1: Run using Docker
+## Option 2: Run using Docker
 
 :::danger
 
