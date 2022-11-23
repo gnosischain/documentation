@@ -18,32 +18,33 @@ Images are referenced under the following pattern `sigp/lighthouse:{image-tag}` 
 
 Most users should use the `latest-modern` tag, which corresponds to the latest stable release of Lighthouse with optimizations enabled. If you are running on older hardware then the default latest image bundles a portable version of Lighthouse which is slower but with better hardware compatibility.
 
+:::note
+The Beacon Node requires an Execution client in order to operate. See **Step 2: Run Execution Client** for more information.
+:::
+
+
 ### 1. Folder Structure
 
-Create your folder structure:
+Create new folders:
 
+```shell
+mkdir -p /home/$USER/gnosis/consensus/data
 ```
-mkdir -p /home/$USER/gnosis/el-client
-mkdir -p /home/$USER/gnosis/cl-client/data
-mkdir /home/$USER/gnosis/cl-client/keystores
-mkdir /home/$USER/gnosis/cl-client/validators
-mkdir /home/$USER/gnosis/jwtsecret
-```
+
+Including the folders from your Execution client, your folder structure should now look like:
 
 ```
 /home/$USER/gnosis/
 ├── jwtsecret/
-├── el-client/
-└── cl-client/
-    ├── data/
-    ├── keystores/
-    └── validators/
+├── execution/
+└── consensus/
+    └── data/
 ```
 
 
 ### 2. Docker Compose
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
 ```mdx-code-block
 <details>
@@ -55,104 +56,86 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
 version: "3"
 services:
 
-  el-client:
-    hostname: el-client
-    container_name: el-client
+  execution:
+    container_name: execution
     image: nethermind/nethermind:latest
     restart: always
     stop_grace_period: 1m
-    command: |
-      --config xdai
-      --datadir /data
-      --JsonRpc.Enabled true
-      --JsonRpc.Host 192.168.32.100
-      --JsonRpc.Port 8545
-      --JsonRpc.JwtSecretFile /jwt.hex
-      --JsonRpc.EngineHost 192.168.32.100
-      --JsonRpc.EnginePort 8551
-      --Merge.Enabled true
     networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.100
+      - gnosis_net
     ports:
-      - "30303:30303/tcp"
-      - "30303:30303/udp"
+      - 30304:30304/tcp # p2p
+      - 30304:30304/udp # p2p
+    expose:
+      - 8545 # rpc
+      - 8551 # engine api
     volumes:
-      - /home/$USER/gnosis/el-client:/data
+      - /home/$USER/gnosis/execution:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+    command: |
+      --config=xdai
+      --datadir=/data
+      --log=INFO
+      --Sync.SnapSync=false
+      --JsonRpc.Enabled=true
+      --JsonRpc.Host=0.0.0.0
+      --JsonRpc.Port=8545
+      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
+      --JsonRpc.JwtSecretFile=/jwt.hex
+      --JsonRpc.EngineHost=0.0.0.0
+      --JsonRpc.EnginePort=8551
+      --Network.DiscoveryPort=30304
+      --HealthChecks.Enabled=false
+      --Pruning.CacheMb=2048
     logging:
       driver: "local"
 
-  cl-client:
-    hostname: cl-client
-    container_name: cl-client
+  consensus:
+    container_name: consensus
     image: sigp/lighthouse:latest-modern
     restart: always
-    depends_on:
-      - el-client
+    networks:
+      - gnosis_net
+    ports:
+      - 9001:9001/tcp # p2p
+      - 9001:9001/udp # p2p
+      - 5054:5054/tcp # metrics
+    expose:
+      - 4000 # http
+    volumes:
+      - /home/$USER/gnosis/consensus/data:/data
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
     command: |
-      lighthouse beacon_node
-      --network gnosis
-      --discovery-port 12000
-      --port 13000
-      --execution-endpoint http://192.168.32.100:8551
-      --execution-jwt /jwt.hex
-      --datadir /data
+      lighthouse
+      beacon_node
+      --network=gnosis
+      --disable-upnp
+      --datadir=/data
+      --port=9001
       --http
-      --http-address 192.168.32.101
-      --enr-address $WAN_IP
-      --enr-udp-port 12000
-      --target-peers 80
-      --debug-level info
-      --suggested-fee-recipient $FEE_RECIPIENT
-      --checkpoint-sync-url $CHECKPOINT_URL
-    networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.101
-    ports:
-      - "12000:12000/udp" #p2p
-      - "13000:13000/tcp" #p2p
-    volumes:
-      - /home/$USER/gnosis/cl-client/data:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    logging:
-      driver: "local"
-
-  validator:
-    hostname: validator
-    container_name: validator
-    image: sigp/lighthouse:latest-modern
-    restart: always
-    depends_on:
-      - cl-client
-    command: |
-      lighthouse validator_client
-      --network gnosis
-      --enable-doppelganger-protection
-      --validators-dir /data/validators
-      --beacon-nodes http://192.168.32.101:5052
-      --suggested-fee-recipient $FEE_RECIPIENT
-      --graffiti $GRAFFITI
-    networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.102
-    volumes:
-      - /home/$USER/gnosis/cl-client/validators:/data/validators
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
+      --http-address=0.0.0.0
+      --http-port=4000
+      --target-peers=50
+      --execution-endpoint=http://execution:8551
+      --execution-jwt=/jwt.hex
+      --debug-level=info
+      --validator-monitor-auto
+      --subscribe-all-subnets
+      --import-all-attestations
+      --metrics
+      --metrics-port=5054
+      --metrics-address=0.0.0.0
+      --checkpoint-sync-url=https://checkpoint.gnosischain.com/
     logging:
       driver: "local"
 
 networks:
   gnosis_net:
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.32.0/24
+    name: gnosis_net
 ```
 
 ```mdx-code-block
@@ -160,98 +143,31 @@ networks:
 </details>
 ```
 
-### 3. Environment Variables
 
-Add an `.env` file with your WAN IP (`curl https://ipinfo.io/ip`), fee recepient (your Gnosis address), graffiti, and checkpoint url in `/home/$USER/gnosis/.env`.
+### 3. Start Containers
 
-```
-WAN_IP:123.456.789.012
-FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-GRAFFITI=gnosischain/lighthouse
-CHECKPOINT_URL=https://checkpoint.gnosischain.com/
-```
+Start the consensus layer client listed in the compose file:
 
-
-### 4. Keystore Location
-
-Add your keystores in `/home/$USER/gnosis/cl-client/keystores/` and their password in a file `/home/$USER/gnosis/cl-client/keystores/password.txt` to get this file structure:
-
-:::note
-Note, keystores MUST follow one of these file names
-
-- `keystore-m_12381_3600_[0-9]+_0_0-[0-9]+.json` The format exported by the `eth2.0-deposit-cli` library ([source](https://github.com/sigp/lighthouse/blob/2983235650811437b44199f9c94e517e948a1e9b/common/account_utils/src/validator_definitions.rs#L402))
-- `keystore-[0-9]+.json` The format exported by Prysm ([source](https://github.com/sigp/lighthouse/blob/2983235650811437b44199f9c94e517e948a1e9b/common/account_utils/src/validator_definitions.rs#L411))
-:::
-
-```
-/home/$USER/gnosis/
-├── docker-compose.yml
-├── .env
-├── jwtsecret/
-├── el-client/
-└── cl-client/
-    ├── data/
-    ├── keystores/
-    │   ├── keystore-001.json
-    │   ├── keystore-002.json
-    │   └── password.txt
-    └── validators/
-```
-
-
-### 5. JWT Secret
-
-Create a new JWT secret file:
-
-```
-openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
-```
-
-
-### 6. Import Keystores
-
-Import your validators:
-
-```
-docker run --rm --volume /home/$USER/gnosis/cl-client/keystores:/keystores --volume /home/$USER/gnosis/cl-client:/data sigp/lighthouse:latest-modern lighthouse account validator import --network gnosis --password-file /keystores/password.txt --reuse-password --directory /keystores --datadir /data
-```
-
-
-### 7. Start Containers
-
-Start the execution layer client, consensus layer client, and validator service listed in the compose file:
-
-```
+```shell
 cd /home/$USER/gnosis
 docker-compose up -d
 ```
 
 
-### 8. Monitor Logs
+### 4. Monitor Logs
 
-Check your logs for each service (`el-client`, `cl-client`, or `validator`) with:
+Check your logs for each service (`execution` and `consensus`) with:
 
-```
+```shell
 docker logs -f --tail 500 <service>
 ```
 
 
-### 9. Make a Deposit
-
-Make deposit once your node is fully synced (this can take a few hours depending on setup).
-
-:::caution
-**At this stage you should have your EL and CL fully synced and validators must be imported to your CL.**
-:::
-
-_See section Fund your Validator_ 
-
-
-### 10. Updating your Node
+### 5. Updating your Node
 
 To update, just pull the new images, then stop and restart your docker-compose file:
 
-```
+```shell
 cd /home/$USER/gnosis
 docker-compose pull
 docker-compose stop
