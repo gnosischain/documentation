@@ -4,6 +4,12 @@ title: Lighthouse
 
 # Run Beacon Node: Lighthouse
 
+:::danger
+
+This client is not yet ready for public use. Validators are encouraged to run Teku or Lodestar in the interim.
+
+:::
+
 Lighthouse is an Ethereum and Gnosis consensus layer client written in Rust by [Sigma Prime](https://lighthouse.sigmaprime.io/).
 
 :::tip Learn More about Lighthouse
