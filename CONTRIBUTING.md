@@ -1,5 +1,20 @@
-# Contributing to Gnosis
-Thank you for your interest in contributing!
+# Contributor's Guide
+
+Welcome to the Gnosis Documentation site! We welcome all contributors. 
+## Environments
+
+Prod: [https://docs.gnosischain.com](https://docs.gnosischain.com)
+Staging: [https://developers-portal.staging.gnosisdev.com](https://developers-portal.staging.gnosisdev.com)
+
+A password is required for the Staging site: plase ask @alebanzas or @plato_gno for it. 
+
+## Git Workflow
+
+- `release` branch: the current state of [docs.gnosischain.com](https://docs.gnosischain.com)
+- `main` branch: the current state of the [docs staging site](https://developers-portal.staging.gnosisdev.com/)
+- Feature branches: individual contributors issue a PR to `main` branch
+
+Currently, @alebanzas and @plato_gno have push rights to `release` branch.
 
 ## Run the project
 
@@ -72,7 +87,18 @@ When transfering documents from the old gitbook, consider the funcionality diffe
 - Nifty Wallet deprecation
 - Internal and external links
 
-### Images location
+### Static Assets
+
+```
+/static
+    /files
+    /img
+        # By Docs folders
+        /about
+        /bridges
+        /developers
+        /node
+```
 
 #### Gitbook
 
@@ -105,34 +131,6 @@ Message
 ```
 Refer to [docusaurus docs](https://docusaurus.io/docs/next/markdown-features/admonitions) for more admonition types.
 
-### Files
-
-#### Gitbook
-
-```
-{% file src="somepath/somefile.zip" %}
-```
-
-#### Docusaurus
-
-```
-{@file: /somefile.zip}
-```
-Place files in ```/static/files/```
-
-### Youtube Videos
-
-#### Gitbook
-
-```
-{% embed url="https://www.youtube.com/watch?v=yPYYKz0u9K0t=10s" %}
-```
-
-#### Docusaurus
-
-```
-{@youtube: yPYYKz0u9K0t,start=10}
-```
 
 ### Tabs
 
