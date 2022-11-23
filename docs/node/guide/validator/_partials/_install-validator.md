@@ -22,7 +22,7 @@ import InstallLighthouseValidatorPartial from '@site/docs/node/guide/validator/_
 
 :::info
 
-Please refer to [Run a Beacon Node: Lodestar](../../run/lodestar.md)
+Please refer to [Run a Beacon Node: Lodestar](../../beacon/lodestar.md)
 
 :::
 
@@ -34,7 +34,7 @@ Please refer to [Run a Beacon Node: Lodestar](../../run/lodestar.md)
 
 :::info
 
-Please refer to [Run a Beacon Node: Nimbus](../../run/nimbus.md)
+Please refer to [Run a Beacon Node: Nimbus](../../beacon/nimbus.md)
 
 :::
 
@@ -46,7 +46,7 @@ Please refer to [Run a Beacon Node: Nimbus](../../run/nimbus.md)
 
 :::info
 
-Please refer to [Run a Beacon Node: Prysm](../../run/prysm.md)
+Please refer to [Run a Beacon Node: Prysm](../../beacon/prysm.md)
 
 :::
 
@@ -58,7 +58,7 @@ Please refer to [Run a Beacon Node: Prysm](../../run/prysm.md)
 
 :::info
 
-Please refer to [Run a Beacon Node: Teku](../../run/teku.md)
+Please refer to [Run a Beacon Node: Teku](../../beacon/teku.md)
 
 :::
 
