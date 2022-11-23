@@ -13,34 +13,53 @@ import TabItem from '@theme/TabItem';
     </TabItem>
 </Tabs>
 
-
+```mdx-code-block
 <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
     {label: 'Gnosis', value: 'gnosis'},
     {label: 'Chiado', value: 'chiado'}
 ]}>
     <TabItem value="gnosis">
-        <div>
-            <p>To run a validator, we need to first import the keys generated in the previous step.</p>
-            <ul>
-                <li>In a new command line window, navigate to the <code>cl-client</code> folder and execute Lighthouse validator client</li>
-                <li>
-                    To ease the import process, we will create a <code>password.txt</code> file containing the password used to encrypt the validator keys.
-                    <pre><code>echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt</code></pre>
-                </li>
-                <li>
-                    Import the validator keys using lighthouse:
-                    <pre><code>./lighthouse account_manager validator import --network gnosis --password-file keystores/validator_keys/password.txt --reuse-password --directory keystores/validator_keys --datadir .</code></pre>
-                </li>
-                <li>
-                    Start your lighhouse validator:
-                    <pre><code>./lighthouse validator_client --network gnosis --validators-dir validators --enable-doppelganger-protection  --graffiti "gnosis-docs-graffiti"</code></pre>
-                    Replace <code>gnosis-docs-graffiti</code> with your <a href="https://lighthouse-book.sigmaprime.io/graffiti.html" target="_blank">graffiti</a>.
-                    Learn more about the <a href="https://lighthouse-book.sigmaprime.io/validator-doppelganger.html" target="_blank"><code>enable-doppelganger-protection</code></a> flag in Lighthouse docs.
-                </li>
-            </ul>
-        </div>
-    </TabItem>
+```
+To run a validator, we need to first import the keys generated in the previous step.
+
+* In a new command line window, navigate to the `cl-client` folder and execute Lighthouse validator client
+* To ease the import process, we will create a `password.txt` file containing the password used to encrypt the validator keys.
+
+```shell   
+echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
+```
+    
+* Import the validator keys using lighthouse:
+
+```shell
+./lighthouse account_manager validator import \
+    --network gnosis \
+    --password-file keystores/validator_keys/password.txt \
+    --reuse-password \
+    --directory keystores/validator_keys \
+    --datadir .
+```
+    
+* Start your lighhouse validator:
+
+```shell
+./lighthouse validator_client 
+    --network gnosis 
+    --validators-dir validators 
+    --enable-doppelganger-protection  
+# highlight-start
+    --graffiti "gnosis-docs-graffiti" # Change this value 
+# highlight-end
+```
+    
+Replace `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
+
+
+```mdx-code-block
+</TabItem>
     <TabItem value="chiado">
         <div data-comment="TODO: document chiado validation process"></div>
     </TabItem>
+```
+       
 </Tabs>

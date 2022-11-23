@@ -37,7 +37,7 @@ Some users recommend using [Chrony](https://chrony.tuxfamily.org/) as a [method 
 
 ### Create JWT
 
-import JwtGenerationPartial from '@site/docs/node/guide/_partials/_jwt-generation-partial.md';
+import JwtGenerationPartial from '@site/docs/node/guide/server/_partials/_jwt-generation-partial.md';
 
 <JwtGenerationPartial />
 

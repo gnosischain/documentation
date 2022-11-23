@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
     ]}>
   <TabItem value="nethermind">
 
-import InstallNethermindPartial from '@site/docs/node/guide/_partials/_install_el_nethermind.md';
+import InstallNethermindPartial from '@site/docs/node/guide/execution/_partials/_install_el_nethermind.md';
 
 <InstallNethermindPartial />
 

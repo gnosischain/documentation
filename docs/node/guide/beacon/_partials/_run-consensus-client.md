@@ -1,6 +1,8 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+```mdx-code-block
+
 <Tabs groupId="consensus-clients" defaultValue="lighthouse" values={[
   {label: 'Lighthouse', value: 'lighthouse'},
   {label: 'Lodestar', value: 'lodestar'},
@@ -10,26 +12,59 @@ import TabItem from '@theme/TabItem';
     ]}>
   <TabItem value="lighthouse">
 
-import InstallLighthousePartial from '@site/docs/node/guide/_partials/_install_cl_lighthouse.md';
-
-<InstallLighthousePartial />
+    import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
+    <InstallLighthousePartial />
 
   </TabItem>
 
+
   <TabItem value="lodestar">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Lodestar](../lodestar.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 
   <TabItem value="teku">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Teku](../teku.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 
   <TabItem value="nimbus">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 
   <TabItem value="prysm">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Prysm](../prysm.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
+```
 
 </Tabs>
