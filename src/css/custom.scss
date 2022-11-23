@@ -163,6 +163,10 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   color: var(--ifm-color-primary);
 }
 
+.install-tabs .unsupported{
+  font-size: 11px;
+}
+
 .hide-tabs-os .os-tabgroup,
 .hide-tabs-network .network-tabgroup{
   display: none;
