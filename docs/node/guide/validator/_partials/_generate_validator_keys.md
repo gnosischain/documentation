@@ -33,11 +33,11 @@ We highly recommend generating keystores on a safe, completely offline device.
                     <ul>
                         <li>
                             If you want to generate a new mnemonic:
-                            <pre><code>./deposit new-mnemonic --folder ../cl-client/keystores</code></pre>
+                            <pre><code>./deposit new-mnemonic --folder ../consensus/keystores</code></pre>
                         </li>
                         <li>
                             If you already have a mnemonic generated:
-                            <pre><code>./deposit existing-mnemonic --folder ../cl-client/keystores</code></pre>
+                            <pre><code>./deposit existing-mnemonic --folder ../consensus/keystores</code></pre>
                             You will be asked for a <code>mnemonic</code> and <code>index</code> (key number).
                         </li>
                     </ul>
@@ -57,11 +57,11 @@ We highly recommend generating keystores on a safe, completely offline device.
                     <ul>
                         <li>
                             If you want to generate a new mnemonic:
-                            <pre><code>deposit.exe new-mnemonic --folder ../cl-client/keystores</code></pre>
+                            <pre><code>deposit.exe new-mnemonic --folder ../consensus/keystores</code></pre>
                         </li>
                         <li>
                             If you already have a mnemonic generated:
-                            <pre><code>deposit.exe existing-mnemonic --folder ../cl-client/keystores</code></pre>
+                            <pre><code>deposit.exe existing-mnemonic --folder ../consensus/keystores</code></pre>
                             You will be asked for a <code>mnemonic</code> and <code>index</code> (key number).
                         </li>
                     </ul>

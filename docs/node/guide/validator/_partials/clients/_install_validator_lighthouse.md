@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 ```
 To run a validator, we need to first import the keys generated in the previous step.
 
-* In a new command line window, navigate to the `cl-client` folder and execute Lighthouse validator client
+* In a new command line window, navigate to the `consensus` folder and execute Lighthouse validator client
 * To ease the import process, we will create a `password.txt` file containing the password used to encrypt the validator keys.
 
 ```shell   

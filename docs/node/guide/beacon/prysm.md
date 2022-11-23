@@ -1,11 +1,12 @@
 ---
 title: Prysm
 ---
+
 # Run Beacon Node: Prysm
 
 :::danger
 
-This client is not yet ready for public use. Validators are encouraged to run Teku, Lodestar, or Lighthouse in the interim.
+This client is not yet ready for public use. Validators are encouraged to run Teku or Lodestar in the interim.
 
 :::
 

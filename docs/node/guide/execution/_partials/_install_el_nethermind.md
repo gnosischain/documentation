@@ -24,11 +24,11 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Unzip the downloaded file
-                            <pre><code>unzip [FILE_NAME] -d el-client</code></pre>
+                            <pre><code>unzip [FILE_NAME] -d execution</code></pre>
                         </li>
                         <li>
                             Get into the folder
-                            <pre><code>cd el-client</code></pre>
+                            <pre><code>cd execution</code></pre>
                         </li>
                         <li>
                             Execute Nethermind
@@ -41,8 +41,8 @@ import TabItem from '@theme/TabItem';
                 <div>
                     <ul>
                         <li>Download the Windows package from the <a href="https://downloads.nethermind.io/" target="_blank">Nethermind download page</a>.</li>
-                        <li>Unzip the file in the <code>el-client</code> folder created in the previous step.</li>
-                        <li>Navigate to the <code>el-client</code> folder</li>
+                        <li>Unzip the file in the <code>execution</code> folder created in the previous step.</li>
+                        <li>Navigate to the <code>execution</code> folder</li>
                         <li>
                             Run the following command:
                             <pre><code>.\Nethermind.Runner.exe --config xdai --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.EnginePort=8551 --JsonRpc.JwtSecretFile=../jwtsecret/jwtsecret</code></pre>    
@@ -71,11 +71,11 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Unzip the downloaded file
-                            <pre><code>unzip [FILE_NAME] -d el-client</code></pre>
+                            <pre><code>unzip [FILE_NAME] -d execution</code></pre>
                         </li>
                         <li>
                             Get into the folder
-                            <pre><code>cd el-client</code></pre>
+                            <pre><code>cd execution</code></pre>
                         </li>
                         <li>
                             Execute Nethermind
@@ -88,8 +88,8 @@ import TabItem from '@theme/TabItem';
                 <div>
                     <ul>
                         <li>Download the Windows package from the <a href="https://downloads.nethermind.io/" target="_blank">Nethermind download page</a>.</li>
-                        <li>Unzip the file in the <code>el-client</code> folder created in the previous step.</li>
-                        <li>Navigate to the <code>el-client</code> folder</li>
+                        <li>Unzip the file in the <code>execution</code> folder created in the previous step.</li>
+                        <li>Navigate to the <code>execution</code> folder</li>
                         <li>
                             Run the following command:
                             <pre><code>.\Nethermind.Runner.exe --config chiado --JsonRpc.Enabled true  --HealthChecks.Enabled true --HealthChecks.UIEnabled true --JsonRpc.EnginePort=8551 --JsonRpc.JwtSecretFile=../jwtsecret/jwtsecret</code></pre>

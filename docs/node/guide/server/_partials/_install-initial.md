@@ -7,8 +7,8 @@ Create the following folder structure on your disk, the entire tutorial will ass
 ```
 📂gnosis
 ├── 📂 jwtsecret/
-├── 📂 el-client/
-└── 📂 cl-client/
+├── 📂 execution/
+└── 📂 consensus/
     ├── 📂 data/
     ├── 📂 keystores/
     └── 📂 validators/
@@ -16,8 +16,8 @@ Create the following folder structure on your disk, the entire tutorial will ass
 
 ```shell
 $ mkdir gnosis && cd gnosis 
-$ mkdir jwtsecret && mkdir el-client && mkdir cl-client 
-$ cd cl-client 
+$ mkdir jwtsecret && mkdir execution && mkdir consensus 
+$ cd consensus 
 $ mkdir data && mkdir keystores && mkdir validators
 $ cd ..
 ```
@@ -35,7 +35,7 @@ import JwtGenerationPartial from '@site/docs/node/guide/server/_partials/_jwt-ge
 <JwtGenerationPartial />
 
 :::tip
-Place the `jwtsecret` file in the jwtsecret folder, so it can be referenced in the next steps as `../jwtsecret/jwtsecret` from the `cl-client` and `el-client` folders.
+Place the `jwt.hex` file in the jwtsecret folder, so it can be referenced in the next steps as `../jwtsecret/jwt.hex` for the `consensus` and `execution` clients.
 :::
   </TabItem>
 </Tabs>
