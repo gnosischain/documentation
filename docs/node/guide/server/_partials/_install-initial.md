@@ -14,8 +14,12 @@ Create the following folder structure on your disk, the entire tutorial will ass
     └── 📂 validators/
 ```
 
-```
-mkdir gnosis && cd gnosis && mkdir jwtsectet && mkdir el-client && mkdir cl-client && cd cl-client && mkdir data && mkdir keystores && mkdir validators && cd ..
+```shell
+$ mkdir gnosis && cd gnosis 
+$ mkdir jwtsecret && mkdir el-client && mkdir cl-client 
+$ cd cl-client 
+$ mkdir data && mkdir keystores && mkdir validators
+$ cd ..
 ```
 
 <Tabs groupId="protocol" defaultValue="jwt" values={[
@@ -26,12 +30,12 @@ mkdir gnosis && cd gnosis && mkdir jwtsectet && mkdir el-client && mkdir cl-clie
 
 <h3 id="generate-jwt">Generate JWT Secret</h3>
 
-import JwtGenerationPartial from '@site/docs/node/guide/_partials/_jwt-generation-partial.md';
+import JwtGenerationPartial from '@site/docs/node/guide/server/_partials/_jwt-generation-partial.md';
 
 <JwtGenerationPartial />
 
-:::info
-Place the `jwtsectet` file in the jwtsectet folder, so it can be referenced in the next steps as `../jwtsectet/jwtsecret` from the `cl-client` and `el-client` folders.
+:::tip
+Place the `jwtsecret` file in the jwtsecret folder, so it can be referenced in the next steps as `../jwtsecret/jwtsecret` from the `cl-client` and `el-client` folders.
 :::
   </TabItem>
 </Tabs>
