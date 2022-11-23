@@ -1,242 +1,174 @@
 ---
+title: Lodestar
 ---
 
-# Lodestar
+# Run Beacon Node: Lodestar
 
 An Ethereum consensus client by [ChainSafe](https://lodestar.chainsafe.io/).
 
-
-**Lodestar reference:**
+:::tip Learn more about Lodestar
 
 - [General Docs](https://chainsafe.github.io/lodestar/)
 - [CLI Reference](https://chainsafe.github.io/lodestar/reference/cli/)
 
+:::
 
-## Using Docker
+:::info 
+- Gnosis' Lodestar repo has sample Dockerfiles and configs
+- [https://github.com/gnosischain/lodestar-client](https://github.com/gnosischain/lodestar-client)
+:::
+## Option 1: Run as a System Process
+
+:::caution
+
+In progress
+
+:::
+
+## Option 2: Using Docker
 
 Images are referenced under the following pattern `chainsafe/lodestar:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/chainsafe/lodestar/tags).
 
+:::caution
+
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
+
+:::
+
 ### 1. Folder Structure
 
-Create your folder structure:
+Create new folders:
 
-```
-mkdir -p /home/$USER/gnosis/el-client
-mkdir -p /home/$USER/gnosis/cl-client/data
-mkdir /home/$USER/gnosis/cl-client/keystores
-mkdir /home/$USER/gnosis/jwtsecret
+```shell
+mkdir -p /home/$USER/gnosis/consensus/data
 ```
 
-```
+Including the folders from your Execution client, your folder structure should now look like:
+
+```shell
 /home/$USER/gnosis/
 ├── jwtsecret/
-├── el-client/
-└── cl-client/
-    ├── data/
-    └── keystores/
+├── execution/
+└── consensus/
+    └── data/
 ```
 
 
 ### 2. Docker Compose
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
-```mdx-code-block
-<details>
-  <summary>Example Docker Compose file</summary>
-  <div>
-```
-
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
 services:
 
-  el-client:
-    hostname: el-client
-    container_name: el-client
+  execution:
+    container_name: execution
     image: nethermind/nethermind:latest
     restart: always
     stop_grace_period: 1m
-    command: |
-      --config xdai
-      --datadir /data
-      --JsonRpc.Enabled true
-      --JsonRpc.Host 192.168.32.100
-      --JsonRpc.Port 8545
-      --JsonRpc.JwtSecretFile /jwt.hex
-      --JsonRpc.EngineHost 192.168.32.100
-      --JsonRpc.EnginePort 8551
-      --Merge.Enabled true
     networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.100
+      - gnosis_net
     ports:
-      - "30303:30303/tcp"
-      - "30303:30303/udp"
+      - 30304:30304/tcp # p2p
+      - 30304:30304/udp # p2p
+    expose:
+      - 8545 # rpc
+      - 8551 # engine api
     volumes:
-      - /home/$USER/gnosis/el-client:/data
+      - /home/$USER/gnosis/execution:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+    command: |
+      --config=xdai
+      --datadir=/data
+      --log=INFO
+      --Sync.SnapSync=false
+      --JsonRpc.Enabled=true
+      --JsonRpc.Host=0.0.0.0
+      --JsonRpc.Port=8545
+      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
+      --JsonRpc.JwtSecretFile=/jwt.hex
+      --JsonRpc.EngineHost=0.0.0.0
+      --JsonRpc.EnginePort=8551
+      --Network.DiscoveryPort=30304
+      --HealthChecks.Enabled=false
+      --Pruning.CacheMb=2048
     logging:
       driver: "local"
 
-  cl-client:
-    hostname: cl-client
-    container_name: cl-client
+// highlight-start
+  consensus:
+    container_name: consensus
     image: chainsafe/lodestar:latest
     restart: always
-    depends_on:
-      - el-client
+    networks:
+      - gnosis_net
+    ports:
+      - 9001:9001/tcp # p2p
+      - 9001:9001/udp # p2p
+      - 5054:5054/tcp # metrics
+    expose:
+      - 4000
+    volumes:
+      - /home/$USER/gnosis/consensus/data:/data
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=6144
     command: |
       beacon
-      --network gnosis
-      --dataDir /data
-      --rest
-      --rest.address 0.0.0.0
-      --execution.urls http://192.168.32.100:8551
-      --jwt-secret /jwt.hex
-      --logFile none
-      --checkpointSyncUrl $CHECKPOINT_URL
-    networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.101
-    ports:
-      - "9000:9000" #p2p
-#      - "9596:9596" # REST API port
-    volumes:
-      - /home/$USER/gnosis/cl-client/data:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    environment:
-      - NODE_OPTIONS=--max-old-space-size=4096
+      --network=gnosis
+      --dataDir=/data
+      --preset=gnosis
+      --eth1=true
+      --execution.urls=http://execution:8551
+      --jwt-secret=/jwt.hex
+      --logFile=/data/logs/beacon.log
+      --logFileLevel=info
+      --port=9001
+      --rest=true
+      --rest.address=0.0.0.0
+      --rest.port=4000
+      --rest.cors=*
+      --discv5=true
+      --targetPeers=50
+      --metrics=true
+      --metrics.port=5054
+      --checkpointSyncUrl=https://checkpoint.gnosischain.com/
     logging:
       driver: "local"
-
-  validator:
-    hostname: validator
-    container_name: validator
-    image: chainsafe/lodestar:latest
-    restart: always
-    depends_on:
-      - cl-client
-    command: |
-      validator
-      --network gnosis
-      --dataDir /data
-      --importKeystores /keystores
-      --importKeystoresPassword /keystores/password.txt
-      --server http://192.168.32.101:9596
-      --logFile none
-    networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.102
-    volumes:
-      - /home/$USER/gnosis/cl-client/validators:/data/validators
-      - /home/$USER/gnosis/cl-client/keystores:/keystores
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    environment:
-      - NODE_OPTIONS=--max-old-space-size=4096
-    logging:
-      driver: "local"
+// highlight-end
 
 networks:
   gnosis_net:
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.32.0/24
+    name: gnosis_net
 ```
 
-```mdx-code-block
-  </div>
-</details>
-```
+### 3. Start Containers
 
-### 3. Environment Variables
+Start the consensus layer client listed in the compose file:
 
-Add an `.env` file with your WAN IP (`curl https://ipinfo.io/ip`), fee recepient (your Gnosis address), graffiti, and checkpoint url in `/home/$USER/gnosis/.env`.
-
-```
-WAN_IP:123.456.789.012
-FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-GRAFFITI=gnosischain/lodestar
-CHECKPOINT_URL=https://checkpoint.gnosischain.com/
-```
-
-
-### 4. Keystore Location
-
-Add your keystores in `/home/$USER/gnosis/cl-client/keystores/` and their password in a file `/home/$USER/gnosis/cl-client/keystores/password.txt` to get this file structure:
-
-```
-/home/$USER/gnosis/
-├── docker-compose.yml
-├── .env
-├── jwtsecret/
-├── el-client/
-└── cl-client/
-    ├── data/
-    └── keystores/
-        ├── keystore-001.json
-        ├── keystore-002.json
-        └── password.txt
-```
-
-
-### 5. JWT Secret
-
-Create a new JWT secret file:
-
-```
-openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
-```
-
-
-### 6. Import Keystores
-
-Import your validators:
-
-When the Lodestar `validator` container starts, it will search the directories for keystores and passwords, and import them automatically.
-
-
-### 7. Start Containers
-
-Start the execution layer client, consensus layer client, and validator service listed in the compose file:
-
-```
+```shell
 cd /home/$USER/gnosis
 docker-compose up -d
 ```
 
+### 4. Monitor Logs
 
-### 8. Monitor Logs
+Check your logs for each service (`execution` and `consensus`) with:
 
-Check your logs for each service (`el-client`, `cl-client`, or `validator`) with:
-
-```
+```shell
 docker logs -f --tail 500 <service>
 ```
 
-
-### 9. Make a Deposit
-
-Make deposit once your node is fully synced (this can take a few hours depending on setup).
-
-:::caution
-**At this stage you should have your EL and CL fully synced and validators must be imported to your CL.**
-:::
-
-_See section Fund your Validator_ 
-
-
-### 10. Updating your Node
+### 5. Updating your Node
 
 To update, just pull the new images, then stop and restart your docker-compose file:
 
-```
+```shell
 cd /home/$USER/gnosis
 docker-compose pull
 docker-compose stop

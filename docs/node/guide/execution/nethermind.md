@@ -4,31 +4,160 @@ title: Nethermind
 
 # Nethermind
 
-Execution layer client developed by nethermind team [https://nethermind.io/nethermind-client/](https://nethermind.io/nethermind-client/) 
+Nethermind is an Execution layer client developed by the [Nethermind team](https://nethermind.io/nethermind-client/).
+
+**Nethermind reference:**
+
+[https://docs.nethermind.io/nethermind/](https://docs.nethermind.io/nethermind/)
 
 There are 2 main options for running Nethermind:
-* Option 1: [As a system process](#as-system-process)
-* Option 2: [Using Docker](#using-docker)
+* Option 1: [Using Docker](#using-docker)
+* Option 2: [As a system process](#as-system-process)
 
-Nethermind can be configured to run different types of nodes: 
-* Full Node
+Nethermind can be configured to run different types of nodes:
+* Full Node (Recommended)
 * [Archival Node](#archival-node)
 
 
-## Option 1: Running as System Process {#as-system-process}
+:::note
+Ensure the prerequisite steps have been completed in **Step 1: Configure Server**.
+:::
+
+## Option 1: Using Docker {#using-docker}
+
+
+### 1. Folder Structure
+
+Create your folder structure:
+
+```shell
+mkdir -p /home/$USER/gnosis/execution
+mkdir /home/$USER/gnosis/jwtsecret
+```
+
+```
+/home/$USER/gnosis/
+├── jwtsecret/
+└── execution/
+```
+
+
+### 2. Docker Compose
+
+Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+
+```mdx-code-block
+<details>
+  <summary>Example Docker Compose file</summary>
+  <div>
+```
+
+```yaml title="/home/$USER/gnosis/docker-compose.yml"
+version: "3"
+services:
+
+  execution:
+    container_name: execution
+    image: nethermind/nethermind:latest
+    restart: always
+    stop_grace_period: 1m
+    networks:
+      - gnosis_net
+    ports:
+      - 30304:30304/tcp # p2p
+      - 30304:30304/udp # p2p
+    expose:
+      - 8545 # rpc
+      - 8551 # engine api
+    volumes:
+      - /home/$USER/gnosis/execution:/data
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    command: |
+      --config=xdai
+      --datadir=/data
+      --log=INFO
+      --Sync.SnapSync=false
+      --JsonRpc.Enabled=true
+      --JsonRpc.Host=0.0.0.0
+      --JsonRpc.Port=8545
+      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
+      --JsonRpc.JwtSecretFile=/jwt.hex
+      --JsonRpc.EngineHost=0.0.0.0
+      --JsonRpc.EnginePort=8551
+      --Network.DiscoveryPort=30304
+      --HealthChecks.Enabled=false
+      --Pruning.CacheMb=2048
+    logging:
+      driver: "local"
+
+networks:
+  gnosis_net:
+    name: gnosis_net
+```
+
+```mdx-code-block
+  </div>
+</details>
+```
+
+
+### 3. JWT Secret
+
+The JWT secret is a token that allows the EL client to communicate with the CL client, and is required for Nethermind to operate post-merge. We use `rand` to create a random string, and store the `jwt.hex` file in `/home/$USER/gnosis/jwtsecret/`.
+
+Create a new JWT secret file:
+
+```shell title="/home/$USER/gnosis/jwtsecret/jwt.hex"
+openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
+```
+
+
+### 4. Start Container
+
+Start the Execution layer client listed in the compose file:
+
+```shell
+cd /home/$USER/gnosis
+docker-compose up -d
+```
+
+
+### 5. Monitor Logs
+
+Check your logs with:
+
+```shell
+docker logs -f --tail 500 execution
+```
+
+
+### 6. Updating your Node
+
+To update, just pull the new image, then stop and restart your docker-compose file:
+
+```shell
+cd /home/$USER/gnosis
+docker-compose pull
+docker-compose stop
+docker-compose up -d
+```
+
+## Option 2: Running as System Process {#as-system-process}
 
 ### Installing Nethermind {#installing-nethermind}
 
-[https://downloads.nethermind.io/](https://downloads.nethermind.io/) 
+[https://downloads.nethermind.io/](https://downloads.nethermind.io/)
 
 
 ### Running Nethermind {#running-nethermind}
 
-Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure your node from release. 
+Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure your node from release.
 
-[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release) 
+[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-p    ost-merge#running-release)
 
-Windows 
+Windows
 ```
 # Gnosis Mainnet
 ./Nethermind.Runner --config xDai --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
@@ -46,119 +175,19 @@ nethermind --config xDai --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 ```
 
-## Option 2: Using Docker {#using-docker}
-
-
-### Pulling Nethermind Docker Images {#pulling-nethermind-docker-images}
-
-[https://docs.nethermind.io/nethermind/installing-nethermind/docker](https://docs.nethermind.io/nethermind/installing-nethermind/docker) 
-
-
-### Using Docker to run Nethermind {#using-docker-to-run-nethermind}
-
-**Ensure the prerequisite steps have been completed in ‘Advanced> Initial Set up’ section.**
-
-**Create Folder for Nethermind**
-
-```
-cd
-mkdir /home/<USER>/nethermind
-```
-
-
-**make the JWT Secret **
-
-This is the token that allows the EL client to communicate with the CL client, we use `rand` to create a random string, and store the `jwt.hex` to `/var/lib/jwtsecret/ `this directory can be changed, if so you need to reflect the correct directory.
-
-```
-sudo mkdir -p /var/lib/jwtsecret
-openssl rand -hex 32 | sudo tee /var/lib/jwtsecret/jwt.hex > /dev/null
-```
-
-
-**Create Docker-compose file**
-
-```
-cd nethermind
-nano /home/<USER>/nethermind/docker-compose.yml
-```
-
-**Paste the following**
-
-
-```
-version: "3.7"
-services:
-
-  nethermind:
-    hostname: nethermind
-    container_name: nethermind
-    image: nethermindeth/nethermind:latest
-    restart: always
-    stop_grace_period: 1m
-    networks:
-      net:
-        ipv4_address: 192.168.32.100
-    ports:
-      - "30303:30303/tcp" # p2p
-      - "30303:30303/udp" # p2p
-      - "8551:8551/tcp"
-    volumes:
-      - /home/<USER>/nethermind/data:/nethermind/data
-      - /home/<USER>/nethermind/keystore:/nethermind/keystore
-      - /home/<USER>/nethermind/logs:/nethermind/logs
-      - /var/lib/jwtsecret/jwt.hex:/var/lib/jwtsecret/jwt.hex
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    environment:
-      - NETHERMIND_CONFIG=<chiado or xdai>
-      - NETHERMIND_JSONRPCCONFIG_ENABLED=true
-      - NETHERMIND_JSONRPCCONFIG_HOST=192.168.32.100
-      - NETHERMIND_JSONRPCCONFIG_PORT=8545
-      - NETHERMIND_JSONRPCCONFIG_JWTSECRETFILE=/var/lib/jwtsecret/jwt.hex
-      - NETHERMIND_JSONRPCCONFIG_ENGINEHOST=192.168.32.100
-      - NETHERMIND_JSONRPCCONFIG_ENGINEPORT=8551
-      - NETHERMIND_NETWORKCONFIG_DISCOVERYPORT=30303
-      - NETHERMIND_NETWORKCONFIG_P2PPORT=30303
-      - NETHERMIND_MERGECONFIG_ENABLED=true
-	Command:
-      --datadir=/data
-    logging:
-      driver: json-file 
-networks:
-  net:
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.32.0/24
-```
-
-**Start the EL container and check logs**
-
-```
-cd nethermind
-sudo docker-compose up -d
-sudo docker-compose logs nethermind -f
-```
 
 ## Nethermind Archival Node {#archival-node}
 
-An archival node executes heavy historical sync verifying all the transactions and keeping all the historical state. In Nethermind, the default configuration activates the pruning functionality.
+An archival node executes a heavy historical sync verifying all the transactions and keeping all of the historical data. Archive sync is the 'heaviest' and slowest sync mode, and can take 2 - 6 weeks depending on the speed of your IO.
 
 :::caution
 Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is +2 TB (Nov 2022).
 :::
 
-Select Network: `xdai_archive`
+Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from `xdai` to `xdai_archive`.
 
-Set the Following variable 
-```
-NETHERMIND_PRUNINGCONFIG_MODE: "None"
+```yaml
+    command: |
+      --config=xdai_archive
 ```
 
-In docker-compose 
-```
-	environment:
-  	- NETHERMIND_CONFIG=xdai_archive
-    - NETHERMIND_PRUNINGCONFIG_MODE: "None"
-```

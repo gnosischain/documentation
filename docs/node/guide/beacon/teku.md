@@ -1,237 +1,192 @@
 ---
+title: Teku
 ---
 
-# Teku
+# Run Beacon Node: Teku
 
 Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
 
+:::tip Learn more about Teku
 
-**Teku reference:**
+- [Teku Docs](https://docs.teku.consensys.net/en/latest/)
+- [Teku CLI Reference](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/)
 
-- [General Docs](https://docs.teku.consensys.net/en/latest/)
-- [CLI Reference](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/)
+:::
 
+:::info 
 
-## Using Docker
+- Gnosis' Teku repo has sample Dockerfiles and configs
+- [https://github.com/gnosischain/teku-client](https://github.com/gnosischain/teku-client)
 
+:::
+
+## Option 1: Run as a System Process 
+
+:::caution
+
+In progress
+
+:::
+
+## Option 2: Run using Docker
 
 Images are referenced under the following pattern `consensys/teku:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/consensys/teku/tags).
 
+:::caution
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
+:::
+
 ### 1. Folder Structure
 
-Create your folder structure:
+Create new folders:
 
+```shell
+mkdir -p /home/$USER/gnosis/consensus/beacon
 ```
-mkdir -p /home/$USER/gnosis/el-client
-mkdir -p /home/$USER/gnosis/cl-client/beacon
-mkdir -p /home/$USER/gnosis/cl-client/validator/keys
-mkdir /home/$USER/gnosis/cl-client/validator/passwords
-mkdir /home/$USER/gnosis/cl-client/validator/slashprotection
-mkdir /home/$USER/gnosis/jwtsecret
-```
+
+Including the folders from your Execution client, your folder structure should now look like:
 
 ```
 /home/$USER/gnosis/
 ├── jwtsecret/
-├── el-client/
-└── cl-client/
-    ├── beacon/
-    └── validators/
-        ├── keys/
-        ├── passwords/
-        └── slashprotection/
+├── execution/
+└── consensus/
+    └── beacon/
 ```
 
 
 ### 2. Docker Compose
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
-```mdx-code-block
-<details>
-  <summary>Example Docker Compose file</summary>
-  <div>
-```
-
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
 services:
 
-  el-client:
-    hostname: el-client
-    container_name: el-client
+  execution:
+    container_name: execution
     image: nethermind/nethermind:latest
     restart: always
     stop_grace_period: 1m
-    command: |
-      --config xdai
-      --datadir /data
-      --JsonRpc.Enabled true
-      --JsonRpc.Host 192.168.32.100
-      --JsonRpc.Port 8545
-      --JsonRpc.JwtSecretFile /jwt.hex
-      --JsonRpc.EngineHost 192.168.32.100
-      --JsonRpc.EnginePort 8551
-      --Merge.Enabled true
     networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.100
+      - gnosis_net
     ports:
-      - "30303:30303/tcp"
-      - "30303:30303/udp"
+      - 30304:30304/tcp # p2p
+      - 30304:30304/udp # p2p
+    expose:
+      - 8545 # rpc
+      - 8551 # engine api
     volumes:
-      - /home/$USER/gnosis/el-client:/data
+      - /home/$USER/gnosis/execution:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+    command: |
+      --config=xdai
+      --datadir=/data
+      --log=INFO
+      --Sync.SnapSync=false
+      --JsonRpc.Enabled=true
+      --JsonRpc.Host=0.0.0.0
+      --JsonRpc.Port=8545
+      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
+      --JsonRpc.JwtSecretFile=/jwt.hex
+      --JsonRpc.EngineHost=0.0.0.0
+      --JsonRpc.EnginePort=8551
+      --Network.DiscoveryPort=30304
+      --HealthChecks.Enabled=false
+      --Pruning.CacheMb=2048
     logging:
       driver: "local"
 
-  cl-client:
+// highlight-start
+  consensus:
     user: "${PUID:-1000}"
-    hostname: cl-client
-    container_name: cl-client
+    container_name: consensus
     image: consensys/teku:latest
     restart: always
-    depends_on:
-      - el-client
-    command: |
-      --network=gnosis
-      --data-base-path=/data
-      --ee-endpoint=http://192.168.32.100:8551
-      --ee-jwt-secret-file=/jwt.hex
-      --eth1-deposit-contract-max-request-size=8000
-      --p2p-advertised-ip=$WAN_IP
-      --log-destination=CONSOLE
-      --validator-keys=/data/validator/keys:/data/validator/passwords
-      --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
-      --validators-keystore-locking-enabled=false
-      --validators-graffiti=$GRAFFITI
-      --initial-state=${CHECKPOINT_URL}/eth/v2/debug/beacon/states/finalized
     networks:
-      gnosis_net:
-        ipv4_address: 192.168.32.101
+      - gnosis_net
     ports:
-      - 9000:9000 # p2p
+      - 9000:9000/tcp # p2p
+      - 9000:9000/udp # p2p
+      - 5055:5055/tcp # metrics
+    expose:
+      - 4000
     volumes:
-      - /home/$USER/gnosis/cl-client:/data
+      - /home/$USER/gnosis/consensus:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
       - JAVA_OPTS=-Xmx4g
+    command: |
+      --network=gnosis
+      --data-base-path=/data
+      --data-storage-archive-frequency=2048
+      --data-storage-mode=PRUNE
+      --data-storage-non-canonical-blocks-enabled=false
+      --log-destination=CONSOLE
+      --logging=info
+      --p2p-enabled=true
+      --p2p-port=9000
+      --p2p-peer-upper-bound=50
+      --rest-api-enabled=true
+      --rest-api-host-allowlist=*
+      --rest-api-interface=0.0.0.0
+      --rest-api-port=4000
+      --rest-api-cors-origins=*
+      --rest-api-docs-enabled=false
+      --ee-endpoint=http://execution:8551
+      --ee-jwt-secret-file=/jwt.hex
+      --eth1-deposit-contract-max-request-size=8000
+      --metrics-enabled=true
+      --metrics-host-allowlist=*
+      --metrics-interface=0.0.0.0
+      --metrics-port=5055
+      --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
     logging:
       driver: "local"
+// highlight-end
 
 networks:
   gnosis_net:
-    ipam:
-      driver: default
-      config:
-        - subnet: 192.168.32.0/24
+    name: gnosis_net
 ```
-
-```mdx-code-block
-  </div>
-</details>
-```
-
 
 ### 3. Environment Variables
 
-Add an `.env` file with your WAN IP (`curl https://ipinfo.io/ip`), fee recepient (your Gnosis address), graffiti, checkpoint url, and your user id (PUID, `id --user`) in `/home/$USER/gnosis/.env`.
+Add an `.env` file with your user id (`id --user`) in `/home/$USER/gnosis/.env`.
 
-```
-WAN_IP:123.456.789.012
-FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-GRAFFITI=gnosischain/teku
-CHECKPOINT_URL=https://checkpoint.gnosischain.com/
+``` title="/home/$USER/gnosis/.env
 PUID=1000
 ```
 
 
-### 4. Keystore Location
+### 4. Start Containers
 
-Add your keystores in `/home/$USER/gnosis/cl-client/validator/keys/` and their password in a file `/home/$USER/gnosis/cl-client/validator/passwords` to get this file structure:
+Start the consensus layer client listed in the compose file:
 
-:::note
-When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validator-keys))
-:::
-
-```
-/home/$USER/gnosis/
-├── docker-compose.yml
-├── .env
-├── jwtsecret/
-├── el-client/
-└── cl-client/
-    ├── beacon/
-    └── validators/
-        ├── keys/
-        │   ├── keystore-001.json
-        │   └── keystore-002.json
-        ├── passwords/
-        │   └── keystore-001.txt
-        │   └── keystore-002.txt
-        └── slashprotection/
-```
-
-
-### 5. JWT Secret
-
-Create a new JWT secret file:
-
-```
-openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
-```
-
-
-### 6. Import Keystores
-
-Import your validators:
-
-When the Teku `cl-client` container starts, it will search the directories for keystores and passwords, and import them automatically.
-
-:::note
-When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validator-keys))
-:::
-
-
-### 7. Start Containers
-
-Start the execution layer client and consensus layer client listed in the compose file:
-
-```
+```shell
 cd /home/$USER/gnosis
 docker-compose up -d
 ```
 
 
-### 8. Monitor Logs
+### 5. Monitor Logs
 
-Check your logs for each service (`el-client` or `cl-client`) with:
+Check your logs for each service (`execution` or `consensus`) with:
 
-```
+```shell
 docker logs -f --tail 500 <service>
 ```
 
 
-### 9. Make a Deposit
-
-Make deposit once your node is fully synced (this can take a few hours depending on setup).
-
-:::caution
-**At this stage you should have your EL and CL fully synced and validators must be imported to your CL.**
-:::
-
-_See section Fund your Validator_ 
-
-
-### 10. Updating your Node
+### 6. Updating your Node
 
 To update, just pull the new images, then stop and restart your docker-compose file:
 
-```
+```shell
 cd /home/$USER/gnosis
 docker-compose pull
 docker-compose stop
