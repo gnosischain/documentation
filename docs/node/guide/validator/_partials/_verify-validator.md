@@ -1,7 +1,7 @@
 
 
 
-After [depositing](../deposit.md) and [starting your validator](../run), your validator will go through a process of becoming active. 
+After [depositing](../deposit.md) and starting your validator, your validator will go through a process of becoming active. 
 
 ![](/img/node/verify/verify-status.png)
 **Image:** Process of Validator Activation
