@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
     ]}>
   <TabItem value="lighthouse">
 
-import InstallLighthousePartial from '@site/docs/node/guide/_partials/_install_cl_lighthouse.md';
+import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
 
 <InstallLighthousePartial />
 

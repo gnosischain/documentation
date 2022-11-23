@@ -26,7 +26,7 @@ mkdir gnosis && cd gnosis && mkdir jwtsectet && mkdir el-client && mkdir cl-clie
 
 <h3 id="generate-jwt">Generate JWT Secret</h3>
 
-import JwtGenerationPartial from '@site/docs/node/guide/_partials/_jwt-generation-partial.md';
+import JwtGenerationPartial from '@site/docs/node/guide/server/_partials/_jwt-generation-partial.md';
 
 <JwtGenerationPartial />
 

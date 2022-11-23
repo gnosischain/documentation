@@ -15,7 +15,7 @@ import InstallIntroPartial from '@site/docs/node/guide/_partials/_install-intro.
 
 ## Step 0: Review prerequisites and best practices
 
-import InstallPrereqsPartial from '@site/docs/node/guide/_partials/_install-prereqs.md';
+import InstallPrereqsPartial from '@site/docs/node/guide/server/_partials/_install-prereqs.md';
 
 <InstallPrereqsPartial />
 
@@ -25,7 +25,7 @@ import InstallPrereqsPartial from '@site/docs/node/guide/_partials/_install-prer
 Check out all recommended steps to [configure server](./configure-server.md)
 :::
 
-import InstallInitialPartial from '@site/docs/node/guide/_partials/_install-initial.md';
+import InstallInitialPartial from '@site/docs/node/guide/server/_partials/_install-initial.md';
 
 <InstallInitialPartial />
 
@@ -33,13 +33,13 @@ import InstallInitialPartial from '@site/docs/node/guide/_partials/_install-init
 
 In this step, you'll install an execution-layer client that the consensus-layer node will connect to.
 
-import RunExecutionNodePartial from '@site/docs/node/guide/_partials/_run-execution-client.md';
+import RunExecutionNodePartial from '@site/docs/node/guide/execution/_partials/_run-execution-client.md';
 
 <RunExecutionNodePartial />
 
 ## Step 3: Run a Beacon Node
 
-import RunBeaconNodePartial from '@site/docs/node/guide/_partials/_run-consensus-client.md';
+import RunBeaconNodePartial from '@site/docs/node/guide/beacon/_partials/_run-consensus-client.md';
 
 <RunBeaconNodePartial />
 
@@ -54,7 +54,9 @@ import RunBeaconNodePartial from '@site/docs/node/guide/_partials/_run-consensus
 
 ### Step 4a: Generate Validator Keys
 
-import GenerateValidatorKeysPartial from '@site/docs/node/guide/_partials/_generate_validator_keys.md';
+import GenerateValidatorKeysPartial from '@site/docs/node/guide/validator/_partials/_generate_validator_keys.md';
+
+
 
 <GenerateValidatorKeysPartial />
 
