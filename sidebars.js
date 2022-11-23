@@ -90,6 +90,7 @@ const sidebars = {
               'specs/hard-forks/1604400',
               'specs/hard-forks/spec.json-update',
               'specs/hard-forks/eip-1559',
+              'specs/hard-forks/merge'
             ],
           },
           'specs/security-audit',
