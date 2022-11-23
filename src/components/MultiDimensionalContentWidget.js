@@ -20,9 +20,16 @@ export const MultiDimensionalContentWidget = () => {
 		return selectedElement;
 	}
 
+	let clearEventListener = function(element) {
+		const clonedElement = element.cloneNode(true);
+	   element.replaceWith(clonedElement);
+	   return clonedElement;
+	   }
+
 	let disableByText = function (text) {
 		var targetElement = getByText(text);
 		targetElement.classList.add('disabled-tab');
+		clearEventListener(targetElement);
 	}
 
 	let enableByText = function (text) {
@@ -40,20 +47,6 @@ export const MultiDimensionalContentWidget = () => {
 		var targetElement = getByText(text);
 		var isSelected = targetElement.classList.contains('tabs__item--active');
 		return isSelected;
-	}
-
-	let jwtOnly = function () {
-		var isOnAuthPage = window.location.href.indexOf('/authentication') > -1;
-		return isOnAuthPage;
-	}
-
-	let isViewingMergePrep = function () {
-		var isOnMergePrepPage = window.location.href.indexOf('/prepare-for-merge') > -1;
-		return isOnMergePrepPage;
-	}
-
-	let scrollDownASmidge = function () {
-		window.scrollBy(0, 10)
 	}
 
 	let toggleUpdated = function (element) {
@@ -98,10 +91,11 @@ export const MultiDimensionalContentWidget = () => {
 		else if (isSelectedByText('Teku'))
 			selectedCL = "Teku";
 
-		//if (isSelectedByText('IPC'))
-		//	selectedENBN = "IPC";
-		//else
-		//	selectedENBN = "HTTP-JWT";
+		disableByText("Besu")
+		disableByText("Erigon")
+		disableByText("Geth")
+		disableByText("Nimbus")
+		disableByText("Prysm")
 
 		var tabWidget = document.querySelector('.install-tabs');
 		tabWidget.dataset.selectedOS = selectedOS;
@@ -125,9 +119,6 @@ export const MultiDimensionalContentWidget = () => {
 					element.addEventListener("click", function (event) {
 						var targetElement = event.target;
 						var textContent = targetElement.textContent;
-
-						//if (textContent == 'HTTP-JWT') { }
-						//enableByText('Nethermind');
 
 						toggleUpdated(targetElement);
 						stashConfig();
