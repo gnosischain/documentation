@@ -91,12 +91,6 @@ export const MultiDimensionalContentWidget = () => {
 		else if (isSelectedByText('Teku'))
 			selectedCL = "Teku";
 
-		disableByText("Besu")
-		disableByText("Erigon")
-		disableByText("Geth")
-		disableByText("Nimbus")
-		disableByText("Prysm")
-
 		var tabWidget = document.querySelector('.install-tabs');
 		tabWidget.dataset.selectedOS = selectedOS;
 		tabWidget.dataset.selectedNetwork = selectedNetwork;
@@ -119,12 +113,24 @@ export const MultiDimensionalContentWidget = () => {
 					element.addEventListener("click", function (event) {
 						var targetElement = event.target;
 						var textContent = targetElement.textContent;
-
+						console.log(textContent)
 						toggleUpdated(targetElement);
 						stashConfig();
 					}, false)
 				}
 			});
+
+			//Disable unsupported clients
+			disableByText("Besu")
+			disableByText("Erigon")
+			disableByText("Geth")
+			disableByText("Nimbus")
+			disableByText("Prysm")
+
+			//Select defaults
+			selectByText("Nethermind")
+			selectByText("Lighthouse")
+			
 			stashConfig();
 		}, 100)
 	}

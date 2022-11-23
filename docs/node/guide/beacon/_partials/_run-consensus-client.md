@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
 
 ```mdx-code-block
 
@@ -12,8 +13,7 @@ import TabItem from '@theme/TabItem';
     ]}>
   <TabItem value="lighthouse">
 
-    import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
-    <InstallLighthousePartial />
+<InstallLighthousePartial />
 
   </TabItem>
 
