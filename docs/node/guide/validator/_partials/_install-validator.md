@@ -1,6 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+```mdx-code-block
 <Tabs groupId="consensus-clients" defaultValue="lighthouse" values={[
   {label: 'Lighthouse', value: 'lighthouse'},
   {label: 'Lodestar', value: 'lodestar'},
@@ -17,18 +18,51 @@ import InstallLighthouseValidatorPartial from '@site/docs/node/guide/validator/_
   </TabItem>
 
   <TabItem value="lodestar">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Lodestar](../../run/lodestar.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 
   <TabItem value="nimbus">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Nimbus](../../run/nimbus.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 
   <TabItem value="prysm">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Prysm](../../run/prysm.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 
   <TabItem value="teku">
-  <p>WIP</p>
+```
+
+:::info
+
+Please refer to [Run a Beacon Node: Teku](../../run/teku.md)
+
+:::
+
+```mdx-code-block
   </TabItem>
 </Tabs>
+```

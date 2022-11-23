@@ -2,8 +2,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-
-
 <Tabs className="tabgroup-with-label os-tabgroup" groupId="os" defaultValue="others" values={[
     {label: 'Linux, MacOS, Arm64', value: 'others'},
     {label: 'Windows', value: 'win'}
