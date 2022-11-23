@@ -62,7 +62,6 @@ const sidebars = {
             link: {type: 'doc', id: 'specs/gbc/README'},
             items: [
               'specs/gbc/upgradeability',
-              'specs/gbc/faq',
             ],
           },
           {
@@ -194,38 +193,105 @@ const sidebars = {
   ],
 
   node: [
-    'node/README',
-    'node/incentives',
     {
       type: 'category',
-      label: 'Validator Guide',
+      label: 'Overview',
+      link: {type: 'doc', id: 'node/README'},
       collapsed: false,
-      link: {type: 'doc', id: 'node/get-started'},
       items: [
-        "node/consensus-layer-validator",
-        "node/execution-layer-validator",
-        "node/validator-deposits",
-        "node/validator-withdrawls",
-        "node/migrating-a-validator",
-        "node/monitoring-nodes",
-        "node/voluntary-exit",
+        "node/architecture",
+        "node/rewards-penalties",
+        "node/faq",
       ],
     },
-    /*{
-      type: 'category',
-      label: 'Testnets',
-      collapsed: true,
-      link: {type: 'doc', id: 'node/testnets/README'},
-      items: [
-        "node/testnets/consensus-layer",
-        "node/testnets/execution-layer",
-        
-      ],
-    },*/
     {
-      type: 'link',
-      label: 'Landing Page',
-      href: 'https://www.gnosischain.com/',
+      type: 'category',
+      label: '1-click Tools',
+      link: { slug: 'node/tools', type: 'generated-index', title: '1-click Tools' },
+      collapsed: false,
+      items: [
+        "node/tools/dappnode", 
+        "node/tools/sedge", 
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Guide',
+      link: {type: 'doc', id: 'node/guide/README'},
+      collapsed: false,
+      items: [
+        'node/guide/configure-server',
+        {
+          type: 'category',
+          label: 'Step 2: Run Execution Client',
+          link: { slug: 'node/guide/execution', type: 'generated-index', title: 'Execution Clients' },
+          collapsed: true,
+          items: [
+            
+            "node/guide/execution/nethermind",
+            "node/guide/execution/besu",
+            "node/guide/execution/erigon",
+            "node/guide/execution/geth",
+            "node/guide/execution/openethereum",
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Step 3: Run Beacon Node',
+          link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
+          collapsed: true,
+          items: [
+            "node/guide/beacon/lodestar",
+            "node/guide/beacon/teku",
+            "node/guide/beacon/lighthouse",
+            "node/guide/beacon/nimbus",
+            "node/guide/beacon/prysm",
+          ],
+        },
+        {
+          type: 'category',
+          label: '(Optional) Step 4: Run Validator',
+          link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
+          collapsed: true,
+          items: [
+            {
+              type: 'category',
+              label: 'Generate Validator Keys',
+              link: {type: 'doc', id: 'node/guide/validator/generate-keys'},
+              collapsed: true,
+              items: [
+                { id: 'node/guide/validator/generate-keys-cli-tool/README', label: 'CLI Tool', type: 'doc', },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Run Validator',
+              link: { slug: 'node/guide/validator/run', type: 'generated-index', title: 'Run Validator' },
+              collapsed: true,
+              items: [
+                "node/guide/validator/run/lodestar",
+                "node/guide/validator/run/teku",
+                "node/guide/validator/run/lighthouse",
+              ]
+            },
+            "node/guide/validator/deposit",
+            "node/guide/validator/verify"
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Managing your Node',
+      link: { slug: 'node/management/', type: 'generated-index', title: 'Managing your Node' },
+      collapsed: false,
+      items: [
+        "node/management/monitoring-node",
+        "node/management/migrating-validator",
+        "node/management/voluntary-exit",
+        "node/management/withdrawals",
+        "node/management/preparing-for-the-merge",
+      ],
     },
   ],
 
@@ -706,59 +772,3 @@ const sidebars = {
 };
 
 module.exports = sidebars;
-/*
-{
-      type: 'category',
-      label: 'Wallets',
-      collapsed: false,
-      link: {type: 'doc', id: 'tools/wallets/README'},
-      items: [
-        {
-          type: 'category',
-          label: 'Metamask',
-          collapsed: true,
-          link: {type: 'doc', id: 'tools/wallets/metamask/README'},
-          items: [
-            {
-              type: 'link',
-              label: 'Add custom tokens',
-              href: 'https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask',
-            },
-            'tools/wallets/metamask/change-rpc-url',
-            {
-              type: 'link',
-              label: 'With a Ledger or Trezor',
-              href: 'https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet',
-            },
-          ],
-        },
-        'tools/wallets/safe',
-        {
-          type: 'category',
-          label: 'Hardware',
-          collapsed: true,
-          items: [
-            'tools/wallets/dcent',
-            'tools/wallets/ledger',
-            'tools/wallets/trezor',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Software',
-          collapsed: true,
-          items: [
-            {
-              type: 'link',
-              label: 'Alpha Wallet',
-              href: 'https://alphawallet.com/asset/the-best-wallet-for-xdai/',
-            },
-            {
-              type: 'link',
-              label: 'Ambire Wallet',
-              href: 'https://www.ambire.com/',
-            },
-            {
-              type: 'link',
-              label: 'Coinbase Wallet',
-              href: 'h*/
