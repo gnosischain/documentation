@@ -33,7 +33,7 @@ https://lighthouse-book.sigmaprime.io/installation.html
 :::tip Learn More about Lighthouse
 
 - Lighthouse Repo: [https://github.com/sigp/lighthouse](https://github.com/sigp/lighthouse)
-- Lighthouse Documentation: [](https://lighthouse-book.sigmaprime.io/) 
+- Lighthouse Documentation: [https://lighthouse-book.sigmaprime.io/](https://lighthouse-book.sigmaprime.io/) 
 
 :::
 
