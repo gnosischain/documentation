@@ -4,19 +4,60 @@ title: Teku
 
 # Run Beacon Node: Teku
 
-Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
+:::caution Version check
 
-:::tip Learn more about Teku
-
-- [Teku Docs](https://docs.teku.consensys.net/en/latest/)
-- [Teku CLI Reference](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/)
+This page's content is up-to-date for [Teku v22.11.0](https://github.com/ConsenSys/teku/releases/tag/22.11.0).
 
 :::
 
-:::info 
+:::caution
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+:::
 
-- Gnosis' Teku repo has sample Dockerfiles and configs
+## Overview
+
+Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
+
+### Key Links
+
+:::info Download Teku
+
+Visit Teku's page on how to download Lodestar. 
+
+https://docs.teku.consensys.net/en/latest/
+
+:::
+
+:::tip
+
+Gnosis' maintains a repo with sample Teku Dockerfiles and configs
 - [https://github.com/gnosischain/teku-client](https://github.com/gnosischain/teku-client)
+
+:::
+
+| Content            | Link                                                                |
+| ------------------ | ------------------------------------------------------------------- |
+| Release Page       | https://github.com/ConsenSys/teku/releases                          |
+| Docker Images      | https://hub.docker.com/r/consensys/teku                             |
+| Teku Docs          | https://docs.teku.consensys.net/en/latest/                          |
+| Teku CLI Reference | https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/ |
+
+### Checkpoint Sync
+
+We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and avoid long range attacks. 
+
+Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/. 
+
+```shell
+# Usage
+$ teku
+  --initial-state https://checkpoint.gnosischain.com/
+```
+
+:::info More about Checkpoint Sync
+
+- Teku's [Checkpoint Sync docs](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Checkpoint-Start/)
+- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
 
 :::
 
@@ -32,9 +73,6 @@ In progress
 
 Images are referenced under the following pattern `consensys/teku:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/consensys/teku/tags).
 
-:::caution
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
-:::
 
 ### 1. Folder Structure
 
@@ -99,7 +137,6 @@ services:
     logging:
       driver: "local"
 
-// highlight-start
   consensus:
     user: "${PUID:-1000}"
     container_name: consensus
@@ -114,13 +151,16 @@ services:
     expose:
       - 4000
     volumes:
+// highlight-start
       - /home/$USER/gnosis/consensus:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+// highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
       - JAVA_OPTS=-Xmx4g
     command: |
+// highlight-next-line
       --network=gnosis
       --data-base-path=/data
       --data-storage-archive-frequency=2048
@@ -144,10 +184,10 @@ services:
       --metrics-host-allowlist=*
       --metrics-interface=0.0.0.0
       --metrics-port=5055
+// highlight-next-line
       --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
     logging:
       driver: "local"
-// highlight-end
 
 networks:
   gnosis_net:
@@ -161,7 +201,6 @@ Add an `.env` file with your user id (`id --user`) in `/home/$USER/gnosis/.env`.
 ``` title="/home/$USER/gnosis/.env
 PUID=1000
 ```
-
 
 ### 4. Start Containers
 

@@ -2,6 +2,8 @@
 title: Lodestar
 ---
 
+# Run Beacon Node: Lodestar
+
 :::caution Version check
 
 This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2).
@@ -10,11 +12,9 @@ This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/Chain
 
 :::caution Prerequisites
 
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/)) for more information.
 
 :::
-
-# Run Beacon Node: Lodestar
 
 ## Overview
 
@@ -24,15 +24,15 @@ The Beacon Node requires an Execution client in order to operate. See [Step 2: R
 
 :::info Download Lodestar
 
-Visit Lodestar's page on how to download Lodestar. 
+Visit Lodestar's docs on how to download Lodestar. 
 
-https://lodestar.chainsafe.io/ 
+https://chainsafe.github.io/lodestar/
 
 :::
 
 :::tip
 
-Gnosis' maintains a repo with sample Dockerfiles and configs for Lodestar 
+Gnosis' maintains a repo with sample Lodestar Dockerfiles and configs
 
 [https://github.com/gnosischain/lodestar-client](https://github.com/gnosischain/lodestar-client)
 
@@ -153,18 +153,20 @@ services:
     expose:
       - 4000
     volumes:
+// highlight-start
       - /home/$USER/gnosis/consensus/data:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+// highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
       - NODE_OPTIONS=--max-old-space-size=6144
     command: |
       beacon
-      // highlight-next-line
+// highlight-next-line
       --network=gnosis
       --dataDir=/data
-      // highlight-next-line
+// highlight-next-line
       --preset=gnosis
       --eth1=true
       --execution.urls=http://execution:8551
@@ -180,7 +182,7 @@ services:
       --targetPeers=50
       --metrics=true
       --metrics.port=5054
-      // highlight-next-line
+// highlight-next-line
       --checkpointSyncUrl=https://checkpoint.gnosischain.com/ 
     logging:
       driver: "local"
