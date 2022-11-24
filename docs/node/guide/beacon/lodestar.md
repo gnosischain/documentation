@@ -4,19 +4,67 @@ title: Lodestar
 
 # Run Beacon Node: Lodestar
 
-An Ethereum consensus client by [ChainSafe](https://lodestar.chainsafe.io/).
+:::caution Version check
 
-:::tip Learn more about Lodestar
-
-- [General Docs](https://chainsafe.github.io/lodestar/)
-- [CLI Reference](https://chainsafe.github.io/lodestar/reference/cli/)
+This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2).
 
 :::
 
-:::info 
-- Gnosis' Lodestar repo has sample Dockerfiles and configs
-- [https://github.com/gnosischain/lodestar-client](https://github.com/gnosischain/lodestar-client)
+:::caution Prerequisites
+
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/)) for more information.
+
 :::
+
+## Overview
+
+- An Ethereum consensus client by [ChainSafe](https://lodestar.chainsafe.io/).
+
+### Key Links
+
+:::info Download Lodestar
+
+Visit Lodestar's docs on how to download Lodestar. 
+
+https://chainsafe.github.io/lodestar/
+
+:::
+
+:::tip
+
+Gnosis' maintains a repo with sample Lodestar Dockerfiles and configs
+
+[https://github.com/gnosischain/lodestar-client](https://github.com/gnosischain/lodestar-client)
+
+:::
+
+
+| Content       | Link                                                |
+| ------------- | --------------------------------------------------- |
+| Release Page  | https://github.com/ChainSafe/lodestar/releases/     |
+| Docker Images | https://hub.docker.com/r/chainsafe/lodestar/tags    |
+| General Docs  | https://chainsafe.github.io/lodestar/               |
+| CLI Reference | https://chainsafe.github.io/lodestar/reference/cli/ |
+
+### Checkpoint Sync
+
+We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and avoid long range attacks. 
+
+Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/. 
+
+```shell
+# Usage
+$ lodestar beacon 
+  --checkpointSyncUrl https://checkpoint.gnosischain.com/
+```
+
+:::info More about Checkpoint Sync
+
+- Lodestar's [Checkpoint Sync docs](https://chainsafe.github.io/lodestar/usage/beacon-management/#checkpoint-sync)
+- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
+
+:::
+
 ## Option 1: Run as a System Process
 
 :::caution
@@ -25,15 +73,9 @@ In progress
 
 :::
 
-## Option 2: Using Docker
+## Option 2: Run using Docker
 
 Images are referenced under the following pattern `chainsafe/lodestar:{image-tag}` with the `image-tag` referring to the image available on [Docker Hub](https://hub.docker.com/r/chainsafe/lodestar/tags).
-
-:::caution
-
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
-
-:::
 
 ### 1. Folder Structure
 
@@ -98,7 +140,6 @@ services:
     logging:
       driver: "local"
 
-// highlight-start
   consensus:
     container_name: consensus
     image: chainsafe/lodestar:latest
@@ -112,16 +153,20 @@ services:
     expose:
       - 4000
     volumes:
+// highlight-start
       - /home/$USER/gnosis/consensus/data:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+// highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
       - NODE_OPTIONS=--max-old-space-size=6144
     command: |
       beacon
+// highlight-next-line
       --network=gnosis
       --dataDir=/data
+// highlight-next-line
       --preset=gnosis
       --eth1=true
       --execution.urls=http://execution:8551
@@ -137,11 +182,10 @@ services:
       --targetPeers=50
       --metrics=true
       --metrics.port=5054
-      --checkpointSyncUrl=https://checkpoint.gnosischain.com/
+// highlight-next-line
+      --checkpointSyncUrl=https://checkpoint.gnosischain.com/ 
     logging:
       driver: "local"
-// highlight-end
-
 networks:
   gnosis_net:
     name: gnosis_net

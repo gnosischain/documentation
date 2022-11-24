@@ -4,13 +4,31 @@ title: Lighthouse
 
 # Run Beacon Node: Lighthouse
 
-:::danger
+:::caution Version check
 
-This client is not yet ready for public use. Validators are encouraged to run Teku or Lodestar in the interim.
+This page's content is up-to-date for [Lighthouse v3.3.0](https://github.com/sigp/lighthouse/releases/tag/v3.3.0).
 
 :::
 
+:::caution Prerequisites
+
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+
+:::
+
+## Overview
+
 Lighthouse is an Ethereum and Gnosis consensus layer client written in Rust by [Sigma Prime](https://lighthouse.sigmaprime.io/).
+
+### Key Links
+
+:::info Download Lighthouse 
+
+Visit Lighthouse's page on how to download Lighthouse. 
+
+https://lighthouse-book.sigmaprime.io/installation.html
+
+:::
 
 :::tip Learn More about Lighthouse
 
@@ -19,10 +37,39 @@ Lighthouse is an Ethereum and Gnosis consensus layer client written in Rust by [
 
 :::
 
-:::info 
-- Gnosis' Lighthouse repo has sample Dockerfiles and configs
-- [https://github.com/gnosischain/lighthouse-client](https://github.com/gnosischain/lighthouse-client)
+:::info  
+Gnosis maintains a repo with sample Lighthouse Dockerfiles and configs
+
+[https://github.com/gnosischain/lighthouse-client](https://github.com/gnosischain/lighthouse-client)
+
 :::
+
+| Content         | Link                                                      |
+| --------------- | --------------------------------------------------------- |
+| Release Page    | https://github.com/sigp/lighthouse/releases/              |
+| Docker Images   | https://hub.docker.com/repository/docker/sigp/lighthouse/ |
+| Lighthouse Docs | https://lighthouse-book.sigmaprime.io/                    |
+| Github Repo     | https://github.com/sigp/lighthouse                        |
+
+### Checkpoint Sync
+
+We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and avoid long range attacks. 
+
+Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/. 
+
+```shell
+# Usage
+$ lighthouse bn
+  --checkpointSyncUrl https://checkpoint.gnosischain.com/
+```
+
+:::info More about Checkpoint Sync
+
+- Lighthouse's [Checkpoint Sync docs](https://lighthouse-book.sigmaprime.io/checkpoint-sync.html)
+- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
+
+:::
+
 ## Option 1: Run as a System Process
 
 :::caution
@@ -39,7 +86,7 @@ Most users should use the `latest-modern` tag, which corresponds to the latest s
 
 :::caution
 
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](http://localhost:3000/node/guide/execution) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
 
 :::
 
@@ -120,13 +167,16 @@ services:
     expose:
       - 4000 # http
     volumes:
+// highlight-start
       - /home/$USER/gnosis/consensus/data:/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+// highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     command: |
       lighthouse
       beacon_node
+// highlight-next-line
       --network=gnosis
       --disable-upnp
       --datadir=/data
@@ -144,10 +194,10 @@ services:
       --metrics
       --metrics-port=5054
       --metrics-address=0.0.0.0
+// highlight-next-line
       --checkpoint-sync-url=https://checkpoint.gnosischain.com/
     logging:
       driver: "local"
-// highlight-end
 
 networks:
   gnosis_net:
