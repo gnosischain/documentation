@@ -12,7 +12,7 @@ This page's content is up-to-date for [Lighthouse v3.3.0](https://github.com/sig
 
 :::caution Prerequisites
 
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/_partials/_run-execution-client.md) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
 
 :::
 
