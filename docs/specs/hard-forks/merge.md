@@ -56,7 +56,7 @@ Similar to Ethereum, the Gnosis Beacon Chain will have a [Bellatrix epoch](https
 
 :::caution
 
-Core Devs are in the process of releasing merge-ready Client Images. Announcements will be made in the #validators channel in Gnosis Discord and on Twitter.
+Core Devs are in the process of releasing merge-ready Client Images. Announcements will be made in the [#validators channel in Gnosis Discord](https://discord.gg/gnosischain) and on [Twitter](https://twitter.com/gnosischain).
 
 :::
 
