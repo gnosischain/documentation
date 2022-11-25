@@ -54,7 +54,7 @@ import RunBeaconNodePartial from '@site/docs/node/guide/beacon/_partials/_run-co
 
 ### Step 4a: Generate Validator Keys
 
-import GenerateValidatorKeysPartial from '@site/docs/node/guide/validator/_partials/_generate_validator_keys.md';
+import GenerateValidatorKeysPartial from '@site/docs/node/guide/validator/_partials/_generate_validator_keys_cli.md';
 
 
 

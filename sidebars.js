@@ -257,10 +257,19 @@ const sidebars = {
             {
               type: 'category',
               label: 'Generate Validator Keys',
-              link: {type: 'doc', id: 'node/guide/validator/generate-keys'},
+              link: {type: 'doc', id: 'node/guide/validator/generate-keys/README'},
               collapsed: true,
               items: [
-                { id: 'node/guide/validator/generate-keys-cli-tool/README', label: 'CLI Tool', type: 'doc', },
+                {
+                  type: 'category',
+                  label: 'Command Line Tool',
+                  link: {type: 'doc', id: 'node/guide/validator/generate-keys/cli/README'},
+                  collapsed: true,
+                  items: [
+                    { id: 'node/guide/validator/generate-keys/cli/docs/README', label: 'Docs', type: 'doc', },
+                  ],
+                },
+                'node/guide/validator/generate-keys/wagyu',
               ],
             },
             {
