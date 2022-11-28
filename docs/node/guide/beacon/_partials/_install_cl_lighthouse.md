@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Execute Lighthouse
-                            <pre><code> ./lighthouse --network gnosis beacon_node --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwtsecret --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
+                            <pre><code> ./lighthouse --network gnosis beacon_node --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwt.hex --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
                         </li>
                     </ul>
                 </div>
@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Execute Lighthouse
-                            <pre><code> ./lighthouse --network gnosis beacon_node --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwtsecret --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
+                            <pre><code> ./lighthouse --network gnosis beacon_node --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwt.hex --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +82,7 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Execute Lighthouse
-                            <pre><code> ./lighthouse --network gnosis beacon_node --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwtsecret --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
+                            <pre><code> ./lighthouse --network gnosis beacon_node --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwt.hex --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
                         </li>
                     </ul>
                 </div>
@@ -106,7 +106,7 @@ import TabItem from '@theme/TabItem';
                         </li>
                         <li>
                             Execute Lighthouse
-                            <pre><code> ./lighthouse --network gnosis bn --staking --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwtsecret --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
+                            <pre><code> ./lighthouse --network gnosis bn --staking --http --execution-endpoint http://localhost:8551 --execution-jwt ../jwtsecret/jwt.hex --checkpoint-sync-url "https://checkpoint.gnosischain.com"</code></pre>
                         </li>
                     </ul>
                 </div>

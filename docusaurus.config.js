@@ -204,11 +204,11 @@ const config = {
         {
             name: "validator-data-generator-readme",
             sourceBaseUrl: "https://raw.githubusercontent.com/gnosischain/validator-data-generator/master/",
-            outDir: "docs/node/guide/validator/generate-keys-cli-tool",
+            outDir: "docs/node/guide/validator/generate-keys/cli/docs/",
             documents: ["README.md"],
             modifyContent(filename, content) {
               if (filename.includes("README")) {
-                  return { content: "# CLI Tool \n\n #" + content }
+                  return { content: "# CLI Tool Docs \n\n #" + content }
               }
               return undefined
           },
