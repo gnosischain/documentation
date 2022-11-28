@@ -173,7 +173,7 @@ docker-compose up -d
 Check your logs for each service (`execution` and `consensus`) with:
 
 ```shell
-docker logs -f --tail 500 <service>
+docker logs -f --tail 500 consensus
 ```
 
 ### 5. Updating your Node
