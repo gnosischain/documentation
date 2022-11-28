@@ -64,8 +64,8 @@ services:
     networks:
       - gnosis_net
     ports:
-      - 30304:30304/tcp # p2p
-      - 30304:30304/udp # p2p
+      - 30303:30303/tcp # p2p
+      - 30303:30303/udp # p2p
     expose:
       - 8545 # rpc
       - 8551 # engine api
@@ -86,7 +86,7 @@ services:
       --JsonRpc.JwtSecretFile=/jwt.hex
       --JsonRpc.EngineHost=0.0.0.0
       --JsonRpc.EnginePort=8551
-      --Network.DiscoveryPort=30304
+      --Network.DiscoveryPort=30303
       --HealthChecks.Enabled=false
       --Pruning.CacheMb=2048
     logging:

@@ -118,40 +118,8 @@ version: "3"
 services:
 
   execution:
-    container_name: execution
-    image: nethermind/nethermind:latest
-    restart: always
-    stop_grace_period: 1m
-    networks:
-      - gnosis_net
-    ports:
-      - 30304:30304/tcp # p2p
-      - 30304:30304/udp # p2p
-    expose:
-      - 8545 # rpc
-      - 8551 # engine api
-    volumes:
-      - /home/$USER/gnosis/execution:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    command: |
-      --config=xdai
-      --datadir=/data
-      --log=INFO
-      --Sync.SnapSync=false
-      --JsonRpc.Enabled=true
-      --JsonRpc.Host=0.0.0.0
-      --JsonRpc.Port=8545
-      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
-      --JsonRpc.JwtSecretFile=/jwt.hex
-      --JsonRpc.EngineHost=0.0.0.0
-      --JsonRpc.EnginePort=8551
-      --Network.DiscoveryPort=30304
-      --HealthChecks.Enabled=false
-      --Pruning.CacheMb=2048
-    logging:
-      driver: "local"
+    # From Step 2
+    # ...
 
 // highlight-start
   consensus:
@@ -161,8 +129,8 @@ services:
     networks:
       - gnosis_net
     ports:
-      - 9001:9001/tcp # p2p
-      - 9001:9001/udp # p2p
+      - 9000:9000/tcp # p2p
+      - 9000:9000/udp # p2p
       - 5054:5054/tcp # metrics
     expose:
       - 4000 # http
@@ -180,7 +148,7 @@ services:
       --network=gnosis
       --disable-upnp
       --datadir=/data
-      --port=9001
+      --port=9000
       --http
       --http-address=0.0.0.0
       --http-port=4000
