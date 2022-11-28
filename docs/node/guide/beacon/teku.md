@@ -102,40 +102,8 @@ version: "3"
 services:
 
   execution:
-    container_name: execution
-    image: nethermind/nethermind:latest
-    restart: always
-    stop_grace_period: 1m
-    networks:
-      - gnosis_net
-    ports:
-      - 30304:30304/tcp # p2p
-      - 30304:30304/udp # p2p
-    expose:
-      - 8545 # rpc
-      - 8551 # engine api
-    volumes:
-      - /home/$USER/gnosis/execution:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    command: |
-      --config=xdai
-      --datadir=/data
-      --log=INFO
-      --Sync.SnapSync=false
-      --JsonRpc.Enabled=true
-      --JsonRpc.Host=0.0.0.0
-      --JsonRpc.Port=8545
-      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
-      --JsonRpc.JwtSecretFile=/jwt.hex
-      --JsonRpc.EngineHost=0.0.0.0
-      --JsonRpc.EnginePort=8551
-      --Network.DiscoveryPort=30304
-      --HealthChecks.Enabled=false
-      --Pruning.CacheMb=2048
-    logging:
-      driver: "local"
+    # From Step 2
+    # ...
 
   consensus:
     user: "${PUID:-1000}"
@@ -147,7 +115,7 @@ services:
     ports:
       - 9000:9000/tcp # p2p
       - 9000:9000/udp # p2p
-      - 5055:5055/tcp # metrics
+      - 5054:5054/tcp # metrics
     expose:
       - 4000
     volumes:
@@ -183,7 +151,7 @@ services:
       --metrics-enabled=true
       --metrics-host-allowlist=*
       --metrics-interface=0.0.0.0
-      --metrics-port=5055
+      --metrics-port=5054
 // highlight-next-line
       --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
     logging:
