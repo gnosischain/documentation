@@ -57,7 +57,7 @@ $ sudo apt install ufw
 
 ```shell
 $ sudo ufw default deny incoming
-$ sudo default allow outgoing
+$ sudo ufw default allow outgoing
 ```
 
 ### (Optional) Deny or Allow SSH
