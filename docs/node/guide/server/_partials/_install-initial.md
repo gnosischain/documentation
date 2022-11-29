@@ -15,11 +15,11 @@ Create the following folder structure on your disk, the entire tutorial will ass
 ```
 
 ```shell
-$ mkdir gnosis && cd gnosis 
-$ mkdir jwtsecret && mkdir execution && mkdir consensus 
-$ cd consensus 
-$ mkdir data && mkdir keystores && mkdir validators
-$ cd ..
+mkdir gnosis && cd gnosis &&
+mkdir jwtsecret && mkdir execution && mkdir consensus &&
+cd consensus &&
+mkdir data && mkdir keystores && mkdir validators &&
+cd ..
 ```
 
 <Tabs groupId="protocol" defaultValue="jwt" values={[
