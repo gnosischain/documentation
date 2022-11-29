@@ -184,9 +184,9 @@ docker-compose up -d
 
 Check your logs for each service (`execution` or `consensus`) with:
 
-```shell
-docker logs -f --tail 500 <service>
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 
 ### 6. Updating your Node

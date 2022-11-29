@@ -190,11 +190,11 @@ docker-compose up -d
 
 ### 7. Monitor Logs
 
-Check your logs for each service (`execution` or `consensus`) with:
+Check your logs for each service (`execution`, `consensus` or `validator`) with:
 
-```shell
-docker logs -f --tail 500 <service>
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 
 ### 8. Make a Deposit
