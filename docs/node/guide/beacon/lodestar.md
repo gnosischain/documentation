@@ -5,15 +5,11 @@ title: Lodestar
 # Run Beacon Node: Lodestar
 
 :::caution Version check
-
 This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2).
-
 :::
 
 :::caution Prerequisites
-
 The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/)) for more information.
-
 :::
 
 ## Overview
@@ -23,11 +19,9 @@ The Beacon Node requires an Execution client in order to operate. See [Step 2: R
 ### Key Links
 
 :::info Download Lodestar
-
 Visit Lodestar's docs on how to download Lodestar. 
 
 https://chainsafe.github.io/lodestar/
-
 :::
 
 :::tip

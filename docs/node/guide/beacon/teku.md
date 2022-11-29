@@ -84,7 +84,7 @@ mkdir -p /home/$USER/gnosis/consensus/beacon
 
 Including the folders from your Execution client, your folder structure should now look like:
 
-```
+```shell
 /home/$USER/gnosis/
 ├── jwtsecret/
 ├── execution/

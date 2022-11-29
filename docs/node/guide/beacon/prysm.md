@@ -5,9 +5,7 @@ title: Prysm
 # Run Beacon Node: Prysm
 
 :::danger
-
 This client is not yet ready for public use. Validators are encouraged to run Teku or Lodestar in the interim.
-
 :::
 
 The [Prysm](https://github.com/prysmaticlabs/prysm) project is a Go implementation of the Ethereum protocols consensus layer, by [prysmaticlabs](https://prysmaticlabs.com/)
@@ -18,9 +16,7 @@ Repository: [https://github.com/gnosischain/prysm-client](https://github.com/gno
 ## Option 1: Run as System Process
 
 :::danger
-
 This client is not yet ready for public use. Validators are encouraged to run Teku, Lodestar, or Lighthouse in the interim.
-
 :::
 
 ## Option 2: Run using Docker
@@ -33,13 +29,13 @@ This client is not yet ready for public use. Validators are encouraged to run Te
 
 **Beacon Node**
 
-```
+```shell
 docker pull gnosischain/prysm-beacon:latest-<gnosis or chiado> 
 ```
 
 **Validator Node **
 
-```
+```shell
 docker pull gnosischain/prysm-validator:latest-<gnosis or chiado> 
 ```
 
@@ -53,7 +49,7 @@ Add your keystores in `./keystores` and the `password.txt` in a file `./keystore
 
 **Run Beacon Chain node with the attached Validator Process**
 
-```
+```shell
 docker-compose up -d consensus
 docker-compose up -d validator
 ```
