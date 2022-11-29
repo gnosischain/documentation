@@ -2,8 +2,6 @@
 title: Migrating a Validator
 ---
 
-# Migrating a Validator
-
 Migrating validators from one node to another (or from one vm instance to another) requires careful attention to avoid slashing. If you accidentally run the same validator key on 2 instances at the same time, even for a very short time period, you risk being slashed for an Attestation Violation. If this occurs, you will be removed as a validator and your GNO will be frozen and unavailable for withdrawal until after the GC/GBC merge.
 
 :::note
@@ -19,7 +17,10 @@ Specific instructions will differ depending on the client you are running. In ge
 3. Export slashing protection history from original validator. ([EIP-3076](https://eips.ethereum.org/EIPS/eip-3076))
 4. Download and backup original validator accounts (keystores).
 5. Import initial state and slashing protection history from original validator to the new validator.
-6. Remove account data from original validator, make sure it is not running!
+6. Remove account data from original validator, make sure it is not running! This is critical to avoid slashing! Some recommendations:
+    - Rename or move keys folder in the original validator to another location.
+    - Stop and remove containers (`docker-compose down`) if you are using Docker.
+    - Remove old images (`docker rmi $(docker images | grep 'gbc-')` if you used the Launchpad).
 7. Start new validator.
 
 :::danger
