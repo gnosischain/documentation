@@ -50,9 +50,9 @@ import TabItem from '@theme/TabItem';
 
 - Download the Windows package from the [Nethermind download page](https://downloads.nethermind.io/).
 
-- Unzip the file in the <code>execution</code> folder created in the previous step.
+- Unzip the file in the `execution` folder created in the previous step.
 
-- Navigate to the <code>execution</code> folder
+- Navigate to the `execution` folder
     ```shell
     cd execution
     ```
@@ -117,9 +117,9 @@ import TabItem from '@theme/TabItem';
 
 - Download the Windows package from the [Nethermind download page](https://downloads.nethermind.io/).
 
-- Unzip the file in the <code>execution</code> folder created in the previous step.
+- Unzip the file in the `execution` folder created in the previous step.
 
-- Navigate to the <code>execution</code> folder
+- Navigate to the `execution` folder
     ```shell
     cd execution
     ```
