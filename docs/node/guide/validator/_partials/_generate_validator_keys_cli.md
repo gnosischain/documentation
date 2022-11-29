@@ -85,5 +85,5 @@ We highly recommend generating keystores on a safe, completely offline device.
 - Save the location of the generated keys, and copy them in a backup USB memory or any other secure storage.
 
 :::success
-For custom setup and more instructions, check the [Validator Data Generation tool documentation](/node/guide/validator/generate-keys/cli/docs/).
+For custom setup and more instructions, check the [Validator Data Generation tool documentation](https://github.com/gnosischain/validator-data-generator/).
 :::
