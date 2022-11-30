@@ -128,9 +128,9 @@ docker-compose up -d
 
 Check your logs with:
 
-```shell
-docker logs -f --tail 500 execution
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 
 ### 6. Updating your Node
@@ -155,7 +155,7 @@ docker-compose up -d
 
 Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure your node from release.
 
-[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-p    ost-merge#running-release)
+[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release)
 
 Windows
 ```

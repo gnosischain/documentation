@@ -4,19 +4,17 @@ title: Teku
 
 # Run Validator: Teku
 
-## Option 1: Run as System Process
-
-:::caution
-
-In progress
-
-:::
-
-## Option 2: Run using Docker
-
 :::caution
 The Validator requires a Consensus client (also known as Beacon Node) in order to operate. See [Step 3: Run Beacon Node: Teku](../../beacon/teku.md) for more information.
 :::
+
+## Option 1: Run as System Process {#system-process}
+
+:::info
+In progress
+:::
+
+## Option 2: Run using Docker {#docker}
 
 ### 1. Folder Structure
 
@@ -49,7 +47,7 @@ Modify your docker-compose file with your favorite text editor and add the follo
 ```
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validator-keys=/data/validator/keys:/data/validator/passwords
-      --validators-keystore-locking-enabled=false
+      --validators-keystore-locking-enabled=true
       --validators-graffiti=$GRAFFITI
 ```
 
@@ -111,7 +109,7 @@ services:
 # highlight-start
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validator-keys=/data/validator/keys:/data/validator/passwords
-      --validators-keystore-locking-enabled=false
+      --validators-keystore-locking-enabled=true
       --validators-graffiti=$GRAFFITI
 # highlight-end
     logging:
@@ -190,11 +188,11 @@ docker-compose up -d
 
 ### 7. Monitor Logs
 
-Check your logs for each service (`execution` or `consensus`) with:
+Check your logs for each service (`execution`, `consensus` or `validator`) with:
 
-```shell
-docker logs -f --tail 500 <service>
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 
 ### 8. Make a Deposit

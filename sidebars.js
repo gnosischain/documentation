@@ -250,7 +250,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '(Optional) Step 4: Run Validator',
+          label: 'Step 4: Run Validator',
           link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
           collapsed: true,
           items: [
@@ -260,7 +260,7 @@ const sidebars = {
               link: {type: 'doc', id: 'node/guide/validator/generate-keys/README'},
               collapsed: true,
               items: [
-                {
+                /*{
                   type: 'category',
                   label: 'Command Line Tool',
                   link: {type: 'doc', id: 'node/guide/validator/generate-keys/cli/README'},
@@ -268,7 +268,8 @@ const sidebars = {
                   items: [
                     { id: 'node/guide/validator/generate-keys/cli/docs/README', label: 'Docs', type: 'doc', },
                   ],
-                },
+                },*/
+                'node/guide/validator/generate-keys/cli/README',
                 'node/guide/validator/generate-keys/wagyu',
               ],
             },

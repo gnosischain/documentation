@@ -126,10 +126,6 @@ export const MultiDimensionalContentWidget = () => {
 			disableByText("Geth")
 			disableByText("Nimbus")
 			disableByText("Prysm")
-
-			//Select defaults
-			selectByText("Nethermind")
-			selectByText("Lighthouse")
 			
 			stashConfig();
 		}, 100)

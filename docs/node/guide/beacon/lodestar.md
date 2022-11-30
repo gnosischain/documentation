@@ -2,18 +2,16 @@
 title: Lodestar
 ---
 
+import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials/_beacon_folder_structure.md';
+
 # Run Beacon Node: Lodestar
 
 :::caution Version check
-
 This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2).
-
 :::
 
 :::caution Prerequisites
-
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/)) for more information.
-
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
 :::
 
 ## Overview
@@ -23,11 +21,9 @@ The Beacon Node requires an Execution client in order to operate. See [Step 2: R
 ### Key Links
 
 :::info Download Lodestar
-
 Visit Lodestar's docs on how to download Lodestar. 
 
 https://chainsafe.github.io/lodestar/
-
 :::
 
 :::tip
@@ -79,22 +75,7 @@ Images are referenced under the following pattern `chainsafe/lodestar:{image-tag
 
 ### 1. Folder Structure
 
-Create new folders:
-
-```shell
-mkdir -p /home/$USER/gnosis/consensus/data
-```
-
-Including the folders from your Execution client, your folder structure should now look like:
-
-```shell
-/home/$USER/gnosis/
-├── jwtsecret/
-├── execution/
-└── consensus/
-    └── data/
-```
-
+<BeaconFolderStructurePartial />
 
 ### 2. Docker Compose
 
@@ -172,9 +153,9 @@ docker-compose up -d
 
 Check your logs for each service (`execution` and `consensus`) with:
 
-```shell
-docker logs -f --tail 500 <service>
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 ### 5. Updating your Node
 

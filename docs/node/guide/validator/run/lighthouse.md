@@ -4,21 +4,17 @@ title: Lighthouse
 
 # Run Validator: Lighthouse
 
-## Option 1: Run as System Process
-
 :::caution
+The Validator requires a Consensus Client (also known as Beacon Node) in order to operate. See See [Step 3: Run Beacon Node - Lighthouse](../../beacon/lighthouse.md) for more information.
+:::
 
+## Option 1: Run as System Process {#system-process}
+
+:::info
 In progress
-
 :::
 
-## Option 2: Run using Docker
-
-:::caution
-
-The Validator requires a Consensus Client (also known as Beacon Node) in order to operate. See **Step 3: Run Beacon Node** for more information.
-
-:::
+## Option 2: Run using Docker {#docker}
 
 ### 1. Folder Structure
 
@@ -158,9 +154,10 @@ docker-compose up -d
 
 Check your logs for each service (`execution`, `consensus`, or `validator`) with:
 
-```shell
-docker logs -f --tail 500 <service>
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
+
 
 ### 8. Make a Deposit
 

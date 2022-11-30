@@ -2,6 +2,8 @@
 title: Teku
 ---
 
+import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials/_beacon_folder_structure.md';
+
 # Run Beacon Node: Teku
 
 :::caution Version check
@@ -76,22 +78,7 @@ Images are referenced under the following pattern `consensys/teku:{image-tag}` w
 
 ### 1. Folder Structure
 
-Create new folders:
-
-```shell
-mkdir -p /home/$USER/gnosis/consensus/beacon
-```
-
-Including the folders from your Execution client, your folder structure should now look like:
-
-```
-/home/$USER/gnosis/
-├── jwtsecret/
-├── execution/
-└── consensus/
-    └── beacon/
-```
-
+<BeaconFolderStructurePartial />
 
 ### 2. Docker Compose
 
@@ -184,9 +171,9 @@ docker-compose up -d
 
 Check your logs for each service (`execution` or `consensus`) with:
 
-```shell
-docker logs -f --tail 500 <service>
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 
 ### 6. Updating your Node
