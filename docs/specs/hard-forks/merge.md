@@ -72,30 +72,32 @@ Core Devs are in the process of releasing merge-ready Client Images. Announcemen
 :::
 
 **EL client**
-| Client | Merge ready release | Status |
-| ------ | ------------------- | ------ |
-| Nethermind | v1.14.6 | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6
+
+| Client     | Merge ready release | Status                                                             |
+| ---------- | ------------------- | ------------------------------------------------------------------ |
+| Nethermind | v1.14.6             | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6 |
 
 **CL client**
 
-| Client | Merge ready release | Status |
-| ------ | ------------------- | ------ |
-| Teku       | v22.11.0 | ✅ Available https://github.com/ConsenSys/teku/releases/tag/22.11.0 
-| Lodestar   | v1.2.2 | ✅ Available https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2
-| Lighthouse | v3.3.0 | ✅ Available (https://github.com/sigp/lighthouse/releases/tag/v3.3.0)
-| Nimbus     | TBA    | ⌛ Coming soon
-| Prysm      | N/A    | ❌ Advised to switch to other clients.
+| Client     | Merge ready release | Status                                                                 |
+| ---------- | ------------------- | ---------------------------------------------------------------------- |
+| Teku       | v22.11.0            | ✅ Available https://github.com/ConsenSys/teku/releases/tag/22.11.0    |
+| Lodestar   | v1.2.2              | ✅ Available https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2 |
+| Lighthouse | v3.3.0              | ✅ Available (https://github.com/sigp/lighthouse/releases/tag/v3.3.0)  |
+| Nimbus     | TBA                 | ⌛ Coming soon                                                          |
+| Prysm      | N/A                 | ❌ Advised to switch to other clients.                                 |
 
 **DAppNode Packages**
-| Package | Merge ready release | Status |
-| ------ | ------------------- | ------ |
-| DAppNodePackage-nethermind-xdai | v1.0.17 | ✅ Available https://github.com/dappnode/DAppNodePackage-nethermind-xdai/releases/tag/v1.0.17 |
-| DAppNodePackage-teku-gnosis | v0.1.4 | ✅ Available https://github.com/dappnode/DAppNodePackage-teku-gnosis/releases/tag/v0.1.4 |
-| DAppNodePackage-web3signer-gnosis | v0.1.9 | ✅ Available https://github.com/dappnode/DAppNodePackage-web3signer-gnosis/releases/tag/v0.1.9 |
-| DAppNodePackage-lighthouse-gnosis | 0.1.4 | ✅ Available https://github.com/dappnode/DAppNodePackage-lighthouse-gnosis/releases/tag/v0.1.4 |
-| DAppNodePackage-gnosis-beacon-chain-prysm | 🚫 TBA | ⏳ TBA |
-| DAppNodePackage-Lodestar-Gnosis | 🟡 TBA | ⏳ After Merge |
-| DAppNodePackage-nimbus-gnosis | 🟡 TBA  | ⏳ After Merge  |
+
+| Package                                   | Merge ready release | Status                                                                                         |
+| ----------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| DAppNodePackage-nethermind-xdai           | v1.0.17             | ✅ Available https://github.com/dappnode/DAppNodePackage-nethermind-xdai/releases/tag/v1.0.17  |
+| DAppNodePackage-teku-gnosis               | v0.1.4              | ✅ Available https://github.com/dappnode/DAppNodePackage-teku-gnosis/releases/tag/v0.1.4       |
+| DAppNodePackage-web3signer-gnosis         | v0.1.9              | ✅ Available https://github.com/dappnode/DAppNodePackage-web3signer-gnosis/releases/tag/v0.1.9 |
+| DAppNodePackage-lighthouse-gnosis         | 0.1.4               | ✅ Available https://github.com/dappnode/DAppNodePackage-lighthouse-gnosis/releases/tag/v0.1.4 |
+| DAppNodePackage-gnosis-beacon-chain-prysm | 🚫 TBA             | ⏳ TBA                                                                                          |
+| DAppNodePackage-Lodestar-Gnosis           | 🟡 TBA             | ⏳ After Merge                                                                                  |
+| DAppNodePackage-nimbus-gnosis             | 🟡 TBA             | ⏳ After Merge                                                                                  |
 
 ### For DApps
 
