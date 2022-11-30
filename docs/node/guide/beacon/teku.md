@@ -2,6 +2,8 @@
 title: Teku
 ---
 
+import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials/_beacon_folder_structure.md';
+
 # Run Beacon Node: Teku
 
 :::caution Version check
@@ -76,22 +78,7 @@ Images are referenced under the following pattern `consensys/teku:{image-tag}` w
 
 ### 1. Folder Structure
 
-Create new folders:
-
-```shell
-mkdir -p /home/$USER/gnosis/consensus/beacon
-```
-
-Including the folders from your Execution client, your folder structure should now look like:
-
-```shell
-/home/$USER/gnosis/
-├── jwtsecret/
-├── execution/
-└── consensus/
-    └── beacon/
-```
-
+<BeaconFolderStructurePartial />
 
 ### 2. Docker Compose
 

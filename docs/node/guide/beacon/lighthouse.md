@@ -2,6 +2,8 @@
 title: Lighthouse
 ---
 
+import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials/_beacon_folder_structure.md';
+
 # Run Beacon Node: Lighthouse
 
 :::caution Version check
@@ -93,21 +95,7 @@ The Beacon Node requires an Execution client in order to operate. See [Step 2: R
 
 ### 1. Folder Structure
 
-Create new folders:
-
-```shell
-mkdir -p /home/$USER/gnosis/consensus/data
-```
-
-Including the folders from your Execution client, your folder structure should now look like:
-
-```shell
-/home/$USER/gnosis/
-├── jwtsecret/
-├── execution/
-└── consensus/
-    └── data/
-```
+<BeaconFolderStructurePartial />
 
 ### 2. Docker Compose
 

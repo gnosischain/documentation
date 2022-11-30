@@ -2,6 +2,8 @@
 title: Lodestar
 ---
 
+import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials/_beacon_folder_structure.md';
+
 # Run Beacon Node: Lodestar
 
 :::caution Version check
@@ -73,22 +75,7 @@ Images are referenced under the following pattern `chainsafe/lodestar:{image-tag
 
 ### 1. Folder Structure
 
-Create new folders:
-
-```shell
-mkdir -p /home/$USER/gnosis/consensus/data
-```
-
-Including the folders from your Execution client, your folder structure should now look like:
-
-```shell
-/home/$USER/gnosis/
-├── jwtsecret/
-├── execution/
-└── consensus/
-    └── data/
-```
-
+<BeaconFolderStructurePartial />
 
 ### 2. Docker Compose
 
