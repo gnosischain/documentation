@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gnosis Chain',
-  tagline: 'Documentation',
+  tagline: 'Gnosis Chain is one of the first Ethereum sidechains and has stayed true to its values.',
   url: 'https://docs.gnosischain.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
