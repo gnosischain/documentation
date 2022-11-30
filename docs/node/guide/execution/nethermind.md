@@ -155,7 +155,7 @@ docker-compose up -d
 
 Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure your node from release.
 
-[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-p    ost-merge#running-release)
+[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release)
 
 Windows
 ```
