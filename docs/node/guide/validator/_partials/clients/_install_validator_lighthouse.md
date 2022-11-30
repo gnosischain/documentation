@@ -27,7 +27,7 @@ To run a validator, we need to first import the keys generated in the previous s
 * To ease the import process, we will create a `password.txt` file containing the password used to encrypt the validator keys.
 
 ```shell   
-echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
+echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 ```
     
 * Import the validator keys using lighthouse:
@@ -35,9 +35,9 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
 ```shell
 ./lighthouse account_manager validator import \
     --network gnosis \
-    --password-file keystores/validator_keys/password.txt \
+    --password-file keystores/password.txt \
     --reuse-password \
-    --directory keystores/validator_keys \
+    --directory keystores \
     --datadir .
 ```
     
