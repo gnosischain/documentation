@@ -7,7 +7,7 @@ The HTTP connection between your beacon node and execution node needs to be auth
 Use a utility like OpenSSL to create the token via command: 
 
 ```shell
-openssl rand -hex 32 | tr -d "\n" > "jwt.hex"
+openssl rand -hex 32 | tr -d "\n" > "./jwtsecret/jwt.hex"
 ```
 
 Create the file by running:
