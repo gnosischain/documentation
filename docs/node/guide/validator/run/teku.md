@@ -49,7 +49,7 @@ Modify your docker-compose file with your favorite text editor and add the follo
 ```
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validator-keys=/data/validator/keys:/data/validator/passwords
-      --validators-keystore-locking-enabled=false
+      --validators-keystore-locking-enabled=true
       --validators-graffiti=$GRAFFITI
 ```
 
@@ -111,7 +111,7 @@ services:
 # highlight-start
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validator-keys=/data/validator/keys:/data/validator/passwords
-      --validators-keystore-locking-enabled=false
+      --validators-keystore-locking-enabled=true
       --validators-graffiti=$GRAFFITI
 # highlight-end
     logging:
