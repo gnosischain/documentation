@@ -250,7 +250,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '(Optional) Step 4: Run Validator',
+          label: 'Step 4: Run Validator',
           link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
           collapsed: true,
           items: [
