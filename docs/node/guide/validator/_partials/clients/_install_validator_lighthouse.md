@@ -6,27 +6,28 @@ import TabItem from '@theme/TabItem';
     {label: 'Linux, MacOS, Arm64', value: 'others'},
     {label: 'Windows', value: 'win'}
 ]}>
-    <TabItem value="win">
-        <div class="admonition admonition-info alert alert--info"><div class="admonition-content">
-        Lighthouse only runs on Linux. To run it on Windows, <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank">Install Linux on Windows with WSL</a>, and follow the instructions on the WSL terminal.
-        </div></div>
-    </TabItem>
+<TabItem value="win">
+
+:::info
+Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
+:::
+
+</TabItem>
 </Tabs>
 
-```mdx-code-block
 <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
     {label: 'Gnosis', value: 'gnosis'},
     {label: 'Chiado', value: 'chiado'}
 ]}>
-    <TabItem value="gnosis">
-```
+<TabItem value="gnosis">
+
 To run a validator, we need to first import the keys generated in the previous step.
 
 * In a new command line window, navigate to the `consensus` folder and execute Lighthouse validator client
 * To ease the import process, we will create a `password.txt` file containing the password used to encrypt the validator keys.
 
 ```shell   
-echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
+echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 ```
     
 * Import the validator keys using lighthouse:
@@ -34,9 +35,9 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
 ```shell
 ./lighthouse account_manager validator import \
     --network gnosis \
-    --password-file keystores/validator_keys/password.txt \
+    --password-file keystores/password.txt \
     --reuse-password \
-    --directory keystores/validator_keys \
+    --directory keystores \
     --datadir .
 ```
     
@@ -55,11 +56,10 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
 Replace `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
 
 
-```mdx-code-block
+
 </TabItem>
-    <TabItem value="chiado">
-        <div data-comment="TODO: document chiado validation process"></div>
-    </TabItem>
-```
+<TabItem value="chiado">
+    <div data-comment="TODO: document chiado validation process"></div>
+</TabItem>
        
 </Tabs>

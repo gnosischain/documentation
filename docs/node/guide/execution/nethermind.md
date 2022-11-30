@@ -128,9 +128,9 @@ docker-compose up -d
 
 Check your logs with:
 
-```shell
-docker logs -f --tail 500 execution
-```
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
 
 
 ### 6. Updating your Node

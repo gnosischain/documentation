@@ -28,6 +28,6 @@ You can verify the status of your validators following these steps:
 <img src="/img/node/verify/verify-4.jpg" width="600" />
 <br />
 
-5. The Gnosis [Beacon Chain Explorer](https://beacon.gnosischain.com/) is a fork of the [Ethereum Beaconcha.in](https://beaconcha.in/) explorer. d
+5. The Gnosis [Beacon Chain Explorer](https://beacon.gnosischain.com/) is a fork of the [Ethereum Beaconcha.in](https://beaconcha.in/) explorer.
 
 See more about the validator statuses and [Deposit Process](https://kb.beaconcha.in/ethereum-2.0-depositing) in the Beaconcha.in Knowledge Base.

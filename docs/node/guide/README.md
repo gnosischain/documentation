@@ -7,6 +7,8 @@ import TabItem from '@theme/TabItem';
 
 <div className='install'>
 
+## Select a configuration 
+
 import InstallIntroPartial from '@site/docs/node/guide/_partials/_install-intro.md';
 
 <InstallIntroPartial />

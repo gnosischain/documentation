@@ -1,8 +1,5 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-## Select a configuration 
-
 import MultidimensionalContentControlsPartial from '@site/docs/node/guide/_partials/_multidimensional-content-controls-partial.md';
 
 <MultidimensionalContentControlsPartial />
