@@ -44,10 +44,10 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/validator_keys/password.txt
 * Start your lighhouse validator:
 
 ```shell
-./lighthouse validator_client 
-    --network gnosis 
-    --validators-dir validators 
-    --enable-doppelganger-protection  
+./lighthouse validator_client \
+    --network gnosis \
+    --validators-dir validators \
+    --enable-doppelganger-protection \
 # highlight-start
     --graffiti "gnosis-docs-graffiti" # Change this value 
 # highlight-end
