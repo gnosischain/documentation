@@ -11,7 +11,7 @@ This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/Chain
 :::
 
 :::caution Prerequisites
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/)) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
 :::
 
 ## Overview

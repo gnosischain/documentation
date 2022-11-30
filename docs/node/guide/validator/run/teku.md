@@ -4,19 +4,17 @@ title: Teku
 
 # Run Validator: Teku
 
-## Option 1: Run as System Process
-
-:::caution
-
-In progress
-
-:::
-
-## Option 2: Run using Docker
-
 :::caution
 The Validator requires a Consensus client (also known as Beacon Node) in order to operate. See [Step 3: Run Beacon Node: Teku](../../beacon/teku.md) for more information.
 :::
+
+## Option 1: Run as System Process {#system-process}
+
+:::info
+In progress
+:::
+
+## Option 2: Run using Docker {#docker}
 
 ### 1. Folder Structure
 
