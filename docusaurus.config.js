@@ -54,6 +54,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/gnosis-social-card.jpg',
       navbar: {
         logo: {
           alt: 'Gnosis Logo',
