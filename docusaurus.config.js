@@ -67,12 +67,6 @@ const config = {
             sidebarId: 'about',
             label: 'About',
           },
-          /*{
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'userguide',
-            label: 'User Guide',
-          },*/
           {
             type: 'docSidebar',
             position: 'left',
@@ -198,23 +192,6 @@ const config = {
       [
         require.resolve('docusaurus-plugin-sass'),{}
       ],
-      //see: https://github.com/rdilweb/docusaurus-plugin-remote-content#docusaurus-plugin-remote-content
-      //IMPORTANT: all outDir+documents paths should be included in the .gitignore file
-      /*[
-        "docusaurus-plugin-remote-content",
-        {
-            name: "validator-data-generator-readme",
-            sourceBaseUrl: "https://raw.githubusercontent.com/gnosischain/validator-data-generator/master/",
-            outDir: "docs/node/guide/validator/generate-keys/cli/docs/",
-            documents: ["README.md"],
-            modifyContent(filename, content) {
-              if (filename.includes("README")) {
-                  return { content: "# CLI Tool Docs \n\n #" + content }
-              }
-              return undefined
-          },
-        },
-      ],*/
     ],
 };
 

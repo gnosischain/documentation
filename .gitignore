@@ -6,7 +6,3 @@ build
 yarn.lock
 .obsidian
 docs/.obsidian
-
-#remote files copied in build time
-#see "docusaurus-plugin-remote-content" sections in "docusaurus.config.js" file
-docs/node/guide/validator/generate-keys/cli/docs/README.md
