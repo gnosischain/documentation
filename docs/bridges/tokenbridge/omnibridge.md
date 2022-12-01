@@ -110,7 +110,7 @@ References:
 - [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 ### Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the GnosisDAO treasury to fund Gnosis development. 
 ### Analytics
 
 - [Dune Analytics: Omnibridge Stablecoins](https://dune.com/maxaleks/Omnibridge-Stablecoins)
@@ -235,7 +235,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ### Interest on Bridge Deposits
 
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the GnosisDAO treasury to fund Gnosis development. 
 
 Currently, Stable Coins (USDC & USDT) locked in the OmniBridge contract are allocated to the Aave interest market. Locked funds will accumulate interest as well as COMP and AAVE tokens. These funds can then be used to support bridge operations.   
 Compounding analytics are available in [Dune](https://dune.com/maxaleks/Omnibridge-Stablecoins)  

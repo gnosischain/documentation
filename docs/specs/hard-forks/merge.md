@@ -15,9 +15,9 @@ This page will be continually updated in the lead up to the Merge.
 
 # The Merge
 
-In early December 2022, Gnosis will undergo the Merge. The current Gnosis execution layer (formerly xDai) will merge with the [Gnosis Beacon Chain](../consensus/gbc.md), in a process similar to the [Ethereum merge](https://ethereum.org/en/upgrades/merge/). 
+In early December 2022, Gnosis will undergo the Merge. The current Gnosis execution layer (formerly xDai) will merge with the [Gnosis Beacon Chain](../gbc/README.md), in a process similar to the [Ethereum merge](https://ethereum.org/en/upgrades/merge/). 
 
-The Merge will also represent a important shift for Gnosis, replacing the legacy [Proof-of-Authority consensus](../consensus/aura.md) with the open and unpermissioned [Beacon Chain Consensus](../consensus/gbc.md). This allows Gnosis to transition to a fully decentralized and permissionless proof-of-stake network. 
+The Merge will also represent a important shift for Gnosis, replacing the legacy [Proof-of-Authority consensus](../consensus/aura.md) with the open and unpermissioned [Beacon Chain Consensus](../gbc/README.md). This allows Gnosis to transition to a fully decentralized and permissionless proof-of-stake network. 
 
 The Merge is also another step in Gnosis' journey together with Ethereum. From the [early days of xDai at ETHDenver](https://developers.gnosischain.com/about-gc/use-cases/cryptocurrency-for-events-and-conferences/ethdenver), Gnosis has had a role in Ethereum's journey. With the adoption of Ethereum's consensus mechanism, Gnosis will continue to contribute to Ethereum's growth as an experimental chain, where newcomers, experiments and ideas are welcome. 
 
