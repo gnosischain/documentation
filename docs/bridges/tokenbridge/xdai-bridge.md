@@ -1,5 +1,7 @@
 ---
 title: xDai Bridge
+description: The xDai bridge is a native Dai bridge from Ethereum that is used to mint and burn xDai, the native asset used for gas and transaction fees on Gnosis. 
+keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 ---
 
 # xDai Bridge

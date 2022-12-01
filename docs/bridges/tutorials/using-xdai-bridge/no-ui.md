@@ -1,4 +1,6 @@
 ---
+description: Move Dai and xDai using a wallet rather than through the UI. This method is supported by all wallets that support ERC20 transfers.
+keywords: [xdai bridge, gnosis bridge]
 ---
 
 # Without UI

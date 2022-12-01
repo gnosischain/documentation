@@ -1,5 +1,7 @@
 ---
 title: Binance Smart Chain
+description: The Binance Smart Chain (BSC) Omnibridge allows users to move ERC20 tokens between Gnosis Chain and BSC.
+keywords: [bsc, omnibridge, tokens, transfer]
 ---
 # BNB Chain
 

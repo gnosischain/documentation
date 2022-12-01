@@ -1,13 +1,13 @@
 ---
 title: Omnibridge
+description: Omnibridge a native token bridge that mints the canonical representations of bridged assets on Gnosis
+keywords: [omnibridge, token bridge, token claim]
 ---
 
 # Omnibridge
 
 :::info
-
 Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.com/)
-
 :::
 
 ![](/img/bridges/diagrams/token-bridge-01.png)

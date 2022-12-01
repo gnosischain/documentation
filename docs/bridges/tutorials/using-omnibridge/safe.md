@@ -1,5 +1,7 @@
 ---
 title: Safe App
+description: OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet.
+keywords: [safe app, bridge safe, gnosis safe app]
 ---
 
 # OmniBridge with Safe App

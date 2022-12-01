@@ -1,4 +1,6 @@
 ---
+description: Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Troubleshoot Bridge issues
+keywords: [troubleshooting, bridge problems, issues, token bridge, gnosis bridge]
 ---
 
 # Troubleshoot Bridge Issues

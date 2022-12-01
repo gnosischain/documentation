@@ -1,6 +1,7 @@
 ---
 title: Overview
 description: Architecture of Gnosis' Bridges
+keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 ---
 
 # Bridges Overview

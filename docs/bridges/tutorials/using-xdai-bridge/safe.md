@@ -1,5 +1,7 @@
 ---
 title: Safe App
+description: The xDai Bridge is now included as a native Gnosis Safe application, and Multisig Wallets on both Ethereum and xDai can interact with the bridge directly from the safe.
+keywords: [safe app, bridge safe, gnosis safe app]
 ---
 
 # xDai Bridge with Safe App

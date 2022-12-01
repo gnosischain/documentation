@@ -1,5 +1,7 @@
 ---
 title: Using the xDai Bridge
+description: Complete guide on how to use the xdai bridge to flow dai to Gnosis or xdai to Ethereum
+keywords: [xdai bridge, token bridge, ethereum, gnosis, gnosis bridge]
 ---
 
 ## xDai Bridge

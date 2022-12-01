@@ -1,5 +1,7 @@
 ---
 title: NFT Bridge
+description: Gnosis does not support the native bridging of NFTs, which is usually done through 3rd-party NFT Bridges
+keywords: [nft bridge, bridge, gnosis bridge]
 ---
 
 # NFT Bridge

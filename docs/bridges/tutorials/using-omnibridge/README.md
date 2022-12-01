@@ -1,5 +1,7 @@
 ---
 title: OmniBridge Basics
+description: The Omnibridge can be used to bridge ERC-20 tokens between Ethereum and Gnosis, Binance Smart Chain and Gnosis, and the POA Network and Gnosis. 
+keywords: [omnibridge, token bridge, gnosis, bsc, ethereum]
 ---
 
 # OmniBridge
