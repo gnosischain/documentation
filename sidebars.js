@@ -9,6 +9,37 @@
  Create as many sidebars as you want.
  */
 
+let bridgeTutorials = [ 
+  'bridges/tutorials/using-amb',
+  {
+    type: 'category',
+    label: 'Using the OmniBridge',
+    collapsed: true,
+    link: { type: 'doc', id: 'bridges/tutorials/using-omnibridge/README' },
+    items: [
+      'bridges/tutorials/using-omnibridge/token-registry',
+      'bridges/tutorials/using-omnibridge/specific-tokens',
+      'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns',
+      'bridges/tutorials/using-omnibridge/safe',
+      'bridges/tutorials/using-omnibridge/advanced',
+      'bridges/tutorials/using-omnibridge/bnb-chain',
+    ]
+  },
+  {
+    type: 'category',
+    label: 'Using the xDai Bridge',
+    collapsed: true,
+    link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/README'},
+    items: [
+      'bridges/tutorials/using-xdai-bridge/safe',
+      'bridges/tutorials/using-xdai-bridge/alternate-receiver',
+      'bridges/tutorials/using-xdai-bridge/custom-rpc',
+      'bridges/tutorials/using-xdai-bridge/no-ui',
+      'bridges/tutorials/using-xdai-bridge/troubleshooting',
+    ]
+  }   
+]
+
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
@@ -142,7 +173,6 @@ const sidebars = {
         "developers/building/nft",
       ],
     },
-    //'developers/bridging/basics',
     {
       type: 'category',
       label: 'Verify Contracts',
@@ -154,6 +184,13 @@ const sidebars = {
         "developers/verify/truffle",
         "developers/verify/sourcify",
       ],
+    },
+    { 
+      type: 'category',
+      label: 'Bridge Tutorials',
+      link: { slug: 'developers/tutorials', type: 'generated-index', title: 'Tutorials' },
+      collapsed: false,
+      items: bridgeTutorials
     },
     {
       type: 'link',
@@ -665,36 +702,7 @@ const sidebars = {
       label: 'Tutorials',
       link: { slug: 'bridges/tutorials', type: 'generated-index', title: 'Tutorials' },
       collapsed: false,
-      items: [ 
-        'bridges/tutorials/using-amb',
-        {
-          type: 'category',
-          label: 'Using the OmniBridge',
-          collapsed: true,
-          link: { type: 'doc', id: 'bridges/tutorials/using-omnibridge/README' },
-          items: [
-            'bridges/tutorials/using-omnibridge/token-registry',
-            'bridges/tutorials/using-omnibridge/specific-tokens',
-            'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns',
-            'bridges/tutorials/using-omnibridge/safe',
-            'bridges/tutorials/using-omnibridge/advanced',
-            'bridges/tutorials/using-omnibridge/bnb-chain',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Using the xDai Bridge',
-          collapsed: true,
-          link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/README'},
-          items: [
-            'bridges/tutorials/using-xdai-bridge/safe',
-            'bridges/tutorials/using-xdai-bridge/alternate-receiver',
-            'bridges/tutorials/using-xdai-bridge/custom-rpc',
-            'bridges/tutorials/using-xdai-bridge/no-ui',
-            'bridges/tutorials/using-xdai-bridge/troubleshooting',
-          ]
-        }   
-      ]
+      items: bridgeTutorials
     }
   ],
 };
