@@ -20,10 +20,6 @@ const sidebars = {
       link: {type: 'doc', id: 'specs/README'},
       collapsed: false,
       items: [
-        //'about/overview/why-gnosis-chain',
-        //'about/overview/history',
-        //'about/overview/roadmap',
-        //'about/overview/about-gnosis-dao',
         'about/overview/community',
         'about/overview/media-kit',
       ]
@@ -35,8 +31,6 @@ const sidebars = {
       collapsed: false,
       items: [
         "about/networks/chiado",
-        //"about/networks/testnets",
-        //"about/networks/rollups"
       ]
     },
     {
@@ -72,7 +66,6 @@ const sidebars = {
             items: [
               'specs/consensus/aura',
               'specs/consensus/posdao',
-              'specs/consensus/gbc',
             ],
           },
           {
@@ -188,7 +181,7 @@ const sidebars = {
     {
       type: 'link',
       label: 'Get Help!',
-      href: 'https://discord.gg/VQb3WzsywU',
+      href: 'https://discord.gg/gnosischain',
     },
   ],
 

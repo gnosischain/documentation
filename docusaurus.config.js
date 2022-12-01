@@ -142,7 +142,7 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discord.gg/VQb3WzsywU',
+                href: 'https://discord.gg/gnosischain',
               },
               {
                 label: 'Twitter',

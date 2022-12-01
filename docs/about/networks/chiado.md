@@ -1,4 +1,6 @@
 ---
+description: Chiado is a Gnosis long-lived testnet with tooling for developers
+keywords: [chiado, testnet, gnosis testnet, gnosis faucet, gno on chiado, xdai on chiado]
 ---
 
 # Chiado (Testnet)

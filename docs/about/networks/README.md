@@ -1,4 +1,6 @@
 ---
+description: Network information about Gnosis Mainnet and Chiado Testnets
+keywords: [network, gnosis mainnet, chiado, testnet, gnosis testnet, gnosis faucet, rpc, explorer]
 ---
 
 # Networks
@@ -23,4 +25,4 @@ Chiado testnet was rebooted with a new chain id, explorer and RPC endpoints.
 If you are developing on Chiado:
 - Re-synchronize your nodes
 - Point your app to the new RPC endpoint
-- Get help on [discord](https://discord.gg/VQb3WzsywU)
+- Get help on [discord](https://discord.gg/gnosischain)
