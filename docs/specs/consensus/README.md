@@ -1,4 +1,6 @@
 ---
+description: The hardfork will replace Gnosis’ current “proof-of-authority” consensus with the “proof-of-stake” system as it merges with the Gnosis Beacon Chain. 
+keywords: [gnosis beacon chain, merge, the merge, wen gnosis merge]
 ---
 
 # The Merge

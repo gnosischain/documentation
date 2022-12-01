@@ -42,7 +42,7 @@ Agree to the terms and press confirm.
 * rGNO address on Gnosis:
   [0x6ac78efae880282396a335ca2f79863a1e6831d4 ](https://blockscout.com/xdai/mainnet/token/0x6aC78efae880282396a335CA2F79863A1e6831D4/token-transfers)
 
-You can [import to Metamask](https://consensys.net/blog/metamask/how-to-add-your-custom-tokens-in-metamask/) as you would other tokens, or click on the 🦊 in Blockscout to add!
+You can [import to MetaMask](https://consensys.net/blog/metamask/how-to-add-your-custom-tokens-in-metamask/) as you would other tokens, or click on the 🦊 in Blockscout to add!
 
 ![](/img/node/blockscout-1.png)
 

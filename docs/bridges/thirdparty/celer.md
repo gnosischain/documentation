@@ -1,5 +1,0 @@
-- Bridge: https://cbridge.celer.network/#/transfer
-- Only 2 assets supported: https://cbridge-analytics.celer.network/assets
-	- PEOPLE
-	- SOS
-	- Need to expand it to more assets

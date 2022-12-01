@@ -1,5 +1,7 @@
 ---
 title: Launching an NFT
+description: Tutorial to deploy an NFT collection to Gnosis.
+keywords: [nft contract, deploy nft, erc721, erc721 standard, erc721 token]
 ---
 
 # Launching an NFT on Gnosis

@@ -1,5 +1,7 @@
 ---
 title: Bridges
+description: Gnosis bridges with other blockchains.
+keywords: [gnosis bridge, xdai bridge, omni bridge, hop, connext, celer, nomad, transferto, anyswap, xp network]
 ---
 
 # Bridges

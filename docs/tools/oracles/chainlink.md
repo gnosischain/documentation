@@ -1,5 +1,7 @@
 ---
 title: Chainlink
+description: Chainlink allows smart contracts to receive aggregated price feeds and access external data using a decentralized network of oracles.
+keywords: [chainlink, oracle, data feeds, price feeds]
 ---
 
 # Chainlink Price Feeds
@@ -20,7 +22,7 @@ Chainlink offers a tutorial on using secure data feeds with Gnosis. [See it in a
 
 See the [Chainlink documentation](https://docs.chain.link/docs/getting-started) for more advanced tutorials and information. The following shows how to use MetaMask/Remix with Gnosis to deploy a simple price feed contract, then call the function using Blockscout.
 
-### 1) Install and configure Metamask
+### 1) Install and configure MetaMask
 
 See [MetaMask setup page](/tools/wallets/metamask) and follow the setup and configuration sections
 

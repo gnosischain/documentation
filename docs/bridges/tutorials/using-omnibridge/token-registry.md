@@ -1,5 +1,7 @@
 ---
 title: Token Registry
+description: Discover the token contract on the Ethereum Mainnet that corresponds to the token contract on Gnosis chain.
+keywords: [token registry, bridged tokens, canonical token, gnosis bridge]
 ---
 # Token Registry
 

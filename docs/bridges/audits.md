@@ -1,6 +1,9 @@
 ---
 title: Audits
+description: The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments. 
+keywords: [omnibridge audit, xdai bridge audit, security audit]
 ---
+
 The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments. We have engaged in the auditing process after introducing major functionality, and have acknowledged and/or fixed all issues found during these audits. Audit results are presented starting with the most recent.
 
 ## OmniBridge v6.0 Smart Contracts Audit by ChainSecurity

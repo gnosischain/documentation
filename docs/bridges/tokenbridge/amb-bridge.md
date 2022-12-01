@@ -1,5 +1,7 @@
 ---
 title: Arbitrary Message Bridge
+description: How to use the Arbitrary Message Bridge
+keywords: [amb bridge, arbitrary message bridge, using amb, bridge, gnosis bridge]
 ---
 
 ![](/img/bridges/diagrams/amb-bridge.svg)

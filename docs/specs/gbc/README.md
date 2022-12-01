@@ -1,4 +1,6 @@
 ---
+description: Gnosis Beacon Chain specification and key contracts
+keywords: [gnosis beacon chain, gnosis upgradeability, gbc, gbc contracts]
 ---
 
 # Contracts, Addresses, Parameters

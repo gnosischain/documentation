@@ -1,4 +1,6 @@
 ---
+description: Security is the first priority of the Gnosis team, bug bounty program
+keywords: [gnosis security, gnosis bounty, bug bounty program, gnosis immunefi]
 ---
 
 # Bug Bounty

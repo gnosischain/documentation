@@ -1,4 +1,6 @@
 ---
+description: AnyBlock Analytics offers a simple and fast explorer for Gnosis, along with a robust API. It is useful for searching the most recent blocks and transactions.
+keywords: [block explorer, anyblock analytics]
 ---
 
 # AnyBlock

@@ -1,5 +1,7 @@
 ---
 title: Tokens
+description: The faucet can quickly generate any number of FAU tokens directly from a web interface.
+keywords: [token faucet, erc20 token]
 ---
 
 # ERC20 Token Faucet

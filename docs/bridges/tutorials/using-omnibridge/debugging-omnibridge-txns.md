@@ -1,5 +1,7 @@
 ---
-title: Debugging OmniBrige Transactions
+title: Debugging Transactions
+description: Developer guide on how to debug bridge transactions
+keywords: [amb debug, developer, debugging transactions, bridge transactions]
 ---
 
 # Debugging OmniBridge Transactions
