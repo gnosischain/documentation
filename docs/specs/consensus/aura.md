@@ -1,5 +1,5 @@
 ---
-description: 'Current Gnosis Consensus model: POSDAO with Authority Round Consensus'
+description: Gnosis Consensus model, POSDAO with Authority Round Consensus
 ---
 
 # AuRa with POSDAO Consensus

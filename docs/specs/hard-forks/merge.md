@@ -1,5 +1,7 @@
 ---
 title: The Merge
+description: The current Gnosis execution layer will merge with the Gnosis Beacon Chain, in a process similar to the Ethereum merge
+keywords: [gnosis merge, gnosis hardfork, wen merge]
 ---
 :::danger
 

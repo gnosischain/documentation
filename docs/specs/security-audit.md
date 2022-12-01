@@ -1,5 +1,6 @@
 ---
 description: Audits of Gnosis and Related Infrastructure
+keywords: [gnosis specs, gnosis infrastructure, security audits]
 ---
 
 # Security Audits
