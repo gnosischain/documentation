@@ -1,5 +1,0 @@
----
----
-
-# Bridging Ethereum and Gnosis
-

@@ -1,3 +1,0 @@
-# Technical Requirements
-
-## The Basics

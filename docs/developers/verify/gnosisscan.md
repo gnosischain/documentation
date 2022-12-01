@@ -1,5 +1,7 @@
 ---
 title: Using Gnosisscan
+description: Gnosisscan is a Gnosis explorer built by the same team behind Etherscan.
+keywords: [sourcify, contract verification, gnosisscan, deployed contracts, verify contract] 
 ---
 
 # Gnosisscan Contract Verification

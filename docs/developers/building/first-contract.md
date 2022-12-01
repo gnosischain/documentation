@@ -1,17 +1,15 @@
 ---
+description: In the following tutorial we will go through a step-by-step guide on how to deploy a Basic Contract to Gnosis
+keywords: [deploy dapp, full stack app, tutorial, web3, dapp development]
 ---
 
 # Deploying a Basic Contract
-
-Follows the same process as deploying to Ethereum
-
----
 
 Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains. Check the [network specifications](/about/networks/).
 
 :::note
 You will also need a [small amount of xDai](/tools/faucets) to deploy a contract, and for any contract functions.
-For testing purposes, it is recommended to first deploy to [Chiado testnet](/about/networks/chiado). After functionality is tested and confirmed, deploy to Gnosis mainnet!
+For testing purposes, it is recommended to first deploy to [Chiado testnet](/about/networks/chiado). After functionality is tested and confirmed, deploy to Gnosis mainnet.
 :::
 
 ## Tutorials

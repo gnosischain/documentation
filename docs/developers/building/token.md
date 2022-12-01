@@ -1,11 +1,14 @@
 ---
 title: Launching an ERC-20 Token
+description: Tutorial to deploy an ERC-20 token to Gnosis.
+keywords: [token deploy, token contract, deploy token, erc20, erc20 standard, erc20 token]
 ---
 
 # Launching an ERC-20 token on Gnosis
 
 ## Overview
 This will follow very closely with the steps to deploy an ERC-20 token to Ethereum. An ERC-20 token is a token that follows the [ERC-20 Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/). To follow the standard, we will be deploying a contract that implements the following events and functions:
+
 ```solidity showLineNumbers
 function name() public view returns (string)
 function symbol() public view returns (string)

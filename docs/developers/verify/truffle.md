@@ -1,5 +1,7 @@
 ---
 title: Using Truffle
+description: This truffle plugin allows you to automatically verify your smart contracts' source code on Gnosisscan (by Etherscan), straight from the Truffle CLI.
+keywords: [truffle verify, verify contracts, plugin, truffle plugin] 
 ---
 
 # Truffle Verify

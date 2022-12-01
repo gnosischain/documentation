@@ -122,7 +122,7 @@ const sidebars = {
       type: 'category',
       label: 'Interacting with Gnosis',
       collapsed: true,
-      link: {type: 'doc', id: 'developers/interact/README'},
+      link: { slug: 'developers/interact', type: 'generated-index', title: 'Interacting with Gnosis' },
       items: [
         "developers/interact/metamask",
         "developers/interact/web3-js",
@@ -142,7 +142,7 @@ const sidebars = {
         "developers/building/nft",
       ],
     },
-    'developers/bridging/basics',
+    //'developers/bridging/basics',
     {
       type: 'category',
       label: 'Verify Contracts',
@@ -663,6 +663,7 @@ const sidebars = {
     { 
       type: 'category',
       label: 'Tutorials',
+      link: { slug: 'bridges/tutorials', type: 'generated-index', title: 'Tutorials' },
       collapsed: false,
       items: [ 
         {

@@ -1,15 +1,17 @@
 ---
 title: Full Stack Dapp
+description: In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis
+keywords: [deploy dapp, full stack app, tutorial, web3, dapp development]
 ---
 
 
 # Building a Full Stack Dapp
 
-Welcome to the Gnosis Full stack Dapp tutorial! In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis! This tutorial is designed for either new developers interested in Dapp development or existing devs interested in migrating to Gnosis development.
+In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis. This tutorial is designed for either new developers interested in Dapp development or existing devs interested in migrating to Gnosis development.
 
-Throughout the tutorial, feel free to refrence other pages in our documentation for information with greater depth - however this tutorial will give you a basic understand of how to get up and running!
+Throughout the tutorial, feel free to refrence other pages in our documentation for information with greater depth - however this tutorial will give you a basic understand of how to get up and running.
 
-This Dapp will allow you to wave at Gnosis, and see how many times you have waved!
+This Dapp will allow you to wave at Gnosis, and see how many times you have waved.
 
 ## Guideline Overview
 
@@ -77,7 +79,7 @@ Make sure to select yes for this option:
 ? Do you want to install this sample project's dependencies with npm (@nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers)? (Y/n) ‣ y
 ```
 
-We will be using Waffle and Ethers.js later on!
+We will be using Waffle and Ethers.js later on.
 
 Run the below just in case they wern't automatically added:
 
@@ -104,7 +106,7 @@ Changing greeting from 'Hello, world!' to 'Hola, mundo!'
 
 Moving forward, lets delete ```sample-test.js``` under test, ```sample-script.js``` under ```scripts```, and lastly ```Greeter.sol``` under ```contracts```.
 
-Make sure not to delete folders, we will be working with them still!
+Make sure not to delete folders, we will be working with them still.
 
 ## Writing a contract
 
@@ -228,7 +230,7 @@ const main = async () => {
   runMain();
 ```
 
-Now before you deploy, make sure you have funds in your wallet! Visit the [funds page](/tools/faucets/), if you don't have funds!
+Now before you deploy, make sure you have funds in your wallet! Visit the [funds page](/tools/faucets/), if you don't have funds.
 
 Deploy to Gnosis with the following command:
 
@@ -242,7 +244,7 @@ Account balance:  9992684695712000000
 WavePortal address:  0x343610D353a0B2Ba86dDAAa348BF62B732107284
 ```
 
-Nice! The ```WavePortal address``` variable, is your **contract address**.
+The ```WavePortal address``` variable, is your **contract address**.
 
 You can verify the deployment on https://gnosisscan.io/, by putting your contract address in.
 
@@ -289,6 +291,6 @@ The file should look something like this:
 
 Congrats! You have created a full-stack DApp on Gnosis.
 
-Make sure to wave at Gnosis!
+Make sure to wave at Gnosis.
 
 ![Diagram2](/img/full-stack-dapp/full-stack-dapp-finished.JPG)
