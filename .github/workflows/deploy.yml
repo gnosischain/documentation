@@ -30,6 +30,8 @@ jobs:
           for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - uses: actions/cache@v2
         with:
