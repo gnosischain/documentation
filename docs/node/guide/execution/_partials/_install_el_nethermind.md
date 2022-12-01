@@ -140,3 +140,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 </Tabs>
+
+:::info Upgrading?
+Remove `AuraMerge.Enabled` since it is now covered in the `Merge.Enabled` key.
+:::
