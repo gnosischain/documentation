@@ -42,7 +42,7 @@ There are currently different bridging UIs, and depending on the UI you may need
 
 ## I Used the xDai Bridge UI
 
-When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](../README.md).
+When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](./README.md).
 
 If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your MetaMask wallet with the account you used previously.
 

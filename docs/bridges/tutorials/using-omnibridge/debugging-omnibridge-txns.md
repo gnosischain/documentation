@@ -1,5 +1,5 @@
 ---
-title: Debugging OmniBrige Transactions
+title: Debugging Transactions
 ---
 
 # Debugging OmniBridge Transactions

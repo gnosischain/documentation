@@ -666,45 +666,19 @@ const sidebars = {
       link: { slug: 'bridges/tutorials', type: 'generated-index', title: 'Tutorials' },
       collapsed: false,
       items: [ 
-        {
-          type: 'category',
-          label: 'Using the AMB',
-          collapsed: true,
-          link: {type: 'doc', id: 'bridges/tutorials/using-amb'},
-          items: [ ]
-        },
+        'bridges/tutorials/using-amb',
         {
           type: 'category',
           label: 'Using the OmniBridge',
           collapsed: true,
-          link: {type: 'doc', id: 'bridges/tutorials/using-omnibridge/README'},
+          link: { type: 'doc', id: 'bridges/tutorials/using-omnibridge/README' },
           items: [
-            {
-              type: 'doc',
-              label: 'Token Registry',
-              id: 'bridges/tutorials/using-omnibridge/token-registry'
-            },
-            {
-              type: 'doc',
-              label: 'Specific Tokens',
-              id: 'bridges/tutorials/using-omnibridge/specific-tokens'
-            },
-            {
-              type:'doc',
-              label: 'Debugging Transactions',
-              id: 'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns'
-            },
+            'bridges/tutorials/using-omnibridge/token-registry',
+            'bridges/tutorials/using-omnibridge/specific-tokens',
+            'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns',
             'bridges/tutorials/using-omnibridge/safe',
-            {
-              type:'doc',
-              label: 'Advanced',
-              id: 'bridges/tutorials/using-omnibridge/advanced'
-            },
-            {
-              type:'doc',
-              label: 'Binance Smart Chain',
-              id: 'bridges/tutorials/using-omnibridge/bnb-chain'
-            },
+            'bridges/tutorials/using-omnibridge/advanced',
+            'bridges/tutorials/using-omnibridge/bnb-chain',
           ]
         },
         {
@@ -717,13 +691,7 @@ const sidebars = {
             'bridges/tutorials/using-xdai-bridge/alternate-receiver',
             'bridges/tutorials/using-xdai-bridge/custom-rpc',
             'bridges/tutorials/using-xdai-bridge/no-ui',
-            {
-              type: 'category',
-              label: 'Troubleshooting',
-              collapsed: true,
-              link: {type: 'doc', id: 'bridges/tutorials/using-xdai-bridge/troubleshooting/README'},
-              items: [ ]
-            }
+            'bridges/tutorials/using-xdai-bridge/troubleshooting',
           ]
         }   
       ]
