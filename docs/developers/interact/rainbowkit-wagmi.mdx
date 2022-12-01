@@ -71,7 +71,7 @@ We are importing the styles for rainbow kit, already built in for us to use
 import '@rainbow-me/rainbowkit/styles.css';
 ```
 
-This imports the Default wallets (Metamask, WalletConnect, Coinbase and Rainbow Wallet) and Brings in the Provider Wrapper for our _app.js object
+This imports the Default wallets (MetaMask, WalletConnect, Coinbase and Rainbow Wallet) and Brings in the Provider Wrapper for our _app.js object
 
 ```js showLineNumbers
 import {
@@ -86,7 +86,7 @@ This part is for the Wagmi configuration
 
 **configureChains** - lets us modify the providers for our chains (we could use infura, alchemy, Ankr, Pokt, or any of our choosing)
 
-**createClient** - Lets us manage our Wallets (Metamask, etc) and Providers(alchemy, ankr, etc)
+**createClient** - Lets us manage our Wallets (MetaMask, etc) and Providers(alchemy, ankr, etc)
 
 **WagmiConfig** - This is the wrapper for our entire _app.js object (since rainbow kit is dependent on Wagmi, it wraps over rainbow kit wrapper)
 

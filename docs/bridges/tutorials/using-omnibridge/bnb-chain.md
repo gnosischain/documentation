@@ -37,7 +37,7 @@ In the following steps, we walk through the steps to transfer STAKE from Ethereu
 * Tokens on Gnosis Chain that you would like to swap
 * a small amount of xDai to complete the transfer. [You can use a faucet for a small amount of free tokens if you need some](/tools/faucets/). 
 * BNB tokens on the Binance Smart Chain for the gas needed to claim/transfer
-* RPC setup in Metamask for BSC (Network Name: BSC Mainnet New RPC URL: https://bsc-dataseed.binance.org/ ChainID: 56 Symbol: BNB Block Explorer URL: https://bscscan.com/) and [Gnosis Chain](/tools/wallets/metamask/). 
+* RPC setup in MetaMask for BSC (Network Name: BSC Mainnet New RPC URL: https://bsc-dataseed.binance.org/ ChainID: 56 Symbol: BNB Block Explorer URL: https://bscscan.com/) and [Gnosis Chain](/tools/wallets/metamask/). 
 :::info
 If planning to bridge so you can trade an asset on BSC or Gnosis (Honeyswap, BaoSwap etc), check liquidity for that asset on the chain where you want to trade prior to bridging.
 :::
@@ -51,12 +51,12 @@ As mentioned above, bridging STAKe has been disabled. However, this example is s
 3. Select the amount
 4. Click unlock. (_you can also[ enable infinite unlocks](#infinite-unlock)_)
 ![](/img/bridges/omni-bsc1.png)
-5. Confirm the Unlock transaction in Metamask
-6. Once the unlock transaction is complete, the request button will become active. Click request, and then confirm in Metamask.
+5. Confirm the Unlock transaction in MetaMask
+6. Once the unlock transaction is complete, the request button will become active. Click request, and then confirm in MetaMask.
 ![](/img/bridges/omni-bsc2.png)
 7. Continue with the transfer (noting that there are 2 transactions to complete, on on Gnosis Chain and one on the BSC).
 ![](/img/bridges/omni-bsc3.png)
-8. Confirm in Metamask, then wait for Block Confirmations and Signature Collections. Once complete, you will see the message to switch the network to the Binance Smart Chain
+8. Confirm in MetaMask, then wait for Block Confirmations and Signature Collections. Once complete, you will see the message to switch the network to the Binance Smart Chain
 ![](/img/bridges/omni-bsc4.png)
 9. Once you switch networks, you will see the claim button
  1. Click Claim to initiate claim the process.
@@ -81,7 +81,7 @@ Use a DEX to swap your token on Gnosis for WBNB. In this example we use [HoneySw
 ![](/img/bridges/omni-swap-wbnb2.png)
 3. Enter the amount to swap and it will calculate the amount of wBNB you will receive. Click Swap to continue.
 ![](/img/bridges/omni-swap-wbnb3.png)
-4. Confirm the swap in Metamask to continue.
+4. Confirm the swap in MetaMask to continue.
 #### 2) Bridge wBNB to BNB on the Binance SMart Chain (BSC)
 1. Go to the [Omnibridge UI](https://omni.gnosischain.com/bridge)
 2. Select BSC <-> GC from the Dropdown. Your MetaMask should still be connected to the Gnosis Chain.
@@ -125,7 +125,7 @@ This option gives users the ability to convert Dai/xDai when mainnet bridging fe
 2. Connect your Web3 Wallet (MetaMask) to the application and confirm you are connected to the Gnosis network.
 3. Press the Swap tab and select the **WXDAI/DAI \[BSC]** pair.
 4. Press Swap. You will need to approve the first transaction with amount to swap or you can select unlimited.
-5. Complete this first approve transaction in Metamask.
+5. Complete this first approve transaction in MetaMask.
 6. Press Swap again and confirm the second transaction to swap.
 7. Once complete, add Binance-Peg Dai on Gnosis to your MetaMask custom tokens. The address is [0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC](https://blockscout.com/xdai/mainnet/tokens/0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC/token-transfers). In BlockScout it is called Dai Token from BSC.
 :::info

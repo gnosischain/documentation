@@ -1,5 +1,7 @@
 ---
 title: Overview
+description: Gnosis ecosystems include DAOs, DeFi, Games, NFTs and more!
+keywords: [gnosis ecosystem, gnosis dao, gnosis defi, games, nft, infrastructure]
 ---
 
 # Ecosystem Overview

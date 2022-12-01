@@ -48,7 +48,7 @@ The OmniBridge UI supports several bridges. To switch chains, click on the Bridg
 ![](/img/bridges/omni-switchnetwork1.png)
 2. Click to switch to target network (Binance Smart Chain in the screenshot)
 ![](/img/bridges/omni-switchnetwork2.png)
-3. Click approve to add the network to Metamask. If you get a warning that the network details don't match, it's likely ok. Be sure to check [chainlist.org](https://chainlist.org/) to verify the network details just in case.
+3. Click approve to add the network to MetaMask. If you get a warning that the network details don't match, it's likely ok. Be sure to check [chainlist.org](https://chainlist.org/) to verify the network details just in case.
 ![](/img/bridges/omni-switchnetwork3.png)
 4. Click "Switch Network" to allow the site to switch the network. 
 ![](/img/bridges/omni-switchnetwork4.png)

@@ -86,7 +86,7 @@ xDai being a native token of the network does not comply with ERC-20 standard. W
 
 ### Get wxDai
 
-- Wrap your xDai in [Wrap Eth](https://wrapeth.com/) connected with [Metamask to Gnosis](/tools/wallets/metamask/)
+- Wrap your xDai in [Wrap Eth](https://wrapeth.com/) connected with [MetaMask to Gnosis](/tools/wallets/metamask/)
 - [Swapr](https://swapr.eth.limo/#/swap?chainId=100)
 - [Honeyswap](https://honeyswap.1hive.eth.limo/)
 

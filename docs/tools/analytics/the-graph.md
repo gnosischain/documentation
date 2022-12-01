@@ -1,5 +1,7 @@
 ---
-title: "The Graph"
+title: The Graph
+description: The Graph is a decentralized protocol for indexing and querying chain data, supports Gnosis. 
+keywords: [the graph, data indexing, query data, chain data, subgraphs]
 ---
 
 # The Graph Data Indexing

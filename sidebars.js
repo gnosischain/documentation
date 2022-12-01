@@ -337,7 +337,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Metamask',
+          label: 'MetaMask',
           collapsed: true,
           link: {type: 'doc', id: 'tools/wallets/metamask/README'},
           items: [

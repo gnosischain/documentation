@@ -1,7 +1,11 @@
 ---
+description: Safe is the most trusted platform to manage digital assets on Gnosis
+keywords: [trezor, hardware wallet, hw, seed, security]
 ---
 
 # Gnosis Safe
+
+The most trusted platform to manage digital assets on Gnosis
 
 ## Safe on Gnosis
 

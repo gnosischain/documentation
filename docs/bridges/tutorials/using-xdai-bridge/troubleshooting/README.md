@@ -11,7 +11,7 @@ If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see
 **Things to know**
 
 * A bridge exit (moving from xDai to Dai) requires **2 transactions**, **one to initiate the transfer** on Gnosis, and a **2nd to claim DAI on Ethereum**.
-* To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in Metamask** and **you will need Ether to pay gas fees.**
+* To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in MetaMask** and **you will need Ether to pay gas fees.**
 * The **2nd transaction may take quite a long time**, it is being processed on Ethereum. You can set a higher gas price if you want to speed it up. [**Instructions**](#dai-to-xdai-transaction-is-taking-a-long-time)**.**
 * If you closed the UI before starting the 2nd transaction, you can come back and to complete later. [**Instructions**](#i-used-the-xdai-bridge-ui)**.**
 * Additional troubleshooting items below.
@@ -44,7 +44,7 @@ There are currently different bridging UIs, and depending on the UI you may need
 
 When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](../README.md).
 
-If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your Metamask wallet with the account you used previously.
+If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your MetaMask wallet with the account you used previously.
 
 1\) Switch MetaMask to the ETH Mainnet. If you have unclaimed txs you should see the following popup. Click on **History**.
 
