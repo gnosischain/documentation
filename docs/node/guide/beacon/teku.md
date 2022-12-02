@@ -24,7 +24,7 @@ Teku is a consensus client built to meet institutional needs and security requir
 
 :::info Download Teku
 
-Visit Teku's page on how to download Lodestar. 
+Visit Teku's page on how to download Teku. 
 
 https://docs.teku.consensys.net/en/latest/
 
@@ -51,9 +51,11 @@ We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and av
 Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/. 
 
 ```shell
+
 # Usage
 $ teku
-  --initial-state https://checkpoint.gnosischain.com/
+  --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
+
 ```
 
 :::info More about Checkpoint Sync
@@ -149,12 +151,20 @@ networks:
     name: gnosis_net
 ```
 
+:::note
+
+Teku by default uses a user ID of 1000, which may not be compatible with the permissions on you host machine. This is why we recommend to set your `$PUID` variable and use it with the Teku container at the line `user: "${PUID:-1000}"`. If Teku won’t start and you receive error messages like `ERROR - Failed to write in /data/validator/slashprotection` this is one solution to resolve those issues.
+
+:::
+
 ### 3. Environment Variables
 
 Add an `.env` file with your user id (`id --user`) in `/home/$USER/gnosis/.env`.
 
 ``` title="/home/$USER/gnosis/.env
+
 PUID=1000
+
 ```
 
 ### 4. Start Containers
@@ -162,8 +172,10 @@ PUID=1000
 Start the consensus layer client listed in the compose file:
 
 ```shell
+
 cd /home/$USER/gnosis
 docker-compose up -d
+
 ```
 
 
