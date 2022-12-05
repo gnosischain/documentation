@@ -40,6 +40,14 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
+        blog: {
+          path: 'updates',
+          routeBasePath: 'updates',
+          blogTitle: 'Gnosis Updates',
+          blogDescription: 'Get Gnosis updates, announcements, changelogs, core dev info!',
+          include: ['*.md', '*.mdx'],
+          showReadingTime: true,
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
         },
@@ -156,6 +164,10 @@ const config = {
           {
             title: 'More',
             items: [
+              {
+                label: 'Updates',
+                to: '/updates',
+              },
               {
                 label: 'Careers',
                 href: 'https://gnosis.io/careers/',
