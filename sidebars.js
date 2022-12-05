@@ -51,6 +51,7 @@ const sidebars = {
       link: {type: 'doc', id: 'specs/README'},
       collapsed: false,
       items: [
+        { type: 'link', label: 'Updates', href: '/updates', },
         'about/overview/community',
         'about/overview/media-kit',
       ]

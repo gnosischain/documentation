@@ -13,6 +13,9 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  stylesheets: [
+    { href: 'https://fonts.googleapis.com/css?family=Karla:regular,600,500italic,600italic|Lora:regular,500,italic,500italic,600italic', },
+  ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -39,6 +42,14 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+        },
+        blog: {
+          path: 'updates',
+          routeBasePath: 'updates',
+          blogTitle: 'Gnosis Updates',
+          blogDescription: 'Get Gnosis updates, announcements, changelogs, core dev info!',
+          include: ['*.md', '*.mdx'],
+          showReadingTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
@@ -156,6 +167,10 @@ const config = {
           {
             title: 'More',
             items: [
+              {
+                label: 'Updates',
+                to: '/updates',
+              },
               {
                 label: 'Careers',
                 href: 'https://gnosis.io/careers/',
