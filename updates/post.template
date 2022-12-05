@@ -1,0 +1,17 @@
+---
+slug: template
+title: First Blog Post
+authors: [alebanzas, dapplion, plato-gno]
+tags: [hola, gnosis]
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+
+<!--truncate-->
+
+More text not included in the prev at the "updates" home list.
+
+Useful links:
+- https://docusaurus.io/docs/blog
+- https://docusaurus.io/tests/blog
+- https://github.com/facebook/docusaurus/tree/main/website/_dogfooding/_blog%20tests
