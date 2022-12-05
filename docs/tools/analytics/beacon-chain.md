@@ -1,4 +1,6 @@
 ---
+description: Gnosis Beacon Chain statistics
+keywords: [gbc, beacon chain analytics, beacon chain statistics]
 ---
 
 # Beacon Chain Analytics

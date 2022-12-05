@@ -1,22 +1,24 @@
 --- 
+description: Detecting that MetaMask is installed and adding additional networks and custom tokens easily make a great dApp user experience, specially those who are not technically skilled. It is important to streamline the onboarding process as much as you can to make it easier for consumers to operate your application. This guide explains how to build a simple button for your front-end application that will automatically add Gnosis to MetaMask.
+keywords: [metamask, metamask api, detect metamask, detect chainid, detect account]
 ---
 
 # MetaMask API
 
-Detecting that Metamask is installed and adding additional networks and custom tokens easily make a great dApp user experience, specially those who are not technically skilled. It is important to streamline the onboarding process as much as you can to make it easier for consumers to operate your application. This guide explains how to build a simple button for your front-end application that will automatically add Gnosis to MetaMask.
+Detecting that MetaMask is installed and adding additional networks and custom tokens easily make a great dApp user experience, specially those who are not technically skilled. It is important to streamline the onboarding process as much as you can to make it easier for consumers to operate your application. This guide explains how to build a simple button for your front-end application that will automatically add Gnosis to MetaMask.
 
 ## Summary of actions
 
-1. Detect Metamask or propose its installation
+1. Detect MetaMask or propose its installation
 2. Detect ChainId, and propose to add Gnosis if needed
 3. Detect Account, and propose to connect if needed
 
-## Detect Metamask
+## Detect MetaMask
 
 ```js showLineNumbers
 if (typeof window.ethereum !== 'undefined') {
   console.log('MetaMask is installed!');
-  //TODO: propose users to install Metamask
+  //TODO: propose users to install MetaMask
 }
 ```
 
@@ -37,7 +39,7 @@ var GNOSIS_MAINNET_PARAMS = {
     blockExplorerUrls: ["https://gnosisscan.io/"],
 }
 
-var addGnosisToMetamask = function() {
+var addGnosisToMetaMask = function() {
     window.ethereum.request({
         method: "wallet_addEthereumChain",
         params: [GNOSIS_MAINNET_PARAMS],
@@ -60,9 +62,9 @@ var getAccount = async function(){
     alert(accounts[0]);
 }
 ```
-## Add Custom Token to Metamask
-In addition to directing the user to [manually import tokens using the Metamask UI](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H),
-you can add code to your dApp's front end to prompt the user to add it to their Metamask wallet automatically. This can be done using the [`wallet_watchAsset` method](https://docs.metamask.io/guide/rpc-api.html#wallet-watchasset). To do so, add the following code to your dApp's front end:
+## Add Custom Token to MetaMask
+In addition to directing the user to [manually import tokens using the MetaMask UI](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H),
+you can add code to your dApp's front end to prompt the user to add it to their MetaMask wallet automatically. This can be done using the [`wallet_watchAsset` method](https://docs.metamask.io/guide/rpc-api.html#wallet-watchasset). To do so, add the following code to your dApp's front end:
 ```javascript showLineNumbers
 const tokenAddress = 'custom-token-address-on-gnosis';
 const tokenSymbol = 'your-token-symbol';
@@ -101,7 +103,7 @@ This documentation site is built in ReactJS, check [this sample page](/live-samp
 
 ## More info
 
-- Read more about [Connect Users To Layer 2 Networks With The MetaMask Custom Networks API](https://consensys.net/blog/metamask/connect-users-to-layer-2-networks-with-the-metamask-custom-networks-api/) on the Metamask Blog.
+- Read more about [Connect Users To Layer 2 Networks With The MetaMask Custom Networks API](https://consensys.net/blog/metamask/connect-users-to-layer-2-networks-with-the-metamask-custom-networks-api/) on the MetaMask Blog.
 - [EIP-3085](https://eips.ethereum.org/EIPS/eip-3085) is an [Ethereum Improvement Proposal](https://eips.ethereum.org/) that defines an RPC method for adding Ethereum-compatible chains to wallet applications.
 - [Full API for the window.ethereum object](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents)
 

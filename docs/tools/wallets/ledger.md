@@ -1,4 +1,6 @@
 ---
+description: Ledger device helps to store your Gnosis assets securely
+keywords: [ledger, hardware wallet, hw, seed, security]
 ---
 
 # Ledger
@@ -9,7 +11,7 @@ Get a device and learn more on the [Ledger Website](https://www.ledger.com/).
 
 ## Connecting with Gnosis
 
-There is not an "Gnosis" dedicated application, you will use the [Ethereum application](https://support.ledger.com/hc/en-us/articles/4404366864657-How-to-access-your-Ledger-Ethereum-ETH-account-via-Metamask?docs=true) to interact with Gnosis through [MetaMask](/tools/wallets/metamask).  Be sure your ledger firmware is updated and you have setup [Ledger Live](https://www.ledger.com/ledger-live/).
+There is not an "Gnosis" dedicated application, you will use the [Ethereum application](https://support.ledger.com/hc/en-us/articles/4404366864657-How-to-access-your-Ledger-Ethereum-ETH-account-via-MetaMask?docs=true) to interact with Gnosis through [MetaMask](/tools/wallets/metamask).  Be sure your ledger firmware is updated and you have setup [Ledger Live](https://www.ledger.com/ledger-live/).
 
 If interacting with a contract (for example claiming tokens with a bridge transfer or conducting a token swap), you will need to enable blind signing. If you recently updated your hardware, you will need to re-enable.
 

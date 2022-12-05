@@ -1,5 +1,7 @@
 ---
 title: Gas Price
+description: The BlockScout gas price api endpoint shows a recommended gas price
+keywords: [gar price, oracle, recommended gas price]
 ---
 
 # Gas Price Oracle

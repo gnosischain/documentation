@@ -1,5 +1,7 @@
 ---
 title: Using Blockscout
+description: Blockscout is a Gnosis explorer, verify contract to increase transparency.
+keywords: [sourcify, contract verification, gnosisscan, deployed contracts, verify contract] 
 ---
 
 # Blockscout Contract Verification

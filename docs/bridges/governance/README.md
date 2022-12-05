@@ -1,5 +1,7 @@
 ---
 title: Governance
+description: The Bridge Governance Board is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
+keywords: [governance board, bridge governance]
 ---
 
 

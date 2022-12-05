@@ -1,7 +1,10 @@
 --- 
 title: GNO Token
+description: GNO is the staking token of Gnosis and the governance token for the GnosisDAO.
+keywords: [gnosis tokens, gnosis gno token, fee token, gno validation, omni bridge, mgno, ethereum gno]
 ---
 
+GNO is the native token of the Gnosis ecosystem. It's used for staking on the Gnosis Beacon Chain and acts as the governance token for the GnosisDAO.
 
 ## Specifications
 

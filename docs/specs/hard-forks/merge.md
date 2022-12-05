@@ -1,5 +1,7 @@
 ---
 title: The Merge
+description: The current Gnosis execution layer will merge with the Gnosis Beacon Chain, in a process similar to the Ethereum merge
+keywords: [gnosis merge, gnosis hardfork, wen merge]
 ---
 :::danger
 
@@ -15,9 +17,9 @@ This page will be continually updated in the lead up to the Merge.
 
 # The Merge
 
-In early December 2022, Gnosis will undergo the Merge. The current Gnosis execution layer (formerly xDai) will merge with the [Gnosis Beacon Chain](../consensus/gbc.md), in a process similar to the [Ethereum merge](https://ethereum.org/en/upgrades/merge/). 
+In early December 2022, Gnosis will undergo the Merge. The current Gnosis execution layer (formerly xDai) will merge with the [Gnosis Beacon Chain](../gbc/README.md), in a process similar to the [Ethereum merge](https://ethereum.org/en/upgrades/merge/). 
 
-The Merge will also represent a important shift for Gnosis, replacing the legacy [Proof-of-Authority consensus](../consensus/aura.md) with the open and unpermissioned [Beacon Chain Consensus](../consensus/gbc.md). This allows Gnosis to transition to a fully decentralized and permissionless proof-of-stake network. 
+The Merge will also represent a important shift for Gnosis, replacing the legacy [Proof-of-Authority consensus](../consensus/aura.md) with the open and unpermissioned [Beacon Chain Consensus](../gbc/README.md). This allows Gnosis to transition to a fully decentralized and permissionless proof-of-stake network. 
 
 The Merge is also another step in Gnosis' journey together with Ethereum. From the [early days of xDai at ETHDenver](https://developers.gnosischain.com/about-gc/use-cases/cryptocurrency-for-events-and-conferences/ethdenver), Gnosis has had a role in Ethereum's journey. With the adoption of Ethereum's consensus mechanism, Gnosis will continue to contribute to Ethereum's growth as an experimental chain, where newcomers, experiments and ideas are welcome. 
 
@@ -72,30 +74,32 @@ Core Devs are in the process of releasing merge-ready Client Images. Announcemen
 :::
 
 **EL client**
-| Client | Merge ready release | Status |
-| ------ | ------------------- | ------ |
-| Nethermind | v1.14.6 | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6
+
+| Client     | Merge ready release | Status                                                             |
+| ---------- | ------------------- | ------------------------------------------------------------------ |
+| Nethermind | v1.14.6             | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6 |
 
 **CL client**
 
-| Client | Merge ready release | Status |
-| ------ | ------------------- | ------ |
-| Teku       | v22.11.0 | ✅ Available https://github.com/ConsenSys/teku/releases/tag/22.11.0 
-| Lodestar   | v1.2.2 | ✅ Available https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2
-| Lighthouse | v3.3.0 | ✅ Available (https://github.com/sigp/lighthouse/releases/tag/v3.3.0)
-| Nimbus     | TBA    | ⌛ Coming soon
-| Prysm      | N/A    | ❌ Advised to switch to other clients.
+| Client     | Merge ready release | Status                                                                 |
+| ---------- | ------------------- | ---------------------------------------------------------------------- |
+| Teku       | v22.11.0            | ✅ Available https://github.com/ConsenSys/teku/releases/tag/22.11.0    |
+| Lodestar   | v1.2.2              | ✅ Available https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2 |
+| Lighthouse | v3.3.0              | ✅ Available (https://github.com/sigp/lighthouse/releases/tag/v3.3.0)  |
+| Nimbus     | TBA                 | ⌛ Coming soon                                                          |
+| Prysm      | N/A                 | ❌ Advised to switch to other clients.                                 |
 
 **DAppNode Packages**
-| Package | Merge ready release | Status |
-| ------ | ------------------- | ------ |
-| DAppNodePackage-nethermind-xdai | v1.0.17 | ✅ Available https://github.com/dappnode/DAppNodePackage-nethermind-xdai/releases/tag/v1.0.17 |
-| DAppNodePackage-teku-gnosis | v0.1.4 | ✅ Available https://github.com/dappnode/DAppNodePackage-teku-gnosis/releases/tag/v0.1.4 |
-| DAppNodePackage-web3signer-gnosis | v0.1.9 | ✅ Available https://github.com/dappnode/DAppNodePackage-web3signer-gnosis/releases/tag/v0.1.9 |
-| DAppNodePackage-lighthouse-gnosis | 0.1.4 | ✅ Available https://github.com/dappnode/DAppNodePackage-lighthouse-gnosis/releases/tag/v0.1.4 |
-| DAppNodePackage-gnosis-beacon-chain-prysm | 🚫 TBA | ⏳ TBA |
-| DAppNodePackage-Lodestar-Gnosis | 🟡 TBA | ⏳ After Merge |
-| DAppNodePackage-nimbus-gnosis | 🟡 TBA  | ⏳ After Merge  |
+
+| Package                                   | Merge ready release | Status                                                                                         |
+| ----------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| DAppNodePackage-nethermind-xdai           | v1.0.17             | ✅ Available https://github.com/dappnode/DAppNodePackage-nethermind-xdai/releases/tag/v1.0.17  |
+| DAppNodePackage-teku-gnosis               | v0.1.4              | ✅ Available https://github.com/dappnode/DAppNodePackage-teku-gnosis/releases/tag/v0.1.4       |
+| DAppNodePackage-web3signer-gnosis         | v0.1.9              | ✅ Available https://github.com/dappnode/DAppNodePackage-web3signer-gnosis/releases/tag/v0.1.9 |
+| DAppNodePackage-lighthouse-gnosis         | 0.1.4               | ✅ Available https://github.com/dappnode/DAppNodePackage-lighthouse-gnosis/releases/tag/v0.1.4 |
+| DAppNodePackage-gnosis-beacon-chain-prysm | 🚫 TBA             | ⏳ TBA                                                                                          |
+| DAppNodePackage-Lodestar-Gnosis           | 🟡 TBA             | ⏳ After Merge                                                                                  |
+| DAppNodePackage-nimbus-gnosis             | 🟡 TBA             | ⏳ After Merge                                                                                  |
 
 ### For DApps
 

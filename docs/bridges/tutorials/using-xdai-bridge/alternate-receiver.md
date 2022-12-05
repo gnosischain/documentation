@@ -1,4 +1,6 @@
 ---
+description: Set an alternate receiver when bridging tokens to and from Gnosis using the xdai bridge.
+keywords: [xdai bridge, alternate receiver, gnosis bridge]
 ---
 
 # Alternate Receiver

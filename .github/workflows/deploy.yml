@@ -30,6 +30,8 @@ jobs:
           for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - uses: actions/cache@v2
         with:
@@ -49,6 +51,15 @@ jobs:
           yarn install
           pip install awscli --upgrade --user
 
+      - name: Build App
+        if: github.ref != 'refs/heads/release'
+        run: yarn build
+        env:
+          ALGOLIA_ID: ${{ secrets.ALGOLIA_ID }}
+          ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
+          ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
+          GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
+
       - name: Build Release App
         if: github.ref == 'refs/heads/release'
         run: yarn build
@@ -58,17 +69,9 @@ jobs:
           ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
 
-      - name: Build Staging App
-        if: github.ref == 'refs/heads/main'
-        run: yarn build
-        env:
-          ALGOLIA_ID: ${{ secrets.ALGOLIA_ID }}
-          ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
-          ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
-          GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
+        if: ( github.ref == 'refs/heads/release' || github.ref == 'refs/heads/main' )
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

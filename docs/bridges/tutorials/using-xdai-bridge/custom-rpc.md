@@ -1,5 +1,7 @@
 ---
 title: Custom RPC
+description: Set a custom RPC when bridging tokens to and from Gnosis using the xdai bridge.
+keywords: [xdai bridge, alternate receiver, gnosis bridge]
 ---
 
 # Custom JSON RPC Endpoints

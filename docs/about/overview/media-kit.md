@@ -1,5 +1,7 @@
 ---
 title: Media Kit
+description: Gnosis Media Kit
+keywords: [gnosis, mediakit, media kit, gnosis logo, xdai token, xdai token logo, xdai logo]
 ---
 
 ## Gnosis

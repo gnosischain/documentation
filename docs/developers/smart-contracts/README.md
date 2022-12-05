@@ -1,4 +1,6 @@
 ---
+description: Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains.
+keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum] 
 ---
 
 # Smart Contract Overview
@@ -20,7 +22,7 @@ The default network will be changed from `xdai` to `gnosis` shortly in some tool
 
 Great development tools are compatible with Gnosis
 
-<div class="row">
+<div className="row">
 <box href="/developers/smart-contracts/remix" title="Remix" />
 <box href="/developers/smart-contracts/foundry" title="Foundry" />
 <box href="/developers/smart-contracts/truffle" title="Truffle" />

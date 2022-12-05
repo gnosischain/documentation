@@ -1,6 +1,9 @@
 ---
 title: Advanced
+description: Advanced operations to bridge between Gnosis and other chains
+keywords: [alternate receiver, custom rpc endpoints, bridge, omnibridge ui, safe]
 ---
+
 # Advanced
 ## Alternate Receiver
 The default bridge mode sends funds to the same address across chains, as the same algorithm is used to derive an address from a private key across the chains where the OmniBridge is deployed. However, it is easy to specify another address to receive funds on the chain you are bridging to. This may be desirable when sending funds from a multi-sig wallet (like Gnosis Safe), or as a transfer method to another address on a secondary chain.

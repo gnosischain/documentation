@@ -1,5 +1,0 @@
---- 
-title: Why Gnosis?
----
-
-TODO

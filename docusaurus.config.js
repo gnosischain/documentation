@@ -7,12 +7,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gnosis Chain',
-  tagline: 'Documentation',
+  tagline: 'Gnosis Chain is one of the first Ethereum sidechains and has stayed true to its values.',
   url: 'https://docs.gnosischain.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  stylesheets: [
+    { href: 'https://fonts.googleapis.com/css?family=Karla:regular,600,500italic,600italic|Lora:regular,500,italic,500italic,600italic', },
+  ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -33,12 +36,20 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs',
+          editUrl: 'https://github.com/gnosischain/documentation/tree/main',
           routeBasePath: '/',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/gnosischain/documentation/tree/main',
+          sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+        },
+        blog: {
+          path: 'updates',
+          routeBasePath: 'updates',
+          blogTitle: 'Gnosis Updates',
+          blogDescription: 'Get Gnosis updates, announcements, changelogs, core dev info!',
+          include: ['*.md', '*.mdx'],
+          showReadingTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
@@ -54,6 +65,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/gnosis-social-card.jpg',
+      announcementBar: {
+        id: 'support_us',
+        content:
+          'Gnosis will undergo The Merge <a target="_blank" rel="noopener noreferrer" href="https://bordel.wtf">very soon</a>, <a target="_blank" rel="noopener noreferrer" href="/node/">update your node</a>, bridges paused, more info  <a target="_blank" rel="noopener noreferrer" href="/specs/consensus/">here</a>.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
       navbar: {
         logo: {
           alt: 'Gnosis Logo',
@@ -66,12 +86,6 @@ const config = {
             sidebarId: 'about',
             label: 'About',
           },
-          /*{
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'userguide',
-            label: 'User Guide',
-          },*/
           {
             type: 'docSidebar',
             position: 'left',
@@ -142,7 +156,7 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discord.gg/VQb3WzsywU',
+                href: 'https://discord.gg/gnosischain',
               },
               {
                 label: 'Twitter',
@@ -153,6 +167,10 @@ const config = {
           {
             title: 'More',
             items: [
+              {
+                label: 'Updates',
+                to: '/updates',
+              },
               {
                 label: 'Careers',
                 href: 'https://gnosis.io/careers/',
@@ -197,23 +215,6 @@ const config = {
       [
         require.resolve('docusaurus-plugin-sass'),{}
       ],
-      //see: https://github.com/rdilweb/docusaurus-plugin-remote-content#docusaurus-plugin-remote-content
-      //IMPORTANT: all outDir+documents paths should be included in the .gitignore file
-      /*[
-        "docusaurus-plugin-remote-content",
-        {
-            name: "validator-data-generator-readme",
-            sourceBaseUrl: "https://raw.githubusercontent.com/gnosischain/validator-data-generator/master/",
-            outDir: "docs/node/guide/validator/generate-keys/cli/docs/",
-            documents: ["README.md"],
-            modifyContent(filename, content) {
-              if (filename.includes("README")) {
-                  return { content: "# CLI Tool Docs \n\n #" + content }
-              }
-              return undefined
-          },
-        },
-      ],*/
     ],
 };
 

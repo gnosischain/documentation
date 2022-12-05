@@ -46,8 +46,8 @@ We highly recommend generating keystores on a safe, completely offline device.
 
 </TabItem>
 <TabItem value="win">
- 
- - Download the Windows version of the [Validator Data Generation tool](https://github.com/gnosischain/validator-data-generator/releases) from the releases page.
+
+- Download the Windows version of the [Validator Data Generation tool](https://github.com/gnosischain/validator-data-generator/releases) from the releases page.
 - Execute Validator Data Generation tool and follow the instructions.
     In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/)
 

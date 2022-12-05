@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Gnosis provides stability, scalability and an extendable beacon chain framework.">
+      description={`${siteConfig.tagline}`}>
       <HomepageHeader />
 
       <HomepageFeatures />

@@ -1,5 +1,6 @@
 ---
 description: Dune Supports Gnosis and Ethereum for cross-chain and custom dashboards
+keywords: [dune analytics, analytics, query]
 ---
 
 # Dune

@@ -1,4 +1,6 @@
 ---
+description: Trezor device helps to store your Gnosis assets securely
+keywords: [trezor, hardware wallet, hw, seed, security]
 ---
 
 # Trezor

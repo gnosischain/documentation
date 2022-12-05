@@ -1,7 +1,12 @@
 ---
 title: Overview
 description: Architecture of Gnosis' Bridges
+keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 ---
+
+:::info bridge paused
+Our Native Bridges are paused for the Gnosis Merge on 8 Dec 2022. Please use [3rd-party](./third-party.md) bridges like Connext, Hop or Li.Fi during this period.
+:::
 
 # Bridges Overview
 

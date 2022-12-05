@@ -1,10 +1,10 @@
 --- 
 title: Using Remix and MetaMask
-description: Using Remix and Metamask with Gnosis
+description: Using Remix and MetaMask with Gnosis
 keywords: [Remix, MetaMask, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide]
 ---
 
-# Using Remix and Metamask
+# Using Remix and MetaMask
 
 #### Remix is an integrated development environment used for smart contract compiling, deploying, testing and debugging.
 

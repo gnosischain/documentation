@@ -1,4 +1,6 @@
 ---
+description: Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Troubleshoot Bridge issues
+keywords: [troubleshooting, bridge problems, issues, token bridge, gnosis bridge]
 ---
 
 # Troubleshoot Bridge Issues
@@ -11,7 +13,7 @@ If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see
 **Things to know**
 
 * A bridge exit (moving from xDai to Dai) requires **2 transactions**, **one to initiate the transfer** on Gnosis, and a **2nd to claim DAI on Ethereum**.
-* To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in Metamask** and **you will need Ether to pay gas fees.**
+* To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in MetaMask** and **you will need Ether to pay gas fees.**
 * The **2nd transaction may take quite a long time**, it is being processed on Ethereum. You can set a higher gas price if you want to speed it up. [**Instructions**](#dai-to-xdai-transaction-is-taking-a-long-time)**.**
 * If you closed the UI before starting the 2nd transaction, you can come back and to complete later. [**Instructions**](#i-used-the-xdai-bridge-ui)**.**
 * Additional troubleshooting items below.
@@ -19,7 +21,7 @@ If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see
 
 ## Bridge UI is Offline or in Maintenance Mode
 
-We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/VQb3WzsywU) for up-to-date information.
+We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/gnosischain) for up-to-date information.
 
 ## I Only See Bridging in 1 Direction
 
@@ -42,9 +44,9 @@ There are currently different bridging UIs, and depending on the UI you may need
 
 ## I Used the xDai Bridge UI
 
-When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](../README.md).
+When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](./README.md).
 
-If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your Metamask wallet with the account you used previously.
+If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your MetaMask wallet with the account you used previously.
 
 1\) Switch MetaMask to the ETH Mainnet. If you have unclaimed txs you should see the following popup. Click on **History**.
 
