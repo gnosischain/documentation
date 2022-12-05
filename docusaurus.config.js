@@ -55,6 +55,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/gnosis-social-card.jpg',
+      announcementBar: {
+        id: 'support_us',
+        content:
+          'Gnosis will undergo The Merge <a target="_blank" rel="noopener noreferrer" href="https://bordel.wtf">very soon</a>, <a target="_blank" rel="noopener noreferrer" href="/node/">update your node</a>, bridges paused, more info  <a target="_blank" rel="noopener noreferrer" href="/specs/consensus/">here</a>.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
       navbar: {
         logo: {
           alt: 'Gnosis Logo',

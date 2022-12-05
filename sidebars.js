@@ -682,6 +682,7 @@ const sidebars = {
             'bridges/governance/decisions',
           ] 
         },
+        'bridges/third-party',
         'bridges/audits',
         'bridges/roadmap'
       ]
