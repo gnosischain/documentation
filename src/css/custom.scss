@@ -16,6 +16,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --tab-gray: #ddd;
+  font-family: Karla,sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -28,6 +29,16 @@
   --ifm-color-primary-lighter: #e6906a;
   --ifm-color-primary-lightest: #ecac8f;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-weight:500
+}
+h2 {
+  font-weight:400
+}
+h3, h4, h5, h6 {
+  font-weight:300
 }
 
 footer.footer--dark{
