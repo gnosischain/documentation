@@ -4,6 +4,10 @@ description: Architecture of Gnosis' Bridges
 keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 ---
 
+:::info bridge paused
+Our Native Bridges are paused for the Gnosis Merge on 8 Dec 2022. Please use [3rd-party](./third-party.md) bridges like Connext, Hop or Li.Fi during this period.
+:::
+
 # Bridges Overview
 
 Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](/bridges/tokenbridge/amb-bridge#bridge-validators). There is a [roadmap](/bridges/roadmap) to move towards [trustless bridges](/bridges/roadmap#trustless-bridges).
