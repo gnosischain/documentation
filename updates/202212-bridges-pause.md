@@ -1,8 +1,10 @@
 ---
-title: Pause of Gnosis Native Bridges for the Merge
-authors: [barichek, plato-gno]
+title: The Merge - Pausing of Native Bridges
+authors: [barichek, alebanzas, plato-gno]
 tags: [bridges, merge]
 ---
+
+# The Merge - Pausing of Native Bridges
 
 ## Overview
 
@@ -75,6 +77,11 @@ There will be a 48 hour observation period post-merge to ensure that the chain f
 
 ### What are the conditions by which the bridges will be enabled again?
 
-After confirming the successful merge of Gnosis mainnet and the beacon chain, we will restore OmniBridge and xDai Bridge initial values, enabling both again.
+A few of the conditions we will be monitoring post-Merge: 
 
-We plan on pausing them ~8 hours before the Merge and resume a few hours after.
+* Gnosis Chain should be able to finalize
+* Execution Layer and Consensus Layer "merge" without incident
+* Validators are not experiencing major issues
+* Bridge Validators are operational
+
+After confirming the successful merge of Gnosis mainnet and the beacon chain, we will restore OmniBridge and xDai Bridge initial parameters.  
