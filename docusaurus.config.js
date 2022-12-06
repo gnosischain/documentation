@@ -69,7 +69,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Gnosis will undergo The Merge <a target="_blank" rel="noopener noreferrer" href="https://bordel.wtf">very soon</a>, <a target="_blank" rel="noopener noreferrer" href="/node/">update your node</a>, bridges paused, more info  <a target="_blank" rel="noopener noreferrer" href="/specs/consensus/">here</a>.',
+          'Bridges will be paused for the Merge <a target="_blank" rel="noopener noreferrer" href="https://bordel.wtf">(8th Dec ~18:00 UTC)</a>. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,
@@ -115,6 +115,11 @@ const config = {
             position: 'left',
             sidebarId: 'ecosystems',
             label: 'Ecosystems',
+          },
+          {
+            to: 'updates',
+            label: 'Updates',
+            position: 'left'
           },
           {
             href: 'https://github.com/gnosischain/developers-portal',
