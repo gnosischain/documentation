@@ -1,96 +1,79 @@
 ---
-title: Bridges Pause
+title: Pause of Gnosis Native Bridges for the Merge
 authors: [barichek, plato-gno]
 tags: [bridges, merge]
 ---
 
-TL;TD: OmniBridge and xDai Bridge contracts will be "paused" ~8 hours prior to the Merge.
+## Overview
 
-We aimed to prevent users from initiating any bridge during this process.
+- Gnosis will be temporarily pausing its Native Bridges for the duration of the [Merge](../docs/specs/hard-forks/merge.md)
+- This is a risk-management operation that will be rolled back once normal operation of the chain has been verified post-Merge
+- This will affect both the [Omnibridge](../docs/bridges/tokenbridge/omnibridge.md) and [xDai Bridge](../docs/bridges/tokenbridge/xdai-bridge.md), and any 3rd-party bridges or dApps that utilize the Native Bridge contracts. 
 
-<!--truncate-->
+### Pausing of Bridges
 
-# How are we going to pause the Bridges?
+8 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](../docs/bridges/governance/README.md) will execute a transaction to set the the following bridge parameters. 
 
+| Bridge                                                                                                                             | Details                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [xDai Bridge](../docs/bridges/tokenbridge/xdai-bridge.md)                                                                          | `DailyLimit` set to 0 on all Bridge Contracts<br /><br /> This will prevent any transaction from going through.                |
+| [Arbitrary Message Bridge](../docs/bridges/tokenbridge/amb-bridge.md)<br />[Omnibridge](../docs/bridges/tokenbridge/omnibridge.md) | `SetMaxGasPerTx` set to 0 on all Bridge Contracts<br /><br /> This will prevent any arbitrary message call from going through. |
 
-* For **XDAI Bridge**, their **DailyLimit** value will be set to 0 on the smart contracts on both ends, preventing any transaction to go thru. 
-* For **Omni Bridge**, the the analogous property **SetMaxGasPerTx** will change its value to 0 on the smart contracts on both ends. 
+### Unpausing of Bridges
 
-**Once the Merge is confirmed, each value will be rolled back to their initials.**
+There will be a 48 hour observation period post-merge to ensure that the chain finalizes without incident. Once this observation period has passed, the Gnosis Bridge Governance Multisig will execute the following transactions to restore the pre-Merge bridge limits. 
 
-A detailed list of the contracts involved in this operation, with their initial value for reference follow:
+| Bridge                                                                                                                             | Details                                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [xDai Bridge](../docs/bridges/tokenbridge/xdai-bridge.md)                                                                          | Limits restored to [Pre-Merge limits](../docs/bridges/tokenbridge/xdai-bridge.md#fees--daily-limits)                                          |
+| [Arbitrary Message Bridge](../docs/bridges/tokenbridge/amb-bridge.md)<br />[Omnibridge](../docs/bridges/tokenbridge/omnibridge.md) | Arbitrary Messages can be sent.<br />Omnibridge limits restored to [Pre-Merge limits](../docs/bridges/tokenbridge/omnibridge.md#daily-limits) |
 
+## Details
 
-## XDAI Bridge
+### xDai Bridge
 
+| Bridge Contract                                                                                                                         | Initial Limit                | Temporary Limit |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------- |
+| [Gnosis](https://gnosisscan.io/address/0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6#readProxyContract) <br /> `HomeBridgeERCtoNative`     | 10000000000000000000000001   | 0         |
+| [Ethereum](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#readProxyContract) <br /> `ForeignBridgeERCtoNative` | 10000000000000000000000000 | 0         |
 
-### HomeBridgeErcToNative
+### AMB & Omnibridge
 
-Proxy Contract **[0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6](https://gnosisscan.io/address/0x7301cfa0e1756b71869e93d4e4dca5c7d0eb0aa6#readProxyContract)**
+#### Ethereum - Gnosis
 
-DailyLimit Initial Value **_10000000000000000000000001_**
+| Bridge Contract                                                                                                           | Initial Limit | Temporary Limit |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------- | --------- |
+| [Gnosis](https://gnosisscan.io/address/0x75df5af045d91108662d8080fd1fefad6aa0bb59#readProxyContract) <br /> `HomeAMB`    | 2000000     | 0         |
+| [Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract) <br /> `ForeignAMB` | 4000000     | 0         |
 
-DailyLimit New Value **_0_**
+#### Gnosis - BNBChain
 
+| Bridge Contract                                                                                                                 | Initial Limit | Temporary Limit |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------- | --------- |
+| [Gnosis](https://gnosisscan.io/address/0x162e898bd0aacb578c8d5f8d6ca588c13d2a383f#readProxyContract) <br /> `HomeGC <-> BSC`    | 2000000     | 0         |
+| [Ethereum](https://bscscan.com/address/0x05185872898b6f94aa600177ef41b9334b1fa48b#readProxyContract) <br /> `ForeignGC <-> BSC` | 5000000     | 0         |
 
-### ForeignBridgeErcToNative
+## FAQs
 
-Proxy Contract **[0x4aa42145aa6ebf72e164c9bbc74fbd3788045016](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#readProxyContract)**
+### Will the Bridge Contracts remain operational during this time?
 
-DailyLimit Initial Value **_10000000000000000000000000_**
+* Bridge Contracts are smart contracts, and remain active on chain
+* The "pause" refers to parameters that are being set on these smart contracts that effectively limit their usage
 
-DailyLimit New Value **_0_**
+### Will Bridge Validators continue to operate during this time?
 
+* Bridge Validators will continue to be operational, but will not relay any messages as the events they listen to will not trigger due to the limits set
 
-## Omni Bridge
+### Can my dApp continue to use the AMB?
 
+* The Arbitrary Message Bridge (AMB) will not relay messages between the supported networks, as [`_sendMessage`](https://gnosisscan.io/address/0x525127c1f5670cc102b26905dccf8245c05c164f#code#L1428) requires a non-null gas limit.  
+* Both the OmniBridge and xDai Bridge won’t initiate since the established values will prevent it. 
 
-### HomeAMB
+### Can I continue to use the Omnibridge?
+  
+* No, you will not be able to use the Omnibridge as it depends on the Arbitrary Message Bridge, which is unable to relay messages due to the gas limit. 
 
-Proxy Contract **[0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75df5af045d91108662d8080fd1fefad6aa0bb59#readProxyContract)**
-
-MaxGasPerTx Initial Value **_2000000_**
-
-MaxGasPerTx New Value **_0_**
-
-
-### ForeignAMB
-
-Proxy Contract **[0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract)**
-
-MaxGasPerTx Initial Value **_4000000_**
-
-MaxGasPerTx New Value **_0_**
-
-
-### HomeGC&lt;->BSC
-
-Proxy Contract **[0x162E898bD0aacB578C8D5F8d6ca588c13d2A383F](https://gnosisscan.io/address/0x162e898bd0aacb578c8d5f8d6ca588c13d2a383f#readProxyContract)**
-
-MaxGasPerTx Initial Value **_2000000_**
-
-MaxGasPerTx New Value **_0_**
-
-
-### ForeignGC&lt;->BSC
-
-Proxy Contract **[0x05185872898b6f94AA600177EF41B9334B1FA48B](https://bscscan.com/address/0x05185872898b6f94aa600177ef41b9334b1fa48b#readProxyContract)**
-
-MaxGasPerTx Initial Value **_5000000_**
-
-MaxGasPerTx New Value **_0_**
-
-
-# Will the AMB continue to function during this time?
-
-The Arbitrary Message Bridge (AMB) will continue relaying messages between the supported networks.
-
-Both the OmniBridge and xDai Bridge won’t initiate since the established values will prevent it. **Although, contracts will remain active.**
-
-The pause operation consides all tokens on Omni Bridge due to the fact limits are at AMBs layer and Token Registries are behind the Mediator.
-
-
-# What are the conditions by which the bridges will be enabled again?
+### What are the conditions by which the bridges will be enabled again?
 
 After confirming the successful merge of Gnosis mainnet and the beacon chain, we will restore OmniBridge and xDai Bridge initial values, enabling both again.
 
