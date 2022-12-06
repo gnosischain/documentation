@@ -8,18 +8,18 @@ tags: [bridges, merge]
 
 ## Overview
 
-- Gnosis will be temporarily pausing its Native Bridges for the duration of the [Merge](../docs/specs/hard-forks/merge.md)
+- Gnosis will be temporarily pausing its Native Bridges for the duration of the [Merge](/specs/hard-forks/merge)
 - This is a risk-management operation that will be rolled back once normal operation of the chain has been verified post-Merge
-- This will affect both the [Omnibridge](../docs/bridges/tokenbridge/omnibridge.md) and [xDai Bridge](../docs/bridges/tokenbridge/xdai-bridge.md), and any 3rd-party bridges or dApps that utilize the Native Bridge contracts. 
+- This will affect both the [Omnibridge](/bridges/tokenbridge/omnibridge) and [xDai Bridge](/bridges/tokenbridge/xdai-bridge), and any 3rd-party bridges or dApps that utilize the Native Bridge contracts. 
 
 ### Pausing of Bridges
 
-24 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](../docs/bridges/governance/README.md) will execute a transaction to set the the following bridge parameters. 
+24 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](/bridges/governance) will execute a transaction to set the the following bridge parameters. 
 
 | Bridge                                                                                                                             | Details                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [xDai Bridge](../docs/bridges/tokenbridge/xdai-bridge.md)                                                                          | `DailyLimit` set to 0 on all Bridge Contracts<br /><br /> This will prevent any transaction from going through.                |
-| [Arbitrary Message Bridge](../docs/bridges/tokenbridge/amb-bridge.md)<br />[Omnibridge](../docs/bridges/tokenbridge/omnibridge.md) | `SetMaxGasPerTx` set to 0 on all Bridge Contracts<br /><br /> This will prevent any arbitrary message call from going through. |
+| [xDai Bridge](/bridges/tokenbridge/xdai-bridge)                                                                          | `DailyLimit` set to 0 on all Bridge Contracts<br /><br /> This will prevent any transaction from going through.                |
+| [Arbitrary Message Bridge](/bridges/tokenbridge/amb-bridge)<br />[Omnibridge](/bridges/tokenbridge/omnibridge) | `SetMaxGasPerTx` set to 0 on all Bridge Contracts<br /><br /> This will prevent any arbitrary message call from going through. |
 
 ### Unpausing of Bridges
 
@@ -27,8 +27,8 @@ There will be an 96 hour observation period post-merge to ensure that the chain 
 
 | Bridge                                                                                                                             | Details                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [xDai Bridge](../docs/bridges/tokenbridge/xdai-bridge.md)                                                                          | Limits restored to [Pre-Merge limits](../docs/bridges/tokenbridge/xdai-bridge.md#fees--daily-limits)                                          |
-| [Arbitrary Message Bridge](../docs/bridges/tokenbridge/amb-bridge.md)<br />[Omnibridge](../docs/bridges/tokenbridge/omnibridge.md) | Arbitrary Messages can be sent.<br />Omnibridge limits restored to [Pre-Merge limits](../docs/bridges/tokenbridge/omnibridge.md#daily-limits) |
+| [xDai Bridge](/bridges/tokenbridge/xdai-bridge)                                                                          | Limits restored to [Pre-Merge limits](/bridges/tokenbridge/xdai-bridge#fees--daily-limits)                                          |
+| [Arbitrary Message Bridge](/bridges/tokenbridge/amb-bridge)<br />[Omnibridge](/bridges/tokenbridge/omnibridge) | Arbitrary Messages can be sent.<br />Omnibridge limits restored to [Pre-Merge limits](/bridges/tokenbridge/omnibridge#daily-limits) |
 
 ## Details
 
