@@ -14,7 +14,7 @@ tags: [bridges, merge]
 
 ### Pausing of Bridges
 
-8 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](../docs/bridges/governance/README.md) will execute a transaction to set the the following bridge parameters. 
+24 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](../docs/bridges/governance/README.md) will execute a transaction to set the the following bridge parameters. 
 
 | Bridge                                                                                                                             | Details                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -23,7 +23,7 @@ tags: [bridges, merge]
 
 ### Unpausing of Bridges
 
-There will be a 48 hour observation period post-merge to ensure that the chain finalizes without incident. Once this observation period has passed, the Gnosis Bridge Governance Multisig will execute the following transactions to restore the pre-Merge bridge limits. 
+There will be an 96 hour observation period post-merge to ensure that the chain finalizes without incident. Once this observation period has passed without incident, the Gnosis Bridge Governance Multisig will execute the following transactions to restore the pre-Merge bridge limits. GnosisDAO may also elect to unpause the bridges earlier. 
 
 | Bridge                                                                                                                             | Details                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
