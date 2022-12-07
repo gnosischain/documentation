@@ -5,7 +5,9 @@ keywords: [network, gnosis mainnet, chiado, testnet, gnosis testnet, gnosis fauc
 
 # Networks
 
-| Network Name       | Gnosis (mainnet)                  | Chiado (testnet)                          |
+## Networks summary
+
+| Network Name       | [Gnosis (mainnet)](./mainnet.md)  | [Chiado (testnet)](./chiado.md)           |
 |--------------------|-----------------------------------|-------------------------------------------|
 | Native (fee) token | xDAI                              | Chiado xDAI                               |
 | Chain ID           | 100                               | 10200                                     |
@@ -26,3 +28,9 @@ If you are developing on Chiado:
 - Re-synchronize your nodes
 - Point your app to the new RPC endpoint
 - Get help on [discord](https://discord.gg/gnosischain)
+
+## Optimism on Gnosis
+
+An Optimism implementation is deployed on Gnosis. Gnosis functions as the L1 (akin to Ethereum) and Optimism on Gnosis as the L2.
+
+[More details](./optimism.md)
