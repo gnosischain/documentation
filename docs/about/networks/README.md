@@ -9,11 +9,11 @@ keywords: [network, gnosis mainnet, chiado, testnet, gnosis testnet, gnosis fauc
 |--------------------|-----------------------------------|-------------------------------------------|
 | Native (fee) token | xDAI                              | Chiado xDAI                               |
 | Chain ID           | 100                               | 10200                                     |
-| EL RPC             | https://rpc.gnosischain.com/      | https://rpc.chiadochain.net               |
-| EL Explorer        | https://gnosisscan.io/            | https://blockscout.chiadochain.net        |
-| CL Explorer        | https://gnosisscan.io/            | https://beacon.chiadochain.net/           |
-| Fork monitor       | https://forkmon.gnosischain.com/  | https://forkmon.chiadochain.net/          |
-| EthStats           | https://ethstats.gnosischain.com/ | https://ethstats.chiadochain.net/         |
+| EL RPC             | https://rpc.gnosischain.com       | https://rpc.chiadochain.net               |
+| EL Explorer        | https://gnosisscan.io             | https://blockscout.chiadochain.net        |
+| CL Explorer        | https://beacon.gnosischain.com    | https://beacon.chiadochain.net            |
+| Fork monitor       | https://forkmon.gnosischain.com   | https://forkmon.chiadochain.net           |
+| EthStats           | https://ethstats.gnosischain.com  | https://ethstats.chiadochain.net          |
 | Faucet             | https://gnosisfaucet.com          | https://gnosisfaucet.com                  |
 
 ## Chiado reset
