@@ -62,6 +62,7 @@ const sidebars = {
       link: {type: 'doc', id: 'about/networks/README'},
       collapsed: false,
       items: [
+        "about/networks/mainnet",
         "about/networks/chiado",
       ]
     },
