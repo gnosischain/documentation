@@ -253,4 +253,4 @@ References:
 ## Resources
 
 - [Tokenbridge Docs on xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
-- [xDai Bridge docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
+- [xDai Bridge docs](/bridges/tutorials/using-xdai-bridge/)
