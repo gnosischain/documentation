@@ -91,6 +91,10 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 
 *** Bridging Dai Using Omnibridge
 
+:::note
+Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
+:::
+
 
 
 ### Bridge Validators
