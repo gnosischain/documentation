@@ -64,7 +64,6 @@ References:
 |--------------------|--------------------|-----------------------|
 | Approx. Gas Cost   |                    |                       |
 | Bridge Fees        | 0%                 | 0%                    |
-| Daily Limit Reset  | 00:00 UTC          | 00:00 UTC             |
 | Min Transfer       | 0.005 Dai          | 10 xDai               |
 | Daily Limit        | 10,000,000 Dai     | 10,000,000 xDai       |
 | Max Single Deposit | 9,999,999 Dai      | 10,000,000 xDai       |
@@ -86,7 +85,7 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 | CowProtocol  | [gno:0x587c0d02b40822f15f05301d87c16f6a08aaddde](https://blockscout.com/xdai/mainnet/address/0x587c0d02b40822f15f05301d87c16f6a08aaddde) |
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://blockscout.com/xdai/mainnet/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://blockscout.com/xdai/mainnet/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
-| Syncnode     | [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
+| Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://blockscout.com/xdai/mainnet/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
 
 References: 
 * [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators)
