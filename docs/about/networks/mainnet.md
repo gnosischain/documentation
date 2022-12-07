@@ -26,8 +26,8 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 | More RPC endpoints             | [RPC Providers](../../tools/rpc/README.mdx)                          |
 | Execution Layer Explorer       | https://gnosisscan.io                                                |
 | Execution Layer Explorer       | https://blockscout.com/xdai/mainnet                                  |
-| Fork monitor                   | https://forkmon.gnosischain.com/                                     |
-| EthStats                       | https://ethstats.gnosischain.com/                                    |
+| Fork monitor                   | https://forkmon.gnosischain.com                                      |
+| EthStats                       | https://ethstats.gnosischain.com                                     |
 | Forked Blocks                  | https://blockscout.com/xdai/mainnet/reorgs                           |
 | Faucet                         | https://gnosisfaucet.com                                             |
 
@@ -37,12 +37,13 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 
 | Consensus Layer                |                                                               |
 | ------------------------------ | ------------------------------------------------------------- |
-| Beacon Explorer                | https://beacon.gnosischain.com/                               |
-| Beacon Explorer Backup 1       | https://beacon-v1.gnosischain.com/                            |
-| Beacon Explorer Backup 2       | https://beacon-v2.gnosischain.com/                            |
+| Consensus Layer RPC            | https://rpc-gbc.gnosischain.com                               |
+| Beacon Explorer                | https://beacon.gnosischain.com                                |
+| Beacon Explorer Backup 1       | https://beacon-v1.gnosischain.com                             |
+| Beacon Explorer Backup 2       | https://beacon-v2.gnosischain.com                             |
 | Beacon Checkpoint Sync         | https://checkpoint.gnosis.gateway.fm                          |
-| Beacon Checkpoint Sync         | https://checkpoint.gnosischain.com/                           |
-| NodeWatch                      | https://nodewatch.gnosischain.com/                            |
+| Beacon Checkpoint Sync         | https://checkpoint.gnosischain.com                            |
+| NodeWatch                      | https://nodewatch.gnosischain.com                             |
 
 ### Other Tools
 
