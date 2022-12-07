@@ -5,6 +5,8 @@ keywords: [chiado, testnet, gnosis testnet, gnosis faucet, gno on chiado, xdai o
 
 # Chiado (Testnet)
 
+[Add to MetaMask](https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x27D8&params[0][chainName]=Chiado&params[0][rpcUrls][0]=https://rpc.chiadochain.net&params[0][nativeCurrency][name]=Chiado%20xDAI&params[0][nativeCurrency][symbol]=xDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout.chiadochain.net)
+
 ![Chiado Train Station](../../../static/img/about/chiado.jpg)
 Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/people-at-city-1534560/))
 
