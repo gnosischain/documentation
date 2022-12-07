@@ -64,6 +64,7 @@ const sidebars = {
       items: [
         "about/networks/mainnet",
         "about/networks/chiado",
+        "about/networks/optimism",
       ]
     },
     {
