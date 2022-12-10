@@ -69,7 +69,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Bridges will be paused for the Merge <a target="_blank" rel="noopener noreferrer" href="https://bordel.wtf">(8th Dec ~18:00 UTC)</a>. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
+          'Merged successful at block 6,306,357. Bridges have resumed operation. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,
