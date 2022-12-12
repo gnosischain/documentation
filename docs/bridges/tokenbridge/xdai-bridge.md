@@ -93,6 +93,12 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 
 References: 
 * [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators)
+
+### Bridge Validator Flow:
+
+![](/img/bridges/diagrams/xdai-bridge-validator-flow.png)
+
+
 ### Bridge Governance
 
 * See [Bridge Governance](/bridges/governance)
