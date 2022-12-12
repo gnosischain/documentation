@@ -102,14 +102,38 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     cd consensus
     ```
 
- - Execute Lighthouse
+- Create a new folder `network_config` and download Chiado config files:
+    ```bash
+    mkdir network_config &&
+    cd network_config &&
+    wget https://github.com/gnosischain/configs/raw/main/chiado/config.yaml &&
+    wget https://github.com/gnosischain/configs/raw/main/chiado/genesis.ssz &&
+    wget https://github.com/gnosischain/configs/raw/main/chiado/deploy_block.txt
+    ```
+
+- Execute Lighthouse, replace `[BOOTNODES]` with a comma-separated bootnodes from [this file](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes.yaml); and `[YOUR_ADDRESS]` with your fee recipient address.
     ```bash 
     ./lighthouse \
-    --network gnosis beacon_node \
-    --http \
-    --execution-endpoint http://localhost:8551 \
-    --execution-jwt ../jwtsecret/jwt.hex \
-    --checkpoint-sync-url "https://checkpoint.gnosischain.com"
+     --testnet-dir=./network_config bn \
+     --disable-upnp \
+     --port=9000 \
+     --http \
+     --http-address=0.0.0.0 \
+     --http-port=4000 \
+     --target-peers=50 \
+     --boot-nodes=enr:[BOOTNODES] \
+     --execution-endpoints=http://localhost:8551 \
+     --execution-jwt=../jwtsecret/jwt.hex \
+     --eth1-endpoints=http://localhost:8545 \
+     --debug-level=info \
+     --suggested-fee-recipient=[YOUR_ADDRESS] \
+     --validator-monitor-auto \
+     --subscribe-all-subnets \
+     --import-all-attestations \
+     --metrics \
+     --metrics-port=5054 \
+     --metrics-address=0.0.0.0 \
+     --checkpoint-sync-url https://checkpoint.chiadochain.net
     ```
 
 </TabItem>
@@ -134,14 +158,38 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     cd consensus
     ```
 
- - Execute Lighthouse
+- Create a new folder `network_config` and download Chiado config files:
+    ```bash
+    mkdir network_config &&
+    cd network_config &&
+    wget https://github.com/gnosischain/configs/raw/main/chiado/config.yaml &&
+    wget https://github.com/gnosischain/configs/raw/main/chiado/genesis.ssz &&
+    wget https://github.com/gnosischain/configs/raw/main/chiado/deploy_block.txt
+    ```
+
+- Execute Lighthouse, replace `[BOOTNODES]` with a comma-separated bootnodes from [this file](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes.yaml); and `[YOUR_ADDRESS]` with your fee recipient address.
     ```bash 
     ./lighthouse \
-    --network gnosis beacon_node \
-    --http \
-    --execution-endpoint http://localhost:8551 \
-    --execution-jwt ../jwtsecret/jwt.hex \
-    --checkpoint-sync-url "https://checkpoint.gnosischain.com"
+     --testnet-dir=./network_config bn \
+     --disable-upnp \
+     --port=9000 \
+     --http \
+     --http-address=0.0.0.0 \
+     --http-port=4000 \
+     --target-peers=50 \
+     --boot-nodes=enr:[BOOTNODES] \
+     --execution-endpoints=http://localhost:8551 \
+     --execution-jwt=../jwtsecret/jwt.hex \
+     --eth1-endpoints=http://localhost:8545 \
+     --debug-level=info \
+     --suggested-fee-recipient=[YOUR_ADDRESS] \
+     --validator-monitor-auto \
+     --subscribe-all-subnets \
+     --import-all-attestations \
+     --metrics \
+     --metrics-port=5054 \
+     --metrics-address=0.0.0.0 \
+     --checkpoint-sync-url https://checkpoint.chiadochain.net
     ```
 
 </TabItem>
