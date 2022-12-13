@@ -36,7 +36,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 
 - Execute Validator Data Generation tool and follow the instructions.
     In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/). 
-    > Tip: add the [`--eth1_withdrawal_address`](https://github.com/gnosischain/validator-data-generator/#new-mnemonic-arguments) flag when creating your keys.
+    > Tip: add the [`--eth1_withdrawal_address`](https://github.com/gnosischain/validator-data-generator/#new-mnemonic-arguments) flag when creating your keys, **pointing to an address you control**.
 
     - If you want to generate a new mnemonic:
         ```shell
