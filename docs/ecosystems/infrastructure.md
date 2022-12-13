@@ -37,3 +37,4 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, 1Hive, WrapETH, Punk Domains, Origin
 
 * [Cardstack](https://cardstack.com): Building the Collaborative OS for Web3
 
+* [Etherspot](https://etherspot.io): Multi-chain self-custody Smart Contract Wallet platform that provides solutions for dApps, game and wallet developers to deliver frictionless Web3 UX
