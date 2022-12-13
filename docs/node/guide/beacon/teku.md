@@ -102,7 +102,7 @@ services:
     ports:
       - 9000:9000/tcp # p2p
       - 9000:9000/udp # p2p
-      - 5054:5054/tcp # metrics
+      - 8008:8008/tcp # metrics
     expose:
       - 4000
     volumes:
@@ -138,7 +138,7 @@ services:
       --metrics-enabled=true
       --metrics-host-allowlist=*
       --metrics-interface=0.0.0.0
-      --metrics-port=5054
+      --metrics-port=8008
 // highlight-next-line
       --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
     logging:

@@ -56,6 +56,8 @@ services:
     restart: always
     networks:
       - gnosis_net
+    ports:
+      - 5064:5064/tcp
     volumes:
       - /home/$USER/gnosis/consensus/validators:/data/validators
       - /home/$USER/gnosis/consensus/keystores:/keystores
@@ -72,7 +74,7 @@ services:
       --server=http://consensus:4000
       --metrics=true
       --metrics.address=0.0.0.0
-      --metrics.port=5056
+      --metrics.port=5064
       --suggestedFeeRecipient=$FEE_RECIPIENT
       --graffiti=$GRAFFITI
       --importKeystores=/keystores

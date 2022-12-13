@@ -18,11 +18,8 @@ keywords: [gnosis specs, gnosis specifications, gnosis block size, block speed, 
 | Chain ID (Gnosis) | 100 (hexa 0x64) |
 | Chain ID (Chiado Testnet) | 10200 (hexa 0x27D8) |
 
-
-<!-- TODO: replace this links with the post merge info -->
-
-- Chain spec files: [https://github.com/poanetwork/poa-chain-spec/blob/dai/spec.json](https://github.com/poanetwork/poa-chain-spec/blob/dai/spec.json)
-- Bootnodes: [https://github.com/poanetwork/poa-chain-spec/blob/dai/bootnodes.txt](https://github.com/poanetwork/poa-chain-spec/blob/dai/bootnodes.txt)
+- Chain spec files: [https://github.com/gnosischain/configs/blob/main/mainnet/config.yaml](https://github.com/gnosischain/configs/blob/main/mainnet/config.yaml)
+- Bootnodes: [https://github.com/gnosischain/configs/blob/main/mainnet/bootnodes.yaml](https://github.com/gnosischain/configs/blob/main/mainnet/bootnodes.yaml)
 
 ## Resources
 

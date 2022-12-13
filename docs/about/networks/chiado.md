@@ -46,6 +46,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 | Chain ID                       | 10200                                                         |
 | Execution Layer RPC (Archival) | https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado |
 | Execution Layer RPC            | https://rpc.chiadochain.net                                   |
+| Execution Layer RPC (WS)       | wss://rpc.chiadochain.net/wss                                 |
 | Execution Layer Explorer       | https://blockscout.chiadochain.net                            |
 | Consensus Layer Explorer       | https://beacon.chiadochain.net/                               |
 | Fork monitor                   | https://forkmon.chiadochain.net/                              |

@@ -5,7 +5,7 @@ description: Gnosis Consensus model, POSDAO with Authority Round Consensus
 # AuRa with POSDAO Consensus
 
 :::caution The merge
-Gnosis is transitioning to PoS using the [GNO Token](/about/tokens/gno), this page defines the pre-merge consensus model. Learn more [about The Merge](/specs/consensus/) and the near future consensus model.
+Gnosis transitioned to PoS using the [GNO Token](/about/tokens/gno), this page defines the pre-merge consensus model. Learn more [about The Merge](/specs/consensus/).
 :::
 
 Consensus refers to the agreement process between nodes in a network. The nodes must agree on which transactions to include in the next block on the chain before these transactions are committed.
