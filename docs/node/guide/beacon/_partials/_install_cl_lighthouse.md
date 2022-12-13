@@ -35,6 +35,7 @@ import TabItem from '@theme/TabItem';
     ```bash 
     ./lighthouse \
     --network gnosis beacon_node \
+    --datadir=./data \
     --http \
     --execution-endpoint http://localhost:8551 \
     --execution-jwt ../jwtsecret/jwt.hex \
@@ -67,6 +68,7 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     ```bash 
     ./lighthouse \
     --network gnosis beacon_node \
+    --datadir=./data \
     --http \
     --execution-endpoint http://localhost:8551 \
     --execution-jwt ../jwtsecret/jwt.hex \
@@ -115,6 +117,7 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     ```bash 
     ./lighthouse \
      --testnet-dir=./network_config bn \
+     --datadir=./data \
      --disable-upnp \
      --port=9000 \
      --http \
@@ -171,6 +174,7 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     ```bash 
     ./lighthouse \
      --testnet-dir=./network_config bn \
+     --datadir=./data \
      --disable-upnp \
      --port=9000 \
      --http \
