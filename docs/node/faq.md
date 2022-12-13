@@ -18,7 +18,7 @@ You are responsible for your keys (deriving and storing your keys and mnemonic s
 
 ### When can I make a withdrawal from a validator?
 
-There is currently no concrete date for withdrawals of staked GNO. Please note that validator deposits are a non-reversible, one-way transaction. Gnosis will likely follow a similar timeline to Ethereum in enabling withdrawals post-merge. 
+There is currently no concrete date for withdrawals of staked GNO. Please note that validator deposits are a non-reversible, one-way transaction. Gnosis will likely follow a similar timeline to Ethereum in enabling withdrawals on a post-merge hard-fork.
 
 ## General
 
@@ -88,10 +88,6 @@ Check the [RPC Providers](/tools/rpc) page for the complete list.
 Yes! [DappNode](https://dappnode.io) is a partner and full-featured service provider for the Gnosis Beacon Chain. If you would like to use their services for validation, please see the [guide and instructions here.](https://forum.dappnode.io/t/how-to-setup-a-gnosis-beacon-chain-gbc-validator-on-dappnode/1351)
 
 ## Withdrawals
-
-### When will withdrawals be active?
-
-Following the merge between Gnosis Beacon Chain and Gnosis Chain. This is currently scheduled to occur \~1 week prior to the Ethereum merge.
 
 ### **What are withdrawal credentials?**
 

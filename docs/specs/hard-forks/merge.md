@@ -3,17 +3,15 @@ title: The Merge
 description: The current Gnosis execution layer will merge with the Gnosis Beacon Chain, in a process similar to the Ethereum merge
 keywords: [gnosis merge, gnosis hardfork, wen merge]
 ---
+
 :::danger
-
 Hard forks are backward-incompatible upgrades used to introduce new functionality or fix security related issues. They are backward-incompatible upgrades, requiring all nodes to upgrade to the latest version to avoid syncing to a pre-fork blockchain.
-
 :::
 
-:::caution
-
-This page will be continually updated in the lead up to the Merge. 
-
-:::
+* **Network**: Gnosis
+* **Beacon block number**: `6,306,357`
+* **Completed:** 8 December 2022
+* [Merged successful announcement](/updates/20221210-merge)
 
 # The Merge
 
