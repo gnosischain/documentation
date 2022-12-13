@@ -8,9 +8,10 @@ keywords: [gnosis merge, gnosis hardfork, wen merge]
 Hard forks are backward-incompatible upgrades used to introduce new functionality or fix security related issues. They are backward-incompatible upgrades, requiring all nodes to upgrade to the latest version to avoid syncing to a pre-fork blockchain.
 :::
 
-:::caution
-[Merged successful at block 6,306,357](/updates/20221210-merge)
-:::
+* **Network**: Gnosis
+* **Beacon block number**: `6,306,357`
+* **Completed:** 8 December 2022
+* [Merged successful announcement](/updates/20221210-merge)
 
 # The Merge
 
