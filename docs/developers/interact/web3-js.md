@@ -1,4 +1,6 @@
 ---
+description: web3.js is a collection of libraries that allow you to interact with a local or remote Ethereum node using HTTP, IPC or WebSocket.
+keywords: [web3.js, library, web3, javascript, package]
 ---
 
 # Using Web3.js
@@ -28,7 +30,7 @@ Link the `dist/web3.min.js`
 </TabItem>
 </Tabs>
 
-After installing, you need to create a web3 instance and set a provider. Most Ethereum supported wallets, such as Metamask, have an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compliant provider at `window.ethereum`. This works for connecting to Gnosis as well. 
+After installing, you need to create a web3 instance and set a provider. Most Ethereum supported wallets, such as MetaMask, have an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compliant provider at `window.ethereum`. This works for connecting to Gnosis as well. 
 
 ```javascript
 // From web3.js docs:

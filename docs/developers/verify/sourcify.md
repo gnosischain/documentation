@@ -1,5 +1,7 @@
 ---
 title: Using Sourcify
+description: Follow the verifying a smart contract guide on Sourcify documentation for detailed step-by-step guide.
+keywords: [sourcify, contract verification] 
 ---
 
 # Sourcify Smart Contract Verification

@@ -1,4 +1,6 @@
 ---
+description: Development wise, since Gnosis is an Ethereum Virtual Machine based chain, development is nearly identical. 
+keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum] 
 ---
 
 # Developers Overview
@@ -22,9 +24,9 @@ Transaction fees are assessed for any Gnosis transactions such as sending xDai t
 
 [Here is a link to the official Ethereum docs for Transaction and Gas Fees](https://ethereum.org/en/developers/docs/gas/)
 
-# Resources
+## Resources
 
-<div class="row">
+<div className="row">
 <box href="/tools/wallets" title="Wallets">Download a wallet to start using Gnosis.</box>
 <box href="/tools/faucets" title="Faucets">Free fund your wallet with xDai to pay fees.</box>
 <box href="/tools/explorers" title="Explorers">See your transactions, accounts, blocks, and more tools.</box>

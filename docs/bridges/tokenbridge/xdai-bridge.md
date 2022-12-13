@@ -1,5 +1,7 @@
 ---
 title: xDai Bridge
+description: The xDai bridge is a native Dai bridge from Ethereum that is used to mint and burn xDai, the native asset used for gas and transaction fees on Gnosis. 
+keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 ---
 
 # xDai Bridge
@@ -62,10 +64,13 @@ References:
 |--------------------|--------------------|-----------------------|
 | Approx. Gas Cost   |                    |                       |
 | Bridge Fees        | 0%                 | 0%                    |
-| Daily Limit Reset  | 00:00 UTC          | 00:00 UTC             |
 | Min Transfer       | 0.005 Dai          | 10 xDai               |
 | Daily Limit        | 10,000,000 Dai     | 10,000,000 xDai       |
 | Max Single Deposit | 9,999,999 Dai      | 10,000,000 xDai       |
+
+:::note
+Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
+:::
 
 References: 
 
@@ -84,7 +89,7 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 | CowProtocol  | [gno:0x587c0d02b40822f15f05301d87c16f6a08aaddde](https://blockscout.com/xdai/mainnet/address/0x587c0d02b40822f15f05301d87c16f6a08aaddde) |
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://blockscout.com/xdai/mainnet/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://blockscout.com/xdai/mainnet/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
-| Syncnode     | [gno:0xfe24cfb2f8872e9ed097c451de065a9f6048915b](https://blockscout.com/xdai/mainnet/address/0xfe24Cfb2F8872e9ed097C451dE065A9F6048915b) |
+| Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://blockscout.com/xdai/mainnet/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
 
 References: 
 * [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators)
@@ -98,7 +103,7 @@ References:
 
 ### Bridge Revenue
 
-The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
+The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the GnosisDAO treasury to fund Gnosis development. 
 
 References: 
 
@@ -248,4 +253,4 @@ References:
 ## Resources
 
 - [Tokenbridge Docs on xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
-- [xDai Bridge docs](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge)
+- [xDai Bridge docs](/bridges/tutorials/using-xdai-bridge/)

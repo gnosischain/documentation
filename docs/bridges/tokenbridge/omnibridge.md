@@ -1,13 +1,13 @@
 ---
 title: Omnibridge
+description: Omnibridge a native token bridge that mints the canonical representations of bridged assets on Gnosis
+keywords: [omnibridge, token bridge, token claim]
 ---
 
 # Omnibridge
 
 :::info
-
 Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.com/)
-
 :::
 
 ![](/img/bridges/diagrams/token-bridge-01.png)
@@ -63,7 +63,6 @@ References:
 |-------------------|--------------------|--------------------|
 | Approx. Gas Cost  |                    |                    |
 | Bridge Fees       | 0%                 | 0%                 |
-| Daily Limit Reset | 00:00 UTC          | 00:00 UTC          |
 #### Single Transaction Limits
 
 :::warning
@@ -92,11 +91,15 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 
 *** Bridging Dai Using Omnibridge
 
+:::note
+Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
+:::
+
 
 
 ### Bridge Validators
  
- For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
+For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. Since Omnibridge is based on the Arbitrary Message Bridge functionality, the set of validators is the actual set of AMB validators. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
 
 References: 
 * [xDai Docs: Omnibridge Validators](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
@@ -110,7 +113,7 @@ References:
 - [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 ### Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the GnosisDAO treasury to fund Gnosis development. 
 ### Analytics
 
 - [Dune Analytics: Omnibridge Stablecoins](https://dune.com/maxaleks/Omnibridge-Stablecoins)
@@ -235,7 +238,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ### Interest on Bridge Deposits
 
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the [GnosisDAO treasury](/about/overview/about-gnosis-dao) to fund Gnosis development. 
+The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the GnosisDAO treasury to fund Gnosis development. 
 
 Currently, Stable Coins (USDC & USDT) locked in the OmniBridge contract are allocated to the Aave interest market. Locked funds will accumulate interest as well as COMP and AAVE tokens. These funds can then be used to support bridge operations.   
 Compounding analytics are available in [Dune](https://dune.com/maxaleks/Omnibridge-Stablecoins)  

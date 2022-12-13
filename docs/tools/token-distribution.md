@@ -1,4 +1,6 @@
 ---
+description: Send tokens to multiple addresses in batch. Various tools built by the community are available. 
+keywords: [linkdrop, token distribution, multisender, multisend, airdrop]
 ---
 
 # Token Distribution
@@ -14,5 +16,5 @@ This section shows ways to send tokens to multiple addresses in batch. Various t
 - [AirdropMe](https://airdropme.io/): simple and free multi-chain airdrops.
 
 :::info Connect to Gnosis
-All the platforms above requires to [connect Metamask to Gnosis](/tools/wallets/metamask/).
+All the platforms above requires to [connect MetaMask to Gnosis](/tools/wallets/metamask/).
 :::

@@ -1,4 +1,6 @@
 ---
+description: Change RPC URL in MetaMask
+keywords: [metamask, hardware wallet, hw, seed, security]
 ---
 
 # Change RPC URL

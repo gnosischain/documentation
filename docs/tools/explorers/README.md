@@ -1,4 +1,6 @@
 ---
+description: Explorers are pieces of software that scans Gnosis and make easier for users to search for blocks, transactions, addresses, contracts.
+keyworkds: [explorer, block explorer, blockscout, gnosisscan, tokenview, anyblock]
 ---
 
 # Explorers

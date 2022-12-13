@@ -1,7 +1,13 @@
 ---
+description: The hardfork will replace Gnosis’ current “proof-of-authority” consensus with the “proof-of-stake” system as it merges with the Gnosis Beacon Chain. 
+keywords: [gnosis beacon chain, merge, the merge, wen gnosis merge]
 ---
 
 # The Merge
+
+:::info bridge paused
+Our Native Bridges are paused for the Gnosis Merge on 8 Dec 2022. Please use [3rd-party](../../bridges/third-party.md) bridges like Connext, Hop or Li.Fi during this period.
+:::
 
 Gnosis, as a closely-related fork of Ethereum, will soon undergo a “Merge” hardfork similar to that of Ethereum. The hardfork will replace Gnosis’ current “proof-of-authority” consensus with the “proof-of-stake” system as it merges with the Gnosis Beacon Chain. 
 

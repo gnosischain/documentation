@@ -1,10 +1,19 @@
 ---
 title: Decisions
+description: The Bridge Governance Board is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
+keywords: [governance board, bridge governance]
 ---
 
 # Governance Decisions
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
+
+
+## Add Karpatkey and remove Syncnode from the set of validators of AMB & xDAI Bridges
+
+🗳 Justification: Syncnode team requested to be removed from the validator set. In the same time addition of Karpatkey validator creates additional reliability and decentralization of validators set.
+
+✅ Implemented: December 4, 2022
 
 
 ## Remove Funds from lending protocols AAVE and Compound and disable Interest Function on Omni Bridge and xDAI Bridge

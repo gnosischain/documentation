@@ -1,4 +1,6 @@
 ---
+description: Ethers.js is a compact library for interacting with Ethereum Virtual Machine (EVM) based blockchains. With Gnosis being an EVM chain, you can use Ethers.js to interact with the Gnosis ecosystem.
+keywords: [ethers, ethersjs, ethers.js, library, lib]
 ---
 
 # Using Ethers.js
@@ -36,7 +38,7 @@ import { ethers } from "ethers";
 
 ## Connecting to Gnosis with MetaMask
 
-After installing, you need to create a web3 instance and set a provider. Most Ethereum supported wallets, such as Metamask, have an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compliant provider at `window.ethereum`. This works for connecting to Gnosis as well. 
+After installing, you need to create a web3 instance and set a provider. Most Ethereum supported wallets, such as MetaMask, have an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compliant provider at `window.ethereum`. This works for connecting to Gnosis as well. 
 
 ```js
 // A Web3Provider wraps a standard Web3 provider, which is

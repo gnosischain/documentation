@@ -22,7 +22,7 @@ export default function MetaMaskAddButton() {
           blockExplorerUrls: ["https://gnosisscan.io/"],
       }
       
-      var addGnosisToMetamask = function() {
+      var addGnosisToMetaMask = function() {
           window.ethereum.request({
               method: "wallet_addEthereumChain",
               params: [GNOSIS_MAINNET_PARAMS],
@@ -70,7 +70,7 @@ export default function MetaMaskAddButton() {
 
       if (typeof window.ethereum === 'undefined') {
           return (
-              <Layout title="Metamask AddButton">
+              <Layout title="MetaMask AddButton">
                 <div style={{textAlign: 'center',}}>
                   <p>MetaMask is NOT installed.</p>
                   <p><a href='/tools/wallets/metamask'>Setup and configure MetaMask</a></p>
@@ -84,10 +84,10 @@ export default function MetaMaskAddButton() {
       if(ethereum.networkVersion !== "100" &&
           ethereum.networkVersion !== "0x64"){
           return (
-              <Layout title="Metamask AddButton">
+              <Layout title="MetaMask AddButton">
                   <div style={{textAlign: 'center',}}>
                   <p>MetaMask is installed but not connected to Gnosis.</p>
-                  <p><a href='#' onClick={addGnosisToMetamask}>Add Gnosis to Metamask Button</a></p>
+                  <p><a href='#' onClick={addGnosisToMetaMask}>Add Gnosis to MetaMask Button</a></p>
                   <p><a href='/tools/wallets/metamask#2-configure'>Configure MetaMask guide</a></p>
                   <p><a href={samplesLink}>View all live samples code in Github.</a></p>
                   </div>
@@ -97,7 +97,7 @@ export default function MetaMaskAddButton() {
 
     var account = ethereum.selectedAddress;
     return (
-      <Layout title="Metamask AddButton">
+      <Layout title="MetaMask AddButton">
         <div style={{textAlign: 'center',}}>
           <p>MetaMask is installed, connected to Gnosis, get your account!</p>
           <p>Chain ID: {chainId}</p>
@@ -106,7 +106,7 @@ export default function MetaMaskAddButton() {
           <p> Now Add the <a href={'/about/tokens/gno'} target="_blank">GNO token</a>!</p>
           <p><a href='#' onClick={addGno}>Add GNO</a></p>
           <p><a href={samplesLink} target="_blank">View all live samples code in Github.</a></p>
-          <p> <a href={'/tools/beacon-chain/liquid-staking'} target="_blank">P.S.: Got GNO? Stake it!</a></p>
+          <p> <a href={'/node/'} target="_blank">P.S.: Got GNO? Stake it!</a></p>
         </div>
       </Layout>
     );

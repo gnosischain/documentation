@@ -1,4 +1,6 @@
 ---
+description: Gnosis Beacon Chain has the ability to upgrade contracts
+keywords: [gnosis beacon chain, gnosis upgradeability]
 ---
 # Upgradeability
 
