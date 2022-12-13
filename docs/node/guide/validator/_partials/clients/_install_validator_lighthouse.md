@@ -49,6 +49,12 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
     --datadir validators \
     --enable-doppelganger-protection \
 # highlight-start
+    --suggested-fee-recipient="0x0" \ # Change this value 
+# highlight-end
+    --metrics \ 
+    --metrics-address=0.0.0.0 \
+    --metrics-port=5064
+# highlight-start
     --graffiti "gnosis-docs-graffiti" # Change this value 
 # highlight-end
 ```

@@ -69,7 +69,7 @@ services:
       --suggested-fee-recipient=$FEE_RECIPIENT
       --metrics
       --metrics-address=0.0.0.0
-      --metrics-port=5056
+      --metrics-port=5064
     networks:
       - gnosis_net
     volumes:
