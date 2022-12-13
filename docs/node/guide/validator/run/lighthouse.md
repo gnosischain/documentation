@@ -72,6 +72,8 @@ services:
       --metrics-port=5064
     networks:
       - gnosis_net
+    ports:
+      - 5064:5064/tcp
     volumes:
       - /home/$USER/gnosis/consensus/validators:/data/validators
       - /etc/timezone:/etc/timezone:ro
