@@ -107,11 +107,7 @@ networks:
 
 The JWT secret is a token that allows the EL client to communicate with the CL client, and is required for Nethermind to operate post-merge. We use `rand` to create a random string, and store the `jwt.hex` file in `/home/$USER/gnosis/jwtsecret/`.
 
-Create a new JWT secret file:
-
-```shell title="/home/$USER/gnosis/jwtsecret/jwt.hex"
-openssl rand -hex 32 | tr -d "\n" > /home/$USER/gnosis/jwtsecret/jwt.hex
-```
+Check [create JWT](../configure-server.md#create-jwt) section in `Step 1: Configure Server`.
 
 
 ### 4. Start Container
