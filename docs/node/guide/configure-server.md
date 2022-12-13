@@ -35,6 +35,12 @@ $ sudo timedatectl set-ntp on
 Some users recommend using [Chrony](https://chrony.tuxfamily.org/) as a [method of configuring NTP](https://ubuntu.com/blog/ubuntu-bionic-using-chrony-to-configure-ntp)
 :::
 
+### Create JWT
+
+import JwtGenerationPartial from '@site/docs/node/guide/server/_partials/_jwt-generation-partial.md';
+
+<JwtGenerationPartial />
+
 ## Set up Networking
 
 Ubuntu ships with a [ufw firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) that helps prevent unwanted connections to your server. As your server is connected to the public internet, this is very important as there will be adversaries that will port scan for vulnerabilities.
