@@ -7,6 +7,10 @@ We highly recommend generating keystores on a safe, completely offline device.
 ***Securely backup your mnemonic, keystores, and password and keep them in a safe place.***
 :::
 
+:::tip
+Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal credentials](https://launchpad.ethereum.org/en/faq#withdrawal-credentials).
+:::
+
 <Tabs className="tabgroup-with-label os-tabgroup" groupId="os" defaultValue="others" values={[
     {label: 'Linux, MacOS, Arm64', value: 'others'},
     {label: 'Windows', value: 'win'}
@@ -31,8 +35,9 @@ We highly recommend generating keystores on a safe, completely offline device.
     ```
 
 - Execute Validator Data Generation tool and follow the instructions.
-    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/).
-    
+    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/). 
+    > Tip: add the [`--eth1_withdrawal_address`](https://github.com/gnosischain/validator-data-generator/#new-mnemonic-arguments) flag when creating your keys.
+
     - If you want to generate a new mnemonic:
         ```shell
         ./deposit new-mnemonic --folder ../consensus/keystores
