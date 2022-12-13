@@ -62,7 +62,7 @@ services:
       lighthouse
       validator_client
       --network=gnosis
-      --validators-dir=/data/validators
+      --datadir=/data/validators
       --beacon-nodes=http://consensus:4000
       --graffiti=$GRAFFITI
       --debug-level=info
