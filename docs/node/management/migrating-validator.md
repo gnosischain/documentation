@@ -2,7 +2,7 @@
 title: Migrating a Validator
 ---
 
-Migrating validators from one node to another (or from one vm instance to another) requires careful attention to avoid slashing. If you accidentally run the same validator key on 2 instances at the same time, even for a very short time period, you risk being slashed for an Attestation Violation. If this occurs, you will be removed as a validator and your GNO will be frozen and unavailable for withdrawal until after the GC/GBC merge.
+Migrating validators from one node to another (or from one vm instance to another) requires careful attention to avoid slashing. If you accidentally run the same validator key on 2 instances at the same time, even for a very short time period, you risk being slashed for an Attestation Violation. If this occurs, you will be removed as a validator and your GNO will be frozen and unavailable for withdrawal until after a hard-fork post GC/GBC merge.
 
 :::note
 Curious about validators who have been slashed? You can find them here: [https://beacon.gnosischain.com/validators/slashings](https://beacon.gnosischain.com/validators/slashings)
