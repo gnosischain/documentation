@@ -104,6 +104,10 @@ For a message/tokens to be relayed to another network, bridge validators need to
 References: 
 * [xDai Docs: Omnibridge Validators](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
 
+### Bridge Validator Flow
+
+![](/img/bridges/diagrams/amb-bridge-validator-flow.png)
+
 ### Bridge Governance
 
 * See [Bridge Governance](/bridges/governance)
