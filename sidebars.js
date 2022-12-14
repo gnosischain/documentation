@@ -706,7 +706,19 @@ const sidebars = {
       label: 'Tutorials',
       link: { slug: 'bridges/tutorials', type: 'generated-index', title: 'Tutorials' },
       collapsed: false,
-      items: bridgeTutorials
+      items: [
+          bridgeTutorials,
+          {
+            type: 'category',
+            label: 'For Bridge Validators',
+            collapsed: false,
+            link: {type: 'doc', id: 'bridges/validators/README'},
+            items: [
+              'bridges/validators/setup',
+              'bridges/validators/add-remove',
+            ] 
+          },
+        ]
     }
   ],
 };
