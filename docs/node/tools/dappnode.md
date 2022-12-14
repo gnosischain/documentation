@@ -7,60 +7,61 @@ title: DAppNode
 [DAppNode](https://dappnode.io/) is a simple platform for deploying and hosting DApps, P2P clients, and blockchain nodes. It provides a user-friendly way to set up and configure nodes with a couple of clicks.
 
 There are two ways to use DAppNode:
+
 1. Purchase one of their pre-installed [DAppNode servers](https://dappnode.io/collections/all). They currently come with four free Gnosis validators.
 2. Install DAppNode on any compatible hardware or a VPS. The installation is done using the command line interface (CLI) by following the [Installing DAppNode on Custom Hardware](#custom-hardware) steps below.
 
 ## Using DAppNode {#install-on-dappnode}
 
-### Step 1: Installation of Execution Client
+## Step 1. Install the required packages for validating
 
-Install the **Nethermind xDai (Gnosis Chain)** package from the [DAppStore](http://my.dappnode/#/installer). **You cannot use a third party node as your execution client after the merge.** It may take several days for the node to fully sync.
+Once you have access to the dappnode UI, go to the stakers-ui page , you can access by clicking on http://my.dappnode/#/stakers/gnosis or click in Stakers section you can find in the left menu, then click on the Gnosis tab.
 
-**While connected to your DAppNode**, click the link below and continue with the `Install` button.
-- **[Nethermind xDai (Gnosis Chain)](http://my.dappnode/#/installer/nethermind-xdai.dnp.dappnode.eth)**
+![Select Stakers in the left side menu](/img/node/dappnode-left-menu.png)
 
-### Step 2: Install Gnosis Beacon Chain + Validator (Consensus Client)
+Make sure to select the Gnosis chain tab,
 
-You can currently select and install 3 different implementations of the Gnosis Beacon Chain + Validator from the DAppStore.
+![Select the tab Gnosis Chain](/img/node/dappnode-stakers-ui.png)
 
-- [Prysm](http://my.dappnode/#/installer/gnosis-beacon-chain-prysm.dnp.dappnode.eth)
-- [Teku](http://my.dappnode/#/installer/teku-gnosis.dnp.dappnode.eth)
-- [Lighthouse](http://my.dappnode/#/installer/lighthouse-gnosis.dnp.dappnode.eth)
+The next step is to select the combination of client you want to use in your dappnode. For this process you need to select:
 
-![DAppNode Step 2](/img/node/dappnode-step2.jpeg)
+- 1. Select the execution client: Nethermind-xdai. Click in the package
+- 2. Select the consensus client, here you can install one of the following options: Teku-gnosis, Lighthouse-gnosis and Prysm-gnosis
+- 3. Install the web3signer. This is required becausethis is the package that will contain the keystores.
 
-Once you click through to `Install` , you will be in the **Setup Page**:
-![DAppNode Step 2b](/img/node/dappnode-step2b.png)
+![Select the execution and consensus clients](/img/node/dappnode-stakers-ui-2.png)
 
-You will be able to choose the following options:
+1. Select the Execution client. For now, or in the moment this guide was created, nethermind is the only execution client that supports gnosis chain.
+   ![Execution client ](/img/node/dappnode-execution-client.png)
+
+2. Select the consensus client. You will see the next fields when you click in the package chard.
+
+![Select a consensus client](/img/node/dappnode-consensus-client.png)
+
+**Fee Recipient Address**
+
+The fee recipient is the regular Gnosis `0x` address that will receive priority fees of the proposed block. You will only receive fees at this address for blocks you propose, not for attestations. Any Gnosis EOA or Safe address
 
 **Graffiti**
 
 Choose a string that will be appended to your proposed blocks. You will be able to change later so it can be left as is for now.
 
-**Gnosis Chain Node URL**
-
-Enter the  following link in the **XDAI_RPC_URL** field of the Beacon Chain section.
-
-`http://nethermind-xdai.dappnode:8545`
-
 **Checkpoint for fast sync**
 
-To get your beacon node up and running in only a few minutes, you can start it from a recent finalized checkpoint state rather than syncing from genesis. This is substantially **faster** and consumes **fewer resources** than syncing from genesis while still providing all the same features. 
+To get your beacon node up and running in only a few minutes, you can start it from a recent finalized checkpoint state rather than syncing from genesis. This is substantially faster and consumes fewer resources than syncing from genesis while still providing all the same features.
 
-Be sure you are using a trusted node for the fast sync. Get your checkpoint sync from a running Gnosis Beacon Chain node or use the official one.
- 
-`https://checkpoint.gnosischain.com`
+Be sure you are using a trusted node for the fast sync. Get your checkpoint sync(Dappnode fills this field with the checkpoint sync they provide by default) from a running Gnosis Beacon Chain node or use the official one.
 
-**Fee Recipient Address**
+https://checkpoint.gnosischain.com
 
-The fee recipient is the regular Gnosis `0x` address that will receive priority fees of the proposed block. You will only receive fees at this address for blocks you propose, not for attestations. Any Gnosis EOA or Safe address 
+3. Select the web3signer.
 
-**Web3Signer**
+![Select web3signer](/img/node/dappnode-web3signer-stakers.png)
 
-When installing your Gnosis Beacon Chain client, the Web3Signer will also be installed as a dependency. **Make sure you select the client you are installing.** The Web3Signer will hold the validator keys and will be connected to this client in order to submit the validator tasks.
+Then click in the below button that says "Apply changes"
+![Apply the changes](/img/node/dappnode-stakers-ui-apply.png)
 
-After you submit the configuration, accept the disclaimer and install it, then you can let it sync and move on to the next step.
+Be patience, the installation process can take several minutes. You can check all have been installed in the [dashboard page](http://my.dappnode/#/dashboard).
 
 ### Step 3: Key Generation
 
@@ -103,7 +104,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
 
 :::
 
-import GenerateValidatorKeysWagyuPartial from '@site/docs/node/guide/validator/_partials/_generate_validator_keys_wagyu.md';
+import GenerateValidatorKeysWagyuPartial from '@site/docs/node/guide/validator/\_partials/\_generate_validator_keys_wagyu.md';
 
 <GenerateValidatorKeysWagyuPartial />
 
@@ -115,7 +116,7 @@ Return to your DAppNode’s Admin UI and navigate to the [info page of the Web3S
 
 ![DAppNode Step 4](/img/node/dappnode-step4.png)
 
-Open the UI by clicking the [`🏠Ui`](http://ui.web3signer-gnosis.dappnode/) link, then click the `Import Keystores`  button on the lower part of the Web3Signer UI.
+Open the UI by clicking the [`🏠Ui`](http://ui.web3signer-gnosis.dappnode/) link, then click the `Import Keystores` button on the lower part of the Web3Signer UI.
 
 ![DAppNode Step 4b](/img/node/dappnode-step4b.png)
 
@@ -131,7 +132,7 @@ You are now ready to fund these validators and start validating.
 
 ### Step 5: Fund Your Validators
 
-:::tip 
+:::tip
 In case you need some xDai for transaction fees you can get some from the [official xDai faucet for Gnosis](https://stakely.io/en/faucet/gnosis-chain-xdai).
 
 :::
@@ -143,12 +144,12 @@ In case you need some xDai for transaction fees you can get some from the [offic
 5. Check that you understand the risks and ensure you are interacting with the correct contract before proceeding.
 6. Click `Ok` and confirm the transaction in your wallet to complete the deposit.
 
-6. Our proxy smart contract will deposit the 4 GNO to your validators! YOU control the private keys, YOU control the withdrawal key... these validators are now **yours**. Take good care of them!
+7. Our proxy smart contract will deposit the 4 GNO to your validators! YOU control the private keys, YOU control the withdrawal key... these validators are now **yours**. Take good care of them!
 
-:::tip  DAppNode <\> Gnosis Chain Incentive Program
+:::tip DAppNode <\> Gnosis Chain Incentive Program
 If you are claiming the 4 Gnosis validators from the incentive program, select the DAppNode tab instead. Be sure to use the same wallet that you provided when placing your DAppNode order.
 
-If you encounter an issue claiming your incentive program validators, such as an error about your address not being whitelisted or that it has expired, please visit the [DAppNode Discord Server](https://discord.gg/dappnode) and open a support ticket in  [`#1-sales-support-ticket`](https://discord.gg/mGtA9emHw3).
+If you encounter an issue claiming your incentive program validators, such as an error about your address not being whitelisted or that it has expired, please visit the [DAppNode Discord Server](https://discord.gg/dappnode) and open a support ticket in [`#1-sales-support-ticket`](https://discord.gg/mGtA9emHw3).
 
 :::
 
@@ -161,7 +162,7 @@ A community written guide by @GLCstaked which goes into detail the entire setup 
 1. Start with a fresh installation of Debian or Ubuntu.
 2. Log in with an account with `sudo` privileges.
 3. Install the prerequisites: [Docker](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/), and [xz](https://tukaani.org/xz/). The prerequisites can be installed manually or by using this command:
-  `curl https://prerequisites.dappnode.io | sudo sh`
+   `curl https://prerequisites.dappnode.io | sudo sh`
 4. Run the installer script to install DAppNode:
    `curl https://installer.dappnode.io | sudo sh`
 5. Once the installation has finished, reboot your machine:
