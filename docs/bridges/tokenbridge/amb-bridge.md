@@ -72,8 +72,8 @@ For a message/tokens to be relayed to another network, bridge validators need to
 ## Key Contracts
 
 References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
+- [Bridge Governance Board](/bridges/tokenbridge/amb-bridge#bridge-governance)
+- [Bridge Daily Limits](/bridges/tokenbridge/amb-bridge#fees--daily-limits)
 
 ### Ethereum
 
