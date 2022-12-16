@@ -5,6 +5,10 @@ date: 2021-01-29
 
 # ⚔️ xDai Weekly Recap - 29/01/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## POSDAO & Protocol Updates
 
 :::success

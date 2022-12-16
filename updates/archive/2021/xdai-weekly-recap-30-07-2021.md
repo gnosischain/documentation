@@ -5,6 +5,10 @@ date: 2021-07-30
 
 # ⚔️ xDai Weekly Recap - 30/07/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## Sign up for Weekly Updates via Email
 
 Having trouble keeping up with the news? We've started a [Substack site](https://xdai.substack.com/) for weekly updates and breaking project integrations and news. Sign up to get updates delivered right to your inbox and consolidate your information flow!
@@ -13,7 +17,7 @@ Having trouble keeping up with the news? We've started a [Substack site](https:/
 💌 [Sign up to receive weekly email updates](https://xdai.substack.com/) ​💌‌
 :::
 
-## POSDAO & Protocol Updates <a href="#posdao-and-protocol-updates" id="posdao-and-protocol-updates"></a>
+## POSDAO & Protocol Updates
 
 :::success
 The protocol is currently in Epoch **67.** **19** validator pools and **353** delegators staking a total of **655,606** STAKE.
@@ -27,7 +31,7 @@ Staking Statistics: [https://duneanalytics.com/maxaleks/xdai-staking](https://du
 ****Staking Platform: [https://blockscout.com/xdai/mainnet/](https://blockscout.com/xdai/mainnet/validators)​
 :::
 
-## Weekly Newsletter <a href="#weekly-newsletter" id="weekly-newsletter"></a>
+## Weekly Newsletter
 
 We've moved our weekly highlights to Substack. You can sign up to receive in your email or view the newsletter anytime without signing up.
 

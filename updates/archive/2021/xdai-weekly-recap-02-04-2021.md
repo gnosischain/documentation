@@ -5,6 +5,10 @@ date: 2021-04-02
 
 # ⚔️ xDai Weekly Recap - 02/04/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 📽️ Project News & Updates
 
 ### 🛳️ Build with Cargo

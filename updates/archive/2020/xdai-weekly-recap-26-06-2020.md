@@ -5,6 +5,10 @@ date: 2020-06-26
 
 # ⚔️ xDai Weekly Recap - 26/06/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: Exchange News
 
 ### ✅ **STAKE token listed on IDEX**

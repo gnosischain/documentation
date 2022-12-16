@@ -5,6 +5,10 @@ date: 2021-05-21
 
 # ⚔️ xDai Weekly Recap - 21/05/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :pencil2: Protocol Updates
 
 ### :tada: Berlin Hardfork Successful!

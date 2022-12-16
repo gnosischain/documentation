@@ -5,6 +5,10 @@ date: 2020-08-21
 
 # ⚔️ xDai Weekly Recap - 21/08/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :globe\_with\_meridians: Amazon Web Services (AWS)
 
 ### ✅ xDai featured in AWS Marketplace Article

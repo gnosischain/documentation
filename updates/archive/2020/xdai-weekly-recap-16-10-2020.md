@@ -5,6 +5,10 @@ date: 2020-10-16
 
 # ⚔️ xDai Weekly Recap - 16/10/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 🌉 Bridge and Interoperability Updates
 
 ### ✓ OmniBridge

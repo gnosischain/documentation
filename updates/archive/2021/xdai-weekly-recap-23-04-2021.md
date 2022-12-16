@@ -5,6 +5,10 @@ date: 2021-04-23
 
 # ⚔️ xDai Weekly Recap - 23/04/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :fire: Exchange Listing and Trading Campaign
 
 Huobi Global launched STAKE trading/staking campaigns on April 20th, providing up to 12,400 STAKE as rewards!  The featured STAKE staking campaign returns an estimated **130.35% APY** :eyes:

@@ -5,6 +5,10 @@ date: 2020-09-18
 
 # ⚔️ xDai Weekly Recap - 18/09/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :handshake: Integrations on xDai
 
 :tada: 2 Big Announcements this week!

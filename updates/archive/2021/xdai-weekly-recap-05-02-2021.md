@@ -5,6 +5,10 @@ date: 2021-02-05
 
 # ⚔️ xDai Weekly Recap - 05/02/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: xDai Stable Coin Listed on AscendEX (BitMax)
 
 The [xDai/USDT pair](https://bitmax.io/en/basic/cashtrade-spottrading/usdt/xdai) has been listed on Bitmax. Now users can acquire xDai directly through the exchange without needing to bridge from Ethereum. This saves xDai users money on gas and provides a direct conduit to the xDai Chain. BitMax offers trading for both xDai/USDT and STAKE/USDT.

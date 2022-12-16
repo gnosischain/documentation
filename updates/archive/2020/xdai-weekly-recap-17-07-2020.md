@@ -5,6 +5,10 @@ date: 2020-07-17
 
 # ⚔️ xDai Weekly Recap - 17/07/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: Exchange News
 
 ### ✅ 1K+ Stakers & 1M+ Staked in the BitMax pre-staking program

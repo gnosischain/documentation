@@ -5,6 +5,10 @@ date: 2021-04-09
 
 # ⚔️ xDai Weekly Recap - 09/04/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 📽️ Project News & Updates
 
 ### 🦉Gnosis Auction

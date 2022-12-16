@@ -5,6 +5,10 @@ date: 2020-11-13
 
 # ⚔️ xDai Weekly Recap - 13/11/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 This week we've been heads down on POSDAO preparations and network security enhancements. Progress continues towards the public staking implementation on xDai.
 
 ## :fire: Token Burn & Public POSDAO Prep

@@ -5,6 +5,10 @@ date: 2020-09-04
 
 # ⚔️ xDai Weekly Recap - 04/09/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 💎 Distributions
 
 ### ✅ 1st Reward Distribution Sent to Uniswap Liquidity Providers

@@ -5,6 +5,10 @@ date: 2021-07-16
 
 # ⚔️ xDai Weekly Recap - 16/07/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## Sign up for Weekly Updates via Email
 
 Having trouble keeping up with the news? We've started a [Substack site](https://xdai.substack.com/) for weekly updates and breaking project integrations and news. Sign up to get updates delivered right to your inbox and consolidate your information flow!

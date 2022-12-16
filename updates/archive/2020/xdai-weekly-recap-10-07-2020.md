@@ -5,6 +5,10 @@ date: 2020-07-10
 
 # ⚔️ xDai Weekly Recap - 10/07/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: Exchange News
 
 ### ✅ **STAKE token listed on Poloniex**

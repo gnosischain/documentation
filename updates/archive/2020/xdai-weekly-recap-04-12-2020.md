@@ -5,6 +5,10 @@ date: 2020-12-04
 
 # ⚔️ xDai Weekly Recap - 04/12/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 This week we continued our work on public staking, welcomed the new Ramp direct fiat integration, and were featured in a writeup by Bankless.
 
 :::info

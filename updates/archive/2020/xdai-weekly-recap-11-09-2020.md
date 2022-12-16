@@ -4,6 +4,10 @@ date: 2020-09-11
 
 # ⚔️ xDai Weekly Recap - 11/09/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :cut\_of\_meat: $STAKE Integrations
 
 ### ✓ Loopring Pay

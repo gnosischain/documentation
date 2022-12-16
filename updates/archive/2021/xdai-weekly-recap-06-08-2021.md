@@ -5,6 +5,10 @@ date: 2021-08-06
 
 # ⚔️ xDai Weekly Recap - 06/08/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## Sign up for Weekly Updates via Email
 
 Having trouble keeping up with the news? We've started a [Substack site](https://xdai.substack.com/) for weekly updates and breaking project integrations and news. Sign up to get updates delivered right to your inbox and consolidate your information flow!
@@ -13,7 +17,7 @@ Having trouble keeping up with the news? We've started a [Substack site](https:/
 💌 [Sign up to receive weekly email updates](https://xdai.substack.com/) ​💌‌
 :::
 
-## POSDAO & Protocol Updates <a href="#posdao-and-protocol-updates" id="posdao-and-protocol-updates"></a>
+## POSDAO & Protocol Updates
 
 :::info
 :man\_mage: BlockScout is Hiring for an Elixir developer. Learn more and apply now to be a part of the next generation of Ethereum-based application development!
@@ -31,7 +35,7 @@ Staking Statistics: [https://duneanalytics.com/maxaleks/xdai-staking](https://du
 ****Staking Platform: [https://blockscout.com/xdai/mainnet/](https://blockscout.com/xdai/mainnet/validators)
 :::
 
-## Weekly Newsletter <a href="#weekly-newsletter" id="weekly-newsletter"></a>
+## Weekly Newsletter
 
 We've moved our weekly highlights to Substack. You can sign up to receive in your email or view the newsletter anytime without signing up.
 

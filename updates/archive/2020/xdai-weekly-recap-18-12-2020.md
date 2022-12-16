@@ -5,6 +5,10 @@ date: 2020-12-18
 
 # ⚔️ xDai Weekly Recap - 18/12/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## POSDAO Staking Updates
 
 We are very excited to be closing in on the public launch of staking and delegation on xDai. We are completing our final rounds of testing and have been releasing videos on how to complete basic processes such as bridging STAKE, delegating STAKE, and claiming rewards.

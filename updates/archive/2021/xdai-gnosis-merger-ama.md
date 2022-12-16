@@ -4,6 +4,10 @@ date: 2021-11-15
 
 # xDai / Gnosis Merger AMA
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 - Time & Date: 18:00 UTC November 15, 2021.
 - Place: xDai < > Gnosis AMA Channel in xDai Discord. [Discord invite link](https://discord.gg/mPJ9zkq)
 - [AMA on YouTube](https://www.youtube.com/watch?v=XLHqA495rvY)

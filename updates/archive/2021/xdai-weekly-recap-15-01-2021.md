@@ -5,6 +5,10 @@ date: 2021-01-15
 
 # ⚔️ xDai Weekly Recap - 15/01/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 👩🏫 POSDAO Updates
 
 [Staking Epoch 40 is now active with 14 validator pools and \~121 delegators](https://blockscout.com/xdai/mainnet/validators). During epoch 39 a validator pool was inactivated (mining address[ 0xb76756f95A9fB6ff9ad3E6cb41b734c1bd805103](https://blockscout.com/xdai/mainnet/address/0xb76756f95A9fB6ff9ad3E6cb41b734c1bd805103/transactions)) due to excessive downtime.

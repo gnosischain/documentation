@@ -5,6 +5,10 @@ date: 2020-10-02
 
 # ⚔️ xDai Weekly Recap - 02/10/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## $ponsorships
 
 ### ✓ Untitled NFT Hackathon

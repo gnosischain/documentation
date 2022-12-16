@@ -5,6 +5,10 @@ date: 2020-05-08
 
 # ⚔️ xDai Weekly Recap - 08/05/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## ✅ **Pre-Staking with STAKEVAULT**
 
 This week BitMax announced STAKEVAULT and the first token to be included in this program was STAKE! It’s been a runaway success, it's easy to do and users are earning 36.4% APR on STAKE.

@@ -5,6 +5,10 @@ date: 2021-02-12
 
 # ⚔️ xDai Weekly Recap - 12/02/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 🛎 Project Announcements
 
 Ethereum projects have been working for months to explore and test different L2 solutions for their applications. These efforts are now beginning to bear fruit and go into production.

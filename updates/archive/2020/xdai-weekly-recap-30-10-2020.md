@@ -5,6 +5,10 @@ date: 2020-10-30
 
 # ⚔️ xDai Weekly Recap - 30/10/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 🌉 xDai Bridge Governance Update
 
 Following a successful Gnosis Safe implementation on xDai, a Board of Governors is now activate on both sides of the xDai bridge.

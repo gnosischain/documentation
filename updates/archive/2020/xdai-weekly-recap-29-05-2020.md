@@ -5,6 +5,10 @@ date: 2020-05-29
 
 # ⚔️ xDai Weekly Recap - 29/05/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :unlock: Distributions
 
 ### ✅ Private investors receive 10% STAKE release and ongoing daily distributions begin

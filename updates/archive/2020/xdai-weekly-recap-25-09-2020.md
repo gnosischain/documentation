@@ -5,6 +5,10 @@ date: 2020-09-25
 
 # ⚔️ xDai Weekly Recap - 25/09/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## ****:scales: Network **Scalability Update**
 
 :::info

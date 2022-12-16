@@ -5,6 +5,10 @@ date: 2020-12-31
 
 # 2020 Year in Review
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 As we pause to reflect on 2020 (pause playing [DarkForest](https://dark-forest.online/) for a few minutes anyway 🙂 ) we are first and foremost grateful for the xDai community, users, and partners who have elevated the xDai chain and made it a resounding success. We could not have envisioned the level of adoption and number of projects that have flourished on xDai in 2020**. xDai is arguably the #1 most-used L2 scaling solution for Ethereum right now**, and has helped support the ecosystem by providing an option for low-cost, stable transactions while improving interoperability and cross-chain interaction.
 
 Prior to 2020, a primary use-case for xDai centered around live events. xDai was experiencing a lot of growth with usage at Ethereum conferences, the Splunk Conference, RSA conference and more. At EthDenver 2020 xDai was used by conference attendees to buy food as well as navigate the conference, vote on hackathon entrants, and earn quest-based NFTs. The EthDenver Burner Wallet was extremely ambitious, pointing a way for the future of xDai as the go-to solution to power conferences and live events.

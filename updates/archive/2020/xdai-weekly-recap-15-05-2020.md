@@ -5,6 +5,10 @@ date: 2020-05-15
 
 # ⚔️ xDai Weekly Recap - 15/05/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## ✅ **STAKE on 1inch.exchange**
 
 STAKE is now available for trading on 1inch.exchange. 1inch is a DEX aggregator, as more DEXs add STAKE (currently UniSwap is the first STAKE DEX) you can use 1inch to find the best rates and even split trades across multiple DEXs.

@@ -5,6 +5,10 @@ date: 2020-05-22
 
 # ⚔️ xDai Weekly Recap - 22/05/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: Exchange News
 
 ### ✅ **xDai STAKE listed on CoinMarketCap**

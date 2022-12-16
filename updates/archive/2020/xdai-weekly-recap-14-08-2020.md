@@ -5,6 +5,10 @@ date: 2020-08-14
 
 # ⚔️ xDai Weekly Recap - 14/08/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :cut\_of\_meat: EasyStaking
 
 ### ✅ EasyStaking enabled on BitMax

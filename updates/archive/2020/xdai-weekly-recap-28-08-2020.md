@@ -5,6 +5,10 @@ date: 2020-08-28
 
 # ⚔️ xDai Weekly Recap - 28/08/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :man\_raising\_hand: Community Investment
 
 ### ✅ SpankChain Validator and Migration

@@ -5,6 +5,10 @@ date: 2020-07-23
 
 # ⚔️ xDai Weekly Recap - 23/07/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: Token & Exchange News
 
 ### ✅ Foundation and Advisor Token Releases: Foundation pledges 100% of token release until end of year to EasyStaking

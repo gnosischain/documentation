@@ -5,6 +5,10 @@ date: 2020-07-31
 
 # ⚔️ xDai Weekly Recap - 31/07/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :cut\_of\_meat: Staking & :cake: Baking
 
 ### ✅ The Great Reddit Scaling Bake-Off Entry Submitted

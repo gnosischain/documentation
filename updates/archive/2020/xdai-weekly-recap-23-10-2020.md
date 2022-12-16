@@ -5,6 +5,10 @@ date: 2020-10-23
 
 # ⚔️ xDai Weekly Recap - 23/10/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :woman\_astronaut: Launching on xDai
 
 ### ✓ Gnosis Safe

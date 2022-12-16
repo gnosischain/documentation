@@ -5,6 +5,10 @@ date: 2020-06-05
 
 # ⚔️ xDai Weekly Recap - 05/06/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: $STAKE
 
 ### ✅ 672K+ STAKE now pre-staked in BitMax StakeVault Program

@@ -5,6 +5,10 @@ date: 2021-01-08
 
 # ⚔️ xDai Weekly Recap - 08/01/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 We're excited to welcome in a new year with public POSDAO in production, STAKE governance and many exciting integrations on the horizon. We'll be updating our 2021 Roadmap over the next few weeks with additional development and project goals for the year.
 
 ## :chains: Chain Usage Updates

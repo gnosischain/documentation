@@ -5,6 +5,10 @@ date: 2020-07-03
 
 # ⚔️ xDai Weekly Recap - 03/07/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: $STAKE & Exchange News
 
 ### ✅ After 2 Months, 943K+ STAKE is pre-staked in BitMax StakeVault Program

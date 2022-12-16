@@ -5,6 +5,10 @@ date: 2020-11-20
 
 # ⚔️ xDai Weekly Recap - 20/11/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 This week we highlight several crowd-sourced funding platforms on xDai. The blockchain community is rallying around projects and building infrastructure from the ground up. Matching funds are helping smaller projects and developers realize a decentralized future! 
 
 :::info

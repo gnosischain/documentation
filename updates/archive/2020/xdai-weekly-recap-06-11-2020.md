@@ -5,6 +5,10 @@ date: 2020-11-06
 
 # ⚔️ xDai Weekly Recap - 06/11/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :link: Chainlink + xDai Integration
 
 As announced on November 6, 2020, xDai is extremely excited to integrate Chainlink with help from the Protofire team! We will share updates and details as the integration progresses and projects can use the Chainlink decentralized oracles.

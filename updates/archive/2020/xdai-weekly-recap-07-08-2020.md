@@ -5,6 +5,10 @@ date: 2020-08-07
 
 # ⚔️ xDai Weekly Recap - 07/08/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 🚀 Launch & 🤝 Partnership Announcements
 
 ### ✅ 🎉 EasyStaking Launch

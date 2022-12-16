@@ -5,6 +5,10 @@ date: 2021-01-22
 
 # ⚔️ xDai Weekly Recap - 22/01/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 🗻 POSDAO & Community Updates
 
 Staking Epoch 41 started successfully with additional participation and a [new validator](xdai-weekly-recap-22-01-2021.md#1hive-new-validator)! Stats and analytics are now available with [Dune Analytics](xdai-weekly-recap-22-01-2021.md#dune-analytics) to monitor staking on xDai as well as Easy Staking on Ethereum.

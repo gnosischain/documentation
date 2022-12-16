@@ -5,6 +5,10 @@ date: 2020-10-09
 
 # ⚔️ xDai Weekly Recap - 09/10/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## 🎂 xDai turns 2!
 
 The first block on xDai was created on October 8, 2018. We've come a long way since then!

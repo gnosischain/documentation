@@ -5,6 +5,10 @@ date: 2020-12-11
 
 # ⚔️ xDai Weekly Recap - 11/12/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 This week we continued our work testing public POSDAO and celebrated 1 Trillion (12 zeroes!)  total gas consumption on xDai. Several projects announced new features now available for xDai users.
 
 :::info

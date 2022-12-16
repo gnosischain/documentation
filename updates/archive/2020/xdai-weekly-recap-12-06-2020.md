@@ -5,6 +5,10 @@ date: 2020-06-12
 
 # ⚔️ xDai Weekly Recap - 12/06/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :newspaper: Articles & Media
 
 ### ✅ xDai vs Matic

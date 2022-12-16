@@ -5,6 +5,10 @@ date: 2021-02-19
 
 # ⚔️ xDai Weekly Recap - 19/02/2021
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :bulb: Project Updates
 
 Multiple projects went live on xDai this week along with several big project updates, alpha, beta and pre-sale launches!  :rocket:

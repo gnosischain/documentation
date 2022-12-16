@@ -5,6 +5,10 @@ date: 2020-06-19
 
 # ⚔️ xDai Weekly Recap - 19/06/2020
 
+import ArchiveWarning from '@site/src/components/ArchiveWarning';
+
+<ArchiveWarning />
+
 ## :satellite: Exchange News
 
 ### ✅ **STAKE token support on UniSwap**
