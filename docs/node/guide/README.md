@@ -83,11 +83,12 @@ import VerifyValidatorPartial from '@site/docs/node/guide/validator/_partials/_v
         </div>
     </TabItem>
     <TabItem value="chiado">
-        <div>
-            <p>Chiado testnet does not support public participation yet.</p>
-            <p>Steps 5-8 are ommited.</p>
-        </div>
-    </TabItem>
+
+:::info
+Chiado testnet does not support public participation yet. Step 4 is ommited.
+:::
+
+</TabItem>
 </Tabs>
 
 
