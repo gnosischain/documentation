@@ -1,7 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
     {label: 'Gnosis', value: 'gnosis'},
     {label: 'Chiado', value: 'chiado'}
@@ -9,39 +8,24 @@ import TabItem from '@theme/TabItem';
 <TabItem value="gnosis">
 
 <Tabs className="tabgroup-with-label os-tabgroup" groupId="os" defaultValue="others" values={[
-{label: 'Linux, MacOS, Arm64', value: 'others'},
-{label: 'Windows', value: 'win'}
+    {label: 'Linux, MacOS, Arm64', value: 'others'},
+    {label: 'Windows', value: 'win'}
 ]}>
 <TabItem value="others">
 
-TODO: BEACON LODESTAR OTHERS MAINNET
+TODO: TEKU MAINNET OTHERS
 
 </TabItem>
 <TabItem value="win">
 
-TODO: BEACON LODESTAR WINDOWS MAINNET
+TODO: TEKU MAINNET WINDOWS
 
 </TabItem>
 </Tabs>
 
 </TabItem>
 <TabItem value="chiado">
-
-<Tabs className="tabgroup-with-label os-tabgroup" groupId="os" defaultValue="others" values={[
-{label: 'Linux, MacOS, Arm64', value: 'others'},
-{label: 'Windows', value: 'win'}
-]}>
-<TabItem value="others">
-
-TODO: BEACON LODESTAR OTHERS CHIADO
-
+    <div data-comment="TODO: document chiado validation process"></div>
 </TabItem>
-<TabItem value="win">
-
-TODO: BEACON LODESTAR WINDOWS CHIADO
-
-</TabItem>
-</Tabs>
-
-</TabItem>
+       
 </Tabs>

@@ -14,12 +14,12 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-TODO: BEACON LODESTAR OTHERS MAINNET
+TODO: BEACON TEKU OTHERS MAINNET
 
 </TabItem>
 <TabItem value="win">
 
-TODO: BEACON LODESTAR WINDOWS MAINNET
+TODO: BEACON TEKU WINDOWS MAINNET
 
 </TabItem>
 </Tabs>
@@ -33,12 +33,12 @@ TODO: BEACON LODESTAR WINDOWS MAINNET
 ]}>
 <TabItem value="others">
 
-TODO: BEACON LODESTAR OTHERS CHIADO
+OTHERS CHIADO
 
 </TabItem>
 <TabItem value="win">
 
-TODO: BEACON LODESTAR WINDOWS CHIADO
+WINDOWS CHIADO
 
 </TabItem>
 </Tabs>

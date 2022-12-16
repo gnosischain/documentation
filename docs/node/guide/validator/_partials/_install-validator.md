@@ -18,15 +18,11 @@ import InstallLighthouseValidatorPartial from '@site/docs/node/guide/validator/_
   </TabItem>
 
   <TabItem value="lodestar">
-```
 
-:::info
+import InstallLodestarValidatorPartial from '@site/docs/node/guide/validator/_partials/clients/_install_validator_lodestar.md';
 
-Please refer to [Run a Beacon Node: Lodestar](../../beacon/lodestar.md)
+<InstallLodestarValidatorPartial />
 
-:::
-
-```mdx-code-block
   </TabItem>
 
   <TabItem value="nimbus">
@@ -54,15 +50,11 @@ Please refer to [Run a Beacon Node: Prysm](../../beacon/prysm.md)
   </TabItem>
 
   <TabItem value="teku">
-```
 
-:::info
+import InstallTekuValidatorPartial from '@site/docs/node/guide/validator/_partials/clients/_install_validator_teku.md';
 
-Please refer to [Run a Beacon Node: Teku](../../beacon/teku.md)
+<InstallTekuValidatorPartial />
 
-:::
-
-```mdx-code-block
   </TabItem>
 </Tabs>
 ```
