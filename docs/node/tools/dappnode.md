@@ -63,7 +63,7 @@ Then click in the below button that says "Apply changes"
 
 Be patience, the installation process can take several minutes. You can check all have been installed in the [dashboard page](http://my.dappnode/#/dashboard).
 
-### Step 3: Key Generation
+## Step 2: Key Generation
 
 <details>
   <summary><strong>Docker Command Line Instructions</strong> (only needed if you have trouble with Wagyu)</summary>
@@ -108,7 +108,7 @@ import GenerateValidatorKeysWagyuPartial from '@site/docs/node/guide/validator/\
 
 <GenerateValidatorKeysWagyuPartial />
 
-### Step 4: Upload Keystores to Web3Signer
+## Step 3: Upload Keystores to Web3Signer
 
 Now that you’ve generated your deposit data and keystores, go ahead and upload your keystores to Web3Signer Gnosis.
 
@@ -130,7 +130,7 @@ You will be able to see all the keystores you’ve uploaded.
 
 You are now ready to fund these validators and start validating.
 
-### Step 5: Fund Your Validators
+## Step 4: Fund Your Validators
 
 :::tip
 In case you need some xDai for transaction fees you can get some from the [official xDai faucet for Gnosis](https://stakely.io/en/faucet/gnosis-chain-xdai).
