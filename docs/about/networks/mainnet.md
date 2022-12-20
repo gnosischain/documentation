@@ -9,50 +9,50 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 
 ## Summary
 
-| Network Name                   | Gnosis                                                        |
-| ------------------------------ | ------------------------------------------------------------- |
-| Native (fee) token             | [xDai](../tokens/xdai.md)                                     |
-| Staking token                  | [GNO](../tokens/gno.md)                                       |
-| Chain ID                       | 100                                                           |
+| Network Name                   | Gnosis                      |
+| ------------------------------ | --------------------------- |
+| Native (fee) token             | [xDai](../tokens/xdai.md)   |
+| Staking token                  | [GNO](../tokens/gno.md)     |
+| Chain ID                       | 100                         |
 
 ## Key Infra
 
 ### Execution Layer
 
-| Execution Layer                |                                                                      |
-| ------------------------------ | -------------------------------------------------------------------- |
-| Execution Layer RPC            | https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet |
-| Execution Layer RPC            | https://rpc.gnosischain.com                                          |
-| More RPC endpoints             | [RPC Providers](../../tools/rpc/README.mdx)                          |
-| Execution Layer Explorer       | https://gnosisscan.io                                                |
-| Execution Layer Explorer       | https://blockscout.com/xdai/mainnet                                  |
-| Fork monitor                   | https://forkmon.gnosischain.com                                      |
-| EthStats                       | https://ethstats.gnosischain.com                                     |
-| Forked Blocks                  | https://blockscout.com/xdai/mainnet/reorgs                           |
-| Faucet                         | https://gnosisfaucet.com                                             |
+| Execution Layer                |                                             |
+| ------------------------------ | ------------------------------------------- |
+| Execution Layer RPC            | https://rpc.gnosis.gateway.fm               |
+| Execution Layer RPC            | https://rpc.gnosischain.com                 |
+| More RPC endpoints             | [RPC Providers](../../tools/rpc/README.mdx) |
+| Execution Layer Explorer       | https://gnosisscan.io                       |
+| Execution Layer Explorer       | https://blockscout.com/xdai/mainnet         |
+| Fork monitor                   | https://forkmon.gnosischain.com             |
+| EthStats                       | https://ethstats.gnosischain.com            |
+| Forked Blocks                  | https://blockscout.com/xdai/mainnet/reorgs  |
+| Faucet                         | https://gnosisfaucet.com                    |
 
 
 
 ### Consensus Layer
 
-| Consensus Layer                |                                                               |
-| ------------------------------ | ------------------------------------------------------------- |
-| Consensus Layer RPC            | https://rpc-gbc.gnosischain.com                               |
-| Beacon Explorer                | https://beacon.gnosischain.com                                |
-| Beacon Explorer Backup 1       | https://beacon-v1.gnosischain.com                             |
-| Beacon Explorer Backup 2       | https://beacon-v2.gnosischain.com                             |
-| Beacon Checkpoint Sync         | https://checkpoint.gnosis.gateway.fm                          |
-| Beacon Checkpoint Sync         | https://checkpoint.gnosischain.com                            |
-| NodeWatch                      | https://nodewatch.gnosischain.com                             |
+| Consensus Layer                |                                             |
+| ------------------------------ | ------------------------------------------- |
+| Consensus Layer RPC            | https://rpc-gbc.gnosischain.com             |
+| Beacon Explorer                | https://beacon.gnosischain.com              |
+| Beacon Explorer Backup 1       | https://beacon-v1.gnosischain.com           |
+| Beacon Explorer Backup 2       | https://beacon-v2.gnosischain.com           |
+| Beacon Checkpoint Sync         | https://checkpoint.gnosis.gateway.fm        |
+| Beacon Checkpoint Sync         | https://checkpoint.gnosischain.com          |
+| NodeWatch                      | https://nodewatch.gnosischain.com           |
 
 ### Other Tools
 
-| Other Tools                    |                                                               |
-| ------------------------------ | ------------------------------------------------------------- |
-| GnosisPools.info               | https://gnosispools.info                                      |
-| D14N Info                      | https://d14n.info/                                            |
-| Bordel                         | https://bordel.wtf/                                           |
-| More tools                     | [Tools](../../tools/README.md)                                |
+| Other Tools                    |                                             |
+| ------------------------------ | ------------------------------------------- |
+| GnosisPools.info               | https://gnosispools.info                    |
+| D14N Info                      | https://d14n.info/                          |
+| Bordel                         | https://bordel.wtf/                         |
+| More tools                     | [Tools](../../tools/README.md)              |
 
 
 ## Key Parameters
