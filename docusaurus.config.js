@@ -48,8 +48,10 @@ const config = {
           routeBasePath: 'updates',
           blogTitle: 'Gnosis Updates',
           blogDescription: 'Get Gnosis updates, announcements, changelogs, core dev info!',
-          include: ['*.md', '*.mdx'],
+          include: ['**/*.md', '**/*.mdx'],
           showReadingTime: true,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Recent updates',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),

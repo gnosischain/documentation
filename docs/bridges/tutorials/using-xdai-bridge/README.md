@@ -24,8 +24,6 @@ You will need some Dai to transfer AND some ETH for gas (transaction fees). [Bri
     4. Transfer Complete.
 6. Click on View on BlockScout to see details about the transaction. If you scroll down you will see the `address` (your address where the xdai was sent), `value` (amount sent in wei), and `transactionHash`, which will match the hash from the initial transaction.
 
-- [xDai Docs: How to bridge Dai from Ethereum to Gnosis](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/moving-dai-to-xdai)
-
 ### Moving xDai from Gnosis back to Dai on Ethereum
 :::note
 It is recommended to use Google Chrome and MetaMask without Ad Blockers to complete this process.  
@@ -43,8 +41,6 @@ You will need a __small additional amount of xDai__ to process the first transac
 :::info
 If you are interested in converting Dai to xDai without the UI see [how to use xDai Bridge without UI](#using-xdai-bridge-without-the-ui)
 ::: 
-
-- [xDai Docs: How to bridge Dai from Gnosis to Ethereum](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/moving-xdai-to-dai)
 
 ### How To Use the xDai Bridge with Safe (formerly Gnosis Safe)
 The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](../using-omnibridge/README.md) instructions.
