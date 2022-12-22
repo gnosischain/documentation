@@ -225,7 +225,7 @@ const config = {
       [
         '@docusaurus/plugin-client-redirects',
         {
-          redirects: [
+          redirects: [ 
             { to: '/updates/2022/12/10/merge', from: '/updates/20221210-merge' },
             { to: '/updates/2022/12/08/temporary-bootnodes', from: '/updates/20221208-temporary-bootnodes' },
             { to: '/updates/2022/12/05/bridges-pause', from: '/updates/202212-bridges-pause' },
