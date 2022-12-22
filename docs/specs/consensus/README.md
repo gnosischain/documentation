@@ -42,7 +42,7 @@ At a high level, the Merge resulted in the following changes:
 
 #### Deprecation of AuRa RANDAO
 
-The Merge result in the deprecation of the [legacy AuRa RANDAO random number generator](https://developers.gnosischain.com/for-developers/on-chain-random-numbers/randomness-faqs), as part of the larger deprecation of AuRa consensus.  
+The Merge result in the deprecation of the legacy AuRa RANDAO random number generator, as part of the larger deprecation of AuRa consensus.  
 
 In its place, developers are advised to move to the Beacon Chain’s Randomness, which implements EIP-4399. Please note that this randomness is still biasable, and take precautions.
 
