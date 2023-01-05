@@ -21,7 +21,7 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 
 | Execution Layer                |                                                                      |
 | ------------------------------ | -------------------------------------------------------------------- |
-| Execution Layer RPC            | https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet |
+| Execution Layer RPC            | https://rpc.gnosis.gateway.fm |
 | Execution Layer RPC            | https://rpc.gnosischain.com                                          |
 | More RPC endpoints             | [RPC Providers](../../tools/rpc/README.mdx)                          |
 | Execution Layer Explorer       | https://gnosisscan.io                                                |
@@ -30,8 +30,6 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 | EthStats                       | https://ethstats.gnosischain.com                                     |
 | Forked Blocks                  | https://blockscout.com/xdai/mainnet/reorgs                           |
 | Faucet                         | https://gnosisfaucet.com                                             |
-
-
 
 ### Consensus Layer
 
