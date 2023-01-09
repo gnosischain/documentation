@@ -598,6 +598,7 @@ const sidebars = {
       label: 'Oracles',
       collapsed: true,
       items: [
+        'tools/oracles/api3',
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
       ],
