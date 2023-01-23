@@ -63,7 +63,7 @@ https://checkpoint.gnosischain.com
 Then click in the below button that says "Apply changes"
 ![Apply the changes](/img/node/dappnode-stakers-ui-apply.png)
 
-Be patience, the installation process can take several minutes. You can check all have been installed in the [dashboard page](http://my.dappnode/#/dashboard).
+Be patient, the installation process can take several minutes. You can check all have been installed in the [dashboard page](http://my.dappnode/#/dashboard).
 
 ### Step 2: Key Generation
 
@@ -122,7 +122,7 @@ Open the UI by clicking the [`🏠Ui`](http://ui.web3signer-gnosis.dappnode/) li
 
 ![DAppNode Step 4b](/img/node/dappnode-step4b.png)
 
-Select the keystore file(s) you generated the the password you chose during the last step.
+Select the keystore file(s) you generated the password you chose during the last step.
 
 ![DAppNode Step 4c](/img/node/dappnode-step4c.png)
 
