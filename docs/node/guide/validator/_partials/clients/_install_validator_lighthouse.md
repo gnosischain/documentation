@@ -53,13 +53,13 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 # highlight-end
     --metrics \ 
     --metrics-address=0.0.0.0 \
-    --metrics-port=5064
+    --metrics-port=5064 \
 # highlight-start
     --graffiti "gnosis-docs-graffiti" # Change this value 
 # highlight-end
 ```
-    
-Replace `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
+
+Replace `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Make sure to delete `# Change this value` before running the command. Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
 
 
 
