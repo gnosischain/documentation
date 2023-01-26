@@ -5,9 +5,19 @@ title: "Interactive Guide"
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::tip Before you start 
+Hey node runners, to provide a comprehensive guideline for both beginners and experienced node runners, we offer two paths for you to choose from for building your node: Interactive Guide and Step-by-Step. 
+
+**Interactive Guide**: By selecting the configurations below, you are given a general walk-through of setting up the node based on different Operating system, Network, Execution client and Consensus client. In the current version, CLI commands are given to run as system process. *Recommended for experienced node runners*. 
+
+**Step-by-Step**: A detailed flow on running a node. Options include running as system process and using docker. *Recommended for beginners*.
+:::
+
+
 <div className='install'>
 
 ## Select a configuration 
+
 
 import InstallIntroPartial from '@site/docs/node/guide/_partials/_install-intro.md';
 
