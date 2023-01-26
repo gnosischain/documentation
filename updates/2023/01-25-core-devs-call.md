@@ -1,5 +1,5 @@
 ---
-title: Gnosis Chain Core Devs Call - January 25, 2023
+title: Core Devs Call - 25/01/2023
 authors: [alebanzas, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -60,7 +60,7 @@ Let's take a look at the core devs call updates.
 * On Chiado, a spam of 30 - 60 minutes increased the base fee to hundreds of gwei
 * The main idea is to prevent nefarious actors to put relevant transactions on hold for some time, which would degrade user experience
 
-##Gnosis DevOps
+## Gnosis DevOps
 
 * Chiado RPC routing implemented (testing with Gateway), then mainnet
 * 2 Chiado long-term bootnodes
