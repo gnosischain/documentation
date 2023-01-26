@@ -6,6 +6,11 @@ tags: [nodes, bootnodes]
 
 # Temporary Bootnodes for Dec 2022
 
+
+:::info
+Check the latest and recommended bootnodes in the [network page](/about/networks/mainnet#config-repo).
+:::
+
 ## Overview
 
 ### Problem

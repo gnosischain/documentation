@@ -49,6 +49,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 | Execution Layer RPC (WS) | wss://rpc.chiadochain.net/wss        |
 | Execution Layer Explorer | https://blockscout.chiadochain.net   |
 | Consensus Layer Explorer | https://beacon.chiadochain.net/      |
+| Beacon Checkpoint Sync   | https://checkpoint.chiadochain.net/  |
 | Fork monitor             | https://forkmon.chiadochain.net/     |
 | EthStats                 | https://ethstats.chiadochain.net/    |
 | Faucet                   | https://gnosisfaucet.com             |
