@@ -1,7 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
-import InstallLodestarPartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lodestar.md';
 
 ```mdx-code-block
 
@@ -27,8 +26,6 @@ import InstallLodestarPartial from '@site/docs/node/guide/beacon/_partials/_inst
 Please refer to [Run a Beacon Node: Lodestar](../lodestar.md)
 
 :::
-
-<InstallLodestarPartial/>
 
 ```mdx-code-block
   </TabItem>

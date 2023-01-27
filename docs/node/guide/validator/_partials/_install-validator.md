@@ -13,7 +13,6 @@ import TabItem from '@theme/TabItem';
 
 import InstallLighthouseValidatorPartial from '@site/docs/node/guide/validator/_partials/clients/_install_validator_lighthouse.md';
 
-
 <InstallLighthouseValidatorPartial />
 
   </TabItem>
@@ -21,18 +20,11 @@ import InstallLighthouseValidatorPartial from '@site/docs/node/guide/validator/_
   <TabItem value="lodestar">
 ```
 
-import InstallLodestarValidatorPartial from '@site/docs/node/guide/validator/_partials/clients/_install_validator_lodestar.md';
-
-
 :::info
-
 
 Please refer to [Run a Beacon Node: Lodestar](../../beacon/lodestar.md)
 
-
 :::
-
-<InstallLodestarValidatorPartial />
 
 ```mdx-code-block
   </TabItem>
