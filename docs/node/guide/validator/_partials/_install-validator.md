@@ -1,6 +1,8 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import InstallTekuValidatorPartial from '@site/docs/node/guide/validator/_partials/clients/_install_validator_teku.md';
+
 ```mdx-code-block
 <Tabs groupId="consensus-clients" defaultValue="lighthouse" values={[
   {label: 'Lighthouse', value: 'lighthouse'},
@@ -69,6 +71,8 @@ Please refer to [Run a Beacon Node: Prysm](../../beacon/prysm.md)
 Please refer to [Run a Beacon Node: Teku](../../beacon/teku.md)
 
 :::
+
+<InstallTekuValidatorPartial/>
 
 ```mdx-code-block
   </TabItem>

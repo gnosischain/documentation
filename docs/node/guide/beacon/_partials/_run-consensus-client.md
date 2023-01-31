@@ -2,6 +2,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
 import InstallLodestarPartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lodestar.md';
+import InstallTekuPartial from '@site/docs/node/guide/beacon/_partials/_install_cl_teku.md';
+
 
 ```mdx-code-block
 
@@ -40,7 +42,11 @@ Please refer to [Run a Beacon Node: Lodestar](../lodestar.md)
 
 Please refer to [Run a Beacon Node: Teku](../teku.md)
 
+
 :::
+
+<InstallTekuPartial/>
+
 
 ```mdx-code-block
   </TabItem>

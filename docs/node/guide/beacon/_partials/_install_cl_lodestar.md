@@ -59,7 +59,7 @@ Check that you are install correctly by running `./lodestar --help'
       --preset=gnosis
       --eth1=true
       --execution.urls=http://execution:8551
-      --jwt-secret=/jwt.hex
+      --jwt-secret=../jwtsecret/jwt.hex
       --logFile=/data/logs/beacon.log
       --logFileLevel=info
       --port=9000
@@ -126,7 +126,7 @@ Check that you are install correctly by running `./lodestar --help'
       --preset=gnosis
       --eth1=true
       --execution.urls=http://execution:8551
-      --jwt-secret=/jwt.hex
+      --jwt-secret=../jwtsecret/jwt.hex
       --logFile=/data/logs/beacon.log
       --logFileLevel=info
       --port=9000

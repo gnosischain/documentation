@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="win">
 
 :::info
-Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
+Lodestar only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
 :::
 
 </TabItem>
