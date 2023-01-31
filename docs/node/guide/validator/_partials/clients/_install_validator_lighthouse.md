@@ -53,14 +53,13 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 # highlight-end
     --metrics \ 
     --metrics-address=0.0.0.0 \
-    --metrics-port=5064 \
+    --metrics-port=5064
 # highlight-start
     --graffiti "gnosis-docs-graffiti"
 # highlight-end
 ```
 
 Replace the highlighted lines with your own values. `suggested-fee-recipient` with your address and `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
-
 
 
 </TabItem>
