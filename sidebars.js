@@ -605,6 +605,7 @@ const sidebars = {
       items: [
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
+        'tools/oracles/tellor',
       ],
     },
     {
