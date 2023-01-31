@@ -605,6 +605,7 @@ const sidebars = {
       items: [
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
+        'tools/oracles/tellor',
         {
           type: 'category',
           label: 'SupraOracles',
@@ -614,6 +615,7 @@ const sidebars = {
             'tools/oracles/supraoracles/vrf',
           ],
         },
+        
       ],
     },
     {
