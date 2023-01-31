@@ -4,6 +4,10 @@ description: SupraOracles provides smart contracts with a next-generation cross-
 keywords: [supraoracles, oracle, data feeds, price feeds]
 ---
 
+:::info testnet
+SupraOracles only supports [Chiado testnet](../../../about/networks/chiado.md).
+:::
+
 ## What is SupraOracles?
 
 [SupraOracles](https://supraoracles.com/) is a novel, high-throughput Oracle & IntraLayer: a vertically integrated toolkit of cross-chain solutions (data oracles, asset bridges, automation network, and more) that interlink all blockchains, public (L1s and L2s) or private (enterprises).
@@ -11,9 +15,9 @@ keywords: [supraoracles, oracle, data feeds, price feeds]
 
 ## How to use SupraOracles' Price Feeds
 
-Integrating with SupraOracles' Price Feeds is quick and easy. SupraOracles currently supports many Solidity/EVM-based networks, like Gnosis Chiado TestNet, and non-EVM networks such as Sui and Aptos.
+SupraOracles currently supports many Solidity/EVM-based networks, like Gnosis Chiado TestNet.
 
-To see all of the networks SupraOracles supports, please visit   [SupraOracles' Networks](https://supraoracles.com/docs/get-started/networks)!
+To see all of the networks SupraOracles supports, please visit [SupraOracles' Networks](https://supraoracles.com/docs/get-started/networks).
 
 To get started, you will want to visit   [SupraOracles' docs site](https://supraoracles.com/docs/get-started/) and review the documentation or continue to follow this guide for a quick start.
 
@@ -41,7 +45,11 @@ This creates the interface that you will later apply in order to fetch a price f
 
 To fetch the S-Value from a SupraOracles smart contract, you must first find the S-Value Feed Address for the chain of your choice.
 
-For Gnosis Chiado TestNet, the address is: 0x700a89Ba8F908af38834B9Aba238b362CFfB665F
+For Gnosis Chiado TestNet, the address is: 
+
+```
+0x700a89Ba8F908af38834B9Aba238b362CFfB665F
+```
 
 When you have the proper address, create an instance of the S-Value Feed using the interface we previously defined for Gnosis Chiado TestNet:
 
@@ -118,8 +126,7 @@ contract ISupraSValueFeedExample {
   </TabItem>
 </Tabs>
 
-Tada! You now have a method in your Smart Contract that you can call at any time to retrieve the price of ETH in USDT!
-
+You now have a method in your Smart Contract that you can call at any time to retrieve the price of ETH in USDT.
 
 ### Extra: S-Value Feeds with ethers.js
 
@@ -155,14 +162,11 @@ The Supra Network Activate Program (SNAP) offers companies discounted oracle cre
 
 The SNAP program is partnered with some of Web3's most prolific names who are helping with project selection and qualification.
 
+## SupraOracles community channels
 
-## Connect with us!
-
-Still looking for answers? We got them! Check out all the ways you can reach us:
-
-* Visit us at [supraoracles.com](https://supraoracles.com)
-* Read our [Docs](https://supraoracles.com/docs/overview)
-* Chat with us on [Telegram](https://t.me/SupraOracles)
-* Follow us on [Twitter](https://twitter.com/SupraOracles)
-* Join our [Discord](https://discord.gg/supraoracles)
-* Check us out on [Youtube](https://www.youtube.com/SupraOfficial)
+* [supraoracles.com](https://supraoracles.com)
+* [Docs](https://supraoracles.com/docs/overview)
+* [Telegram](https://t.me/SupraOracles)
+* [Twitter](https://twitter.com/SupraOracles)
+* [Discord](https://discord.gg/supraoracles)
+* [Youtube](https://www.youtube.com/SupraOfficial)

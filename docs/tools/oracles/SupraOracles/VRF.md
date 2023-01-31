@@ -4,6 +4,10 @@ description: Supra VRF provides smart contracts with a secure and decentralized 
 keywords: [SupraOracles, verifiable random function, random number generation]
 ---
 
+:::info testnet
+SupraOracles only supports [Chiado testnet](../../../about/networks/chiado.md).
+:::
+
 ## What is a Verifiable Random Function (VRF)?
 
 Blockchain-based verifiable random functions (VRFs) enable the generation of numbers that are as good as random (pseudorandom), and can be (publicly) verified cryptographically. Pseudorandomness guarantees both unpredictability and fairness, whereas tamper-proofness is guaranteed by their public verifiability.
@@ -13,11 +17,11 @@ Using a VRF for random number generation (RNG) is the gold standard for on-chain
 
 ## How to use SupraOracles' VRF
 
-Integrating with SupraOracles' VRF is quick and easy. SupraOracles currently supports many Solidity/EVM-based networks, like Gnosis Chiado TestNet, and non-EVM networks such as Sui and Aptos.
+SupraOracles currently supports many Solidity/EVM-based networks, like Gnosis Chiado TestNet.
 
-To see all of the networks SupraOracles supports, please visit   [SupraOracles' Networks](https://supraoracles.com/docs/vrf1/network-addresses)!
+To see all of the networks SupraOracles supports, please visit [SupraOracles' Networks](https://supraoracles.com/docs/vrf1/network-addresses)
 
-To get started, you will want to visit   [SupraOracles' docs site](https://supraoracles.com/docs/vrf1) and review the documentation or continue to follow this guide for a quick start.
+To get started, you will want to visit [SupraOracles' docs site](https://supraoracles.com/docs/vrf1) and review the documentation or continue to follow this guide for a quick start.
 
 
 ### Step 1: Create The Supra Router Contract Interface
@@ -44,7 +48,10 @@ This interface will help the requester contract interact with the Supra Router c
 
 Contracts that need random numbers should utilize the Supra Router Contract. In order to do that, they need to create an interface and bind it to the on-chain address of the Supra Router contract.
 
-For Gnosis Chiado TestNet, the address is: 0xb2667190b753720188a4039dd2b6014f01e07fea
+For Gnosis Chiado TestNet, the address is: 
+```
+0xb2667190b753720188a4039dd2b6014f01e07fea
+```
 
 We’ll store the set the address within the constructor and use it later to interact with the interface.
 
@@ -126,7 +133,7 @@ Once Supra generates the random number and it is verified by the on-chain logic 
 <Tabs>
   <TabItem value="solidity" label="Solidity" default>
 
-```
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 interface ISupraRouter {
@@ -169,13 +176,11 @@ contract Interaction {
 For additional tutorials and guides based on example use-cases, please refer to the [Supra Docs](https://supraoracles.com/docs/additional-guides).
 
 
-## Connect with us!
+## SupraOracles community channels
 
-Still looking for answers? We got them! Check out all the ways you can reach us:
-
-* Visit us at [supraoracles.com](https://supraoracles.com)
-* Read our [Docs](https://supraoracles.com/docs/overview)
-* Chat with us on [Telegram](https://t.me/SupraOracles)
-* Follow us on [Twitter](https://twitter.com/SupraOracles)
-* Join our [Discord](https://discord.gg/supraoracles)
-* Check us out on [Youtube](https://www.youtube.com/SupraOfficial)
+* [supraoracles.com](https://supraoracles.com)
+* [Docs](https://supraoracles.com/docs/overview)
+* [Telegram](https://t.me/SupraOracles)
+* [Twitter](https://twitter.com/SupraOracles)
+* [Discord](https://discord.gg/supraoracles)
+* [Youtube](https://www.youtube.com/SupraOfficial)
