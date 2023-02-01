@@ -26,17 +26,11 @@ To get started, you will want to visit   [SupraOracles' docs site](https://supra
 
 Add the following code to the Solidity smart contract that you wish to retrieve an S-Value.
 
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
-
 ```solidity
 interface ISupraSValueFeed {
     function checkPrice(string memory marketPair) external view returns (int256 price, uint256 timestamp);
 }
 ```
-
-  </TabItem>
-</Tabs>
 
 This creates the interface that you will later apply in order to fetch a price from SupraOracles.
 
@@ -53,9 +47,6 @@ For Gnosis Chiado TestNet, the address is:
 
 When you have the proper address, create an instance of the S-Value Feed using the interface we previously defined for Gnosis Chiado TestNet:
 
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
-
 ```solidity
 contract ISupraSValueFeedExample {
     ISupraSValueFeed internal sValueFeed;
@@ -66,16 +57,9 @@ contract ISupraSValueFeedExample {
 }
 ```
 
-  </TabItem>
-</Tabs>
-
-
 ### Step 3: Get The S-Value Crypto Price
 
 Now you can simply access the S-Value Crypto Price of our supported market pairs. In this step, we'll get the price of ETH/USDT (eth_usdt) by applying the following code to our Smart Contract.
-
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
 
 ```solidity
 function getEthUsdtPrice() external view returns (int) {
@@ -88,13 +72,7 @@ function getEthUsdtPrice() external view returns (int) {
 }
 ```
 
-  </TabItem>
-</Tabs>
-
 Here's an example of what your implementation should look like.
-
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -123,15 +101,9 @@ contract ISupraSValueFeedExample {
 }
 ```
 
-  </TabItem>
-</Tabs>
-
 You now have a method in your Smart Contract that you can call at any time to retrieve the price of ETH in USDT.
 
 ### Extra: S-Value Feeds with ethers.js
-
-<Tabs>
-  <TabItem value="js" label="Javascript" default>
 
 ```js
 // example assumes that the ethers library has been imported and is accessible within your scope
@@ -147,9 +119,6 @@ const getEthUsdtPrice = async () => {
 
 getEthUsdtPrice()
 ```
-
-  </TabItem>
-</Tabs>
 
 For additional tutorials and guides based on example use-cases, please refer to the [Supra docs](https://supraoracles.com/docs/additional-guides).
 
