@@ -609,10 +609,10 @@ const sidebars = {
         {
           type: 'category',
           label: 'SupraOracles',
-          link: {type: 'doc', id: 'tools/oracles/supra-oracles/README'},
+          link: {type: 'doc', id: 'tools/oracles/supraoracles/README'},
           collapsed: true,
           items: [
-            'tools/oracles/supra-oracles/vrf',
+            'tools/oracles/supraoracles/vrf',
           ],
         },
         

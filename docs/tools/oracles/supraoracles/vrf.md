@@ -28,18 +28,12 @@ To get started, you will want to visit [SupraOracles' docs site](https://supraor
 
 Add the following code to the requester contract i.e, the contract which uses VRF as a service. You can also add the code in a separate Interface and inherit the interface in the requester contract.
 
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
-
 ```solidity
 interface ISupraRouter { 
     function generateRequest(string memory _functionSig , uint8 _rngCount, uint256 _numConfirmations) external returns(uint256); 
     function generateRequest(string memory _functionSig , uint8 _rngCount, uint256 _numConfirmations, uint256 _clientSeed) external returns(uint256); 
 }
 ```
-
-  </TabItem>
-</Tabs>
 
 This interface will help the requester contract interact with the Supra Router contract and through which the requester contract can use the VRF service.
 
@@ -55,10 +49,6 @@ For Gnosis Chiado TestNet, the address is:
 
 We’ll store the set the address within the constructor and use it later to interact with the interface.
 
-
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
-
 ```solidity
 contract ExampleContract {
     address supraAddr;
@@ -68,9 +58,6 @@ contract ExampleContract {
     }
 }
 ```
-
-  </TabItem>
-</Tabs>
 
 ### Step 3: Use the VRF service and request a Random Number
 
@@ -82,9 +69,6 @@ In this step, we'll use the “generateRequest” function of the Supra Router C
 Supra's VRF process requires splitting the contract logic into two functions.
 * The request function - the signature of this function is up to the developer
 * The callback function - the signature must be of the form **“uint256 nonce, uint256[] calldata rngList”**
-
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
 
 ```solidity
 function exampleRNG() external {  
@@ -102,25 +86,16 @@ function exampleRNG() external {
 }
 ```
 
-  </TabItem>
-</Tabs>
-
 ### Step 4 - Add the validation in the callback function of requester contract
 
 Inside the callback function where the requester contract wants the random number (in this example the callback function is exampleCallback), the requester contract will have to add the validation such that only the Supra router contract can call the function. The validation is necessary to protect against malicious contracts/users executing the callback with fake data.
-
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
 
 ```solidity
 function exampleCallback(uint256 _nonce ,uint256[] _rngList) external {
     require(msg.sender == supraAddr);
     // Following the required logic of the function
  }
- ```
-
-   </TabItem>
-</Tabs>
+```
 
 ### Example Implementation
 
@@ -129,9 +104,6 @@ In the example below,
 * Then we store the username of the user requesting the random number mapped to the nonce returned by generateRequest.
 * Then the callback function prints the random numbers requested by a specific user and it has the signature: myCallbackUsername(uint256 nonce, uint256[] calldata rngList)
 Once Supra generates the random number and it is verified by the on-chain logic to be authentic, myCallbackUsername is executed by the Supra Router, which completes the second half of the process. The nonce from the first argument is used to look up the username that originated the request.
-
-<Tabs>
-  <TabItem value="solidity" label="Solidity" default>
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -170,8 +142,6 @@ contract Interaction {
    }
 }
 ```
-   </TabItem>
-</Tabs>
 
 For additional tutorials and guides based on example use-cases, please refer to the [Supra Docs](https://supraoracles.com/docs/additional-guides).
 
