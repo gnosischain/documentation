@@ -1,37 +1,36 @@
-# Gnosis Core Devs Call Notes Feb, 1, 2023
+# Gnosis Chain Core Devs Call Notes - Feb, 1, 2023
 
 ![](https://i.imgur.com/VY5RkbN.png)
 
+Hello everyone from the weekly Gnosis Core Devs Call. This meeting is repeated on Wednesday every week. Watch on [Gnosis Chain YouTube channel ‍](https://youtu.be/NxPWQLd8H7g) 
 
-Hello everyone from the weekly Gnosis Core Devs Call. This meeting is repeated on Wednesday every week. Watch on Gnosis Chain YouTube channel ‍ Participants: Erigon, Gateway, Nethermind, Gnosis DevOps, Gnosis Core Devs, Gnosis Comms team and the contributors.
+Participants: Erigon, Gateway, Nethermind, Geth, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team and the contributors.
+
+**TL;DR**
+
+During this week's meeting, the topic of the Withdrawal Contract was thoroughly discussed. The latest updates regarding xDai fees, which were brought to the table last week, were also discussed. Additionally, updates from the Core Dev Team (Erigon, Gateway, Nethermind, Geth, Prysm) were included in the agenda.
 
 
 ## Topics:​
 * Withdrawals Contract
 * xDai “fees”
 * Core Dev Team updates 
-  * Erigon
-  * Nethermind
-  * Gateway
-  * Geth
-  * Prysm
 * InterOp update
 * Base Fee
 
 Let's take a look at the core devs call updates.
 
-**Feb 1, 2023** 
+## Call Notes
 
 * Chain Infra
   * Updating of configs repos
     * Chiado Config vars https://github.com/gnosischain/configs/pull/7 
-    * [ ] Nethermind will help to update
+    * Nethermind will help to update
  * Ale: from Discord
    * Source of “block rewards” GNO
      * Withdrawals contract (with Ihor)
      * Option 1: Large reserve that pays out GNO rewards (bridged from ETH)
      * Option 2: Hardfork to “mint” GNO on-chain native to Gnosis Chain
-     * ... Can you help me understanding something about GC? So validators are paid with the priority fees of each block they create in XDAI to an address they specify. The rewards for all other activities (attestations etc.) are paid in mGNO to the deposit address. The base fee of each tx is burned. Where do the additional mGNO come from? From the treasury? Also, I don't get what happened to the DAI burned blocked on the Ethereum side (dai locked amount != xdai in the network?)
 
 * Withdrawals Contract
   * Current status
@@ -39,14 +38,13 @@ Let's take a look at the core devs call updates.
     * Ihor is working on these contracts
   * Need to decide on approach given differences between ETH & GNO
     * Ethereum = ETH is native, while mGNO is not
-      * Sending ETH to deposit contract conceptually sends from EL to CL
     * Withdrawals on GNO will “withdraw” it from the deposit contract
   * The “deposit contract” option is being taken for now
     * Withdrawal contract will rely on “reserve” contract that will be funded before/after
     * Treasury will need to send more GNO to the Withdrawal contrat to account for block rewards
 https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96#balances 
 https://github.com/gnosischain/specs/blob/master/execution/withdrawals.md
-  * Alternative approach (jorge@nethermind.io) 
+  * Alternative approach
     * Minting mGNO on Gnosis Chain thru increment the mGNO token registry thru system call (i.e. “issue” mGNO)
     * Ihor: how do we maintain total token balance (i.e. sum(GNO on Ethereum chain) == 3_000_000)
   * There is no way to convert mGNO to GNO
@@ -56,16 +54,11 @@ https://github.com/gnosischain/specs/blob/master/execution/withdrawals.md
     * GNO on Ethereum is a “claim” against native GNO on Gnosis
     * Reduce dependency of GNO on GNO on Etheruem or Bridges
   * Need to write a forum post on Gnosis Forum
-    * DAO vote?
 * xDai “fees”
   * 1559 fees = imbalance on ETH Bridge Deposit vs. Gnosis claims
   * This will grow as fees increase
-  * jorge@nethermind.io- 1559 xDai is not burnt, sent to a special address
- * Have not specified anything yet
-   * “DAO is in charge of this Dai”
-   * Possibility 1: GNO buybacks
-   * Possibility 2: GnosisDAO can figure out what to do with 1559 protocol fees
-  * Analytics
+  * Jorge - 1559 xDai is not burnt, sent to a special address
+   * Analytics
     * Should start keeping track of xDai (issued minus 1559)
     * Erigon’s state = easiest to keep track 
   * 1559 Fee Collector address
@@ -93,7 +86,6 @@ https://github.com/gnosischain/specs/blob/master/execution/withdrawals.md
     * Merged the PR 
     * Should be able to run stock on Prysm - pass in config file
     * Let Guillaume know if we encounter issues
-
 * Any other issues
   * Philippe: Erigon + Nimbus are publishing blocks
 * Base Fee
