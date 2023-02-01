@@ -1,4 +1,4 @@
-# Gnosis Chain Core Devs Call Notes - Feb, 1, 2023
+# Gnosis Chain Core Devs Call Notes - Feb 1, 2023
 
 ![](https://i.imgur.com/VY5RkbN.png)
 
