@@ -95,7 +95,7 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 
 * [genesis.json](https://github.com/gnosischain/configs/blob/main/chiado/genesis.json)
 * [nethermind.cfg](https://github.com/gnosischain/configs/blob/main/chiado/nethermind.cfg)
-* [GnosisDAO's Recommended Chiado EL Bootnodes](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/bootnodes_execution.txt)
+* [GnosisDAO's Recommended Chiado EL Bootnodes](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes_execution.yaml)
 * [Nethermind's Recommended Chiado EL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/chiado/inventory/data/bootnodes-execution.json)
 
 ## Key Contracts
