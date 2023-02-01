@@ -71,7 +71,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Merged successful at block 6,306,357. Bridges have resumed operation. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
+          'Merged successful at block 6,306,357. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,
