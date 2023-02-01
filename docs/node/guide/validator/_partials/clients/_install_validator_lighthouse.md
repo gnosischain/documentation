@@ -13,6 +13,7 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
 :::
 
 </TabItem>
+<TabItem value="others"></TabItem>
 </Tabs>
 
 <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
