@@ -2,7 +2,7 @@
 title: Node Architecture
 ---
 
-![](../../static/img/node/node-architecture.svg)
+![](../../static/img/node/node-architecture.png)
 
 Image: Diagram representing the composite client architecture of a Gnosis node
 
@@ -16,7 +16,7 @@ Gnosis started out as a [proof-of-authority ](../specs/consensus/aura.md) sidech
 
 ## Composite Network Architecture
 
-![](../../static/img/node/composite-networks.svg)
+![](../../static/img/node/composite-networks.png)
 
 Gnosis (post-merge) utilizes the same [composite layer architecture](https://hackmd.io/@n0ble/the-merge-terminology) as Ethereum. Gnosis' network is created through the interaction of two layers: an Execution Layer (EL) network and a Consensus Layer (CL) network. 
 
