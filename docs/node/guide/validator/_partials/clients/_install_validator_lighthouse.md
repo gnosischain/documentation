@@ -52,9 +52,9 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 # highlight-start
     --suggested-fee-recipient="0x0" \
 # highlight-end
-    --metrics \ 
+    --metrics \
     --metrics-address=0.0.0.0 \
-    --metrics-port=5064
+    --metrics-port=5064 \
 # highlight-start
     --graffiti "gnosis-docs-graffiti"
 # highlight-end
