@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
-let bridgeTutorials = [ 
+ let bridgeTutorials = [ 
   'bridges/tutorials/using-amb',
   {
     type: 'category',
@@ -371,6 +371,11 @@ const sidebars = {
           type: 'link',
           label: 'QuickNode',
           href: 'https://www.quicknode.com/docs/gnosis',
+        },
+        {
+          type: 'link',
+          label: 'BlockSpaces',
+          href: 'https://www.blockspaces.com/web3-infrastructure',
         },
       ],
     },
