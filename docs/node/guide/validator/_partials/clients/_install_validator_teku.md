@@ -47,19 +47,23 @@ cd teku-${version}
 ```shell
 ./bin/teku   \
   --ee-endpoint=http://localhost:8551   \
-  --ee-jwt-secret-file=../jwtsecret/jwt.hex \
+  --ee-jwt-secret-file=../../jwtsecret/jwt.hex \
   --metrics-enabled=true    \
   --rest-api-enabled=true   \
+# highlight-start
   --validators-proposer-default-fee-recipient=${Fee Recipient Address}  \
   --validator-keys=${path to key file}:${path to password file}
+# highlight-end
 ```
     
 If you wish to run validator only, run the following command:
 
 ```shell
 ./bin/teku validator-client \
+# highlight-start
     --beacon-node-api-endpoint=${endpoint} \
     --validator-keys=${path to key file}:${path to password file}
+# highlight-end
 ```
 
 Replace `$FEE_RECIPIENT` with your fee recipient address, `${path to key file}` and `{path to password file}`with the location where `keystores- *.json` and `keystore- *.txt` are stored, and `${endpoint}` with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051). Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).

@@ -67,7 +67,7 @@ You can run both beacon and validator with a single command. If you wish to run 
 ```
 ./bin/teku \
     --ee-endpoint=http://localhost:8551          \
-    --ee-jwt-secret-file=../jwtsecret/jwt.hex   \
+    --ee-jwt-secret-file=../../jwtsecret/jwt.hex   \
     --metrics-enabled=true                       \
     --rest-api-enabled=true
 ```

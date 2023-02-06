@@ -41,12 +41,12 @@ You can import the keys when starting the validator.
     --importKeystoresPassword=keystores/password.txt \
     --directory keystores \
     --dataDir=/data/validators \ 
-    # highlight-start
+# highlight-start
     --suggestedFeeRecipient=$FEE_RECIPIENT \ # Change this value
-    # highlight-start
-    # highlight-start
+# highlight-end
+# highlight-start
     --graffiti=$GRAFFITI  # Change this value
-    # highlight-start
+# highlight-end
 ```
     
 * Start your lighhouse validator:

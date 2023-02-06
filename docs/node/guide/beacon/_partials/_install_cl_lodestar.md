@@ -14,17 +14,18 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-- Go to the [lodestar releases page](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2) and copy the url of the latest release, currently v1.2.2.
+- Go to the [lodestar releases page](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2) and copy the url of the latest release.
 
 - Download the lodestar VERSION-ARQ.tar.gz binary.
     ```bash
     wget [URL_FROM_PREVIOUS_STEP]
     ```
 
-- Extract the downloaded file and move under consensus directory
+- Extract the downloaded file and move under consensus directory.
     ```bash
     tar -xvf VERSION-ARQ.tar.gz --directory  consensus
     ```
+
 Your repo will look like this
 ```
 📂gnosis
@@ -39,7 +40,7 @@ Your repo will look like this
 
 - Get into the lodestar folder
     ```bash
-    cd consensus/lodestar-${version} #cd consensus/lodestar-1.2.2
+    cd consensus && cd lodestar-${version} 
     ```
 - Install and build across all packages
     ```bash
@@ -54,23 +55,23 @@ Check that you are install correctly by running `./lodestar --help'
  - Execute Lodestar Beacon Chain
     ```bash 
     ./lodestar \
-      --network=gnosis
-      --dataDir=/data
-      --preset=gnosis
-      --eth1=true
-      --execution.urls=http://execution:8551
-      --jwt-secret=../jwtsecret/jwt.hex
-      --logFile=/data/logs/beacon.log
-      --logFileLevel=info
-      --port=9000
-      --rest=true
-      --rest.address=0.0.0.0
-      --rest.port=4000
-      --rest.cors=*
-      --discv5=true
-      --targetPeers=50
-      --metrics=true
-      --metrics.port=5054
+      --network=gnosis  \
+      --dataDir=/data   \
+      --preset=gnosis   \
+      --eth1=true   \
+      --execution.urls=http://execution:8551    \
+      --jwt-secret=../../jwtsecret/jwt.hex \
+      --logFile=/data/logs/beacon.log   \
+      --logFileLevel=info   \
+      --port=9000   \
+      --rest=true   \
+      --rest.address=0.0.0.0    \
+      --rest.port=4000  \
+      --rest.cors=* \
+      --discv5=true \
+      --targetPeers=50  \
+      --metrics=true    \
+      --metrics.port=5054   \
       --checkpointSyncUrl=https://checkpoint.gnosischain.com/ 
     ```
 
@@ -106,7 +107,7 @@ Your repo will look like this
 
 - Get into the lodestar folder
     ```bash
-    cd consensus/lodestar-${version} #cd consensus/lodestar-1.2.2
+    cd consensus && cd lodestar-${version} 
     ```
 - Install and build across all packages
     ```bash
@@ -121,23 +122,23 @@ Check that you are install correctly by running `./lodestar --help'
  - Execute Lodestar Beacon Chain
     ```bash 
     ./lodestar \
-      --network=gnosis
-      --dataDir=/data
-      --preset=gnosis
-      --eth1=true
-      --execution.urls=http://execution:8551
-      --jwt-secret=../jwtsecret/jwt.hex
-      --logFile=/data/logs/beacon.log
-      --logFileLevel=info
-      --port=9000
-      --rest=true
-      --rest.address=0.0.0.0
-      --rest.port=4000
-      --rest.cors=*
-      --discv5=true
-      --targetPeers=50
-      --metrics=true
-      --metrics.port=5054
+      --network=gnosis  \
+      --dataDir=/data   \
+      --preset=gnosis   \
+      --eth1=true   \
+      --execution.urls=http://execution:8551    \
+      --jwt-secret=../../jwtsecret/jwt.hex \
+      --logFile=/data/logs/beacon.log   \
+      --logFileLevel=info   \
+      --port=9000   \
+      --rest=true   \
+      --rest.address=0.0.0.0    \
+      --rest.port=4000  \
+      --rest.cors=* \
+      --discv5=true \
+      --targetPeers=50  \
+      --metrics=true    \
+      --metrics.port=5054   \
       --checkpointSyncUrl=https://checkpoint.gnosischain.com/ 
     ```
 
