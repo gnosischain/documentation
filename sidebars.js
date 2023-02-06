@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
- let bridgeTutorials = [ 
+let bridgeTutorials = [ 
   'bridges/tutorials/using-amb',
   {
     type: 'category',
