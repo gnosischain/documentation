@@ -62,16 +62,18 @@ services:
       lighthouse
       validator_client
       --network=gnosis
-      --validators-dir=/data/validators
+      --datadir=/data/validators
       --beacon-nodes=http://consensus:4000
       --graffiti=$GRAFFITI
       --debug-level=info
       --suggested-fee-recipient=$FEE_RECIPIENT
       --metrics
       --metrics-address=0.0.0.0
-      --metrics-port=5056
+      --metrics-port=5064
     networks:
       - gnosis_net
+    ports:
+      - 5064:5064/tcp
     volumes:
       - /home/$USER/gnosis/consensus/validators:/data/validators
       - /etc/timezone:/etc/timezone:ro

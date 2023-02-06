@@ -48,8 +48,10 @@ const config = {
           routeBasePath: 'updates',
           blogTitle: 'Gnosis Updates',
           blogDescription: 'Get Gnosis updates, announcements, changelogs, core dev info!',
-          include: ['*.md', '*.mdx'],
+          include: ['**/*.md', '**/*.mdx'],
           showReadingTime: true,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Recent updates',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
@@ -69,7 +71,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Merged successful at block 6,306,357. Bridges have resumed operation. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
+          'Merged successful at block 6,306,357. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,
@@ -220,6 +222,16 @@ const config = {
       [
         require.resolve('docusaurus-plugin-sass'),{}
       ],
+      [
+        '@docusaurus/plugin-client-redirects',
+        {
+          redirects: [ 
+            { to: '/updates/2022/12/10/merge', from: '/updates/20221210-merge' },
+            { to: '/updates/2022/12/08/temporary-bootnodes', from: '/updates/20221208-temporary-bootnodes' },
+            { to: '/updates/2022/12/05/bridges-pause', from: '/updates/202212-bridges-pause' },
+          ]
+        }
+      ]
     ],
 };
 

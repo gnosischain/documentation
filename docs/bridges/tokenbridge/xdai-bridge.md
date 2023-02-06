@@ -18,9 +18,6 @@ The [xDai bridge](https://bridge.gnosischain.com) is a native Dai bridge from Et
 
 Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis notifies the [block rewards contract](#block-rewards-contract). The consensus algorithm then mints xDai to the user's corresponding address on Gnosis in the next block. 
 
-References: 
-
-* [xDai Docs: xDai Bridge FAQs](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#xdai-bridge-faqs)
 ## Key Information
 
 ### Overview
@@ -72,9 +69,6 @@ References:
 Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
 :::
 
-References: 
-
-* [xDai Docs: Daily Bridge Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 ### Bridge Validators
 
 The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](/bridges/roadmap). 
@@ -91,24 +85,18 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://blockscout.com/xdai/mainnet/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
 | Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://blockscout.com/xdai/mainnet/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
 
-References: 
-* [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators#current-xdai-bridge-validators)
+### Bridge Validator Flow
+
+![](/img/bridges/diagrams/xdai-bridge-validator-flow.png)
+
+
 ### Bridge Governance
 
 * See [Bridge Governance](/bridges/governance)
 
-References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
-
 ### Bridge Revenue
 
 The xDai bridge currently generates bridge revenue through earned yield on stablecoins deposited on the bridge, which is then used by the GnosisDAO treasury to fund Gnosis development. 
-
-References: 
-
-* [xDai Docs: Dai & Stablecoin Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
-* [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
 
 ### Analytics
 
@@ -140,10 +128,6 @@ AddedReceiver(
 ```
 
 Example: https://blockscout.com/xdai/mainnet/tx/0x5892a695860f6087a2d93140f05e6365142ff77fd7128e39dbc03128d5797ac4/logs
-
-References: 
-
-* [xDai Docs: How xDai is Minted](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/xdai-mechanics-how-xdai-is-minted)
 
 ---
 ### Gnosis Chain -> Ethereum.
@@ -183,9 +167,8 @@ Interest earned on the Dai supplied to Compound and COMP tokens will be collecte
 In the case where the amount of Dai requested for withdrawal is not available in Compound (likely due to high borrowing demand), the user will need to wait until Compound liquidity is available to execute the request. 
 
 References: 
-
-* [xDai Docs: Dai & Stablecoin Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
 * [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
+
 ## Managing Bridge Contracts
 ### Upgrading a Contract
 There are two possible scenarios for how the bridge or validators contracts can be upgraded:
@@ -241,16 +224,7 @@ References:
 * [TokenBridge Docs: ERC20 Token Release](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/erc20-tokens-release)
 * [TokenBridge Docs: xDai Bridge Management API](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management/xdai-bridge-management-api)
 
-
-## Managing Bridge Validators
-
-References:
-
-* [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators)
-* [xDai Docs: Bridge Node Setup](https://developers.gnosischain.com/for-validators/for-bridge-validators/bridge-node-setup)
-* [xDai Docs: How to setup a new Bridge Validator](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
-* [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 ## Resources
-
 - [Tokenbridge Docs on xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
 - [xDai Bridge docs](/bridges/tutorials/using-xdai-bridge/)
+- [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)

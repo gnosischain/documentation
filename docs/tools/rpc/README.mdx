@@ -3,96 +3,135 @@ description: List of JSON RPC endpoints and providers to connect your dapp to Gn
 keywords: [rpc, node, rpc node, json rpc, infrastructure, rpc provider, rpc endpoint]
 ---
 
-# JSON RPC endpoints
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-An RPC node is a piece of infrastructure running blockchain client software, a server running both an Execution Layer (EL) and Consensus Layer (CL) infrastructure. 
+# RPC Providers
 
-## HTTP RPC endpoint(s)
+Gnosis encourages developers to work with our ecosystem of professional RPC providers that provide high-availability, reliable RPCs for access to the network.
 
-### Gnosis
+RPC Providers implement the JSON RPC API that Dapps and developers can interact with:
 
-```jsx title="Gnosis Mainnet"
-https://rpc.gnosischain.com/
-```
+- [JSON RPC API reference](https://ethereum.org/en/developers/docs/apis/json-rpc/)
+- [JSON RPC Postman](https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J?version=latest)
+- [Start developing in Gnosis](/developers)
 
-```jsx title="Chiado Testnet"
-https://rpc.chiadochain.net
-```
-:::info Testnet
-Chiado is the official testnet, check the [specifications and information](/about/networks/chiado).
-:::
+## Gateway
 
-### Community
+[Gateway](https://gateway.fm/) are one of the Core Devs and Core Contributors to Gnosis Chain. Gateway provides a high-availability public RPC as part of their Core Contributor agreement in [GIP-70](https://snapshot.org/#/gnosis.eth/proposal/0xbdc138180bec423df7b1d84c3ff4a85f3d1b62efba5db8f88a29bee2c4e515bb). 
 
-```mdx-code-block
+Gateway also provides an Archival RPC upon request.
+
 <Tabs>
-<TabItem value="Ankr">
+
+<TabItem label="Mainnet" value="Mainnet">
+
+```
+https://rpc.gnosis.gateway.fm
 ```
 
-```jsx title="Gnosis Mainnet"
-https://rpc.ankr.com/gnosis
-```
-
-```mdx-code-block
 </TabItem>
-<TabItem value="Pokt">
+<TabItem label="Chiado" value="Chiado">
+
+```
+https://rpc.chiado.gnosis.gateway.fm
 ```
 
-```jsx title="Gnosis Mainnet"
-https://gnosischain-rpc.gateway.pokt.network
-```
-
-```mdx-code-block
-</TabItem>
-<TabItem value="Blast">
-```
-
-```jsx title="Gnosis Mainnet"
-https://gnosis-mainnet.public.blastapi.io
-```
-
-```mdx-code-block
 </TabItem>
 </Tabs>
-```
 
-## WS RPC endpoint(s)
+## Gnosis 
 
-```jsx title="Gnosis Mainnet"
+Gnosis' Core Team provides a free "starter" RPC without any SLA or availability guarantees. 
+
+We encourage projects and developers to work with professional RPC providers in the ecosystem, who are better equipped to serve their needs. 
+
+<Tabs>
+<TabItem label="Mainnet" value="Mainnet">
+
+```shell
+# HTTP RPC
+https://rpc.gnosischain.com/
+
+# WSS RPC
 wss://rpc.gnosischain.com/wss
 ```
 
-### Community
+</TabItem>
+<TabItem label="Chiado" value="Chiado">
 
-```mdx-code-block
-<Tabs>
-<TabItem value="Blast">
+```shell
+# HTTP RPC
+https://rpc.chiadochain.net
+
+# WSS RPC
+wss://rpc.chiadochain.net/wss
 ```
 
-```jsx title="Gnosis Mainnet"
+</TabItem>
+</Tabs>
+
+## Ankr
+
+- [Ankr's Docs for Gnosis RPCs](https://www.ankr.com/protocol/public/gnosis/) 
+
+```
+https://rpc.ankr.com/gnosis
+```
+
+## Quicknode
+
+- [Quicknode's Docs for Gnosis RPCs](https://www.quicknode.com/docs/gnosis)
+
+```
+TBD
+```
+
+## Chainstack
+
+- [Chainstack's Docs for Gnosis RPCs](https://chainstack.com/build-better-with-gnosis-chain/) 
+
+```
+TBD
+```
+
+## POKT
+
+- [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/use/public-rpc/gnosis-chain/) 
+
+```
+https://gnosischain-rpc.gateway.pokt.network
+```
+
+## Blast
+
+- [Blast's Docs for Gnosis RPCs](https://blastapi.io/public-api/gnosis)
+
+```shell
+# HTTP RPC
+https://gnosis-mainnet.public.blastapi.io
+
+# WSS RPC
 wss://gnosis-mainnet.public.blastapi.io
 ```
 
-```mdx-code-block
-</TabItem>
-</Tabs>
+## GetBlock
+
+- [GetBlock](https://getblock.io/)
+- [GetBlock's Docs for Gnosis Chain RPCs](https://getblock.io/nodes/gno/)
+
+```shell
+# HTTP RPC
+https://gno.getblock.io/api_key/mainnet/
+
+# WSS RPC
+wss://gno.getblock.io/api_key/mainnet/
 ```
 
-:::info `eth_getLogs`
-WebSockets are recommended to push new logs as available.
-:::
+## BlockPI Network
 
-## Useful links
+- [BlockPI's Docs for Gnosis RPCs](https://docs.blockpi.io/documentations/api-reference/gnosis) 
 
-- [Start developing in Gnosis](/developers)
-- [JSON RPC API reference](https://ethereum.org/en/developers/docs/apis/json-rpc/)
-- [JSON RPC Postman](https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J?version=latest)
-
-## Providers documentation
-- [Ankr Protocol](https://www.ankr.com/protocol/public/gnosis/) 
-- [Blast](https://blastapi.io/public-api/gnosis)
-- [Chainstack](https://chainstack.com/build-better-with-gnosis-chain/) 
-  - [Soulbound tokens tutorial](https://docs.chainstack.com/tutorials/gnosis/simple-soulbound-token-with-remix-and-openzeppelin)
-- [GetBlock](https://getblock.io/)
-- [Pokt](https://docs.pokt.network/home/use/public-rpc/gnosis-chain)
-- [QuickNode](https://www.quicknode.com/docs/gnosis)
+```
+https://gnosis.blockpi.network/v1/rpc/public
+```

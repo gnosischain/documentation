@@ -20,10 +20,6 @@ The Omnibridge currently connects Gnosis to Ethereum and Binance Smart Chain.
 
 The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://github.com/ethereum/EIPs/issues/677) token standard, with all bridged tokens tracked in the canonical [Bridged Token Registries](#bridged-token-registries). 
 
-References: 
-* [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
-* [xDai Docs: Omnibridge FAQs](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-faqs)
-
 ### Overview
 
 |                       | Detail                                                |
@@ -34,10 +30,6 @@ References:
 | Governance Parameters | Validator Set, Daily Limits, Fees                     |
 | Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
-
-References: 
-
-* [xDai Docs: Omnibridge](https://developers.gnosischain.com/for-users/bridges/omnibridge)
 
 ### Key Contracts
 
@@ -101,16 +93,14 @@ Daily Limit is reset according to the following logic: the smart contract stores
  
 For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. Since Omnibridge is based on the Arbitrary Message Bridge functionality, the set of validators is the actual set of AMB validators. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
 
-References: 
-* [xDai Docs: Omnibridge Validators](https://developers.gnosischain.com/about-gc/faqs/bridges-xdai-bridge-and-omnibridge#omnibridge-validators)
+### Bridge Validator Flow
+
+![](/img/bridges/diagrams/amb-bridge-validator-flow.png)
 
 ### Bridge Governance
 
 * See [Bridge Governance](/bridges/governance)
 
-References: 
-- [xDai Docs: Bridge Governance Board](https://developers.gnosischain.com/for-users/governance/bridge-governance-board)
-- [xDai Docs: Bridge Daily Limits](https://developers.gnosischain.com/for-users/bridges/bridge-daily-limits)
 ### Bridge Revenue
 
 The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the GnosisDAO treasury to fund Gnosis development. 
@@ -250,11 +240,6 @@ If the requested withdrawal amount exceeds the reserve balance, then the request
 1. If the unlikely event isn't enough liquidity on Aave to fulfill the withdrawal request (likely due to high borrowing demand), then the user will have to wait until there is.
 2. Aave is a trusted entity. If compromised, the protocol could attack the bridge in various ways, e.g. through reentrency or by stealing funds. 
 
-References: 
-
-* [xDai Docs: Dai & Stablecoin Compounding](https://developers.gnosischain.com/for-users/bridges/converting-xdai-via-bridge/dai-compounding)
-* [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
-
 ## Managing the Bridge
 
 Bridge administrators can perform 4 groups of operations with the xDai bridge. All operations are performed by owners of the Multisignature Wallet which requires several accounts to confirm the operation transaction. 
@@ -291,12 +276,7 @@ Before starting, current validators should determine:
 2. Coordinate a time when the other validators will confirm the transaction, as the bridge will be stopped to complete the upgrade.
 3. Ask the Omnibridge team to add a new bridge validator to the Certifier contract and confirm it has been added. This enables the node to relay bridge transactions with zero gas price.
 :::
-* [xDai Docs: Bridge Validators](https://developers.gnosischain.com/for-validators/for-bridge-validators)
-* [xDai Docs: Bridge Node Setup](https://developers.gnosischain.com/for-validators/for-bridge-validators/bridge-node-setup)
-* [xDai Docs: How to add a new Bridge Validator](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
+
 * [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 
-Additional steps for adding a validator can be found [here](https://developers.gnosischain.com/for-validators/for-bridge-validators/current-validators-how-to-add-a-new-bridge-validator)
-
-
-
+Additional steps for adding a validator can be found [here](https://github.com/gnosischain/documentation/issues/72)

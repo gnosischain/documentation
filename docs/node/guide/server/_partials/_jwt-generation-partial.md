@@ -10,16 +10,6 @@ Use a utility like OpenSSL to create the token via command:
 openssl rand -hex 32 | tr -d "\n" > "./jwtsecret/jwt.hex"
 ```
 
-Create the file by running:
-
-```shell
-
-echo 'PLACE_HERE_YOUR_TOKEN' > jwt.hex
-
-```
-
-and place it in the `../jwtsecret` folder.
-
 <details>
     <summary>Other ways to generate the <code>jwt.hex</code> file</summary>
 
@@ -29,5 +19,13 @@ and place it in the `../jwtsecret` folder.
 
 2. Use an execution or consensus client to generate the `./jwtsecret/jwt.hex` file (check their documentation).
 3. Use an online generator like [this](https://seanwasere.com/generate-random-hex/). Copy and paste this value into a `./jwtsecret/jwt.hex` file.
+
+For options (1) and (3), create the file by running:
+
+```shell
+
+echo 'PLACE_HERE_YOUR_TOKEN' > ./jwtsecret/jwt.hex
+
+```
 
 </details>

@@ -39,18 +39,20 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ## Summary
 ### Key Infra
 
-| Network Name                   | Chiado                                                        |
-| ------------------------------ | ------------------------------------------------------------- |
-| Native (fee) token             | Testnet xDai on Chiado                                        |
-| Staking token                  | Testnet GNO on Chiado                                         |
-| Chain ID                       | 10200                                                         |
-| Execution Layer RPC (Archival) | https://rpc.eu-central-2.gateway.fm/v3/gnosis/archival/chiado |
-| Execution Layer RPC            | https://rpc.chiadochain.net                                   |
-| Execution Layer Explorer       | https://blockscout.chiadochain.net                            |
-| Consensus Layer Explorer       | https://beacon.chiadochain.net/                               |
-| Fork monitor                   | https://forkmon.chiadochain.net/                              |
-| EthStats                       | https://ethstats.chiadochain.net/                             |
-| Faucet                         | https://gnosisfaucet.com                                      |
+| Network Name             | Chiado                               |
+| ------------------------ | ------------------------------------ |
+| Native (fee) token       | Testnet xDai on Chiado               |
+| Staking token            | Testnet GNO on Chiado                |
+| Chain ID                 | 10200                                |
+| Execution Layer RPC      | https://rpc.chiado.gnosis.gateway.fm |
+| Execution Layer RPC      | https://rpc.chiadochain.net          |
+| Execution Layer RPC (WS) | wss://rpc.chiadochain.net/wss        |
+| Execution Layer Explorer | https://blockscout.chiadochain.net   |
+| Consensus Layer Explorer | https://beacon.chiadochain.net/      |
+| Beacon Checkpoint Sync   | https://checkpoint.chiadochain.net/  |
+| Fork monitor             | https://forkmon.chiadochain.net/     |
+| EthStats                 | https://ethstats.chiadochain.net/    |
+| Faucet                   | https://gnosisfaucet.com             |
 
 ### Key Parameters
 | Param             | Value                   |
@@ -86,15 +88,14 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 
 * [config.yaml](https://github.com/gnosischain/configs/blob/main/chiado/config.yaml)
 * [genesis.ssz](https://github.com/gnosischain/configs/blob/main/chiado/genesis.ssz)
-* [GnosisDAO's Recommended Chiado CL Bootnodes](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes.yaml)
-* [Nethermind's Recommended Chiado CL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/chiado/inventory/data/bootnodes-beacon.json)
+* [GnosisDAO's Recommended Bootnodes](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes.yaml)
 
 ### Execution Layer
 
 * [genesis.json](https://github.com/gnosischain/configs/blob/main/chiado/genesis.json)
 * [nethermind.cfg](https://github.com/gnosischain/configs/blob/main/chiado/nethermind.cfg)
-* [GnosisDAO's Recommended Chiado EL Bootnodes](https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/bootnodes_execution.txt)
-* [Nethermind's Recommended Chiado EL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/chiado/inventory/data/bootnodes-execution.json)
+* [GnosisDAO's Recommended Bootnodes](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes_execution.yaml)
+* [Nethermind's Recommended Bootnodes](https://github.com/NethermindEth/nethermind/blob/master/src/Nethermind/Chains/chiado.json#L85)
 
 ## Key Contracts
 

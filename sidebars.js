@@ -222,6 +222,11 @@ const sidebars = {
       items: [
         "node/tools/dappnode", 
         "node/tools/sedge", 
+        {
+          type: 'link',
+          label: 'ValidateGnosis',
+          href: 'https://www.validategnosis.com/',
+        },
       ],
     },
     {
@@ -600,6 +605,17 @@ const sidebars = {
       items: [
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
+        'tools/oracles/tellor',
+        {
+          type: 'category',
+          label: 'SupraOracles',
+          link: {type: 'doc', id: 'tools/oracles/supraoracles/README'},
+          collapsed: true,
+          items: [
+            'tools/oracles/supraoracles/vrf',
+          ],
+        },
+        
       ],
     },
     {
@@ -617,6 +633,11 @@ const sidebars = {
           type: 'link',
           label: 'Nethermind Sedge',
           href: 'https://docs.sedge.nethermind.io/',
+        },
+        {
+          type: 'link',
+          label: 'ValidateGnosis',
+          href: 'https://www.validategnosis.com/',
         },
       ],
     },
