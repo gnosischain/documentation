@@ -6,91 +6,181 @@ keywords: [Hardhat, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, G
 
 # Using Hardhat
 
-#### Hardhat is a development environment used for smart contract compiling, deploying, testing and debugging.
+Hardhat is a development environment used for smart contract compiling, deploying, testing and debugging.
 
-Follow the [Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#installation) for general installation and overview.
+[Get started with Hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#installation) for general installation and overview.
 
 ## Config Hardhat for Gnosis
 
-1. Change the default Network to Gnosis.
+Update the config with Gnosis networks, check the highlighted lines for instructions:
 
-<Tabs groupId="networks">
-<TabItem value="chiado" label="Chiado Testnet">
+<Tabs groupId="languages">
+<TabItem value="typescript" label="Typescript">
 
-```tsx title="/packages/hardhat-ts/hardhat.config.ts"
-const defaultNetwork = 'chiado';
-```
-</TabItem>
-<TabItem value="gnosis" label="Gnosis Mainnet">
+```js {6-8,14,44,55} showLineNumbers  title="hardhat.config.ts"
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
 
-```tsx title="/packages/hardhat-ts/hardhat.config.ts"
-const defaultNetwork = 'gnosis';
-```
-</TabItem>
-</Tabs>
+//https://hardhat.org/hardhat-runner/docs/config#json-rpc-based-networks
 
-2. Update the config with Gnosis credentials
+//Note: keep your mnemonic and private keys securely
+//Read more: https://hardhat.org/hardhat-runner/docs/config#hd-wallet-config
+//1) You can configure private keys or mnemonic:
+//let accounts = ["your private key here"]
+let accounts = { mnemonic: "your mnemonic here", }
 
-```js showLineNumbers  title="hardhat.config.js"
-    const config: HardhatUserConfig = {
+const config: HardhatUserConfig = {
+  solidity: "0.8.17",
+  //2) select the default network "gnosis" or "chiado"
+  defaultNetwork: "gnosis",
   networks: {
-    localhost: {
-      url: 'http://localhost:8545',
+    hardhat: {
     },
     gnosis: {
-      url: 'https://rpc.gnosischain.com/',
-      gasPrice: 1000000000,
-      accounts: {
-        mnemonic: Mnemonic,
-      },
+      url: "https://rpc.gnosischain.com",
+      accounts: accounts,
     },
     chiado: {
-      url: 'https://rpc.chiadochain.net',
+      url: "https://rpc.chiadochain.net",
       gasPrice: 1000000000,
-      accounts: {
-        mnemonic: Mnemonic,
-      },
+      accounts: accounts,
     },
   },
+  etherscan: {
+    customChains: [
+      {
+        network: "chiado",
+        chainId: 10200,
+        urls: {
+          //Blockscout
+          apiURL: "https://blockscout.com/gnosis/chiado/api",
+          browserURL: "https://blockscout.com/gnosis/chiado",
+        },
+      },
+      {
+        network: "gnosis",
+        chainId: 100,
+        urls: {
+          // 3) Select to what explorer verify the contracts
+          // Gnosisscan
+          apiURL: "https://api.gnosisscan.io/api",
+          browserURL: "https://gnosisscan.io/",
+          // Blockscout
+          //apiURL: "https://blockscout.com/xdai/mainnet/api",
+          //browserURL: "https://blockscout.com/xdai/mainnet",
+        },
+      },
+    ],
+    apiKey: {
+      //4) Insert your Gnosisscan API key
+      //blockscout explorer verification does not require keys
+      chiado: "your key",
+      gnosis: "your key",
+    },
+  }
+};
+
+export default config;
+
+```
+
+</TabItem>
+<TabItem value="javascript" label="Javascript">
+
+```js {5-7,14,44,55} showLineNumbers  title="hardhat.config.js"
+require("@nomicfoundation/hardhat-toolbox");
+
+//https://hardhat.org/hardhat-runner/docs/config#json-rpc-based-networks
+
+//Note: keep your mnemonic and private keys securely
+//Read more: https://hardhat.org/hardhat-runner/docs/config#hd-wallet-config
+//1) You can configure private keys or mnemonic:
+//let accounts = ["your private key here"]
+let accounts = { mnemonic: "your mnemonic here", }
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: "0.8.17",
+  //2) select the default network "gnosis" or "chiado"
+  defaultNetwork: "gnosis",
+  networks: {
+    hardhat: {
+    },
+    gnosis: {
+      url: "https://rpc.gnosischain.com",
+      accounts: accounts,
+    },
+    chiado: {
+      url: "https://rpc.chiadochain.net",
+      gasPrice: 1000000000,
+      accounts: accounts,
+    },
+  },
+  etherscan: {
+    customChains: [
+      {
+        network: "chiado",
+        chainId: 10200,
+        urls: {
+          //Blockscout
+          apiURL: "https://blockscout.com/gnosis/chiado/api",
+          browserURL: "https://blockscout.com/gnosis/chiado",
+        },
+      },
+      {
+        network: "gnosis",
+        chainId: 100,
+        urls: {
+          // 3) Select to what explorer verify the contracts
+          // Gnosisscan
+          apiURL: "https://api.gnosisscan.io/api",
+          browserURL: "https://gnosisscan.io/",
+          // Blockscout
+          //apiURL: "https://blockscout.com/xdai/mainnet/api",
+          //browserURL: "https://blockscout.com/xdai/mainnet",
+        },
+      },
+    ],
+    apiKey: {
+      //4) Insert your Gnosisscan API key
+      //blockscout explorer verification does not require keys
+      chiado: "your key",
+      gnosis: "your key",
+    },
+  }
 };
 ```
 
-3. Change the TNetworkInfo variable to gnosis
-
-<Tabs groupId="networks">
-<TabItem value="chiado" label="Chiado Testnet">
-
-```js title=hardhat.config.js
-export const targetNetworkInfo: TNetworkInfo = NETWORKS.chiado;
-```
-</TabItem>
-<TabItem value="gnosis" label="Gnosis Mainnet">
-
-```js title=hardhat.config.js
-export const targetNetworkInfo: TNetworkInfo = NETWORKS.gnosis;
-```
 </TabItem>
 </Tabs>
 
-## Compile your Gnosis contract
+## Compile your contract
 
 ```bash
 npx hardhat compile
 ```
 
-## Deploy your Contract
+## Deploy your contract
 
-<Tabs groupId="networks">
-<TabItem value="chiado" label="Chiado Testnet">
+<Tabs groupId="languages">
+<TabItem value="typescript" label="Typescript">
 
-```bash
-hardhat run --network chiado scripts/deploy.js
+```bash title="Gnosis Mainnet"
+npx hardhat run scripts/deploy.ts --network gnosis
+```
+
+```bash title="Chiado Testnet"
+npx hardhat run scripts/deploy.ts --network chiado
 ```
 </TabItem>
-<TabItem value="gnosis" label="Gnosis Mainnet">
+<TabItem value="javascript" label="Javascript">
 
-```bash
-hardhat run --network gnosis scripts/deploy.js
+```bash title="Gnosis Mainnet"
+npx hardhat run scripts/deploy.js --network gnosis
+```
+
+```bash title="Chiado Testnet"
+npx hardhat run scripts/deploy.js --network chiado
 ```
 </TabItem>
 </Tabs>
@@ -105,13 +195,13 @@ Visit our [Tools page](/tools) for other support.
 <TabItem value="chiado" label="Chiado Testnet">
 
 ```bash
-hardhat --network chiado sourcify
+npx hardhat verify --network chiado <deployed contract address>
 ```
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
 
 ```bash
-hardhat --network gnosis sourcify
+npx hardhat verify --network gnosis <deployed contract address>
 ```
 </TabItem>
 </Tabs>
@@ -120,4 +210,4 @@ Visit our [Contract Verification Page](/developers/verify/) for more documentati
 
 ## Additional Hardhat Documentation
 
-- Additonal Hardhat deployment documentation is located [here.](https://hardhat.org/hardhat-runner/docs/guides/deploying)
+- Additonal Hardhat deployment documentation is located [here](https://hardhat.org/hardhat-runner/docs/guides/deploying).
