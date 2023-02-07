@@ -13,6 +13,7 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
 :::
 
 </TabItem>
+<TabItem value="others"></TabItem>
 </Tabs>
 
 <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
@@ -49,18 +50,17 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
     --datadir validators \
     --enable-doppelganger-protection \
 # highlight-start
-    --suggested-fee-recipient="0x0" \ # Change this value 
+    --suggested-fee-recipient="0x0" \
 # highlight-end
-    --metrics \ 
+    --metrics \
     --metrics-address=0.0.0.0 \
     --metrics-port=5064 \
 # highlight-start
-    --graffiti "gnosis-docs-graffiti" # Change this value 
+    --graffiti "gnosis-docs-graffiti"
 # highlight-end
 ```
 
-Replace `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Make sure to delete `# Change this value` before running this command. Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
-
+Replace the highlighted lines with your own values. `suggested-fee-recipient` with your address and `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
 
 
 </TabItem>

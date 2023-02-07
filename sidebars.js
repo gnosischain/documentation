@@ -372,6 +372,11 @@ const sidebars = {
           label: 'QuickNode',
           href: 'https://www.quicknode.com/docs/gnosis',
         },
+        {
+          type: 'link',
+          label: 'BlockSpaces',
+          href: 'https://www.blockspaces.com/web3-infrastructure',
+        },
       ],
     },
     {
@@ -605,6 +610,17 @@ const sidebars = {
       items: [
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
+        'tools/oracles/tellor',
+        {
+          type: 'category',
+          label: 'SupraOracles',
+          link: {type: 'doc', id: 'tools/oracles/supraoracles/README'},
+          collapsed: true,
+          items: [
+            'tools/oracles/supraoracles/vrf',
+          ],
+        },
+        
       ],
     },
     {

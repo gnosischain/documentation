@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
 - Execute Nethermind
     ```shell
     ./Nethermind.Runner \
-        --config xdai \
+        --config gnosis \
         --JsonRpc.Enabled true \
         --HealthChecks.Enabled true \
         --HealthChecks.UIEnabled true \
@@ -60,7 +60,7 @@ import TabItem from '@theme/TabItem';
 - Run the following command:
     ```shell
     .\Nethermind.Runner.exe \
-        --config xdai \
+        --config gnosis \
         --JsonRpc.Enabled true \
         --HealthChecks.Enabled true \
         --HealthChecks.UIEnabled true \
