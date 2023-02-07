@@ -2,7 +2,7 @@
 title: Node Architecture
 ---
 
-![](../../static/img/node/node-architecture.svg)
+![](../../static/img/node/node-architecture.png)
 
 Image: Diagram representing the composite client architecture of a Gnosis node
 
@@ -12,11 +12,11 @@ Gnosis is a open peer-to-peer network of nodes operated by anyone in the world w
 
 Gnosis utilizes the same architecture as Ethereum, and has committed to building together with Ethereum and contributing to the research, engineering and tooling for Ethereum's stack. 
 
-Gnosis started out as a [proof-of-authority ](../specs/consensus/aura.md) sidechain to Ethereum with its own consensus algorithm in 2017. Gnosis [Merged](/updates/20221210-merge) successful at block 6,306,357 deprecating legacy differences and aligning with Ethereum's new architecture, beginning with the Merge, with a goal of achieving 1:1 parity with Ethereum. 
+Gnosis started out as a [proof-of-authority ](../specs/consensus/aura.md) sidechain to Ethereum with its own consensus algorithm in 2017. Gnosis [Merged](/updates/2022/12/10/merge) successful at block 6,306,357 deprecating legacy differences and aligning with Ethereum's new architecture, beginning with the Merge, with a goal of achieving 1:1 parity with Ethereum. 
 
 ## Composite Network Architecture
 
-![](../../static/img/node/composite-networks.svg)
+![](../../static/img/node/composite-networks.png)
 
 Gnosis (post-merge) utilizes the same [composite layer architecture](https://hackmd.io/@n0ble/the-merge-terminology) as Ethereum. Gnosis' network is created through the interaction of two layers: an Execution Layer (EL) network and a Consensus Layer (CL) network. 
 

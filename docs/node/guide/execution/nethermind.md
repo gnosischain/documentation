@@ -75,7 +75,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     command: |
-      --config=xdai
+      --config=gnosis
       --datadir=/data
       --log=INFO
       --Sync.SnapSync=false
@@ -160,7 +160,7 @@ Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure you
 Windows
 ```
 # Gnosis Mainnet
-./Nethermind.Runner --config xDai --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+./Nethermind.Runner --config gnosis --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 
 # Chiado Testnet
 ./Nethermind.Runner --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
@@ -169,7 +169,7 @@ Windows
 Linux and MAC
 ```
 # Gnosis Mainnet
-nethermind --config xDai --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+nethermind --config gnosis --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 
 # Chiado Testnet
 nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
@@ -181,13 +181,13 @@ nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 An archival node executes a heavy historical sync verifying all the transactions and keeping all of the historical data. Archive sync is the 'heaviest' and slowest sync mode, and can take 2 - 6 weeks depending on the speed of your IO.
 
 :::caution
-Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is +2 TB (Nov 2022).
+Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is +2 TB (Feb 2023).
 :::
 
-Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from `xdai` to `xdai_archive`.
+Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from `gnosis` to `gnosis_archive`.
 
 ```yaml
     command: |
-      --config=xdai_archive
+      --config=gnosis_archive
 ```
 

@@ -21,7 +21,7 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 
 | Execution Layer                |                                                                      |
 | ------------------------------ | -------------------------------------------------------------------- |
-| Execution Layer RPC            | https://rpc.ap-southeast-1.gateway.fm/v1/gnosis/non-archival/mainnet |
+| Execution Layer RPC            | https://rpc.gnosis.gateway.fm |
 | Execution Layer RPC            | https://rpc.gnosischain.com                                          |
 | More RPC endpoints             | [RPC Providers](../../tools/rpc/README.mdx)                          |
 | Execution Layer Explorer       | https://gnosisscan.io                                                |
@@ -30,8 +30,6 @@ keywords: [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, x
 | EthStats                       | https://ethstats.gnosischain.com                                     |
 | Forked Blocks                  | https://blockscout.com/xdai/mainnet/reorgs                           |
 | Faucet                         | https://gnosisfaucet.com                                             |
-
-
 
 ### Consensus Layer
 
@@ -77,6 +75,7 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 * [config.yaml](https://github.com/gnosischain/configs/blob/main/mainnet/config.yaml)
 * [genesis.json](https://github.com/gnosischain/configs/blob/main/mainnet/genesis.json)
 * [GnosisDAO's Recommended CL Bootnodes](https://github.com/gnosischain/configs/blob/main/mainnet/bootnodes.yaml)
+* [GnosisDAO's Recommended EL Bootnodes](https://github.com/gnosischain/configs/blob/main/mainnet/bootnodes_execution.yaml)
 * [Nethermind's Recommended CL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/poa_networks/gnosis/inventory/data/bootnodes-beacon.json)
 * [Nethermind's Recommended EL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/poa_networks/gnosis/inventory/data/bootnodes-execution.json)
 

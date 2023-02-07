@@ -38,6 +38,7 @@ import JwtGenerationPartial from '@site/docs/node/guide/server/_partials/_jwt-ge
 Place the `jwt.hex` file in the jwtsecret folder, so it can be referenced in the next steps as `../jwtsecret/jwt.hex` for the `consensus` and `execution` clients.
 :::
   </TabItem>
+  <TabItem value="ipc"></TabItem>
 </Tabs>
 
 
