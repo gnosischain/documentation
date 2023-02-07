@@ -87,7 +87,7 @@ export default config;
 </TabItem>
 <TabItem value="javascript" label="Javascript">
 
-```js {5-7,14,45,56} showLineNumbers  title="hardhat.config.js"
+```js {5-7,14,44,55} showLineNumbers  title="hardhat.config.js"
 require("@nomicfoundation/hardhat-toolbox");
 
 //https://hardhat.org/hardhat-runner/docs/config#json-rpc-based-networks
