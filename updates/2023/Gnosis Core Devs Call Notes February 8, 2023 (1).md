@@ -1,3 +1,9 @@
+---
+title: Core Devs Call - 08/02/2023
+authors: [alebanzas, armaganercan]
+tags: [CoreDevsCall, gnosis]
+---
+
 # Gnosis Core Devs Call Notes February 8, 2023
 
 ![](https://i.imgur.com/kTqmelS.png)
