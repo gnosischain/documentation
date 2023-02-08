@@ -20,35 +20,16 @@ import InstallTekuPartial from '@site/docs/node/guide/beacon/_partials/_install_
 
   </TabItem>
 
-
   <TabItem value="lodestar">
-```
-
-:::info
-
-Please refer to [Run a Beacon Node: Lodestar](../lodestar.md)
-
-:::
 
 <InstallLodestarPartial/>
 
-```mdx-code-block
   </TabItem>
 
   <TabItem value="teku">
-```
-
-:::info
-
-Please refer to [Run a Beacon Node: Teku](../teku.md)
-
-
-:::
 
 <InstallTekuPartial/>
 
-
-```mdx-code-block
   </TabItem>
 
   <TabItem value="nimbus">
