@@ -6,7 +6,7 @@ keywords: [safe app, bridge safe, gnosis safe app]
 
 # OmniBridge with Safe App
 
-OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging **ERC20s between Ethereum and Gnosisn**. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe](../using-xdai-bridge/safe.md) instructions.
+OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between xDai and Ethereum using a Multisig Wallet. The following instructions are for bridging **ERC20s between Ethereum and Gnosis**. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe](../using-xdai-bridge/safe.md) instructions.
 
 :::warning
 Each Gnosis Safe is deployed independently on Gnosis and/or Ethereum. Cross-chain safes do not share the same contract addresses (even when they have the same owners etc), so it is **important to use the Alternate Recipient Address feature** when bridging with a safe.
@@ -16,8 +16,8 @@ Each Gnosis Safe is deployed independently on Gnosis and/or Ethereum. Cross-chai
 
 1. Go to your Gnosis Safe and login and connect as you normally would.
 
-* Gnosis Safe on Gnosis: [https://gnosis-safe.io/app/gno](https://gnosis-safe.io/app/gno)
-* Gnosis Safe on Ethereum: [https://gnosis-safe.io/app/](https://gnosis-safe.io/app/)
+* Gnosis Safe on Ethereum/Gnosis: [https://gnosis-safe.io/app/](https://gnosis-safe.io/app/)    
+Select corresponding network on top right corner.
 
 2. Go to Apps -> Add Custom App
 
