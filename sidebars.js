@@ -216,17 +216,15 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '1-click Tools',
-      link: { slug: 'node/tools', type: 'generated-index', title: '1-click Tools' },
+      label: 'Guided Setup',
+      link: {type: 'doc', id: 'node/tools/README'},
+      // link: { slug: 'node/tools', type: 'generated-index', title: 'Guided Setup' },
       collapsed: false,
       items: [
         "node/tools/dappnode", 
         "node/tools/sedge", 
-        {
-          type: 'link',
-          label: 'ValidateGnosis',
-          href: 'https://www.validategnosis.com/',
-        },
+        "node/tools/stereum",
+
       ],
     },
     {
