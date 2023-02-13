@@ -72,7 +72,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 
 ### Staking Token [^1]
 
-To mimic Ethereum-Gnosis conditions, Chiado uses a "Testnet GNO" token that is isseud on Goerli and bridged over via the AMB.
+To mimic Ethereum-Gnosis conditions, Chiado uses a "Testnet GNO" token that is issued on Goerli and bridged over via the AMB.
 
 | Token                  | Address                                                                                                                             |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
