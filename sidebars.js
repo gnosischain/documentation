@@ -372,6 +372,11 @@ const sidebars = {
           label: 'QuickNode',
           href: 'https://www.quicknode.com/docs/gnosis',
         },
+        {
+          type: 'link',
+          label: 'BlockSpaces',
+          href: 'https://www.blockspaces.com/web3-infrastructure',
+        },
       ],
     },
     {
