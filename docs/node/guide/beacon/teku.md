@@ -24,7 +24,7 @@ Teku is a consensus client built to meet institutional needs and security requir
 
 :::info Download Teku
 
-Visit Teku's page on how to download Lodestar. 
+Visit Teku's page on how to download Teku. 
 
 https://docs.teku.consensys.net/en/latest/
 
@@ -53,7 +53,7 @@ Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/.
 ```shell
 # Usage
 $ teku
-  --initial-state https://checkpoint.gnosischain.com/
+  --initial-state https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
 ```
 
 :::info More about Checkpoint Sync
