@@ -229,69 +229,74 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Guide',
+      label: 'Manual Clients Setup',
       link: {type: 'doc', id: 'node/guide/README'},
       collapsed: false,
       items: [
-        'node/guide/configure-server',
-        {
-          type: 'category',
-          label: 'Step 2: Run Execution Client',
-          link: { slug: 'node/guide/execution', type: 'generated-index', title: 'Execution Clients' },
-          collapsed: true,
-          items: [
+        'node/guide/prerequisite',
+        'node/guide/running-with-docker',
+        'node/guide/running-with-cli',
+        'node/guide/running-with-systemd',
+        'node/guide/staking-for-validator'
+        // 'node/guide/configure-server',
+        // {
+        //   type: 'category',
+        //   label: 'Step 2: Run Execution Client',
+        //   link: { slug: 'node/guide/execution', type: 'generated-index', title: 'Execution Clients' },
+        //   collapsed: true,
+        //   items: [
             
-            "node/guide/execution/nethermind",
-            "node/guide/execution/besu",
-            "node/guide/execution/erigon",
-            "node/guide/execution/geth",
-            "node/guide/execution/openethereum",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Step 3: Run Beacon Node',
-          link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
-          collapsed: true,
-          items: [
-            "node/guide/beacon/lodestar",
-            "node/guide/beacon/teku",
-            "node/guide/beacon/lighthouse",
-            "node/guide/beacon/nimbus",
-            "node/guide/beacon/prysm",
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Step 4: Run Validator',
-          link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
-          collapsed: true,
-          items: [
-            {
-              type: 'category',
-              label: 'Generate Validator Keys',
-              link: {type: 'doc', id: 'node/guide/validator/generate-keys/README'},
-              collapsed: true,
-              items: [
-                'node/guide/validator/generate-keys/cli/README',
-                'node/guide/validator/generate-keys/wagyu',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Run Validator',
-              link: { slug: 'node/guide/validator/run', type: 'generated-index', title: 'Run Validator' },
-              collapsed: true,
-              items: [
-                "node/guide/validator/run/lodestar",
-                "node/guide/validator/run/teku",
-                "node/guide/validator/run/lighthouse",
-              ]
-            },
-            "node/guide/validator/deposit",
-            "node/guide/validator/verify"
-          ],
-        },
+        //     "node/guide/execution/nethermind",
+        //     "node/guide/execution/besu",
+        //     "node/guide/execution/erigon",
+        //     "node/guide/execution/geth",
+        //     "node/guide/execution/openethereum",
+        //   ],
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'Step 3: Run Beacon Node',
+        //   link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
+        //   collapsed: true,
+        //   items: [
+        //     "node/guide/beacon/lodestar",
+        //     "node/guide/beacon/teku",
+        //     "node/guide/beacon/lighthouse",
+        //     "node/guide/beacon/nimbus",
+        //     "node/guide/beacon/prysm",
+        //   ],
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'Step 4: Run Validator',
+        //   link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
+        //   collapsed: true,
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: 'Generate Validator Keys',
+        //       link: {type: 'doc', id: 'node/guide/validator/generate-keys/README'},
+        //       collapsed: true,
+        //       items: [
+        //         'node/guide/validator/generate-keys/cli/README',
+        //         'node/guide/validator/generate-keys/wagyu',
+        //       ],
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'Run Validator',
+        //       link: { slug: 'node/guide/validator/run', type: 'generated-index', title: 'Run Validator' },
+        //       collapsed: true,
+        //       items: [
+        //         "node/guide/validator/run/lodestar",
+        //         "node/guide/validator/run/teku",
+        //         "node/guide/validator/run/lighthouse",
+        //       ]
+        //     },
+          //   "node/guide/validator/deposit",
+          //   "node/guide/validator/verify"
+          // ],
+        // },
       ],
     },
     {
