@@ -10,14 +10,24 @@ import TabItem from '@theme/TabItem';
 ## Select a configuration 
 
 
-import InstallIntroPartial from '@site/docs/node/guide/_partials/_install-intro.md';
+import MultidimensionalContentControlsPartial from '@site/docs/node/guide/_partials/_multidimensional-content-controls-partial.md';
 
-<InstallIntroPartial />
+<MultidimensionalContentControlsPartial />
+
+## Introduction
+
+At a high level, we'll walk through the following flow:
+
+ 1. Configure an **execution node** using an execution-layer client.
+ 2. Configure a **beacon node** using a consensus-layer client.
+ 3. Configure a **validator** and stake GNO (optional).
+ 4. Run the clients using **docker**.
+
 
 <div className='hide-tabs'>
 
 ## Step 1: Prerequisite
-Make sure you follow the steps from [Prerequisite](prerequisite) before moving to next step.
+Make sure you follow the steps from [Prerequisite](prerequisite) and [Docker](https://docs.docker.com/get-docker/)is installed in your machine before moving to next step.
 
 ## Step 2: Docker Compose
 
@@ -52,7 +62,7 @@ Make sure you follow the steps from [Prerequisite](prerequisite) before moving t
 ]}>
 <TabItem value="gnosis">
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`, copy and paste the Docker Compose file:
+Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`, copy and paste the Docker Compose file:
 
 ```mdx-code-block
 <details>
@@ -60,7 +70,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
   <div>
 ```
 
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/gnosis/docker-compose.yml"
 version: "3"
 services:
 
@@ -78,8 +88,8 @@ services:
       - 8545 # rpc
       - 8551 # engine api
     volumes:
-      - /home/$USER/gnosis/execution:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /gnosis/execution:/data
+      - /gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     command: |
@@ -113,8 +123,8 @@ services:
       - 4000 # http
     volumes:
 // highlight-start
-      - /home/$USER/gnosis/consensus/data:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /gnosis/consensus/data:/data
+      - /gnosis/jwtsecret/jwt.hex:/jwt.hex
 // highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
@@ -167,7 +177,7 @@ services:
       - 5064:5064/tcp
     volumes:
     // highlight-next-line
-      - /home/$USER/gnosis/consensus/validators:/data/validators
+      - /gnosis/consensus/validators:/data/validators
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     logging:
@@ -188,7 +198,10 @@ networks:
 
 <TabItem value="chiado">
 
-Refer to [Running with CLI](running-with-cli)
+Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`.    
+Copy and paste the Docker compose file example as in Gnosis mainnet version, but changing network to `chiado`.    
+For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and select `chiado` network.
+
 </TabItem>
 </Tabs>
 
@@ -202,7 +215,7 @@ Refer to [Running with CLI](running-with-cli)
 ]}>
 <TabItem value="gnosis">
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`, copy and paste the Docker Compose file:
+Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`, copy and paste the Docker Compose file:
 
 ```mdx-code-block
 <details>
@@ -210,7 +223,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
   <div>
 ```
 
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/gnosis/docker-compose.yml"
 version: "3"
 services:
 
@@ -228,8 +241,8 @@ services:
       - 8545 # rpc
       - 8551 # engine api
     volumes:
-      - /home/$USER/gnosis/execution:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /gnosis/execution:/data
+      - /gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     command: |
@@ -262,8 +275,8 @@ services:
       - 4000
     volumes:
 // highlight-start
-      - /home/$USER/gnosis/consensus/data:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /gnosis/consensus/data:/data
+      - /gnosis/jwtsecret/jwt.hex:/jwt.hex
 // highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
@@ -302,8 +315,8 @@ services:
     ports:
       - 5064:5064/tcp
     volumes:
-      - /home/$USER/gnosis/consensus/validators:/data/validators
-      - /home/$USER/gnosis/consensus/keystores:/keystores
+      - /gnosis/consensus/validators:/data/validators
+      - /gnosis/consensus/keystores:/keystores
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
@@ -341,7 +354,10 @@ networks:
 </TabItem>
 <TabItem value="chiado">
 
-Refer to [Running with CLI](running-with-cli)
+Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`.    
+Copy and paste the Docker compose file example as in Gnosis mainnet version, but changing network to `chiado`.    
+For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and selecgt `chiado` network.
+
 </TabItem>
 </Tabs>
 </TabItem>
@@ -354,7 +370,7 @@ Refer to [Running with CLI](running-with-cli)
 ]}>
 <TabItem value="gnosis">
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`, copy and paste the Docker Compose file:
+Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`, copy and paste the Docker Compose file:
 
 ```mdx-code-block
 <details>
@@ -362,7 +378,7 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
   <div>
 ```
 
-```yaml title="/home/$USER/gnosis/docker-compose.yml"
+```yaml title="/gnosis/docker-compose.yml"
 version: "3"
 services:
 
@@ -380,8 +396,8 @@ services:
       - 8545 # rpc
       - 8551 # engine api
     volumes:
-      - /home/$USER/gnosis/execution:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /gnosis/execution:/data
+      - /gnosis/jwtsecret/jwt.hex:/jwt.hex
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     command: |
@@ -415,8 +431,8 @@ services:
       - 4000
     volumes:
 // highlight-start
-      - /home/$USER/gnosis/consensus:/data
-      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt.hex
+      - /gnosis/consensus:/data
+      - /gnosis/jwtsecret/jwt.hex:/jwt.hex
 // highlight-end
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
@@ -469,7 +485,7 @@ networks:
 </details>
 ```
 
-You can start running Teku beacon chain and validator with single command line. In this docker compose file, the `--validator` flags are added to run validator(s).
+You can start running Teku beacon chain and validator with single command line. In this docker compose file example, the `--validator` flags are added to run validator(s).
 
 ```
 --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
@@ -478,15 +494,15 @@ You can start running Teku beacon chain and validator with single command line. 
 --validators-graffiti=$GRAFFITI
 ```
 
-Add an `.env` file with your fee recepient (your Gnosis address) and graffiti in `/home/$USER/gnosis/.env`.
+Add an `.env` file with your fee recepient (Gnosis address) and graffiti in `gnosis/.env`.
 
-```yaml title="/home/$USER/gnosis/.env"
+```yaml title="/gnosis/.env"
 PUID=1000
 FEE_RECIPIENT=0x0000000000000000000000000000000000000000
 GRAFFITI=gnosischain/teku
 ```
 
-Add your keystores in `/home/$USER/gnosis/consensus/validator/keys/` and their password in a file `/home/$USER/gnosis/consensus/validator/passwords` to get this file structure:
+Add your keystores in `gnosis/consensus/validator/keys/` and their password in a file `gnosis/consensus/validator/passwords` to get this file structure:
 
 :::tip
 
@@ -498,7 +514,7 @@ When specifying directories, Teku expects to find identically named keystore and
 📂 gnosis
 ├── docker-compose.yml
 ├── .env
-├── 📂  jwtsecret/
+├── 📂 jwtsecret/
 ├── 📂 execution/
 └── 📂 consensus/
     ├── 📂 beacon/
@@ -517,7 +533,10 @@ When specifying directories, Teku expects to find identically named keystore and
 </TabItem>
 <TabItem value="chiado">
 
-Refer to [Running with CLI](running-with-cli)
+Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`.    
+Copy and paste the Docker compose file example as in Gnosis mainnet version, but changing network to `chiado`.    
+For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and selecgt `chiado` network.
+
 </TabItem>
 </Tabs>
 
@@ -541,18 +560,21 @@ Running on Ubuntu/MacOS is recommended, if you are using Windows, please run on 
 Start the consensus layer client listed in the compose file:
 
 ```shell
-cd /home/$USER/gnosis
+cd /gnosis
 docker-compose up -d
 ```
 
 ## Step 4: Monitor Logs
-Check your logs for each service (`execution` and `consensus`) with:
+
+Check your logs for each service (`execution`, `consensus`, or `validator`) with:
 
 import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
 
 <MonitorLogsDockerPartial />
 
+
 ## Step 5: Staking for Validator
+
 Once your node is up and running, you can deposit GNO token into Deposit contract to activate your validator.
 Follow the instruction from [Staking for Validator](staking-for-validator.md).
 
@@ -563,7 +585,7 @@ Follow the instruction from [Staking for Validator](staking-for-validator.md).
 To update, just pull the new images, then stop and restart your docker-compose file:
 
 ```shell
-cd /home/$USER/gnosis
+cd /gnosis
 docker-compose pull
 docker-compose stop
 docker-compose up -d

@@ -308,7 +308,7 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 ```bash
 teku \
     --network gnosis \
-    --data-path "/data/ethereum" \
+    --data-path "/data" \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```

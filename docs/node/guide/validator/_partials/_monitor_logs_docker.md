@@ -4,9 +4,9 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="execution" label="execution" default>
 
-```shell
-docker logs -f --tail 500 execution
-```
+  ```shell
+  docker logs -f --tail 500 execution
+  ```
 
   </TabItem>
   <TabItem value="consensus" label="consensus">

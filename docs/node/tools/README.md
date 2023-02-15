@@ -7,7 +7,7 @@ Guided setup is the recommended option for every node runner as it provided user
 
 In order to optimize your node running experience, make sure you read through [Overview](../README.md) page before you start.
 
-Understanding [what is a terminal](https://en.wikipedia.org/wiki/Computer_terminal) is recommended but not necessary.
+Understanding [what is a terminal](https://en.wikipedia.org/wiki/Computer_terminal) would be helpful but not mandatory.
 
 
 # Choose an approach
