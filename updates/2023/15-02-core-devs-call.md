@@ -1,23 +1,28 @@
+---
+title: Core Devs Call - 15/02/2023
+authors: [dapplion, armaganercan]
+tags: [CoreDevsCall, gnosis]
+---
+
 # Gnosis Core Devs Call Notes
 
 ![](https://i.imgur.com/hPdq9m8.png)
 
-Hello everyone from the weekly Gnosis Core Devs Call. This meeting is repeated on Wednesday every week. Watch on Gnosis Chain YouTube channel. ‍
+Hello everyone from the weekly Gnosis Core Devs Call. This meeting is repeated on Wednesday every week. [Watch](https://youtu.be/HjY2YjWolEY) on Gnosis Chain YouTube channel. ‍
 
 Participants: Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team and the contributors.
 
 In the focus of this meeting, opinions on the implementation of withdrawals contract were evaluated. difficulties and solutions to current problems were discussed. also shared EL and CL team updates.
 
-
-Topics 
+### Topics 
 
 * Withdrawals Contract
 * “Native” GNO and mGNO
-* Core Dev Team updates
+* Core Devs Team updates
 * Client Team Update
 * Chain Infrastructure Updates
 
-Feb 15, 2023
+### Feb 15, 2023
 
 * Withdrawals contract
   * https://www.notion.so/Shanghai-Capella-Withdrawals-13fa64960f304abbac23b73187436058
