@@ -356,7 +356,7 @@ networks:
 
 Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`.    
 Copy and paste the Docker compose file example as in Gnosis mainnet version, but changing network to `chiado`.    
-For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and selecgt `chiado` network.
+For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and select `chiado` network.
 
 </TabItem>
 </Tabs>
@@ -535,7 +535,7 @@ When specifying directories, Teku expects to find identically named keystore and
 
 Create a docker-compose file with your favorite text editor in `/gnosis/docker-compose.yml`.    
 Copy and paste the Docker compose file example as in Gnosis mainnet version, but changing network to `chiado`.    
-For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and selecgt `chiado` network.
+For other details that need to be configured, please refer to [running with cli](running-with-cli.md) and select `chiado` network.
 
 </TabItem>
 </Tabs>

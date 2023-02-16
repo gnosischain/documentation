@@ -34,8 +34,34 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 - 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
 - Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavor. 
 
+
+## What does it mean to run a node
+
+**Run Software**
+
+A ‘client’ software downloads a copy of Gnosis blockchain, verifies each block’s validity, continually updates itself with new blocks and transactions, and and assists the peers in doing so. 
+
+**With hardware**
+
+Gnosis can be run on average consumer-grade computers, with minimal hardware requirements.
+
+**While online**
+
+Running the client software while connecting to the internet continuously. If the node goes offline, it will become inactive until it reconnects to internet and syncs with latest update.
+
+:::tip Node architecture
+A node consists of [exeuction client, consensus client and validator](architecture.md). Each entity is a piece of software that communicates with each other and peers using API.
+:::
+## Why you run should a node
+
+1. Privacy & Security: Stop leaking your personal information to third party nodes
+2. Participate: The decentralization revolution starts with you.
+3. Voice your choice: Don’t give up control in the event of a fork
+4. Censorship Resistance: Ensure access when you need it, and don’t be censored.
+5. Decentralization: Resist strengthening centralized points of faillure
+6. Sovereignty: Think of running a node like the next step beyond getting your own Gnosis wallet.
+
 ## Choosing an Approach
-Refer from [Ethereum official docs](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#choosing-approach).
 
 To spin up a node, you must choose the client implementation(of both execution and consensus clients), the environment(hardawre, system), and the parameters for client settings.
 
@@ -163,7 +189,7 @@ Below are a few projects which can help you install and control clients just wit
 * [Stereum](../node/tools/stereum.md) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 * [Sedge](../node/tools/sedge.md) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
 
-### Manual setup
+### Manual clients setup
 
 The other option is to download, verify, and configure the client software manually. Even if some clients offer a graphical interface, a manual setup still requires basic skills with the terminal but offers much more versatility.
 
@@ -316,7 +342,17 @@ teku \
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Gnosis network. This requires only 1 GNO. Check out how to [deposit validators](../node/guide/validator/deposit.md).
+Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Gnosis network. This requires only 1 GNO. Check out how to [stake for validators](../node/guide/staking-for-validator.md).
 
 If you don't want to run your own node but interested in staking your GNO to earn fee, look into [liquid staking](../tools/beacon-chain/liquid-staking.md) for an overview about staking options.
 
+
+### Responsibilities for validators
+Once your node is up and running, and the validators start taking part in the attestation broadcast and block proposal, you are eligible for [receiving rewards and getting penalized](rewards-penalties.md) if any malicious behavior is acted upon.
+
+Make sure to [set up monitoring tools](../node/guide/staking-for-validator.md) for the node to ensure that the node is in a good condition and the validator not violating the consensus rule.
+
+:::info Disclaimer
+The content from this page is largely referenced from the [Ethereum doc](https://ethereum.org/en/run-a-node/). Thanks to the Ethereum team for contributing the high-quality contents.
+
+:::

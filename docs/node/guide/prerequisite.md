@@ -148,12 +148,164 @@ Gnosis clients (e.g. Erigon) tend to use large amounts of memory when syncing or
 :::
 
 ## Generate Validator Key(s) 
-This part is optional if you are not intended to run a validator for your node, though it is highly recommended.
-
-Learn about [why you should run a validator](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#adding-validators).
 
 The purpose of validator key(s) is to actively sign on-chain operations such as block proposals and attestations. 
 
+Generate your validator keys using one of the following methods:
+```mdx-code-block
+<details>
+  <summary>Command Line Tools</summary>
+  <div>
+```
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<Tabs className="tabgroup-with-label os-tabgroup" groupId="os" defaultValue="others" values={[
+    {label: 'Linux, MacOS, Arm64', value: 'others'},
+    {label: 'Windows', value: 'win'}
+]}>
+<TabItem value="others">
+
+- Copy the download link for Linux, MacOS or Arm64 package from the [validator data generation tool](https://github.com/gnosischain/validator-data-generator/releases).
+
+- Download the Validator Data Generation tool
+    ```shell
+    wget [URL_FROM_PREVIOUS_STEP]
+    ```
+
+- Unzip the downloaded file
+    ```shell
+    tar -xvf [FILE_NAME]
+    ```
+
+- Get into the folder
+    ```shell
+    cd deposit-cli-...
+    ```
+
+- Execute Validator Data Generation tool and follow the instructions.
+    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/). 
+    > Tip: add the [`--eth1_withdrawal_address`](https://github.com/gnosischain/validator-data-generator/#new-mnemonic-arguments) flag when creating your keys, **pointing to an address you control**.
+
+    - If you want to generate a new mnemonic:
+        ```shell
+        ./deposit new-mnemonic --folder ../consensus/keystores
+        ```
+    
+    - If you already have a mnemonic generated:
+        ```shell
+        ./deposit existing-mnemonic --folder ../consensus/keystores
+        ```
+        You will be asked for a `mnemonic` and `index` (key number).
+
+</TabItem>
+<TabItem value="win">
+
+- Download the Windows version of the [Validator Data Generation tool](https://github.com/gnosischain/validator-data-generator/releases) from the releases page.
+- Execute Validator Data Generation tool and follow the instructions.
+    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/)
+
+    - If you want to generate a new mnemonic:
+        ```shell
+        deposit.exe new-mnemonic --folder ../consensus/keystores
+        ```
+
+    - If you already have a mnemonic generated:
+        ```shell
+        deposit.exe existing-mnemonic --folder ../consensus/keystores
+        ```
+        You will be asked for a `mnemonic` and `index` (key number).
+
+</TabItem>
+</Tabs>
+
+- Select the language of the UI and mnemonic.
+- Choose the number of validators. Remember: 1 GNO = 1 validator. You can run many validators in the same machine.
+- 
+<Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
+    {label: 'Gnosis', value: 'gnosis'},
+    {label: 'Chiado', value: 'chiado'}
+]}>
+    <TabItem value="gnosis">Choose <code>gnosis</code> on the network/chain name.</TabItem>
+    <TabItem value="chiado">Choose <code>chiado</code> on the network/chain name.</TabItem>
+</Tabs>
+
+- Create a password to encrypt the keys.
+- The mnemonic (seed phrase) will show on screen. Save it in a secure place (idealy offline).
+- Type your mnemonic to confirm in the tool.
+- Wait untill the keys are created. Two types of files will be generated: 
+    - `deposit_data-*.json`
+    - One `keystore-*.json` per validator
+- Save the location of the generated keys, and copy them in a backup USB memory or any other secure storage.
+
+:::success
+For custom setup and more instructions, check the [Validator Data Generation tool documentation](https://github.com/gnosischain/validator-data-generator/).
+:::
+
+```mdx-code-block
+  </div>
+</details>
+```
+
+```mdx-code-block
+<details>
+  <summary>Wagyu Key Gen</summary>
+  <div>
+```
+1. Download the latest release of the Gnosis Wagyu Key Gen from [here](https://github.com/alexpeterson91/wagyu-key-gen/releases). There are binaries posted for Windows, macOS, Linux AMD64, and Linux ARM64, choose the appropriate binary for your OS, (or build from the source code if you’re so inclined).
+
+  ![DAppNode Step 3b](/img/node/dappnode-step3b.png)
+
+2. Once you have downloaded the appropriate binary for your OS and are disconnected from the internet, go ahead and open the program.  You will be given 2 options, either create a new mnemonic or import an existing mnemonic.  The GUI is very user friendly and explains all steps along the way.  Below are screenshots showing the flow for creating a new mnemonic.  If importing a mnemonic you will need to ensure you select the proper start index on the configuration page so that you don’t create duplicate keys.
+
+  ![DAppNode Step 3c](/img/node/dappnode-step3c.png)
+
+  ![DAppNode Step 3d](/img/node/dappnode-step3d.png)
+
+  ![DAppNode Step 3e](/img/node/dappnode-step3e.png)
+
+  ![DAppNode Step 3f](/img/node/dappnode-step3f.png)
+
+  You will be shown this once again before you need to confirm it by entering each word one at a time.
+
+  ![DAppNode Step 3g](/img/node/dappnode-step3g.png)
+
+  ![DAppNode Step 3h](/img/node/dappnode-step3h.png)
+
+  Fill this with the mnemonic you just created to confirm.
+
+  ![DAppNode Step 3i](/img/node/dappnode-step3i.png)
+
+  ![DAppNode Step 3j](/img/node/dappnode-step3j.png)
+
+  :::info 
+  If you are running this program to generate keys within the context of the DAppNode <\> Gnosis Chain Hardware Validator Incentive Program, make sure to generate 4 validators and to fill in the ETH1 Withdrawal Address Field with an address you have full control over.  Also make sure to choose a directory that reflects the folder where you want the files to be saved.
+  :::
+
+  ![DAppNode Step 3k](/img/node/dappnode-step3k.png)
+
+  Confirm your keystore password.
+
+  ![DAppNode Step 3l](/img/node/dappnode-step3l.png)
+
+  Select the folder where your keys should be saved.
+
+  ![DAppNode Step 3m](/img/node/dappnode-step3m.png)
+
+  ![DAppNode Step 3n](/img/node/dappnode-step3n.png)
+
+  Confirm that your keys have been generated.
+
+  ![DAppNode Step 3o](/img/node/dappnode-step3o.png)
+
+  The key generation is complete, and your keys have been saved to the folder you selected.
+```mdx-code-block
+  </div>
+</details>
+```
+
+Read more about Keys in [Beaconcha.in KB](https://kb.beaconcha.in/ethereum-2-keys).
 
 :::danger
 We highly recommend generating keystores on a safe, completely offline device.
@@ -164,3 +316,4 @@ We highly recommend generating keystores on a safe, completely offline device.
 :::tip
 Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal credentials](https://launchpad.ethereum.org/en/faq#withdrawal-credentials).
 :::
+
