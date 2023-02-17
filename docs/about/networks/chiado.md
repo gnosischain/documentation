@@ -39,21 +39,21 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ## Summary
 ### Key Infra
 
-| Network Name             | Chiado                               |
-| ------------------------ | ------------------------------------ |
-| Native (fee) token       | Testnet xDai on Chiado               |
-| Staking token            | Testnet GNO on Chiado                |
-| Chain ID                 | 10200                                |
-| Execution Layer RPC      | https://rpc.chiado.gnosis.gateway.fm |
-| Execution Layer RPC      | https://rpc.chiadochain.net          |
-| Execution Layer RPC (WS) | wss://rpc.chiadochain.net/wss        |
-| Execution Layer Explorer | https://blockscout.com/gnosis/chiado |
-| Execution Layer Explorer | https://blockscout.chiadochain.net   |
-| Consensus Layer Explorer | https://beacon.chiadochain.net       |
-| Beacon Checkpoint Sync   | https://checkpoint.chiadochain.net   |
-| Fork monitor             | https://forkmon.chiadochain.net      |
-| EthStats                 | https://ethstats.chiadochain.net     |
-| Faucet                   | https://gnosisfaucet.com             |
+| Network Name                  | Chiado                               |
+| ----------------------------- | ------------------------------------ |
+| Native (fee) token            | Testnet xDai on Chiado               |
+| Staking token                 | Testnet GNO on Chiado                |
+| Chain ID                      | 10200                                |
+| Execution Layer RPC (archive) | https://rpc.chiado.gnosis.gateway.fm |
+| Execution Layer RPC           | https://rpc.chiadochain.net          |
+| Execution Layer RPC (WS)      | wss://rpc.chiadochain.net/wss        |
+| Execution Layer Explorer      | https://blockscout.com/gnosis/chiado |
+| Execution Layer Explorer      | https://blockscout.chiadochain.net   |
+| Consensus Layer Explorer      | https://beacon.chiadochain.net       |
+| Beacon Checkpoint Sync        | https://checkpoint.chiadochain.net   |
+| Fork monitor                  | https://forkmon.chiadochain.net      |
+| EthStats                      | https://ethstats.chiadochain.net     |
+| Faucet                        | https://gnosisfaucet.com             |
 
 ### Key Parameters
 | Param             | Value                   |
@@ -72,7 +72,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 
 ### Staking Token [^1]
 
-To mimic Ethereum-Gnosis conditions, Chiado uses a "Testnet GNO" token that is isseud on Goerli and bridged over via the AMB.
+To mimic Ethereum-Gnosis conditions, Chiado uses a "Testnet GNO" token that is issued on Goerli and bridged over via the AMB.
 
 | Token                  | Address                                                                                                                             |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
