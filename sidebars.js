@@ -221,6 +221,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "node/tools/dappnode", 
+        "node/tools/eth-docker",
         "node/tools/sedge", 
         {
           type: 'link',
