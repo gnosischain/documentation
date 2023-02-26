@@ -53,7 +53,7 @@ mGNO is the staking token used by validators in the Gnosis Beacon Chain.
 
 ### How do I get mGNO?
 
-mGNO is typically wrapped behind the scenes during a deposit. If you need extra mGNO to top off a balance for example, you can access the previous swap UI at [https://gbc-deposit-old.herokuapp.com/](https://gbc-deposit-old.herokuapp.com). Go to the **Swap Tab** to swap GNO to mGNO on Gnosis.
+mGNO is typically wrapped behind the scenes during a deposit. If you need extra mGNO to top off a balance for example, you can access [https://mgno.validategnosis.com/](https://mgno.validategnosis.com/).
 
 ![](/img/node/swap-12.png)
 

@@ -222,6 +222,11 @@ const sidebars = {
       items: [
         "node/tools/dappnode", 
         "node/tools/sedge", 
+        {
+          type: 'link',
+          label: 'ValidateGnosis',
+          href: 'https://www.validategnosis.com/',
+        },
       ],
     },
     {
@@ -366,6 +371,11 @@ const sidebars = {
           type: 'link',
           label: 'QuickNode',
           href: 'https://www.quicknode.com/docs/gnosis',
+        },
+        {
+          type: 'link',
+          label: 'BlockSpaces',
+          href: 'https://www.blockspaces.com/web3-infrastructure',
         },
       ],
     },
@@ -601,6 +611,17 @@ const sidebars = {
         'tools/oracles/api3',
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
+        'tools/oracles/tellor',
+        {
+          type: 'category',
+          label: 'SupraOracles',
+          link: {type: 'doc', id: 'tools/oracles/supraoracles/README'},
+          collapsed: true,
+          items: [
+            'tools/oracles/supraoracles/vrf',
+          ],
+        },
+        
       ],
     },
     {
@@ -618,6 +639,11 @@ const sidebars = {
           type: 'link',
           label: 'Nethermind Sedge',
           href: 'https://docs.sedge.nethermind.io/',
+        },
+        {
+          type: 'link',
+          label: 'ValidateGnosis',
+          href: 'https://www.validategnosis.com/',
         },
       ],
     },

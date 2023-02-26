@@ -61,7 +61,7 @@ Now, install the `hardhat-toolbox` plugin:
 npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
 
-and add the line `require("@nomicfoundation/hardhat-toolbox");` to the top of your `hardhat.config.js` file.
+Configure [hardhat with Gnosis](../smart-contracts/hardhat.md).
 
 ## Step 2: Host NFT Art on IPFS
 
