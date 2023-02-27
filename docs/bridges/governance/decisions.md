@@ -8,6 +8,11 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Adjust limits on ETH-GC OmniBridge for WETH, WBTC, GNO, CLNY, DXD, HOPR, HAUS
+
+🗳 Justification: For risk management purposes, the daily limits for transactions from Gnosis Chain to Ethereum where raised for major assets and were adjusted to reasonable values for some smaller assets.
+
+✅ Implemented: February 23, 2023
 
 ## Add Karpatkey and remove Syncnode from the set of validators of AMB & xDAI Bridges
 
