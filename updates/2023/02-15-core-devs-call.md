@@ -55,7 +55,8 @@ In the focus of this meeting, opinions on the implementation of withdrawals cont
   * Need to work with Comms team on instruction guides for community
     * 0x00 addresses can’t withdraw, so these addresses would need to be converted
       * [ ] Do we need to build tooling for this?
-      * Prysm has something for this -                         * [Check Ethereum Withdrawals FAQ](https://notes.ethereum.org/@launchpad/withdrawals-faq ) 
+      * Prysm has something for this -                         
+      * [Check Ethereum Withdrawals FAQ](https://notes.ethereum.org/@launchpad/withdrawals-faq ) 
     * 16 validators withdrawals can be processed per block
       * Dapplion: More withdrawals per block = higher load on processing. Could EL devs benchmark the cost of a withdrawal in gnosis?
       * Cost of withdrawal is more expensive in Gnosis because withdrawals are implemented in EL
@@ -67,7 +68,7 @@ In the focus of this meeting, opinions on the implementation of withdrawals cont
      * Would be putting the burn promise in code by only having 3m tokens on Gnosis side
    * Need to upgrade Bridge Contracts (?)
      * Omnibridge cannot mint addition GNO.gnosis, needs custom code to pull from 3mn minted
-     * GNO.ethereum <> GNO.gnosis (from 3mn) thru 3rd party bridges
+     * GNO.ethereum &lt;&gt; GNO.gnosis (from 3mn) thru 3rd party bridges
    * What’s the current plan of releasing GNO rewards on beacon chain?
      * Right now we can just increase the storage slot in the GNO smart contract on the execution layer side so the token doesn’t need to be upgraded for minting
        * Igor: That has to be done on the execution layer anyways
