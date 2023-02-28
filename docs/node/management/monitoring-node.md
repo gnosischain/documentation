@@ -14,9 +14,11 @@ To monitor the network, options include ethstats, forkmon, beacon.gnosischain, a
 **Grafana** is a data visualisation tool that allows user to create their own dashboard from different data sources, including Prometheus.    
 **Node exporter** is a monitoring tool that exposes your hardware and OS metrics. It can provide your system metrics to Prometheus.
 
+![Prometheus-Grafana-NodeExporter](../../../static/img/node/prometheus-grafana.png)
+
 To set up these tools, please refer the exellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/eth-educators/ethstaker-guides/blob/main/monitoring.md). 
 
-You may also refer the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)for best monitoring practices.
+You may also refer the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)and [CoinCashew's guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-i-installation/monitoring-your-validator-with-grafana-and-prometheus) for best monitoring practices.
 
 
 In order to expose your node's clients data to Prometheus, please ensure the execution or consensus client has enabled the appropriate metrics flag.
@@ -66,7 +68,17 @@ https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
 
 </Tabs>
 
+```mdx-code-block
+<details>
+  <summary>Setup tutorial</summary>
+  <div>
+```
+TODO
 
+```mdx-code-block
+  </div>
+</details>
+```
 
 ## Monitoring the network
 
@@ -96,10 +108,10 @@ Source: https://github.com/ethereum/nodemonitor
 [Gnosisscan](https://gnosisscan.io/) provides data about blocks, transactions, validator's reward on Execution Layer, etc.
 
 
-**Blockscout**    
+**Blockscout**
 [Blockscout](https://blockscout.com/xdai/mainnet) is another blockexplorer similar to Gnosisscan.
 
-**beacon.gnosischain**    
+**beacon.gnosischain**
 [beacon.gnosischain](https://beacon.gnosischain.com/) provides insight on consensus layer sucha as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
 
 
