@@ -165,9 +165,9 @@ If you encounter an issue claiming your incentive program validators, such as an
    `curl https://installer.dappnode.io | sudo sh`
 5. Once the installation has finished, reboot your machine:
    `sudo shutdown -r now`
-6. DAppNode will try to automatically prepare for the first access. DAppNode's official documentation explains how to connect using the [four supported connection methods](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/script#post-installation).
+6. DAppNode will try to automatically prepare for the first access. DAppNode's official documentation explains how to connect using the [four supported connection methods](https://docs.dappnode.io/user/quick-start/first-steps).
 7. Once you have successfully connected to DAppNode, follow the [Using DAppNode](#install-on-dappnode) steps above.
 
 Check DAppNode documentation:
 - [Hardware Minimum and Recommended Specs](https://docs.dappnode.io/get-started/installation/custom-hardware/hardware-recommendations)
-- [Installation Overview](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview)
+- [Installation Overview](https://docs.dappnode.io/user/quick-start/first-steps)
