@@ -60,13 +60,10 @@ jobs:
           GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
         run: 
         echo "ALGOLIA_ID=${{ secrets.ALGOLIA_ID }}" >> .env
-        run: 
         echo "ALGOLIA_INDEX=${{ secrets.ALGOLIA_INDEX }}" >> .env
-        run:
         echo "ALGOLIA_KEY=${{ secrets.ALGOLIA_KEY }}" >> .env
-        run:
         echo "GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}" >> .env
-        run: yarn build
+        yarn build
 
       - name: Build Release App
         if: github.ref == 'refs/heads/release'
