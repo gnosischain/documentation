@@ -16,3 +16,8 @@ While the exact list of withdrawal steps is still unknown, it will likely includ
 2. Wait for a reasonable delay (few hours) due to protocol-level delays and finalizations.
 3. Send a withdrawal request (ie a signed message in the beacon chain or an execution layer transaction with the exit proof).
 4. Pull your validator balance from the execution layer by submitting a transaction to the system contract.
+
+[TODO]
+1. Withdrawal action for stakers
+2. How to check withdrawal credentials, how to chagne WC
+3. withdrawal method
