@@ -48,7 +48,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Overview',
-      link: {type: 'doc', id: 'specs/README'},
+      link: {type: 'doc', id: 'about/README'},
       collapsed: false,
       items: [
         { type: 'link', label: 'Updates', href: '/updates', },
@@ -221,6 +221,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "node/tools/dappnode", 
+        "node/tools/eth-docker",
         "node/tools/sedge", 
         {
           type: 'link',
