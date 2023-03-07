@@ -58,10 +58,10 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 </TabItem>
 <TabItem value="goerli" label="Goerli">
 </TabItem>
-
+TODO
 <TabItem value="chiado" label="Chiado">
 </TabItem>
-
+TODO
 </Tabs>
 
 
