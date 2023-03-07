@@ -57,7 +57,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.scss'),
         },
         gtag: {
-          trackingID:process.env.GOOGLE_ANALYTICS_ID ?? 'G-YVPQSCP6S7', //staging by default
+          trackingID: process.env.GOOGLE_ANALYTICS_ID ?? 'G-YVPQSCP6S7', //staging by default
           anonymizeIP: true,
         },
       }),
@@ -231,15 +231,7 @@ const config = {
             { to: '/updates/2022/12/05/bridges-pause', from: '/updates/202212-bridges-pause' },
           ]
         }
-      ],
-
-      [
-        "docusaurus2-dotenv",
-        {
-          systemvars: true,
-        },
-      ],
-  
+      ]
     ],
 };
 
