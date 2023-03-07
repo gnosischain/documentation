@@ -7,7 +7,8 @@ keywords: [optimism, gnosis optimism]
 # Optimism on Gnosis
 
 :::danger
-This is an experimental implementation. Use at your own risk. Deposited funds may not be withdrawable.
+Gnosis will be sunsetting this legacy experimental deployment of Optimism on Gnosis end-March 2023.
+Do NOT deposit funds, they will not be withdrawable.
 :::
 
 An Optimism implementation is deployed on Gnosis. Gnosis functions as the L1 (akin to Ethereum) and Optimism on Gnosis as the L2.
@@ -28,7 +29,7 @@ Deployment processes are similar to using [Optimism with Ethereum](https://commu
 ## Make a Deposit
 
 :::danger
-This is an experimental implementation. Use at your own risk. Deposited funds may not be withdrawable.
+Do NOT deposit funds, they will not be withdrawable.
 :::
 
 Deposits are initiated through the [Proxy\_\_OVM\_L1StandardBridge contract](https://blockscout.com/xdai/mainnet/address/0x184a119d4C1D08A459FCfBFe7ECc051c163B4c80/transactions) on the Gnosis Chain with the **`depositETH`** method and the following inputs:
