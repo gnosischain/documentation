@@ -231,7 +231,15 @@ const config = {
             { to: '/updates/2022/12/05/bridges-pause', from: '/updates/202212-bridges-pause' },
           ]
         }
-      ]
+      ],
+
+      [
+        "docusaurus2-dotenv",
+        {
+          systemvars: true,
+        },
+      ],
+  
     ],
 };
 
