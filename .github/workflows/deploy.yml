@@ -59,6 +59,7 @@ jobs:
           ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
         run: 
+        nano .env
         echo "ALGOLIA_ID=${{ secrets.ALGOLIA_ID }}" >> .env
         echo "ALGOLIA_INDEX=${{ secrets.ALGOLIA_INDEX }}" >> .env
         echo "ALGOLIA_KEY=${{ secrets.ALGOLIA_KEY }}" >> .env
