@@ -58,12 +58,12 @@ jobs:
           ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
           ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
-        run: 
+        run: |
         touch .env
-        echo "ALGOLIA_ID=${{ secrets.ALGOLIA_ID }}" >> .env
-        echo "ALGOLIA_INDEX=${{ secrets.ALGOLIA_INDEX }}" >> .env
-        echo "ALGOLIA_KEY=${{ secrets.ALGOLIA_KEY }}" >> .env
-        echo "GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}" >> .env
+        echo ALGOLIA_ID=${{ secrets.ALGOLIA_ID }} >> .env
+        echo ALGOLIA_INDEX=${{ secrets.ALGOLIA_INDEX }} >> .env
+        echo ALGOLIA_KEY=${{ secrets.ALGOLIA_KEY }} >> .env
+        echo GOOGLE_ANALYTICS_ID=${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }} >> .env
         yarn build
 
       - name: Build Release App
