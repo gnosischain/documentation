@@ -6,4 +6,3 @@ build
 yarn.lock
 .obsidian
 docs/.obsidian
-.env
