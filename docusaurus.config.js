@@ -57,7 +57,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.scss'),
         },
         gtag: {
-          trackingID:'G-YVPQSCP6S7', //staging by default
+          trackingID:process.env.GOOGLE_ANALYTICS_ID ?? 'G-YVPQSCP6S7', //staging by default
           anonymizeIP: true,
         },
       }),
