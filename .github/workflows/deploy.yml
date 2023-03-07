@@ -66,11 +66,11 @@ jobs:
 
       - name: Build App
         if: github.ref != 'refs/heads/release'
-        env:
-          ALGOLIA_ID: ${{ secrets.ALGOLIA_ID }}
-          ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
-          ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
-          GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
+        # env:
+        #   ALGOLIA_ID: ${{ secrets.ALGOLIA_ID }}
+        #   ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
+        #   ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
+        #   GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
         run: yarn build
           
 
