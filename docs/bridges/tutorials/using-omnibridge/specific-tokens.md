@@ -11,7 +11,7 @@ This set of instructions demonstrates how the Wrapped ETH can be bridged from Gn
 This instruction assumes that you have access to BlockScout and Etherscan. You also must have a bit of xDai to pay for gas fees for a bridge transaction on Gnosis chain. 
 ## Bridge wEth on Gnosis to Native Eth on Ethereum
 1. Change the chain to Gnosis in MetaMask
-2. Find the wEth token in [BlockScout](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/, and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
+2. Find the wEth token in [BlockScout](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/token-transfers/), and go to the [Write Proxy](https://blockscout.com/xdai/mainnet/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/write-proxy) tab.
 ![](/img/bridges/omni-bridge-to-native-eth1.png)
 3. Scroll to the `transferAndCall` method: 
 ![](/img/bridges/omni-bridge-to-native-eth2.png)
@@ -25,7 +25,7 @@ This instruction assumes that you have access to BlockScout and Etherscan. You a
 Click __Write__ to send the transaction.
 5. When the transaction is included in the block, click on the transaction link to get the transaction details
 ![](/img/bridges/omni-bridge-to-native-eth3.png)
-6. Use the "View in ALM App" link on the page with transaction details, or use the transaction hash and go the the [ALM site](https://alm-xdai.herokuapp.com/) and enter it manually to track status of the transfer and finalize bridge operations if required.   
+6. Use the "View in ALM App" link on the page with transaction details, or use the transaction hash and go the the [ALM site](https://alm-bridge-monitor.gnosischain.com/) and enter it manually to track status of the transfer and finalize bridge operations if required.   
 ![](/img/bridges/omni-bridge-to-native-eth4.png)
 7. Eventually, when an executing transaction on the Mainnet is processed, the WETH will be unlocked and unwrapped to ETH native tokens:
 ![](/img/bridges/omni-bridge-to-native-eth5.png)

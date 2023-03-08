@@ -32,7 +32,7 @@ These screenshots were taken back when Basic Attention Token (BAT) was first bri
 ![](/img/bridges/omni-tokentransfer3.jpg)
 4. Press Confirm to approve the transfer and pay the gas fees. These may be expensive depending on network congestion. We recommend [checking current gas prices](https://ethgas.watch/). Because of high fees, it also may make sense to bridge over a larger amount of tokens in a single transaction rather than several smaller ones.
 ![](/img/bridges/omni-tokentransfer4.jpg)
-5. The bridge transaction will begin to process. While you are waiting for block confirmations, you can click on the ALM monitor link to view progress of your transfer, or you can view the [ALM monitor here](https://alm-xdai.herokuapp.com/) and look up your transaction by the transaction hash.
+5. The bridge transaction will begin to process. While you are waiting for block confirmations, you can click on the ALM monitor link to view progress of your transfer, or you can view the [ALM monitor here](https://alm-bridge-monitor.gnosischain.com/) and look up your transaction by the transaction hash.
 ![](/img/bridges/omni-tokentransfer5.jpg)  
 Viewing the ALM app:  
 ![](/img/bridges/omni-tokentransfer6.jpg)
