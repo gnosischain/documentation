@@ -52,6 +52,11 @@ For a message/tokens to be relayed to another network, bridge validators need to
 
 <TabItem value="bnb-gno" label="Binance Smart Chain <-> Gnosis">
 
+:::danger Note
+BNB<->Gnosis is deprecating. Please check out the [notice](../tutorials/using-omnibridge/bnb-chain.md).
+
+:::
+
 | GC Address                                                                                                                | Organization Name |
 |------------------------------------------------------------------------------------------------------------------------|-------------------|
 | [gno:0x459a3bd49f1ff109bc90b76125533699aaaaf9a6](https://gnosisscan.io/address/0x459a3bd49f1ff109bc90b76125533699aaaaf9a6) | Protofire         |
