@@ -1,8 +1,14 @@
+---
+title: Core Devs Call - 08/03/2023
+authors: [dapplion, armaganercan]
+tags: [CoreDevsCall, gnosis]
+---
+
 # Gnosis Core Devs Call Notes
 
 ![](https://i.imgur.com/VYvhOTj.png)
 
-Greetings everyone, and welcome to the weekly Gnosis Core Devs Call. Just a quick reminder that this meeting takes place every Wednesday.
+Greetings everyone, and welcome to the weekly Gnosis Core Devs Call. Just a quick reminder that this meeting takes place every Wednesday. [Watch](https://youtu.be/1dy8ZhAxqcE) on Gnosis Chain YouTube channel. ‍
 
 Participants: Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team and the contributors.
 
