@@ -29,7 +29,7 @@ The TokenBridge project has been releasing instructions and tools for devs build
 
 * [Deploy Contracts for cross-chain token transfers (ERC20/677/827)](https://docs.tokenbridge.net/eth-xdai-amb-bridge/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension)
 * [UI for moving tokens cross-chain](https://docs.tokenbridge.net/eth-xdai-amb-bridge/ui-to-transfer-tokens-through-amb)
-* [AMB Live Monitoring](https://alm-xdai.herokuapp.com/)
+* [AMB Live Monitoring](https://alm-bridge-monitor.gnosischain.com/)
 
 ### ✅ Uniswap v1 Fork on xDai
 

@@ -35,4 +35,4 @@ Click __Write__ to send the transaction.
 2. Scroll to the `wrapAndRelayTokens` method and enter the amount of ETH to bridge to Gnosis chain:
 ![](/img/bridges/omni-bridge-from-native-eth1.png)
 Click __Write__ to send the transaction
-3. When the transaction is included in the block, press the "View you transaction" button to get the transaction hash which can be used in the [AMB Live Monitoring app](https://alm-xdai.herokuapp.com/) to track the status of the transaction.
+3. When the transaction is included in the block, press the "View you transaction" button to get the transaction hash which can be used in the [AMB Live Monitoring app](https://alm-bridge-monitor.gnosischain.com/) to track the status of the transaction.
