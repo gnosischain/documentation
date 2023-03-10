@@ -48,7 +48,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Overview',
-      link: {type: 'doc', id: 'about/README'},
+      link: {type: 'doc', id: 'specs/README'},
       collapsed: false,
       items: [
         { type: 'link', label: 'Updates', href: '/updates', },
