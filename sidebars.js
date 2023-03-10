@@ -150,6 +150,7 @@ const sidebars = {
         "developers/smart-contracts/hardhat",
         "developers/smart-contracts/remix",
         "developers/smart-contracts/foundry",
+        "developers/smart-contracts/cookbook"
       ],
     },
     {
