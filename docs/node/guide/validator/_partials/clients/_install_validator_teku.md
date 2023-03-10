@@ -47,11 +47,14 @@ cd teku-${version}
 
 ```shell
 ./bin/teku   \
+  --network=gnosis \
   --ee-endpoint=http://localhost:8551   \
-  --ee-jwt-secret-file=../../jwtsecret/jwt.hex \
+# highlight-next-line
+  --ee-jwt-secret-file=${PATH_TO_JWT_SECRET} \
   --metrics-enabled=true    \
   --rest-api-enabled=true   \
 # highlight-start
+  --initial-state=${checkpoint url} \
   --validators-proposer-default-fee-recipient=${Fee Recipient Address}  \
   --validator-keys=${path to key file}:${path to password file}
 # highlight-end
@@ -61,15 +64,16 @@ If you wish to run validator only, run the following command:
 
 ```shell
 ./bin/teku validator-client \
+  --network=gnosis \
 # highlight-start
-    --beacon-node-api-endpoint=${endpoint} \
-    --validator-keys=${path to key file}:${path to password file}
+  --beacon-node-api-endpoint=${endpoint} \
+  --validator-keys=${path to key file}:${path to password file}
 # highlight-end
 ```
 
 Replace `$FEE_RECIPIENT` with your fee recipient address, `${path to key file}` and `{path to password file}`with the location where `keystores- *.json` and `keystore- *.txt` are stored, and `${endpoint}` with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051). Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).
 
-
+Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
 
 </TabItem>
 <TabItem value="chiado">

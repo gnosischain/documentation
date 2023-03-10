@@ -10,7 +10,7 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 
 ## Overview
 
-At [Block 6,306,357](https://gnosisscan.io/block/6,306,357), the Gnosis Execution Layer network successfully [merged](/specs/hard-forks/merge) with the Consensus Layer network.
+At [Block 6,306,357](https://beacon.gnosischain.com/block/6306357), the Gnosis Execution Layer network successfully [merged](/specs/hard-forks/merge) with the Consensus Layer network.
 
 <TwitterTweetEmbed 
     tweetId={'1600928409563336706'} 

@@ -5,6 +5,28 @@ keywords: [bsc, omnibridge, tokens, transfer]
 ---
 # BNB Chain
 
+:::danger NOTE
+Dear Gnosis Chain community,
+
+After careful consideration and evaluation, we have decided that we will be decommissioning the native bridge between Binance Chain (BNB) and Gnosis Chain (GC).This decision is based on a few key factors which include low traffic, assets are non-native to each chain, and that there are alternate solutions that allow for this type of bridging.
+
+Following this announcement we will be adhering to these steps to slowly decommission this bridge.
+
+Step 1. Disabling the incoming transactions BNB -> GC in 21 days following this announcement ( March 27th 2023)
+
+Note: Users can still bridge from GC -> BNB
+
+Step 2. Disabling both directions and the full bridge decommission 90 days after this announcement (June 5th 2023)
+
+If there are any users or teams that are building applications on top of the BNB-GC AMB, they should contact us ASAP by creating a 
+🎟-[support-ticket](https://discord.gg/gnosischain) 
+
+
+Thank you,
+
+Gnosis Chain Team
+:::
+
 ### Using Omnibridge to transfer to BNB Chain
 The Binance Smart Chain (BSC) Omnibridge allows users to move ERC20 tokens between Gnosis Chain and BSC. It is available as a dropdown item from the OmniBridge UI in the top right corner.
 :::info

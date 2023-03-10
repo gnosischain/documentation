@@ -150,6 +150,7 @@ const sidebars = {
         "developers/smart-contracts/hardhat",
         "developers/smart-contracts/remix",
         "developers/smart-contracts/foundry",
+        "developers/smart-contracts/cookbook"
       ],
     },
     {
@@ -221,6 +222,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "node/tools/dappnode", 
+        "node/tools/eth-docker",
         "node/tools/sedge", 
         {
           type: 'link',

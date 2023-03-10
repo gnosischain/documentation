@@ -1,6 +1,6 @@
 ---
 title: The Merge
-description: The current Gnosis execution layer will merge with the Gnosis Beacon Chain, in a process similar to the Ethereum merge
+description: The Gnosis execution layer has merged with the Gnosis Beacon Chain, in a process similar to the Ethereum merge
 keywords: [gnosis merge, gnosis hardfork, wen merge]
 ---
 
@@ -15,9 +15,9 @@ Hard forks are backward-incompatible upgrades used to introduce new functionalit
 
 # The Merge
 
-In early December 2022, Gnosis will undergo the Merge. The current Gnosis execution layer (formerly xDai) will merge with the [Gnosis Beacon Chain](../gbc/README.md), in a process similar to the [Ethereum merge](https://ethereum.org/en/upgrades/merge/). 
+In early December 2022, Gnosis underwent the Merge. The Gnosis execution layer (formerly xDai) has been merged with the [Gnosis Beacon Chain](../gbc/README.md), in a process similar to the [Ethereum merge](https://ethereum.org/en/upgrades/merge/). 
 
-The Merge will also represent a important shift for Gnosis, replacing the legacy [Proof-of-Authority consensus](../consensus/aura.md) with the open and unpermissioned [Beacon Chain Consensus](../gbc/README.md). This allows Gnosis to transition to a fully decentralized and permissionless proof-of-stake network. 
+The Merge represents an important shift for Gnosis, replacing the legacy [Proof-of-Authority consensus](../consensus/aura.md) with the open and unpermissioned [Beacon Chain Consensus](../gbc/README.md). This allows Gnosis to transition to a fully decentralized and permissionless proof-of-stake network. 
 
 The Merge is also another step in Gnosis' journey together with Ethereum. From the early days of xDai at ETHDenver, Gnosis has had a role in Ethereum's journey. With the adoption of Ethereum's consensus mechanism, Gnosis will continue to contribute to Ethereum's growth as an experimental chain, where newcomers, experiments and ideas are welcome. 
 
@@ -39,11 +39,11 @@ With the 5th Dec 2022 target in mind, the Core Devs have proposed the following 
 8626000000000000000000058750000000000000000000
 ```
 
-This number is not chosen randomly: to pay tribute to the Ethereum Merge, Core Devs have proposed to include [Ethereum's TTD](https://notes.ethereum.org/@MarioHavel/merge-ttd), `58750000000000000000000`, in the Gnosis Merge TTD. 
+This number was not chosen randomly: to pay tribute to the Ethereum Merge, Core Devs have proposed to include [Ethereum's TTD](https://notes.ethereum.org/@MarioHavel/merge-ttd), `58750000000000000000000`, in the Gnosis Merge TTD. 
 
 ### Bellatrix
 
-Similar to Ethereum, the Gnosis Beacon Chain will have a [Bellatrix epoch](https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement) that will occur prior to the Merge. 
+Similar to Ethereum, the Gnosis Beacon Chain have had a [Bellatrix epoch](https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement) that occurred prior to the Merge. 
 
 :::danger
 
@@ -67,7 +67,8 @@ The Bellatrix upgrade is a hard fork. Nodes that aren't upgraded when the upgrad
 
 :::caution
 
-Core Devs are in the process of releasing merge-ready Client Images. Announcements will be made in the #validators channel in Gnosis Discord and on Twitter.
+Merge-ready clients releases can be downloaded from the link below. Please check and download the latest version of release for your clients.
+Latest announcements will be made in the #validators channel in Gnosis Discord and on Twitter.
 
 :::
 
@@ -76,6 +77,7 @@ Core Devs are in the process of releasing merge-ready Client Images. Announcemen
 | Client     | Merge ready release | Status                                                             |
 | ---------- | ------------------- | ------------------------------------------------------------------ |
 | Nethermind | v1.14.6             | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6 |
+| Erigon     | TBA                 | ⌛ Coming soon  |
 
 **CL client**
 

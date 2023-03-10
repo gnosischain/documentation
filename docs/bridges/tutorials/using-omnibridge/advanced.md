@@ -14,7 +14,7 @@ The default bridge mode sends funds to the same address across chains, as the sa
 ![](/img/bridges/omni-alternate-receiver.gif) 
   
 :::info
-Claims on the receiving chain can be completed using any address with enough funds. Copy the tx hash from the first transaction (it will be linked during tx processing or when complete in the history tab of the bridge. You can also find in your MetaMask wallet) and paste into https://alm-xdai.herokuapp.com/ to search and execute.
+Claims on the receiving chain can be completed using any address with enough funds. Copy the tx hash from the first transaction (it will be linked during tx processing or when complete in the history tab of the bridge. You can also find in your MetaMask wallet) and paste into https://alm-bridge-monitor.gnosischain.com/ to search and execute.
 :::
 
 

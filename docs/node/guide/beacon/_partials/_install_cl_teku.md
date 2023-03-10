@@ -64,13 +64,19 @@ You can run both beacon and validator with a single command. If you wish to run 
 
 - Execute beacon node(Optional)
 
-```
+```shell
 ./bin/teku \
-    --ee-endpoint=http://localhost:8551          \
-    --ee-jwt-secret-file=../../jwtsecret/jwt.hex   \
-    --metrics-enabled=true                       \
-    --rest-api-enabled=true
+    --network=gnosis    \
+    --ee-endpoint=http://localhost:8551 \
+# highlight-next-line
+    --ee-jwt-secret-file=${PATH_TO_JWT_SECRET}   \
+    --metrics-enabled=true  \
+    --rest-api-enabled=true \
+# highlight-next-line
+    --initial-state=${checkpoint url} \
 ```
+
+Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
 
 </TabItem>
 
@@ -126,13 +132,20 @@ You can run both beacon and validator with a single command. If you wish to run 
 
 - Execute beacon node(Optional)
 
-```
+
+```shell
 ./bin/teku \
-    --ee-endpoint=http://localhost:8551          \
-    --ee-jwt-secret-file=../jwtsecret/jwt.hex   \
-    --metrics-enabled=true                       \
-    --rest-api-enabled=true
+    --network=gnosis    \
+    --ee-endpoint=http://localhost:8551 \
+# highlight-next-line
+    --ee-jwt-secret-file=${PATH_TO_JWT_SECRET}   \
+    --metrics-enabled=true  \
+    --rest-api-enabled=true \
+# highlight-next-line
+    --initial-state=${checkpoint url} \
 ```
+
+Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
 
 </TabItem>
 </Tabs>

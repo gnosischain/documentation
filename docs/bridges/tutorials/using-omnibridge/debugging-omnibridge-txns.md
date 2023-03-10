@@ -6,7 +6,7 @@ keywords: [amb debug, developer, debugging transactions, bridge transactions]
 
 # Debugging OmniBridge Transactions
 :::info
-This page is mostly for application developers, if you sent tokens through the OmniBridge and would like to get the status whether the tokens were sent successfully or not, please use [AMB Live Monitoring application](https://alm-xdai.herokuapp.com/) instead.
+This page is mostly for application developers, if you sent tokens through the OmniBridge and would like to get the status whether the tokens were sent successfully or not, please use [AMB Live Monitoring application](https://alm-bridge-monitor.gnosischain.com/) instead.
 :::
 Firstly, the [Foreign Arbitrary Message Bridge contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e) which is used by the OmniBridge, emits the `UserRequestForAffirmation` event as part of the a deposit request made by user (on the Ethereum side).  
 ```
