@@ -14,6 +14,8 @@ Participants: Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs
 
 At this meeting, the team talked about xDAI's base fee and options are being evaluated. Research is underway on Home stakers affected by ISP bandwidth limitation. Also shared updates from CL and EL teams.
 
+Watch on [Gnosis Chain Youtube](https://www.youtube.com/watch?v=do-slVs50jU)
+
 Mar 15, 2023
 
 # Client Team Updates
