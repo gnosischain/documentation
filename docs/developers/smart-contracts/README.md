@@ -18,6 +18,8 @@ Deploying your Ethereum Dapp on Gnosis only takes you a few steps:
 The default network will be changed from `xdai` to `gnosis` shortly in some tools and ecosystem integrations
 :::
 
+You may also use smart contract marketplace [Cookbook](https://www.cookbook.dev/) to deploy smart contract by few clicks.
+
 ## Start building!
 
 Great development tools are compatible with Gnosis
@@ -27,4 +29,5 @@ Great development tools are compatible with Gnosis
 <box href="/developers/smart-contracts/foundry" title="Foundry" />
 <box href="/developers/smart-contracts/truffle" title="Truffle" />
 <box href="/developers/smart-contracts/hardhat" title="Hardhat" />
+<box href="developers/smart-contracts/cookbook" title="Cookbook" />
 </div>

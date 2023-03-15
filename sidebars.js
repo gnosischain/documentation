@@ -48,7 +48,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Overview',
-      link: {type: 'doc', id: 'about/README'},
+      link: {type: 'doc', id: 'specs/README'},
       collapsed: false,
       items: [
         { type: 'link', label: 'Updates', href: '/updates', },
@@ -150,6 +150,7 @@ const sidebars = {
         "developers/smart-contracts/hardhat",
         "developers/smart-contracts/remix",
         "developers/smart-contracts/foundry",
+        "developers/smart-contracts/cookbook"
       ],
     },
     {
