@@ -30,15 +30,15 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
 <Tabs className="tabgroup-with-label el-tabgroup" groupId="execution-clients" defaultValue="nethermind" values={[
   {label: 'Execution client:', value: 'label'},
   {label: 'Nethermind', value: 'nethermind'},
-  {label: 'Besu', value: 'besu'},
   {label: 'Erigon', value: 'erigon'},
-  {label: 'Geth', value: 'geth'}
+  {label: 'Besu', value: 'besu'},
+  {label: 'Geth', value: 'geth'},
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="nethermind"></TabItem>
-  <TabItem className="unclickable-element" value="besu"></TabItem>
-  <TabItem className="unclickable-element" value="erigon"></TabItem>
-  <TabItem className="unclickable-element" value="geth"></TabItem>
+  <TabItem value="erigon"></TabItem>
+  <TabItem value="besu"></TabItem>
+  <TabItem value="geth"></TabItem>
 </Tabs>
 
 <Tabs className="tabgroup-with-label cl-tabgroup" groupId="consensus-clients" defaultValue="lighthouse" values={[
