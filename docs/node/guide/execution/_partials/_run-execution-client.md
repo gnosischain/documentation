@@ -10,6 +10,8 @@ import TabItem from '@theme/TabItem';
   <TabItem value="nethermind">
 
 import InstallNethermindPartial from '@site/docs/node/guide/execution/_partials/_install_el_nethermind.md';
+import InstallErigonPartial from '@site/docs/node/guide/execution/_partials/_install_el_erigon.md';
+
 
 <InstallNethermindPartial />
 
@@ -20,7 +22,7 @@ import InstallNethermindPartial from '@site/docs/node/guide/execution/_partials/
   </TabItem>
 
   <TabItem value="erigon">
-  <p>Erigon is not yet supported, use <a href="#select-a-configuration">Nethermind</a> instead.</p>
+<InstallErigonPartial/>
   </TabItem>
 
   <TabItem value="geth">

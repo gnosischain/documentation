@@ -9,5 +9,13 @@ Formerly TurboGeth, Erigon is an Ethereum client built to enable performance opt
 Repository: [https://github.com/ledgerwatch/erigon](https://github.com/ledgerwatch/erigon) 
 
 :::note
-Erigon is currently working on a Gnosis implementation, please, use [Nethermind](./nethermind.md)
+Erigon is not ready for production use, please consider switching to [Nethermind](./nethermind.md)
 :::
+
+## Option 1: Using Docker
+
+WIP
+
+## Option 2: Using system process
+
+Refer to [Erigon Guide](../README.md#step-2-run-an-execution-client).
