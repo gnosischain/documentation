@@ -7,12 +7,12 @@ keywords: [gnosis bridge, xdai bridge, omni bridge, hop, connext, celer, nomad, 
 - [Connext Bridge](https://bridge.connext.network/)
 - [Hop](https://app.hop.exchange/)
 - [Celer Bridge](https://cbridge.celer.network/#/transfer)
-- [Nomad Bridge](https://app.nomad.xyz/) (coming soon)
+- [Anyswap](https://anyswap.exchange/)
 
 ## Aggregators
 
-- [TransferTo](https://transferto.xyz/swap) (by Li.Fi)
-- [Anyswap](https://anyswap.exchange/)
+- [Jumper](https://jumper.exchange/) (by Li.Fi)
+- [Rango](https://app.rango.exchange/)
 
 ## NFT Bridges
 
