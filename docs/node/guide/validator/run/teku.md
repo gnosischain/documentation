@@ -10,9 +10,7 @@ The Validator requires a Consensus client (also known as Beacon Node) in order t
 
 ## Option 1: Run as System Process {#system-process}
 
-:::info
-In progress
-:::
+Refer to [Guide](../../README.md#step-4-run-a-validator)
 
 ## Option 2: Run using Docker {#docker}
 
