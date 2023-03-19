@@ -19,7 +19,8 @@ Developers can use [Airnode](https://docs.api3.org/airnode/) to request off-chai
 
 An on-chain smart contract makes a request in the [RRP (Request Response Protocol)](https://docs.api3.org/airnode/v0.10/concepts/) contract (`AirnodeRrpV0.sol`) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
 
-![API3 Remix deploy](/img/tools/api3/airnode1.png)
+<!-- ![API3 Remix deploy](/img/tools/api3/airnode1.png) -->
+<img src="/img/tools/api3/airnode1.png" width="600"/>
 
 ## Requesting off-chain data by calling an Airnode
 Requesting off-chain data essentially involves triggering an Airnode and getting its response through your smart contract. The smart contract in this case would be the requester contract which will make a request to the desired off-chain Airnode and then capture its response.
@@ -29,10 +30,10 @@ The requester calling an Airnode primarily focuses on two tasks:
 - Make the request
 - Accept and decode the response
 
-![API3 Remix deploy](/img/tools/api3/airnode2.png)
+<img src="/img/tools/api3/airnode2.png" width="600"/>
+<br></br>
 
-
-Here is an example of a basic requester contract to request data from an Airnode:
+**Here is an example of a basic requester contract to request data from an Airnode:**
 
 ```solidity
 pragma solidity 0.8.9;
@@ -120,9 +121,28 @@ Sponsors should not fund a `sponsorWallet` with more then they can trust the Air
 
 [dAPIs](https://docs.api3.org/dapis/) are continuously updated streams of off-chain data, such as the latest cryptocurrency, stock and commodity prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
 
+The data feeds are continuously updated by [first-party oracles](https://vitepress-docs.web.app/explore/introduction/first-party.html) using signed data. dApp owners can read the on-chain value of any dAPI in realtime.
+
 Due to being composed of first-party data feeds, dAPIs offer security, transparency, cost-efficiency and scalability in a turn-key package.
 
-![API3 Remix deploy](/img/tools/api3/SS4.png)
+The [API3 Market](https://market.api3.org/dapis) enables users to connect to a dAPI and access the associated data feed services.
+
+<img src="/img/tools/api3/SS4.png"/>
+<br></br>
+
+> [*To know more about how dAPIs work, click here*](https://dapi-docs.api3.org/explore/dapis/what-are-dapis.html)
+
+### Types of dAPIs
+
+#### **Self-Funded dAPIs**
+Self-funded dAPIs offer developers the opportunity to experience data feeds with
+minimal up-front commitment, providing a low-risk option prior to using a
+managed dAPIs.
+
+#### **Managed dAPIs**
+Managed dAPIs are sourced from multiple first-party oracles and aggregated using
+a median function. Compared to self-funded dAPIs, **managed dAPIs are monetized**,
+as API3 requires payment in USDC on Ethereum Mainnet to operate them.
 
 ### Subscribing to self-funded dAPIs
 
@@ -139,19 +159,23 @@ Once you have selected your dAPI, you can fund it by using the Market to send fu
 - Wallet is connected to the Market and is the same network as the dAPI you are funding.
 - Balance of the wallet should be greater than the amount you are sending to the `sponsorWallet`.
 
-![API3 Remix deploy](/img/tools/api3/SS1.png)
+<img src="/img/tools/api3/SS1.png" width="700"/>
+<br></br>
 
 To fund the dAPI, you need to click on the **Fund sponsor wallet/Fund Gas** button. Depending upon if a proxy contract is already deployed, you will see a different UI.
 
-![API3 Remix deploy](/img/tools/api3/SS2.png)
+<img src="/img/tools/api3/SS2.png" width="700"/>
+<br></br>
 
 Use the gas estimator to select how much gas is needed by the dAPI. Click on **Send XDAI** to send the entered amount to the sponsor wallet of the respective dAPI.
 
-![API3 Remix deploy](/img/tools/api3/SS3.png)
+<img src="/img/tools/api3/SS3.png" width="700"/>
+<br></br>
 
 Once the transaction is broadcasted & confirmed on the blockchain a transaction confirmation screen will appear.
 
-![API3 Remix deploy](/img/tools/api3/SS5.png)
+<img src="/img/tools/api3/SS5.png" width="700"/>
+<br></br>
 
 #### **Deploying a proxy contract to access the dAPI**
 
@@ -163,11 +187,13 @@ Smart contracts can interact and read values from contracts that are already dep
 
 If you are deploying a proxy contract during the funding process, clicking on the **Deploy proxy** button will initiate a transaction to your Metamask that will deploy a proxy contract.
 
-![API3 Remix deploy](/img/tools/api3/SS6.png)
+<img src="/img/tools/api3/SS6.png" width="500"/>
+<br></br>
 
 Once the transaction is broadcasted & confirmed on the blockchain, the proxy contract address will be shown on the UI.
 
-![API3 Remix deploy](/img/tools/api3/SS7.png)
+<img src="/img/tools/api3/SS7.png" width="500"/>
+<br></br>
 
 
 ### Reading from a self-funded dAPI
@@ -176,31 +202,41 @@ Here's an example of a basic contract that reads from a self-funded dAPI.
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity 0.8.17;
 
-import "@api3/airnode-protocol-v1/contracts/dapis/proxies/interfaces/IDapiProxy.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@api3/contracts/v0.8/interfaces/IProxy.sol";
 
-contract Reader is Ownable {
-    address dapiProxy;
+contract DataFeedReaderExample is Ownable {
+    // This contract reads from a single proxy. Your contract can read from multiple proxies.
+    address public proxy;
 
-    function setDapiProxyAddress(address _proxyAddress) public onlyOwner {
-        dapiProxy = _proxyAddress;
+    // Updating the proxy address is a security-critical action. In this example, only
+    // the owner is allowed to do so.
+    function setProxy(address _proxy) public onlyOwner {
+        proxy = _proxy;
     }
 
-    function readDapi() public view returns (int224 value, uint32 timestamp){
-        return IDapiProxy(dapiProxy).read();
+    function readDataFeed()
+        external
+        view
+        returns (int224 value, uint256 timestamp)
+    {
+        (value, timestamp) = IProxy(proxy).read();
+        // If you have any assumptions about `value` and `timestamp`, make sure
+        // to validate them right after reading from the proxy.
     }
 }
+
 ```
 
-- `setDapiProxyAddress()` is used to set the address of the dAPI Proxy Contract.
+- `setProxy()` is used to set the address of the dAPI Proxy Contract.
 
-- `readDapi()` is a view function that returns the latest price of the set dAPI.
+- `readDataFeed()` is a view function that returns the latest price of the set dAPI.
 
-You can read more about dAPIs [here](https://docs.api3.org/dapis/). 
+You can read more about dAPIs [here](https://docs.api3.org/dapis/).
 
-### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://gist.githubusercontent.com/vanshwassan/1ec4230956a78c73a00768180cba3649/raw/caff497e5b4b61d89d920b49da70779a0a24ac58/DapiReader.sol)
+### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://gist.githubusercontent.com/vanshwassan/1ec4230956a78c73a00768180cba3649/raw/176b4a3781d55d6fb2d2ad380be0c26f412a7e3c/DapiReader.sol)
 
 ## API3 QRNG
 
