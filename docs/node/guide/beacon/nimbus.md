@@ -7,7 +7,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials
 
 :::caution
 
-This client is not yet ready for production use. Validators are encouraged to run Lighthouse, Teku or Lodestar in the interim.
+This client is considered experimental for Gnosis. For production ready alternatives, please consider Lighthouse, Teku or Lodestar.
 
 :::
 
