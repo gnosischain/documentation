@@ -30,7 +30,7 @@ Nimbus is a client implementation that strives to be as lightweight as possible 
 
 ## Option 1: Run as System Process
 
-WIP
+We currently do not release Gnosis compatible binaries for Nimbus, nor do we intend to for the time being.
 
 ## Option 2: Run using Docker
 
