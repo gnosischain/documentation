@@ -12,8 +12,8 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-:::danger
-[Erigon](https://github.com/ledgerwatch/erigon#documentation) is not ready for production use. Please consider switching to Nethermind.
+:::caution
+[Erigon](https://github.com/ledgerwatch/erigon#documentation) is considered experimental for Gnosis. For production use, please consider Nethermind.
 :::
 
 
