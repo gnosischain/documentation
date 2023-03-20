@@ -35,7 +35,7 @@ WIP
 ## Option 2: Run using Docker
 
 
-This tutorial runs Nimbus beacon node and validator on the same container, please make sure you have [generated validator key](../README.md#step-4a-generate-validator-keys) and [jwtsecret](../README.md#step-1-configure-server) before moving to the next step.
+This tutorial runs Nimbus beacon node and validator on the same container, please make sure you have your [generated validator key](../README.md#step-4a-generate-validator-keys) and [jwtsecret](../README.md#step-1-configure-server) before moving to the next step.
 
 ### 1. Folder Structure
 
