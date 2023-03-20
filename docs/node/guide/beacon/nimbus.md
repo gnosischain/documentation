@@ -5,7 +5,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials
 
 # Run Beacon Node + Validator: Nimbus
 
-:::danger
+:::caution
 
 This client is not yet ready for production use. Validators are encouraged to run Lighthouse, Teku or Lodestar in the interim.
 
