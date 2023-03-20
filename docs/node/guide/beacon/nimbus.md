@@ -67,6 +67,8 @@ services:
         container_name: consensus
         image: ghcr.io/gnosischain/gnosis-nimbus-eth2:latest
         restart: unless-stopped
+        networks:
+          - gnosis_net
         volumes:
         - ./consensus/data:/data
 // highlight-start
