@@ -14,8 +14,8 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-:::danger
-Nimbus is not ready for production use. Currently, you can only use Docker to run Nimbus Beacon Node + Validator.
+:::caution
+Nimbus is considered experimental for Gnosis and only supports Docker deployments for now. For production ready alternatives, please consider Lighthouse, Teku or Lodestar.
 :::
 
 Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
