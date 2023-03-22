@@ -7,7 +7,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials
 # Run Beacon Node: Lodestar
 
 :::caution Version check
-This page's content is up-to-date for [Lodestar v1.2.2](https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2).
+This page's content is up-to-date for [Lodestar v1.5.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.5.1).
 :::
 
 :::caution Prerequisites
@@ -63,11 +63,7 @@ $ lodestar beacon
 
 ## Option 1: Run as a System Process
 
-:::caution
-
-In progress
-
-:::
+Refer to [Guide](../README.md#step-3-run-a-beacon-node)
 
 ## Option 2: Run using Docker
 
