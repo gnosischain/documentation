@@ -162,9 +162,9 @@ Once you have selected your dAPI, you can activate it by using the [API3 Market]
 <img src="/img/tools/api3/SS1.png" width="500"/>
 <br></br>
 
-To fund the dAPI, you need to click on the **Fund sponsor wallet/Fund Gas** button. Depending upon if a proxy contract is already deployed, you will see a different UI.
+To fund the dAPI, you need to click on the **Fund Gas** button. Depending upon if a proxy contract is already deployed, you will see a different UI.
 
-<img src="/img/tools/api3/SS2.png" width="500"/>
+<img src="/img/tools/api3/SS2.png" width="400"/>
 <br></br>
 
 Use the gas estimator to select how much gas is needed by the dAPI. Click on **Send XDAI** to send the entered amount to the sponsor wallet of the respective dAPI.
@@ -185,7 +185,7 @@ Smart contracts can interact and read values from contracts that are already dep
 If a proxy is already deployed for a Self-funded dAPI, the dApp can read the dAPI without having to deploy a proxy contract. They do this by using the address of the already deployed proxy contract which will be visible on the API3 Market.
 :::
 
-If you are deploying a proxy contract during the funding process, clicking on the **Deploy proxy** button will initiate a transaction to your Metamask that will deploy a proxy contract.
+If you are deploying a proxy contract during the funding process, clicking on the **Get proxy** button will initiate a transaction to your Metamask that will deploy a proxy contract.
 
 <img src="/img/tools/api3/SS6.png" width="500"/>
 <br></br>
