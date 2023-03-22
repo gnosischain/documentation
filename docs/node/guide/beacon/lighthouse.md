@@ -8,7 +8,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials
 
 :::caution Version check
 
-This page's content is up-to-date for [Lighthouse v3.3.0](https://github.com/sigp/lighthouse/releases/tag/v3.3.0).
+This page's content is up-to-date for [Lighthouse v3.5.1](hhttps://github.com/sigp/lighthouse/releases/tag/v3.5.1).
 
 :::
 
@@ -74,11 +74,7 @@ $ lighthouse bn
 
 ## Option 1: Run as a System Process
 
-:::caution
-
-In progress
-
-:::
+Refer to [Guide](../README.md#step-3-run-a-beacon-node)
 
 ## Option 2: Run using Docker
 
