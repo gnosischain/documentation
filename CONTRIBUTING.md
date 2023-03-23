@@ -69,6 +69,22 @@ For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](
 - Submit a PR against the `main` branch of the `gnosischain/documentation` repo
 - Follow the PR template instructions carefuly
 
+## Create a release
+
+Currently only @alebanzas, @plato_gno, @zengzengzenghuy has the right to create a new release.    
+To create a new release 
+1. Switch to **release** branch, click on text showing "N commit(s) behind of main", and click 'Create pull request'.
+2. [Create a new PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request), ensure that all [Actions](https://docs.github.com/en/actions) in PR are passed, then you may continue to create a new release.
+3. Navigate to and click **Releases** on right sidebar (Under About section), you should be able to see releases history under https://github.com/gnosischain/documentation/releases.
+4. Click ['Draft a new release'](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
+* click 'Choose a tag' and create a new target (please refer to the naming rule for releases, i.e. v0.8.x)
+* Target: main
+* Release title: same as release tag, i.e. v0.8.x
+* Click 'Generate release notes', this will automatically generate notes for current release.
+* Tick the box showing 'Set as the latest release'
+5. Click 'Publish release', and wait for all the actions passed.
+6. Congrats, you just created a new release for gnosis documentation!
+
 ## Writing style
 
 We selected a collection of best practices from the industry to make the website easy to read, global, diverse and searchable

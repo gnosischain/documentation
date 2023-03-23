@@ -43,10 +43,8 @@ You can import the keys when starting the validator.
     --directory keystores \
     --dataDir=/data/validators \ 
 # highlight-start
-    --suggestedFeeRecipient=$FEE_RECIPIENT \ # Change this value
-# highlight-end
-# highlight-start
-    --graffiti=$GRAFFITI  # Change this value
+    --suggestedFeeRecipient=${FEE_RECIPIENT} \ 
+    --graffiti=${GRAFFITI} 
 # highlight-end
 ```
     
