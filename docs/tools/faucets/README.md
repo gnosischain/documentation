@@ -14,10 +14,7 @@ A faucet is a service that provides small amounts of [xDai tokens](/about/tokens
 
 ## Community Faucets
 
-- [Gimlu](https://www.gimlu.com/faucet)
 - [Stakely](https://stakely.io/en/faucet/gnosis-chain-xdai)
-- [Unitap](https://unitap.app/gas-faucet)
-- [xDai Faucet](https://xdai-faucet.top/)
 
 ## Token Faucet
 

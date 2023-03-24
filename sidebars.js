@@ -524,23 +524,8 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'Gimlu',
-          href: 'https://www.gimlu.com/faucet',
-        },
-        {
-          type: 'link',
           label: 'Stakely',
           href: 'https://stakely.io/en/faucet/gnosis-chain-xdai',
-        },
-        {
-          type: 'link',
-          label: 'Unitap',
-          href: 'https://unitap.app/gas-faucet',
-        },
-        {
-          type: 'link',
-          label: 'xDai Faucet',
-          href: 'https://xdai-faucet.top/',
         },
         'tools/faucets/tokens',
       ],
