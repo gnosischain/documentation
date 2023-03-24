@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 :::
 
 
-* Install and build Erigon. 
+* Install and build [Erigon](https://github.com/ledgerwatch/erigon#documentation). 
 
 ```shell
 cd execution 
@@ -31,8 +31,10 @@ make erigon
 ./build/bin/erigon \
     --chain=gnosis \
     --datadir=/data \
-    --authrpc.jwtsecret=../../jwtsecret/jwt.hex
+    --authrpc.jwtsecret=../../jwtsecret/jwt.hex \
+    --prune=htcr
 ```
+* Erigon run [Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) by default. To run a pruned node, add `--prune=htcr`. 
 
 </TabItem>
 <TabItem value="win">

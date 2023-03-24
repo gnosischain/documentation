@@ -12,19 +12,40 @@ Repository: [https://github.com/ledgerwatch/erigon](https://github.com/ledgerwat
 Erigon is not ready for production use, please consider switching to [Nethermind](./nethermind.md)
 :::
 
-## Option 1: Using Docker    
-* [Create jwtsecret](../configure-server.md#create-jwt)
+There are 2 main options for running Nethermind:
+* Option 1: [Using Docker](#using-docker)
+* Option 2: [As a system process](#as-system-process)
 
-* Create `docker-compose.yml` 
+## Option 1: Using Docker {#using-docker}  
 
-```shell docker-compose.yml
+### 1. Folder Structure
+
+Create your folder structure:
+
+```shell
+mkdir -p /home/$USER/gnosis/jwtsecret
+```
+
+```
+/home/$USER/gnosis/
+└── jwtsecret/
+```
+
+
+### 2. Docker Compose
+
+
+Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+
+```shell title="/home/$USER/gnosis/docker-compose.yml"
+version: "3"
 services:
-  erigon:
+  execution:
     image: thorax/erigon:devel
     restart: unless-stopped
     volumes:
       - ./data:/home/erigon/.local/share/erigon
-      - /jwtsecret/jwt.hex:/jwt:ro
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt:ro
     ports:
       - 30303:30303
       - 30303:30303/udp
@@ -54,20 +75,54 @@ services:
       --torrent.upload.rate=16mb
       --externalcl
     user: 1000:1000
+
+networks:
+  gnosis_net:
+    name: gnosis_net
 ```
 
-* Start the Execution layer client listed in the compose file:
+### 3. JWT Secret
+
+The JWT secret is a token that allows the EL client to communicate with the CL client, and is required for Nethermind to operate post-merge. We use `rand` to create a random string, and store the `jwt.hex` file in `/home/$USER/gnosis/jwtsecret/`.
+
+Check [create JWT](../configure-server.md#create-jwt) section in `Step 1: Configure Server`.
+
+### 4. Start Container
+
+Start the Execution layer client listed in the compose file:
 
 ```shell
+cd /home/$USER/gnosis
 docker-compose up -d
 ```
 
-* Check Erigon log
+
+### 5. Monitor Logs
+
+Check your logs with:
+
+import MonitorLogsDockerPartial from '@site/docs/node/guide/validator/_partials/_monitor_logs_docker.md';
+
+<MonitorLogsDockerPartial />
+
+
+### 6. Updating your Node
+
+To update, just pull the new image, then stop and restart your docker-compose file:
+
 ```shell
-docker logs -f --tail 500 erigon
+cd /home/$USER/gnosis
+docker-compose pull
+docker-compose stop
+docker-compose up -d
 ```
 
-
-## Option 2: Using system process
+## Option 2: Using system process {#as-system-process}
 
 Refer to [Erigon Guide](../README.md#step-2-run-an-execution-client).
+
+## Erigon Archive Node  
+
+[Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) is the default option by Erigon. It takes about 370GB (January 2023) to run a Gnosis Chain Archive node. Please check the [system requirements](https://github.com/ledgerwatch/erigon#system-requirements) of your server before running an archive node.
+
+To run an Erigon pruned node, `--prune=htcr` command need to be added.
