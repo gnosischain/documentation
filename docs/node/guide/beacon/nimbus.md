@@ -103,6 +103,11 @@ networks:
     name: gnosis_net
 ```
 
+Replace `suggested-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup. Learn more about [suggested fee recipient](https://nimbus.guide/suggested-fee-recipient.html) flag in Nimbus docs. 
+
+Replace `graffiti` with your own [graffiti](https://nimbus.guide/graffiti.html). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+
+
 ### 3. Start Containers
 
 Start the consensus layer client listed in the compose file:
