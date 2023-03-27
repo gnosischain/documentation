@@ -59,8 +59,11 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
     --graffiti "gnosis-docs-graffiti"
 # highlight-end
 ```
+Replace `suggested-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Learn more about [suggested fee recipient](https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html) flag in Lighthouse docs.
 
-Replace the highlighted lines with your own values. `suggested-fee-recipient` with your address and `gnosis-docs-graffiti` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). Learn more about the [`enable-doppelganger-protection`](https://lighthouse-book.sigmaprime.io/validator-doppelganger.html) flag in Lighthouse docs.
+Replace `graffiti` with your own [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+
 
 
 </TabItem>
