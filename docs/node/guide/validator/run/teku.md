@@ -105,7 +105,7 @@ services:
       --metrics-host-allowlist=*
       --metrics-interface=0.0.0.0
       --metrics-port=8008
-      --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
+      --initial-state=https://checkpoint.gnosis.gateway.fm//eth/v2/debug/beacon/states/finalized 
 # highlight-start
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validator-keys=/data/validator/keys:/data/validator/passwords
@@ -130,6 +130,17 @@ PUID=1000
 FEE_RECIPIENT=0x0000000000000000000000000000000000000000
 GRAFFITI=gnosischain/teku
 ```
+Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-proposer-default-fee-recipient) flag in Teku docs.
+
+Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored. 
+
+Replace [`validators-graffiti`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+
+
+Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).
+
+
 
 ### 4. Keystore Location
 
