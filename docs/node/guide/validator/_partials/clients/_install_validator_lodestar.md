@@ -47,12 +47,12 @@ You can import the keys when starting the validator.
     --graffiti=${GRAFFITI} 
 # highlight-end
 ```
-    
-* Start your lighhouse validator:
 
+Replace `suggestedFeeRecipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Learn more about [suggestedFeeRecipient](https://chainsafe.github.io/lodestar/usage/validator-management/#configuring-the-fee-recipient-address) flag in Lodestar docs.
 
+Replace `graffiti` with your own [graffiti](https://chainsafe.github.io/lodestar/reference/cli/). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
-Replace `$GRAFFITI` with your [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html)and `$FEE_RECIPIENT` with your fee recipient address. Make sure to delete `# Change this value` before running this command. Learn more about the CLI commands and their options [here](https://chainsafe.github.io/lodestar/reference/cli/)
 
 
 

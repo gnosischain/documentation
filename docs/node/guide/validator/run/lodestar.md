@@ -97,6 +97,10 @@ FEE_RECIPIENT=0x0000000000000000000000000000000000000000
 GRAFFITI=gnosischain/lodestar
 ```
 
+Replace `suggestedFeeRecipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Learn more about [suggestedFeeRecipient](https://chainsafe.github.io/lodestar/usage/validator-management/#configuring-the-fee-recipient-address) flag in Lodestar docs.
+
+Replace `graffiti` with your own [graffiti](https://chainsafe.github.io/lodestar/reference/cli/). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
 ### 4. Keystore Location
 
