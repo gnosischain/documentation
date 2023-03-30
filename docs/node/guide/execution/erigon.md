@@ -24,10 +24,13 @@ Create your folder structure:
 
 ```shell
 mkdir -p /home/$USER/gnosis/jwtsecret
+cd /home/$USER/gnosis
+mkdir ./data && sudo chown 1000:1000 ./data
 ```
 
 ```
 /home/$USER/gnosis/
+|── data/
 └── jwtsecret/
 ```
 
@@ -41,11 +44,14 @@ Create a docker-compose file with your favorite text editor in `/home/$USER/gnos
 version: "3"
 services:
   execution:
+    container_name: execution
     image: thorax/erigon:devel
     restart: unless-stopped
     volumes:
       - ./data:/home/erigon/.local/share/erigon
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt:ro
+    networks:
+      - gnosis_net
     ports:
       - 30303:30303
       - 30303:30303/udp
@@ -67,6 +73,7 @@ services:
       --metrics.addr=0.0.0.0
       --pprof
       --pprof.addr=0.0.0.0
+      --pprof.port=6070
       --authrpc.addr=0.0.0.0
       --authrpc.jwtsecret=/jwt
       --authrpc.vhosts=*
@@ -80,6 +87,10 @@ networks:
   gnosis_net:
     name: gnosis_net
 ```
+
+:::tip Note
+[By default](https://github.com/ledgerwatch/erigon#other-ports), `metrics` and `pprof` use the same port, 6060. Therefore, it is required to configure the port correctly if both options are enabled. 
+:::
 
 ### 3. JWT Secret
 
