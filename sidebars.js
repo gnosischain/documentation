@@ -645,6 +645,11 @@ const sidebars = {
         },
         {
           type: 'link',
+          label: 'BitOK',
+          href: 'https://bitok.org/'
+        },
+        {
+          type: 'link',
           label: 'Wrapeth',
           href: 'https://wrapeth.com/',
         },
