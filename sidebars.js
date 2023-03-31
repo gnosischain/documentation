@@ -163,6 +163,7 @@ const sidebars = {
         "developers/interact/web3-js",
         "developers/interact/ethers-js",
         "developers/interact/rainbowkit-wagmi",
+        "developers/interact/dynamic",
       ],
     },
     {
