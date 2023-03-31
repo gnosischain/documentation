@@ -23,14 +23,13 @@ There are 2 main options for running Nethermind:
 Create your folder structure:
 
 ```shell
-mkdir -p /home/$USER/gnosis/jwtsecret
-cd /home/$USER/gnosis
-mkdir ./data && sudo chown 1000:1000 ./data
+mkdir -p /home/$USER/gnosis/{jwtsecret,execution}
+chown -R 1000:1000 /home/$USER/gnosis/execution
 ```
 
 ```
 /home/$USER/gnosis/
-|── data/
+|── execution/
 └── jwtsecret/
 ```
 
@@ -48,7 +47,7 @@ services:
     image: thorax/erigon:devel
     restart: unless-stopped
     volumes:
-      - ./data:/home/erigon/.local/share/erigon
+      - /home/$USER/gnosis/execution:/home/erigon/.local/share/erigon
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt:ro
     networks:
       - gnosis_net
