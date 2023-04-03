@@ -163,6 +163,7 @@ const sidebars = {
         "developers/interact/web3-js",
         "developers/interact/ethers-js",
         "developers/interact/rainbowkit-wagmi",
+        "developers/interact/dynamic",
       ],
     },
     {
@@ -290,6 +291,7 @@ const sidebars = {
                 "node/guide/validator/run/lodestar",
                 "node/guide/validator/run/teku",
                 "node/guide/validator/run/lighthouse",
+                "node/guide/validator/run/nimbus",
               ]
             },
             "node/guide/validator/deposit",
@@ -524,23 +526,8 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'Gimlu',
-          href: 'https://www.gimlu.com/faucet',
-        },
-        {
-          type: 'link',
           label: 'Stakely',
           href: 'https://stakely.io/en/faucet/gnosis-chain-xdai',
-        },
-        {
-          type: 'link',
-          label: 'Unitap',
-          href: 'https://unitap.app/gas-faucet',
-        },
-        {
-          type: 'link',
-          label: 'xDai Faucet',
-          href: 'https://xdai-faucet.top/',
         },
         'tools/faucets/tokens',
       ],
@@ -657,6 +644,11 @@ const sidebars = {
           type: 'link',
           label: 'Crypto Tax Calculator',
           href: 'https://cryptotaxcalculator.io/exchanges/xdai-tax/',
+        },
+        {
+          type: 'link',
+          label: 'BitOK',
+          href: 'https://bitok.org/'
         },
         {
           type: 'link',
