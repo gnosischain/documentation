@@ -67,6 +67,11 @@ BNB<->Gnosis is deprecating. Please check out the [notice](../tutorials/using-om
 | [gno:0x5333588897ce6de00031dc30cd2d6881e5c517fb](https://gnosisscan.io/address/0x5333588897ce6de00031dc30cd2d6881e5c517fb) | Gnosis Safe       |
 
 </TabItem>
+<TabItem value="goerli-chiado" label="Goerli <-> Chiado">
+
+[0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49)
+
+</TabItem>
 
 </Tabs>
 
@@ -81,6 +86,9 @@ References:
 - [Bridge Governance Board](/bridges/tokenbridge/amb-bridge#bridge-governance)
 - [Bridge Daily Limits](/bridges/tokenbridge/amb-bridge#fees--daily-limits)
 
+<Tabs>
+<TabItem value="ethereum" label="Ethereum">
+
 ### Ethereum
 
 | Contract                            | Address                                                                                                                                  |
@@ -89,12 +97,44 @@ References:
 | AMB Contract Proxy (Foreign)        | [0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract) |
 | AMB/OmniBridge wETH Router Helper | [0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038a) |
 
+
+</TabItem>
+
+<TabItem value="gnosis" label="Gnosis">
+
 ### Gnosis
 | Contract                            | Address                                                                                                                                   |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | AMB/Omnibridge Multi-Token Mediator | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
 | AMB Contract Proxy (Home)           | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
 | AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract)       |
+
+</TabItem>
+
+<TabItem value="goerli" label="Goerli">
+
+### Goerli
+
+| Contract               |                                                                                       Address                                       |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
+| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
+| GNO on Goerli  | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5) |
+
+</TabItem>
+<TabItem value="chiado" label="Chiado">
+
+### Chiado
+
+| Contract            |                Address                            |
+|----------------------------|--------------------------------------------|
+| OmniBridge Mediator (Home) | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://gnosisscan.io/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
+| AMB Contract Proxy (Home)  | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://gnosisscan.io/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
+|  GnosisBridge(GNO) on Chiado  | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://blockscout.chiadochain.net/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
+
+</TabItem>
+
+</Tabs>
 
 ## How it works
 ### Terminology
