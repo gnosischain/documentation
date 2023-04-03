@@ -25,8 +25,8 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 |                       | Detail                                                |
 |-----------------------|-------------------------------------------------------|
 | Frontend URL          | https://omni.gnosischain.com                          |
-| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)       |
-| Governance            | [7-of-16 Multisig](#bridge-governance)                |
+| Trust Model           | [4-of-7 Validator Multisig](#bridge-validators)       |
+| Governance            | [7-of-15 Multisig](#bridge-governance)                |
 | Governance Parameters | Validator Set, Daily Limits, Fees                     |
 | Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
