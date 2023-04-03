@@ -25,8 +25,8 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 |                       | Detail                                                |
 |-----------------------|-------------------------------------------------------|
 | Frontend URL          | https://bridge.gnosischain.com                        |
-| Trust Model           | [4-of-6 Validator Multisig](#bridge-validators)       |
-| Governance            | [7-of-16 Multisig](#bridge-governance)                |
+| Trust Model           | [4-of-7 Validator Multisig](#bridge-validators)       |
+| Governance            | [7-of-15 Multisig](#bridge-governance)                |
 | Governance Parameters | Validator Set, Daily Limits, Fees                     |
 | Bug Bounty            | [Up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
@@ -73,7 +73,7 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](/bridges/roadmap). 
 
-Bridge transactions currently requires signatures from 4 of 6 validators.
+Bridge transactions currently requires signatures from 4 of 7 validators.
 
 
 | Organization | Gnosis Address                                                                                                                           |
@@ -84,6 +84,7 @@ Bridge transactions currently requires signatures from 4 of 6 validators.
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://blockscout.com/xdai/mainnet/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://blockscout.com/xdai/mainnet/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
 | Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://blockscout.com/xdai/mainnet/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
+| Gateway      | [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://blockscout.com/xdai/mainnet/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) |
 
 ### Bridge Validator Flow
 

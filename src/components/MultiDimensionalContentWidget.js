@@ -122,9 +122,7 @@ export const MultiDimensionalContentWidget = () => {
 
 			//Disable unsupported clients
 			disableByText("Besu")
-			disableByText("Erigon")
 			disableByText("Geth")
-			disableByText("Nimbus")
 			disableByText("Prysm")
 			
 			stashConfig();

@@ -291,6 +291,7 @@ const sidebars = {
                 "node/guide/validator/run/lodestar",
                 "node/guide/validator/run/teku",
                 "node/guide/validator/run/lighthouse",
+                "node/guide/validator/run/nimbus",
               ]
             },
             "node/guide/validator/deposit",

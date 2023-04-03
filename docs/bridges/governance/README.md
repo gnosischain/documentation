@@ -26,16 +26,16 @@ All actions are managed through Gnosis Safe accounts, one on the Ethereum mainne
 
 ### Current Bridge Governors
 
-There are currently 16 Bridge Governors, of which 7-of-16 are required to pass a proposal.  
+There are currently 15 Bridge Governors, of which 7-of-15 are required to pass a proposal.  
 
 |                    |              |             |
 |--------------------|--------------|-------------|
 | GnosisDAO          | Metacartel   | RaidGuild   |
 | Protofire          | TokenBridge  | Lab10       |
-| Anyblock Analytics | Gnosis Team  | Giveth      |
-| Syncnode           | 1Hive        | Peerion     |
+| Gateway            | Gnosis Team  | Giveth      |
+| KarpatkeyDAO       | 1Hive        | Peerion     |
 | 01Node             | Cow Protocol | Gnosis Safe |
-| KarpatkeyDAO       |              |             |
+
 
 
 ## Governance Process
