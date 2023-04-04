@@ -8,7 +8,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials
 
 :::caution Version check
 
-This page's content is up-to-date for [Teku v22.11.0](https://github.com/ConsenSys/teku/releases/tag/22.11.0).
+This page's content is up-to-date for [Teku v23.3.0](https://github.com/ConsenSys/teku/releases/tag/23.3.0).
 
 :::
 
@@ -65,11 +65,7 @@ $ teku
 
 ## Option 1: Run as a System Process 
 
-:::caution
-
-In progress
-
-:::
+Refer to [Guide](../README.md#step-3-run-a-beacon-node)
 
 ## Option 2: Run using Docker
 
