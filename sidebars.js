@@ -295,7 +295,8 @@ const sidebars = {
               ]
             },
             "node/guide/validator/deposit",
-            "node/guide/validator/verify"
+            "node/guide/validator/verify",
+            "node/guide/validator/web3signer"
           ],
         },
       ],
