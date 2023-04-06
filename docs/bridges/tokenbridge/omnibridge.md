@@ -314,4 +314,4 @@ Before starting, current validators should determine:
 
 * [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 
-Additional steps for adding a validator can be found [here](https://github.com/gnosischain/documentation/issues/72)
+Additional steps for setting up a validator node can be found in [governance](../governance/README.md#how-to-setup) and [here](https://github.com/gnosischain/documentation/issues/72) 
