@@ -37,7 +37,7 @@ These screenshots were taken back when Basic Attention Token (BAT) was first bri
 Viewing the ALM app:  
 ![](/img/bridges/omni-tokentransfer6.jpg)
 :::note
-Back when BAT was first bridged, only 2/3 confirmations were required. Now the validator set has expanded so 4/6 confirmations are required.
+Back when BAT was first bridged, only 2/3 confirmations were required. Now the validator set has expanded so 4/7 confirmations are required.
 :::
 6. After a successful transfer, you can check the token on BlockScout to see that it exists. Check Bridged tokens at https://blockscout.com/xdai/mainnet/bridged-tokens.
 ![](/img/bridges/omni-tokentransfer7.jpg)

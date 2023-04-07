@@ -81,14 +81,14 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 
 Gnosis clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
-Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Ethereum clients on your machine.
+Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Gnosis clients on your machine.
 
 #### **Requirements** ####
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining, which requires much more computing power. Sync time and performance do improve with more powerful hardware however.
 
 Before installing any client, please ensure your computer has enough resources to run it. You can find the minimum and recommended requirements below.
 
-The bottleneck for your hardware is mostly disk space. Syncing the Ethereum blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization.
+The bottleneck for your hardware is mostly disk space. Syncing the Gnosis blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. Refer to [this post](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) for good and bad SSD model. 
 
 The size of the database and speed of the initial synchronization depends on the chosen client, its configuration and sync strategy.
 
@@ -121,6 +121,21 @@ Requirements vary client to client, for more detail see the associated system re
 | Prysm           | [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices) |
 
 Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node. 
+
+**Gnosis in Ethereumverse**
+
+Running a Gnosis node requires no different hardware configuration from other nodes in Ethereum universe.
+
+[Ethereum on ARM](https://twitter.com/EthereumOnARM/status/1641374712348409859) demonstrates that it is possible to run a Gnosis, Ethereum, Starknet, and Arbitrum node using the same hardware configuration with less than $400 per node. (March 2023)
+
+| Hardware                           | Price (USD) |
+|------------------------------------|-------------|
+| [Rock 5B board(16GB)](https://twitter.com/theradxa)                | $189        |
+| Acrylic case with passive heatsink | $13         |
+| Crucial P2 NVMe SSD 2TB            | $140        |
+| MicroSD                            | $8          |
+| Ethernet cable                     | $6          |
+| Power supply                       | $9          |
 
 ### Network Connectivity
 
@@ -189,7 +204,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 Client diversity is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
 #### **Verifying the software** ####
-When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
+When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Gnosis client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
 Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on verifying open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
 
@@ -212,13 +227,13 @@ Other basic configuration options are, e.g. choosing a network - Mainnet or test
 For testing purposes, you might prefer to run a client on Chiado testnet.
 
 ##### **Starting the execution client** #####
-Before starting the Ethereum client software, perform a last check that your environment is ready. For example, make sure:
+Before starting the Gnosis client software, perform a last check that your environment is ready. For example, make sure:
 
 - There is enough disk space considering the chosen network and sync mode.
 - Memory and CPU is not halted by other programs.
 - Operating system is updated to the latest version.
 - System has the correct time and date.
-- Your router and firewall accept connections on listening ports. By default Ethereum clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
+- Your router and firewall accept connections on listening ports. By default Gnosis clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
 
 Run your client on a testnet first to help make sure everything is working correctly.
 
@@ -308,7 +323,7 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 ```bash
 teku \
     --network gnosis \
-    --data-path "/data/ethereum" \
+    --data-path "/data/gnosis" \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
