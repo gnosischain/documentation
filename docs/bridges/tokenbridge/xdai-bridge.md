@@ -31,11 +31,14 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 | Bug Bounty            | [Up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
 
-References: 
-* [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about) 
+
 ### Key Contracts
 
-#### Ethereum
+<Tabs>
+<TabItem value="ethereum" label="Ethereum">
+
+### Ethereum
+
 
 | Contract                      | Ethereum Address                                                                                                                            |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,7 +46,11 @@ References:
 | Validator Management Contract | [eth:0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#code)              |
 | Admin Multisignature Wallet   | [eth:0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)                   |
 
-#### Gnosis
+</TabItem>
+<TabItem value="gnosis" label="Gnosis">
+
+### Gnosis
+
 | Contract                      | Gnosis Address                                                                                                                                                     |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Proxy Contract                | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://blockscout.com/xdai/mainnet/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6/read-proxy#address-tabs)   |
@@ -51,6 +58,32 @@ References:
 | Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://blockscout.com/xdai/mainnet/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
 | Admin Multisignature Wallet   | [gno:0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://blockscout.com/xdai/mainnet/address/0x0D3726e5a9f37234D6B55216fC971D30F150a60F/transactions#address-tabs) |
 | ERC20ToNative Helper Contract | [gno:0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosisscan.io/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract)                            |
+
+</TabItem>
+<TabItem value="goerli" label="Goerli">
+
+### Goerli
+
+| Contract               |                                                                                       Address                                       |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
+| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
+
+
+
+</TabItem>
+<TabItem value="chiado" label="Chiado">
+
+### Chiado
+
+| Contract            |                Address                            |
+|----------------------------|--------------------------------------------|
+| OmniBridge Mediator (Home) | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://gnosisscan.io/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
+| AMB Contract Proxy (Home)  | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://gnosisscan.io/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
+
+</TabItem>
+
+</Tabs>
 
 References: 
 * [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)

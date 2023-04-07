@@ -54,9 +54,10 @@ cd teku-${version}
   --metrics-enabled=true    \
   --rest-api-enabled=true   \
 # highlight-start
-  --initial-state=${checkpoint url} \
+  --initial-state=https://checkpoint.gnosis.gateway.fm//eth/v2/debug/beacon/states/finalized \
   --validators-proposer-default-fee-recipient=${Fee Recipient Address}  \
   --validator-keys=${path to key file}:${path to password file}
+  --validators-graffiti=${GRAFFITI}
 # highlight-end
 ```
     
@@ -71,9 +72,19 @@ If you wish to run validator only, run the following command:
 # highlight-end
 ```
 
-Replace `$FEE_RECIPIENT` with your fee recipient address, `${path to key file}` and `{path to password file}`with the location where `keystores- *.json` and `keystore- *.txt` are stored, and `${endpoint}` with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051). Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).
+Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-proposer-default-fee-recipient) flag in Teku docs.
 
-Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
+Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored, and [`beacon-node-api-endpoint`](https://docs.teku.consensys.net/Reference/CLI/Subcommands/Validator-Client#beacon-node-api-endpoint-beacon-node-api-endpoints) with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051). 
+
+Replace [`validators-graffiti`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+
+
+Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).
+
+
+
+
 
 </TabItem>
 <TabItem value="chiado">

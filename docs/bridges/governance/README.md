@@ -59,7 +59,156 @@ Organizations are represented by an individual within that organization who is r
 * [xDai Bridge Validators](../tokenbridge/xdai-bridge.md#bridge-validators)  
 * [OmniBridge Validators](../tokenbridge/omnibridge#bridge-validators)
 
+```mdx-code-block
+<details>
+  <summary>Setting up GNO bridge validators: Gnosis Chain &lt;-&gt;Ethereum</summary>
+  <div>
+```
+
+## GNO  bridge validators GC &lt;-&gt; ETH Mainnet
+
+### How to setup
+
+1. Checkout https://github.com/dharmendrakariya/chiado-ansible-bridges (yes I know it says Chiado but we use it for mainnet)
+2. replace group_vars/amb.yml in https://github.com/dharmendrakariya/chiado-ansible-bridges with following settings:
+    
+```bash
+    ---
+    ORACLE_LOG_LEVEL: info
+    ORACLE_BRIDGE_MODE: "ARBITRARY_MESSAGE"
+    
+    COMMON_HOME_RPC_URL: "<GC RPC ULR>"
+    COMMON_HOME_BRIDGE_ADDRESS: "0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59"
+    ORACLE_HOME_RPC_POLLING_INTERVAL: 15000
+    
+    COMMON_FOREIGN_RPC_URL: "ETH RPC URL NON ARCHIVAL"
+    ORACLE_FOREIGN_ARCHIVE_RPC_URL: "ETH RPC URL ARCHIVAL"
+    COMMON_FOREIGN_BRIDGE_ADDRESS: "0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e"
+    ORACLE_FOREIGN_RPC_POLLING_INTERVAL: 24000
+    
+    ORACLE_TX_REDUNDANCY: true
+    ORACLE_HOME_TX_RESEND_INTERVAL: 300000
+    
+    COMMON_HOME_GAS_PRICE_SUPPLIER_URL: "eip1559-gas-estimation"
+    COMMON_HOME_GAS_PRICE_SPEED_TYPE: "fast"
+    COMMON_HOME_GAS_PRICE_FALLBACK: 2000000000
+    ORACLE_HOME_GAS_PRICE_UPDATE_INTERVAL: 600000
+    COMMON_HOME_GAS_PRICE_FACTOR: 1
+    
+    COMMON_FOREIGN_GAS_PRICE_SUPPLIER_URL: "eip1559-gas-estimation"
+    COMMON_FOREIGN_GAS_PRICE_SPEED_TYPE: "fast"
+    COMMON_FOREIGN_GAS_PRICE_FALLBACK: 100000000000
+    ORACLE_FOREIGN_GAS_PRICE_UPDATE_INTERVAL: 600000
+    COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
+    
+    ORACLE_ALLOW_HTTP_FOR_RPC: yes
+    QUEUE_URL: "amqp://rabbit-amb"
+    REDIS_URL: "redis://redis-amb"
+    
+    ORACLE_HOME_START_BLOCK: 27147951
+    ORACLE_FOREIGN_START_BLOCK: 16918880
+```
+    
+3. replace group_vars/native.yml in https://github.com/dharmendrakariya/chiado-ansible-bridges with following settings:
+    
+```bash
+    ---
+    ORACLE_LOG_LEVEL: info
+    ORACLE_BRIDGE_MODE: "ERC_TO_NATIVE"
+    
+    COMMON_HOME_RPC_URL: "<GC RPC ULR>"
+    COMMON_HOME_BRIDGE_ADDRESS: "0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6"
+    ORACLE_HOME_RPC_POLLING_INTERVAL: 15000
+    
+    COMMON_FOREIGN_RPC_URL: "<ETH RPC URL NON ARCHIVAL>"
+    ORACLE_FOREIGN_ARCHIVE_RPC_URL: "<ETH RPC URL ARCHIVAL>"
+    COMMON_FOREIGN_BRIDGE_ADDRESS: "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016"
+    ORACLE_FOREIGN_RPC_POLLING_INTERVAL: 24000
+    
+    ORACLE_TX_REDUNDANCY: true
+    ORACLE_HOME_TX_RESEND_INTERVAL: 300000
+    
+    COMMON_HOME_GAS_PRICE_SUPPLIER_URL: "eip1559-gas-estimation"
+    COMMON_HOME_GAS_PRICE_SPEED_TYPE: "fast"
+    COMMON_HOME_GAS_PRICE_FALLBACK: 2000000000
+    ORACLE_HOME_GAS_PRICE_UPDATE_INTERVAL: 600000
+    COMMON_HOME_GAS_PRICE_FACTOR: 1
+    
+    COMMON_FOREIGN_GAS_PRICE_SUPPLIER_URL: "eip1559-gas-estimation"
+    COMMON_FOREIGN_GAS_PRICE_SPEED_TYPE: "fast"
+    COMMON_FOREIGN_GAS_PRICE_FALLBACK: 100000000000
+    ORACLE_FOREIGN_GAS_PRICE_UPDATE_INTERVAL: 600000
+    COMMON_FOREIGN_GAS_PRICE_FACTOR: 1
+    
+    ORACLE_ALLOW_HTTP_FOR_RPC: yes
+    QUEUE_URL: "amqp://rabbit"
+    REDIS_URL: "redis://redis"
+    
+    ORACLE_HOME_START_BLOCK: 27147951
+    ORACLE_FOREIGN_START_BLOCK: 16918880
+```
+    
+4. replaces hosts.yml in https://github.com/dharmendrakariya/chiado-ansible-bridges with
+    
+```bash
+    all:
+      children:
+        oracle:
+          children:
+            native:
+              hosts:
+                <ip>:
+                  ansible_user: <user>
+                  ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY: "<private key>"
+            amb:
+              hosts:
+                <ip>:
+                  ansible_user: <user>
+                  ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY: "<private key>"
+```
+    
+5. Install on hosts:
+    
+```bash
+    - name: Install python3
+      apt:
+        update_cache: yes
+        name: "{{ item }}"
+      with_items:
+        - python3
+        - python3-pip
+    
+    - name: Install python requirnments
+      ansible.builtin.pip:
+        executable: pip3
+        name:
+          - docker
+          - molecule
+          - flake8
+        state: present
+```
+    
+6. Run in https://github.com/dharmendrakariya/chiado-ansible-bridges, the command should start the service
+    
+```bash
+    ansible-playbook -i hosts.yml site.yml
+```
+    
+7. Make sure that logs for `oracle-bridge_affirmation-1` contains 
+    
+```bash
+    {"level":30,"time":1679670411723,"msg":"Processing affirmationRequest 0xd2abaafc7359452b6d78631d6ab35571127dbd05ddfcff41784a5e9d29c191e1","validator":"0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6","name":"watcher-erc-native-affirmation-request","eventTransactionHash":"0xd2abaafc7359452b6d78631d6ab35571127dbd05ddfcff41784a5e9d29c191e1","sender":"0xE899161e268C0Be32C7993BB8221480C89B00d4D","value":"500000000000000000000","v":1}
+    {"level":30,"time":1679670411724,"msg":"Processing affirmationRequest 0xbc6d387ffc1a893eceb123d54e90358a4f83756960bd40410fd4f76c296854d9","validator":"0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6","name":"watcher-erc-native-affirmation-request","eventTransactionHash":"0xbc6d387ffc1a893eceb123d54e90358a4f83756960bd40410fd4f76c296854d9","sender":"0xE899161e268C0Be32C7993BB8221480C89B00d4D","value":"130025433237150000000000","v":1}
+```
+    
+8. After the service is started please use `service poabridge stop|start` in order to shutdown or start the service before making any changes on a host machine
+
+```mdx-code-block
+  </div>
+</details>
+```
 
 ### Bridge Limits
 
 Different limits are set for the [xDai Bridge](../tokenbridge/xdai-bridge.md#fees--daily-limits) and the [OmniBridge](../tokenbridge/omnibridge.md#fees--daily-limits) by the bridge governors. Please see their respective documentation pages for more information. 
+

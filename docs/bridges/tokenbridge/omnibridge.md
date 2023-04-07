@@ -33,7 +33,11 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 
 ### Key Contracts
 
-#### Ethereum
+<Tabs>
+<TabItem value="ethereum" label="Ethereum">
+
+### Ethereum
+
 
 | Contract                              | Ethereum Address                                                                                                                         |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,13 +45,45 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 | Omnibridge Multi-Token Mediator Proxy | [0x88ad09518695c6c3712AC10a214bE5109a655671](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract) |
 | Validator Management Contract         | [0xed84a648b3c51432ad0fD1C2cD2C45677E9d4064](https://etherscan.io/address/0xed84a648b3c51432ad0fD1C2cD2C45677E9d4064#writeProxyContract) |
 
-#### Gnosis
+</TabItem>
+<TabItem value="gnosis" label="Gnosis">
+
+### Gnosis
+
 
 | Contract                              | Gnosis Address                                                                                                                            |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Proxy Contract                        | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
+| AMB Proxy Contract                    | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
 | Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
 | Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
+
+</TabItem>
+<TabItem value="goerli" label="Goerli">
+
+### Goerli
+
+| Contract               |                                                                                       Address                                       |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
+| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
+| GNO on Goerli  | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5) |
+
+
+</TabItem>
+<TabItem value="chiado" label="Chiado">
+
+### Chiado
+
+| Contract            |                Address                            |
+|----------------------------|--------------------------------------------|
+| OmniBridge Mediator (Home) | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://gnosisscan.io/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
+| AMB Contract Proxy (Home)  | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://gnosisscan.io/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
+|  GnosisBridge(GNO) on Chiado  | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://blockscout.chiadochain.net/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
+
+
+</TabItem>
+
+</Tabs>
 
 ### Fees & Daily Limits
 
@@ -139,7 +175,6 @@ The Omnibridge currently generates bridge revenue through [earned yield on stabl
 9. Mediator contract unlocks the tokens
 
 The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
-
 
 
 
@@ -279,4 +314,4 @@ Before starting, current validators should determine:
 
 * [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
 
-Additional steps for adding a validator can be found [here](https://github.com/gnosischain/documentation/issues/72)
+Additional steps for setting up a validator node can be found in [governance](../governance/README.md#how-to-setup) and [here](https://github.com/gnosischain/documentation/issues/72) 
