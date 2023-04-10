@@ -21,8 +21,8 @@ All actions are managed through Gnosis Safe accounts, one on the Ethereum mainne
 
 | Network  | Safe Address                                                                                                                                  |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Ethereum | [eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6](https://gnosis-safe.io/app/#/safes/0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6/settings)      |
-| Gnosis   | [gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd](https://xdai.gnosis-safe.io/app/#/safes/0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd/settings) |
+| Ethereum | [eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6](https://app.safe.global/home?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6)      |
+| Gnosis   | [gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd](https://app.safe.global/home?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd) |
 
 ### Current Bridge Governors
 
