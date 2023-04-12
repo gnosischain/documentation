@@ -20,11 +20,12 @@ Currently, @alebanzas and @plato_gno have push rights to `release` branch.
 
 ### Prerequisites
 
-[Node.js](https://nodejs.org/en/download/) version 14.13 or higher.  
+[Node.js](https://nodejs.org/en/download/) version 16.14 or higher.  
 
 ### Installation
 
 ```
+$ nvm use 
 $ yarn install
 ```
 
