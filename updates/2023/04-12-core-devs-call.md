@@ -1,3 +1,9 @@
+---
+title: Core Devs Call - 12/04/2023
+authors: [dapplion, armaganercan]
+tags: [CoreDevsCall, gnosis]
+---
+
 # Gnosis Core Devs Call Notes
 
 ![](https://i.imgur.com/bSPHlTz.png)
