@@ -225,6 +225,7 @@ const sidebars = {
         "node/tools/dappnode", 
         "node/tools/eth-docker",
         "node/tools/sedge", 
+        "node/tools/stereum",
         {
           type: 'link',
           label: 'ValidateGnosis',
