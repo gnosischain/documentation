@@ -152,6 +152,10 @@ const config = {
                 label: 'Tools',
                 to: '/tools',
               },
+              {
+                label: 'Terms of use',
+                to: '/terms-conditions',
+              },
             ],
           },
           {
