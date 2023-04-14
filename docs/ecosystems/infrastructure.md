@@ -24,6 +24,8 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, 1Hive, WrapETH, Punk Domains, Origin
 
 * [Hopr](https://hoprnet.org): Changing Data Privacy For Good
 
+* [Gelato Network](https://www.gelato.network/): Enabling developers to create augmented smart contracts
+that are automated, gasless & off-chain aware
 
 ## Wrappers
 
