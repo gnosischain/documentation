@@ -8,6 +8,18 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Upgrade BNB-GC Omnibridge mediator to stop accepting any new token locks and mints
+
+🗳 Justification: As part of the longer term plan to decommission the BNB-GC Omnibridge (more info [https://forum.gnosis.io/t/bridge-to-binance-update/6624](https://forum.gnosis.io/t/bridge-to-binance-update/6624)), we want to stop any new token locks and mints from either BNB chain or Gnosis Chain.
+
+✅ Implemented: April 4, 2023
+
+## Safe contract updates, two new governor wallets and Gateway validator addition.
+
+🗳 Justification: We executed a regular/routine update for all Safe contracts. Additionally, we added one more validator (7 in total), strengthening even further the resilience of the bridges. Finally, we replaced two recently inactive wallets with new participants that will participate in the governance more actively.
+
+✅ Implemented: March 20, 2023
+
 ## Adjust limits on ETH-GC OmniBridge for WETH, WBTC, GNO, CLNY, DXD, HOPR, HAUS
 
 🗳 Justification: For risk management purposes, the daily limits for transactions from Gnosis Chain to Ethereum where raised for major assets and were adjusted to reasonable values for some smaller assets.

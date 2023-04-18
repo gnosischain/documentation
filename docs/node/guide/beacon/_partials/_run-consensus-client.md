@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 import InstallLighthousePartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lighthouse.md';
 import InstallLodestarPartial from '@site/docs/node/guide/beacon/_partials/_install_cl_lodestar.md';
 import InstallTekuPartial from '@site/docs/node/guide/beacon/_partials/_install_cl_teku.md';
-
+import InstallNimbusPartial from '@site/docs/node/guide/beacon/_partials/_install_cl_nimbus.md';
 
 ```mdx-code-block
 
@@ -33,15 +33,9 @@ import InstallTekuPartial from '@site/docs/node/guide/beacon/_partials/_install_
   </TabItem>
 
   <TabItem value="nimbus">
-```
 
-:::info
+<InstallNimbusPartial/>
 
-Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
-
-:::
-
-```mdx-code-block
   </TabItem>
 
   <TabItem value="prysm">
