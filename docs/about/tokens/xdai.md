@@ -14,10 +14,11 @@ xDai tokens are transactional tokens on Gnosis and also used to pay for executio
 
 Convert DAI from Ethereum to xDai using the [xDai Bridge](/bridges/tokenbridge/xdai-bridge).
 
-### Gateways
+### Buy xDAI 
 
 Gateways and Exchanges allow users to get xDai using FIAT or swap other crypto into xDai.
 
+- https://buyxdai.com/xdai
 - [AscendEX](https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xdai)
 - [Mt Pelerin](https://www.mtpelerin.com/buy-xdai)
 - [Ramp](https://ramp.network/buy/?swapAsset=XDAI)

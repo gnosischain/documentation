@@ -74,6 +74,9 @@ Check out [Chiado Testnet specs](/about/networks/chiado#gno-token) for more info
 
 ## Get GNO Tokens
 
+### Buy GNO
+- https://buyxdai.com/gno
+
 ### Markets
 
 - [CoinMarketCap](https://coinmarketcap.com/currencies/gnosis-gno/)
@@ -112,7 +115,7 @@ Liquid staking providers allow anyone to stake without running the infrastructur
 
 ## Converting GNO to mGNO
 
-::: note
+:::note
 GNO is automatically wrapped by the deposit contract, you only need to do this to top off your balance. The following instructions use the older swap UI
 :::
 
