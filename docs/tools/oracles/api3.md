@@ -9,15 +9,15 @@ keywords: [api3, airnode, oracle, data feeds, dapis, qrng]
 [API3](https://api3.org/) is a collaborative project to deliver traditional API services to smart contract platforms in a decentralized and trust-minimized way. It is governed by a decentralized autonomous organization (DAO), namely the [API3 DAO](https://api3.org/dao).
 
 :::info The API3 DAO
-Read more about how The API3 DAO works. [Click here](https://docs.api3.org/dao-members/)
+Read more about how The API3 DAO works. [Click here](https://docs.api3.org/explore/dao-members/)
 :::
 
 
 ## Airnode
 
-Developers can use [Airnode](https://docs.api3.org/airnode/) to request off-chain data inside their Smart Contracts on the Gnosis Chain. An Airnode is a first-party oracle that pushes off-chain API data to your on-chain contract. Airnode lets API providers easily run their own first-party oracle nodes. That way, they can provide data to any on-chain dApp that's interested in their services, all without an intermediary.
+Developers can use [Airnode](https://docs.api3.org/explore/airnode/what-is-airnode.html) to request off-chain data inside their Smart Contracts on the Gnosis Chain. An Airnode is a first-party oracle that pushes off-chain API data to your on-chain contract. Airnode lets API providers easily run their own first-party oracle nodes. That way, they can provide data to any on-chain dApp that's interested in their services, all without an intermediary.
 
-An on-chain smart contract makes a request in the [RRP (Request Response Protocol)](https://docs.api3.org/airnode/v0.10/concepts/) contract (`AirnodeRrpV0.sol`) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
+An on-chain smart contract makes a request in the [RRP (Request Response Protocol)](https://docs.api3.org/reference/airnode/latest/concepts/) contract (`AirnodeRrpV0.sol`) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
 
 <!-- ![API3 Remix deploy](/img/tools/api3/airnode1.png) -->
 <img src="/img/tools/api3/airnode1.png" width="600"/>
@@ -90,7 +90,7 @@ contract Requester is RrpRequesterV0 {
 }
 ```
 
-The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have already been deployed on-chain. You can check the address for Gnosis Chain [here](https://docs.api3.org/airnode/v0.9/reference/airnode-addresses.html). You can also try [deploying it on Remix](https://remix.ethereum.org/#url=https://github.com/vanshwassan/RemixContracts/blob/master/contracts/Requester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
+The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have already been deployed on-chain. You can check the address for Gnosis Chain [here](https://docs.api3.org/reference/airnode/latest/). You can also try [deploying it on Remix](https://remix.ethereum.org/#url=https://github.com/vanshwassan/RemixContracts/blob/master/contracts/Requester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
 
 |         Contract         |                     Addresses                    |
 |:------------------------:|:------------------------------------------------:|
@@ -101,16 +101,16 @@ The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have alread
 
 The `makeRequest()` function expects the following parameters to make a valid request.
 
-- [**`airnode`**](https://docs.api3.org/airnode/v0.10/concepts/airnode.html): Specifies the Airnode Address.
-- [**`endpointId`**](https://docs.api3.org/airnode/v0.10/concepts/endpoint.html): Specifies which endpoint to be used.
-- [**`sponsor`**](https://docs.api3.org/airnode/v0.10/concepts/sponsor.html) and [**`sponsorWallet`**](https://docs.api3.org/airnode/v0.10/concepts/sponsor.html#sponsorwallet): Specifies which wallet will be used to fulfill the request.
-- [**`parameters`**](https://docs.api3.org/ois/v1.4/reserved-parameters.html): Specifies the API and Reserved Parameters (see [Airnode ABI specifications](awd) for how these are encoded). Parameters can be encoded off-chain using [`@airnode-abi`](https://docs.api3.org/airnode/v0.10/reference/specifications/airnode-abi-specifications.html) library.
+- [**`airnode`**](https://docs.api3.org/reference/airnode/latest/concepts/airnode.html): Specifies the Airnode Address.
+- [**`endpointId`**](https://docs.api3.org/reference/airnode/latest/concepts/endpoint.html): Specifies which endpoint to be used.
+- [**`sponsor`**](https://docs.api3.org/reference/airnode/latest/concepts/sponsor.html) and [**`sponsorWallet`**](https://docs.api3.org/airnode/v0.10/concepts/sponsor.html#sponsorwallet): Specifies which wallet will be used to fulfill the request.
+- [**`parameters`**](https://docs.api3.org/reference/ois/latest/reserved-parameters.html): Specifies the API and Reserved Parameters (see [Airnode ABI specifications](https://docs.api3.org/reference/ois/latest/) for how these are encoded). Parameters can be encoded off-chain using `@airnode-abi` library.
 
 ### Response parameters
 
 The callback to the Requester contains two parameters:
 
-- [**`requestId`**](https://docs.api3.org/airnode/v0.10/concepts/request.html#requestid): First acquired when making the request and passed here as a reference to identify the request for which the response is intended.
+- [**`requestId`**](https://docs.api3.org/reference/airnode/latest/concepts/request.html#requestid): First acquired when making the request and passed here as a reference to identify the request for which the response is intended.
 - **`data`**: In case of a successful response, this is the requested data which has been encoded and contains a timestamp in addition to other response data. Decode it using the `decode()` function from the `abi` object.
 
 :::info Note !
@@ -119,9 +119,9 @@ Sponsors should not fund a `sponsorWallet` with more then they can trust the Air
 
 ## Using dAPIs - API3 Datafeeds
 
-[dAPIs](https://docs.api3.org/dapis/) are continuously updated streams of off-chain data, such as the latest cryptocurrency, stock and commodity prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
+[dAPIs](https://docs.api3.org/explore/dapis/what-are-dapis.html) are continuously updated streams of off-chain data, such as the latest cryptocurrency, stock and commodity prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
 
-The data feeds are continuously updated by [first-party oracles](https://dapi-docs.api3.org/explore/introduction/first-party.html) using signed data. dApp owners can read the on-chain value of any dAPI in realtime.
+The data feeds are continuously updated by [first-party oracles](https://docs.api3.org/explore/introduction/first-party.html) using signed data. dApp owners can read the on-chain value of any dAPI in realtime.
 
 Due to being composed of first-party data feeds, dAPIs offer security, transparency, cost-efficiency and scalability in a turn-key package.
 
@@ -234,13 +234,13 @@ contract DataFeedReaderExample is Ownable {
 
 - `readDataFeed()` is a view function that returns the latest price of the set dAPI.
 
-You can read more about dAPIs [here](https://dapi-docs.api3.org/).
+You can read more about dAPIs [here](https://docs.api3.org/guides/dapis/subscribing-self-funded-dapis/).
 
 ### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://gist.githubusercontent.com/vanshwassan/1ec4230956a78c73a00768180cba3649/raw/176b4a3781d55d6fb2d2ad380be0c26f412a7e3c/DapiReader.sol)
 
 ## API3 QRNG
 
-[API3 QRNG](https://docs.api3.org/qrng/) is a public utility we provide with the courtesy of Australian National University (ANU). It is powered by an Airnode hosted by ANU Quantum Random Numbers, meaning that it is a first-party service. It is served as a public good and is free of charge (apart from the gas costs), and it provides ‘true’ quantum randomness via an easy-to-use solution when requiring RNG on-chain.
+[API3 QRNG](https://docs.api3.org/explore/qrng/) is a public utility we provide with the courtesy of Australian National University (ANU). It is powered by an Airnode hosted by ANU Quantum Random Numbers, meaning that it is a first-party service. It is served as a public good and is free of charge (apart from the gas costs), and it provides ‘true’ quantum randomness via an easy-to-use solution when requiring RNG on-chain.
 
 To request randomness on-chain, the requester submits a request for a random number to AirnodeRrpV0. The ANU Airnode gathers the request from the AirnodeRrpV0 protocol contract, retrieves the random number off-chain, and sends it back to AirnodeRrpV0. Once received, it performs a callback to the requester with the random number.
 
@@ -314,7 +314,7 @@ contract RemixQrngExample is RrpRequesterV0 {
 }
 ```
 
-- The `setRequestParameters()` takes in `airnode` (The ANU/Quintessence/byog Airnode address) , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get Airnode address and the endpoint ID [here](https://docs.api3.org/qrng/reference/providers.html).
+- The `setRequestParameters()` takes in `airnode` (The ANU/Quintessence/Nodary Airnode address) , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get Airnode address and the endpoint ID [here](https://docs.api3.org/reference/qrng/providers.html).
 
 - The `makeRequestUint256()` function calls the `airnodeRrp.makeFullRequest()` function of the `AirnodeRrpV0.sol` protocol contract which adds the request to its storage and returns a `requestId`.
 
@@ -322,16 +322,16 @@ contract RemixQrngExample is RrpRequesterV0 {
 
 ### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/vanshwassan/RemixContracts/blob/master/contracts/QrngRequester.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
 
-You can try QRNG on the Gnosis Chain for free. Check out the all the QRNG Providers for Gnosis Chain [here](https://docs.api3.org/qrng/reference/providers.html).
+You can try QRNG on the Gnosis Chain for free. Check out the all the QRNG Providers for Gnosis Chain [here](https://docs.api3.org/reference/qrng/providers.html).
 
-[Click here to read more about API3 QRNG](https://docs.api3.org/qrng)
+[Click here to read more about API3 QRNG](https://docs.api3.org/explore/qrng/)
 
 ## Additional Resources
 
 Here are some additional developer resources
 
 - [API3 Docs](https://docs.api3.org/)
-- [dAPI Docs](https://dapi-docs.api3.org/)
-- [QRNG Docs](https://docs.api3.org/qrng/)
+- [dAPI Docs](https://docs.api3.org/explore/dapis/what-are-dapis.html)
+- [QRNG Docs](https://docs.api3.org/explore/qrng/)
 - [Github](https://github.com/api3dao/)
 - [Medium](https://medium.com/api3)
