@@ -1,10 +1,9 @@
-# Gnosis Core Devs Call Notes
-
 ---
 title: Core Devs Call - 19/04/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
+# Gnosis Core Devs Call Notes
 
 ![](https://i.imgur.com/yWkAFed.png)
 
