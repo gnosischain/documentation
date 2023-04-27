@@ -81,7 +81,7 @@ import TabItem from '@theme/TabItem';
 
 - Install dependencies
     ```shell
-    sudo apt-get update && sudo apt-get install libsnappy-dev libc6-dev libc6 unzip -y
+    sudo apt-get update && sudo apt-get install libsnappy-dev libc6-dev libc6 libicu-dev unzip wget openssl git -y
     ```
 
 - Copy the download link for Linux, MacOS or Arm64 package from the [Nethermind download page](https://downloads.nethermind.io/).

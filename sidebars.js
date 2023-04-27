@@ -225,6 +225,7 @@ const sidebars = {
         "node/tools/dappnode", 
         "node/tools/eth-docker",
         "node/tools/sedge", 
+        "node/tools/stereum",
         {
           type: 'link',
           label: 'ValidateGnosis',
@@ -597,6 +598,7 @@ const sidebars = {
       label: 'Oracles',
       collapsed: true,
       items: [
+        'tools/oracles/api3',
         'tools/oracles/chainlink',
         'tools/oracles/gas-price',
         'tools/oracles/tellor',
