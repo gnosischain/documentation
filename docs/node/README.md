@@ -112,6 +112,8 @@ Requirements vary client to client, for more detail see the associated system re
 | Erigon          | [Erigon: System Requirements](https://github.com/ledgerwatch/erigon#system-requirements)                                 |
 | Geth            | [Geth: Hardware](https://geth.ethereum.org/docs/interface/hardware)                                                      |
 
+** Gnosis chain only supports Nethermind and Erigon at the moment.
+
 | Consensus Layer |                                                                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Lighthouse      | [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/system-requirements.html)                                     |
@@ -119,6 +121,8 @@ Requirements vary client to client, for more detail see the associated system re
 | Nimbus          | [Nimbus: Hardware](https://nimbus.guide/hardware.html)                                                                                |
 | Teku            | TBD                                                                                                                                   |
 | Prysm           | [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices) |
+
+** Gnosis chain doesn't support Prysm at the moment.
 
 Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node. 
 
@@ -177,6 +181,7 @@ Below are a few projects which can help you install and control clients just wit
 * [DappNode](../node/tools/dappnode.md) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
 * [Stereum](../node/tools/stereum.md) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 * [Sedge](../node/tools/sedge.md) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
+* [eth-docker](../node/tools/eth-docker.md) - A docker automation project for Gnosis consensus and execution clients. Easy to setup by answering simple dialog-based questions on terminal.
 
 ### Manual setup
 
@@ -195,11 +200,13 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 ** Execution clients **
 * Nethermind
+* Erigon
 
 ** Consensus clients **
 * Lighthouse
 * Lodestar
 * Teku
+* Nimbus
 
 Client diversity is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
@@ -327,6 +334,7 @@ teku \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
+
 ### Adding Validators
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
