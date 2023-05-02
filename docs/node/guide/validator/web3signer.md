@@ -7,6 +7,10 @@ import TabItem from '@theme/TabItem';
 
 ## What is Web3Signer?
 
+:::info Before you start
+This is only for advanced users. Please make sure you understand the risks before using web3signer.
+:::
+
 Web3Signer is a remote signing tool developed by Consensys. Remote signing is when a
 Validator Client (VC) out-sources the signing of messages to remote server (e.g., via HTTPS). VC doesn’t need to store private key on the same server, it only needs to request for signature from the server which host Web3Signer.
 
