@@ -29,5 +29,5 @@ Great development tools are compatible with Gnosis
 <box href="/developers/smart-contracts/foundry" title="Foundry" />
 <box href="/developers/smart-contracts/truffle" title="Truffle" />
 <box href="/developers/smart-contracts/hardhat" title="Hardhat" />
-<box href="developers/smart-contracts/cookbook" title="Cookbook" />
+<box href="/developers/smart-contracts/cookbook" title="Cookbook" />
 </div>
