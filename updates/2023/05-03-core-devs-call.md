@@ -1,10 +1,11 @@
-# Gnosis Core Devs Call Notes
-
 ---
 title: Core Devs Call - 05/03/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
+
+# Gnosis Core Devs Call Notes
+
 
 ![](https://i.imgur.com/hKWegwm.png)
 
@@ -49,7 +50,7 @@ https://github.com/gnosischain/specs/issues/5
 # Devnet
 
 No updates from Nethermind, Erigon or Gateway.
-Nethermind, ran a tool that generates back blocks to test if the network handles them well. Everything is working well. Tests on Gnosis’ side; we haven’t tested a lot on our side yet. Defined a todo list of what we are going to test this week. https://github.com/gnosischain/consensus-deployment-ansible/issues/67
+Nethermind, ran a tool that generates bad blocks to test if the network handles them well. Everything is working well. Tests on Gnosis’ side; we haven’t tested a lot on our side yet. Defined a todo list of what we are going to test this week. https://github.com/gnosischain/consensus-deployment-ansible/issues/67
 
 # Research
 
