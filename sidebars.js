@@ -323,11 +323,6 @@ const sidebars = {
       link: {type: 'doc', id: 'tools/explorers/README'},
       collapsed: true,
       items: [
-        {
-          type: 'link',
-          label: 'AnyBlock',
-          href: 'https://explorer.anyblock.tools/ethereum/poa/xdai/',
-        },
         'tools/explorers/blockscout',
         {
           type: 'link',
@@ -338,11 +333,6 @@ const sidebars = {
           type: 'link',
           label: 'Beacon Chain',
           href: 'https://beacon.gnosischain.com/',
-        },
-        {
-          type: 'link',
-          label: 'Tokenview',
-          href: 'https://xdai.tokenview.io/',
         },
       ],
     },
@@ -540,15 +530,6 @@ const sidebars = {
       items: [
         'tools/analytics/the-graph',
         'tools/analytics/dune',
-        {
-          type: 'category',
-          label: 'AnyBlock',
-          collapsed: true,
-          link: {type: 'doc', id: 'tools/analytics/anyblock/README'},
-          items: [
-            'tools/analytics/anyblock/api-sql',
-          ],
-        },
         'tools/analytics/beacon-chain',
         {
           type: 'link',
