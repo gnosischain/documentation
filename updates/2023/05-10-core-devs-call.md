@@ -1,12 +1,10 @@
-# Gnosis Core Devs Call Notes
-
 ---
 title: Core Devs Call - 05/10/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
 
-![](https://hackmd.io/_uploads/By0ZMF9E2.png)
+![Core Devs May 10](https://github.com/gnosischain/documentation-1/assets/75987728/13514dd0-c1a3-427a-8023-db4b124f91ce)
 
 Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team and contributors gather to discuss the latest developments and updates related to the Gnosis ecosystem. This meeting is held every Wednesday and serves as a platform for participants to collaborate and exchange ideas.
 
@@ -43,6 +41,8 @@ Gnosis ran manual tests, everything seems to be ok. No updates from Nethermind.
 No objections from Nethermind. Should be doable on Erigon’s side as well
 * Suggested slots
 Conditions. Slot mod 8192 = 0 (aligns with historical beacon vector)
+Is weekday?
+Is between 14:00 and 20:00 CET?
 Within the next 2-4 weeks
 Matches
 - Slot 3874816: 22/05/2023, 16:41:20
