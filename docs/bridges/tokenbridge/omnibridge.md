@@ -102,10 +102,14 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 | Dai*** | 1,000,000,000      | 1,000,000,000 WXDAI |
 | USDC   | 1,000,000,000      | 10,000,000          |
 | USDT   | 1,000,000,000      | 5,000,000           |
-| WETH   | 1,000,000,000      | 250                 |
-| WBTC   | 1,000,000,000      | 2                   |
-| GNO    | 1,000,000,000      | 5,000               |
-
+| WETH   | 690                | 690                 |
+| WBTC   | 12                 | 12                  |
+| GNO    | 18350              | 18350               |
+| GIV    | 60000000           | 60000000            |
+| CLNY   | 14000000           | 14000000            |
+| DXD    | 1000               | 1000                |
+| HOPR   | 7000000            | 7000000             |
+| HAUS   | 120000             | 120000              |
 
 #### Daily Limits
 | Token  | Ethereum -> Gnosis         | Gnosis -> Ethereum               |
@@ -113,9 +117,14 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 | Dai*** | 1,000,000,000,000,000,000  | 1,000,000,000,000,000,000 xDai   |
 | USDC   | 1,000,000,000,000,000,000  | 10,000,000                       |
 | USDT   | 1,000,000,000,000,000,000  | 5,000,000                        |
-| WETH   | 1,000,000,000,000,000,000  | 250                              |
-| WBTC   | 1,000,000,000,000,000,000  | 2                                |
-| GNO    | 1,000,000,000,000,000,000  | 5,000                            |
+| WETH   | 690                        | 690                              |
+| WBTC   | 12.00000001                | 12.00000001                      |
+| GNO    | 18350                      | 18350                            |
+| GIV    | 60000000                   | 60000000                         |
+| CLNY   | 14000000                   | 14000000                         |
+| DXD    | 1000                       | 1000                             |
+| HOPR   | 7000000                    | 7000000                          |
+| HAUS   | 120000                     | 120000                           |
 
 *** Bridging Dai Using Omnibridge
 
