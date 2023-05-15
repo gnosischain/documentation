@@ -120,6 +120,7 @@ const sidebars = {
               'specs/hard-forks/eip-1559',
             ],
           },
+          'specs/bug-bounty',
           'specs/security-audit',
       ],
     },
