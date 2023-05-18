@@ -6,20 +6,18 @@ keywords: [safe app, bridge safe, gnosis safe app]
 
 # xDai Bridge with Safe App
 
-The xDai Bridge is now included as a native Gnosis Safe application, and Multisig Wallets on both Ethereum and xDai can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](/bridges/tutorials/using-omnibridge/safe) instructions.
+The xDai Bridge is now included as a native Gnosis Safe application, and Multisig Wallets on both Ethereum and Gnosis Chain can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](/bridges/tutorials/using-omnibridge/safe) instructions.
 
 ## Initiating a Transaction
 
-1. Go to your Gnosis Safe and login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the xDai bridge). Safe addresses are distinct for each chain.
+1. Go to your [Gnosis Safe](https://gnosis-safe.io/app/) and login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the xDai bridge). Safe addresses are distinct for each chain.
 
-* Gnosis Safe on Gnosis: [https://gnosis-safe.io/app/gno](https://gnosis-safe.io/app/gno)
-* Gnosis Safe on Ethereum: [https://gnosis-safe.io/app/](https://gnosis-safe.io/app/)
 
 2. Go to **Apps** and find the **xDai Bridge** App. Apps are typically displayed in alphabetical order. Click to access.
 
 ![](/img/bridges/xdaibridge/img1.png)
 
-3. Open the application and interact with the bridge as you normally would to begin the transfer process. **** In the following example we bridge xDai on the xDai chain to Dai on Ethereum. The minimum amount to initiate a bridge transfer is 10 xDai. Enter:
+3. Open the application and interact with the bridge as you normally would to begin the transfer process. **** In the following example we bridge xDai on the Gnosis chain to Dai on Ethereum. The minimum amount to initiate a bridge transfer is 10 xDai. Enter:
 
     1. xDai Amount
     2. Recipient Address
@@ -45,7 +43,7 @@ The final signature owner (required number of signatures are set through the gno
 
 ![A second signature is required in this example ](/img/bridges/xdaibridge/2nd confirmer.png)
 
-5. Execute the transaction on the xDai chain. In this case, a warning message appears related to the gas limit which is set too low by the application.
+5. Execute the transaction on the Gnosis chain. In this case, a warning message appears related to the gas limit which is set too low by the application.
 
 ![](/img/bridges/xdaibridge/approve-tx-issue.png)
 
