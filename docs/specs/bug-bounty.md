@@ -25,4 +25,8 @@ More info -> [https://medium.com/immunefi/xdai-stake-hosts-2-000-000-bug-bounty-
 
 
 
+## Web/app Bounty
 
+https://immunefi.com/bounty/gnosischainwebapp/
+
+TODO

@@ -16,7 +16,7 @@ TokenBridge addresses for reference (where you send the asset to transfer)
 * Mainnet TokenBridge (Dai -> xDai): `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016`
 * xDai TokenBridge (xDai -> Dai): `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6`
 
-## Transfer Dai from the Ethereum Mainnet to the xDai chain
+## Transfer Dai from the Ethereum Mainnet to the Gnosis Chain
 
 1. Connect to the Ethereum Mainnet and locate DAI in your webwallet.
 
@@ -28,18 +28,18 @@ TokenBridge addresses for reference (where you send the asset to transfer)
 
 3. Wait for the relay confirmation from the bridge validators. This may take several minutes.
 
-4. Set your wallet to the xDai chain and check your balance.
+4. Set your wallet to the Gnosis chain and check your balance.
 
 
-## Transfer xDai to DAI from the xDai chain to the Ethereum Mainnet
+## Transfer xDai to DAI from the Gnosis chain to the Ethereum Mainnet
 
 :::info
 The following demonstrates interaction with contract methods using BlockScout and Etherscan
 :::
 
-1. Send xDai coins to the Token Bridge address `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6` on the xDai Сhain using any wallet software.
+1. Send xDai coins to the Token Bridge address `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6` on the Gnosis Сhain using any wallet software.
 
-2. Wait for the transaction confirmation on the xDai chain (5 seconds).
+2. Wait for the transaction confirmation on the Gnosis chain (5 seconds).
 
 3. Copy the transaction hash of the confirmation and connect to the Ethereum mainnet.
 
