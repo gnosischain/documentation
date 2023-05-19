@@ -148,7 +148,7 @@ The [xDai token](/about/tokens/xdai) is minted when Dai is transferred from Ethe
 1. Users lock an amount of DAI on the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum 
 2. `UserRequestForAffirmation` event is triggered 
 3. Validators observe the deposit and invoke `executeAffirmation` function on Gnosis bridge contract
-4. When enough confirmations are collected (4/6 majority),  the bridge contract on Gnosis Chain calls the block reward contract to  record  the receiver(s) and amount(s) of xDAI to mint. 
+4. When enough confirmations are collected (4/7 majority),  the bridge contract on Gnosis Chain calls the block reward contract to  record  the receiver(s) and amount(s) of xDAI to mint. 
 5. The [block reward contract](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. 
 
 You can view a receiver's address and amount of xDai received in the [block reward contract's](https://blockscout.com/xdai/mainnet/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called, it registers the following:
