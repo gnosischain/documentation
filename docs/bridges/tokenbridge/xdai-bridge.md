@@ -185,24 +185,6 @@ References:
 
 
 
-
-### Earning Yield on Bridge Deposits
-
-A portion of Dai locked in the Bridge contract (on the Ethereum side) are deposited in [Aave](https://aave.com) and [Compound](https://compound.finance) and  to earn yield. The proportion of the Bridge Deposits is determined by bridge's governance. Currently, 1,000,000 Dai are held in reserves, and the remaining balance is used to earn yield.
-
-![Dai Compounding Diagram](/img/bridges/diagrams/xdai-compounding.svg)
-
-Bridge withdrawal requests from xDai to Ethereum first use the Dai in the reserve. 
-
-If a request is initiated that exceeds the available reserve amount, the requested amount exceeding the reserve + 1,000,000 Dai (required reserve) is withdrawn immediately from Compound. The 1,000,000 Dai replenishes the reserve.
-
-Interest earned on the Dai supplied to Compound and COMP tokens will be collected periodically (approximately monthly) and transferred to an EOA through a manual method call. Funds will be used to support bridge operations such as gas refunds for users or other tbd mechanisms which can be discussed and decided on by the bridge governors.
-
-In the case where the amount of Dai requested for withdrawal is not available in Compound (likely due to high borrowing demand), the user will need to wait until Compound liquidity is available to execute the request. 
-
-References: 
-* [Dune Analytics: xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges) 
-
 ## Managing Bridge Contracts
 ### Upgrading a Contract
 There are two possible scenarios for how the bridge or validators contracts can be upgraded:

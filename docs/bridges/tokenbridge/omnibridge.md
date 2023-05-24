@@ -146,9 +146,7 @@ For a message/tokens to be relayed to another network, bridge validators need to
 
 * See [Bridge Governance](/bridges/governance)
 
-### Bridge Revenue
 
-The Omnibridge currently generates bridge revenue through [earned yield on stablecoin deposits](#interest-on-bridge-deposits), which is then used by the GnosisDAO treasury to fund Gnosis development. 
 ### Analytics
 
 - [Dune Analytics: Omnibridge Stablecoins](https://dune.com/maxaleks/Omnibridge-Stablecoins)
@@ -270,19 +268,6 @@ For example, there are two different representations of USDC on Gnosis:
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
 
-### Interest on Bridge Deposits
-
-The Omnibridge currently generates bridge revenue through yield on stablecoins deposited on the bridge, which is then used by the GnosisDAO treasury to fund Gnosis development. 
-
-Currently, Stable Coins (USDC & USDT) locked in the OmniBridge contract are allocated to the Aave interest market. Locked funds will accumulate interest as well as COMP and AAVE tokens. These funds can then be used to support bridge operations.   
-Compounding analytics are available in [Dune](https://dune.com/maxaleks/Omnibridge-Stablecoins)  
-
-USDC:  `(Current Amount Locked - 2,500,000 USDC)` transferred to Aave. 2.5M is held in initial reserve.  
-USDT:  `(Current Amount Locked - 750,000 USDT)` transferred to Aave. 750K is held in initial reserve.  
-
-If the requested withdrawal amount exceeds the reserve balance, then the requested amount plus the initial reserve amount is requested to be withdrawn from Aave.
-1. If the unlikely event isn't enough liquidity on Aave to fulfill the withdrawal request (likely due to high borrowing demand), then the user will have to wait until there is.
-2. Aave is a trusted entity. If compromised, the protocol could attack the bridge in various ways, e.g. through reentrency or by stealing funds. 
 
 ## Managing the Bridge
 
