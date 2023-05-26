@@ -12,7 +12,7 @@ Repository: [https://github.com/ledgerwatch/erigon](https://github.com/ledgerwat
 Erigon is not ready for production use, please consider switching to [Nethermind](./nethermind.md)
 :::
 
-There are 2 main options for running Nethermind:
+There are 2 main options for running Erigon:
 * Option 1: [Using Docker](#using-docker)
 * Option 2: [As a system process](#as-system-process)
 
@@ -93,7 +93,7 @@ networks:
 
 ### 3. JWT Secret
 
-The JWT secret is a token that allows the EL client to communicate with the CL client, and is required for Nethermind to operate post-merge. We use `rand` to create a random string, and store the `jwt.hex` file in `/home/$USER/gnosis/jwtsecret/`.
+The JWT secret is a token that allows the EL client to communicate with the CL client, and is required for Erigon to operate post-merge. We use `rand` to create a random string, and store the `jwt.hex` file in `/home/$USER/gnosis/jwtsecret/`.
 
 Check [create JWT](../configure-server.md#create-jwt) section in `Step 1: Configure Server`.
 

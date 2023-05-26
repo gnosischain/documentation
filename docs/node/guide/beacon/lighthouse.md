@@ -8,7 +8,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/guide/beacon/_partials
 
 :::caution Version check
 
-This page's content is up-to-date for [Lighthouse v3.5.1](hhttps://github.com/sigp/lighthouse/releases/tag/v3.5.1).
+This page's content is up-to-date for [Lighthouse v4.2.0](https://github.com/sigp/lighthouse/releases/tag/v4.2.0).
 
 :::
 
