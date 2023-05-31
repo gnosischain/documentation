@@ -1,11 +1,12 @@
-# Gnosis Core Devs Call Notes
 ---
 title: Core Devs Call - 05/31/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
 
-![](https://hackmd.io/_uploads/S1kzgGHIh.png)
+# Gnosis Core Devs Call Notes
+
+![May 31](https://github.com/gnosischain/documentation-1/assets/75987728/999e5d00-cb8a-486d-b7b8-96b55ac4888c)
 
 Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team and contributors gather to discuss the latest developments and updates related to the Gnosis ecosystem. This meeting is held every Wednesday and serves as a platform for participants to collaborate and exchange ideas.
 
@@ -44,26 +45,26 @@ Conditions: Slot mod 8192
 Weekday Time between 14 and 20 UTC
 
 Slots
-Slot 9658368, ts 1687285180, UTC: 20/06/2023, 18:19:40
-Slot 9674752, ts 1687367100, UTC: 21/06/2023, 17:05:00
-Slot 9691136, ts 1687449020, UTC: 22/06/2023, 15:50:20
-Slot 9707520, ts 1687530940, UTC: 23/06/2023, 14:35:40
-Slot 9814016, ts 1688063420, UTC: 29/06/2023, 18:30:20
-Slot 9830400, ts 1688145340, UTC: 30/06/2023, 17:15:40
-Slot 9879552, ts 1688391100, UTC: 03/07/2023, 13:31:40
-Slot 9895936, ts 1688473020, UTC: 04/07/2023, 12:17:00
-Slot 10002432, ts 1689005500, UTC: 10/07/2023, 16:11:40
-Slot 10018816, ts 1689087420, UTC: 11/07/2023, 14:57:00
-Slot 10035200, ts 1689169340, UTC: 12/07/2023, 13:42:20
-Slot 10051584, ts 1689251260, UTC: 13/07/2023, 12:27:40
-Slot 10125312, ts 1689619900, UTC: 17/07/2023, 18:51:40
-Slot 10141696, ts 1689701820, UTC: 18/07/2023, 17:37:00
-Slot 10158080, ts 1689783740, UTC: 19/07/2023, 16:22:20
-Slot 10174464, ts 1689865660, UTC: 20/07/2023, 15:07:40
-Slot 10190848, ts 1689947580, UTC: 21/07/2023, 13:53:00
-Slot 10297344, ts 1690480060, UTC: 27/07/2023, 17:47:40
-Slot 10313728, ts 1690561980, UTC: 28/07/2023, 16:33:00
-Slot 10362880, ts 1690807740, UTC: 31/07/2023, 12:49:00
+* Slot 9658368, ts 1687285180, UTC: 20/06/2023, 18:19:40
+* Slot 9674752, ts 1687367100, UTC: 21/06/2023, 17:05:00
+* Slot 9691136, ts 1687449020, UTC: 22/06/2023, 15:50:20
+* Slot 9707520, ts 1687530940, UTC: 23/06/2023, 14:35:40
+* Slot 9814016, ts 1688063420, UTC: 29/06/2023, 18:30:20
+* Slot 9830400, ts 1688145340, UTC: 30/06/2023, 17:15:40
+* Slot 9879552, ts 1688391100, UTC: 03/07/2023, 13:31:40
+* Slot 9895936, ts 1688473020, UTC: 04/07/2023, 12:17:00
+* Slot 10002432, ts 1689005500, UTC: 10/07/2023, 16:11:40
+* Slot 10018816, ts 1689087420, UTC: 11/07/2023, 14:57:00
+* Slot 10035200, ts 1689169340, UTC: 12/07/2023, 13:42:20
+* Slot 10051584, ts 1689251260, UTC: 13/07/2023, 12:27:40
+* Slot 10125312, ts 1689619900, UTC: 17/07/2023, 18:51:40
+* Slot 10141696, ts 1689701820, UTC: 18/07/2023, 17:37:00
+* Slot 10158080, ts 1689783740, UTC: 19/07/2023, 16:22:20
+* Slot 10174464, ts 1689865660, UTC: 20/07/2023, 15:07:40
+* Slot 10190848, ts 1689947580, UTC: 21/07/2023, 13:53:00
+* Slot 10297344, ts 1690480060, UTC: 27/07/2023, 17:47:40
+* Slot 10313728, ts 1690561980, UTC: 28/07/2023, 16:33:00
+* Slot 10362880, ts 1690807740, UTC: 31/07/2023, 12:49:00
 
 
 # Research
