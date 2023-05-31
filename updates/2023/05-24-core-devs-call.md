@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 05/17/2023
+title: Core Devs Call - 05/24/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -32,7 +32,7 @@ May 24, 2023
 * **Nimbus**: No updates.
 
 # Chain Infra
-**Gateway** : Gnosis Pay (Oly) Cluster was deployed. Supported the EDCON wallet by providing an RPC. Out of memory exceptions on Nethermind 1.18. Started with Nethermind 1.18. Preparing logs to give Nethermind. Could give direct access to the nodes to the Nethermind team. Nethermind confirms that this would be helpful. 
+**Gateway** : Supported the EDCON wallet by providing an RPC. Out of memory exceptions on Nethermind 1.18. Started with Nethermind 1.18. Preparing logs to give Nethermind. Could give direct access to the nodes to the Nethermind team. Nethermind confirms that this would be helpful. 
 
 # Devnet
 

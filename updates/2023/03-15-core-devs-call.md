@@ -35,8 +35,6 @@ Mar 15, 2023
 
 Provisioned bridges on Chiado. If everything goes right -> mainnet. Serving half of the requests on the official RPC. Service 75% of the Chiado RPC requests. Figured out issues with The Graph. Figured out an issue with Erigon sometimes stopping to sync. Because of invalid blocks produced by Nethermind. Not super focused on withdrawals right now. 
 
-Looking into Oly Bridges. Not many people know how they work and they need some fine tuning. 
-
 Provided Ethereum archival nodes for Gnosis Bridge validators
 
 
