@@ -64,7 +64,6 @@ const sidebars = {
       items: [
         "about/networks/mainnet",
         "about/networks/chiado",
-        "about/networks/optimism",
       ]
     },
     {
@@ -521,6 +520,11 @@ const sidebars = {
           label: 'Stakely',
           href: 'https://stakely.io/en/faucet/gnosis-chain-xdai',
         },
+        {
+          type: 'link',
+          label: 'Prussia.dev',
+          href: 'https://faucet.prussia.dev/xdai',
+        },        
         'tools/faucets/tokens',
       ],
     },
