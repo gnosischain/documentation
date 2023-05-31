@@ -543,11 +543,6 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'Gnosis Netstats',
-          href: 'http://dai-netstat.poa.network',
-        },
-        {
-          type: 'link',
           label: 'Blocknative',
           href: 'https://docs.blocknative.com/',
         },
@@ -560,11 +555,6 @@ const sidebars = {
           type: 'link',
           label: 'Curvegrid',
           href: 'https://www.curvegrid.com/docs/introduction-to-multibaas',
-        },
-        {
-          type: 'link',
-          label: 'DappQuery',
-          href: 'https://dappquery.com/',
         },
         {
           type: 'link',
