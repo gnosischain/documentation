@@ -534,6 +534,11 @@ const sidebars = {
         'tools/analytics/beacon-chain',
         {
           type: 'link',
+          label: 'Goldsky',
+          href: 'https://docs.goldsky.com/indexing',
+        },
+        {
+          type: 'link',
           label: 'Gnosis Netstats',
           href: 'http://dai-netstat.poa.network',
         },
