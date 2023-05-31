@@ -29,7 +29,7 @@ May 10, 2023
 * **Nimbus**: No updates.
 
 # Chain Infra
-**Gateway** : Set up Optimism nodes for general RPC and to get experience. It should be able to do the deployment for Gnosis Payments in the next week. All set up for EDCON (May 19-23) Shared the API key yesterday, hasn’t received any updates from Burner Wallet. Would like to get a version of the wallet in order not to have any updates. Gateway is fine with increasing rps and nodes.
+**Gateway** : All set up for EDCON (May 19-23) Shared the API key yesterday, hasn’t received any updates from Burner Wallet. Would like to get a version of the wallet in order not to have any updates. Gateway is fine with increasing rps and nodes.
 Need information from Gnosis. Deposit UI needs to be updated for the hard fork.
 
 # Devnet

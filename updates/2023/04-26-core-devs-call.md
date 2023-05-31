@@ -30,8 +30,7 @@ April 26, 2023
 * **Nimbus**: No updates.
 
 # Chain Infra
-**Gateway** : No peers found on Devnet (probably just the different genesis). Started provisioning an Optimism setup
-Bedrock Optimism. The same one will be reused for Oly
+**Gateway** : No peers found on Devnet (probably just the different genesis).
 
 # Devnet
 
