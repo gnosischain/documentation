@@ -15,7 +15,7 @@ export default function MetaMaskAddButton() {
           chainName: "Gnosis",
           nativeCurrency: {
               name: "xDai",
-              symbol: "xDai",
+              symbol: "XDAI",
               decimals: 18,
           },
           rpcUrls: ["https://rpc.gnosischain.com/"],

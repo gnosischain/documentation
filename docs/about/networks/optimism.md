@@ -6,8 +6,8 @@ keywords: [optimism, gnosis optimism]
 
 # Optimism on Gnosis
 
-:::danger
-Gnosis will be sunsetting this legacy experimental deployment of Optimism on Gnosis end-March 2023.
+:::danger DEPRECATED
+Optimism on Gnosis was deprecated on March 2023. We keep this page for reference.
 Do NOT deposit funds, they will not be withdrawable.
 :::
 
@@ -17,18 +17,13 @@ Deployment processes are similar to using [Optimism with Ethereum](https://commu
 
 
 | Parameter                        | Value                                                                         |
-| -------------------------------- | ----------------------------------------------------------------------------- |
-| Network Name                     | Optimism on Gnosis                                                            |
-| Chain ID                         | 300                                                                           |
-| RPC Endpoint                     | https://optimism.gnosischain.com                                              |
-| WebSocket Endpoint               | wss://optimism.gnosischain.com/wss                                            |
-| Block Explorer                   | [https://blockscout.com/xdai/optimism](https://blockscout.com/xdai/optimism)  |
-| L1 (GC) Contract Addresses       | [L1 Addresses](#l1-contract-addresses)                                        |
-| L2 (Optimism) Contract Addresses | [L2 Addresses](#l2-contract-addresses)                                        |
+| -------------------------------- | ---------------------- |
+| Network Name                     | Optimism on Gnosis     |
+| Chain ID                         | 300                    |
 
 ## Make a Deposit
 
-:::danger
+:::danger DEPRECATED NETWORK!
 Do NOT deposit funds, they will not be withdrawable.
 :::
 
