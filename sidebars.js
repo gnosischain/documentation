@@ -64,7 +64,6 @@ const sidebars = {
       items: [
         "about/networks/mainnet",
         "about/networks/chiado",
-        "about/networks/optimism",
       ]
     },
     {
@@ -177,6 +176,16 @@ const sidebars = {
         "developers/building/full-stack-dapp",
         "developers/building/token",
         "developers/building/nft",
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Building Account Abstraction',
+      collapsed: false,
+      link: {type: 'doc', id: 'developers/account-abstraction/safe'},
+      items: [
+        "developers/account-abstraction/safe",
+        "developers/account-abstraction/gelato",
       ],
     },
     {
@@ -377,138 +386,158 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Wallets',
-      collapsed: false,
+      label: 'Account Abstraction',
+      collapsed: true,
       link: {type: 'doc', id: 'tools/wallets/README'},
       items: [
         {
-          type: 'category',
-          label: 'MetaMask',
-          collapsed: true,
-          link: {type: 'doc', id: 'tools/wallets/metamask/README'},
-          items: [
+          type:'category',
+          label: 'Wallet',
+          collapsed: 'false',
+          link: {type: 'doc', id: 'tools/wallets/README'},
+          items:[
             {
-              type: 'link',
-              label: 'Add custom tokens',
-              href: 'https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask',
+              type: 'category',
+              label: 'MetaMask',
+              collapsed: true,
+              link: {type: 'doc', id: 'tools/wallets/metamask/README'},
+              items: [
+                {
+                  type: 'link',
+                  label: 'Add custom tokens',
+                  href: 'https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask',
+                },
+                'tools/wallets/metamask/change-rpc-url',
+                {
+                  type: 'link',
+                  label: 'With a Ledger or Trezor',
+                  href: 'https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet',
+                },
+              ],
             },
-            'tools/wallets/metamask/change-rpc-url',
             {
-              type: 'link',
-              label: 'With a Ledger or Trezor',
-              href: 'https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet',
+              type: 'category',
+              label: 'Hardware',
+              collapsed: true,
+              items: [
+                'tools/wallets/dcent',
+                'tools/wallets/ledger',
+                'tools/wallets/trezor',
+              ],
             },
-          ],
+            {
+              type: 'category',
+              label: 'Software',
+              collapsed: true,
+              items: [
+                {
+                  type: 'link',
+                  label: 'Alpha Wallet',
+                  href: 'https://alphawallet.com/asset/the-best-wallet-for-xdai/',
+                },
+                {
+                  type: 'link',
+                  label: 'Ambire Wallet',
+                  href: 'https://www.ambire.com/',
+                },
+                {
+                  type: 'link',
+                  label: 'Coinbase Wallet',
+                  href: 'https://www.coinbase.com/wallet',
+                },
+                {
+                  type: 'link',
+                  label: 'DEX Wallet',
+                  href: 'https://www.dexwallet.io/',
+                },
+                {
+                  type: 'link',
+                  label: 'DinoWallet',
+                  href: 'https://dinowallet.org/',
+                },
+                {
+                  type: 'link',
+                  label: 'Frame',
+                  href: 'https://frame.sh/',
+                },
+                {
+                  type: 'link',
+                  label: 'Mt Pelerin',
+                  href: 'https://www.mtpelerin.com/bridge-wallet',
+                },
+                {
+                  type: 'link',
+                  label: 'Minerva Wallet',
+                  href: 'https://minerva.digital/',
+                },
+                {
+                  type: 'link',
+                  label: 'MyCrypto',
+                  href: 'https://app.mycrypto.com/',
+                },
+                {
+                  type: 'link',
+                  label: 'Nabox Wallet',
+                  href: 'https://nabox.io/',
+                },
+                {
+                  type: 'link',
+                  label: 'O3Labs',
+                  href: 'https://o3.network/',
+                },
+                {
+                  type: 'link',
+                  label: 'Pillar Wallet',
+                  href: 'https://www.pillar.fi/',
+                },
+                {
+                  type: 'link',
+                  label: 'Poketto Cash',
+                  href: 'https://poketto.cash/',
+                },
+                {
+                  type: 'link',
+                  label: 'Portis Wallet',
+                  href: 'https://wallet.portis.io/',
+                },
+                {
+                  type: 'link',
+                  label: 'Rabby Wallet',
+                  href: 'https://rabby.io/',
+                },
+                {
+                  type: 'link',
+                  label: 'TokenPocket',
+                  href: 'https://tokenpocket-gm.medium.com/how-to-add-xdai-chain-through-adding-custom-network-72d95597b017',
+                },
+                {
+                  type: 'link',
+                  label: 'Wallet3',
+                  href: 'https://wallet3.io/',
+                }
+              ],
+            },
+          ]
         },
-        'tools/wallets/safe',
         {
           type: 'category',
-          label: 'Hardware',
+          label: 'Account Abstraction',
           collapsed: true,
-          items: [
-            'tools/wallets/dcent',
-            'tools/wallets/ledger',
-            'tools/wallets/trezor',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Software',
-          collapsed: true,
-          items: [
-            {
-              type: 'link',
-              label: 'Alpha Wallet',
-              href: 'https://alphawallet.com/asset/the-best-wallet-for-xdai/',
-            },
-            {
-              type: 'link',
-              label: 'Ambire Wallet',
-              href: 'https://www.ambire.com/',
-            },
-            {
-              type: 'link',
-              label: 'Coinbase Wallet',
-              href: 'https://www.coinbase.com/wallet',
-            },
-            {
-              type: 'link',
-              label: 'DEX Wallet',
-              href: 'https://www.dexwallet.io/',
-            },
-            {
-              type: 'link',
-              label: 'DinoWallet',
-              href: 'https://dinowallet.org/',
-            },
-            {
-              type: 'link',
-              label: 'Frame',
-              href: 'https://frame.sh/',
-            },
-            {
-              type: 'link',
-              label: 'Mt Pelerin',
-              href: 'https://www.mtpelerin.com/bridge-wallet',
-            },
-            {
-              type: 'link',
-              label: 'Minerva Wallet',
-              href: 'https://minerva.digital/',
-            },
-            {
-              type: 'link',
-              label: 'MyCrypto',
-              href: 'https://app.mycrypto.com/',
-            },
-            {
-              type: 'link',
-              label: 'Nabox Wallet',
-              href: 'https://nabox.io/',
-            },
-            {
-              type: 'link',
-              label: 'O3Labs',
-              href: 'https://o3.network/',
-            },
-            {
-              type: 'link',
-              label: 'Pillar Wallet',
-              href: 'https://www.pillar.fi/',
-            },
-            {
-              type: 'link',
-              label: 'Poketto Cash',
-              href: 'https://poketto.cash/',
-            },
-            {
-              type: 'link',
-              label: 'Portis Wallet',
-              href: 'https://wallet.portis.io/',
-            },
-            {
-              type: 'link',
-              label: 'Rabby Wallet',
-              href: 'https://rabby.io/',
-            },
-            {
-              type: 'link',
-              label: 'TokenPocket',
-              href: 'https://tokenpocket-gm.medium.com/how-to-add-xdai-chain-through-adding-custom-network-72d95597b017',
-            },
-            {
-              type: 'link',
-              label: 'Wallet3',
-              href: 'https://wallet3.io/',
-            }
-          ],
-        },
+          link: {type: 'doc', id: 'tools/wallets/safe'},
+          items:[
+            'tools/wallets/safe',
+            'tools/wallets/linen'
+          ]
+        }
+
+
+  
       ],
     },
     {
       type: 'category',
       label: 'Faucets',
-      collapsed: true,
+      collapsed: false,
       link: {type: 'doc', id: 'tools/faucets/README'},
       items: [
         {
@@ -521,6 +550,11 @@ const sidebars = {
           label: 'Stakely',
           href: 'https://stakely.io/en/faucet/gnosis-chain-xdai',
         },
+        {
+          type: 'link',
+          label: 'Prussia.dev',
+          href: 'https://faucet.prussia.dev/xdai',
+        },        
         'tools/faucets/tokens',
       ],
     },
@@ -534,8 +568,8 @@ const sidebars = {
         'tools/analytics/beacon-chain',
         {
           type: 'link',
-          label: 'Gnosis Netstats',
-          href: 'http://dai-netstat.poa.network',
+          label: 'Goldsky',
+          href: 'https://docs.goldsky.com/indexing',
         },
         {
           type: 'link',
@@ -551,11 +585,6 @@ const sidebars = {
           type: 'link',
           label: 'Curvegrid',
           href: 'https://www.curvegrid.com/docs/introduction-to-multibaas',
-        },
-        {
-          type: 'link',
-          label: 'DappQuery',
-          href: 'https://dappquery.com/',
         },
         {
           type: 'link',
