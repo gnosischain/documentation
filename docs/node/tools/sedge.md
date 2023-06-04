@@ -10,7 +10,7 @@ Instructions to get started with Nethermind Sedge found [here](https://docs.sedg
 
 **For Chiado Test network:**
 
-Instructions for Chiado Test Network can be found [here](https://docs.sedge.nethermind.io/docs/quickstart/chiado) 
+Instructions for Chiado Test Network can be found [here](https://docs.sedge.nethermind.io/docs/networks/chiado) 
 
 
 ```mdx-code-block
