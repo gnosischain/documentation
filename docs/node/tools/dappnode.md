@@ -4,12 +4,10 @@ title: DAppNode
 
 # DAppNode
 
-[DAppNode](https://dappnode.io/) is a simple platform for deploying and hosting DApps, P2P clients, and blockchain nodes. It provides a user-friendly way to set up and configure nodes with a couple of clicks.
+[DAppNode](https://dappnode.com/) is a simple platform for deploying and hosting DApps, P2P clients, and blockchain nodes. It provides a user-friendly way to set up and configure nodes with a couple of clicks.  It is a Free Open Source Software, and can be used in the following ways
 
-There are two ways to use DAppNode:
-
-1. Purchase one of their pre-installed [DAppNode servers](https://dappnode.io/collections/all). They currently come with four free Gnosis validators.
-2. Install DAppNode on any compatible hardware or a VPS. The installation is done using the command line interface (CLI) by following the [Installing DAppNode on Custom Hardware](#custom-hardware) steps below.
+1. Purchase one of their pre-installed [DAppNode Servers](https://dappnode.com/en-us/collections/frontpage). These are designed to be able to be run by those with very little technical know-how, and requires no command line at any point.
+2. Install DAppNode software on any compatible hardware or even a VPS. The installation is done by following the their official installation documentation [Here](https://docs.dappnode.io/user/quick-start/Core/installation)
 
 ## Using DAppNode {#install-on-dappnode}
 
@@ -17,7 +15,7 @@ This guide was done with the inestimable help of DAppNode Team Member `@voss`, w
 
 ### Step 1. Install the required packages for validating
 
-Once you have access to the dappnode UI, go to the stakers-ui page , you can access by clicking on http://my.dappnode/#/stakers/gnosis or click in Stakers section you can find in the left menu, then click on the Gnosis tab.
+Once you have access to the Dappnode UI, go to the Stakers-UI page , you can access by clicking on http://my.dappnode/#/stakers/gnosis or click on the Stakers section you can find in the left Nav Bar, then click on the Gnosis tab.
 
 ![Select Stakers in the left side menu](/img/node/dappnode-left-menu.png)
 
@@ -118,7 +116,7 @@ Return to your DAppNode’s Admin UI and navigate to the [info page of the Web3S
 
 ![DAppNode Step 4](/img/node/dappnode-step4.png)
 
-Open the UI by clicking the [`🏠Ui`](http://ui.web3signer-gnosis.dappnode/) link, then click the `Import Keystores` button on the lower part of the Web3Signer UI.
+Open the UI by clicking the [`🏠Ui`](http://brain.web3signer-gnosis.dappnode/) link, then click the `Import Keystores` button on the lower part of the Web3Signer UI.
 
 ![DAppNode Step 4b](/img/node/dappnode-step4b.png)
 
@@ -135,7 +133,7 @@ You are now ready to fund these validators and start validating.
 ### Step 4: Fund Your Validators
 
 :::tip
-In case you need some xDai for transaction fees you can get some from the [official xDai faucet for Gnosis](https://gnosisfaucet.com/).
+In case you need some xDai for transaction fees you can get some from the [Official xDai faucet for Gnosis](https://gnosisfaucet.com/).
 
 :::
 
@@ -145,29 +143,5 @@ In case you need some xDai for transaction fees you can get some from the [offic
 4. Your deposit file will be validated and list the number of validator deposits you are making and the required GNO to deposit. Click `Deposit` to continue.
 5. Check that you understand the risks and ensure you are interacting with the correct contract before proceeding.
 6. Click `Ok` and confirm the transaction in your wallet to complete the deposit.
+7. Our proxy smart contract will deposit the GNO(s) to your validators! YOU control the private keys, YOU control the withdrawal key(s)... these validators are now **yours**. Take good care of them!
 
-7. Our proxy smart contract will deposit the 4 GNO to your validators! YOU control the private keys, YOU control the withdrawal key... these validators are now **yours**. Take good care of them!
-
-:::tip DAppNode <\> Gnosis Chain Incentive Program
-If you are claiming the 4 Gnosis validators from the incentive program, select the DAppNode tab instead. Be sure to use the same wallet that you provided when placing your DAppNode order.
-
-If you encounter an issue claiming your incentive program validators, such as an error about your address not being whitelisted or that it has expired, please visit the [DAppNode Discord Server](https://discord.gg/dappnode) and open a support ticket in [`#1-sales-support-ticket`](https://discord.gg/mGtA9emHw3).
-
-:::
-
-## Installing DAppNode on Custom Hardware {#custom-hardware}
-
-1. Start with a fresh installation of Debian or Ubuntu.
-2. Log in with an account with `sudo` privileges.
-3. Install the prerequisites: [Docker](https://docs.docker.com/install/), [Docker Compose](https://docs.docker.com/compose/install/), and [xz](https://tukaani.org/xz/). The prerequisites can be installed manually or by using this command:
-   `curl https://prerequisites.dappnode.io | sudo sh`
-4. Run the installer script to install DAppNode:
-   `curl https://installer.dappnode.io | sudo sh`
-5. Once the installation has finished, reboot your machine:
-   `sudo shutdown -r now`
-6. DAppNode will try to automatically prepare for the first access. DAppNode's official documentation explains how to connect using the [four supported connection methods](https://docs.dappnode.io/user/quick-start/first-steps).
-7. Once you have successfully connected to DAppNode, follow the [Using DAppNode](#install-on-dappnode) steps above.
-
-Check DAppNode documentation:
-- [Hardware Minimum and Recommended Specs](https://docs.dappnode.io/get-started/installation/custom-hardware/hardware-recommendations)
-- [Installation Overview](https://docs.dappnode.io/user/quick-start/first-steps)
