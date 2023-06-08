@@ -116,7 +116,7 @@ Requirements vary client to client, for more detail see the associated system re
 
 | Consensus Layer |                                                                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Lighthouse      | [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/system-requirements.html)                                     |
+| Lighthouse      | [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/installation.html#recommended-system-requirements)                                     |
 | Lodestar        | [Lodestar: Specifications](https://chainsafe.github.io/lodestar/#specifications)                                                      |
 | Nimbus          | [Nimbus: Hardware](https://nimbus.guide/hardware.html)                                                                                |
 | Teku            | TBD                                                                                                                                   |
