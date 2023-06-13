@@ -12,7 +12,7 @@ Validator withdrawal allows a validator's account balance get withdrawn from Bea
 
 There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.    
 **Partial Withdrawal**: Any balance in excess of 32mGNO from the account balance get withdrawn back to withdrawal address, automatically.     
-**Full Withdrawal**: All the balance from validator's account get withdrawan back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](/node/management/voluntary-exit) message and broadcasting it to the network. It is irreversible.    
+**Full Withdrawal**: All the balance from validator's account get withdrawan back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](./voluntary-exit.md) message and broadcasting it to the network. It is irreversible.    
 
 ## What is the different between validator withdrawal in Gnosis Chain and Ethereum?
 
@@ -26,15 +26,15 @@ Withdrawals are handled by a smart contract on Gnosis Chain
 * same contract as the deposit one
 * pays out in GNO
 * If there's no GNO left in the contract, withdrawals are retried whenever it's topped up
-    * The failed withdrawal queue is cleared at a constat rate per slot (4-16/slot, TBD), in addition to new withdrawals.
+    * The failed withdrawal queue is cleared at a constant rate per slot (4-16/slot, TBD), in addition to new withdrawals.
 
 **Reference**
 1. [Gnosis Chain Withdrawals spec](https://github.com/gnosischain/specs/blob/master/execution/withdrawals.md)
-2. [Withdrawal Contract](https://github.com/gnosischain/deposit-contract/pull/25)
+2. [Withdrawal Contract](https://github.com/gnosischain/deposit-contract/blob/master/contracts/SBCDepositContract.sol)
 
 ## What action should a validator take?
 ### Check Withdrawal Credential
-For any type of withdrawals, a validator need to have 0x01 withdrawal credential. You’re fine if you used `--eth1_withdrawal_address` to create your validator keys. If not, tooling will be made available.
+For any type of withdrawals, a validator need to have `0x01` withdrawal credential. You’re fine if you used `--eth1_withdrawal_address` to create your validator keys. If not, tooling will be made available.
 
 
 There are 2 ways to check withdrawal credential of a validator:
@@ -51,7 +51,7 @@ The general steps to change withdrawal credential will be:
 1. Generate BLStoExecution file using tools like [ethdo](https://notes.ethereum.org/@launchpad/withdrawals-guide#BLS-to-execution-with-ethdo) or manually.
 
 
-2. Post to file to BLStoExecution pool. 
+2. Post the file to the BLStoExecution pool. 
 
 
 ```mdx-code-block
