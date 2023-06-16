@@ -19,7 +19,7 @@ You can read more on the Ethereum merge here: [https://ethereum.org/en/upgrades/
 
 ### Users
 
-You do not need to do anything. Your funds remain as-is during the transition. There were NOT be any new token issued before, during or after the Merge. The [$GNO token](/about/tokens/gno) continue to be used for staking, while the [$xDai token](/about/tokens/xdai) is used as the native gas token. 
+You do not need to do anything. Your funds remain as-is during the transition. There were NOT any new token issued before, during or after the Merge. The [$GNO token](/about/tokens/gno) continues to be used for staking, while the [$xDai token](/about/tokens/xdai) is used as the native gas token. 
 
 :::danger scammer alert
 Please be vigilant of scammers who may use this occasion to launch scam tokens, or phish for seed phrases.  
