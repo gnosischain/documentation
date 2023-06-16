@@ -8,9 +8,9 @@ keywords: [governance board, bridge governance]
 ## Key Information
 
 ### Overview
-In response to increased usage and value locked in the xDai bridge, a proposal was introduced to extend security and decision making powers to a wider group of participants (governors).
-The proposal was accepted, and governance by means of a multi-signature Gnosis Safe was put into place initially on the Ethereum side on 2 October, 2020. Once Gnosis Safe was deployed to xDai, updated governance was enacted on the xDai chain on 23 October, 2020.  
-The governing board is responsible for managing bridge operations on both sides of the bridge (contracts are deployed on the Ethereum and Gnosis side). 7 signatures are required to approve any management proposal. 
+In response to increased usage and value locked in the xDai bridge and Omnibridge, a proposal was introduced to extend security and decision making powers to a wider group of participants (governors).
+The proposal was accepted, and governance by means of a multi-signature Gnosis Safe was put into place initially on the Ethereum side on 2 October, 2020. Once Gnosis Safe was deployed to Gnosis Chain, updated governance was enacted on the xDai chain(now Gnosis Chain) on 23 October, 2020.  
+The governing board is responsible for managing bridge operations on both sides of the bridge (contracts are deployed on the Ethereum and Gnosis side). 8 signatures are required to approve any management proposal. 
 Operations may include:
 * Bridge contract updates.
 * Contract parameters updates such as bridge limits, finality threshold, gas price fallback etc.
@@ -26,15 +26,16 @@ All actions are managed through Gnosis Safe accounts, one on the Ethereum mainne
 
 ### Current Bridge Governors
 
-There are currently 15 Bridge Governors, of which 7-of-15 are required to pass a proposal.  
+There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a proposal.  
 
 |                    |              |             |
 |--------------------|--------------|-------------|
 | GnosisDAO          | Metacartel   | RaidGuild   |
-| Protofire          | TokenBridge  | Lab10       |
-| Gateway            | Gnosis Team  | Giveth      |
+| Protofire          | Succinct Labs| Lab10       |
+| Gateway            | Gnosis Bridge Team  | Giveth      |
 | KarpatkeyDAO       | 1Hive        | Peerion     |
 | 01Node             | Cow Protocol | Gnosis Safe |
+| Agave              |              |             | 
 
 
 

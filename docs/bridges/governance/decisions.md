@@ -8,6 +8,12 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Remove two governor wallets, add three new governor wallets and remove HAUS token fee.
+
+🗳 Justification: We removed two inactive governor wallets from ex-xDAI team and add three new governor wallets: Succinct Labs, Agave, Gnosis Bridge team. Additionally, we increased governance Safe wallet’s threshold from 7 to 8, resulting in 8-of-16 requirement to pass a proposal, strengthening the resilience of the bridge governance. Besides, as requested from DAOHAUS team, we removed HAUS token fee, making it a complete fee-less operation to bridge HAUS token between ETH and Gnosis Chain.
+
+✅ Implemented: Jun 12, 2023
+
 ## Upgrade BNB-GC Omnibridge mediator to stop accepting any new token locks and mints
 
 🗳 Justification: As part of the longer term plan to decommission the BNB-GC Omnibridge (more info [https://forum.gnosis.io/t/bridge-to-binance-update/6624](https://forum.gnosis.io/t/bridge-to-binance-update/6624)), we want to stop any new token locks and mints from either BNB chain or Gnosis Chain.
