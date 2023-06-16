@@ -114,7 +114,7 @@ For ETH1 withdrawal credentials, make sure you have full control over the specif
 
 * **EOA address**. Make sure to keep its private key / mnemonic in a secure place, so that you will have access to it once withdrawals are enabled.
 * **Gnosis Safe multisig**. Make sure you can execute calls on behalf of the safe address once withdrawals are enabled.
-* **Stub proxy**. For advanced users and service providers, another option is to deploy a proxy contract with an empty implementation. Once all details about the withdrawals are known, you can upgrade your proxy to any implementation that suits you needs. Just make sure you have full control over the upgradeability procedure, so that you will be able to update an implementation address once withdrawals are enabled.
+* **Stub proxy**. For advanced users and service providers, another option is to deploy a proxy contract with an empty implementation. Once all details about the withdrawals are known, you can upgrade your proxy to any implementation that suits your needs. Just make sure you have full control over the upgradeability procedure, so that you will be able to update an implementation address once withdrawals are enabled.
 
 ## Validator Setup (Technical)
 
