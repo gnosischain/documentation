@@ -8,7 +8,7 @@ Image: Diagram representing the composite client architecture of a Gnosis node
 
 ## Architecture
 
-Gnosis is a open peer-to-peer network of nodes operated by anyone in the world who runs the Gnosis client software. 
+Gnosis is an open peer-to-peer network of nodes operated by anyone in the world who runs the Gnosis client software. 
 
 Gnosis utilizes the same architecture as Ethereum, and has committed to building together with Ethereum and contributing to the research, engineering and tooling for Ethereum's stack. 
 
