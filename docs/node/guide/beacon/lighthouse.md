@@ -136,16 +136,8 @@ services:
       --http
       --http-address=0.0.0.0
       --http-port=4000
-      --target-peers=50
       --execution-endpoint=http://execution:8551
       --execution-jwt=/jwt.hex
-      --debug-level=info
-      --validator-monitor-auto
-      --subscribe-all-subnets
-      --import-all-attestations
-      --metrics
-      --metrics-port=5054
-      --metrics-address=0.0.0.0
 // highlight-next-line
       --checkpoint-sync-url=https://checkpoint.gnosischain.com/
     logging:
