@@ -48,7 +48,7 @@ graph init
 
 The `<GITHUB_USER>` is your github user or organization name, `<SUBGRAPH_NAME>` is the name for your subgraph, and `<DIRECTORY>` is the optional name of the directory where `graph init` will put the example subgraph manifest.
 
-* _Chose the subgraph name created in step 2 as lowercase-hypenated_
+* _Choose the subgraph name created in step 2 as lowercase-hyphenated_
 
 :::info
 More details are here: [https://thegraph.com/docs/en/developer/create-subgraph-hosted/](https://thegraph.com/docs/en/developer/create-subgraph-hosted/)
