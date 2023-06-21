@@ -84,7 +84,7 @@ $ sudo ufw allow 30303
 
 ### Allow Consensus Client port 9000
 
-Most Consensus Layer Clients uses port `9000` to communicate with the Consensus Layer network peers, with the exception of Prysm, which uses ports `13000/TCP` and `12000/UDP` instead. 
+Most Consensus Layer Clients use port `9000` to communicate with the Consensus Layer network peers, with the exception of Prysm, which uses ports `13000/TCP` and `12000/UDP` instead. 
 
 ```shell
 ## Lighthouse, Nimbus, Teku, Lodestar

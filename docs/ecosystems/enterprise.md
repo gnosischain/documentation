@@ -62,7 +62,7 @@ This post should help you to do your own risk assessment, as a rule of thumb, th
 * Running your Smart Contracts on Gnosis Chain makes them very inexpensive and intuitive to use for you customers (all prices are stable in USD).
 * Security differs from the Ethereum Mainnet.
 * In a financial environment, market-cap differences and incentive structures should be considered when determining the best fit and risk profile.
-* Gnosis Chain provides a ready-made bootstraping environment for prototyping, PoCs, MVPs and more.
+* Gnosis Chain provides a ready-made bootstrapping environment for prototyping, PoCs, MVPs and more.
 * Native stable currency makes xDai distinct from other chains and facilitates use cases not possible on chains with native volatile crypto currencies.
 
 ### Sample Use Case: Hashlocked Payment

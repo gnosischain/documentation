@@ -14,7 +14,7 @@ keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance
 
 * [Honeyswap](https://honeyswap.org): Honeyswap is a Decentralized Exchange
 
-* [Swapr](https://swapr.eth.limo/): Swapr is a multichain, governance-enabled Aitomated Market Maker (AMM) based on a fork of Uniswap, governed by DXDAO
+* [Swapr](https://swapr.eth.limo/): Swapr is a multichain, governance-enabled Automated Market Maker (AMM) based on a fork of Uniswap, governed by DXDAO
 
 * [Rubic](https://rubic.exchange/): One-Click Cross-Chain Swap. Rubic can swap any of 15,000+ tokens, on and between 13 blockchains in one transaction
 
@@ -76,7 +76,7 @@ abuse
 
 * [DEFIYIELD](https://defiyield.app/): Asset Management Dashboard secured by a Security Blockchain
 
-* [DEFI WATCH](https://defi.watch): The best way to make money in DeFi. Track perfomance of your crypto portfolio and find the best opportunities to earn more in DeFi.
+* [DEFI WATCH](https://defi.watch): The best way to make money in DeFi. Track performance of your crypto portfolio and find the best opportunities to earn more in DeFi.
 
 * [APY Vision](https://apy.vision): Historical P+L tool in DeFi for tracking your LP & rewards cross-chain
 

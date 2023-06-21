@@ -182,7 +182,7 @@ More info -> [https://medium.com/immunefi/xdai-stake-hosts-2-000-000-bug-bounty-
 
 ## FAQ
 
-1. Is the bug bounty program is time limited?    
+1. Is the bug bounty program time limited?    
     No.
     
 2. How to submit a bug on Immunefi?      
