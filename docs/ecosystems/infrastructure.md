@@ -22,7 +22,7 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, 1Hive, WrapETH, Punk Domains, Origin
 
 * [Request](https://request.network): The open network for all payment requests 
 
-* [Hopr](https://hoprnet.org): Changing Data Privacy For Good
+* [HOPR](https://hoprnet.org): A decentralised and fully incentivised mixnet for transport layer privacy; completely decouples your on-chain activity from your personal identity
 
 * [Gelato Network](https://www.gelato.network/): Enabling developers to create augmented smart contracts
 that are automated, gasless & off-chain aware
