@@ -96,8 +96,7 @@ https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
 
 ### GnosisPools.info
 
-  [GnosisPools.info](https://gnosispools.info/d/Pz05j7dVk/gnosispools-public?orgId=1&refresh=5m&from=now-24h&to=now) allows you to monitor the performance of 
-  Gnosis consensus staking pool. Some of the metrics you can track include:
+  [GnosisPools.info](https://gnosispools.info/d/Pz05j7dVk/gnosispools-public?orgId=1&refresh=5m&from=now-24h&to=now) allows you to monitor the performance of Gnosis consensus staking pool. Some of the metrics you can track include:
 
   - % of inactive validators
   - Delta in rewards/penalties between consecutive epochs
