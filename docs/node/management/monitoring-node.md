@@ -16,9 +16,9 @@ To monitor the network, options include ethstats, forkmon, beacon.gnosischain, a
 
 ![Prometheus-Grafana-NodeExporter](../../../static/img/node/prometheus-grafana.png)
 
-To set up these tools, please refer the exellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/eth-educators/ethstaker-guides/blob/main/monitoring.md). 
+To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/eth-educators/ethstaker-guides/blob/main/monitoring.md). 
 
-You may also refer the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)and [CoinCashew's guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-i-installation/monitoring-your-validator-with-grafana-and-prometheus) for best monitoring practices.
+You may also refer to the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)and [CoinCashew's guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-i-installation/monitoring-your-validator-with-grafana-and-prometheus) for best monitoring practices.
 
 
 In order to expose your node's clients data to Prometheus, please ensure the execution or consensus client has enabled the appropriate metrics flag.
@@ -93,8 +93,8 @@ https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
 
 
 </Tabs>
-
-
+     
+ 
 ## Monitoring the network
 
 ### Ethstats
@@ -122,6 +122,14 @@ Forkmon (Fork monitor) is another tool to monitor Node's status.
 
 ![d14n dashboard](../../../static/img/node/monitor-node/d14n.png)
 
+### GnosisPools.info
+
+[GnosisPools.info](https://gnosispools.info/d/Pz05j7dVk/gnosispools-public?orgId=1&refresh=5m&from=now-24h&to=now) allows you to monitor the performance of Gnosis consensus staking pool. Some of the metrics you can track include:
+
+  - % of inactive validators
+  - Delta in rewards/penalties between consecutive epochs
+  - Proposed and missed blocks for each epoch
+    
 ### Block explorer
 #### Execution Layer
 * **Gnosisscan**     
@@ -141,7 +149,7 @@ Forkmon (Fork monitor) is another tool to monitor Node's status.
 
 
 * **beacon.gnosischain**     
-[beacon.gnosischain](https://beacon.gnosischain.com/) provides insight on consensus layer sucha as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
+[beacon.gnosischain](https://beacon.gnosischain.com/) provides insight on consensus layer such as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
 
   To check your Consensus Layer Reward (in mGNO):
   1. Search your validator by Index or Public Key.

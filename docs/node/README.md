@@ -19,7 +19,7 @@ title: Run a Node
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
-- Gnosis aims to to be a learning ground for a new generation of node runners, requiring only 1 GNO (~$100 at Nov 2022) instead of the 32 ETH (~$38,400 at Nov 2022) minimum required for Ethereum
+- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~$100 at Nov 2022) instead of the 32 ETH (~$38,400 at Nov 2022) minimum required for Ethereum
 - Gnosis runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus. 
 
 ### Proof-of-Stake
@@ -32,18 +32,18 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 
 - Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
 - 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
-- Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavor. 
+- Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior. 
 
 ## Choosing an Approach
 Refer from [Ethereum official docs](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#choosing-approach).
 
-To spin up a node, you must choose the client implementation(of both execution and consensus clients), the environment(hardawre, system), and the parameters for client settings.
+To spin up a node, you must choose the client implementation(of both execution and consensus clients), the environment(hardware, system), and the parameters for client settings.
 
-To choose from client implementations, see all the available Gnosis and Chiado ready exetion clients, consensus clients, and learn about client diversity.
+To choose from client implementations, see all the available Gnosis and Chiado ready execution clients, consensus clients, and learn about client diversity.
 
 Decide  whether to run the software on your own hardware or in the cloud, considering clients' requirements.
 
-Once the environment is set up, install the chosen clietns either with beginner-friendly interface or manually using a terminal with advanced options.
+Once the environment is set up, install the chosen clients either with beginner-friendly interface or manually using a terminal with advanced options.
 
 When the node is running and syncing, you are ready to use it. You must always keep an eye on its maintenance to avoid penalties.
 

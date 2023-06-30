@@ -14,7 +14,7 @@ title: Validator Deposits
 
 - Validators need to be funded using [GNO on Gnosis Chain](../../../about/tokens/gno.md)
 - You will need to bridge GNO over from Ethereum to Gnosis Chain
-- During the deposit process, [1 GNO](../../../about/tokens/gno.md) will converted into [32 mGNO](./../../../about/tokens/gno.md#mgno-token), to replicate the experience of having [32 ETH](https://ethereum.org/en/staking/) required for [Ethereum staking](https://ethereum.org/en/staking/). 
+- During the deposit process, [1 GNO](../../../about/tokens/gno.md) will be converted into [32 mGNO](./../../../about/tokens/gno.md#mgno-token), to replicate the experience of having [32 ETH](https://ethereum.org/en/staking/) required for [Ethereum staking](https://ethereum.org/en/staking/). 
 
 :::tip
 
