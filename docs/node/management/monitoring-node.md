@@ -93,8 +93,8 @@ https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
 
 
 </Tabs>
-
-
+     
+ 
 ## Monitoring the network
 
 ### Ethstats
@@ -122,6 +122,14 @@ Forkmon (Fork monitor) is another tool to monitor Node's status.
 
 ![d14n dashboard](../../../static/img/node/monitor-node/d14n.png)
 
+### GnosisPools.info
+
+[GnosisPools.info](https://gnosispools.info/d/Pz05j7dVk/gnosispools-public?orgId=1&refresh=5m&from=now-24h&to=now) allows you to monitor the performance of Gnosis consensus staking pool. Some of the metrics you can track include:
+
+  - % of inactive validators
+  - Delta in rewards/penalties between consecutive epochs
+  - Proposed and missed blocks for each epoch
+    
 ### Block explorer
 #### Execution Layer
 * **Gnosisscan**     
