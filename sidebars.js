@@ -382,6 +382,11 @@ const sidebars = {
           label: 'BlockSpaces',
           href: 'https://www.blockspaces.com/web3-infrastructure',
         },
+        {
+          type: 'link',
+          label: 'Chain49',
+          href: 'https://chain49.com/',
+        },
       ],
     },
     {
