@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 06/14/2023
+title: Core Devs Call - 21/06/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -19,20 +19,21 @@ The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It pro
 June 21, 2023
 
 # Client Team Updates
+
 ## EL
 
-* **Nethermind**: Preparing new release Testing withdrawal related things on Gnosis / Devnets. Comparing pre- and post-shanghai. Working on Hive tests.They will take a look at the new contract.
+- **Nethermind**: Preparing new release Testing withdrawal related things on Gnosis / Devnets. Comparing pre- and post-shanghai. Working on Hive tests.They will take a look at the new contract.
 
-* **Erigon**: No updates.
-* **Geth**: Guillaume not available and is having troubles calling the block reward contract, will contact Andrey
-
+- **Erigon**: No updates.
+- **Geth**: Guillaume not available and is having troubles calling the block reward contract, will contact Andrey
 
 ## CL
 
-* **Prysm**: No updates.
-* **Nimbus**: No updates.
+- **Prysm**: No updates.
+- **Nimbus**: No updates.
 
 # Chain Infra
+
 **Gateway** : Issues with Erigon archival nodes caused by snapshots.Erigon team knows, there’s an issue on GitHub. There is a workaround.
 
 # To-do
@@ -58,25 +59,26 @@ Weekday
 
 Time between 11 and 19 UTC
 Slots
-* Slot 10067968 ts 1689333180 UTC Fri 14/07/2023, 11:13:00
-* Slot 10125312 ts 1689619900 UTC Mon 17/07/2023, 18:51:40
-* Slot 10141696 ts 1689701820 UTC Tue 18/07/2023, 17:37:00
-* Slot 10158080 ts 1689783740 UTC Wed 19/07/2023, 16:22:20
-* Slot 10174464 ts 1689865660 UTC Thu 20/07/2023, 15:07:40
-* Slot 10190848 ts 1689947580 UTC Fri 21/07/2023, 13:53:00
-* Slot 10297344 ts 1690480060 UTC Thu 27/07/2023, 17:47:40
-* Slot 10313728 ts 1690561980 UTC Fri 28/07/2023, 16:33:00
-* Slot 10362880 ts 1690807740 UTC Mon 31/07/2023, 12:49:00
-* Slot 10379264 ts 1690889660 UTC Tue 01/08/2023, 11:34:20
-* Slot 10485760 ts 1691422140 UTC Mon 07/08/2023, 15:29:00
-* Slot 10502144 ts 1691504060 UTC Tue 08/08/2023, 14:14:20q
-* Slot 10518528 ts 1691585980 UTC Wed 09/08/2023, 12:59:40
-* Slot 10534912 ts 1691667900 UTC Thu 10/08/2023, 11:45:00
-* Slot 10608640 ts 1692036540 UTC Mon 14/08/2023, 18:09:00
-* Slot 10625024 ts 1692118460 UTC Tue 15/08/2023, 16:54:20
-* Slot 10641408 ts 1692200380 UTC Wed 16/08/2023, 15:39:40
-* Slot 10657792 ts 1692282300 UTC Thu 17/08/2023, 14:25:00
-* Slot 10674176 ts 1692364220 UTC Fri 18/08/2023, 13:10:20
+
+- Slot 10067968 ts 1689333180 UTC Fri 14/07/2023, 11:13:00
+- Slot 10125312 ts 1689619900 UTC Mon 17/07/2023, 18:51:40
+- Slot 10141696 ts 1689701820 UTC Tue 18/07/2023, 17:37:00
+- Slot 10158080 ts 1689783740 UTC Wed 19/07/2023, 16:22:20
+- Slot 10174464 ts 1689865660 UTC Thu 20/07/2023, 15:07:40
+- Slot 10190848 ts 1689947580 UTC Fri 21/07/2023, 13:53:00
+- Slot 10297344 ts 1690480060 UTC Thu 27/07/2023, 17:47:40
+- Slot 10313728 ts 1690561980 UTC Fri 28/07/2023, 16:33:00
+- Slot 10362880 ts 1690807740 UTC Mon 31/07/2023, 12:49:00
+- Slot 10379264 ts 1690889660 UTC Tue 01/08/2023, 11:34:20
+- Slot 10485760 ts 1691422140 UTC Mon 07/08/2023, 15:29:00
+- Slot 10502144 ts 1691504060 UTC Tue 08/08/2023, 14:14:20q
+- Slot 10518528 ts 1691585980 UTC Wed 09/08/2023, 12:59:40
+- Slot 10534912 ts 1691667900 UTC Thu 10/08/2023, 11:45:00
+- Slot 10608640 ts 1692036540 UTC Mon 14/08/2023, 18:09:00
+- Slot 10625024 ts 1692118460 UTC Tue 15/08/2023, 16:54:20
+- Slot 10641408 ts 1692200380 UTC Wed 16/08/2023, 15:39:40
+- Slot 10657792 ts 1692282300 UTC Thu 17/08/2023, 14:25:00
+- Slot 10674176 ts 1692364220 UTC Fri 18/08/2023, 13:10:20
 
 Agreed on Slot 10379264 ts 1690889660 UTC Tue 01/08/2023, 11:34:20
 
@@ -84,8 +86,7 @@ Most people from Nethermind will be available. Andrew from erigon team will be a
 
 Can Ruben independently check the slot and times so we don’t have the same issue as on Chiado? Test to check if timestamp valid were added on Nethermind
 
-
-# Hive 
+# Hive
 
 [Coinbase issue](https://eips.ethereum.org/EIPS/eip-3651)
 There are two checks for the account access cost. Hardcoded value that is failing on pre-shanghai
@@ -105,17 +106,3 @@ Compare the two
 https://github.com/filoozom/gnosis-withdrawals-scripts/blob/tests/check.js
 Might want to check all `gno.balanceOf(address)` values in between
 How was the contract upgraded regarding the storage layout?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
