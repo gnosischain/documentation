@@ -4,8 +4,7 @@
 
 We need Proof of Stake because it offers several advantages over other consensus mechanisms. First, it is more energy-efficient than methods like Proof of Work, which require significant computational power. PoS reduces the environmental impact of blockchain networks. Second, PoS promotes decentralization by allowing anyone with a stake in the network to participate in block validation. This helps prevent the concentration of power in the hands of a few participants.
 
-The advantages of Proof of Stake include increased energy efficiency, scalability, and security. PoS consumes less energy compared to PoW, making it more sustainable. It also enables better scalability, as it doesn't face the limitations associated with increasing computational power. Additionally, PoS enhances security by providing economic incentives for participants to act honestly. Validators risk losing their staked coins if they behave maliciously, discouraging fraudulent activities and ensuring the network's integrity.
-
+The advantages of Proof of Stake include increased energy efficiency, scalability, and security. PoS consumes less energy compared to PoW, making it more sustainable. It also enables better scalability, as it doesn't face the limitations associated with increasing computational power. PoS enhances security by providing economic incentives for participants to act honestly. Validators risk losing their staked coins if they behave maliciously, discouraging fraudulent activities and ensuring the network's integrity.
 
 
 # Gasper:
@@ -14,7 +13,7 @@ The advantages of Proof of Stake include increased energy efficiency, scalabilit
 
 Gasper addresses the limitations of individual consensus mechanisms. By combining PoS and PoW, Gasper achieves a balance between security and efficiency. It reduces the risk of attacks by requiring participants to solve cryptographic puzzles, making it difficult for malicious actors to manipulate the network. Moreover, Gasper utilizes staking to ensure that even participants with smaller stakes have a chance to validate transactions, promoting decentralization.
 
-Gasper offers several advantages over traditional consensus mechanisms. Firstly, it enhances security by requiring participants to solve puzzles in addition to staking their coins. This makes it more challenging for attackers to compromise the network. Secondly, Gasper is more energy-efficient compared to PoW, as it does not solely rely on computational power. It reduces the environmental impact associated with mining. Lastly, Gasper ensures a fair and democratic participation by allowing participants with various stake sizes to contribute to the consensus process.
+Gasper offers several advantages over traditional consensus mechanisms. Firstly, it enhances security by requiring participants to solve puzzles in addition to staking their coins. This makes it more challenging for attackers to compromise the network. Secondly, Gasper is more energy-efficient compared to PoW, as it does not solely rely on computational power. It reduces the environmental impact associated with mining. Gasper ensures a fair and democratic participation by allowing participants with various stake sizes to contribute to the consensus process.
 
 # Weak Subjectivity:
 
