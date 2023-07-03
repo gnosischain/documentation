@@ -11,7 +11,9 @@ You can also send arbitrary data between Gnosis and Ethereum using the native Ar
 
 The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](/bridges/tokenbridge/omnibridge).
 
-The AMB currently supports Ethereum and Binance Smart Chain, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
+The AMB currently supports Ethereum, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
+
+With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 12mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out how AMB & Omnibridge works with Telepathy validator.
 
 ## Key Information
 
@@ -32,7 +34,7 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
+For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community and ZK Light Client validator Telepathy. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
 
 ### Current Bridge Validators
 
@@ -163,6 +165,34 @@ function requireToPassMessage (address _contract,
 
 [AMB Bridge proxy contact on Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract)  
 [AMB Bridge Proxy Contract in Gnosis](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract)
+
+### How it works with Telepathy validator
+
+![AMB&Omnibridge with Telepathy Validator](../../../static/img/bridges/AMBValidators.png)
+
+\*\* In the graph above, light green compoenents work as the same as [Call a cross-chain method via AMB](#call-a-cross-chain-method-via-amb) on the previous section.
+
+There are 5 key components for Telepathy validator in AMB & Omnibridge:
+
+**Off-chain**
+
+1. Telepathy Relayer: Provide merkle proof for **Telepathy PubSub**, that the `userRequestForAffirmation` event was emitted on Ethereum.
+2. Telepathy Operator: For every ~12 mins (2 epoch in Ethereum), call **Telepathy Light Client** to update header.
+
+**On-Gnosis Chain**
+
+3. Telepathy PubSub: Verify the Merkle proof against the block header and publish the event.
+4. Telepathy Light Client: Generate a proof of consensus for block header and verify on-chain.
+5. Telepathy Validator: Subscribe to `UserRequestForAffirmation` event, and handle the published event by calling `executeAffirmation()` on AMB.
+
+Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 mins for the transaction to get finalized in block and for Telepathy light client to obtain the block header information. Thus, user has to wait for approx. 30 mins for the message to get bridged to Gnosis Chain.
+
+| Role                | Address                                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Telepathy PubSub    | [0xa96c29A4114B414543Bdc9be5616dE270b9e88ec](https://gnosisscan.io/address/0xa96c29A4114B414543Bdc9be5616dE270b9e88ec) |
+| Telepathy Validator | [0xfDBf5711f77B97EA7F1f812832884c7328a682eC](https://gnosisscan.io/address/0xfdbf5711f77b97ea7f1f812832884c7328a682ec) |
+
+For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
 
 ### Security Considerations for Receiving a Call
 

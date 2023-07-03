@@ -14,9 +14,9 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 ## Key Information
 
-[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB.
+[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), Omnibridge bridge is now more secure with trustless zero-knowledge light client technology. Check out how Omnibridge works with Telepathy validator [here](amb-bridge.md#how-it-works-with-telepathy-validator).
 
-The Omnibridge currently connects Gnosis to Ethereum and Binance Smart Chain.
+The Omnibridge currently connects Gnosis to Ethereum.
 
 The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://github.com/ethereum/EIPs/issues/677) token standard, with all bridged tokens tracked in the canonical [Bridged Token Registries](#bridged-token-registries).
 
