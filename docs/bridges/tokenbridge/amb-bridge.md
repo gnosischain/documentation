@@ -52,22 +52,6 @@ For a message/tokens to be relayed to another network, bridge validators need to
 
 </TabItem>
 
-<TabItem value="bnb-gno" label="Binance Smart Chain <-> Gnosis">
-
-:::danger Note
-BNB<->Gnosis is deprecating. Please check out the [notice](../tutorials/using-omnibridge/bnb-chain.md).
-
-:::
-
-| GC Address                                                                                                                 | Organization Name |
-| -------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| [gno:0x459a3bd49f1ff109bc90b76125533699aaaaf9a6](https://gnosisscan.io/address/0x459a3bd49f1ff109bc90b76125533699aaaaf9a6) | Protofire         |
-| [gno:0x105cd22ed3d089bf5589c59b452f9de0796ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d) | Giveth            |
-| [gno:0x9adb7385b598843c36fa057e45bc70542516e35d](https://gnosisscan.io/address/0x9adb7385b598843c36fa057e45bc70542516e35d) | GnosisDAO         |
-| [gno:0x13f3912ea00878cdb63ee5f02cf8ab65988efd2a](https://gnosisscan.io/address/0x13f3912ea00878cdb63ee5f02cf8ab65988efd2a) | Cow Protocol      |
-| [gno:0x5333588897ce6de00031dc30cd2d6881e5c517fb](https://gnosisscan.io/address/0x5333588897ce6de00031dc30cd2d6881e5c517fb) | Gnosis Safe       |
-
-</TabItem>
 <TabItem value="goerli-chiado" label="Goerli <-> Chiado">
 
 [0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49)

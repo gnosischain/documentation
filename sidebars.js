@@ -21,8 +21,7 @@ let bridgeTutorials = [
       'bridges/tutorials/using-omnibridge/specific-tokens',
       'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns',
       'bridges/tutorials/using-omnibridge/safe',
-      'bridges/tutorials/using-omnibridge/advanced',
-      'bridges/tutorials/using-omnibridge/bnb-chain',
+      'bridges/tutorials/using-omnibridge/advanced'
     ]
   },
   {
@@ -726,6 +725,14 @@ const sidebars = {
         'bridges/third-party',
         'bridges/audits',
         'bridges/roadmap'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Hashi',
+      collapsed: false,
+      items: [
+        'bridges/hashi/README'
       ]
     },
     {
