@@ -38,4 +38,4 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 * [NFBeez](https://www.nfbeez.xyz/): The first open and decentralized NFT project made by members of 
 1HiveOrg
 
-
+* [Hologram AI Art](https://tryhologram.art/): Experience captivating AI art. Discover Hologram, where 'Holograms' come alive. Share favorites on social media, anticipate NFT integration. Rediscover joy of AI art!
