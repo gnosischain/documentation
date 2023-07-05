@@ -1,11 +1,12 @@
-
 ---
 title: Core Devs Call - 07/05/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
 
-Gnosis Core Devs Call Notes
+# Gnosis Core Devs Call Notes
+
+![Core Devs Call](https://github.com/gnosischain/documentation-1/assets/75987728/1b0c87c5-5e53-4bd5-ad4c-a540a2e14762)
 
 Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team and contributors gather to discuss the latest developments and updates related to the Gnosis ecosystem. This meeting is held every Wednesday and serves as a platform for participants to collaborate and exchange ideas.
 
