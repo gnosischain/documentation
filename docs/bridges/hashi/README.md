@@ -50,7 +50,7 @@ By using domain=5 and blockNo a blockNumber that has been reported by the oracle
 | Contract               | Deployed on  | Address                                                                                                                              |
 | ---------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Hashi                  | Gnosis Chain | [0xf59aedc291e0aF64943541709cdd041D992b4De4](https://blockscout.com/xdai/mainnet/address/0xf59aedc291e0aF64943541709cdd041D992b4De4) |
-| ShoyuBashi             | Gnosis Chain | [0xAE6e6D57aE1Bee461e34180ED3F1667F4e9c5F70](https://gnosisscan.io/address/0xAE6e6D57aE1Bee461e34180ED3F1667F4e9c5F70)               |
+| ShoyuBashi             | Gnosis Chain | [0x31a8E89D6f98454D38C03eCA3DC543F6581d607C](https://gnosisscan.io/address/0x31a8e89d6f98454d38c03eca3dc543f6581d607c)               |
 | AMB Adapter            | Gnosis Chain | [0x32Cd442309cA6E79Db2194aac61024FBD2B14eb9](https://blockscout.com/xdai/mainnet/address/0x32Cd442309cA6E79Db2194aac61024FBD2B14eb9) |
 | AMB                    | Gnosis Chain | [0x9f696CF3c1a0A418cBBFD6E1ab3EBe8A78971Dea](https://gnosisscan.io/address/0x9f696CF3c1a0A418cBBFD6E1ab3EBe8A78971Dea)               |
 | Telepathy Adapter      | Gnosis Chain | [0x2f1E51a2763FB67fe09971Fd8d849716137A3357](https://blockscout.com/xdai/mainnet/address/0x2f1E51a2763FB67fe09971Fd8d849716137A3357) |
