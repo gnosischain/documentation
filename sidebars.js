@@ -98,7 +98,7 @@ const sidebars = {
             items: [
               'specs/consensus/aura',
               'specs/consensus/posdao',
-              'specs/consensus/proof of stake',
+              'specs/consensus/proof-of-stake',
             ],
           },
           {
