@@ -2,9 +2,35 @@
 title: Validator Withdrawals
 ---
 
-:::caution About Shanghai/Capella Upgrade
-Validator withdrawals will be available after Shanghai/Capella Upgrade. The Core Dev team is currently working on testing. The exact date for Hardfork is TBD. Check out the latest update [here](../../../updates).
+:::info Update your node for Shanghai/Capella hard-fork
+Epoch: 648704  
+Slot: 10379264  
+Time: August 1, 2023 at 11:34.20 UTC!
 :::
+
+# Update your client
+
+All client updates are ready for the upcoming Shapella hard-fork, please schedule time between now and July 30th to update your nodes!
+
+Execution Layer:
+
+✅ NethermindEth [v1.19.3](https://github.com/NethermindEth/nethermind/releases/tag/1.19.3)  
+✅ ErigonEth [v2.48.0](https://github.com/ledgerwatch/erigon/releases/tag/v2.48.0)
+
+Consensus Layer:
+
+✅ Lighthouse [v4.3.0](https://github.com/sigp/lighthouse/releases/tag/v4.3.0)  
+✅ Teku [v23.6.1](https://github.com/Consensys/teku/releases/tag/23.6.1)  
+✅ Nimbus v23.6.0 (only with the following Docker image: http://ghcr.io/gnosischain/gnosis-nimbus-eth2:v23.6.0)  
+✅ Lodestar [v1.9.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.9.1)
+
+DAppNode Packages
+
+✅ Teku Gnosis v0.1.9  
+✅ Lighthouse Gnosis v0.1.10  
+✅ Lodestar Gnosis v0.1.2  
+✅ Nethermind xDAI v1.0.34  
+⌛️ Erigon and Nimbus - Forthcoming
 
 # What is Validator Withdrawal?
 
@@ -13,6 +39,8 @@ Validator withdrawal allows a validator's account balance get withdrawn from Bea
 There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.  
 **Partial Withdrawal**: Any balance in excess of 32mGNO from the account balance get withdrawn back to withdrawal address, automatically.  
 **Full Withdrawal**: All the balance from validator's account get withdrawan back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](./voluntary-exit.md) message and broadcasting it to the network. It is irreversible.
+
+# Action need to be taken by valdiators
 
 ## What is the difference between validator withdrawal in Gnosis Chain and Ethereum?
 
@@ -155,9 +183,9 @@ curl -d @change-operations.json -H "Content-Type: application/json"  -X POST 127
 3. [BLS To Execution Change from Ethereum](https://launchpad.ethereum.org/en/btec/#broadcast-message)
 4. [Teku's postBlsToExecutionChange API ](https://consensys.github.io/teku/#tag/Beacon/operation/postBlsToExecutionChange)
 
-### Upgrade your clients
+### Update your clients
 
-Upgrade your execution and consensus clients accordingly. The latest version of clients for the upgrade will be announced soon.
+Please refer to #Update your client section above.
 
 ## Reference
 
