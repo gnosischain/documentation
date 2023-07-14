@@ -17,6 +17,8 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 
 ## Infrastructure
 
+* [NFTs2Me](https://nfts2me.com): No-code platform to create, deploy, mint and manage your NFT collection
+
 * [POAP](https://poap.xyz): POAPs are digital mementos, minted in celebration of life's remarkable moments
 
 * [NFT Calendar](https://nftcalendar.io): The first NFT Calendar
