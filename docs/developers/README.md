@@ -30,7 +30,7 @@ Transaction fees are assessed for any Gnosis transactions such as sending xDai t
 <box href="/tools/wallets" title="Wallets">Download a wallet to start using Gnosis.</box>
 <box href="/tools/faucets" title="Faucets">Free fund your wallet with xDai to pay fees.</box>
 <box href="/tools/explorers" title="Explorers">See your transactions, accounts, blocks, and more tools.</box>
-<box href="/tools/rpc" title="RPC Providers">Connect your development evironment and wallets to a public RPC node.</box>
+<box href="/tools/rpc" title="RPC Providers">Connect your development environment and wallets to a public RPC node.</box>
 <box href="/node" title="Run a Node">Setup and run your own node.</box>
 <box href="/developers/smart-contracts/" title="Dev Tools">Setup your development environment.</box>
 <box href="/developers/building/first-contract" title="Tutorials">Learn how to build dApps.</box>

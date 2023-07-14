@@ -84,7 +84,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 - Create a password to encrypt the keys.
 - The mnemonic (seed phrase) will show on screen. Save it in a secure place (idealy offline).
 - Type your mnemonic to confirm in the tool.
-- Wait untill the keys are created. Two types of files will be generated: 
+- Wait until the keys are created. Two types of files will be generated: 
     - `deposit_data-*.json`
     - One `keystore-*.json` per validator
 - Save the location of the generated keys, and copy them in a backup USB memory or any other secure storage.

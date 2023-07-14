@@ -9,7 +9,7 @@ keywords: [deploy dapp, full stack app, tutorial, web3, dapp development]
 
 In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis. This tutorial is designed for either new developers interested in Dapp development or existing devs interested in migrating to Gnosis development.
 
-Throughout the tutorial, feel free to refrence other pages in our documentation for information with greater depth - however this tutorial will give you a basic understand of how to get up and running.
+Throughout the tutorial, feel free to reference other pages in our documentation for information with greater depth - however this tutorial will give you a basic understand of how to get up and running.
 
 This Dapp will allow you to wave at Gnosis, and see how many times you have waved.
 
@@ -179,7 +179,7 @@ module.exports = {
 };
 ```
 :::danger
-Proper private key management is critical. To safeguard your private key, it has been added to a .env file, or enviornment variable file. DO NOT PUSH THIS TO GITHUB OR COMMIT TO SOURCE CONTROL. Even if you delete it after, assume it will live on forever after being committed and is compromised. Add .env to your .gitignore if you plan on committing, or store securely it in an environment variable.
+Proper private key management is critical. To safeguard your private key, it has been added to a .env file, or environment variable file. DO NOT PUSH THIS TO GITHUB OR COMMIT TO SOURCE CONTROL. Even if you delete it after, assume it will live on forever after being committed and is compromised. Add .env to your .gitignore if you plan on committing, or store securely it in an environment variable.
 :::
 
 Lets install dotenv, to safekeep your private key:
@@ -189,7 +189,7 @@ npm install --save dotenv
 ```
 
 :::note
-Make sure to refresh your console/terminal afterwards, to make sure you have dotenv in your current enviornment.
+Make sure to refresh your console/terminal afterwards, to make sure you have dotenv in your current environment.
 :::
 
 **Create a .env file in your root directory**
@@ -258,7 +258,7 @@ To get your front end up and running quickly, vist this [Replit link](https://re
 
 Navigate to the ```App.jsx``` file in Replit and follow the directions below:
 
-To connect **your contract** with your front end, replace the contract address variable shown below with the contract address you recieved after deploying.
+To connect **your contract** with your front end, replace the contract address variable shown below with the contract address you received after deploying.
 
 ```js showLineNumbers title=src/App.jsx
 const App = () => {
