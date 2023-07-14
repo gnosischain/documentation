@@ -63,6 +63,6 @@ The interface shows the time until the next update to your rGNO.
 :::note
 **Coming Soon**: Use your rGNO in DeFi protocols on Gnosis to borrow and stake additional GNO! 
 
-Since rGNO tokens represent your rewards in a StakeWise Pool, exchanging or transfering your rGNO will mean that you transferred your rewards to someone else. It will not impact your future earnings.
+Since rGNO tokens represent your rewards in a StakeWise Pool, exchanging or transferring your rGNO will mean that you transferred your rewards to someone else. It will not impact your future earnings.
 :::
 

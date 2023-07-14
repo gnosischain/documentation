@@ -119,7 +119,7 @@ Using the [Tokenbridge](https://tokenbridge.net/) nomenclature, Home refers to C
 | Chiado Omnibridge Mediator | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://blockscout.com/gnosis/chiado/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
 | Chiado AMB                 | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://blockscout.com/gnosis/chiado/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
 | Goerli Omnibridge Mediator | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085)        |
-| Goerli AMB                 | [0x87A19d769D875964E9Cd41dDBfc397B2543764E](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6)         |
+| Goerli AMB                 | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6)         |
 | **Bridge Validators**      |                                                                                                                                     |
 | Gnosis DAO                 | 0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49                                                                                          |
 | Bootnode                   | TBD                                                                                                                                 |

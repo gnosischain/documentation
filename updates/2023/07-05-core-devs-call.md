@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 07/05/2023
+title: Core Devs Call - 05/07/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -12,24 +12,24 @@ Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team an
 
 The participants of this call include representatives from various teams such as Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team, and community contributors. The presence of diverse team members ensures that discussions are comprehensive and informative, with insights from multiple perspectives.
 
-For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=PZqWkFgwyTA). 
+For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=PZqWkFgwyTA).
 
 The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It provides an opportunity for participants to stay informed, share ideas and collaborate, thus driving innovation and progress within the Gnosis community.
 
 July 5, 2023
 
 # Client Team Updates
+
 ## EL
 
-* **Nethermind**: No updates
-* **Erigon**: No updates except latest release that supports shapella
-* **Geth**: No updates
-
+- **Nethermind**: No updates
+- **Erigon**: No updates except latest release that supports shapella
+- **Geth**: No updates
 
 ## CL
 
-* **Prysm**: No updates.
-* **Lighthouse** No updates.
+- **Prysm**: No updates.
+- **Lighthouse** No updates.
 
 # Mainnet
 
@@ -48,7 +48,6 @@ Can we update all the client versions for shapella?
 
 We added a `executeSystemWithdrawals` with the first argument removed. This can be used instead of the one with the deprecated argument if we deprecate Chiado at some point. Alternatively, we can also implement branching logic for Chiado specifically and use that new function for Gnosis mainnet. **Needs to be 4 for Chiado for now.**
 
-
 # Chain Infra
 
 Gateway: No updates
@@ -59,10 +58,9 @@ Gateway: No updates
 Slot cleanup script done
 Next step: upgrade to the latest contract version
 
-
 # Hivetest
 
-We solved the warm coinbase issue. 
+We solved the warm coinbase issue.
 Some contracts were missing.
 Start to look into claim events
 Building a dashboard, similar to what the EF has
@@ -71,15 +69,3 @@ https://hivetests.ethdevops.io/
 Running the entire suit takes a few hours, so it can sometimes time out on CI
 GitHub Actions only allows for up to 6 hours
 This might have been fixed?
-
-
-
-
-
-
-
-
-
-
-
-

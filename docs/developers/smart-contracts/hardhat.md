@@ -210,4 +210,4 @@ Visit our [Contract Verification Page](/developers/verify/) for more documentati
 
 ## Additional Hardhat Documentation
 
-- Additonal Hardhat deployment documentation is located [here](https://hardhat.org/hardhat-runner/docs/guides/deploying).
+- Additional Hardhat deployment documentation is located [here](https://hardhat.org/hardhat-runner/docs/guides/deploying).
