@@ -342,7 +342,7 @@ const sidebars = {
         {
           type: 'link',
           label: 'Beacon Chain',
-          href: 'https://beacon.gnosischain.com/',
+          href: 'https://gnosischa.in/',
         },
       ],
     },

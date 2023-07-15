@@ -70,7 +70,7 @@ For any type of withdrawals, a validator need to have `0x01` withdrawal credenti
 
 There are 2 ways to check withdrawal credential of a validator:
 
-1. Search on [https://beacon.gnosischain.com/](https://beacon.gnosischain.com/)
+1. Search on [https://gnosischa.in/](https://gnosischa.in/)
 2. Search on deposit*m*\*.json file of your validator.
 
 ![](../../../static/img/node/withdrawal/CheckWC.png)
