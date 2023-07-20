@@ -37,7 +37,7 @@ Released not Geth compatible version with ethers@v6 fix on the last week
 # Mainnet
 
 Withdrawal contract fully audited by ChainSafe
-Will be deployed after the call and than be proposed to the DAO (process takes ~9 days)
+Will be deployed after the call and then be proposed to the DAO (process takes ~9 days)
 All clients up to date and released
 Make sure that gnosisscan and blockscout follow the updates.
 
