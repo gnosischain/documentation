@@ -38,9 +38,9 @@ Validator withdrawal allows a validator's account balance get withdrawn from Bea
 
 There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.  
 **Partial Withdrawal**: Any balance in excess of 32mGNO from the account balance get withdrawn back to withdrawal address, automatically.  
-**Full Withdrawal**: All the balance from validator's account get withdrawan back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](./voluntary-exit.md) message and broadcasting it to the network. It is irreversible.
+**Full Withdrawal**: All the balance from validator's account get withdrawn back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](./voluntary-exit.md) message and broadcasting it to the network. It is irreversible.
 
-# Action need to be taken by valdiators
+# Action needs to be taken by validators
 
 ## What is the difference between validator withdrawal in Gnosis Chain and Ethereum?
 
