@@ -107,6 +107,7 @@ const sidebars = {
             collapsed: true,
             link: {type: 'doc', id: 'specs/hard-forks/README'},
             items: [
+              'specs/hard-forks/shanghai-capella',
               'specs/hard-forks/merge',
               'specs/hard-forks/21735000',
               'specs/hard-forks/19040000',
@@ -342,7 +343,7 @@ const sidebars = {
         {
           type: 'link',
           label: 'Beacon Chain',
-          href: 'https://beacon.gnosischain.com/',
+          href: 'https://gnosischa.in/',
         },
       ],
     },
