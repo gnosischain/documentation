@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 07/19/2023
+title: Core Devs Call - 19/07/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -12,27 +12,27 @@ Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team an
 
 The participants of this call include representatives from various teams such as Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team, and community contributors. The presence of diverse team members ensures that discussions are comprehensive and informative, with insights from multiple perspectives.
 
-For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=3WhPnFLQdyo). 
+For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=3WhPnFLQdyo).
 
 The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It provides an opportunity for participants to stay informed, share ideas and collaborate, thus driving innovation and progress within the Gnosis community.
 
 July 19, 2023
 
 # Client Team Updates
+
 ## EL
 
-* **Nethermind**: Issue with ethers@v6 fixed
-Eth_call currently investigated
-Released not Geth compatible version with ethers@v6 fix on the last week
+- **Nethermind**: Issue with ethers@v6 fixed
+  Eth_call currently investigated
+  Released not Geth compatible version with ethers@v6 fix on the last week
 
-* **Erigon**: No updates
+- **Erigon**: No updates
 
-* **Geth**: No updates
-
+- **Geth**: No updates
 
 ## CL
 
-* **Lighthouse** No updates.
+- **Lighthouse** No updates.
 
 # Mainnet
 
@@ -63,21 +63,7 @@ Nethermind team will take care of shadowfork setup
 Will be ready for the end of the week
 Wait for nethermind release
 
-
 # Chain Infra
 
 Gateway: Helping Nethermind team
 Provided Erigon node to Guillaume
-
-
-
-
-
-
-
-
-
-
-
-
-
