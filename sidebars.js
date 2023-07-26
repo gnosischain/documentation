@@ -734,7 +734,9 @@ const sidebars = {
       label: 'Hashi',
       collapsed: false,
       items: [
-        'bridges/hashi/README'
+
+        'bridges/hashi/README',
+        'bridges/hashi/Application'
       ]
     },
     {
