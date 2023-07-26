@@ -14,6 +14,8 @@ keywords: [DeFi, DApps, Gnosis Chain, NFTs, Unique One Network, Foundation, Nift
 
 * [Rare Gems](https://raregems.io): Multichain NFT marketplace
 
+* [NiftyFair](https://niftyfair.io/): Gnosis Chain native NFT marketplace
+
 
 ## Infrastructure
 
