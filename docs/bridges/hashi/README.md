@@ -81,10 +81,6 @@ For the current deployment, only AMB and Telepathy oracles are supported.
 | AMB Header Reporter    | Goerli      | [0x61fac58f793b2a8a791a0583618feb89e256e839](https://goerli.etherscan.io/address/0x61fac58f793b2a8a791a0583618feb89e256e839)          |
 | AMB                    | Goerli      | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6)          |
 
-## Build on Hashi
-
-TODO
-
 ## Resources
 
 - Repository: [github.com/gnosis/hashi](https://github.com/gnosis/hashi)

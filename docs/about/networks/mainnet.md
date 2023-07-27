@@ -68,6 +68,12 @@ keywords:
 - Fee Token: [xDai](../tokens/xdai.md)
 - Staking Token: [GNO](../tokens/gno.md)
 
+| Token               | Address                                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| GNO on Ethereum     | [0x6810e776880c02933d47db1b9fc05908e5386b96](https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96)    |
+| GNO on Gnosis Chain | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb)   |
+| Deposit contract    | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9) |
+
 ## Network Config
 
 ### Config Repo
