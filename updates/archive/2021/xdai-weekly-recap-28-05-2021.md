@@ -13,16 +13,16 @@ import ArchiveWarning from '@site/src/components/ArchiveWarning';
 
 :::success
 The protocol is currently in Epoch **58.**\
-****\
-****There are **16** validator pools with **272** delegators staking a total of **608,769** STAKE - over 75% of the total STAKE supply on xDai.
+\***\*\
+\*\***There are **16** validator pools with **272** delegators staking a total of **608,769** STAKE - over 75% of the total STAKE supply on xDai.
 
 The new Stakefish pool has the highest amount staked, with 97K+ in the pool.\
 \
 High pool APY is currently **18.28%**, low is **10.92%** _(stats as of 28/05/2021 14:30 UTC)_.
 
-* Staking Statistics: [https://duneanalytics.com/maxaleks/xdai-staking](https://duneanalytics.com/maxaleks/xdai-staking)
-* Staking Platform: [https://blockscout.com/xdai/mainnet/validators](https://blockscout.com/xdai/mainnet/validators)
-:::
+- Staking Statistics: [https://duneanalytics.com/maxaleks/xdai-staking](https://duneanalytics.com/maxaleks/xdai-staking)
+- Staking Platform: [https://blockscout.com/xdai/mainnet/validators](https://blockscout.com/xdai/mainnet/validators)
+  :::
 
 ## :pencil2: Protocol Updates
 
@@ -32,23 +32,23 @@ Assets worth more than 360K were sent to users on Ethereum from prior pending cl
 
 **xDai Bridge**
 
-* Amount: 160K DAI
-* Addresses: 461
-* Tx Fees: 3.58 ETH
-* USD equivalent: $8,985.00
-* USD cost avg per tx: $19.50
+- Amount: 160K DAI
+- Addresses: 461
+- Tx Fees: 3.58 ETH
+- USD equivalent: $8,985.00
+- USD cost avg per tx: $19.50
 
 **OmniBridge**
 
-* Amount: 200K+ USD value
-* Addresses: 570
-* Tx Fees: 6.06 ETH
-* USD equivalent: $15,200.00
-* USD cost avg per tx: $26.66
+- Amount: 200K+ USD value
+- Addresses: 570
+- Tx Fees: 6.06 ETH
+- USD equivalent: $15,200.00
+- USD cost avg per tx: $26.66
 
 ### OmniBridge AutoFaucet
 
-To assist new user onboarding, and automatic faucet feature was added to the [OmniBridge](https://omni.xdaichain.com/bridge). Users moving assets over the Omnibridge from Ethereum or BSC to xDai now also automatically receive $.01 xDai\* in addition to their bridged asset. This can be used to process transactions and swap some of their remaining assets into xDai as required. Over [500 faucet transactions](https://blockscout.com/xdai/mainnet/address/0x562a9171c251777766285E877c80e7F4cC02d165/transactions) have been processed since this feature was implemented on May 22.
+To assist new user onboarding, and automatic faucet feature was added to the [OmniBridge](https://omni.xdaichain.com/bridge). Users moving assets over the Omnibridge from Ethereum or BSC to xDai now also automatically receive $.01 xDai\* in addition to their bridged asset. This can be used to process transactions and swap some of their remaining assets into xDai as required. Over [500 faucet transactions](https://gnosis.blockscout.com/address/0x562a9171c251777766285E877c80e7F4cC02d165/transactions) have been processed since this feature was implemented on May 22.
 
 _\*Only non-contract wallets with a 0 xDai balance receive xDai._
 
@@ -95,8 +95,3 @@ https://twitter.com/Omen_eth/status/1396572004774400000
 DxSale application allows users to create, launch and secure tokens. They offer multi-chain support and now include xDai support.
 
 https://dxsale.network/
-
-
-
-
-

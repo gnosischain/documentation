@@ -16,7 +16,6 @@ title: Validator Deposits
 
 - Validators need to be funded using [GNO on Gnosis Chain](../../../about/tokens/gno.md)
 - You will need to bridge GNO over from Ethereum to Gnosis Chain
-- During the deposit process, [1 GNO](../../../about/tokens/gno.md) will be converted into [32 mGNO](./../../../about/tokens/gno.md#mgno-token), to replicate the experience of having [32 ETH](https://ethereum.org/en/staking/) required for [Ethereum staking](https://ethereum.org/en/staking/).
 
 :::tip
 
@@ -65,7 +64,7 @@ If you can't upload the file, you may want to check the file permissions to make
 You are responsible for the transaction. Fraudulent websites might try to lure you into sending funds to them, instead of the official deposit contract. Make sure that you are sending the transaction with the correct data.
 
 :::caution
-Verify that the Deposit address is [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://blockscout.com/xdai/mainnet/address/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb/transactions)
+Verify that the contract address you're interacting with is [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosis.blockscout.com/address/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb/transactions) (GNO on Gnosis Chain)
 
 ![](/img/node/safety-1.png)
 
@@ -81,10 +80,10 @@ Check that the transaction uses the `transferAndCall` method.
 
 :::caution
 
-Check that the transaction's data includes the Wrapper Proxy Contract address ([0x647507A70Ff598F386CB96ae5046486389368C66](https://blockscout.com/xdai/mainnet/address/0x647507A70Ff598F386CB96ae5046486389368C66/transactions))
+Check that the transaction's data includes the Deposit Contract address ([0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9/transactions))
 
 ```
-0x4000aea0000000000000000000000000647507a70ff598f386cb96ae5046486389368c66
+0x4000aea00000000000000000000000000b98057ea310f4d31f2a452b414647007d1645d9
 ```
 
 ![](/img/node/safety-3.png)

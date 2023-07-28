@@ -1,6 +1,7 @@
 ---
 description: Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Troubleshoot Bridge issues
-keywords: [troubleshooting, bridge problems, issues, token bridge, gnosis bridge]
+keywords:
+  [troubleshooting, bridge problems, issues, token bridge, gnosis bridge]
 ---
 
 # Troubleshoot Bridge Issues
@@ -12,12 +13,12 @@ If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see
 :::info
 **Things to know**
 
-* A bridge exit (moving from xDai to Dai) requires **2 transactions**, **one to initiate the transfer** on Gnosis, and a **2nd to claim DAI on Ethereum**.
-* To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in MetaMask** and **you will need Ether to pay gas fees.**
-* The **2nd transaction may take quite a long time**, it is being processed on Ethereum. You can set a higher gas price if you want to speed it up. [**Instructions**](#dai-to-xdai-transaction-is-taking-a-long-time)**.**
-* If you closed the UI before starting the 2nd transaction, you can come back and to complete later. [**Instructions**](#i-used-the-xdai-bridge-ui)**.**
-* Additional troubleshooting items below.
-:::
+- A bridge exit (moving from xDai to Dai) requires **2 transactions**, **one to initiate the transfer** on Gnosis, and a **2nd to claim DAI on Ethereum**.
+- To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in MetaMask** and **you will need Ether to pay gas fees.**
+- The **2nd transaction may take quite a long time**, it is being processed on Ethereum. You can set a higher gas price if you want to speed it up. [**Instructions**](#dai-to-xdai-transaction-is-taking-a-long-time)**.**
+- If you closed the UI before starting the 2nd transaction, you can come back and to complete later. [**Instructions**](#i-used-the-xdai-bridge-ui)**.**
+- Additional troubleshooting items below.
+  :::
 
 ## Bridge UI is Offline or in Maintenance Mode
 
@@ -38,9 +39,8 @@ A new bridge decentralization feature means **withdrawals now require 2 steps**.
 
 There are currently different bridging UIs, and depending on the UI you may need to take different steps to complete the process.
 
-* [xDai bridge](#i-used-the-xdai-bridge-ui): [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
-* [Burner Wallet](#i-used-burner-wallet-at-xdai-io): [https://xdai.io](https://xdai.io)
-
+- [xDai bridge](#i-used-the-xdai-bridge-ui): [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
+- [Burner Wallet](#i-used-burner-wallet-at-xdai-io): [https://xdai.io](https://xdai.io)
 
 ## I Used the xDai Bridge UI
 
@@ -78,7 +78,7 @@ You can retrieve the pending transaction using the MetaMask interface. [Learn mo
 
 1. Go to the Bridge UI at [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
 2. Switch your MetaMask wallet to the ETH Mainnet
-3. Click on **History.** You will see any unclaimed transactions_. (You can also filter unclaimed transactions)_
+3. Click on **History.** You will see any unclaimed transactions*. (You can also filter unclaimed transactions)*
 4. Press the **Claim button** to process**.** _(will not appear until 6+ minutes after the transaction)_
 5. **Confirm** transaction in MetaMask and wait for tx validation.
 
@@ -109,7 +109,7 @@ In this case, you'll want to export your private key into MetaMask to finish the
 5\) Go to the Bridge UI at [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
 
 1. Switch your MetaMask wallet to the ETH Mainnet
-2. Click on **History.** You will see any unclaimed transactions_. (You can also filter unclaimed transactions)_
+2. Click on **History.** You will see any unclaimed transactions*. (You can also filter unclaimed transactions)*
 3. Press the **Claim button** to process**.** _(will not appear until 6+ minutes after the transaction)_
 4. **Confirm** transaction in MetaMask and wait for tx validation.
 
@@ -151,12 +151,12 @@ Otherwise, it will likely be in a pending state until the congestion breaks up. 
 
 ## Transaction Not Showing on BlockScout or Etherscan - Resetting MetaMask.
 
-If you initiated a transaction but don't see a pending transaction the Block Explorer (in either direction, if originating from Gnosis check [BlockScout](https://blockscout.com/xdai/mainnet), if Ethereum check [Etherscan](https://etherscan.io/)) try resetting your MetaMask account to clear your transaction history.
+If you initiated a transaction but don't see a pending transaction the Block Explorer (in either direction, if originating from Gnosis check [BlockScout](https://gnosis.blockscout.com/), if Ethereum check [Etherscan](https://etherscan.io/)) try resetting your MetaMask account to clear your transaction history.
 
 This can be useful to clear up:
 
-* A pending transaction which refuses to clear.
-* A transaction fails to show up on Etherscan but is still pending.
+- A pending transaction which refuses to clear.
+- A transaction fails to show up on Etherscan but is still pending.
 
 :::warning
 Imported accounts will not repopulate win your wallet with this method, so be sure you have access to a private key or seed phrase to restore these in a [reset account](https://metamask.zendesk.com/hc/en-us/articles/360015488891-Resetting-an-Account).
@@ -172,7 +172,7 @@ To use a Ledger you need to allow contract data in order to interact with smart 
 2. Connect and unlock your Ledger device.
 3. Open the **Ethereum** application.
 4. Press the right button to navigate to **Settings**. Press both buttons to validate.
-5. In the **Contract data** settings, press both buttons to allow contract data in transactions.  The device displays **Allowed**.
+5. In the **Contract data** settings, press both buttons to allow contract data in transactions. The device displays **Allowed**.
 6. Retry your transaction.
 
 For more help with Ledger, please see their [support docs](https://support.ledger.com/hc/en-us).
@@ -190,7 +190,7 @@ In some cases, however, step 2 may not process, or a different method may be use
 
 ### Find Transaction Hash in BlockScout
 
-1. Go to BlockScout at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet) and enter the address that originated the transaction (typically your wallet address). If you were using a contract to interact with the bridge (in this case use the contract that called the relayToken method) enter that address.
+1. Go to BlockScout at https://gnosis.blockscout.com/ and enter the address that originated the transaction (typically your wallet address). If you were using a contract to interact with the bridge (in this case use the contract that called the relayToken method) enter that address.
 
 ![](/img/bridges/xdaibridge/xdai-bs.jpg)
 
@@ -212,7 +212,6 @@ The process will be similar for other Ethereum wallets. Find your past transacti
 
 ![Copy the tx hash for the contract interaction](/img/bridges/xdaibridge/MM2.jpg)
 
-
 ## View Inbound (Dai to xDai) Transactions
 
 When Dai is transferred from Ethereum to xDai on Gnosis, the amount of Dai in your wallet will decrease and the corresponding amount of xDai will increase. However, the transaction will not appear on the xDai side of the wallet. The easiest way to track it is in BlockScout with the Coin Balance History view.
@@ -221,7 +220,7 @@ When Dai is transferred from Ethereum to xDai on Gnosis, the amount of Dai in yo
 
 ![Copy Address - you can be connected to Ethereum or Gnosis, it is the same address on both chains.](/img/bridges/xdaibridge/tut22.jpg)
 
-2. Paste the address into BlockScout at [https://blockscout.com/xdai/mainnet](https://blockscout.com/xdai/mainnet/).
+2. Paste the address into BlockScout at https://gnosis.blockscout.com/.
 
 ![](/img/bridges/xdaibridge/tut2.jpg)
 

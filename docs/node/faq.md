@@ -28,16 +28,16 @@ Validators propose and vote on blocks to include in the chain. The chain is secu
 
 ### What is the deposit contract?
 
-The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity\_deposit\_contract/deposit\_contract.sol), with [some additional functionality](/specs/security-audit).
+The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol), with [some additional functionality](/specs/security-audit).
 
-* Contract Security Audit by Chainsecurity: [https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/](https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/)
-* GBC Contract Address: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://blockscout.com/xdai/mainnet/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)
+- Contract Security Audit by Chainsecurity: [https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/](https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/)
+- GBC Contract Address: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)
 
 ### How much do validators earn in rewards?
 
 This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](/node/rewards-penalties).
 
-You can view the current reward yield and other statistics on the [Gnosis Beacon Chain Dune Analytics dashboard](https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-\(Deposits\)).
+You can view the current reward yield and other statistics on the [Gnosis Beacon Chain Dune Analytics dashboard](<https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-(Deposits)>).
 
 ### How many validator processes can run per node?
 
@@ -112,9 +112,9 @@ For BLS withdrawal credentials, make sure to keep the mnemonic phrase from the k
 
 For ETH1 withdrawal credentials, make sure you have full control over the specified address and can execute transactions on behalf of this address. Three common options for ETH1 withdrawal credentials:
 
-* **EOA address**. Make sure to keep its private key / mnemonic in a secure place, so that you will have access to it once withdrawals are enabled.
-* **Gnosis Safe multisig**. Make sure you can execute calls on behalf of the safe address once withdrawals are enabled.
-* **Stub proxy**. For advanced users and service providers, another option is to deploy a proxy contract with an empty implementation. Once all details about the withdrawals are known, you can upgrade your proxy to any implementation that suits your needs. Just make sure you have full control over the upgradeability procedure, so that you will be able to update an implementation address once withdrawals are enabled.
+- **EOA address**. Make sure to keep its private key / mnemonic in a secure place, so that you will have access to it once withdrawals are enabled.
+- **Gnosis Safe multisig**. Make sure you can execute calls on behalf of the safe address once withdrawals are enabled.
+- **Stub proxy**. For advanced users and service providers, another option is to deploy a proxy contract with an empty implementation. Once all details about the withdrawals are known, you can upgrade your proxy to any implementation that suits your needs. Just make sure you have full control over the upgradeability procedure, so that you will be able to update an implementation address once withdrawals are enabled.
 
 ## Validator Setup (Technical)
 
@@ -122,5 +122,5 @@ For ETH1 withdrawal credentials, make sure you have full control over the specif
 
 It depends on the mode and hardware specifications. Typically 24 hours should be allowed.
 
-* For more information on syncing with Nethermind see [https://github.com/NethermindEth/docs/blob/master/ethereum-client/sync-modes.md](https://github.com/NethermindEth/docs/blob/master/ethereum-client/sync-modes.md)
-* To learn more about reading logs during syncing see [https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs)
+- For more information on syncing with Nethermind see [https://github.com/NethermindEth/docs/blob/master/ethereum-client/sync-modes.md](https://github.com/NethermindEth/docs/blob/master/ethereum-client/sync-modes.md)
+- To learn more about reading logs during syncing see [https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs)

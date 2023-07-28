@@ -17,8 +17,8 @@ Staking Epoch 41 started successfully with additional participation and a [new v
 
 Welcoming 1Hive is a newly active POSDAO validator!
 
-* Pool: 0x91d8116fa60516cf25e258ef14deaacaf7a74127
-* Mining Address: [0x35770EF700Ff88D5f650597068e3Aaf051F3D5a4](https://blockscout.com/xdai/mainnet/address/0x35770EF700Ff88D5f650597068e3Aaf051F3D5a4/validations)
+- Pool: 0x91d8116fa60516cf25e258ef14deaacaf7a74127
+- Mining Address: [0x35770EF700Ff88D5f650597068e3Aaf051F3D5a4](https://gnosis.blockscout.com/address/0x35770EF700Ff88D5f650597068e3Aaf051F3D5a4/validations)
 
 ### 👨🚀 POAP for First 100
 
@@ -62,9 +62,9 @@ Upcoming Project Migrations, current project announcements and new projects on x
 
 ### BAO
 
-* We are going to have 2 Bao Farmer contracts, one on Ethereum mainnet and on the xDAI network (an Ethereum L2 sidechain).
-* The new xDAI chain contract will issue $BAO.CX (Bao Coupon XDAI) which will be redeemable 1:1 for Bao tokens on the main Ethereum chain.
-* Users will be able to pick to farm in either contract. Using the xDAI chain is simple and requires them to move their tokens via a bridge contract.
+- We are going to have 2 Bao Farmer contracts, one on Ethereum mainnet and on the xDAI network (an Ethereum L2 sidechain).
+- The new xDAI chain contract will issue $BAO.CX (Bao Coupon XDAI) which will be redeemable 1:1 for Bao tokens on the main Ethereum chain.
+- Users will be able to pick to farm in either contract. Using the xDAI chain is simple and requires them to move their tokens via a bridge contract.
 
 https://thebaoman.medium.com/bao-v2-the-journey-86dab5a203de
 

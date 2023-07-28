@@ -32,7 +32,7 @@ The game uses an incredible amount of resources, and we've been working tireless
 
 To further support the universe, BlockScout released a Dark Forest theme so users can view contract interactions related to the game. It keeps users engaged with the universe and supports gamers verifying and viewing their DF transactions.
 
-Live view: [https://blockscout.com/xdai/mainnet/address/0xa8688cCF5E407C1C782CF0c19b3Ab2cE477Fd739/transactions](https://blockscout.com/xdai/mainnet/address/0xa8688cCF5E407C1C782CF0c19b3Ab2cE477Fd739/transactions)
+Live view: [https://gnosis.blockscout.com/address/0xa8688cCF5E407C1C782CF0c19b3Ab2cE477Fd739/transactions](https://gnosis.blockscout.com/address/0xa8688cCF5E407C1C782CF0c19b3Ab2cE477Fd739/transactions)
 
 ## 🌉 Bridge Engineering Updates
 
