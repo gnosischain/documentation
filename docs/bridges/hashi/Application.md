@@ -2,6 +2,10 @@
 
 You can build your application on top of Hashi and secured by Hashi. If you have any question, please reach out to [Gnosis Chain discord](https://discord.gg/gnosischain) - #hashi channel
 
+:::info
+The applications below are still WIP. It is only for demo purpose.
+:::
+
 ## Safe on Hashi
 
 Cross-chain transaction using Safe can be a painful experience. The current approach is to set up Safe individually on each chain, and these Safes are independent of each other. There are [discussions](https://forum.safe.global/t/how-can-a-safe-hold-asset-on-multiple-chains/2242) about how to hold assets on multiple chains and this project aims to tackle the issue by leveraging the security provided by Hashi.
@@ -19,7 +23,7 @@ Check out the demo video for more details: https://youtu.be/vXuffnJCcTM
 ### Pull flow
 
 In pull flow, data is being read from time to time on the source chain (Goerli).
-A scenario is tested: an owner from Goerli's Safe (which is not the owner from Gnosis Chain's Safe) is able to create a transaction for GC Safe, even though it is not the owner for GC Safe. The security of pull flow rely on: block header provided by ShoyuBashi and proof provided by [eth_getProof](https://docs.alchemy.com/reference/eth-getproof) API from Goerli node. The proof is verified by an off-chain verifier at the current version.
+A scenario is tested: an owner from Goerli's Safe (which is not the owner from Gnosis Chain's Safe) is able to create a transaction for GC Safe, even though it is not the owner for GC Safe. The security of pull flow relies on: block header provided by ShoyuBashi and proof provided by [eth_getProof](https://docs.alchemy.com/reference/eth-getproof) API from Goerli node. The proof is verified by an off-chain verifier at the current version.
 
 ![](../../../static/img/bridges/hashi/SafeOnHashi-PullFlow.png)
 
