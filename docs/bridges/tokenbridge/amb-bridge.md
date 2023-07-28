@@ -13,7 +13,7 @@ The AMB is a key bridge primitive that is used inside higher-order bridges like 
 
 The AMB currently supports Ethereum, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
 
-With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 12mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out how AMB & Omnibridge works with Telepathy validator.
+With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 12mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out [how AMB & Omnibridge works with Telepathy validator](#how-it-works-with-telepathy-validator).
 
 ## Key Information
 
@@ -34,7 +34,7 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community and ZK Light Client validator Telepathy. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
+For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community and ZK Light Client validator Telepathy.
 
 ### Current Bridge Validators
 
