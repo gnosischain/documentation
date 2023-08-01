@@ -222,7 +222,7 @@
 
 8. Do partial withdrawals happen automatically?
 
-   If your withdrawal credentials are set to 0x01 and point to a valid Gnosis Chain address, then the partial withdrawal will happen automatically.
+   As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call `claimWithdrawal` function on the contract. However, it is in our plans to automate and subsidize partial withdrawals in the future.
 
 9. Do full withdrawals happen automatically?
 
