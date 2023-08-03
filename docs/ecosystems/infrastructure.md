@@ -40,3 +40,4 @@ that are automated, gasless & off-chain aware
 * [Cardstack](https://cardstack.com): Building the Collaborative OS for Web3
 
 * [Etherspot](https://etherspot.io): Multi-chain self-custody Smart Contract Wallet platform that provides solutions for dApps, game and wallet developers to deliver frictionless Web3 UX
+* [Add3](https://www.add3.io/): Add3 allows users to create smart contracts on-top of Gnosis (like token minting) within minutes instead of years
