@@ -727,7 +727,8 @@ const sidebars = {
         },
         'bridges/third-party',
         'bridges/audits',
-        'bridges/roadmap'
+        'bridges/roadmap',
+        'bridges/faq'
       ]
     },
     {

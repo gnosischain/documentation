@@ -2,42 +2,16 @@
 title: Validator Withdrawals
 ---
 
-:::info Update your node for Shanghai/Capella hard-fork
-Epoch: 648704  
-Slot: 10379264  
-Time: August 1, 2023 at 11:34.20 UTC!
+:::info Validator withdrawal has now been enabled!
+Gnosis Chain underwent Shanghai/Capella Hardfork successfully on August 1, 2023 at 11:34.20 UTC, slot 10379264, epoch 648704.
 :::
-
-# Update your client
-
-All client updates are ready for the upcoming Shapella hard-fork, please schedule time between now and July 30th to update your nodes!
-
-Execution Layer:
-
-✅ NethermindEth [v1.19.3](https://github.com/NethermindEth/nethermind/releases/tag/1.19.3)  
-✅ ErigonEth [v2.48.0](https://github.com/ledgerwatch/erigon/releases/tag/v2.48.0)
-
-Consensus Layer:
-
-✅ Lighthouse [v4.3.0](https://github.com/sigp/lighthouse/releases/tag/v4.3.0)  
-✅ Teku [v23.6.1](https://github.com/Consensys/teku/releases/tag/23.6.1)  
-✅ Nimbus v23.6.0 (only with the following Docker image: http://ghcr.io/gnosischain/gnosis-nimbus-eth2:v23.6.0)  
-✅ Lodestar [v1.9.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.9.1)
-
-DAppNode Packages
-
-✅ Teku Gnosis v0.1.9  
-✅ Lighthouse Gnosis v0.1.10  
-✅ Lodestar Gnosis v0.1.2  
-✅ Nethermind xDAI v1.0.34  
-⌛️ Erigon and Nimbus - Forthcoming
 
 # What is Validator Withdrawal?
 
 Validator withdrawal allows a validator's account balance get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator's withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
 
 There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.  
-**Partial Withdrawal**: Any balance in excess of 32mGNO from the account balance get withdrawn back to withdrawal address, automatically.  
+**Partial Withdrawal**: Any balance in excess of 32mGNO from the account balance get withdrawn back to withdrawal address, by .  
 **Full Withdrawal**: All the balance from validator's account get withdrawn back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](./voluntary-exit.md) message and broadcasting it to the network. It is irreversible.
 
 # Action needs to be taken by validators
@@ -186,6 +160,16 @@ curl -d @change-operations.json -H "Content-Type: application/json"  -X POST 127
 ### Update your clients
 
 Please refer to #Update your client section above.
+
+# How to withdraw?
+
+## Partial Withdrawal
+
+As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract). However, it is in our plans to automate and subsidize partial withdrawals in the future.
+
+## Full Withdrawal
+
+Please check guide on [voluntary exit](./voluntary-exit.md).
 
 ## Reference
 

@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 08/02/2023
+title: Core Devs Call - 02/08/2023
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -12,48 +12,46 @@ Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team an
 
 The participants of this call include representatives from various teams such as Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team, and community contributors. The presence of diverse team members ensures that discussions are comprehensive and informative, with insights from multiple perspectives.
 
-For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=BYR2lA9dF90). 
+For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=BYR2lA9dF90).
 
 The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It provides an opportunity for participants to stay informed, share ideas and collaborate, thus driving innovation and progress within the Gnosis community.
 
 August 2, 2023
 
 # Client Team Updates
+
 ## EL
 
-* **Nethermind**: 
-No particular updates
-Looking into the contractAddress issue in receipts
-Has some ideas about improvements for eth_getLogs
+- **Nethermind**:
+  No particular updates
+  Looking into the contractAddress issue in receipts
+  Has some ideas about improvements for eth_getLogs
 
+- **Erigon**:
+  No specific news
+  Busy working on dencun
+  Helping Marcos with the Hive tests
 
-* **Erigon**: 
-No specific news
-Busy working on dencun
-Helping Marcos with the Hive tests
-
-
-* **Geth**:
-No updates
-Waiting for input from Erigon
-Traces from Erigon
-
+- **Geth**:
+  No updates
+  Waiting for input from Erigon
+  Traces from Erigon
 
 ## CL
 
-* **Nimbus**
-Merged Chiado
+- **Nimbus**
+  Merged Chiado
 
-* **Lighthouse**
-Accepted the PR for Chiado
+- **Lighthouse**
+  Accepted the PR for Chiado
 
 # Chain Infra
 
-* **Gateway**
-Post mortem for the slashing issue
-Looking into the checkpoint sync logs
-Launchpad updated?
-Checking with DevOps
+- **Gateway**
+  Post mortem for the slashing issue
+  Looking into the checkpoint sync logs
+  Launchpad updated?
+  Checking with DevOps
 
 # Mainnet
 
@@ -70,17 +68,3 @@ Erigon nodes weren’t synced for the hard fork (forkmon, ethstats, grafana)
 # Hive Tests
 
 From the 20 tests passing on Nethermind, only 14 tests pass for Erigon right now
-
-
-
-
-
-
-
-
-
-
-
-
-
-
