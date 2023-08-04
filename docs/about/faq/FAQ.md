@@ -190,7 +190,7 @@
 
 9. Which clients are supported by GBC?
 
-   Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](../../node/architecture.md#consensus-layer). DAppNode will initially support the Prysm implementation only.
+   Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](../../node/architecture.md#consensus-layer).
 
 10. How long does it take to sync the node?
 
