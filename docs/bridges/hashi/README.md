@@ -50,18 +50,27 @@ By using domain=5 and blockNo a blockNumber that has been reported by the oracle
 | Contract               | Deployed on  | Address                                                                                                                        |
 | ---------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | Hashi                  | Gnosis Chain | [0xf59aedc291e0aF64943541709cdd041D992b4De4](https://gnosis.blockscout.com/address/0xf59aedc291e0aF64943541709cdd041D992b4De4) |
+| Yaru                   | Gnosis Chain | [0x49E64aa15AD51D20Ed91d0a7900deb442A8AfEa6](https://gnosisscan.io/address/0x49E64aa15AD51D20Ed91d0a7900deb442A8AfEa6)         |
+| Yaho                   | Gnosis Chain | [0xE67eA33c115afe3F03bc80bBBBB747fB13c039D6](https://gnosisscan.io/address/0xE67eA33c115afe3F03bc80bBBBB747fB13c039D6)         |
 | ShoyuBashi             | Gnosis Chain | [0x31a8E89D6f98454D38C03eCA3DC543F6581d607C](https://gnosisscan.io/address/0x31a8e89d6f98454d38c03eca3dc543f6581d607c)         |
+| HeaderStorage          | Gnosis Chain | [0xB256d8a90852DBb222653ab89b611c2426011C0D](https://gnosisscan.io/address/0xB256d8a90852DBb222653ab89b611c2426011C0D)         |
+| AMB Header Reporter    | Gnosis Chain | [0x5DE3417a21eEd340836C9c1339913b60743b3470](https://gnosisscan.io/address/0x5DE3417a21eEd340836C9c1339913b60743b3470)         |
 | AMB Adapter            | Gnosis Chain | [0x32Cd442309cA6E79Db2194aac61024FBD2B14eb9](https://gnosis.blockscout.com/address/0x32Cd442309cA6E79Db2194aac61024FBD2B14eb9) |
 | AMB                    | Gnosis Chain | [0x9f696CF3c1a0A418cBBFD6E1ab3EBe8A78971Dea](https://gnosisscan.io/address/0x9f696CF3c1a0A418cBBFD6E1ab3EBe8A78971Dea)         |
+| AMB Message Relay      | Gnosis Chain | [0x6D6c06DD4a2D731F502ef092473bD210f603ec06](https://gnosisscan.io/address/0x6D6c06DD4a2D731F502ef092473bD210f603ec06)         |
 | Telepathy Adapter      | Gnosis Chain | [0x2f1E51a2763FB67fe09971Fd8d849716137A3357](https://gnosis.blockscout.com/address/0x2f1E51a2763FB67fe09971Fd8d849716137A3357) |
 | Telepathy Light Client | Gnosis Chain | [0x34b5378DE786389a477b40dD710812c250185f83](https://gnosisscan.io/address/0x34b5378DE786389a477b40dD710812c250185f83)         |
 | Sygma Adapter          | Gnosis Chain | [0x9AD7a6f4FDA8247cC0bF5932B68c5b619937dB15](https://gnosisscan.io/address/0x9AD7a6f4FDA8247cC0bF5932B68c5b619937dB15)         |
 | Sygma                  | Gnosis Chain | [0xd2d95f7611c83b1f9041539557810033aC7B8742](https://gnosisscan.io/address/0xd2d95f7611c83b1f9041539557810033aC7B8742)         |
 | Dendreth Adapter       | Gnosis Chain | [0x719523EaF5CFd101Ef501C64597613FBB7aEdED9](https://gnosisscan.io/address/0x719523EaF5CFd101Ef501C64597613FBB7aEdED9)         |
 | Dendreh Light Client   | Gnosis Chain | [0x983df74d1ef68b4ff1fff11a28c06e5c097435da](https://gnosisscan.io/address/0x983df74d1ef68b4ff1fff11a28c06e5c097435da)         |
+| Yaho                   | Goerli       | [0xaC790dbd0130dC8f1f998b58Dd4d6710E858BD92](https://goerli.etherscan.io/address/0xac790dbd0130dc8f1f998b58dd4d6710e858bd92)   |
+| Yaru                   | Goerli       | [0x27c646d33de54cFE327AD277986d3965fb75b579](https://goerli.etherscan.io/address/0x27c646d33de54cFE327AD277986d3965fb75b579)   |
 | HeaderStorage          | Goerli       | [0x4cd014ac64aaa899b46bf3a477b68bb67e33edc4](https://goerli.etherscan.io/address/0x4cd014ac64aaa899b46bf3a477b68bb67e33edc4)   |
 | AMB Header Reporter    | Goerli       | [0xedc0b1d3de4496e0d917af42f29cb71eb2982319](https://goerli.etherscan.io/address/0xedc0b1d3de4496e0d917af42f29cb71eb2982319)   |
+| AMB Message Relay      | Goerli       | [0x8B28114DE935206217d799916170d9351C882775](https://goerli.etherscan.io/address/0x8b28114de935206217d799916170d9351c882775)   |
 | AMB                    | Goerli       | [0x01268DB05965CeAc2a89566c42CD550ED7eE5ECD](https://goerli.etherscan.io/address/0x01268DB05965CeAc2a89566c42CD550ED7eE5ECD)   |
+| Hashi                  | Goerli       | [0x6a948572432818DeBbb04A0b82b6c12ec5Ca15B5](https://goerli.etherscan.io/address/0x6a948572432818DeBbb04A0b82b6c12ec5Ca15B5)   |
 | Sygma Header Reporter  | Goerli       | [0x2f96d347c932ac73b56e9352ecc0707e25173d88](https://goerli.etherscan.io/address/0x2f96d347c932ac73b56e9352ecc0707e25173d88)   |
 | Sygma                  | Goerli       | [0x5cEA5130c49dCd262B9482E0A76eCE8b23Ae45Df](https://goerli.etherscan.io/address/0x5cEA5130c49dCd262B9482E0A76eCE8b23Ae45Df)   |
 

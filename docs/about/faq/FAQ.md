@@ -188,7 +188,57 @@
    3. If this is the first time you’re uploading your keystores, make sure you uncheck the import slashing data option
    4. Triple-check your password is right and was inputed as you intended
 
-## Shapella FAQs
+9. Which clients are supported by GBC?
+
+   Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](../../node/architecture.md#consensus-layer).
+
+10. How long does it take to sync the node?
+
+Along with running the GBC client you can also consider running a Gnosis Node to connect with (_optional - recommended for experienced node runners only_).
+
+Syncing the [Gnosis using Nethermind](/node/guide) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+
+11. Can I use a node provider to run a Gnosis node?
+
+Check the [RPC Providers](../../tools/rpc/README.mdx) page for the complete list.
+
+12. Can I use DappNode?
+
+Yes! [DappNode](https://dappnode.io) is a partner and full-featured service provider for the Gnosis Beacon Chain. If you would like to use their services for validation, please see the [guide and instructions here.](https://forum.dappnode.io/t/how-to-setup-a-gnosis-beacon-chain-gbc-validator-on-dappnode/1351)
+
+13. Help! I've lost my validator keys
+
+You are responsible for your keys (deriving and storing your keys and mnemonic securely). If you lose them or your keys are compromised, there is no recourse to recover your funds.
+
+14. What is a validator?
+
+Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
+
+15. What is the deposit contract?
+
+The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol), with [some additional functionality](/specs/security-audit).
+
+- Contract Security Audit by Chainsecurity: [https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/](https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/)
+- GBC Contract Address: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)
+
+16. How much do validators earn in rewards?
+
+This varies based on how many validators are participating. As the number of validators increases, the reward for validation is reduced as security becomes increasingly decentralized. Additional info is available on the [incentives page](../../node/rewards-penalties.md).
+
+You can view the current reward yield and other statistics on the [Gnosis Beacon Chain Dune Analytics dashboard](<https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-(Deposits)>).
+
+17. How many validator processes can run per node?
+
+It is possible to run multiple validator processes on a single node with GBC. A 4CPU/8GB node handled 256 validators during testing processes, although for higher decentralization it is recommended to run multiple nodes for this number of validators. The safe recommendation for multiple validators per node is 128.
+
+18. How long does fast sync take with Nethermind?
+
+It depends on the mode and hardware specifications. Typically 24 hours should be allowed.
+
+- For more information on syncing with Nethermind see [https://github.com/NethermindEth/docs/blob/master/ethereum-client/sync-modes.md](https://github.com/NethermindEth/docs/blob/master/ethereum-client/sync-modes.md)
+- To learn more about reading logs during syncing see [https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started#explaining-nethermind-logs)
+
+## Shapella & Validator withdrawal FAQs
 
 1. What is Shapella?
 
@@ -201,7 +251,7 @@
 3. What are two types of withdrawals?
 
    There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.
-   Partial Withdrawal: Any balance in excess of 1 GNO from the account balance get withdrawn back to withdrawal address, automatically.
+   Partial Withdrawal: Any balance in excess of 1 GNO from the account balance get withdrawn back to withdrawal address.
    Full Withdrawal: All the balance from validator’s account get withdrawn back to withdrawal address. This has to be initiated by validator, signing `voluntary_exit` message and broadcasting it to the network. It is irreversible.
 
 4. What are 0x00 and 0x01 withdrawal credentials prefixes?
@@ -222,7 +272,7 @@
 
 8. Do partial withdrawals happen automatically?
 
-   If your withdrawal credentials are set to 0x01 and point to a valid Gnosis Chain address, then the partial withdrawal will happen automatically.
+As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract). However, it is in our plans to automate and subsidize partial withdrawals in the future.
 
 9. Do full withdrawals happen automatically?
 
@@ -307,3 +357,29 @@
    Gnosis Chain had a HF at Block number: 21,735,000 Date: 20 April 2022 at ~ 6:30am UTC. If you are a user of the Gnosis Chain, you don’t need to do anything and day-to-day functionality should not be impacted. However, if you are running a node with either OpenEthereum or Nethermind, you will need to upgrade to the new version.
 
    https://docs.gnosischain.com/specs/hard-forks/21735000
+
+### mGNO
+
+:::danger mGNO has been deprecated
+After Shanghai/Capella hardfork, mGNO has been deprecated. Validator can deposit 1 GNO directly instead of unrwapping 1 GNO to 32 mGNO.
+The FAQs below is legacy information, and will be removed in the future.
+:::
+
+1.  What is mGNO?
+
+mGNO is a metatoken for GNO, similar to a wrapped token like WETH. However, where WETH is wrapped 1:1 with ETH, mGNO is wrapped 32:1 with GNO. **There are 32 mGNO to each GNO.**
+
+mGNO is the staking token used by validators in the Gnosis Beacon Chain.
+(Currently, you need to deposit 1 GNO to activate a validator.)
+
+2. How do I get mGNO?
+
+   mGNO is typically wrapped behind the scenes during a deposit. If you need extra mGNO to top off a balance for example, you can access [https://mgno.validategnosis.com/](https://mgno.validategnosis.com/).
+
+   ![](/img/node/swap-12.png)
+
+   You must have GNO on the Gnosis (**not on the Ethereum mainnet**) to convert to mGNO. You can move GNO from Ethereum to Gnosis using the [OmniBridge](https://omni.gnosischain.com/bridge).
+
+3. Can I swap mGNO back to GNO
+
+No, not currently. Once withdrawals are activated, mGNO will be swapped back to GNO during the withdrawal process.
