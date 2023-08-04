@@ -69,7 +69,7 @@ Once the building part is done, start eth-docker by running
 ./ethd up
 ```
 
-Check that execution/consensus client running correctly bu running: 
+Check that execution/consensus client running correctly by running: 
 <Tabs>
     <TabItem value = "Execution" label= "Execution" default>
         ./ethd logs -f execution
