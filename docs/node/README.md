@@ -116,7 +116,7 @@ Requirements vary client to client, for more detail see the associated system re
 
 | Consensus Layer |                                                                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Lighthouse      | [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/installation.html#recommended-system-requirements)                                     |
+| Lighthouse      | [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/installation.html#recommended-system-requirements)            |
 | Lodestar        | [Lodestar: Specifications](https://chainsafe.github.io/lodestar/#specifications)                                                      |
 | Nimbus          | [Nimbus: Hardware](https://nimbus.guide/hardware.html)                                                                                |
 | Teku            | TBD                                                                                                                                   |
@@ -132,14 +132,14 @@ Running a Gnosis node requires no different hardware configuration from other no
 
 [Ethereum on ARM](https://twitter.com/EthereumOnARM/status/1641374712348409859) demonstrates that it is possible to run a Gnosis, Ethereum, Starknet, and Arbitrum node using the same hardware configuration with less than $400 per node. (March 2023)
 
-| Hardware                           | Price (USD) |
-|------------------------------------|-------------|
-| [Rock 5B board(16GB)](https://twitter.com/theradxa)                | $189        |
-| Acrylic case with passive heatsink | $13         |
-| Crucial P2 NVMe SSD 2TB            | $140        |
-| MicroSD                            | $8          |
-| Ethernet cable                     | $6          |
-| Power supply                       | $9          |
+| Hardware                                            | Price (USD) |
+| --------------------------------------------------- | ----------- |
+| [Rock 5B board(16GB)](https://twitter.com/theradxa) | $189        |
+| Acrylic case with passive heatsink                  | $13         |
+| Crucial P2 NVMe SSD 2TB                             | $140        |
+| MicroSD                                             | $8          |
+| Ethernet cable                                      | $6          |
+| Power supply                                        | $9          |
 
 ### Network Connectivity
 
@@ -319,7 +319,7 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 ```bash
 ./lodestar beacon \
 --network gnosis \
---rootDir="/data"
+--dataDir="/data"
 --jwt-secret /path/to/jwtsecret \
 --eth1.enabled=true \
 --execution.urls="http://127.0.0.1:8551" \
