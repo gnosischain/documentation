@@ -208,7 +208,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 * [Teku](https://github.com/ConsenSys/teku/releases)
 * [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
 
-Client diversity is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
+[Client diversity](https://eth2book.info/capella/part2/incentives/diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
 #### **Verifying the software** ####
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Gnosis client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
