@@ -10,29 +10,29 @@ title: Run a Node
 
 ## A Community-run Chain
 
-- Gnosis is a community-run chain that is created by nodes run by thousands of ordinary people around the globe. As a distributed network, a diverse set of nodes ensure that the network is resilient to technical failures. A diversity of nodes run across many countries ensures the network can remain [credibly neutral infrastructure](https://nakamoto.com/credible-neutrality/). 
+- Gnosis is a community-run chain that is created by nodes run by thousands of ordinary people around the globe. As a distributed network, a diverse set of nodes ensure that the network is resilient to technical failures. A diversity of nodes run across many countries ensures the network can remain [credibly neutral infrastructure](https://nakamoto.com/credible-neutrality/).
 - Running a node is perhaps the most profound way to contribute to a blockchain network. By running a node, you -are- the network. Together with other nodes run by others around the planet, you form part of a global network that is anti-fragile and resilient.
-- Gnosis has a strong culture of homestakers running nodes from their homes, that are not reliant on cloud providers or datacenters. 
-- Gnosis has a stretch goal to have a node in every country by 2025. 
+- Gnosis has a strong culture of homestakers running nodes from their homes, that are not reliant on cloud providers or datacenters.
+- Gnosis has a stretch goal to have a node in every country by 2025.
 
 ### Gnosis vs. Ethereum
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
 - Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~$100 at Nov 2022) instead of the 32 ETH (~$38,400 at Nov 2022) minimum required for Ethereum
-- Gnosis runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus. 
+- Gnosis runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus.
 
 ### Proof-of-Stake
 
 :::caution
 
-Validator deposits are currently one-way, non-reversible transactions. Similar to Ethereum, no concrete date has been set for withdrawals of GNO staked in validators. 
+Validator deposits are currently one-way, non-reversible transactions. Similar to Ethereum, no concrete date has been set for withdrawals of GNO staked in validators.
 
 :::
 
 - Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
 - 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
-- Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior. 
+- Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior.
 
 ## Choosing an Approach
 Refer from [Ethereum official docs](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#choosing-approach).
@@ -88,7 +88,7 @@ Hardware requirements differ by client but generally are not that high since the
 
 Before installing any client, please ensure your computer has enough resources to run it. You can find the minimum and recommended requirements below.
 
-The bottleneck for your hardware is mostly disk space. Syncing the Gnosis blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. Refer to [this post](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) for good and bad SSD model. 
+The bottleneck for your hardware is mostly disk space. Syncing the Gnosis blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. Refer to [this post](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) for good and bad SSD model.
 
 The size of the database and speed of the initial synchronization depends on the chosen client, its configuration and sync strategy.
 
@@ -103,7 +103,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 - At least 16 GB of RAM
 - NVMe SSD (preferred) or SATA SSD
 
-Requirements vary client to client, for more detail see the associated system requirements below. 
+Requirements vary client to client, for more detail see the associated system requirements below.
 
 | Execution Layer |                                                                                                                          |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -124,7 +124,7 @@ Requirements vary client to client, for more detail see the associated system re
 
 ** Gnosis chain doesn't support Prysm at the moment.
 
-Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node. 
+Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node.
 
 **Gnosis in Ethereumverse**
 
@@ -143,7 +143,7 @@ Running a Gnosis node requires no different hardware configuration from other no
 
 ### Network Connectivity
 
-Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./rewards-penalties), but this will typically be recouped quickly as long as the outage is short. 
+Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./rewards-penalties), but this will typically be recouped quickly as long as the outage is short.
 
 A Gnosis node with an average number of peers consumes approximately 700 mb/hour of upload bandwidth, and this may increase with time. Note that syncing the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
 
@@ -199,14 +199,14 @@ Instructions for installing each client are provided in the documentation linked
 Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
 ** Execution clients **
-* Nethermind
-* Erigon
+* [Nethermind](https://downloads.nethermind.io/)
+* [Erigon](https://github.com/ledgerwatch/erigon/releases)
 
 ** Consensus clients **
-* Lighthouse
-* Lodestar
-* Teku
-* Nimbus
+* [Lighthouse](https://github.com/sigp/lighthouse/releases)
+* [Lodestar](https://github.com/ChainSafe/lodestar/releases)
+* [Teku](https://github.com/ConsenSys/teku/releases)
+* [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
 
 Client diversity is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
@@ -300,7 +300,7 @@ When starting a Beacon Node on a testnet, you can save significant syncing time 
 **Running Lighthouse**
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
 
-```bash 
+```bash
     ./lighthouse \
     --network gnosis beacon_node \
     --datadir=data \
