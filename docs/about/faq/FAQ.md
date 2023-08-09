@@ -158,7 +158,7 @@
 
    1. update all packages to the latest version (core, EL, CL, web3signer, etc)
    2. turn on EL + CL and check if both are on sync before turning on the validator (see that lighthouse has 2 processes, 1 beacon and 1 validator)
-   3. (a) if both are on sync, turn on the validator and check 10 minutes later the beacon explorer  
+   3. (a) if both are on sync, turn on the validator and check 10 minutes later the beacon explorer
       (b) if you don’t get both to the head, let me know here and we can troubleshoot together.
 
 7. My validator is constantly missing attestations. Several of my validators are said to be inactive and getting penalized on beacon.gnosischain.com, although logs show errors that I don’t understand. And half of them are active and well (all running on the same physical machine).
@@ -196,7 +196,7 @@
 
 Along with running the GBC client you can also consider running a Gnosis Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis using Nethermind](/node/guide) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing the [Gnosis using Nethermind](/node/manual) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
 11. Can I use a node provider to run a Gnosis node?
 

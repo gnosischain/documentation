@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
-let bridgeTutorials = [ 
+let bridgeTutorials = [
   'bridges/tutorials/using-amb',
   {
     type: 'category',
@@ -37,7 +37,7 @@ let bridgeTutorials = [
       'bridges/tutorials/using-xdai-bridge/no-ui',
       'bridges/tutorials/using-xdai-bridge/troubleshooting',
     ]
-  }   
+  }
 ]
 
 // @ts-check
@@ -56,7 +56,7 @@ const sidebars = {
         'about/overview/media-kit',
       ]
     },
-    { 
+    {
       type: 'category',
       label: 'Networks',
       link: {type: 'doc', id: 'about/networks/README'},
@@ -129,7 +129,7 @@ const sidebars = {
 
   ],
 
-  
+
   ecosystems: [
     'ecosystems/README',
     'ecosystems/daos',
@@ -203,7 +203,7 @@ const sidebars = {
         "developers/verify/sourcify",
       ],
     },
-    { 
+    {
       type: 'category',
       label: 'Bridge Tutorials',
       link: { slug: 'developers/tutorials', type: 'generated-index', title: 'Tutorials' },
@@ -235,9 +235,9 @@ const sidebars = {
       link: { slug: 'node/tools', type: 'generated-index', title: '1-click Tools' },
       collapsed: false,
       items: [
-        "node/tools/dappnode", 
+        "node/tools/dappnode",
         "node/tools/eth-docker",
-        "node/tools/sedge", 
+        "node/tools/sedge",
         "node/tools/stereum",
         {
           type: 'link',
@@ -248,68 +248,68 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Guide',
-      link: {type: 'doc', id: 'node/guide/README'},
+      label: 'Manual setup',
+      link: {type: 'doc', id: 'node/manual/README'},
       collapsed: false,
       items: [
-        'node/guide/configure-server',
+        'node/manual/configure-server',
         {
           type: 'category',
           label: 'Step 2: Run Execution Client',
-          link: { slug: 'node/guide/execution', type: 'generated-index', title: 'Execution Clients' },
+          link: { slug: 'node/manual/execution', type: 'generated-index', title: 'Execution Clients' },
           collapsed: true,
           items: [
-            
-            "node/guide/execution/nethermind",
-            "node/guide/execution/besu",
-            "node/guide/execution/erigon",
-            "node/guide/execution/geth",
-            "node/guide/execution/openethereum",
+
+            "node/manual/execution/nethermind",
+            "node/manual/execution/besu",
+            "node/manual/execution/erigon",
+            "node/manual/execution/geth",
+            "node/manual/execution/openethereum",
           ],
         },
         {
           type: 'category',
           label: 'Step 3: Run Beacon Node',
-          link: { slug: 'node/guide/beacon', type: 'generated-index', title: 'Beacon Clients' },
+          link: { slug: 'node/manual/beacon', type: 'generated-index', title: 'Beacon Clients' },
           collapsed: true,
           items: [
-            "node/guide/beacon/lodestar",
-            "node/guide/beacon/teku",
-            "node/guide/beacon/lighthouse",
-            "node/guide/beacon/nimbus",
-            "node/guide/beacon/prysm",
+            "node/manual/beacon/lodestar",
+            "node/manual/beacon/teku",
+            "node/manual/beacon/lighthouse",
+            "node/manual/beacon/nimbus",
+            "node/manual/beacon/prysm",
           ],
         },
         {
           type: 'category',
           label: 'Step 4: Run Validator',
-          link: { slug: 'node/guide/validator', type: 'generated-index', title: 'Run Validator' },
+          link: { slug: 'node/manual/validator', type: 'generated-index', title: 'Run Validator' },
           collapsed: true,
           items: [
             {
               type: 'category',
               label: 'Generate Validator Keys',
-              link: {type: 'doc', id: 'node/guide/validator/generate-keys/README'},
+              link: {type: 'doc', id: 'node/manual/validator/generate-keys/README'},
               collapsed: true,
               items: [
-                'node/guide/validator/generate-keys/cli/README',
-                'node/guide/validator/generate-keys/wagyu',
+                'node/manual/validator/generate-keys/cli/README',
+                'node/manual/validator/generate-keys/wagyu',
               ],
             },
             {
               type: 'category',
               label: 'Run Validator',
-              link: { slug: 'node/guide/validator/run', type: 'generated-index', title: 'Run Validator' },
+              link: { slug: 'node/manual/validator/run', type: 'generated-index', title: 'Run Validator' },
               collapsed: true,
               items: [
-                "node/guide/validator/run/lodestar",
-                "node/guide/validator/run/teku",
-                "node/guide/validator/run/lighthouse",
-                "node/guide/validator/run/nimbus",
+                "node/manual/validator/run/lodestar",
+                "node/manual/validator/run/teku",
+                "node/manual/validator/run/lighthouse",
+                "node/manual/validator/run/nimbus",
               ]
             },
-            "node/guide/validator/deposit",
-            "node/guide/validator/verify"
+            "node/manual/validator/deposit",
+            "node/manual/validator/verify"
           ],
         },
       ],
@@ -539,7 +539,7 @@ const sidebars = {
         }
 
 
-  
+
       ],
     },
     {
@@ -562,7 +562,7 @@ const sidebars = {
           type: 'link',
           label: 'Prussia.dev',
           href: 'https://faucet.prussia.dev/xdai',
-        },        
+        },
         'tools/faucets/tokens',
       ],
     },
@@ -630,7 +630,7 @@ const sidebars = {
             'tools/oracles/supraoracles/vrf',
           ],
         },
-        
+
       ],
     },
     {
@@ -724,7 +724,7 @@ const sidebars = {
           link: {type: 'doc', id: 'bridges/governance/README'},
           items: [
             'bridges/governance/decisions',
-          ] 
+          ]
         },
         'bridges/third-party',
         'bridges/audits',
@@ -752,9 +752,9 @@ const sidebars = {
         'bridges/tokenbridge/xdai-bridge',
         'bridges/tokenbridge/omnibridge',
         'bridges/tokenbridge/nft-bridge'
-      ] 
+      ]
     },
-    { 
+    {
       type: 'category',
       label: 'Tutorials',
       link: { slug: 'bridges/tutorials', type: 'generated-index', title: 'Tutorials' },

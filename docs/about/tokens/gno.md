@@ -1,4 +1,4 @@
---- 
+---
 title: GNO Token
 description: GNO is the staking token of Gnosis and the governance token for the GnosisDAO.
 keywords: [gnosis tokens, gnosis gno token, fee token, gno validation, omni bridge, mgno, ethereum gno]
@@ -92,13 +92,13 @@ Check out [Chiado Testnet specs](/about/networks/chiado#gno-token) for more info
 
 #### mGNO token
 
-To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a meta-token similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO. Check the [validator deposit process](../../node/guide/validator/deposit.md) for more details.
+To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a meta-token similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO. Check the [validator deposit process](../../node/manual/validator/deposit.md) for more details.
 
 - mGNO contract on Gnosis: [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)
 
 #### Staking
 
-Stake your GNO tokens to secure Gnosis validating blocks as part of the PoS consensus. Check the [validator deposit process](../../node/guide/validator/deposit.md) for more details.
+Stake your GNO tokens to secure Gnosis validating blocks as part of the PoS consensus. Check the [validator deposit process](../../node/manual/validator/deposit.md) for more details.
 
 Liquid staking providers allow anyone to stake without running the infrastructure themselves. Check the [Stakewise](/tools/beacon-chain/liquid-staking#tokens-sgno--rgno) page for more details on sGNO and rGNO tokens.
 
