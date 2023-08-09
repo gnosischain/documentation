@@ -26,7 +26,7 @@ To run a Gnosis node, you need to run an Execution Layer and Consensus Layer cli
 
 ![](../../static/img/node/execution-layer-architecture.png)
 
-Gnosis' Execution Layer is the legacy xDai "Eth1" network. The Execution Layer is where smart contracts and the EVM and network rules reside. Prior to the Merge, the Execution Layer utilized a [Proof-of-Authority consensus](../specs/consensus/aura.md), which was deprecated by the merge in favor of the Consensus Layer instead.
+Gnosis Execution Layer is the legacy xDai "Eth1" network. The Execution Layer is where smart contracts and the EVM and network rules reside. Prior to the Merge, the Execution Layer utilized a [Proof-of-Authority consensus](../specs/consensus/aura.md), which was deprecated by the merge in favor of the Consensus Layer instead.
 
 | Period               | Ethereum        | Gnosis                                              |
 | -------------------- | --------------- | --------------------------------------------------- |
