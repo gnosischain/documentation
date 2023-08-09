@@ -35,11 +35,11 @@ Gnosis' Execution Layer is the legacy xDai "Eth1" network. The Execution Layer i
 
 Node Operators will need to run an Execution Layer client, which will interact with the Execution Layer network.
 
-- [Nethermind](./guide/execution/nethermind.md)
-- [Geth](./guide/execution/geth.md) (in progress)
-- [Erigon](./guide/execution/erigon.md) (in progress)
+- [Nethermind](./manual/execution/nethermind.md)
+- [Geth](./manual/execution/geth.md) (in progress)
+- [Erigon](./manual/execution/erigon.md) (in progress)
 
-Gnosis used to be supported by the [Parity OpenEthereum client](./guide/execution/openethereum.md), but it has since been deprecated.
+Gnosis used to be supported by the [Parity OpenEthereum client](./manual/execution/openethereum.md), but it has since been deprecated.
 
 ### Consensus Layer
 
@@ -57,11 +57,11 @@ The Consensus Layer consists of the Beacon Node and Validator Client software.
 
 Node operators will need to run a Consensus Layer client. In most cases, these are the same Ethereum Consensus Layer client, just run with a `--network` flag!
 
-- [Lodestar](./guide/beacon/lodestar.md)
-- [Nimbus](./guide/beacon/nimbus.md)
-- [Teku](./guide/beacon/teku.md)
-- [Lighthouse](./guide/beacon/lighthouse.md)
-- [Prysm](./guide/beacon/prysm.md) (in progress)
+- [Lodestar](./manual/beacon/lodestar.md)
+- [Nimbus](./manual/beacon/nimbus.md)
+- [Teku](./manual/beacon/teku.md)
+- [Lighthouse](./manual/beacon/lighthouse.md)
+- [Prysm](./manual/beacon/prysm.md) (in progress)
 
 ### Inter-Layer Communication
 

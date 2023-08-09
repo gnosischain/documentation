@@ -147,7 +147,7 @@ Running a node requires a reliable internet connection, as nodes are constantly 
 
 A Gnosis node with an average number of peers consumes approximately 700 mb/hour of upload bandwidth, and this may increase with time. Note that syncing the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
 
-For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](./guide/beacon/lighthouse.md) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
+For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](./manual/beacon/lighthouse.md) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
 
 Validators are advised to consider those numbers when planning their infrastructure and budget. With growth of the overall validator set, these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
 

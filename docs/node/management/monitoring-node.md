@@ -2,14 +2,14 @@
 title: Monitoring your Node(s)
 ---
 
-To monitor a node in the network, you can either observe your own node's status or the entire network.  
-Monitoring your own node can give you insight into its status, and setting up a monitoring dashboard using Prometheus and Grafana is commonly used.  
+To monitor a node in the network, you can either observe your own node's status or the entire network.
+Monitoring your own node can give you insight into its status, and setting up a monitoring dashboard using Prometheus and Grafana is commonly used.
 To monitor the network, options include ethstats, forkmon, beacon.gnosischain, and blockscout, each providing different types of information about the network and validator-related metrics.
 
 ## Monitoring your own node with Prometheus + Grafana
 
-**Prometheus** is a systems monitoring tool that pulls data from certain endpoint and stores the data into a database.  
-**Grafana** is a data visualisation tool that allows user to create their own dashboard from different data sources, including Prometheus.  
+**Prometheus** is a systems monitoring tool that pulls data from certain endpoint and stores the data into a database.
+**Grafana** is a data visualisation tool that allows user to create their own dashboard from different data sources, including Prometheus.
 **Node exporter** is a monitoring tool that exposes your hardware and OS metrics. It can provide your system metrics to Prometheus.
 
 ![Prometheus-Grafana-NodeExporter](../../../static/img/node/prometheus-grafana.png)
@@ -60,7 +60,7 @@ WIP
     --metrics
     --metrics-port=<PORT>
 
-https://lighthouse-book.sigmaprime.io/advanced_metrics.html  
+https://lighthouse-book.sigmaprime.io/advanced_metrics.html
  https://github.com/sigp/lighthouse-metrics
 </TabItem>
 <TabItem value="Lodestar" label="Lodestar">
@@ -91,8 +91,8 @@ https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
 </TabItem>
 
 </Tabs>
-     
- 
+
+
 ## Monitoring the network
 
 ### Ethstats
@@ -136,23 +136,23 @@ Forkmon (Fork monitor) is another tool to monitor Node's status.
 
 #### Execution Layer
 
-- **Gnosisscan**  
+- **Gnosisscan**
   [Gnosisscan](https://gnosisscan.io/) provides data about blocks, transactions, validator's reward on Execution Layer, etc.
 
   To check your Execution Layer Reward (in xDAI):
 
-  1. Search your `fee-recipient-address` that is set when [running validator](../guide/README.md#step-4-run-a-validator)
+  1. Search your `fee-recipient-address` that is set when [running validator](../manual/README.md#step-4-run-a-validator)
   2. Click **Validated Blocks**
      ![GnosisScan Block Validated by Validator](../../../static/img/node/monitor-node/gnosisscan-validated-block.png)
 
-- **Blockscout**  
+- **Blockscout**
   [Blockscout](https://blockscout.com/xdai/mainnet) is another block explorer similar to Gnosisscan.
 
   ![Blockscout Block Validator by Validator](../../../static/img/node/monitor-node/blockscout-validated-block.png)
 
 #### Consensus Layer
 
-- **beacon.gnosischain**  
+- **beacon.gnosischain**
   [beacon.gnosischain](https://gnosischa.in//) provides insight on consensus layer such as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
 
   To check your Consensus Layer Reward (in mGNO):
