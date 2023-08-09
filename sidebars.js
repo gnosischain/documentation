@@ -21,7 +21,8 @@ let bridgeTutorials = [
       'bridges/tutorials/using-omnibridge/specific-tokens',
       'bridges/tutorials/using-omnibridge/debugging-omnibridge-txns',
       'bridges/tutorials/using-omnibridge/safe',
-      'bridges/tutorials/using-omnibridge/advanced'
+      'bridges/tutorials/using-omnibridge/advanced',
+      'bridges/tutorials/using-omnibridge/bnb-chain'
     ]
   },
   {
