@@ -69,7 +69,7 @@ services:
       --dataDir=/data/validators
       --logFile=/data/validators/logs/validator.log
       --logFileLevel=info
-      --server=http://consensus:4000
+      --beaconNodes=http://consensus:4000
       --metrics=true
       --metrics.address=0.0.0.0
       --metrics.port=5064

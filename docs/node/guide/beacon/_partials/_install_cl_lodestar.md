@@ -23,8 +23,8 @@ git clone https://github.com/chainsafe/lodestar.git
 - Install and build all the packages 
 ```shell
 cd lodestar
-yarn install --ignore-optional
-yarn run build
+yarn install
+yarn build
 ```
 
 Your repo will look like this
@@ -70,8 +70,8 @@ git clone https://github.com/chainsafe/lodestar.git
 - Install and build all the packages 
 ```shell
 cd lodestar
-yarn install --ignore-optional
-yarn run build
+yarn install
+yarn build
 ```
 
 Your repo will look like this
