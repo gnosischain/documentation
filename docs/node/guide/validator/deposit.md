@@ -184,20 +184,5 @@ Required:
 1. Chiado Testnet xDai: [https://gnosisfaucet.com/](https://gnosisfaucet.com/)
 2. Chiado Testnet GNO: This can be obtained from discord upon request
 
-You can run the deposit UI [https://deposit.gnosischain.com](https://deposit.gnosischain.com) locally from here
-
+You can run the [deposit UI](https://deposit.gnosischain.com) locally following its repository `README` instructions:
 [https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui](https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui)
-
-Create an .env file with the following variables for Chiado
-
-```
-REACT_APP_NETWORK_ID=10200
-REACT_APP_RPC_URL="https://rpc.chiadochain.net"
-REACT_APP_WRAPPER_CONTRACT_ADDRESS=0x917947dC7E341d843ab38e91623bcAeb65512b75
-REACT_APP_TOKEN_CONTRACT_ADDRESS=0x19C653Da7c37c66208fbfbE8908A5051B57b4C70
-REACT_APP_WRAPPED_TOKEN_CONTRACT_ADDRESS=0xc5be8bf53755a41c2385e7aa86f6a9e28746f466
-REACT_APP_DEPOSIT_CONTRACT_ADDRESS=0xb97036A26259B7147018913bD58a774cf91acf25
-REACT_APP_DEPOSIT_START_BLOCK_NUMBER=0
-REACT_APP_DAPPNODE_DEPOSIT_CONTRACT_ADDRESS=
-REACT_APP_USE_PERMIT=true
-```
