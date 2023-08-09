@@ -74,7 +74,7 @@ The addresses from this article are for Goerli <-> Gnosis Chain.
 
 | Contract                      | Address                                                                                                                             | Chain  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Yaho                          | [0x75fF4Bad26345a5b15CCae256900640373EBA601](0x75fF4Bad26345a5b15CCae256900640373EBA601)                                            | GC     |
+| Yaho                          | [0x75fF4Bad26345a5b15CCae256900640373EBA601](https://gnosisscan.io/address/0x75fF4Bad26345a5b15CCae256900640373EBA601)              | GC     |
 | AMB Message Relay             | [0x4A25E5374D8df553A1f2ebB628635F826379E4e9](https://gnosisscan.io/address/0x4A25E5374D8df553A1f2ebB628635F826379E4e9#readContract) | GC     |
 | AMB Helper                    | [0xc7118ecF785871F08Feff5DE07d5F884b6199477](https://gnosisscan.io/address/0xc7118ecF785871F08Feff5DE07d5F884b6199477#readContract) | GC     |
 | AMB Adapter for Message Relay | [0xE46610b72d0782029C5654C9224D99264D4B8fa0](https://goerli.etherscan.io/address/0xe46610b72d0782029c5654c9224d99264d4b8fa0)        | Goerli |
