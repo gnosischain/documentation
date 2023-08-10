@@ -11,10 +11,8 @@ Gnosis Chain underwent Shanghai/Capella Hardfork successfully on August 1, 2023 
 Validator withdrawal allows a validator's account balance get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator's withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
 
 There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.  
-**Partial Withdrawal**: Any balance in excess of 32mGNO from the account balance get withdrawn back to withdrawal address, by .  
+**Partial Withdrawal**: Any balance in excess of 1 GNO from the account balance get withdrawn back to withdrawal address.  
 **Full Withdrawal**: All the balance from validator's account get withdrawn back to withdrawal address. This has to be initiated by validator, signing [voluntary_exit](./voluntary-exit.md) message and broadcasting it to the network. It is irreversible.
-
-# Action needs to be taken by validators
 
 ## What is the difference between validator withdrawal in Gnosis Chain and Ethereum?
 
