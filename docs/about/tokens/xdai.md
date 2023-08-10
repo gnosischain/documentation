@@ -6,7 +6,7 @@ keywords: [gnosis tokens, gnosis xdai token, fee token, gno validation, xdai bri
 
 # xDai Token
 
-xDai tokens are transactional tokens on Gnosis and also used to pay for execution of smart contracts and gas fees.
+xDai tokens are native tokens on Gnosis and also used to pay for execution of smart contracts and gas fees.
 
 ## Get xDai Token
 
@@ -14,7 +14,7 @@ xDai tokens are transactional tokens on Gnosis and also used to pay for executio
 
 Convert DAI from Ethereum to xDai using the [xDai Bridge](/bridges/tokenbridge/xdai-bridge).
 
-### Buy xDAI 
+### Buy xDAI
 
 Gateways and Exchanges allow users to get xDai using FIAT or swap other crypto into xDai.
 
@@ -30,7 +30,7 @@ Gnosis offers [free mainnet faucets](/tools/faucets/).
 
 ## Specifications
 
-xDai is the native currency built on the Gnosis blockchain, it is generated when a Dai is sent to the xDai bridge, the bridge validators mint the xDai as part of the Gnosis reward native contract. 
+xDai is the native currency built on the Gnosis blockchain, it is generated when a Dai is sent to the xDai bridge, the bridge validators mint the xDai as part of the Gnosis reward native contract.
 
 ### Properties
 
