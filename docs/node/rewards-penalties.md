@@ -17,8 +17,8 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 
 ### Current Yield
 
-- The current yield on GNO staking can be found in this [Dune Dashboard](<https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-(Deposits)>).
-- As of Nov 2022, GNO staking has a ~15-16% yield.
+- The current yield on GNO staking can be found in this [Dune Dashboard](https://dune.com/gnosischain_team/gnosischain). and [Gnosis Metrics](https://www.gnosismetrics.com/).
+- As of Aug 2023, GNO staking has a ~14% yield.
 
 ### Rewards Calculation:
 
