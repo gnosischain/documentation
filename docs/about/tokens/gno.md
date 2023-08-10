@@ -1,10 +1,10 @@
---- 
+---
 title: GNO Token
 description: GNO is the staking token of Gnosis and the governance token for the GnosisDAO.
 keywords: [gnosis tokens, gnosis gno token, fee token, gno validation, omni bridge, mgno, ethereum gno]
 ---
 
-GNO is the native token of the Gnosis ecosystem. It's used for staking on the Gnosis Beacon Chain and acts as the governance token for the GnosisDAO.
+GNO is the key token of the Gnosis ecosystem. It's used for staking on the Gnosis Beacon Chain and acts as the governance token for the GnosisDAO.
 
 ## Specifications
 
@@ -88,19 +88,15 @@ Check out [Chiado Testnet specs](/about/networks/chiado#gno-token) for more info
 
 ## Use GNO Tokens
 
-### Gnosis Beacon Chain
+### Staking
 
-#### mGNO token
+By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](../../node/manual/validator/deposit.md) page.
 
-To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a meta-token similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO. Check the [validator deposit process](../../node/guide/validator/deposit.md) for more details.
+In order to establish a highly precise ETH-mirrored environment, it is required to stake a minimum of 32 tokens on the Gnosis Beacon Chain. To facilitate this, the mGNO token serves as a meta-token specifically designed for staking purposes. During the deposit process, an automatic conversion takes place where 1 GNO is transformed into 32 mGNO tokens behind the scenes.
 
-- mGNO contract on Gnosis: [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)
+The mGNO contract address on the Gnosis network is as follows: [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68).
 
-#### Staking
-
-Stake your GNO tokens to secure Gnosis validating blocks as part of the PoS consensus. Check the [validator deposit process](../../node/guide/validator/deposit.md) for more details.
-
-Liquid staking providers allow anyone to stake without running the infrastructure themselves. Check the [Stakewise](/tools/beacon-chain/liquid-staking#tokens-sgno--rgno) page for more details on sGNO and rGNO tokens.
+For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about sGNO and rGNO tokens, please consult the [Stakewise](/tools/beacon-chain/liquid-staking#tokens-sgno--rgno) page.
 
 ### GnosisDAO Governance
 
@@ -111,37 +107,4 @@ Liquid staking providers allow anyone to stake without running the infrastructur
 ## GNO Token Audit
 
 - [GNO Token v2.0.0 Audit](https://hackmd.io/@verilog/gno-token-v2-audit) by Verilog Solutions
-
-
-## Converting GNO to mGNO
-
-:::note
-GNO is automatically wrapped by the deposit contract, you only need to do this to top off your balance. The following instructions use the older swap UI
-:::
-
-:::danger
-Note that currently there is not a mechanism to swap mGNO back to GNO.
-:::
-
-1\) Go to [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) and connect your web3 wallet toGnosis on the application.
-
-In this example we use MetaMask.
-
-![](/img/node/UI-1A.png)
-
-![](/img/node/UI-2A.png)
-
-2\) Select the Swap tab. Enter the amount you would like to convert and click **Convert**. You can convert any amount, be sure to **start with a leading 0 to convert less than 1 GNO. For example, 0.1 GNO will be converted to 3.2 mGNO.**
-
-![](/img/node/swap-1.png)
-
-3\) Sign 2 transactions in your wallet. The first is a free signature request to allow the application to make the conversion.
-
-![](/img/node/pt2.png)
-
-The second processes the transaction. This will require a small amount of xDai to complete.
-
-![](/img/node/2tx.png)
-
-4\) The transaction should be initiated and completed within a few seconds. Once completed you can click the link to see the tx in BlockScout and add mGNO to your MetaMask wallet. The mGNO contract address is 0x722fc4DAABFEaff81b97894fC623f91814a1BF68.
 

@@ -104,7 +104,7 @@ We highly recommend generating keystores on a safe, completely offline device. T
 
 :::
 
-import GenerateValidatorKeysWagyuPartial from '@site/docs/node/guide/validator/\_partials/\_generate_validator_keys_wagyu.md';
+import GenerateValidatorKeysWagyuPartial from '@site/docs/node/manual/validator/\_partials/\_generate_validator_keys_wagyu.md';
 
 <GenerateValidatorKeysWagyuPartial />
 

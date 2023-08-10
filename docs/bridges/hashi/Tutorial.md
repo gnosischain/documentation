@@ -25,15 +25,23 @@ You may call a block header reporter to report and store the block hash, if the 
 3. Connect your wallet and switch to the correct network.
 4. Click **reportHeaders** and input blockNumbers (uint256 []), [adapters address](https://docs.gnosischain.com/bridges/hashi/#current-deployments) and gas.
 
-## Yaru and Yaho
+## Message Dispatching using Yaru and Yaho
 
 With Yaru and Yaho, you can pass arbitrary message across the chain.
 
 ### Prerequisite
 
-1. Deploy [Yaho](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaho.sol) on Goerli, and [Yaru](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaru.sol) on Gnosis Chain.
-2. Deploy [Hashi Module](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/zodiac/HashiModule.sol) for Safe that will be called by Yaru, i.e. Safe on Gnosis Chain.
-3. Deploy [AMB Message Relayer](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/adapters/AMB/AMBMessageRelayer.sol) on Goerli.
+For Goerli->Gnosis Direction:
+
+1. Deploy [Yaho](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaho.sol) on Goerli, and [Yaru](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaru.sol) on Gnosis Chain, with constructor `_hashi: Hashi address on Gnosis Chain, _yaho: Yaho address on Goerli, _chainId: 5`.
+2. Optional: Deploy [Hashi Module](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/zodiac/HashiModule.sol) for Safe that will be called by Yaru, i.e. Safe on Gnosis Chain.
+3. Deploy [AMB Message Relay](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/adapters/AMB/AMBMessageRelayer.sol) on Goerli, with constructor `_amb: AMB address on Goerli, _yaho: Yaho address on Goerli`.
+4. Deploy [AMB Adapter](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/adapters/AMB/AMBAdapter.sol) on Gnosis Chain, with constructor `_amb: AMB address on Gnosis Chain, _reporter: AMB Message Relay on Goerli, _chainId: bytes32(5) `.
+
+:::info
+The contract address is available at [Message Dispatching using Yaho and Yaru](Application.md#message-dispatching-using-yaho-and-yaru).  
+Check out [Safe on Hashi-Push Flow](Application.md#push-flow) for more details.
+:::
 
 ### Initiate Transaction
 
@@ -43,7 +51,11 @@ With Yaru and Yaho, you can pass arbitrary message across the chain.
 const calldata = contractInterface.encodeFunctionData(function_name, parameters)
 ```
 
-2. Create transaction calldata for Hashi Module.
+2. Optional: Create transaction calldata for Hashi Module.
+
+:::info
+This step is only needed when [Safe](https://safe.global/) is used.
+:::
 
 ```
 const txData = hashi_module_interface.encodeFunctionData("executeTransaction", [
@@ -55,6 +67,7 @@ const txData = hashi_module_interface.encodeFunctionData("executeTransaction", [
 ```
 
 3. Create message with format below:
+   With Safe:
 
 ```
 const message =
@@ -65,10 +78,24 @@ const message =
 }
 ```
 
-4. call `Yaho.dispatchMessagesToAdapters([message],[AMB_Message_Relayer_Address],[AMB_Adapter_Address])`
+Without Safe:
 
-5. Once the transaction is created, you need to collect `messsage Id` from [`MessageDispatched` event](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaho.sol#L27) emitted from Yaho
+```
+const message =
+{
+    to: ${Contract address on Gnosis Chain},
+    toChainId: 100 // Gnosis Chain,
+    data: ${calldata}
+}
+```
+
+4. Call `Yaho.dispatchMessagesToAdapters([message],[AMB_Message_Relay_Address],[AMB_Adapter_Address])` using Safe or EOA.
+
+5. Once the transaction is created, you need to collect `messsage Id` from [`MessageDispatched` event](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaho.sol#L27) emitted from Yaho.
 
 ### Claim Transaction
 
-1. Call `Yaru.executeMessages([message],[messageId],[Safe_from_Goerli],[AMB_Adapter_Address])`
+After the message is relayed to Gnosis Chain by AMB bridge, you can proceeed to claim your transaction.
+Make sure that your message is stored by checking if the AMB Adapter contract emits `HashStored` event with the correct `message Id`.
+
+1. Call `Yaru.executeMessages([message],[messageId],[Safe_from_Goerli or EOA from Goerli that calls Yaho],[AMB_Adapter_Address on Gnosis Chain])`

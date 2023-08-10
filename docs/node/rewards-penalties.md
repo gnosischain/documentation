@@ -17,8 +17,8 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 
 ### Current Yield
 
-- The current yield on GNO staking can be found in this [Dune Dashboard](<https://dune.xyz/maxaleks/Gnosis-Beacon-Chain-(Deposits)>).
-- As of Nov 2022, GNO staking has a ~15-16% yield.
+- The current yield on GNO staking can be found in this [Dune Dashboard](https://dune.com/gnosischain_team/gnosischain). and [Gnosis Metrics](https://www.gnosismetrics.com/).
+- As of Aug 2023, GNO staking has a ~14% yield.
 
 ### Rewards Calculation:
 
@@ -66,13 +66,13 @@ Gnosis follows Ethereum's Proof-of-Stake penalties.
 ### "Offline" Penalties
 
 :::tip Read more
-[Upgrading Ethereum: Penalties](https://eth2book.info/bellatrix/part2/incentives/penalties/)
+[Upgrading Ethereum: Penalties](https://eth2book.info/capella/part2/incentives/penalties/)
 :::
 
 The most common "penalty" validators encounter is if they are offline, or are late in performing their duties of attesting or proposing blocks.
 
 - Generally speaking, the penalties for being offline (or late) are equal to the rewards that a validator would have received if they were online
-- If your validator is [online more than 42.5% of the time](https://eth2book.info/bellatrix/part2/incentives/penalties/#attestation-penalties), you will be earning a positive return
+- If your validator is [online more than 42.5% of the time](https://eth2book.info/capella/part2/incentives/penalties/#attestation-penalties), you will be earning a positive return
 - Missed, late or incorrect attestations are penalized.
 - There is no penalty for missing the head vote.
 - There is no penalty for failing to propose a block.
@@ -81,7 +81,7 @@ The most common "penalty" validators encounter is if they are offline, or are la
 ### Inactivity Leak
 
 :::tip Read more
-[Upgrading Ethereum: Inactivity Leak](https://eth2book.info/bellatrix/part2/incentives/inactivity/)
+[Upgrading Ethereum: Inactivity Leak](https://eth2book.info/capella/part2/incentives/inactivity/)
 :::
 
 Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of validators are offline at the same time causing the network to not finalize.
@@ -95,7 +95,7 @@ Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of
 :::tip Read more
 
 - [Ethereum.org: Slashing](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing)
-- [Upgrading Ethereum: Slashing](https://eth2book.info/bellatrix/part2/incentives/slashing/)
+- [Upgrading Ethereum: Slashing](https://eth2book.info/capella/part2/incentives/slashing/)
   :::
 
 Slashing is the most serious penalty and results in losing a potentially significant amount of stake, and possible ejection of a validator from the network. This is when validators break very specific protocol rules that prevent the network from functioning effectively.
@@ -111,4 +111,4 @@ In these cases, 1/32 of a validator's staked GNO is immediately burned, and the 
 We recommend the following readings for a more in-depth understanding of validator penalties.
 
 - [Ethereum.org on Proof-of-stake Rewards and Penalties](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/)
-- [Upgrading Ethereum on "The Incentive Layer"](https://eth2book.info/bellatrix/part2/incentives/)
+- [Upgrading Ethereum on "The Incentive Layer"](https://eth2book.info/capella/part2/incentives/)
