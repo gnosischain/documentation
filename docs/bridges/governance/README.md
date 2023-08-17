@@ -44,7 +44,7 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 | 1Hive              | 0x86Da253817DC599059e3AD5A1F098F7b96aBf34c                                                           |
 | Peerion            | 0x1685324Bf373670ad5C9c56bd88A1dc1C063b0f9                                                           |
 | 01Node             | 0x0101016044726994aFd16f4A99f0d960090D35e7                                                           |
-| Cow Protocol       | 0x262d23a2d916f6CF08e0235315aA51E22d142d0b                                                           |
+| Cow Protocol       | 0xAC0622953d25e1a6c4e0f32Ffc1A9C1cE350B60E                                                           |
 | Safe               | 0xDdf2d07267EAF2cE3E13ee4319bE1F34D55ed992                                                           |
 | Agave              | 0xc44caeb7F0724A156806664d2361fD6f32a2d2C8                                                           |
 

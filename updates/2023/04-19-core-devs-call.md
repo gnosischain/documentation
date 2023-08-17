@@ -1,8 +1,9 @@
 ---
-title: Core Devs Call - 19/04/2023
+title: Core Devs Call - 2023/04/19
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
+
 # Gnosis Core Devs Call Notes
 
 ![](https://i.imgur.com/yWkAFed.png)
@@ -16,17 +17,21 @@ Participants: Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs
 April 19, 2023
 
 # Client Team Updates
+
 ## EL
-* **Nethermind**: No updates. 
-* **Erigon**: No updates.
-* **Geth**: Was able to import the state (simulate snap sync)Is now starting the node in full sync, but it’s not connecting / downloading blocks. Once this is done, Guillaume should have a working prototype
+
+- **Nethermind**: No updates.
+- **Erigon**: No updates.
+- **Geth**: Was able to import the state (simulate snap sync)Is now starting the node in full sync, but it’s not connecting / downloading blocks. Once this is done, Guillaume should have a working prototype
 
 ## CL
-* **Prysm**: No updates.
-* **Nimbus**: No updates.
+
+- **Prysm**: No updates.
+- **Nimbus**: No updates.
 
 # Chain Infra
-**Gateway** 
+
+**Gateway**
 
 No peers found on Devnet (probably just the different genesis).
 
@@ -48,19 +53,11 @@ We’ve got more precise specs on a PR
 https://github.com/gnosischain/specs/pull/4
 Lion: how specific do you need the spec to be? It seems like EL clients have more lax requirements for specs, is that true? On CL everything is specced quite precisely.
 
-
 # Tests
-* **Hive**
+
+- **Hive**
 
 Will start writing Hive tests by the end of this week
-Improving the genesis loading for Erigon and Nethermind, but hasn’t been tested on Erigon yet. 
+Improving the genesis loading for Erigon and Nethermind, but hasn’t been tested on Erigon yet.
 **Lion: can we agree on which conditions tests would be considered good enough to move to testnet / mainnet?**
 Ruben thinks it would be enough if we can just run the contract specific parts (balances etc)
-
-
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 29/03/2023
+title: Core Devs Call - 2023/03/29
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -17,41 +17,43 @@ Participants: Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs
 Mar 29, 2023
 
 # Client Team Updates
+
 ## EL
-* **Nethermind**: 
 
-Introducing Marcos for Hive tests. Will have a call tomorrow regarding those tests. 
+- **Nethermind**:
 
-After Shapella, Nethermind will probably release a very big version with a lot of changes. Huge amounts of optimizations is coming.. Potential new light mode that would reduce memory consumption *a lot*
+Introducing Marcos for Hive tests. Will have a call tomorrow regarding those tests.
+
+After Shapella, Nethermind will probably release a very big version with a lot of changes. Huge amounts of optimizations is coming.. Potential new light mode that would reduce memory consumption _a lot_
 
 Improving attestation performance
 Better multi-threading
 Potentially (but way later) snap sync
 
-* **Erigon**: 
+- **Erigon**:
 
 Canceled their agreement with Gateway for developers, thus Max is no longer an Erigon dev. They want to hire new devs, but will take time. Added the max failed withdrawal parameters to the withdrawals system call, which should now work
 
-* **Geth**: 
+- **Geth**:
 
 Guillaume has worked around the issue from last week, and is now importing the data to start syncing the chain. It has been running for two days, and there’s probably one more day to go, after which he’ll be able to give an update.
 
-
 ## CL
-* **Prysm**: 
+
+- **Prysm**:
 
 No updates. Guillaume is focused on Geth
-* **Nimbus**: 
+
+- **Nimbus**:
 
 We’ve written and reviewed our docs to be published soon
 After this, we’ll publish client diversity docs, so that validators can start using Nimbus.
 
-
 # Chain Infra
-* **Gateway** 
+
+- **Gateway**
 
 A mainnet bridge validator is now running and has already processed a few transactions.Extra monitoring was added there.
-
 
 # Devnet
 
@@ -64,18 +66,12 @@ There’s a faucet for GNO afterwards.Ruben expects Gnosis to be testing this a 
 Lion will run Truffle scripts
 
 # Tests
-* Hive
+
+- Hive
 
 There’s a call tomorrow, invite in Telegram
 Happening at 3pm CET
 
-
 # Withdrawal Contrat
 
 Adam’s audit is done, and another external audit should be done by early next week. The minimum amount to deposit is 1/32 GNO, which could be an attack vector. Looking into it. We might want to increase that minimum.
-
-
-
-
-
-

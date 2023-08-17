@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 17/05/2023
+title: Core Devs Call - 2023/05/17
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -12,25 +12,27 @@ Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team an
 
 The participants of this call include representatives from various teams such as Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team, and community contributors. The presence of diverse team members ensures that discussions are comprehensive and informative, with insights from multiple perspectives.
 
-For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=Sz2YXykvRzk). 
+For those who missed the live meeting, [a full recording is available on YouTube](https://www.youtube.com/watch?v=Sz2YXykvRzk).
 
 The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It provides an opportunity for participants to stay informed, share ideas and collaborate, thus driving innovation and progress within the Gnosis community.
 
 May 17, 2023
 
 # Client Team Updates
+
 ## EL
 
-* **Nethermind**: Configs for Chiado shapella are ready on the main branch. Released an RC that already includes this. Stable should be released with it before chiado
-* **Erigon**: Configs ready on devel.
-* **Geth**: No updates.
+- **Nethermind**: Configs for Chiado shapella are ready on the main branch. Released an RC that already includes this. Stable should be released with it before chiado
+- **Erigon**: Configs ready on devel.
+- **Geth**: No updates.
 
 ## CL
 
-* **Prysm**: No updates.
-* **Nimbus**: No updates.
+- **Prysm**: No updates.
+- **Nimbus**: No updates.
 
 # Chain Infra
+
 **Gateway** : Worked on provisioning L2 for Gnosis Chain. New configs for Bedrock regarding the fraud proof window mostly
 
 # Devnet
@@ -44,10 +46,10 @@ No need to update the system call signature in the end. https://github.com/gnosi
 # Testnet
 
 Who’s running the nodes? Gateway?
+
 - Gateway runs Nethermind + Lighthouse
 - Nethermind 2k?
 - Gnosis 2k?
-
 
 # Research
 
@@ -61,16 +63,7 @@ Nethermind will fix this, but it’s no big deal
 Will get evicted if a more appropriate transaction comes in
 
 # Tests
+
 **Hive**: Good progress pre and post-shanghai. Implement tests for post-shanghai scenarios.
-Syncing status:  Producing blocks and sending transactions. Verified that withdrawals work like expected. Not getting the expected results. But the root is built correctly and the withdrawals are indeed being executed. Later (timeline: 2-3 weeks)
+Syncing status: Producing blocks and sending transactions. Verified that withdrawals work like expected. Not getting the expected results. But the root is built correctly and the withdrawals are indeed being executed. Later (timeline: 2-3 weeks)
 Block reorgs and syncing issues. Edge cases: Integrate Erigon. Making sure that everything integrated with Nethermind also works with Erigon.
- 
-
-
-
-
-
-
-
-
-

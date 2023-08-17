@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 19/07/2023
+title: Core Devs Call - 2023/07/19
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---

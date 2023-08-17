@@ -194,6 +194,17 @@ Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 
 
 For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
 
+### How to check if AMB is down (not relaying message)
+
+In certain circumstances, i.e. hardfork, AMB will be planned for downtime (not relaying message) to ensure security of the bridge. Planned downtime will be announced in public channel like Discord and Twitter, prior to the event.  
+There is also another way to check whether the AMB is down or not by reading `maxGasPerTx` value on AMB contract.
+
+In the current configuration, `maxGasPerTx` is set to 4000000 on [Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract) and 2000000 on [Gnosis Chain](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#readProxyContract).
+
+The AMB is down when `maxGasPerTx` is set to 0, only by owner of the contract.
+
+By setting `maxGasPerTx` to 0, the [condition in `_sendMessage()`](https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/arbitrary_message/MessageDelivery.sol#L40) will not pass, meaning, the bridge is down/stopped.
+
 ### Security Considerations for Receiving a Call
 
 | Concern       | Remediation                                                                                                                                                                                                                                                                                                                    |
