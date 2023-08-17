@@ -51,3 +51,10 @@ Tokens that are bridged using [Omnibridge](/bridges/tokenbridge/omnibridge) are 
 ## Roadmap
 
 Gnosis has a [long-term roadmap](/bridges/roadmap) to move towards trustless bridges, and is actively funding research and development in this area.
+
+## Feedback & Suggestion
+
+We would love to hear from you on suggestions and ideas on bridges in Gnosis Chain.
+
+- [Gnosis Bridges Improvement Proposals](https://docs.google.com/forms/d/1V5RH7rIcHw-7JSePErUNutWO_p59HwbbsNedoWidTKA/viewform?edit_requested=true)
+- [AMB developers form](https://docs.google.com/forms/d/1wj31wGZ2sxMd_n35ZTavqegQo8XEp2C9brBPLFwCMn0/viewform?edit_requested=true#responses)
