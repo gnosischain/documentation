@@ -215,7 +215,7 @@ Once the transaction is broadcasted & confirmed on the blockchain, the proxy con
 <img src="/img/tools/api3/SS7.png" width="500"/>
 <br></br>
 
-### Subscribing to a Managed dAPI
+### Subscribing to Managed dAPIs
 
 If you are trying to access Managed dAPIs, 
 once you have selected your dAPI, you will then be presented with an option to
