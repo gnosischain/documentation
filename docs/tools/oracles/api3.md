@@ -152,15 +152,15 @@ and avaibality of Managed dAPIs is managed by the [API3 DAO](https://docs.api3.o
 
 [Click here to read more about Managed dAPIs](https://docs.api3.org/reference/dapis/understand/managed.html).
 
-### Subscribing to dAPIs
-
-The API3 Market lets users access both Self-funded and Managed dAPIs.
+### Subscribing to Self-funded dAPIs
 
 :::note Info
 
 While Managed dAPIs are just available on mainnets, Self-funded dAPIs are available on both mainnets and testnets. The process to read from a dAPI proxy remains same for both Self-funded and Managed dAPIs.
 
 :::
+
+The API3 Market lets users access both Self-funded and Managed dAPIs.
 
 With Self-funded dAPIs, you can fund the dAPI with your own funds. The amount of gas you supply will determine how long your dAPI will be available for use. If you run out of gas, you can fund the dAPI again to keep it available for use.
 
@@ -215,7 +215,7 @@ Once the transaction is broadcasted & confirmed on the blockchain, the proxy con
 <img src="/img/tools/api3/SS7.png" width="500"/>
 <br></br>
 
-#### Subscribing to a Managed dAPI
+### Subscribing to a Managed dAPI
 
 If you are trying to access Managed dAPIs, 
 once you have selected your dAPI, you will then be presented with an option to
