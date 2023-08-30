@@ -4,6 +4,8 @@ authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
 
+![Event](https://github.com/gnosischain/documentation-1/assets/75987728/c4bea84f-47c9-4e14-aa08-78d338d6c3aa)
+
 Gnosis Core Devs Call Notes
 
 Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team and contributors gather to discuss the latest developments and updates related to the Gnosis ecosystem. This meeting is held every Wednesday and serves as a platform for participants to collaborate and exchange ideas.
@@ -62,12 +64,12 @@ Will likely break some tests, but that makes sense
 
 # Research
 
-* Big block experiment
+ * Big block experiment
 We’re going to deliberately spam the network with big blocks to see if it causes issues
 Latency
 Slower slots / propagation
 Less attestations / falling behind
-* History of Gnosis Chain, specifically regarding spamming and attacks
+ * History of Gnosis Chain, specifically regarding spamming and attacks
 Started by implementing AuRa in 2019 and then POSDAO
 Not much recollection of the different attacks
 It would be quite cheap to fill blocks, and having somewhat full blocks could cause a lot of nodes to struggle
