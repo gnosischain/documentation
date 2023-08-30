@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 05/04/2023
+title: Core Devs Call - 2023/04/05
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -17,54 +17,54 @@ Participants: Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs
 April 5, 2023
 
 # Client Team Updates
+
 ## EL
-* **Nethermind**: 
+
+- **Nethermind**:
 
 Merged withdrawals to the master branch
 
-* **Erigon**: 
+- **Erigon**:
 
 No updates
 
-* **Geth**: 
+- **Geth**:
 
 Was still syncing on Monday (~1 month left to sync)
 
-
 ## CL
-* **Prysm**: 
+
+- **Prysm**:
 
 No updates
 
 # Chain Infra
-* **Gateway** 
+
+- **Gateway**
 
 Has been helping quite a few teams. Giveth to setup their bridge validator. Max helped Marcos with Hive tests. Took all the traffic from the main Gnosis RPC because Gnosis was experiencing issues. Everything went fine
 
-
-* **Gnosis**
+- **Gnosis**
 
 Had an outage on the public RPC. Redirected all the traffic to Gateway
 
-
-
 # Devnet
 
-* Gateway (on 4 nodes for 5k validators) that 3 validators are on the right chain and working correctly
-  * 2 have Nethermind
-  * 1 has Erigon: The last Erigon forked away on the block that it created by itself (#88092). A previous block by the same node has been accepted by the network. Except by the broken Erigon node. The failed block has a different state root and an additional withdrawal. This specific node rejected a block that was considered valid by all other nodes. We don’t exactly know why the broken node rejected the valid block. There was an unwind right before on the broken node. Logs for both Erigon nodes are in the Telegram group
-* Nethermind (5-6 Nethermind nodes, out of which 2 had issues)
-* Lodestar: Seemingly peering issue
-Ping-pongs between having enough peers and not having enough, so it wasn’t able to keep in sync
-* Teku (although another one was working fine)
-Started sending FCUs of the same blocks over and over again around 1k blocks before it lost sync
-Might have been connected to Gateway’s broken Erigon node
-* Gnosis
-Experiencing issues as well (running Erigon, Nethermind, Teku and Lighthouse, 2.5k keys total).Nodes are stuck on different block numbers. Currently debugging more in depth. None of the 4 validator combinations are working correctly and are on different forks. Giacomo and Igor will keep in touch to debug this.
-* Next steps
-  * Find the issue (Andrew)
-  * Launch a new devnet
-Alerts (Lion)
+- Gateway (on 4 nodes for 5k validators) that 3 validators are on the right chain and working correctly
+  - 2 have Nethermind
+  - 1 has Erigon: The last Erigon forked away on the block that it created by itself (#88092). A previous block by the same node has been accepted by the network. Except by the broken Erigon node. The failed block has a different state root and an additional withdrawal. This specific node rejected a block that was considered valid by all other nodes. We don’t exactly know why the broken node rejected the valid block. There was an unwind right before on the broken node. Logs for both Erigon nodes are in the Telegram group
+- Nethermind (5-6 Nethermind nodes, out of which 2 had issues)
+- Lodestar: Seemingly peering issue
+  Ping-pongs between having enough peers and not having enough, so it wasn’t able to keep in sync
+- Teku (although another one was working fine)
+  Started sending FCUs of the same blocks over and over again around 1k blocks before it lost sync
+  Might have been connected to Gateway’s broken Erigon node
+- Gnosis
+  Experiencing issues as well (running Erigon, Nethermind, Teku and Lighthouse, 2.5k keys total).Nodes are stuck on different block numbers. Currently debugging more in depth. None of the 4 validator combinations are working correctly and are on different forks. Giacomo and Igor will keep in touch to debug this.
+- Next steps
+  - Find the issue (Andrew)
+  - Launch a new devnet
+    Alerts (Lion)
 
 The objective is to track everything that can go bad and send alerts to the relevant parties. Has a private repo with a bunch of alerts. Covered basically everything on the consensus side. Will add the relevant people on the repo async. Will be set up by Gnosis DevOps, Giacomo knows about it already. Ruben tested failed withdrawals on Apr 4, 2023
 
@@ -78,20 +78,13 @@ Lion thinks it might be possible to do it with the current withdrawal contract i
 
 Lion want to know how exactly the devnet was bootstrapped. ruben@nethermind.io will send this offline
 
-
 # Tests
-* Hive
+
+- Hive
 
 Had a call last Thursday regarding what our objectives were defined a overview of what things should look like.
 Hopefully more information next week.
 
-
 # Withdrawal Contrat
 
 No updates
-
-
-
-
-
-

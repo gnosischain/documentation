@@ -14,11 +14,11 @@ Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.co
 
 ## Key Information
 
-[Omnibridge](https://omni.gnosischain.com/) a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), Omnibridge bridge is now more secure with trustless zero-knowledge light client technology. Check out how Omnibridge works with Telepathy validator [here](amb-bridge.md#how-it-works-with-telepathy-validator).
+[Omnibridge](https://omni.gnosischain.com/) is a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), Omnibridge bridge is now more secure with trustless zero-knowledge light client technology. Check out how Omnibridge works with Telepathy validator [here](amb-bridge.md#how-it-works-with-telepathy-validator).
 
 The Omnibridge currently connects Gnosis to Ethereum.
 
-The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://github.com/ethereum/EIPs/issues/677) token standard, with all bridged tokens tracked in the canonical [Bridged Token Registries](#bridged-token-registries).
+The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://github.com/ethereum/EIPs/issues/677) token standard, with all bridged tokens tracked in the [canonical Bridged Token Registries](#canonical-token-registries).
 
 ### Overview
 
@@ -132,7 +132,7 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ### Bridge Validators
 
-For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. Since Omnibridge is based on the Arbitrary Message Bridge functionality, the set of validators is the actual set of AMB validators. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
+For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. Since Omnibridge is based on the Arbitrary Message Bridge functionality, the set of validators is the actual set of AMB validators. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
 
 ### Bridge Validator Flow
 
@@ -263,10 +263,10 @@ In a multi-chain world, some assets (e.g. USDC) can be bridged over from differe
 
 For example, there are two different representations of USDC on Gnosis:
 
-| Asset              | Token Contract                                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://blockscout.com/xdai/mainnet/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
-| USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://blockscout.com/xdai/mainnet/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
+| Asset              | Token Contract                                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
+| USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://gnosis.blockscout.com/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
 

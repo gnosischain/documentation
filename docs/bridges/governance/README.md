@@ -44,7 +44,7 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 | 1Hive              | 0x86Da253817DC599059e3AD5A1F098F7b96aBf34c                                                           |
 | Peerion            | 0x1685324Bf373670ad5C9c56bd88A1dc1C063b0f9                                                           |
 | 01Node             | 0x0101016044726994aFd16f4A99f0d960090D35e7                                                           |
-| Cow Protocol       | 0x262d23a2d916f6CF08e0235315aA51E22d142d0b                                                           |
+| Cow Protocol       | 0xAC0622953d25e1a6c4e0f32Ffc1A9C1cE350B60E                                                           |
 | Safe               | 0xDdf2d07267EAF2cE3E13ee4319bE1F34D55ed992                                                           |
 | Agave              | 0xc44caeb7F0724A156806664d2361fD6f32a2d2C8                                                           |
 
@@ -52,15 +52,15 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 
 ### Phase 1: Ideation
 
-Post created on the Gnosis Forum in the [GnosisDAO category 108](https://forum.gnosis.io/c/dao/20). There is no set duration on how long a proposal stays in this stage. There is no formal requirement for a proposal to pass this stage. However, if a proposal discussion fails to garner momentum from the community, it is unlikely to become a successful proposal.
+Post created on the Gnosis Forum in the [GnosisDAO](https://forum.gnosis.io/). There is no set duration on how long a proposal stays in this stage. There is no formal requirement for a proposal to pass this stage. However, if a proposal discussion fails to garner momentum from the community, it is unlikely to become a successful proposal.
 
 ### Phase 2: Specification
 
-[Gnosis Improvement Proposal 73](https://forum.gnosis.io/t/gip-0-template/734) (GIP) post is created. This stage lasts 5 days. For the proposal to pass this stage, one outcome with a relative majority of votes on the forum poll must be achieved. If the relative majority of votes indicates `Make no changes`, the proposal does not pass to Phase 3.
+[Gnosis Improvement Proposal](https://forum.gnosis.io/t/gip-0-template/734) (GIP) post is created. This stage lasts 5 days. For the proposal to pass this stage, one outcome with a relative majority of votes on the forum poll must be achieved. If the relative majority of votes indicates `Make no changes`, the proposal does not pass to Phase 3.
 
 ### Phase 3: Multisig Voting & Execution
 
-[Gnosis Improvement Proposal 73](https://forum.gnosis.io/t/gip-0-template/734) (GIP) post is refined, and there is a [GnosisDAO Snapshot 60](https://snapshot.org/#/gnosis.eth) poll. This stage lasts for 7 days. For proposals to be accepted there must be one outcome with a relative majority of GNO used for signaling on the GnosisDAO Snapshot poll accompanied by a yes-voting quorum of a minimum of 4% of the circulating supply of GNO. If the relative majority of GNO used in signaling on the Snapshot poll indicates the result Make no changes, the proposal will not be accepted and considered closed.
+[Gnosis Improvement Proposal](https://forum.gnosis.io/t/gip-0-template/734) (GIP) post is refined, and there is a [GnosisDAO Snapshot](https://snapshot.org/#/gnosis.eth) poll. This stage lasts for 7 days. For proposals to be accepted there must be one outcome with a relative majority of GNO used for signaling on the GnosisDAO Snapshot poll accompanied by a yes-voting quorum of a minimum of 4% of the circulating supply of GNO. If the relative majority of GNO used in signaling on the Snapshot poll indicates the result Make no changes, the proposal will not be accepted and considered closed.
 
 ## Governance Parameters
 

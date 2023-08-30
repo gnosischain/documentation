@@ -13,7 +13,7 @@ The AMB is a key bridge primitive that is used inside higher-order bridges like 
 
 The AMB currently supports Ethereum, and is part of the [Tokenbridge Architecture](https://tokenbridge.net/). There may be additional EVM-based networks supported in the future.
 
-With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 12mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out how AMB & Omnibridge works with Telepathy validator.
+With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 12mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out [how AMB & Omnibridge works with Telepathy validator](#how-it-works-with-telepathy-validator).
 
 ## Key Information
 
@@ -34,7 +34,7 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community and ZK Light Client validator Telepathy. The [long-term roadmap](/bridges/roadmap) is to move towards [trustless bridges](/bridges/roadmap#trustless-bridges) using [zero-knowledge proofs from light clients](/bridges/roadmap#zero-knowledge-light-clients) or other trust-minimized techniques.
+For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community and ZK Light Client validator Telepathy.
 
 ### Current Bridge Validators
 
@@ -193,6 +193,17 @@ Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 
 | Telepathy Validator | [0xfDBf5711f77B97EA7F1f812832884c7328a682eC](https://gnosisscan.io/address/0xfdbf5711f77b97ea7f1f812832884c7328a682ec) |
 
 For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
+
+### How to check if AMB is down (not relaying message)
+
+In certain circumstances, i.e. hardfork, AMB will be planned for downtime (not relaying message) to ensure security of the bridge. Planned downtime will be announced in public channel like Discord and Twitter, prior to the event.  
+There is also another way to check whether the AMB is down or not by reading `maxGasPerTx` value on AMB contract.
+
+In the current configuration, `maxGasPerTx` is set to 4000000 on [Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract) and 2000000 on [Gnosis Chain](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#readProxyContract).
+
+The AMB is down when `maxGasPerTx` is set to 0, only by owner of the contract.
+
+By setting `maxGasPerTx` to 0, the [condition in `_sendMessage()`](https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/arbitrary_message/MessageDelivery.sol#L40) will not pass, meaning, the bridge is down/stopped.
 
 ### Security Considerations for Receiving a Call
 

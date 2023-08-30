@@ -12,7 +12,7 @@ Validator withdrawal allows a validator's account balance get withdrawn from Bea
 
 Check out [validator withdrawal](../../node/management/withdrawals.md) for more details.
 
-## When will Shanghai/Capella hardfork happen?
+## When did Shanghai/Capella hardfork happen?
 
 Epoch: 648704  
 Slot: 10379264  
@@ -22,7 +22,7 @@ Time: August 1, 2023 at 11:34.20 UTC
 
 ### For Validators
 
-1. Check Withdrawl Credentials
+1. Check Withdrawal Credentials
 
    For any type of withdrawals, a validator need to have `0x01` withdrawal credential. You’re fine if you used `--eth1_withdrawal_address` to create your validator keys. If not, tooling will be made available.
 
@@ -49,3 +49,13 @@ Time: August 1, 2023 at 11:34.20 UTC
    ✅ Lodestar Gnosis v0.1.2  
    ✅ Nethermind xDAI v1.0.34  
    ⌛️ Erigon and Nimbus - Forthcoming
+
+## How to claim your withdrawal?
+
+### Partial Withdrawal
+
+As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract). However, it is in our plans to automate and subsidize partial withdrawals in the future.
+
+### Full Withdrawal
+
+Please check guide on [voluntary exit](../../node/management/voluntary-exit.md).

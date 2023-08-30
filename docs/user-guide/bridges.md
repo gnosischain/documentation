@@ -1,1 +1,0 @@
-Moved [here](../bridges/third-party.md)

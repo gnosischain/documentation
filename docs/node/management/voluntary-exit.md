@@ -28,7 +28,7 @@ lighthouse --network gnosis account validator exit --keystore /path/to/keystore 
 Follow the syntax of the Lodestar CLI commands and their options.
 
 ```bash
-account validator voluntary-exit --publicKey 0xF00
+validator voluntary-exit --network gnosis --publicKey 0xF00
 ```
 
 * For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/reference/cli/#validator-voluntary-exit).

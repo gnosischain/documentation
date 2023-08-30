@@ -7,9 +7,9 @@ import TabItem from '@theme/TabItem';
 
 # eth-docker
 
-[eth-docker](https://eth-docker.net/) is a docker automation project for Ethereum consensus and execution clients. It aims to make running a Ethereum staking full node simpler than setting everything up manually, while allowing the user choice when it comes to the exact client mix they wish to run. 
+[eth-docker](https://eth-docker.net/) is a docker automation project for Ethereum consensus and execution clients. It aims to make running a Ethereum staking full node simpler than setting everything up manually, while allowing the user choice when it comes to the exact client mix they wish to run.
 
-eth-docker allows user to set up Gnosis clients by answering simple dialog-based questions on terminal. 
+eth-docker allows user to set up Gnosis clients by answering simple dialog-based questions on terminal.
 
 ## References
 1. eth-docker Docs: https://eth-docker.net/
@@ -69,7 +69,7 @@ Once the building part is done, start eth-docker by running
 ./ethd up
 ```
 
-Check that execution/consensus client running correctly bu running: 
+Check that execution/consensus client running correctly by running:
 <Tabs>
     <TabItem value = "Execution" label= "Execution" default>
         ./ethd logs -f execution
@@ -85,7 +85,7 @@ Check that execution/consensus client running correctly bu running:
 ##  Step 3: Run a validator
 You can either create validator key(s) from eth-docker or import the validator key(s) that are generated from [validator-data-generator](https://github.com/gnosischain/validator-data-generator).
 
-For the second option, please refer to [Interactive Guide: Generate validator keys](../guide/README.md#step-4a-generate-validator-keys).
+For the second option, please refer to [Interactive Guide: Generate validator keys](../manual/README.md#step-4a-generate-validator-keys).
 
 Import the key(s) by specifying the path to keystore file (folder where you keep the `keystore-m.json` file).
 
@@ -100,6 +100,6 @@ Check that the key is imported by running
 ```
 
 ## Step 4: Deposit for validator
-Once the exeution and consensus clients are fully synced, you may proceed to [deposit for validator](../guide/README.md#step-4c-fund-your-validator).
+Once the exeution and consensus clients are fully synced, you may proceed to [deposit for validator](../manual/README.md#step-4c-fund-your-validator).
 
 

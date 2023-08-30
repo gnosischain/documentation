@@ -71,7 +71,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Shanghai/Capella Hardfork is happening on slot 10,379,264. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
+          'Shanghai/Capella Hardfork is complete. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,

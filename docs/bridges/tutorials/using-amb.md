@@ -27,5 +27,5 @@ MetaMask will show a high gas estimate for this transaction. In most cases the f
 
 ## Deploying custom ERC-20 Bridge
 
-- [Tokenbridge Docs: Deploying custom token bridge on top of AMB](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/correspondence-of-bridgeable-tokens)
+- [Tokenbridge Docs: Deploying custom token bridge on top of AMB](hhttps://docs.tokenbridge.net/eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension)
 - [Tokenbridge Docs: Deplying a custom UI token bridge on top of AMB](https://docs.tokenbridge.net/eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb)

@@ -14,9 +14,8 @@ Chainlink offers a tutorial on using secure data feeds with Gnosis. [See it in a
 
 ## Addresses
 
-* **LINK Token on Gnosis**: [`0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2`](https://blockscout.com/xdai/mainnet/address/0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2)
-* **Price Feeds on Gnosis:** [Latest list is available in the Chainlink Documentation](https://docs.chain.link/docs/data-feeds-gnosis-chain/#Gnosis%20Chain%20Mainnet)
-
+- **LINK Token on Gnosis**: [`0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2`](https://gnosis.blockscout.com/address/0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2)
+- **Price Feeds on Gnosis:** [Latest list is available in the Chainlink Documentation](https://docs.chain.link/docs/data-feeds-gnosis-chain/#Gnosis%20Chain%20Mainnet)
 
 ## Basic Tutorial: Price Feeds
 
@@ -40,7 +39,7 @@ There are several ways to create a new file. Here we:
 2. Create a file in the folder called `PriceFeedTest.sol`.
 3. Paste in the example code below the image.
 
-![](</img/tools/chainlink/chain1.png>)
+![](/img/tools/chainlink/chain1.png)
 
 ### Example Code
 
@@ -74,7 +73,7 @@ contract PriceConsumerV3 {
      */
     function getLatestPrice() public view returns (int) {
         (
-            uint80 roundID, 
+            uint80 roundID,
             int price,
             uint startedAt,
             uint timeStamp,
@@ -87,7 +86,7 @@ contract PriceConsumerV3 {
 
 The code below uses the Chainlink standard Price Consumer contract along with several modifications:
 
-* We initialize the ETH/USD Gnosis Price Feed in the constructor
+- We initialize the ETH/USD Gnosis Price Feed in the constructor
 
 ```solidity
 priceFeed = AggregatorV3Interface(0xa767f745331D267c7751297D982b050c93985627);
@@ -99,7 +98,7 @@ We use the `getLatestPrice` function to return the current price. It pulls this 
 
 Click on the Compiler Icon, adjust items (if necessary, we keep defaults here) and click the Compile button.
 
-![](</img/tools/chainlink/chain2.png>)
+![](/img/tools/chainlink/chain2.png)
 
 ### 5) Deploy Contract
 
@@ -108,7 +107,7 @@ Click on the Compiler Icon, adjust items (if necessary, we keep defaults here) a
 3. Click **Deploy**.
 4. Confirm the transaction in MetaMask. You account must be connected to Gnosis and have a small amount of xDai (see steps 1 and 2).
 
-![](</img/tools/chainlink/chain3.png>)
+![](/img/tools/chainlink/chain3.png)
 
 ### 6) Check Contract
 
@@ -120,7 +119,7 @@ Once deployed, click to expand the contract. Click `getLatestPrice` to check the
 
 ### 1) Find Deployed Contract
 
-For transparency and interaction purposes, you can verify your contract on [BlockScout](https://blockscout.com/xdai/mainnet/). _Note, if a contract with the same bytecode has already been deployed and verified, your contract code may be viewable._ [_See this example_](https://blockscout.com/xdai/mainnet/address/0x681ef0446AA72723256f1De4d1BE7Dd9bb7F84Cf/contracts)_._
+For transparency and interaction purposes, you can verify your contract on [BlockScout](https://blockscout.com/xdai/mainnet/). _Note, if a contract with the same bytecode has already been deployed and verified, your contract code may be viewable._ [_See this example_](https://gnosis.blockscout.com/address/0x681ef0446AA72723256f1De4d1BE7Dd9bb7F84Cf/contracts)_._
 
 1. Copy the deployed contract address in Remix.
 2. Go to [BlockScout](https://blockscout.com/xdai/mainnet/) and paste into the search field.
