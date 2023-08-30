@@ -62,20 +62,20 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 ### Goerli
 
-| Contract                      | Address                                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
-| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
+| Contract           | Address                                                                                                                      |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Proxy Contract     | [0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24](https://goerli.etherscan.io/address/0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24) |
+| Validator Contract | [0x1F35121d14ABC91689a7903bf911dce83B0c6EF6](https://goerli.etherscan.io/address/0x1F35121d14ABC91689a7903bf911dce83B0c6EF6) |
 
 </TabItem>
 <TabItem value="chiado" label="Chiado">
 
 ### Chiado
 
-| Contract                   | Address                                                                                                                               |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Home) | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://gnosis-chiado.blockscout.com/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
-| AMB Contract Proxy (Home)  | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://gnosis-chiado.blockscout.com/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
+| Contract           | Address                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Proxy Contract     | [0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2](https://gnosis-chiado.blockscout.com/address/0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2) |
+| Validator Contract | [0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce](https://gnosis-chiado.blockscout.com/address/0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce) |
 
 </TabItem>
 
@@ -104,6 +104,10 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. There is a roadmap to move towards [trustless bridges](/bridges/roadmap).
 
+<Tabs>
+
+<TabItem value="gnosis-eth" label="Gnosis<->ETH">
+
 Bridge transactions currently requires signatures from 4 of 7 validators.
 
 | Organization | Gnosis Address                                                                                                                     |
@@ -115,6 +119,17 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
 | Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://gnosis.blockscout.com/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
 | Gateway      | [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://gnosis.blockscout.com/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) |
+
+</TabItem>
+<TabItem value="chiado-goerli" label="Chiado<->Goerli">
+
+| Network | Address                                                                                                                                                                                                                                                              |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Goerli  | 0xef35547c29a7547df67ff573c158bf1b74381add(Gateway) <br /> 0xda286781cbbc9819c94852885a118c93ed25e064 <br /> 0x758c277ca1b04da3ba3add5d61cd26337cfafd7e <br /> 0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf (Gnosis DAO)                                               |
+| Chiado  | 0xef35547c29a7547df67ff573c158bf1b74381add(Gateway)<br /> 0xda286781cbbc9819c94852885a118c93ed25e064 <br />0x758c277ca1b04da3ba3add5d61cd26337cfafd7e <br />0x9d84152df06880cdabeb30e10c2985f40d98b901<br /> 0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf (Gnosis DAO) |
+
+</TabItem>
+</Tabs>
 
 ### Bridge Validator Flow
 
