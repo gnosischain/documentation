@@ -138,7 +138,7 @@ This option is only recommended for advanced user. Please use it at your own ris
    Run the following command.
 
 ```
-curl -d @change-operations.json -H "Content-Type: application/json"  -X POST 127.0.0.1:<beacon_node_port>/eth/v1/beacon/pool/bls_to_execution_change
+curl -d @change-operations.json -H "Content-Type: application/json"  -X POST http://127.0.0.1:<beacon_node_port>/eth/v1/beacon/pool/bls_to_execution_changes
 ```
 
 ```mdx-code-block
