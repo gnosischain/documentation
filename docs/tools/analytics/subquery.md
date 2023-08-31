@@ -1,6 +1,6 @@
 ---
 title: SubQuery
-description: SubQuery is a fast, flexible, and reliable open-source data indexer that provides you with custom APIs for your web3 project across all of our supported chains (including Gnosis). 
+description: SubQuery is a fast, flexible, and reliable open-source data indexer that provides you with custom APIs for your web3 project across all of our supported chains (including Gnosis).
 keywords: [subquery, data indexing, query data, chain data, api]
 ---
 
@@ -131,7 +131,7 @@ npm run-script codegen
 
 :::
 
-This will create a new directory (or update the existing one) `src/types` which contains generated entity classes for each type you have defined previously in `schema.graphql`. These classes provide type-safe entity loading, and read and write access to entity fields - see more about this process in [the GraphQL Schema](../../build/graphql.md). All entities can be imported from the following directory:
+This will create a new directory (or update the existing one) `src/types` which contains generated entity classes for each type you have defined previously in `schema.graphql`. These classes provide type-safe entity loading, and read and write access to entity fields - see more about this process in [the GraphQL Schema](https://academy.subquery.network/build/graphql.html). All entities can be imported from the following directory:
 
 ```ts
 import { Token, Event, Address, TokenTransfer } from "../types";
