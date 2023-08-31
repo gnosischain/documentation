@@ -86,6 +86,98 @@ References:
 - [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
 - [TokenBridge Docs: Bridge Contract Management](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management)
 
+### Savings xDAI
+
+#### Rationale
+
+MakerDAO’s DSR current rate is 5%. Since the increase of the DSR to ~3.5%, ~7M DAI have fled out of the xDAI bridge, as can be seen on this [dashboard](https://dune.com/queries/2650075/4403805?d=11). Bridging the DSR yield into Gnosis Chain will help regain these deposits. In order to provide the needed catalyst for Gnosis Chain Defi to boom, interest rates on Gnosis Chain have to pick up or reach parity with Ethereum or other chains with higher borrowing demand.
+
+Introducing Savings DAI (sDAI), a DSR(Dai Savings Rate) module in xDAI Bridge between Ethereum and Gnosis Chain.
+
+By depositing most of the DAI in xDAI bridge into sDAI vault from Spark Protocol on Ethereum, which is a ERC4626 vault depositing all DAI into the Maker DSR, interest is accrued from Maker DSR and relayed to Gnosis Chain. xDAI holders on Gnosis Chain can mint sDAI with their xDAI, and enjoy the interest accumulating from Ethereum.
+
+Check out the proposal from Karpatkey to **[Deposit DAI of the xDAI bridge in sDAI vault from Spark](https://forum.gnosis.io/t/deposit-dai-of-the-xdai-bridge-in-sdai-vault-from-spark/7236)**
+
+#### Interest rate
+
+Assuming the amount of “Savings DAI on GC” minted is lower than the one held by the bridge, then the yield will be higher than the Dai savings Rate. The bridge currently holds roughly 25M DAI and the DSR yield is 5%, assuming 25M get wrapped into sDAI and only 10M xDAI get deposited into the vault on GC, the yield will be 12.5% .
+
+The expectation is that the sDAI rate will always be higher on GC than Mainnet, as only if almost 100% of all DAI bridged is staked will we achieve rate parity.
+
+Considering the current 25M DAI sitting in the bridge, that represents ~1.25M yearly to incentivise GC.
+
+DSR yield is risk-free if you are already holding DAI. All the risks derived from the collateral are borne by all DAI holders, regardless of them depositing in the DSR. Karpatkey team have written a research piece [here.](https://www.karpatkey.com/contents/makerdaos-game-changing-move) The only newly introduced risk is smart contract risk in how the integration is made with the sDAI vault on Ethereum and the implementation of the sDAI vault on GC.
+
+#### Architecture
+
+Phase 1: Only the part from Ethereum will be implemented
+
+Phase 2: The rest of the components (includ. Gnosis Chain) will be implemented.
+
+![](../../../static/img/bridges/xdaibridge/DSRonGnosis.png)
+
+#### Ethereum
+
+A new implementation upgrade in xDAIForeignBridge contract: [SavingsDAI Connector](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/upgradeable_contracts/erc20_to_native/SavingsDaiConnector.sol) is added as a dependency in the contract. Compare to the old implementation of the [Compound Connector](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/upgradeable_contracts/erc20_to_native/CompoundConnector.sol), the [payInterest](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/upgradeable_contracts/erc20_to_native/InterestConnector.sol#L138-L156) function in SavingsDai Connector is used to transfer interest received from vault to receiver address on Gnosis Chain rather than to receiver address on Ethereum.
+
+[sDAI](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/interfaces/ISavingsDai.sol) is deployed on Ethereum. Any future DAI deposited to the Bridge will be wrapped into sDAI, with caveat that it will always keep the buffer of the minimumCashThreshold when investing.
+
+**minimumCashThreshold:** This value determines what is the recommended amount of DAI that should be held in the bridge at all times, in order to create a buffer for withdrawals without added operations and thus lower gas costs.
+
+#### Gnosis Chain
+
+There are two contracts being deployed on Gnosis.
+
+The first one is the sDAI vault, also an ERC 4626 which is the most popular standard for vaults which makes it extremely useful for Defi integrations from Lending Protocols like Agave and Spark,  to DEXes like Curve and Balancer with their boosted pools. The only modification to the standard vault (OZ implementation) is that it will allow for direct deposits and withdrawals in xDAI, rather than exclusively the ERC20 WXDAI.
+
+The second contract is the Interest Receiver. This will be the address provided on Mainnet bridge as the interest receiver. What this contract does is quite simple, it distributes the balance it holds in xDAI and WXDAI into sDAI at a fixed block rate that gets updated every 1-2 days to adjust for interest rate changes coming from mainnet. The goal of this contract is to not make it possible to front run the bridging process of the interest, and to make sure there is a fairly frequent update of the sDAI shares value and exchange rate. This contract has the perk of being very easy to switch for a different one by simply setting a new receiver on the bridge, without impacting any of the operations. This means if we want to make modifications such as add a fee or normalize rates in the future, that will be very easy to plug-in.
+
+#### Role and responsibilities
+
+**Anyone**
+
+On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is allowed to `refillBridge()` right back up to the threshold, and also anyone is allowed to `payInterest()`. These processes are permissionless, and it’s also costly which is why we will have a bot to automate these 3 maintenance procedures in the most efficient way possible.
+
+**xDAI holder**
+
+1. swap xDAI to sDAI:
+   1. xDAI holders swap xDAI for sDAI, and their corresponding shares in the vault are recorded.
+   2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
+   3. sDAI holder redeems xDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2.
+
+**Keeper wallet/bot**
+
+1. Call `investDAI()` `refillBridge()` `payInterest()`
+
+#### Contracts
+
+<Tabs>
+<TabItem value="ethereum" label="Etehreum">
+
+TODO
+
+</TabItem>
+<TabItem value="gnosis" label="Gnosis">
+
+TODO
+
+</TabItem>
+<TabItem value="goeirli" label="Goerli">
+
+| Contract | Address                                    |
+| -------- | ------------------------------------------ |
+| sDAI     | 0xD8134205b0328F5676aaeFb3B2a0DC15f4029d8C |
+| DAI      | 0x11fE4B6AE13d2a6055C8D9cF65c55bac32B5d844 |
+
+</TabItem>
+<TabItem value="chiado" label="Chiado">
+
+TODO
+
+</TabItem>
+
+</Tabs>
+
 ### Fees & Daily Limits
 
 | Type               | Ethereum -> Gnosis | Gnosis -> Ethereum |
