@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 08/16/2023
+title: Core Devs Call - 2023/08/30
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
@@ -15,8 +15,6 @@ The participants of this call include representatives from various teams such as
 For those who missed the live meeting, [a full recording is available on YouTube](https://youtu.be/exku4k8v91g). 
 
 The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It provides an opportunity for participants to stay informed, share ideas and collaborate, thus driving innovation and progress within the Gnosis community.
-
-August 30, 2023
 
 # Client Team Updates
 ## EL
