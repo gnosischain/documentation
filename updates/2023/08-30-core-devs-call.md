@@ -16,8 +16,6 @@ For those who missed the live meeting, [a full recording is available on YouTube
 
 The Gnosis Core Devs Call is a crucial component of the Gnosis ecosystem. It provides an opportunity for participants to stay informed, share ideas and collaborate, thus driving innovation and progress within the Gnosis community.
 
-August 30, 2023
-
 # Client Team Updates
 
 ## EL
