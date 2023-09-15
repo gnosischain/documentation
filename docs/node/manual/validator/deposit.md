@@ -9,7 +9,7 @@ title: Validator Deposits
 
 ### Pre-requisites
 
-- Execution Layer client and Beacon Node should by fully synced
+- Execution Layer client and Beacon Node should be fully synced
 - Validator process should already be running
 
 ### GNO on Gnosis Chain
