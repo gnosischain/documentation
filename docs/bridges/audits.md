@@ -6,12 +6,22 @@ keywords: [omnibridge audit, xdai bridge audit, security audit]
 
 The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments. We have engaged in the auditing process after introducing major functionality, and have acknowledged and/or fixed all issues found during these audits. Audit results are presented starting with the most recent.
 
-## xDAI bridge upgrade Audit by Omega
+## xDAI bridge upgrade Audit by Omega and ChainSafe
+
+### Omega
 
 **Completed**: August 31, 2023  
-**Conclusion**: 0 high severity issue, 2 medium issues, 5 low risk issues, 3 info issues. All issues has been resolved.  
-**Contracts**: https://github.com/Luigy-Lemon/tokenbridge-contracts/tree/DSR  
-**Audit Report**: [Omega Gnosis Bridge Final Audit Report](../../static/files/Omega%20-%20Gnosis%20Bridge%20-%20final%20report.pdf)  
+**Conclusion**: 2 medium issues, 5 low risk issues, 3 info issues. All issues has been resolved.  
+**Contracts**: hhttps://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
+**Audit Report**: [Omega Gnosis Bridge Final Audit Report](../../static/files/Omega%20-%20Gnosis%20Bridge%20-%20final%20report.pdf)
+
+### ChainSafe
+
+**Completed**: August 31, 2023  
+**Conclusion**: 2 minor issues, 2 optimizational issues.  
+**Contracts**:https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
+**Audit Report**: [ChainSafe Audit Report](../../static/files/dai-xdai-08-23.pdf)
+
 **Reference**: [Savings xDAI](../bridges/tokenbridge/xdai-bridge.md#savings-xdai)
 
 ## OmniBridge v6.0 Smart Contracts Audit by ChainSecurity
