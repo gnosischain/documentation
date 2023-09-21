@@ -8,6 +8,27 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Upgrade xDAI bridge to support investing in sDAI vault.
+
+🗳 Justification: We [upgrade](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xd8683bccfe39ace95a1da5f58a5c9a83dc324de39ce07f11fcffb5c2397ca96c) [xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) to new implementation version in order to support investing DAI from the bridge contract into sDAI vault from Spark Protocol. This upgrade only implements changes on Ethereum, and the next phase will be on Gnosis Chain. The implementation contract is [audited by Omega and ChainSafe](../audits.md#xdai-bridge-upgrade-audit-by-omega-and-chainsafe). For more details, please refer to [docs](../tokenbridge/xdai-bridge.md#savings-xdai)
+
+We call the method `upgradeTo()` on the xDAI bridge proxy contract (0x4aa42145aa6ebf72e164c9bbc74fbd3788045016) with parameters: version 8 and impl. 0x166124b75c798cedf1b43655e9b5284ebd5203db.
+
+We call the `initializeInterest()` with the following parameters.
+
+```
+- DAI: 0x6b175474e89094c44da98b954eedeac495271d0f
+- minCashThreshold: 1000000000000000000000000 (1,000,000 DAI)
+- minInterestPaid: 1000000000000000000000 (1,000 DAI)
+- interestReceiver: 0x0000000000000000000000000000000000000000
+```
+
+We also call `investDAI()` to invest the DAI into MakerDSR. 25m DAI have been [deposited into sDAI vault](https://etherscan.io/tx/0x291d48fdfd430165b2b7f62c3ae806ea28ab34b4dc8a2e4d7d01693f19b780c9) earning interest.
+
+[refillBridge()](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#writeProxyContract#F3) will be called periodically (once per day at the moment) by the Karpatkey team to ensure that there is enough DAI for withdrawal on Ethereum.
+
+✅ Implemented: Sept 20, 2023
+
 ## Add Telepathy Validator in the AMB
 
 🗳 Justification: Adding the Telepathy validator in the AMB as the 8th validator.

@@ -110,7 +110,7 @@ DSR yield is risk-free if you are already holding DAI. All the risks derived fro
 
 #### Architecture
 
-Phase 1: Only the part from Ethereum will be implemented
+Phase 1: Only the [bridge contract upgrade](../governance/decisions.md#upgrade-xdai-bridge-to-support-investing-in-sdai-vault) on Ethereum ✅
 
 Phase 2: The rest of the components (includ. Gnosis Chain) will be implemented.
 
@@ -152,9 +152,12 @@ On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is a
 #### Contracts
 
 <Tabs>
-<TabItem value="ethereum" label="Etehreum">
+<TabItem value="ethereum" label="Ethereum">
 
-TODO
+| Contract | Address                                                                                                               |
+| -------- | --------------------------------------------------------------------------------------------------------------------- |
+| sDAI     | [0x83F20F44975D03b1b09e64809B757c47f942BEeA](https://etherscan.io/address/0x83f20f44975d03b1b09e64809b757c47f942beea) |
+| DAI      | [0x6B175474E89094C44Da98b954EedeAC495271d0F](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f)   |
 
 </TabItem>
 <TabItem value="gnosis" label="Gnosis">
