@@ -30,6 +30,8 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, OmniBridge, xDai Bridge, HopProtocol
 
 * [XP.NETWORK](https://xp.network): The world’s most powerful NFT bridge. Go multichain effortlessly
 
+* [DappGate](https://dappgate.io/): A bridging tool with ONFTs and OFTs across 26+ networks, cutting costs and simplifying transfers alongside with Gas Refuel, Hyper Bridge, Messaging and Tracker features.
+
 ## Privacy and Identity
 
 * [Orchid](https://orchid.com): Keep your data private and access content anywhere! Download our VPN to protect your privacy and explore the Internet freely

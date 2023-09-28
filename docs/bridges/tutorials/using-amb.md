@@ -7,7 +7,9 @@ keywords:
 
 ## Submitting AMB Confirmations Manually
 
-The Arbitrary Message Bridge between the Ethereum Mainnet and Gnosis Chain now requires a request-and-claim scheme to transfer data from Gnosis Chain, and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Ethereum side.
+### Ethereum <-> Gnosis Chain
+
+The Arbitrary Message Bridge between the Ethereum Mainnet and Gnosis Chain requires a request-and-claim scheme to transfer data from Gnosis Chain, and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Ethereum side.
 
 :::info
 This approach is the equivalent of the set of actions performed by the [OmniBridge UI](https://omni.gnosischain.com/bridge) after pressing the "Claim" button, or by the [AMB Live Monitoring app](https://alm-bridge-monitor.gnosischain.com/) after pressing the "Execute" button.
@@ -24,6 +26,18 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 :::info
 MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower.
 :::
+
+### Goerli <-> Chiado
+
+At the moment, the only way to use AMB between Goerli <-> is through a smart contract call.
+
+The process of claiming the message from Chiado to Goerli works similarly to the mainnet, but with a different contract address.
+
+| Contract                     | Address                                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AMB Helper Contract (Chiado) | [0xEd0dC0AA8A61c3Ac912072f50c4c5bd830d79E36](https://gnosis-chiado.blockscout.com/address/0xEd0dC0AA8A61c3Ac912072f50c4c5bd830d79E36?tab=read_contract) |
+| AMB bridge contract (Chiado) | [0x99ca51a3534785ed619f46a79c7ad65fa8d85e7a](https://gnosis-chiado.blockscout.com/address/0x99ca51a3534785ed619f46a79c7ad65fa8d85e7a?tab=contact_code)  |
+| AMB bridge contract (Goerli) | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6#code)                       |
 
 ## Deploying custom ERC-20 Bridge
 

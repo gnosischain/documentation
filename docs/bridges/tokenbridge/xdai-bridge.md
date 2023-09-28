@@ -81,6 +81,10 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 </Tabs>
 
+:::info
+The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xdaibridge-upgrade-sdai](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai), with the commit hash `bf602f35e624cc6c58c827e7c56b23c8b1afa69a`
+:::
+
 References:
 
 - [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
