@@ -173,7 +173,7 @@ const sidebars = {
       type: 'category',
       label: 'Building DApps',
       collapsed: false,
-      link: {type: 'doc', id: 'developers/building/first-contract'},
+      link: {type: 'doc', id: 'developers/building/README'},
       items: [
         "developers/building/first-contract",
         "developers/building/full-stack-dapp",
@@ -185,7 +185,7 @@ const sidebars = {
       type: 'category',
       label: 'Building Account Abstraction',
       collapsed: false,
-      link: {type: 'doc', id: 'developers/account-abstraction/safe'},
+      link: {type: 'doc', id: 'developers/account-abstraction/README'},
       items: [
         "developers/account-abstraction/safe",
         "developers/account-abstraction/gelato",
