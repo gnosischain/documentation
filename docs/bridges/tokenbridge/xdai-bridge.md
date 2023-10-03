@@ -244,8 +244,7 @@ The xDai bridge currently generates bridge revenue through earned yield on stabl
 
 ### Analytics
 
-- [Dune Analytics on xDai Bridge Usage](https://dune.com/maxaleks/xDai-Bridge)
-- [Dune Analytics on xDai Bridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges)
+- [Dune Analytics on xDai Bridge Transfers & Amount](https://dune.com/maxaleks/xDai-Bridge)
 
 ## How it Works
 

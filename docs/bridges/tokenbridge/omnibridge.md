@@ -142,13 +142,6 @@ For a message/tokens to be relayed to another network, bridge validators need to
 
 - See [Bridge Governance](/bridges/governance)
 
-### Analytics
-
-- [Dune Analytics: Omnibridge Stablecoins](https://dune.com/maxaleks/Omnibridge-Stablecoins)
-- [Dune Analytics: Omnibridge](https://dune.com/maxaleks/Omnibridge)
-- [Dune Analytics: Bridge Gas Fees](https://dune.com/maxaleks/Bridge-gas-fees)
-- [Dune Analytics on Omnibridge Revenue](https://dune.com/maxaleks/Compounding-in-xDai-bridges)
-
 ## Bridge Design
 
 ### Ethereum -> Gnosis
