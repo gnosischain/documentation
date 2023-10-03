@@ -572,7 +572,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'tools/analytics/the-graph',
-        'tools/analytics/dune',
+        'https://www.gnosismetrics.com/',
         'tools/analytics/beacon-chain',
         {
           type: 'link',
