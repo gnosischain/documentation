@@ -138,20 +138,17 @@ The second contract is the Interest Receiver. This will be the address provided 
 
 #### Role and responsibilities
 
-**Anyone**
+**xDAI/wxDAI holder**
 
-On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is allowed to `refillBridge()` right back up to the threshold, and also anyone is allowed to `payInterest()`. These processes are permissionless, and it’s also costly which is why we will have a bot to automate these 3 maintenance procedures in the most efficient way possible.
-
-**xDAI holder**
-
-1. swap xDAI to sDAI:
-   1. xDAI holders swap xDAI for sDAI, and their corresponding shares in the vault are recorded.
+1. Deposit xDAI/wxDAI and get sDAI shares:
+   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in return for sDAI, and their corresponding shares in the vault are recorded. (placeholder: Frontend URL)
    2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
-   3. sDAI holder redeems xDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2.
+   3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2.
 
-**Keeper wallet/bot**
+**Keeper**
 
-1. Call `investDAI()` `refillBridge()` `payInterest()`
+1. Call `investDAI()` `refillBridge()` `payInterest()`. On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is allowed to `refillBridge()` right back up to the threshold, and also anyone is allowed to `payInterest()`. These processes are permissionless, and it’s also costly which is why we will have a bot to automate these 3 maintenance procedures in the most efficient way possible.
+2. Keeper is maintained by Karpatkey team.
 
 #### Contracts
 
@@ -160,13 +157,19 @@ On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is a
 
 | Contract | Address                                                                                                               |
 | -------- | --------------------------------------------------------------------------------------------------------------------- |
-| sDAI     | [0x83F20F44975D03b1b09e64809B757c47f942BEeA](https://etherscan.io/address/0x83f20f44975d03b1b09e64809b757c47f942beea) |
+| sDAI     | [0x83F20F44975D03b1b09e64809B757c47f942BEeA](https://etherscan.io/token/0x83f20f44975d03b1b09e64809b757c47f942beea)   |
 | DAI      | [0x6B175474E89094C44Da98b954EedeAC495271d0F](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f)   |
+| Keeper   | [0xC5cD1e53839eeD4d0A38f80C610e77bD07120c90](https://etherscan.io/address/0xC5cD1e53839eeD4d0A38f80C610e77bD07120c90) |
 
 </TabItem>
 <TabItem value="gnosis" label="Gnosis">
 
-TODO
+| Contract                 | Address                                                                                                                |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| sDAI                     | [0xaf204776c7245bF4147c2612BF6e5972Ee483701](https://gnosisscan.io/address/0xaf204776c7245bF4147c2612BF6e5972Ee483701) |
+| wxDAI                    | [0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d](https://gnosisscan.io/address/0xe91d153e0b41518a2ce8dd3d7944fa863463a97d) |
+| SavingsXDAI Adapter      | [0xD499b51fcFc66bd31248ef4b28d656d67E591A94](https://gnosisscan.io/address/0xD499b51fcFc66bd31248ef4b28d656d67E591A94) |
+| Bridge Interest Receiver | [0x670daeaF0F1a5e336090504C68179670B5059088](https://gnosisscan.io/address/0x670daeaF0F1a5e336090504C68179670B5059088) |
 
 </TabItem>
 <TabItem value="goeirli" label="Goerli">
@@ -179,7 +182,12 @@ TODO
 </TabItem>
 <TabItem value="chiado" label="Chiado">
 
-TODO
+| Contract                 | Address                                                                                                                               |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| sDAI                     | [0x20e5eB701E8d711D419D444814308f8c2243461F](https://gnosis-chiado.blockscout.com/address/0x20e5eB701E8d711D419D444814308f8c2243461F) |
+| wxDAI                    | [0x18c8a7ec7897177E4529065a7E7B0878358B3BfF](https://gnosis-chiado.blockscout.com/address/0x18c8a7ec7897177E4529065a7E7B0878358B3BfF) |
+| SavingsXDAI Adapter      | [0xc1529e13A5842D790da01F778Bf23a3677830986](https://gnosis-chiado.blockscout.com/address/0xc1529e13A5842D790da01F778Bf23a3677830986) |
+| Bridge Interest Receiver | [0x65e75819E4e8250a03958Ba303E8f95F8f578168](https://gnosis-chiado.blockscout.com/address/0x65e75819E4e8250a03958Ba303E8f95F8f578168) |
 
 </TabItem>
 
