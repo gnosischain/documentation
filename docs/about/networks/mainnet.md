@@ -43,7 +43,6 @@ keywords:
 | Beacon Checkpoint Sync   | https://checkpoint.gnosis.gateway.fm        |
 | Beacon Checkpoint Sync   | https://checkpoint.gnosischain.com          |
 | Beacon Checkpoint Sync   | https://checkpoint-sync-gnosis.dappnode.io/ |
-| NodeWatch                | https://nodewatch.gnosischain.com           |
 
 ### Other Tools
 

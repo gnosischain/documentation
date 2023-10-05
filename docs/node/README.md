@@ -4,9 +4,9 @@ title: Run a Node
 
 # Run a Node
 
-<img src="/img/node/nodes-map-nov-2022.png" width="100%" />
+<img src="/img/node/validator_distribution_Oct23.png" width="100%"/>
 
-**Image:** Gnosis nodes around the world, circa Nov 2022 (source: [Nodewatch](https://nodewatch.gnosischain.com/))
+**Image:** Gnosis nodes around the world, circa Oct 2023 (source: https://www.d14n.info/)
 
 ## A Community-run Chain
 
@@ -35,55 +35,61 @@ Validator deposits are currently one-way, non-reversible transactions. Similar t
 - Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior.
 
 ## Choosing an Approach
+
 Refer from [Ethereum official docs](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#choosing-approach).
 
 To spin up a node, you must choose the client implementation(of both execution and consensus clients), the environment(hardware, system), and the parameters for client settings.
 
 To choose from client implementations, see all the available Gnosis and Chiado ready execution clients, consensus clients, and learn about client diversity.
 
-Decide  whether to run the software on your own hardware or in the cloud, considering clients' requirements.
+Decide whether to run the software on your own hardware or in the cloud, considering clients' requirements.
 
 Once the environment is set up, install the chosen clients either with beginner-friendly interface or manually using a terminal with advanced options.
 
 When the node is running and syncing, you are ready to use it. You must always keep an eye on its maintenance to avoid penalties.
 
 ## Environment and Hardware
+
 ### Environment and Hardware
-#### **Local or Cloud** ####
+
+#### **Local or Cloud**
 
 Gnosis clients are able to run on consumer grade computers and don't require any special hardware, like mining machines for example. Therefore, you have various options for deploying the node based on your needs. To simplify, let's think about running a node on both a local physical machine and a cloud server:
 
 - Cloud
 
-    - Providers offer high server uptime and static public IP addresses
-    - Getting dedicated or virtual server can be more comfortable than building your own
-    - Trade off is trusting a third party - server provider
-    - Because of the required storage size for full node, the price of a rented server might get high
+  - Providers offer high server uptime and static public IP addresses
+  - Getting dedicated or virtual server can be more comfortable than building your own
+  - Trade off is trusting a third party - server provider
+  - Because of the required storage size for full node, the price of a rented server might get high
+
 - Own hardware
-    - More trustless and sovereign approach
-    - One time investment
-    - An option to buy preconfigured machines
-    - You have to physically prepare, maintain, and potentially troubleshoot the machine and networking
+  - More trustless and sovereign approach
+  - One time investment
+  - An option to buy preconfigured machines
+  - You have to physically prepare, maintain, and potentially troubleshoot the machine and networking
 
 Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
 
-* [Gateway](https://gateway.fm/)
-* [Gnosis](../tools/rpc/README.mdx#gnosis)
-* [Ankr](https://www.ankr.com/rpc/gnosis/)
-* [Blast](https://blastapi.io/public-api/gnosis)
-* [GetBlock](https://getblock.io/nodes/gno/)
-* [BlockPI](https://docs.blockpi.io/documentations/api-reference/gnosis)
+- [Gateway](https://gateway.fm/)
+- [Gnosis](../tools/rpc/README.mdx#gnosis)
+- [Ankr](https://www.ankr.com/rpc/gnosis/)
+- [Blast](https://blastapi.io/public-api/gnosis)
+- [GetBlock](https://getblock.io/nodes/gno/)
+- [BlockPI](https://docs.blockpi.io/documentations/api-reference/gnosis)
 
 Check out also [rpc providers](../tools/rpc/README.mdx) for more options on hosted nodes.
 
-#### **Hardware** ####
+#### **Hardware**
+
 However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. Estimations show a large share of nodes run on the cloud, which could become a single point of failure.
 
 Gnosis clients can run on your computer, laptop, server, or even a single-board computer. While running clients on your personal computer is possible, having a dedicated machine just for your node can significantly enhance its performance and security while minimizing the impact on your primary computer.
 
 Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Gnosis clients on your machine.
 
-#### **Requirements** ####
+#### **Requirements**
+
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining, which requires much more computing power. Sync time and performance do improve with more powerful hardware however.
 
 Before installing any client, please ensure your computer has enough resources to run it. You can find the minimum and recommended requirements below.
@@ -112,7 +118,7 @@ Requirements vary client to client, for more detail see the associated system re
 | Erigon          | [Erigon: System Requirements](https://github.com/ledgerwatch/erigon#system-requirements)                                 |
 | Geth            | [Geth: Hardware](https://geth.ethereum.org/docs/interface/hardware)                                                      |
 
-** Gnosis chain only supports Nethermind and Erigon at the moment.
+\*\* Gnosis chain only supports Nethermind and Erigon at the moment.
 
 | Consensus Layer |                                                                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -122,7 +128,7 @@ Requirements vary client to client, for more detail see the associated system re
 | Teku            | TBD                                                                                                                                   |
 | Prysm           | [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices) |
 
-** Gnosis chain doesn't support Prysm at the moment.
+\*\* Gnosis chain doesn't support Prysm at the moment.
 
 Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node.
 
@@ -159,29 +165,30 @@ Validators are advised to consider those numbers when planning their infrastruct
 | 128                  | 4.6 MB/s        | 3.8 MB/s         | 21.5 TB                     |
 | >256                 | 4.6 MB/s        | 3.9 MB/s         | 21.7 TB                     |
 
+#### **Plug-and-play solutions**
 
-#### **Plug-and-play solutions** ####
 The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the most straightforward experience: order, connect, run. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software.
 
-* [DappNode](https://docs.gnosischain.com/node/tools/dappnode/)
-* [Avado](https://docs.ava.do/packages/gnosis/)
-* [Stereum](https://stereum.net/)
-
+- [DappNode](https://docs.gnosischain.com/node/tools/dappnode/)
+- [Avado](https://docs.ava.do/packages/gnosis/)
+- [Stereum](https://stereum.net/)
 
 ## Spinning up the node
+
 The actual client setup can be done either with automated launchers or manually, setting up client software directly.
 
 For less advanced users, the recommended approach is to use a launcher, software that guides you through the installation and automates the client setup process. However, if you have some experience of using a terminal, the steps for manual setup should be simple to follow.
 
 ### Guided setup
+
 Multiple user-friendly projects aim to improve the experience of setting up a client. These launchers provide automatic client installation and configuration, with some even offering a graphical interface for guided setup and monitoring of clients.
 
 Below are a few projects which can help you install and control clients just with a few clicks:
 
-* [DappNode](../node/tools/dappnode.md) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
-* [Stereum](../node/tools/stereum.md) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
-* [Sedge](../node/tools/sedge.md) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
-* [eth-docker](../node/tools/eth-docker.md) - A docker automation project for Gnosis consensus and execution clients. Easy to setup by answering simple dialog-based questions on terminal.
+- [DappNode](../node/tools/dappnode.md) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [Stereum](../node/tools/stereum.md) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
+- [Sedge](../node/tools/sedge.md) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
+- [eth-docker](../node/tools/eth-docker.md) - A docker automation project for Gnosis consensus and execution clients. Easy to setup by answering simple dialog-based questions on terminal.
 
 ### Manual setup
 
@@ -189,7 +196,8 @@ The other option is to download, verify, and configure the client software manua
 
 As explained before, setting up your own Gnosis node will require running a pair of consensus and execution clients. Some clients might include a light client of the other kind and sync without any other software needed. However, full trustless verification requires both implementations.
 
-#### **Getting the client software** ####
+#### **Getting the client software**
+
 First, you need to obtain your preferred execution client and consensus client software.
 
 You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required.
@@ -199,18 +207,21 @@ Instructions for installing each client are provided in the documentation linked
 Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
 ** Execution clients **
-* [Nethermind](https://downloads.nethermind.io/)
-* [Erigon](https://github.com/ledgerwatch/erigon/releases)
+
+- [Nethermind](https://downloads.nethermind.io/)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 
 ** Consensus clients **
-* [Lighthouse](https://github.com/sigp/lighthouse/releases)
-* [Lodestar](https://github.com/ChainSafe/lodestar/releases)
-* [Teku](https://github.com/ConsenSys/teku/releases)
-* [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
+
+- [Lighthouse](https://github.com/sigp/lighthouse/releases)
+- [Lodestar](https://github.com/ChainSafe/lodestar/releases)
+- [Teku](https://github.com/ConsenSys/teku/releases)
+- [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
 
 [Client diversity](https://eth2book.info/capella/part2/incentives/diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
-#### **Verifying the software** ####
+#### **Verifying the software**
+
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Gnosis client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
 Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on verifying open-source software using `gpg` on [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
@@ -223,7 +234,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### **Client setup** ####
+#### **Client setup**
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
@@ -233,7 +244,8 @@ Other basic configuration options are, e.g. choosing a network - Mainnet or test
 
 For testing purposes, you might prefer to run a client on Chiado testnet.
 
-##### **Starting the execution client** #####
+##### **Starting the execution client**
+
 Before starting the Gnosis client software, perform a last check that your environment is ready. For example, make sure:
 
 - There is enough disk space considering the chosen network and sync mode.
@@ -254,8 +266,7 @@ This token is generated automatically by the client software, but in some cases,
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### **Running an execution client** ####
-
+#### **Running an execution client**
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
@@ -272,7 +283,6 @@ Please keep in mind that this is just a basic example, all other settings will b
 
 > Note that backslashes `\` in examples are only for formatting purposes; config flags can be defined in a single line.
 
-
 **Running Nethermind**
 
 Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON RPC is enabled by default.
@@ -287,7 +297,8 @@ Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/f
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
-##### **Starting the consensus client** #####
+##### **Starting the consensus client**
+
 The consensus client must be started with the right port configuration to establish a local RPC connection to the execution client. The consensus clients have to be run with the exposed execution client port as configuration argument.
 
 The consensus client also needs the path to the execution client's `jwtsecret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
@@ -296,7 +307,8 @@ If you plan to run a validator, make sure to add a configuration flag specifying
 
 When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://checkpoint.gnosischain.com/).
 
-#### **Running a consensus client** ####
+#### **Running a consensus client**
+
 **Running Lighthouse**
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
 
@@ -310,11 +322,9 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
     --checkpoint-sync-url "https://checkpoint.gnosischain.com"
 ```
 
-
 **Running Lodestar**
 
 [Lodestar](https://chainsafe.github.io/lodestar/)
-
 
 ```bash
 ./lodestar beacon \
@@ -324,9 +334,11 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 --eth1.enabled=true \
 --execution.urls="http://127.0.0.1:8551" \
 ```
+
 **Running Teku**
 
 [Teku](https://docs.teku.consensys.net/)
+
 ```bash
 teku \
     --network gnosis \
