@@ -6,6 +6,8 @@ tags: [CoreDevsCall, gnosis]
 
 Gnosis Core Devs Call Notes
 
+![core devs call 4 october](https://github.com/gnosischain/documentation-1/assets/75987728/7e56f6e3-7766-4cd8-a2dd-fb9570bf432e)
+
 Welcome to the weekly Gnosis Core Devs Call, where members of the Gnosis team and contributors gather to discuss the latest developments and updates related to the Gnosis ecosystem. This meeting is held every Wednesday and serves as a platform for participants to collaborate and exchange ideas.
 
 The participants of this call include representatives from various teams such as Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis DevRels, Gnosis Comms team, and community contributors. The presence of diverse team members ensures that discussions are comprehensive and informative, with insights from multiple perspectives.
