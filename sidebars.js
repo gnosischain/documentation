@@ -545,7 +545,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Faucets',
-      collapsed: false,
+      collapsed: true,
       link: {type: 'doc', id: 'tools/faucets/README'},
       items: [
         {
@@ -571,9 +571,18 @@ const sidebars = {
       label: 'Data & Analytics',
       collapsed: true,
       items: [
+     
         'tools/analytics/the-graph',
-        'tools/analytics/dune',
-        'tools/analytics/beacon-chain',
+        {
+          type: 'link',
+          label: 'GnosisMetrics',
+          href: 'https://www.gnosismetrics.com/',
+        },
+        {
+          type: 'link',
+          label: 'Dune',
+          href: 'https://dune.com/home',
+        },
         {
           type: 'link',
           label: 'Goldsky',
@@ -583,11 +592,6 @@ const sidebars = {
           type: 'link',
           label: 'Blocknative',
           href: 'https://docs.blocknative.com/',
-        },
-        {
-          type: 'link',
-          label: 'Chainbeat',
-          href: 'https://chainbeat.io/',
         },
         {
           type: 'link',
