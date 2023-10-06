@@ -116,7 +116,7 @@ DSR yield is risk-free if you are already holding DAI. All the risks derived fro
 
 Phase 1: Only the [bridge contract upgrade](../governance/decisions.md#upgrade-xdai-bridge-to-support-investing-in-sdai-vault) on Ethereum ✅
 
-Phase 2: The rest of the components (includ. Gnosis Chain) will be implemented.
+Phase 2: The rest of the components (includ. Gnosis Chain). ✅
 
 ![](../../../static/img/bridges/xdaibridge/DSRonGnosis.png)
 
@@ -141,14 +141,14 @@ The second contract is the Interest Receiver. This will be the address provided 
 **xDAI/wxDAI holder**
 
 1. Deposit xDAI/wxDAI and get sDAI shares:
-   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in return for sDAI, and their corresponding shares in the vault are recorded. (placeholder: Frontend URL)
+   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in return for sDAI, and their corresponding shares in the vault are recorded. (UI available soon)
    2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
-   3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2.
+   3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2
 
 **Keeper**
 
 1. Call `investDAI()` `refillBridge()` `payInterest()`. On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is allowed to `refillBridge()` right back up to the threshold, and also anyone is allowed to `payInterest()`. These processes are permissionless, and it’s also costly which is why we will have a bot to automate these 3 maintenance procedures in the most efficient way possible.
-2. Keeper is maintained by Karpatkey team.
+2. [Keeper](https://etherscan.io/address/0xC5cD1e53839eeD4d0A38f80C610e77bD07120c90) is maintained by [Karpatkey team](https://www.karpatkey.com/).
 
 #### Contracts
 
