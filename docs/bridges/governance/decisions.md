@@ -8,6 +8,14 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Savings xDAI launch - Initiate sDAI interest bridging and increase xDAI bridge limits.
+
+🗳 Justification: This is a follow-up on the previous proposal. After the successful upgrade of the xDAI bridge to deploy reserves on the sDAI vault, we launched the Savings xDAI vault on Gnosis chain which will distribute the interest earned on mainnet to holders of the sDAI token on Gnosis chain. We [set interest receiver](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x933bd8409a8f46789ee29d50af1c10ed40378e05705681c8530aa744eb322ac5) to the interest receiver contract on Gnosis Chain.
+
+We [increased the limits](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x330f022997f6cb47b9d9643ebf032871bc0ffb82a0a3ee8e1020649de22dc6ec) for incoming xDAI transactions to Gnosis chain as we are anticipating higher volumes due this launch. Previous value: 10 million. New value: 15 million.
+
+✅ Implemented: Oct 5, 2023
+
 ## Upgrade xDAI bridge to support investing in sDAI vault.
 
 🗳 Justification: We [upgrade](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xd8683bccfe39ace95a1da5f58a5c9a83dc324de39ce07f11fcffb5c2397ca96c) [xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) to new implementation version in order to support investing DAI from the bridge contract into sDAI vault from Spark Protocol. This upgrade only implements changes on Ethereum, and the next phase will be on Gnosis Chain. The implementation contract is [audited by Omega and ChainSafe](../audits.md#xdai-bridge-upgrade-audit-by-omega-and-chainsafe). For more details, please refer to [docs](../tokenbridge/xdai-bridge.md#savings-xdai)

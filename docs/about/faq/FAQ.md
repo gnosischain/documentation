@@ -196,7 +196,7 @@
 
 Along with running the GBC client you can also consider running a Gnosis Node to connect with (_optional - recommended for experienced node runners only_).
 
-Syncing the [Gnosis using Nethermind](/node/manual) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
+Syncing [Gnosis using Nethermind](/node/manual) requires \~200GB (and growing) of data to download. You may encounter some errors during syncing. Depending on your setup, you can expect it to take anywhere from a few hours to several days.
 
 11. Can I use a node provider to run a Gnosis node?
 
@@ -361,7 +361,7 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 ### mGNO
 
 :::danger mGNO has been deprecated
-After Shanghai/Capella hardfork, mGNO has been deprecated. Validator can deposit 1 GNO directly instead of unrwapping 1 GNO to 32 mGNO.
+After Shanghai/Capella hardfork, mGNO has been deprecated. Validator can deposit 1 GNO directly instead of unwrapping 1 GNO to 32 mGNO.
 The FAQs below is legacy information, and will be removed in the future.
 :::
 
@@ -382,4 +382,5 @@ mGNO is the staking token used by validators in the Gnosis Beacon Chain.
 
 3. Can I swap mGNO back to GNO
 
-No, not currently. Once withdrawals are activated, mGNO will be swapped back to GNO during the withdrawal process.
+   Although, it is not a "swap" per se, it is possible to unwrap mGNO back to GNO. To do this, you should go to this [contract](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68#readProxyContract) and query your balance `balanceOf` with your address. As a result, it will give you your balance in wei. Take note of this number.
+   Afterward, go to this [contract](https://gnosisscan.io/address/0x0b91D1e3312aEEf7e9E641606Ad0aA19AA05673D#writeContract) and call the `unwrap` function by filling the `_token` section with **0x722fc4DAABFEaff81b97894fC623f91814a1BF68** and `amount` section with the number you have received as a result of the previous query. Once you call the function, you will receive GNO in return for your mGNO.
