@@ -167,7 +167,13 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 ## Full Withdrawal
 
-Please check guide on [voluntary exit](./voluntary-exit.md).
+Similar to [Partial Withdrawal](#partial-withdrawal), GNO will not be withdrawn back to the validator's withdrawal address automatically.
+After initiating [voluntary exit](./voluntary-exit.md), you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract) to receive all the GNO from your validator account.
+
+:::info
+Navigate to https://gnosischa.in/validators/withdrawals to search for the withdrawal status of your validator.
+Please note that even if your validator is shown in the withdrawal list, you will still need to call `claimWithdrawal` to claim the GNO.
+:::
 
 ## Reference
 
