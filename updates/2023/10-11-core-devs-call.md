@@ -6,9 +6,11 @@ tags: [CoreDevsCall, gnosis]
 
 Gnosis Core Devs Call Notes
 
+![core devs october 11](https://github.com/gnosischain/documentation-1/assets/75987728/9d93a92d-b7c8-4b44-8f6c-1623c2557a4c)
+
 Welcome to the Gnosis Core Devs weekly gathering. Every Wednesday, key members from the Gnosis team, contributors, and various team representatives convene to discuss, collaborate, and update one another on the Gnosis ecosystem's progression.
 
-💬 Participants represent teams such as:
+Participants represent teams such as:
 
 Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis Comms team.
 
@@ -21,15 +23,15 @@ October 11, 2023
 # Client Team Updates
 ## EL
 
-* **Nethermind**: 
-* Working on internal dencun specific things for Gnosis
-* Right now 4844 variables are hardcoded in Nethermind and they’re working on making this configurable
-* A new release candidate is underway, majorly integrating cancun features along with some fixes.
+**Nethermind**: 
+ * Working on internal dencun specific things for Gnosis
+ * Right now 4844 variables are hardcoded in Nethermind and they’re working on making this configurable
+ * A new release candidate is underway, majorly integrating cancun features along with some fixes.
 
-* **Erigon**: 
+**Erigon**: 
 No one present
 
-* **Geth**:
+**Geth**:
   * Not much progress since last week, mostly investigating
   * 2 branches
     * One that extracts the data from the Nethermind DB and creates the DB to use by the next branch
@@ -39,7 +41,7 @@ No one present
 
 # Chain Infra
 
-* **Gateway**
+**Gateway**
 No one present
 
 # Hive Tests
