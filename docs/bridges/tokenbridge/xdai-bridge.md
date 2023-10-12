@@ -92,6 +92,8 @@ References:
 
 ### Savings xDAI
 
+Application: https://agave.finance/sdai/
+
 #### Rationale
 
 MakerDAO’s DSR current rate is 5%. Since the increase of the DSR to ~3.5%, ~7M DAI have fled out of the xDAI bridge, as can be seen on this [dashboard](https://dune.com/queries/2650075/4403805?d=11). Bridging the DSR yield into Gnosis Chain will help regain these deposits. In order to provide the needed catalyst for Gnosis Chain Defi to boom, interest rates on Gnosis Chain have to pick up or reach parity with Ethereum or other chains with higher borrowing demand.
@@ -141,7 +143,7 @@ The second contract is the Interest Receiver. This will be the address provided 
 **xDAI/wxDAI holder**
 
 1. Deposit xDAI/wxDAI and get sDAI shares:
-   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in return for sDAI, and their corresponding shares in the vault are recorded. (UI available soon)
+   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in https://agave.finance/sdai/, in return for sDAI, and their corresponding shares in the vault are recorded.
    2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
    3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2
 
