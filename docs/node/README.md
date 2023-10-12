@@ -24,14 +24,7 @@ title: Run a Node
 
 ### Proof-of-Stake
 
-:::caution
-
-Validator deposits are currently one-way, non-reversible transactions. Similar to Ethereum, no concrete date has been set for withdrawals of GNO staked in validators.
-
-:::
-
 - Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
-- 1 GNO is turned into [32 mGNO](../about/tokens/gno.md#mgno-token), to mirror the [32 ETH](https://ethereum.org/en/staking/) for Ethereum staking
 - Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior.
 
 ## Choosing an Approach
