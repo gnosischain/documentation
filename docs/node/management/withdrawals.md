@@ -51,7 +51,6 @@ There are 2 ways to check withdrawal credential of a validator:
 
 ### How to change the withdrawal credential?
 
-Tools are being developed for Gnosis Chain.
 The general steps to change withdrawal credential will be:
 
 1. Generate BLStoExecution file using tools like [ethdo](https://notes.ethereum.org/@launchpad/withdrawals-guide#BLS-to-execution-with-ethdo) or manually.
@@ -159,21 +158,22 @@ curl -d @change-operations.json -H "Content-Type: application/json"  -X POST htt
 
 Please refer to #Update your client section above.
 
-# How to withdraw?
+## How to receive my withdrawal (full or partial)?
 
-## Partial Withdrawal
-
-As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract). However, it is in our plans to automate and subsidize partial withdrawals in the future.
-
-## Full Withdrawal
-
-Similar to [Partial Withdrawal](#partial-withdrawal), GNO will not be withdrawn back to the validator's withdrawal address automatically.
-After initiating [voluntary exit](./voluntary-exit.md), you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract) to receive all the GNO from your validator account.
+As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial and full withdrawals do not happen automatically.  
+Currently you need to manually claim your withdrawal on the contract : https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract.
 
 :::info
-Navigate to https://gnosischa.in/validators/withdrawals to search for the withdrawal status of your validator.
-Please note that even if your validator is shown in the withdrawal list, you will still need to call `claimWithdrawal` to claim the GNO.
+If you want to perform full withdrawal, don't forget to initiate [voluntary exit](./voluntary-exit.md) before calling `claimWithdrawal`.
 :::
+
+1. Connect your wallet to Gnosisscan (it can be any wallet, doesn't have to be your validator address, anyone can trigger a withdrawal claim) and then enter your validator recipient(withdrawal) address(s) in [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) or [`claimWithdrawals`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4)
+2. Click "write" and perform the send tx action on your wallet.
+3. Once the transaction is confirmed, you should see the GNO tokens being transferred to your withdrawal address.
+
+Don't use the full length address that you might see on Gnosischa.in, use the recipient address under "Withdrawal" tab.
+
+![validator_recipient_address](../../../static/img/node/withdrawal/validator_recipient_address.png)
 
 ## Reference
 
