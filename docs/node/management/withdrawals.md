@@ -51,9 +51,7 @@ There are 2 ways to check withdrawal credential of a validator:
 
 ### How to change the withdrawal credential?
 
-The general steps to change withdrawal credential will be:
-
-1. Generate BLStoExecution file using tools like [ethdo](https://notes.ethereum.org/@launchpad/withdrawals-guide#BLS-to-execution-with-ethdo) or manually.
+1. Generate BLStoExecution file using [ethdo](https://notes.ethereum.org/@launchpad/withdrawals-guide#BLS-to-execution-with-ethdo).
 
 2. Post the file to the BLStoExecution pool.
 
@@ -73,16 +71,16 @@ The online and offline process contains three steps.
 
 **Prerequisite**
 
-1. On your online computer, open a terminal and download [ethdo v1.31.0](https://github.com/wealdtech/ethdo/releases) from Github/
+1. On your online computer, open a terminal and download [ethdo](https://github.com/wealdtech/ethdo/releases) from Github/
 
 ```
-wget https://github.com/wealdtech/ethdo/releases/download/v1.31.0/ethdo-1.31.0-linux-amd64.tar.gz
+wget https://github.com/wealdtech/ethdo/releases/download/<version>/ethdo-<version>-linux-amd64.tar.gz
 ```
 
 2. Extract ethdo
 
 ```
-tar -xvf ethdo-1.31.0-linux-amd64.tar.gz
+tar -xvf ethdo-<version>-linux-amd64.tar.gz
 ```
 
 3. Check that ethdo is installed correctly by running
