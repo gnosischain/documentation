@@ -116,17 +116,13 @@ DSR yield is risk-free if you are already holding DAI. All the risks derived fro
 
 #### Architecture
 
-Phase 1: Only the [bridge contract upgrade](../governance/decisions.md#upgrade-xdai-bridge-to-support-investing-in-sdai-vault) on Ethereum ✅
-
-Phase 2: The rest of the components (includ. Gnosis Chain). ✅
-
 ![](../../../static/img/bridges/xdaibridge/DSRonGnosis.png)
 
 #### Ethereum
 
-A new implementation upgrade in xDAIForeignBridge contract: [SavingsDAI Connector](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/upgradeable_contracts/erc20_to_native/SavingsDaiConnector.sol) is added as a dependency in the contract. Compare to the old implementation of the [Compound Connector](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/upgradeable_contracts/erc20_to_native/CompoundConnector.sol), the [payInterest](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/upgradeable_contracts/erc20_to_native/InterestConnector.sol#L138-L156) function in SavingsDai Connector is used to transfer interest received from vault to receiver address on Gnosis Chain rather than to receiver address on Ethereum.
+A new implementation upgrade in xDAIForeignBridge contract: [SavingsDAI Connector](https://github.com/gnosischain/tokenbridge-contracts/blob/xdaibridge-upgrade-sdai/contracts/upgradeable_contracts/erc20_to_native/SavingsDaiConnector.sol) is added as a dependency in the contract. Compare to the old implementation of the [Compound Connector](https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/erc20_to_native/CompoundConnector.sol), the [payInterest](https://github.com/gnosischain/tokenbridge-contracts/blob/xdaibridge-upgrade-sdai/contracts/upgradeable_contracts/erc20_to_native/InterestConnector.sol#L138-L148) function in SavingsDai Connector is used to transfer interest received from vault to receiver address on Gnosis Chain rather than to receiver address on Ethereum.
 
-[sDAI](https://github.com/Luigy-Lemon/tokenbridge-contracts/blob/DSR/contracts/interfaces/ISavingsDai.sol) is deployed on Ethereum. Any future DAI deposited to the Bridge will be wrapped into sDAI, with caveat that it will always keep the buffer of the minimumCashThreshold when investing.
+[sDAI](https://github.com/gnosischain/tokenbridge-contracts/blob/xdaibridge-upgrade-sdai/contracts/interfaces/ISavingsDai.sol) is deployed on Ethereum. Any future DAI deposited to the Bridge will be wrapped into sDAI, with caveat that it will always keep the buffer of the minimumCashThreshold when investing.
 
 **minimumCashThreshold:** This value determines what is the recommended amount of DAI that should be held in the bridge at all times, in order to create a buffer for withdrawals without added operations and thus lower gas costs.
 
@@ -150,7 +146,7 @@ The second contract is the Interest Receiver. This will be the address provided 
 **Keeper**
 
 1. Call `investDAI()` `refillBridge()` `payInterest()`. On Ethereum, anyone is allowed to `investDAI()` into the sDAI vault, anyone is allowed to `refillBridge()` right back up to the threshold, and also anyone is allowed to `payInterest()`. These processes are permissionless, and it’s also costly which is why we will have a bot to automate these 3 maintenance procedures in the most efficient way possible.
-2. [Keeper](https://etherscan.io/address/0xC5cD1e53839eeD4d0A38f80C610e77bD07120c90) is maintained by [Karpatkey team](https://www.karpatkey.com/).
+2. [Keeper](https://etherscan.io/address/0xC5cD1e53839eeD4d0A38f80C610e77bD07120c90) is maintained by [Karpatkey team](https://www.karpatkey.com/). [Source Code](https://github.com/Luigy-Lemon/XDaiBridge-Keeper/tree/main)
 
 #### Contracts
 
