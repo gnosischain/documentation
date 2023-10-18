@@ -6,7 +6,7 @@ tags: [CoreDevsCall, gnosis]
 
 Gnosis Core Devs Call Notes
 
-![](https://hackmd.io/_uploads/ryeukiT-6.png)
+![core devs call 18 october](https://github.com/gnosischain/documentation-1/assets/75987728/889648ed-ad9a-4985-88bd-090a2844e743)
 
 Welcome to the Gnosis Core Devs weekly gathering. Every Wednesday, key members from the Gnosis team, contributors, and various team representatives convene to discuss, collaborate, and update one another on the Gnosis ecosystem's progression.
 
