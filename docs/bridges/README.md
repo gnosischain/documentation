@@ -45,8 +45,8 @@ See the [Omnibridge](/bridges/tokenbridge/omnibridge), which is built on top of 
 
 Tokens that are bridged using [Omnibridge](/bridges/tokenbridge/omnibridge) are regarded as canonical representations of the origin token on Gnosis Chain.
 
-- [Canonical Bridged Tokens from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
-- [Canonical Bridged Tokens from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+- [Canonical Bridged Tokens](https://gnosis.blockscout.com/tokens?tab=bridged)
+- Select the origin chain by using **Filter** option.
 
 ## Roadmap
 

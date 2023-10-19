@@ -247,8 +247,8 @@ Additional References:
 
 ### Canonical Token Registries
 
-- [Canonical Registry of Bridged Tokens from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
-- [Canonical Registry of Bridged Tokens from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)
+- [Canonical Bridged Tokens](https://gnosis.blockscout.com/tokens?tab=bridged)
+- Select the origin chain by using **Filter** option.
 
 ### Multiple Representations
 
