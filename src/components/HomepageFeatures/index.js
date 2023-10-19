@@ -6,17 +6,17 @@ const FeatureList = [
   {
     title: 'Tutorials',
     link: '/developers',
-    Svg: require('@site/static/img/home/tutorials.svg').default,
+    Svg: require('@site/static/img/home/Gnosis-Tutorial.svg').default,
   },
   {
     title: 'Tools',
     link: '/tools',
-    Svg: require('@site/static/img/home/tools.svg').default,
+    Svg: require('@site/static/img/home/Gnosis-Tools.svg').default,
   },
   {
     title: 'Run your node',
     link: '/node',
-    Svg: require('@site/static/img/home/node.svg').default,
+    Svg: require('@site/static/img/home/Gnosis-Node.svg').default,
   },
 ];
 

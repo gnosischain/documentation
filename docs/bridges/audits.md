@@ -12,14 +12,14 @@ The OmniBridge and xDai Bridge have undergone multiple independent security audi
 
 **Completed**: August 31, 2023  
 **Conclusion**: 2 medium issues, 5 low risk issues, 3 info issues. All issues has been resolved.  
-**Contracts**: hhttps://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
+**Contracts**: https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
 **Audit Report**: [Omega Gnosis Bridge Final Audit Report](../../static/files/Omega%20-%20Gnosis%20Bridge%20-%20final%20report.pdf)
 
 ### ChainSafe
 
 **Completed**: August 31, 2023  
 **Conclusion**: 2 minor issues, 2 optimizational issues.  
-**Contracts**:https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
+**Contracts**: https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
 **Audit Report**: [ChainSafe Audit Report](../../static/files/dai-xdai-08-23.pdf)
 
 **Reference**: [Savings xDAI](../bridges/tokenbridge/xdai-bridge.md#savings-xdai)
