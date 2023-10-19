@@ -347,3 +347,7 @@ A consensus client serves as a Beacon Node for validators to connect. Each conse
 Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Gnosis network. This requires only 1 GNO. Check out how to [deposit validators](../node/manual/validator/deposit.md).
 
 If you don't want to run your own node but interested in staking your GNO to earn fee, look into [liquid staking](../tools/beacon-chain/liquid-staking.md) for an overview about staking options.
+
+## Reference
+
+- [Gnosis Chain Staking Resource](https://forum.gnosis.io/t/awesome-gnosis-chain-staking-resources/7392)
