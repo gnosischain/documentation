@@ -40,7 +40,7 @@ Relay Kit allows users to pay transaction fees (gas fees) using the native block
 
 Currently, the Relay Kit is only compatible with [Gelato relay](https://docs.gelato.network/developer-services/relay). There are two ways to use Gelato relay:
 1. [Gelato 1Balance](https://docs.gelato.network/developer-services/relay/payment-and-fees/1balance-and-relay): Using prepaid deposit(via USDC on Polygon for mainnet, via gETH on Goerli for testnet) to funds the 1Balance account.With the deposit on 1Balance account, the Relay Kit can sponsors a transactions to other Safe within or on another chain. 
-2. [Gelato SyncFee](https://docs.gelato.network/developer-services/relay/non-erc-2771/callwithsyncfee): Allows you to execute a transaction and pay the gas fees directly with funds in your Safe, even if you don't have ETH on Ethrereum or xDAI on Gnosis Chain.
+2. [Gelato SyncFee](https://docs.gelato.network/developer-services/relay/non-erc-2771/callwithsyncfee): Allows you to execute a transaction and pay the gas fees directly with funds in your Safe, even if you don't have ETH on Ethereum or xDAI on Gnosis Chain.
 
 
 Follow the [tutorial on Safe](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/relay-kit#quickstart) to send some tokens to another address using the Relay Kit to pay for he gas fees. 
