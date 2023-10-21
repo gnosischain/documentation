@@ -67,6 +67,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [Gateway](https://gateway.fm/)
 - [Gnosis](../tools/rpc/README.mdx#gnosis)
 - [Ankr](https://www.ankr.com/rpc/gnosis/)
+- [Chainnodes](https://www.chainnodes.org/chains/gnosis)
 - [Blast](https://blastapi.io/public-api/gnosis)
 - [GetBlock](https://getblock.io/nodes/gno/)
 - [BlockPI](https://docs.blockpi.io/documentations/api-reference/gnosis)
