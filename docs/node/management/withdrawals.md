@@ -167,7 +167,8 @@ If you want to perform full withdrawal, don't forget to initiate [voluntary exit
 
 1. Connect your wallet to Gnosisscan (it can be any wallet, doesn't have to be your validator address, anyone can trigger a withdrawal claim) and then enter your validator recipient(withdrawal) address(s) in [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) or [`claimWithdrawals`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4)
 2. Click "write" and perform the send tx action on your wallet.
-3. Once the transaction is confirmed, you should see the GNO tokens being transferred to your withdrawal address.
+3. Once the transaction is confirmed, you should see the GNO tokens being transferred to your withdrawal address.  
+   Note: The withdrawal address and the recipient address are the same thing.
 
 Don't use the full length address that you might see on Gnosischa.in, use the recipient address under "Withdrawal" tab.
 
