@@ -145,7 +145,7 @@ unless it is funded again.
 [Click here to read more about Self-funded dAPIs](https://docs.api3.org/guides/dapis/subscribing-self-funded-dapis/).
 
 #### Managed dAPIs
-[Managed dAPIs](https://docs.api3.org/reference/dapis/understand/managed.html) are sourced directly from mulitple [first-party](https://docs.api3.org/explore/airnode/why-first-party-oracles.html) data providers
+[Managed dAPIs](https://docs.api3.org/reference/dapis/understand/managed.html) are sourced directly from multiple [first-party](https://docs.api3.org/explore/airnode/why-first-party-oracles.html) data providers
 running an Airnode and aggregated using Airnode's signed data using
 a median function. The gas costs
 and avaibality of Managed dAPIs is managed by the [API3 DAO](https://docs.api3.org/explore/dao-members/).
