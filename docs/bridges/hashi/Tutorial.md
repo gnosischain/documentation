@@ -95,7 +95,7 @@ const message =
 
 ### Claim Transaction
 
-After the message is relayed to Gnosis Chain by AMB bridge, you can proceeed to claim your transaction.
+After the message is relayed to Gnosis Chain by AMB bridge, you can proceed to claim your transaction.
 Make sure that your message is stored by checking if the AMB Adapter contract emits `HashStored` event with the correct `message Id`.
 
 1. Call `Yaru.executeMessages([message],[messageId],[Safe_from_Goerli or EOA from Goerli that calls Yaho],[AMB_Adapter_Address on Gnosis Chain])`

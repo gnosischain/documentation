@@ -121,7 +121,7 @@ networks:
 
 ### 3. Environment Variables
 
-Add an `.env` file with your fee recepient (your Gnosis address) and graffiti in `/home/$USER/gnosis/.env`.
+Add an `.env` file with your fee recipient (your Gnosis address) and graffiti in `/home/$USER/gnosis/.env`.
 
 ```yaml title="/home/$USER/gnosis/.env"
 PUID=1000
