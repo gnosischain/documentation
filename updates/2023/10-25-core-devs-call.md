@@ -6,6 +6,8 @@ tags: [CoreDevsCall, gnosis]
 
 Gnosis Core Devs Call Notes
 
+![core devs call october 25](https://github.com/gnosischain/documentation-1/assets/75987728/2c9a5982-9b48-44b6-b24a-58ff67c2c33e)
+
 Welcome to the Gnosis Core Devs weekly gathering. Every Wednesday, key members from the Gnosis team, contributors, and various team representatives convene to discuss, collaborate, and update one another on the Gnosis ecosystem's progression.
 
 Participants represent teams:
