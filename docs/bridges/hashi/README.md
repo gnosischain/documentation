@@ -60,7 +60,7 @@ By using domain=5 and blockNo a blockNumber that has been reported by the oracle
 | Sygma Adapter          | Gnosis Chain | [0x9AD7a6f4FDA8247cC0bF5932B68c5b619937dB15](https://gnosisscan.io/address/0x9AD7a6f4FDA8247cC0bF5932B68c5b619937dB15)       |
 | Sygma                  | Gnosis Chain | [0xd2d95f7611c83b1f9041539557810033aC7B8742](https://gnosisscan.io/address/0xd2d95f7611c83b1f9041539557810033aC7B8742)       |
 | Dendreth Adapter       | Gnosis Chain | [0x719523EaF5CFd101Ef501C64597613FBB7aEdED9](https://gnosisscan.io/address/0x719523EaF5CFd101Ef501C64597613FBB7aEdED9)       |
-| Dendreh Light Client   | Gnosis Chain | [0x983df74d1ef68b4ff1fff11a28c06e5c097435da](https://gnosisscan.io/address/0x983df74d1ef68b4ff1fff11a28c06e5c097435da)       |
+| Dendreh Light Client   | Gnosis Chain | [0xb676a5E81168a24496ad13dE79f2675c66684d23](https://gnosisscan.io/address/0xb676a5E81168a24496ad13dE79f2675c66684d23)       |
 | HeaderStorage          | Goerli       | [0x4cd014ac64aaa899b46bf3a477b68bb67e33edc4](https://goerli.etherscan.io/address/0x4cd014ac64aaa899b46bf3a477b68bb67e33edc4) |
 | AMB Header Reporter    | Goerli       | [0xedc0b1d3de4496e0d917af42f29cb71eb2982319](https://goerli.etherscan.io/address/0xedc0b1d3de4496e0d917af42f29cb71eb2982319) |
 | AMB                    | Goerli       | [0x01268DB05965CeAc2a89566c42CD550ED7eE5ECD](https://goerli.etherscan.io/address/0x01268DB05965CeAc2a89566c42CD550ED7eE5ECD) |
