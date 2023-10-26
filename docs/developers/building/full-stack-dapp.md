@@ -9,7 +9,7 @@ keywords: [deploy dapp, full stack app, tutorial, web3, dapp development]
 
 In the following tutorial we will go through a step-by-step guide on how to create a full-stack Hello World App that interacts with Gnosis. This tutorial is designed for either new developers interested in Dapp development or existing devs interested in migrating to Gnosis development.
 
-Throughout the tutorial, feel free to reference other pages in our documentation for information with greater depth - however this tutorial will give you a basic understand of how to get up and running.
+Throughout the tutorial, feel free to reference other pages in our documentation for information with greater depth - however this tutorial will give you a basic understanding of how to get up and running.
 
 This Dapp will allow you to wave at Gnosis, and see how many times you have waved.
 
@@ -35,7 +35,7 @@ This Dapp will allow you to wave at Gnosis, and see how many times you have wave
 * [Hardhat](https://hardhat.org/), a development environment used for smart contract compiling, deploying, testing and debugging.
 * [Ethers.js](https://docs.ethers.io/v5/), a library for interacting with Ethereum Virtual Machine (EVM) chains.
 
-First lets initialize your project:
+First let's initialize your project:
 
 ```bash
 mkdir gnosis-full-stack-dapp
@@ -44,7 +44,7 @@ npm init -y
 npm install --save-dev hardhat@2.9.9
 ```
 
-Now lets run Hardhat to create a project:
+Now let's run Hardhat to create a project:
 
 ```bash
 npx hardhat
@@ -104,7 +104,7 @@ Changing greeting from 'Hello, world!' to 'Hola, mundo!'
   1 passing (2s)
 ```
 
-Moving forward, lets delete ```sample-test.js``` under test, ```sample-script.js``` under ```scripts```, and lastly ```Greeter.sol``` under ```contracts```.
+Moving forward, let's delete ```sample-test.js``` under test, ```sample-script.js``` under ```scripts```, and lastly ```Greeter.sol``` under ```contracts```.
 
 Make sure not to delete folders, we will be working with them still.
 
@@ -141,7 +141,7 @@ contract WavePortal {
 ```
 ## Deploying your Contract
 
-To deploy your contract to Gnosis, lets update your config file at  `hardhat.config.js`.
+To deploy your contract to Gnosis, let's update your config file at  `hardhat.config.js`.
 For a complete configuration check [hardhat config guide](../smart-contracts/hardhat.md).
 
 ```js showLineNumbers title=hardhat.config.js
@@ -182,7 +182,7 @@ module.exports = {
 Proper private key management is critical. To safeguard your private key, it has been added to a .env file, or environment variable file. DO NOT PUSH THIS TO GITHUB OR COMMIT TO SOURCE CONTROL. Even if you delete it after, assume it will live on forever after being committed and is compromised. Add .env to your .gitignore if you plan on committing, or store securely it in an environment variable.
 :::
 
-Lets install dotenv, to safekeep your private key:
+Let's install dotenv, to safekeep your private key:
 
 ```bash
 npm install --save dotenv
@@ -271,7 +271,7 @@ const App = () => {
 
 Lastly, in the Replit ```utils``` folder, we need to replace the ```WavePortals.json``` file with the generated json from when you deployed your contract.
 
-In the repository you worked on you smart contracts, navigate to ```artifacts/contracts/WavePortal.sol/WavePortal.json```, and copy that whole file into the replit file talked about above.
+In the repository you worked on your smart contracts, navigate to ```artifacts/contracts/WavePortal.sol/WavePortal.json```, and copy that whole file into the replit file talked about above.
 
 The file should look something like this:
 

@@ -152,10 +152,6 @@ curl -d @change-operations.json -H "Content-Type: application/json"  -X POST htt
 3. [BLS To Execution Change from Ethereum](https://launchpad.ethereum.org/en/btec/#broadcast-message)
 4. [Teku's postBlsToExecutionChange API ](https://consensys.github.io/teku/#tag/Beacon/operation/postBlsToExecutionChange)
 
-### Update your clients
-
-Please refer to #Update your client section above.
-
 ## How to receive my withdrawal (full or partial)?
 
 As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial and full withdrawals do not happen automatically.  
@@ -169,7 +165,8 @@ If you want to perform full withdrawal, don't forget to initiate [voluntary exit
 2. Click "write" and perform the send tx action on your wallet.
 3. Once the transaction is confirmed, you should see the GNO tokens being transferred to your withdrawal address.
 
-Don't use the full length address that you might see on Gnosischa.in, use the recipient address under "Withdrawal" tab.
+Don't use the full length address that you might see on Gnosischa.in, use the recipient address under "Withdrawal" tab.  
+The `withdrawal address` and the `recipient address` are the same thing.
 
 ![validator_recipient_address](../../../static/img/node/withdrawal/validator_recipient_address.png)
 

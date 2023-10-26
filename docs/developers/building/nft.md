@@ -161,7 +161,7 @@ contract gnosisNft is Ownable, ERC721("GnosisNft", "GNOT") {
 ```
 3. Now that you've got that all coded up, it's time to compile and deploy. You can also [see here](/developers/smart-contracts/hardhat) for more deployment info. Run from project root:
 ```bash
-npx hardhart compile
+npx hardhat compile
 ```
 This should compile without errors. Create a directory called scripts, and within it add a file called deploy.js. Add the following:
 ```javascript showLineNumbers

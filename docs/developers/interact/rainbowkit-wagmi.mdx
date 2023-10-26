@@ -218,7 +218,7 @@ function MyApp({ Component, pageProps }) {
 }
 ```
 
-We just wrapped out website "object" with the RainbowKit wrapper and let it know we want to support these "chains" (the chains we chose in "configureChains"). Then we wrapped this entire wrapping with the WagmiConfig wrapper and set it to the wagmiClient (that set the type of wallets we will support and the RPC providers). That's alot of wrapping but at the end, your _app.js file should look like this:
+We just wrapped out website "object" with the RainbowKit wrapper and let it know we want to support these "chains" (the chains we chose in "configureChains"). Then we wrapped this entire wrapping with the WagmiConfig wrapper and set it to the wagmiClient (that set the type of wallets we will support and the RPC providers). That's a lot of wrapping but at the end, your _app.js file should look like this:
 
 ```js showLineNumbers
 import "../styles/globals.css";
@@ -282,7 +282,7 @@ const { chains, provider } = configureChains(
   ]
 );
 ```
-For simplicity, we will add the chain directly under the imports. (Networks can be setup in a seperate file and imported in for a cleaner setup).
+For simplicity, we will add the chain directly under the imports. (Networks can be setup in a separate file and imported in for a cleaner setup).
 
 
 ```js showLineNumbers
@@ -394,4 +394,4 @@ export default MyApp;
 
 ```
 
-With this final setup, you will not be able to support Gnosis chain with Rainbow Kit + Wagmi
+With this final setup, you will now be able to support Gnosis chain with Rainbow Kit + Wagmi
