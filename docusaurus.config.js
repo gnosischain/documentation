@@ -79,7 +79,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Gnosis Logo',
-          src: 'img/logo.svg',
+          src: 'img/GnosisChainLogo.svg',
         },
         items: [
           {

@@ -9,7 +9,7 @@ keywords: [gnosis security, gnosis bounty, bug bounty program, gnosis immunefi]
 
 Bounties are an important tool for testing and enhancing application and contract security. We appreciate the skilled hackers and programmers within the community and believe in rewarding those working to protect and strengthen the ecosystem. Working in partnership with [Immunefi](https://immunefi.com/), we will be releasing additional bounties in the near future, and invite the community to help identify any possible exploits we may have missed.
 
-Security is the #1 priority of the Gnosis team. This bounty program is not being enacted in response to any know exploits, we are proactively implementing to ensure safety and soundness of our applications and protect users and their funds.
+Security is the #1 priority of the Gnosis team. This bounty program is not being enacted in response to any known exploits, we are proactively implementing to ensure safety and soundness of our applications and protect users and their funds.
 
 There are two ongoing bug bounty programs: [Bridges bug bounty](https://immunefi.com/bounty/gnosischain/) and [web/app bug bounty](https://immunefi.com/bounty/gnosischainwebapp/).
 
@@ -23,7 +23,7 @@ Assets in scopes includes Gnosis Chain documentation, forum, lock, RPC, beacon c
 
 Only the following assets in the table are considered. If an impact can be caused to any other asset managed by Gnosis that isn’t on this table but for which the impact is in the Impacts in Scope section below, you are encouraged to submit it for the consideration by the project. This only applies for Critical impacts.
 
-For specific assets, only specific thread level bug reports may be submitted.
+For specific assets, only specific threat level bug reports may be submitted.
 
 | Type                                                    | Target                             | Only High/Critical severity |
 | ------------------------------------------------------- | ---------------------------------- | --------------------------- |
@@ -41,7 +41,7 @@ For specific assets, only specific thread level bug reports may be submitted.
 | Websites and Applications - Beacon (Gnosis Chain)       | http://beacon.gnosischain.com      | 🆘 Critical                 |
 | Websites and Applications - Explorer (Bicocca)          | http://blockscout.bicoccachain.net | 🆘 Critical                 |
 
-### Reward by Thread Level
+### Reward by Threat Level
 
 Rewards are distributed according to the impact of the vulnerability based on the [Immunefi Vulnerability Severity Classification System v2.2.](https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-2/)
 

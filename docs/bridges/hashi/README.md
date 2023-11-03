@@ -57,7 +57,7 @@ By using domain=5 and blockNo a blockNumber that has been reported by the oracle
 | AMB                    | Gnosis Chain | [0x9f696CF3c1a0A418cBBFD6E1ab3EBe8A78971Dea](https://gnosisscan.io/address/0x9f696CF3c1a0A418cBBFD6E1ab3EBe8A78971Dea)       |
 | Telepathy Adapter      | Gnosis Chain | [0x2f1E51a2763FB67fe09971Fd8d849716137A3357](https://gnosisscan.io/address/0x2f1E51a2763FB67fe09971Fd8d849716137A3357)       |
 | Telepathy Light Client | Gnosis Chain | [0x34b5378DE786389a477b40dD710812c250185f83](https://gnosisscan.io/address/0x34b5378DE786389a477b40dD710812c250185f83)       |
-| Sygma Adapter          | Gnosis Chain | [0x9AD7a6f4FDA8247cC0bF5932B68c5b619937dB15](https://gnosisscan.io/address/0x9AD7a6f4FDA8247cC0bF5932B68c5b619937dB15)       |
+| Sygma Adapter          | Gnosis Chain | [0x018C003C20ee3a4C602064fff54960a79c4eEfe1](https://gnosisscan.io/address/0x018C003C20ee3a4C602064fff54960a79c4eEfe1)       |
 | Sygma                  | Gnosis Chain | [0xd2d95f7611c83b1f9041539557810033aC7B8742](https://gnosisscan.io/address/0xd2d95f7611c83b1f9041539557810033aC7B8742)       |
 | Dendreth Adapter       | Gnosis Chain | [0x719523EaF5CFd101Ef501C64597613FBB7aEdED9](https://gnosisscan.io/address/0x719523EaF5CFd101Ef501C64597613FBB7aEdED9)       |
 | Dendreh Light Client   | Gnosis Chain | [0xb676a5E81168a24496ad13dE79f2675c66684d23](https://gnosisscan.io/address/0xb676a5E81168a24496ad13dE79f2675c66684d23)       |
