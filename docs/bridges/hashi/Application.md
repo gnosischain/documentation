@@ -59,6 +59,8 @@ The addresses from this article are for Goerli <-> Gnosis Chain.
 | AMB Message Relay             | [0xb01faaf162732752b24646c7475c445cceceb8a1](https://goerli.etherscan.io/address/0xb01faaf162732752b24646c7475c445cceceb8a1) | Goerli |
 | AMB Adapter for Message Relay | [0xe30606a7C2C0Cca6ddE1785cDE999494F164bC4a ](https://gnosisscan.io/address/0xe30606a7C2C0Cca6ddE1785cDE999494F164bC4a#code) | GC     |
 | Yaru                          | [0xb935Ce12B701d62caB5dE4a58f5A59559b50b3A2](https://gnosisscan.io/address/0xb935Ce12B701d62caB5dE4a58f5A59559b50b3A2#code)  | GC     |
+| Sygma Messsage Relay          | [0xe9D28584a9150d7206e32111e2efa137187A76eF](https://goerli.etherscan.io/address/0xe9D28584a9150d7206e32111e2efa137187A76eF) | Goerli |
+| Sygma Adapter                 | [0x2829D554678a767c5B091D28A0A294dB7643ec05](https://gnosisscan.io/address/0x2829D554678a767c5B091D28A0A294dB7643ec05)       | GC     |
 
 ### Workflow
 
@@ -74,7 +76,7 @@ The addresses from this article are for Goerli <-> Gnosis Chain.
 
 | Contract                      | Address                                                                                                                             | Chain  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Yaho                          | [0x75fF4Bad26345a5b15CCae256900640373EBA601](https://gnosisscan.io/address/0x75fF4Bad26345a5b15CCae256900640373EBA601)                                            | GC     |
+| Yaho                          | [0x75fF4Bad26345a5b15CCae256900640373EBA601](https://gnosisscan.io/address/0x75fF4Bad26345a5b15CCae256900640373EBA601)              | GC     |
 | AMB Message Relay             | [0x4A25E5374D8df553A1f2ebB628635F826379E4e9](https://gnosisscan.io/address/0x4A25E5374D8df553A1f2ebB628635F826379E4e9#readContract) | GC     |
 | AMB Helper                    | [0xc7118ecF785871F08Feff5DE07d5F884b6199477](https://gnosisscan.io/address/0xc7118ecF785871F08Feff5DE07d5F884b6199477#readContract) | GC     |
 | AMB Adapter for Message Relay | [0xE46610b72d0782029C5654C9224D99264D4B8fa0](https://goerli.etherscan.io/address/0xe46610b72d0782029c5654c9224d99264d4b8fa0)        | Goerli |
