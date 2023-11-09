@@ -60,9 +60,8 @@ abuse
 
 ## Lending
 
-* [Aave](https://agave.finance): A decentralized non-custodial liquidity protocol where users can participate as depositors or borrowers.
-* [Agave](https://aave.com): A decentralized, non-custodial money market and lending protocol on Gnosis Chain
-
+* [Aave](https://aave.com): A decentralized non-custodial liquidity protocol where users can participate as depositors or borrowers.    
+* [Agave](https://agave.finance): A decentralized, non-custodial money market and lending protocol on Gnosis Chain    
 * [SparkLend](https://spark.fi): The DAI centric money market protocol. Offering predictable rates for borrowing DAI, combining the best liquidity directly from Maker and vertically integrating with the best DeFi protocols.
 
 
