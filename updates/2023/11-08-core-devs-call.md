@@ -1,10 +1,12 @@
 ---
-title: Core Devs Call - 2023/11/0
+title: Core Devs Call - 2023/11/08
 authors: [dapplion, armaganercan]
 tags: [CoreDevsCall, gnosis]
 ---
 
 Gnosis Core Devs Call Notes
+
+![Frame 4490](https://github.com/gnosischain/documentation-1/assets/75987728/ad8f650d-ca71-404f-a75e-2796889f40b2)
 
 Welcome to the Gnosis Core Devs weekly gathering. Every Wednesday, key members from the Gnosis team, contributors, and various team representatives convene to discuss, collaborate, and update one another on the Gnosis ecosystem's progression.
 
@@ -14,7 +16,7 @@ Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis Comms
 
 With a diverse set of voices present, our discussions are rich, multifaceted, and aim to foster innovation within the community.
 
-Missed the meeting? [Catch the full recording on YouTube](https://youtu.be/gcpeO4PxILw).
+Missed the meeting? [Catch the full recording on YouTube](https://youtu.be/fnCG-nxt5Pw).
 
 November 08, 2023
 
@@ -56,31 +58,7 @@ November 08, 2023
   * New devnet today
     * Lion will review the config (mostly CL)
 
-
 # Dencun
  
 * Finalized all configuration variables
   * https://github.com/gnosischain/configs/pull/18
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
