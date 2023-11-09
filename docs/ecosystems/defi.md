@@ -1,7 +1,7 @@
 ---
 title: DeFi
 description: Decentralized Finance DApps on Gnosis Chain
-keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance, Swapr, Xion Finance, UniCrypt Network, pNetwork, Deus Finance DAO, Mixsome, Agave, Hedgey, DeBank, CLV, DxSale, Rubic, Fraction, Minerva, Curve, UniDex, Cowswap, CryptEx Locker, Tornado Cash, Elk Finance, Synapse Network, apy vision, DeHive, DeFi Watch, DeFi Yield, Carrot, Autofarm Network, OpenOcean, Li Finance] 
+keywords: [DeFi, DApps, Honeyswap, 1Hive, Perpetual Protocol, sushi, bao.finance, Swapr, Xion Finance, UniCrypt Network, pNetwork, Deus Finance DAO, Mixsome, Agave, Hedgey, DeBank, CLV, DxSale, Rubic, Fraction, Minerva, Curve, UniDex, Cowswap, CryptEx Locker, Tornado Cash, Elk Finance, Synapse Network, apy vision, DeHive, DeFi Watch, DeFi Yield, Carrot, Autofarm Network, OpenOcean, Li Finance, Aave, Spark, SparkLend] 
 ---
 
 # DeFi DApps
@@ -60,7 +60,10 @@ abuse
 
 ## Lending
 
-* [Agave](https://agave.finance): A decentralized, non-custodial money market and lending protocol on Gnosis Chain
+* [Aave](https://aave.com): A decentralized non-custodial liquidity protocol where users can participate as depositors or borrowers.    
+* [Agave](https://agave.finance): A decentralized, non-custodial money market and lending protocol on Gnosis Chain    
+* [SparkLend](https://spark.fi): The DAI centric money market protocol. Offering predictable rates for borrowing DAI, combining the best liquidity directly from Maker and vertically integrating with the best DeFi protocols.
+
 
 ## Yield Farming
 
@@ -87,3 +90,5 @@ abuse
 * [Fraction](https://fraction.fyi/): A streamable xDai-Token with a total supply of 1
 
 * [Dx](https://dx.app): Mint and launch your tokens with no coding required in minutes across 16 blockchain networks
+
+* [savings xDAI](https://agave.finance/sdai/): Yield bearing stablecoin that redistributes Maker protocol's revenue to xDAI holders.
