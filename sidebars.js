@@ -183,6 +183,7 @@ const sidebars = {
       items: [
         "developers/account-abstraction/safe",
         "developers/account-abstraction/gelato",
+        "developers/account-abstraction/particle-network",
       ],
     },
     {

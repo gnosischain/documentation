@@ -1,10 +1,11 @@
 ---
 description: List of JSON RPC endpoints and providers to connect your dapp to Gnosis or Chiado
-keywords: [rpc, node, rpc node, json rpc, infrastructure, rpc provider, rpc endpoint]
+keywords:
+  [rpc, node, rpc node, json rpc, infrastructure, rpc provider, rpc endpoint]
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # RPC Providers
 
@@ -73,7 +74,7 @@ wss://rpc.chiadochain.net/wss
 
 ## Nodies DLB
 
-Nodies DLB (https://nodies.app) offers free public endpoints for Gnosis Mainnet and Chiado (available on request), in addition to Pay-As-You-Go and enterprise plans that cater to the individual needs of developers.
+[Nodies DLB](https://nodies.app) offers free public endpoints for Gnosis Mainnet and Chiado (available on request), in addition to Pay-As-You-Go and enterprise plans that cater to the individual needs of developers.
 
 - [Docs](https://docs.nodies.app/)
 
@@ -85,9 +86,22 @@ https://lb.nodies.app/v1/406d8dcc043f4cb3959ed7d6673d311a
 
 - [Ankr's Docs for Gnosis RPCs](https://www.ankr.com/protocol/public/gnosis/)
 
+<Tabs>
+<TabItem label="Mainnet" value="Mainnet">
+
 ```
 https://rpc.ankr.com/gnosis
 ```
+
+</TabItem>
+<TabItem label="Chiado" value="Chiado">
+
+```
+https://rpc.ankr.com/gnosis_testnet
+```
+
+</TabItem>
+</Tabs>
 
 ## Chainnodes
 
@@ -104,24 +118,16 @@ Free API keys after signing up.
 
 - [Quicknode's Docs for Gnosis RPCs](https://www.quicknode.com/docs/gnosis)
 
-```
-TBD
-```
-
 ## Chainstack
 
 - [Chainstack's Docs for Gnosis RPCs](https://chainstack.com/build-better-with-gnosis-chain/)
 
-```
-TBD
-```
-
 ## POKT
 
-- [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/use/public-rpc/gnosis-chain/)
+- [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/supported-blockchains/)
 
 ```
-https://gnosischain-rpc.gateway.pokt.network
+https://gnosis-pokt.nodies.app
 ```
 
 ## Blast
@@ -138,15 +144,14 @@ wss://gnosis-mainnet.public.blastapi.io
 
 ## GetBlock
 
-- [GetBlock](https://getblock.io/)
 - [GetBlock's Docs for Gnosis Chain RPCs](https://getblock.io/nodes/gno/)
 
 ```shell
 # HTTP RPC
-https://gno.getblock.io/api_key/mainnet/
+https://go.getblock.io/<ACCESS_TOKEN>
 
 # WSS RPC
-wss://gno.getblock.io/api_key/mainnet/
+wss://go.getblock.io/<ACCESS_TOKEN>
 ```
 
 ## BlockPI Network
@@ -154,29 +159,8 @@ wss://gno.getblock.io/api_key/mainnet/
 - [BlockPI's Docs for Gnosis RPCs](https://docs.blockpi.io/documentations/api-reference/gnosis)
 
 ```
-https://gnosis.blockpi.network/v1/rpc/public
+https://gnosis.blockpi.network/v1/rpc/<API_KEY>
 ```
-
-## BlockSpaces Free Gnosis RPC Endpoints
-
-- [BlockSpaces Free RPC Endpoints](https://www.blockspaces.com/web3-infrastructure)
-
-<Tabs>
-<TabItem label="Mainnet" value="Mainnet">
-
-```
-https://web3endpoints.com/gnosischain-mainnet
-```
-
-</TabItem>
-<TabItem label="Archival" value="Archival">
-
-```
-https://web3endpoints.com/gnosischain-archival
-```
-
-</TabItem>
-</Tabs>
 
 ## Chain49
 
@@ -189,10 +173,10 @@ Archive data for Mainnet and Chiado Testnet is available for paid subscriptions.
 
 ```shell
 # Gnosis Mainnet RPC
-https://rpc.chain49.com/gnosis/API_KEY
+https://rpc.chain49.com/gnosis/<API_KEY>
 
 # Gnosis Chiado Testnet RPC
-https://rpc.chain49.com/gnosis-chiado/API_KEY
+https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 
 ## OnFinality
