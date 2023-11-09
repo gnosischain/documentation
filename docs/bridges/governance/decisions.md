@@ -8,6 +8,14 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Remove OLAS token fee from ETH-GC Omnibridge
+
+🗳 Justification: As requested from Autonolas team, we [removed OLAS token fee](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x4efc19db4b29b2812b17e74cf4f8c91eef02a68a966a64617810c74589f5ab8b) on ETH↔GC Omnibridge, from previously 0.01% to 0.  
+OLAS on Ethereum: https://etherscan.io/address/0x0001a500a6b18995b03f44bb040a5ffc28e45cb0  
+Bridged OLAS token on Gnosis: https://gnosisscan.io/address/0xce11e14225575945b8e6dc0d4f2dd4c570f79d9f
+
+✅ Implemented: Nov 9, 2023
+
 ## Savings xDAI launch - Initiate sDAI interest bridging and increase xDAI bridge limits.
 
 🗳 Justification: This is a follow-up on the previous proposal. After the successful upgrade of the xDAI bridge to deploy reserves on the sDAI vault, we launched the Savings xDAI vault on Gnosis chain which will distribute the interest earned on mainnet to holders of the sDAI token on Gnosis chain. We [set interest receiver](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x933bd8409a8f46789ee29d50af1c10ed40378e05705681c8530aa744eb322ac5) to the interest receiver contract on Gnosis Chain.
