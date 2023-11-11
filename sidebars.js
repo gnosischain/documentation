@@ -755,6 +755,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "bridges/hashi/README",
+        "bridges/hashi/Deployment",
         "bridges/hashi/Application",
         "bridges/hashi/Tutorial",
       ],
