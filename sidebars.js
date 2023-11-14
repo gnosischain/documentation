@@ -592,6 +592,7 @@ const sidebars = {
       collapsed: true,
       items: [
         "tools/analytics/the-graph",
+        "tools/analytics/envio",
         {
           type: "link",
           label: "GnosisMetrics",
@@ -601,11 +602,6 @@ const sidebars = {
           type: "link",
           label: "Dune",
           href: "https://dune.com/home",
-        },
-        {
-          type: "link",
-          label: "Envio",
-          href: "https://envio.dev",
         },
         {
           type: "link",
