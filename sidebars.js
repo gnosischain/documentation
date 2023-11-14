@@ -604,6 +604,11 @@ const sidebars = {
         },
         {
           type: "link",
+          label: "Envio",
+          href: "https://envio.dev",
+        },
+        {
+          type: "link",
           label: "Goldsky",
           href: "https://docs.goldsky.com/indexing",
         },
