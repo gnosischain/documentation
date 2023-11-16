@@ -19,7 +19,7 @@
 
 4. Where can I stake my GNO?
 
-   Currently you can stake your GNO on [Stakewise.io] (https://stakewise.io/). Please note that your wallet must be directed at the Gnosis Chain network with your GNO tokens already bridged to Gnosis.
+   Currently, you can stake your GNO on [Stakewise.io] (https://stakewise.io/). Please note that your wallet must be directed at the Gnosis Chain network with your GNO tokens already bridged to Gnosis.
 
 5. What is sGNO?
 
@@ -67,7 +67,7 @@
 14. I recently transferred an ERC-1155 into a safe. I realized after the fact that gnosis does not support 1155s. Is there a way that I’m able to transfer it back out?
 
     You have to use “contract interaction” on the safe when you click on “New Transaction”
-    On the pop up, you will you put in the contract address of the ERC-1155 token - (It may or may not automatically pull in the ABI so you may have to copy that from the contract details via gnosis scan)
+    On the pop up, you will put in the contract address of the ERC-1155 token - (It may or may not automatically pull in the ABI so you may have to copy that from the contract details via gnosis scan)
 
     Once, the contract address and abi is input into the prompt… there should be a drop down of which functions are available to you. You want to drop down to “safeTransferFrom”
 
@@ -112,9 +112,9 @@
     All dApps on Gnosis Ecosystem can be found here:
     https://docs.gnosischain.com/ecosystems/
 
-22. Is it possible run a Node and qualify for future rewards ?
+22. Is it possible run a Node and qualify for future rewards?
 
-    Yes, you can run a Node and qualify for rewards. For all the information you need in terms of runnnig a node, please visit https://docs.gnosischain.com/node/.
+    Yes, you can run a Node and qualify for rewards. For all the information you need in terms of running a node, please visit https://docs.gnosischain.com/node/.
 
 23. I’m totally new to this project and I’m trying to feel myself around. Where should I start learning?
 
@@ -152,7 +152,7 @@
 
 5. How did the merge impact my GBC node?
 
-   The Ethereum Mainnet merged with the beacon chain proof-of-stake system. This marked the end of proof-of-work for Ethereum, and the full transition to proof-of-stake. The Gnosis Beacon Chain (GBC) serves in a frontrunning capacity to important Ethereum consensus-layer updates.
+   The Ethereum Mainnet merged with the beacon chain proof-of-stake system. This marked the end of proof-of-work for Ethereum, and the full transition to proof-of-stake. The Gnosis Beacon Chain (GBC) serves in a frontrunning capacity for important Ethereum consensus-layer updates.
 
 6. My nethermind xdai is lagging, it never seems to catch up to 100%. It fluctuates between 97-99.5% synced. I’m using nethermind xdai execution client, lighthouse gnosis consensus client and the web3 gnosis signer.
 
@@ -166,7 +166,7 @@
    Solution from discord user @pyk:
    https://discord.com/channels/502416149343109121/920642136272166972/1055445460023783525
 
-   This happen on my end due to one beacon node cannot handle all validators request (hence some validators miss their attestations while others dont) and sometimes beacon node lose all its peers.
+   This happens on my end due to one beacon node cannot handle all validators request (hence some validators miss their attestations while others dont) and sometimes beacon node lose all its peers.
 
    My solution is to run a few beacon nodes (lodestar) connected to one execution node (nethermind), so I have backup when one beacon node disconnected from their peers.
 
@@ -246,13 +246,13 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 2. What are withdrawals?
 
-   Validator withdrawal allows a validator’s account balance get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator’s withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
+   Validator withdrawal allows a validator’s account balance to get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator’s withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
 
 3. What are two types of withdrawals?
 
    There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.
-   Partial Withdrawal: Any balance in excess of 1 GNO from the account balance get withdrawn back to withdrawal address.
-   Full Withdrawal: All the balance from validator’s account get withdrawn back to withdrawal address. This has to be initiated by validator, signing `voluntary_exit` message and broadcasting it to the network. It is irreversible.
+   Partial Withdrawal: Any balance in excess of 1 GNO from the account balance gets withdrawn back to withdrawal address.
+   Full Withdrawal: All the balance from validator’s account gets withdrawn back to withdrawal address. This has to be initiated by validator, signing `voluntary_exit` message and broadcasting it to the network. It is irreversible.
 
 4. What are 0x00 and 0x01 withdrawal credentials prefixes?
 
@@ -296,9 +296,9 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
     Unfortunately, there is nothing that can be done if the withdrawal address is lost. Please ensure this address is properly backed up and securely stored.
 
-14. What happens to my GNO if I make a full withdrawal but I forgot to set the withdrawal credential to 0x01?
+14. What happens to my GNO if I make a full withdrawal but I forget to set the withdrawal credential to 0x01?
 
-    Nothing. Your validator will exit, and will no longer be assigned duties, neither able to earn nor lose any more additional GNO. You may still migrate your withdrawal credentials from 0x00 to 0x01. Once this is done, the validator’s balance will be withdrawn into the address you specify.
+    Nothing. Your validator will exit, and will no longer be assigned duties, neither able to earn nor lose any more additional GNO. You may still migrate your withdrawal credentials from 0x00 to 0x01. Once this is done, the validator’s balance will be withdrawn to the address you specify.
 
 15. Can I cancel a withdrawal request that is in the queue?
 
@@ -340,7 +340,7 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 8. I’m trying to bridge agEUR from Gnosis Chain to another chain using the Angle Bridge but I’m getting an error “internal JSON-RPC error”
 
-   Be sure to have enough xDAI for gas and fees, to use the Angle Bridge you should have at least 1,5 xDAI on your wallet. More information in Angle Protocol docs : https://docs.angle.money/overview/guides/bridge
+   Be sure to have enough xDAI for gas and fees, to use the Angle Bridge you should have at least 1,5 xDAI in your wallet. More information in Angle Protocol docs : https://docs.angle.money/overview/guides/bridge
 
 9. I’m having issues using Omni bridge to bridge assets held in a SAFE between Ethereum and Gnosis Chain, I get a “failure to connect” ERROR.
 
