@@ -350,7 +350,7 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 1. What is the hard fork and do I need to do anything?
 
-   Hard forks (HF) are used to introduce new functionality or fix security related issues. The community has voiced their support for an HF to upgrade the Permittable Token contract functionality for bridged tokens. This update is designed to prevent future reentrancy attacks such as the ones suffered by Agave and Hundred Finance and their users on 15 March, 2022.
+   Hard forks (HF) are used to introduce new functionality or fix security related issues. The community has voiced their support for a HF to upgrade the Permittable Token contract functionality for bridged tokens. This update is designed to prevent future reentrancy attacks such as the ones suffered by Agave and Hundred Finance and their users on 15 March, 2022.
 
    For additional context, details and discussion see GIP-31: Should Gnosis Chain perform a Hardfork to upgrade the token contract vulnerable to the reentrancy attack?
 
