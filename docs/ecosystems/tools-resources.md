@@ -14,6 +14,8 @@ keywords: [Gnosis, Chain, Crypto, Ethereum, OmniBridge, xDai Bridge, HopProtocol
 
 * [DEX Screener](https://dexscreener.com/xdai): Tracking and charting your favorite DEX in realtime
 
+* [Envio](https://envio.dev): Feature-rich indexing solution for fast and flexible access to real-time and historical data for any EVM.
+
 * [Zapper](https://zapper.fi/): Zapper is your home to Web3. Track your wallets. Follow other wallets. Discover NFTs, DAOs, DeFi...
 
 ## Bridges
