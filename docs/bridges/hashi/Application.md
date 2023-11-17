@@ -55,12 +55,10 @@ The addresses from this article are for Goerli <-> Gnosis Chain.
 
 | Contract                      | Address                                                                                                                      | Chain  |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Yaho                          | [0x2fcbfd5bef7c94b77cf920fcc5e76d908a52bccc](https://goerli.etherscan.io/address/0x2fcbfd5bef7c94b77cf920fcc5e76d908a52bccc) | Goerli |
-| AMB Message Relay             | [0xb01faaf162732752b24646c7475c445cceceb8a1](https://goerli.etherscan.io/address/0xb01faaf162732752b24646c7475c445cceceb8a1) | Goerli |
-| AMB Adapter for Message Relay | [0xe30606a7C2C0Cca6ddE1785cDE999494F164bC4a ](https://gnosisscan.io/address/0xe30606a7C2C0Cca6ddE1785cDE999494F164bC4a#code) | GC     |
-| Yaru                          | [0xb935Ce12B701d62caB5dE4a58f5A59559b50b3A2](https://gnosisscan.io/address/0xb935Ce12B701d62caB5dE4a58f5A59559b50b3A2#code)  | GC     |
-| Sygma Messsage Relay          | [0xe9D28584a9150d7206e32111e2efa137187A76eF](https://goerli.etherscan.io/address/0xe9D28584a9150d7206e32111e2efa137187A76eF) | Goerli |
-| Sygma Adapter                 | [0x2829D554678a767c5B091D28A0A294dB7643ec05](https://gnosisscan.io/address/0x2829D554678a767c5B091D28A0A294dB7643ec05)       | GC     |
+| Yaho                          | [0xC1289f49A1972E2C359a0647707a74E24ce73F8b](https://goerli.etherscan.io/address/0xC1289f49A1972E2C359a0647707a74E24ce73F8b) | Goerli |
+| AMB Message Relay             | [0x2433c921152B3dE133F96762a9b359D02dB34c93](https://goerli.etherscan.io/address/0x2433c921152B3dE133F96762a9b359D02dB34c93) | Goerli |
+| AMB Adapter for Message Relay | [0xbA5B3f0643582E75AF252e7631dE62c046970167 ](https://gnosisscan.io/address/0xbA5B3f0643582E75AF252e7631dE62c046970167#code) | GC     |
+| Yaru                          | [0x171C1161bCde7adB32a9Ca92c412d39bE6F97C59](https://gnosisscan.io/address/0x171C1161bCde7adB32a9Ca92c412d39bE6F97C59#code)  | GC     |
 
 ### Workflow
 
@@ -76,11 +74,11 @@ The addresses from this article are for Goerli <-> Gnosis Chain.
 
 | Contract                      | Address                                                                                                                             | Chain  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Yaho                          | [0x75fF4Bad26345a5b15CCae256900640373EBA601](https://gnosisscan.io/address/0x75fF4Bad26345a5b15CCae256900640373EBA601)              | GC     |
-| AMB Message Relay             | [0x4A25E5374D8df553A1f2ebB628635F826379E4e9](https://gnosisscan.io/address/0x4A25E5374D8df553A1f2ebB628635F826379E4e9#readContract) | GC     |
+| Yaho                          | [0x619360550f337bdA5A3A4709fEff2140c9577593](https://gnosisscan.io/address/0x619360550f337bdA5A3A4709fEff2140c9577593)              | GC     |
+| AMB Message Relay             | [0x6796E267aa898464417BcD4D81690242bD39D68e](https://gnosisscan.io/address/0x6796E267aa898464417BcD4D81690242bD39D68e#readContract) | GC     |
 | AMB Helper                    | [0xc7118ecF785871F08Feff5DE07d5F884b6199477](https://gnosisscan.io/address/0xc7118ecF785871F08Feff5DE07d5F884b6199477#readContract) | GC     |
-| AMB Adapter for Message Relay | [0xE46610b72d0782029C5654C9224D99264D4B8fa0](https://goerli.etherscan.io/address/0xe46610b72d0782029c5654c9224d99264d4b8fa0)        | Goerli |
-| Yaru                          | [0x15d5678FF44883444264f7947c1c5C31d07b4482](https://goerli.etherscan.io/address/0x15d5678FF44883444264f7947c1c5C31d07b4482)        | Goerli |
+| AMB Adapter for Message Relay | [0xBB448c841b1Ce6636aa804Bf97B1eBf9DF940f08](https://goerli.etherscan.io/address/0xBB448c841b1Ce6636aa804Bf97B1eBf9DF940f08)        | Goerli |
+| Yaru                          | [0x6Cdfa83b5b3e4eBc603fF12B8aAD893f7d7231d8](https://goerli.etherscan.io/address/0x6Cdfa83b5b3e4eBc603fF12B8aAD893f7d7231d8)        | Goerli |
 | Hashi                         | [0x6a948572432818DeBbb04A0b82b6c12ec5Ca15B5](https://goerli.etherscan.io/address/0x6a948572432818DeBbb04A0b82b6c12ec5Ca15B5)        | Goerli |
 
 ### Workflow
