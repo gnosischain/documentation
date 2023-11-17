@@ -592,6 +592,7 @@ const sidebars = {
       collapsed: true,
       items: [
         "tools/analytics/the-graph",
+        "tools/analytics/moralis",
         "tools/analytics/envio",
         {
           type: "link",
