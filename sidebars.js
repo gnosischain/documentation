@@ -592,6 +592,7 @@ const sidebars = {
       collapsed: true,
       items: [
         "tools/analytics/the-graph",
+        "tools/analytics/envio",
         {
           type: "link",
           label: "GnosisMetrics",
