@@ -43,7 +43,7 @@ In order to use the Moralis APIs you need a Moralis account and a Moralis API ke
 
 You can now call any Moralis endpoint, see below for an example.
 
-### Get NFT balances of Wallet**
+### Get NFT balances of Wallet
 
 **Request**
 
