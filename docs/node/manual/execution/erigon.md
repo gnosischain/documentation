@@ -47,7 +47,7 @@ services:
     image: thorax/erigon:devel
     restart: unless-stopped
     volumes:
-      - /home/$USER/gnosis/execution:/home/erigon/.local/share/erigon
+      - /home/$USER/gnosis/execution:/home/erigon/data
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt:ro
     networks:
       - gnosis_net
@@ -79,7 +79,6 @@ services:
       --prune=htcr
       --torrent.download.rate=16mb
       --torrent.upload.rate=16mb
-      --externalcl
     user: 1000:1000
 
 networks:
