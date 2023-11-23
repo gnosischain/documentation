@@ -47,7 +47,7 @@ services:
     image: thorax/erigon:devel
     restart: unless-stopped
     volumes:
-      - /home/$USER/gnosis/execution:/home/erigon/data
+      - /home/$USER/gnosis/execution:/home/erigon/.local/share/erigon
       - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt:ro
     networks:
       - gnosis_net
