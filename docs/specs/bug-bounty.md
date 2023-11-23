@@ -11,7 +11,7 @@ Bounties are an important tool for testing and enhancing application and contrac
 
 Security is the #1 priority of the Gnosis team. This bounty program is not being enacted in response to any known exploits, we are proactively implementing to ensure safety and soundness of our applications and protect users and their funds.
 
-There are two ongoing bug bounty programs: [Bridges bug bounty](https://immunefi.com/bounty/gnosischain/).
+There is one ongoing bug bounty program: [Bridges bug bounty](https://immunefi.com/bounty/gnosischain/).
 
 Each bug bounty program requires different assets in scope and both offer rewards determined by thread level.
 
