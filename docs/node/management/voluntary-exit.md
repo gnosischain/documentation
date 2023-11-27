@@ -10,7 +10,15 @@ Voluntary exit procedures vary depending on your client.
 
 :::caution
 Exits are non-reversible; once you have exited you cannot restart your validator.
+
+You must have a `0x01` type withdrawal address before exiting your validator [withdrawal credentials](withdrawals.md#check-withdrawal-credential). 
 :::
+
+### Dappnode
+
+Navigate to the Stakers > Gnosis Chain menu, click on the "Upload Keystores" button on the Web3Signer card. Once you are in the Web3Signer UI, select the validators you want to exit and click on the "Exit Validator" button on the top right part of the UI. Follow the instructions and type `I want to exit`, followed then click the "Exit" button. 
+
+- For more info, see the [Dappnode Docs](https://docs.dappnode.io/docs/user/staking/gnosis-chain/solo#1-exit-the-validator-from-the-dappnode-ui).
 
 ### Lighthouse
 
