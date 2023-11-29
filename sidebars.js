@@ -117,7 +117,6 @@ const sidebars = {
         "specs/security-audit",
       ],
     },
-    ["about/faq/FAQ"],
   ],
 
   ecosystems: [
@@ -222,7 +221,7 @@ const sidebars = {
       label: "Overview",
       link: { type: "doc", id: "node/README" },
       collapsed: false,
-      items: ["node/architecture", "node/rewards-penalties", "node/faq"],
+      items: ["node/architecture", "node/rewards-penalties"],
     },
     {
       type: "category",
@@ -748,7 +747,6 @@ const sidebars = {
         "bridges/third-party",
         "bridges/audits",
         "bridges/roadmap",
-        "bridges/faq",
       ],
     },
     {
@@ -783,6 +781,28 @@ const sidebars = {
       },
       collapsed: false,
       items: bridgeTutorials,
+    },
+  ],
+  faq: [
+    {
+      type: "doc",
+      label: "Node & Validator",
+      id: "faq/node",
+    },
+    {
+      type: "doc",
+      label: "Developers",
+      id: "faq/developers",
+    },
+    {
+      type: "doc",
+      label: "Bridges",
+      id: "faq/bridges",
+    },
+    {
+      type: "doc",
+      label: "Others",
+      id: "faq/others",
     },
   ],
 };
