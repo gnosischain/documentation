@@ -10,6 +10,8 @@ title: Running Nodes
 ** :bulb: This document is continuously being improved.** 
 :::
 
+# Running Nodes
+
 1. **I think my HOPR version dappnode is completely broken down. I would like to exit the Gnosis staking and withdraw the GNOs. How can I do that without accessing my dappnode node?**
 
     It's usually very complicated to generate an exit message with an offline validator but if you want to do this, ask us for help on the Discord and we will look what can be done.
