@@ -785,9 +785,18 @@ const sidebars = {
   ],
   faq: [
     {
-      type: "doc",
+      type: "category",
       label: "Node & Validator",
-      id: "faq/node",
+      collapsed: false,
+      items: [
+        "faq/node/generalQuestions",
+        "faq/node/monitoring",
+        "faq/node/depositWithdrawalReward",
+        "faq/node/runningNode",
+        "faq/node/staking",
+        "faq/node/changingwc",
+        "faq/node/offlineAndSyncIssue",
+      ],
     },
     {
       type: "doc",
