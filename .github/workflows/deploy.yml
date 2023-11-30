@@ -8,10 +8,18 @@ on:
   push:
     branches:
       - main
+      - dev
       - release
   # Launches build when release is published
   release:
     types: [published]
+
+  # PRs created by external parties
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - 'dev'
 
 jobs:
   deploy:
@@ -69,20 +77,35 @@ jobs:
           GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
         run: yarn build
 
-      - name: Configure AWS credentials
+      - name: Configure AWS Development credentials
         uses: aws-actions/configure-aws-credentials@v1
-        if: ( github.ref == 'refs/heads/release' || github.ref == 'refs/heads/main' )
+        if: ( github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main' )
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          aws-access-key-id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.DEV_AWS_DEFAULT_REGION }}
+
+      - name: Configure AWS Production credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        if: ( github.ref == 'refs/heads/release' )
+        with:
+          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.PROD_AWS_DEFAULT_REGION }}
+
+      # Script to deploy to development environment
+      - name: 'Deploy to S3: Development'
+        if: github.ref == 'refs/heads/dev'
+        run: |
+          aws s3 sync build/ s3://${{ secrets.DEV_BUCKET_NAME }}/dev --exclude "*.html" --cache-control max-age=0,no-cache,no-store,public
+          aws s3 sync build/ s3://${{ secrets.DEV_BUCKET_NAME }}/dev --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
 
       # Script to deploy to staging environment
       - name: 'Deploy to S3: Staging'
         if: github.ref == 'refs/heads/main'
         run: |
-          aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/staging/current --exclude "*.html" --cache-control max-age=0,no-cache,no-store,public
-          aws s3 sync build/ s3://${{ secrets.BUCKET_NAME }}/staging/current --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+          aws s3 sync build/ s3://${{ secrets.DEV_BUCKET_NAME }}/staging --exclude "*.html" --cache-control max-age=0,no-cache,no-store,public
+          aws s3 sync build/ s3://${{ secrets.DEV_BUCKET_NAME }}/staging --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
 
       # Script to deploy to release environment
       - name: 'Deploy to S3: Release'
