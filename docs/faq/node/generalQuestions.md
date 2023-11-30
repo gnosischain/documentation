@@ -2,7 +2,7 @@
 title: General Questions
 ---
 
-<img width="1200" alt="Twitter Announcement@2x" src="https://github.com/gnosischain/documentation/assets/75987728/2070489a-f71f-48f5-927c-2f2b504b6256">
+<img width="1200" alt="Twitter Announcement@2x" src="https://github.com/gnosischain/documentation/assets/75987728/2070489a-f71f-48f5-927c-2f2b504b6256"/>
 
 :::info
 **Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosischain) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
