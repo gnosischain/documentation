@@ -23,6 +23,8 @@ title: General Questions
 
 3. **When is this Gnosis Execution Layer <-> Gnosis Beacon Chain merge scheduled for?**
 
+   The merge happened in December 2022.
+
 4. **What is a validator?**
    Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
 
