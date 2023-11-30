@@ -18,7 +18,7 @@ title: Monitoring and Alerts
     
 2. **I am getting INFO - Beacon chain is in activity leak on Teku. Why?**
 
-    Could be related to the system clock being delayed. Open a terminal then enter ssh dappnode@[your Dappnode's IP] in your terminal then use <su> then try sudo apt update && sudo apt install ntp. As this is more complex, don't hesitate to ask on our Discord for help if needed.
+    Could be related to the system clock being delayed. Open a terminal then enter ssh dappnode@[your Dappnode's IP] in your terminal then use `su` then try `sudo apt update && sudo apt install ntp`. As this is more complex, don't hesitate to ask on our Discord for help if needed.
     
 3. **Anyone has an automated alert for their validators?**
     
