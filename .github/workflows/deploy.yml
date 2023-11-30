@@ -14,6 +14,13 @@ on:
   release:
     types: [published]
 
+  # PRs created by external parties
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - 'dev'
+
 jobs:
   deploy:
     name: Deployment
