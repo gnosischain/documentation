@@ -22,12 +22,15 @@ title: General Questions
     [Cryptio](https://cryptio.co/) is available for German users. 
 
 3. **When is this Gnosis Execution Layer <-> Gnosis Beacon Chain merge scheduled for?**
-The merge happened in December 2022. 
 
 4. **What is a validator?**
    Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
 
-5. **What is Shapella?**
+5. **What is a validator?**
+
+   Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
+
+6. **What is Shapella?**
 
    Shapella refers to the combination of both Shanghai and Capella. Shanghai enables GNO staking withdrawals for Gnosis Chain, unlike the previous model that doesn’t allow for staked GNO to be withdrawn. Shanghai is the name given to the execution layer (EL) upgrade, while Capella is the name of the coinciding consensus layer (CL) upgrade.
 
