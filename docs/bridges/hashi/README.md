@@ -6,12 +6,18 @@ keywords: [hashi, oracle aggregator]
 
 # What is Hashi
 
+:::info
+Check out the latest update for Hashi in [Hashi docs](https://hashi-doc.gitbook.io/hashi/v0.1/deployment)!
+:::
+
 Hashi is an EVM Hash Oracle Aggregator, designed to facilitate [a principled approach to cross-chain bridge security.](https://ethresear.ch/t/hashi-a-principled-approach-to-bridges/14725)
 
 The primary insight being that the vast majority of bridge-related security incidents could have had minimal impact if the systems relying on them had built in some redundancy. In other words, it's much more secure to require messages be validated by multiple independent mechanisms, rather than by just one.
 
 Hashi aims to create “additive security” to cross-chain messages by aggregating block headers from different sources. A block header will be considered valid only when a number of block sources (oracles) above a certain threshold report the same result.
 Hashi is the first step towards a principled approached to bridges and will play a key role in the Gnosis Chain interoperability roadmap.
+
+Apart from block header, Hashi also provides arbitrary message relaying option. Check out [Message Dispatching with Yaho and Yaru](Application.md#message-dispatching-using-yaho-and-yaru) for more details.
 
 ## Oracles
 

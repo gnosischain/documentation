@@ -17,6 +17,9 @@ This integration is facilitated by:
 - [Particle Network Wallet-as-a-Service](https://particle.network)
 - [Particle Network AA SDK](https://docs.particle.network/developers/account-abstraction/web)
 - [Particle Network Bundler](https://github.com/Particle-Network/particle-bundler-server)
+- [Particle Network Paymaster](https://docs.particle.network/developers/account-abstraction/paymaster)
+
+And thus, the collection of these technologies is coined as "Smart Wallet-as-a-Service." You can learn more about Particle Network's Smart Wallet-as-a-Service Modular Stack [here](https://blog.particle.network/announcing-our-smart-wallet-as-a-service-modular-stack-upgrading-waas-with-erc-4337/).
 
 ![Particle Network Smart WaaS map](https://blog.particle.network/content/images/2023/10/graphic-image-2.png)
 
