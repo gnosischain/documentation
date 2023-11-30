@@ -8,18 +8,16 @@ import TabItem from '@theme/TabItem';
 :::tip Before you start
 Hey node runners, to provide a comprehensive guideline for both beginners and experienced node runners, we offer two paths for you to choose from for building your node: Interactive Guide and Step-by-Step.
 
-**Interactive Guide**: By selecting the configurations below, you are given a general walk-through of setting up the node based on different Operating system, Network, Execution client and Consensus client. In the current version, CLI commands are given to run as system process. *Recommended for experienced node runners*.
+**Interactive Guide**: By selecting the configurations below, you are given a general walk-through of setting up the node based on different Operating system, Network, Execution client and Consensus client. In the current version, CLI commands are given to run as system process. _Recommended for experienced node runners_.
 
-**Step-by-Step**: A detailed flow on running a node. Options include running as system process and using docker. *Recommended for beginners*.
+**Step-by-Step**: A detailed flow on running a node. Options include running as system process and using docker. _Recommended for beginners_.
 :::
-
 
 <div className='install'>
 
 ## Select a configuration
 
-
-import InstallIntroPartial from '@site/docs/node/manual/_partials/_install-intro.md';
+import InstallIntroPartial from '@site/docs/node/manual/\_partials/\_install-intro.md';
 
 <InstallIntroPartial />
 
@@ -27,7 +25,7 @@ import InstallIntroPartial from '@site/docs/node/manual/_partials/_install-intro
 
 ## Step 0: Review prerequisites and best practices
 
-import InstallPrereqsPartial from '@site/docs/node/manual/server/_partials/_install-prereqs.md';
+import InstallPrereqsPartial from '@site/docs/node/manual/server/\_partials/\_install-prereqs.md';
 
 <InstallPrereqsPartial />
 
@@ -37,7 +35,7 @@ import InstallPrereqsPartial from '@site/docs/node/manual/server/_partials/_inst
 Check out all recommended steps to [configure server](./configure-server.md)
 :::
 
-import InstallInitialPartial from '@site/docs/node/manual/server/_partials/_install-initial.md';
+import InstallInitialPartial from '@site/docs/node/manual/server/\_partials/\_install-initial.md';
 
 <InstallInitialPartial />
 
@@ -45,49 +43,46 @@ import InstallInitialPartial from '@site/docs/node/manual/server/_partials/_inst
 
 In this step, you'll install an execution-layer client that the consensus-layer node will connect to.
 
-import RunExecutionNodePartial from '@site/docs/node/manual/execution/_partials/_run-execution-client.md';
+import RunExecutionNodePartial from '@site/docs/node/manual/execution/\_partials/\_run-execution-client.md';
 
 <RunExecutionNodePartial />
 
 ## Step 3: Run a Beacon Node
 
-import RunBeaconNodePartial from '@site/docs/node/manual/beacon/_partials/_run-consensus-client.md';
+import RunBeaconNodePartial from '@site/docs/node/manual/beacon/\_partials/\_run-consensus-client.md';
 
 <RunBeaconNodePartial />
 
 ## Step 4: Run a Validator
 
 <Tabs className="tabgroup-with-label network-tabgroup" groupId="network" defaultValue="gnosis" values={[
-    {label: 'Gnosis', value: 'gnosis'},
-    {label: 'Chiado', value: 'chiado'}
+{label: 'Gnosis', value: 'gnosis'},
+{label: 'Chiado', value: 'chiado'}
 ]}>
-    <TabItem value="gnosis">
-        <div>
+<TabItem value="gnosis">
+<div>
 
 ### Step 4a: Generate Validator Keys
 
-import GenerateValidatorKeysPartial from '@site/docs/node/manual/validator/_partials/_generate_validator_keys_cli.md';
-
-
+import GenerateValidatorKeysPartial from '@site/docs/node/manual/validator/\_partials/\_generate_validator_keys_cli.md';
 
 <GenerateValidatorKeysPartial />
 
 ### Step 4b: Run a Validator
 
-import InstallValidatorPartial from '@site/docs/node/manual/validator/_partials/_install-validator.md';
+import InstallValidatorPartial from '@site/docs/node/manual/validator/\_partials/\_install-validator.md';
 
 <InstallValidatorPartial />
 
 ### Step 4c: Fund your validator
 
-import FundValidatorPartial from '@site/docs/node/manual/validator/_partials/_fund-validator.md';
+import FundValidatorPartial from '@site/docs/node/manual/validator/\_partials/\_fund-validator.md';
 
 <FundValidatorPartial />
 
-
 ### Step 4d: Verify Validator
 
-import VerifyValidatorPartial from '@site/docs/node/manual/validator/_partials/_verify-validator.md';
+import VerifyValidatorPartial from '@site/docs/node/manual/validator/\_partials/\_verify-validator.md';
 
 <VerifyValidatorPartial />
         </div>
@@ -100,13 +95,13 @@ import VerifyValidatorPartial from '@site/docs/node/manual/validator/_partials/_
     </TabItem>
 </Tabs>
 
-
 </div>
 </div>
 
--------
+---
 
 ## More Resources
-- [Frequently Asked Questions](../faq.md)
+
+- [Frequently Asked Questions](../../faq/node.md)
 - [1-click tools](../tools/)
 - [Managing your Node](../management/)

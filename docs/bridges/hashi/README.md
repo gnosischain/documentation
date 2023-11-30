@@ -6,6 +6,10 @@ keywords: [hashi, oracle aggregator]
 
 # What is Hashi
 
+:::info
+Check out the latest update for Hashi in [Hashi docs](https://hashi-doc.gitbook.io/hashi/v0.1/deployment)!
+:::
+
 Hashi is an EVM Hash Oracle Aggregator, designed to facilitate [a principled approach to cross-chain bridge security.](https://ethresear.ch/t/hashi-a-principled-approach-to-bridges/14725)
 
 The primary insight being that the vast majority of bridge-related security incidents could have had minimal impact if the systems relying on them had built in some redundancy. In other words, it's much more secure to require messages be validated by multiple independent mechanisms, rather than by just one.
