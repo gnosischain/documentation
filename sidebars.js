@@ -745,6 +745,11 @@ const sidebars = {
       ],
     },
     {
+      type: "doc",
+      label: "Bridge Explorer",
+      id: "bridges/bridge-explorer",
+    },
+    {
       type: "category",
       label: "Hashi",
       collapsed: false,
@@ -766,6 +771,7 @@ const sidebars = {
         "bridges/tokenbridge/nft-bridge",
       ],
     },
+
     {
       type: "category",
       label: "Tutorials",
