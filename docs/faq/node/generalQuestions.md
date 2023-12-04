@@ -14,24 +14,22 @@ title: General Questions
 
 # General Questions
 
-1. **I have a problem with connect Safe <-> deposit.gnosischain.com since there is new walletconnect in UI. When will it be fixed?**
+1. **What is a validator?**
+   
+Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
+
+2. **What is Shapella?**
+
+   Shapella refers to the combination of both Shanghai and Capella. Shanghai enables GNO staking withdrawals for Gnosis Chain, unlike the previous model that doesn’t allow for staked GNO to be withdrawn. Shanghai is the name given to the execution layer (EL) upgrade, while Capella is the name of the coinciding consensus layer (CL) upgrade.
+
+3. **I have a problem with connect Safe <-> deposit.gnosischain.com since there is new walletconnect in UI. When will it be fixed?**
 
     Devs are currently working on it, currently a workaround is to use the wallet extension Rabby and import your Safe in it then to connect it to the page like if it was a Metamask wallet.
-2. **What tax software has integrated GC?**
+
+4. **What tax software has integrated GC?**
 
     [Cryptio](https://cryptio.co/) is available for German users. 
 
-3. **When is this Gnosis Execution Layer <-> Gnosis Beacon Chain merge scheduled for?**
+5. **When is this Gnosis Execution Layer <-> Gnosis Beacon Chain merge scheduled for?**
 
    The merge happened in December 2022.
-
-4. **What is a validator?**
-   Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
-
-5. **What is a validator?**
-
-   Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
-
-6. **What is Shapella?**
-
-   Shapella refers to the combination of both Shanghai and Capella. Shanghai enables GNO staking withdrawals for Gnosis Chain, unlike the previous model that doesn’t allow for staked GNO to be withdrawn. Shanghai is the name given to the execution layer (EL) upgrade, while Capella is the name of the coinciding consensus layer (CL) upgrade.
