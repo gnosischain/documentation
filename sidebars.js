@@ -485,11 +485,6 @@ const sidebars = {
                 },
                 {
                   type: "link",
-                  label: "DinoWallet",
-                  href: "https://dinowallet.org/",
-                },
-                {
-                  type: "link",
                   label: "Frame",
                   href: "https://frame.sh/",
                 },
