@@ -485,11 +485,6 @@ const sidebars = {
                 },
                 {
                   type: "link",
-                  label: "DinoWallet",
-                  href: "https://dinowallet.org/",
-                },
-                {
-                  type: "link",
                   label: "Frame",
                   href: "https://frame.sh/",
                 },
@@ -750,6 +745,11 @@ const sidebars = {
       ],
     },
     {
+      type: "doc",
+      label: "Bridge Explorer",
+      id: "bridges/bridge-explorer",
+    },
+    {
       type: "category",
       label: "Hashi",
       collapsed: false,
@@ -771,6 +771,7 @@ const sidebars = {
         "bridges/tokenbridge/nft-bridge",
       ],
     },
+
     {
       type: "category",
       label: "Tutorials",

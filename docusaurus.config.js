@@ -75,7 +75,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Shanghai/Capella Hardfork is complete. See <a target="_blank" rel="noopener noreferrer" href="/updates/">Latest Updates</a>.',
+          'Bridge explorer is now live. See <a target="_blank" rel="noopener noreferrer" href="/bridges/bridge-explorer/">Bridge Explorer for more info</a>.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
