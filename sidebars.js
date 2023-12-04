@@ -750,6 +750,11 @@ const sidebars = {
       ],
     },
     {
+      type: "doc",
+      label: "Bridge Explorer",
+      id: "bridges/bridge-explorer",
+    },
+    {
       type: "category",
       label: "Hashi",
       collapsed: false,
@@ -771,11 +776,7 @@ const sidebars = {
         "bridges/tokenbridge/nft-bridge",
       ],
     },
-    {
-      type: "link",
-      label: "Bridge Explorer",
-      href: "https://bridge-explorer.gnosischain.com/",
-    },
+
     {
       type: "category",
       label: "Tutorials",
