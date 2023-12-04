@@ -772,6 +772,11 @@ const sidebars = {
       ],
     },
     {
+      type: "link",
+      label: "Bridge Explorer",
+      href: "https://bridge-explorer.gnosischain.com/",
+    },
+    {
       type: "category",
       label: "Tutorials",
       link: {
