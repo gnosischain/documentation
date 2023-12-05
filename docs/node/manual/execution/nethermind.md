@@ -6,6 +6,10 @@ title: Nethermind
 
 Nethermind is an Execution layer client developed by the [Nethermind team](https://nethermind.io/nethermind-client/).
 
+:::note
+Nethermind currently holds the supermajority client position on Gnosis Chain. We suggest considering a switch to [Erigon.](https://docs.gnosischain.com/node/manual/execution/erigon)
+:::
+
 **Nethermind reference:**
 
 [https://docs.nethermind.io/nethermind/](https://docs.nethermind.io/nethermind/)
