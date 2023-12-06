@@ -18,10 +18,6 @@ Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
 </TabItem>
 <TabItem value="win">
 
-:::danger
-Nimbus is not ready for production use. Currently, you can only use Docker to run Nimbus Beacon Node + Validator.
-:::
-
 Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
 
 </TabItem>
@@ -36,18 +32,10 @@ Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
 ]}>
 <TabItem value="others">
 
-:::danger
-Nimbus is not ready for production use. Currently, you can only use Docker to run Nimbus Beacon Node + Validator.
-:::
-
 Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
 
 </TabItem>
 <TabItem value="win">
-
-:::danger
-Nimbus is not ready for production use. Currently, you can only use Docker to run Nimbus Beacon Node + Validator.
-:::
 
 Please refer to [Run a Beacon Node: Nimbus](../nimbus.md)
 

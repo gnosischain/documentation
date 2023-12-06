@@ -8,13 +8,10 @@ Formerly TurboGeth, Erigon is an Ethereum client built to enable performance opt
 
 Repository: [https://github.com/ledgerwatch/erigon](https://github.com/ledgerwatch/erigon)
 
-:::note
-Erigon is not ready for production use, please consider switching to [Nethermind](./nethermind.md)
-:::
-
 There are 2 main options for running Erigon:
-* Option 1: [Using Docker](#using-docker)
-* Option 2: [As a system process](#as-system-process)
+
+- Option 1: [Using Docker](#using-docker)
+- Option 2: [As a system process](#as-system-process)
 
 ## Option 1: Using Docker {#using-docker}
 
@@ -33,9 +30,7 @@ chown -R 1000:1000 /home/$USER/gnosis/execution
 └── jwtsecret/
 ```
 
-
 ### 2. Docker Compose
-
 
 Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
@@ -105,15 +100,13 @@ cd /home/$USER/gnosis
 docker-compose up -d
 ```
 
-
 ### 5. Monitor Logs
 
 Check your logs with:
 
-import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/_partials/_monitor_logs_docker.md';
+import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/\_partials/\_monitor_logs_docker.md';
 
 <MonitorLogsDockerPartial />
-
 
 ### 6. Updating your Node
 
