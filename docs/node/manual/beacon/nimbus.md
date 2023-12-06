@@ -1,21 +1,16 @@
 ---
 title: Nimbus
 ---
-import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/_partials/_beacon_folder_structure.md';
+
+import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 
 # Run Beacon Node + Validator: Nimbus
-
-:::caution
-
-This client is considered experimental for Gnosis. For production ready alternatives, please consider Lighthouse, Teku or Lodestar.
-
-:::
 
 Nimbus is a client implementation that strives to be as lightweight as possible in terms of resources used. Nimbus has consensus layer clients for Ethereum and Gnosischain.
 
 :::tip Learn More about Nimbus
 
-- Nimbus Repo:  [https://github.com/status-im/nimbus-eth2](https://github.com/status-im/nimbus-eth2)
+- Nimbus Repo: [https://github.com/status-im/nimbus-eth2](https://github.com/status-im/nimbus-eth2)
 - Nimbus Docs: [https://nimbus.team/docs/](https://nimbus.team/docs/)
 
 :::
@@ -27,13 +22,11 @@ Nimbus is a client implementation that strives to be as lightweight as possible 
 
 :::
 
-
 ## Option 1: Run as System Process
 
 We currently do not release Gnosis compatible binaries for Nimbus, nor do we intend to for the time being.
 
 ## Option 2: Run using Docker
-
 
 This tutorial runs Nimbus beacon node and validator on the same container, please make sure you have your [generated validator key](../README.md#step-4a-generate-validator-keys) and [jwtsecret](../README.md#step-1-configure-server) before moving to the next step.
 
@@ -49,7 +42,6 @@ Folder structure
     └── data/
     └── validator_key/
 ```
-
 
 ### 2. Docker Compose
 
@@ -106,7 +98,6 @@ networks:
 Replace `suggested-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup. Learn more about [suggested fee recipient](https://nimbus.guide/suggested-fee-recipient.html) flag in Nimbus docs.
 
 Replace `graffiti` with your own [graffiti](https://nimbus.guide/graffiti.html). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
-
 
 ### 3. Start Containers
 
