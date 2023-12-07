@@ -6,7 +6,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 
 # Run Beacon Node + Validator: Nimbus
 
-Nimbus is a client implementation that strives to be as lightweight as possible in terms of resources used. Nimbus has consensus layer clients for Ethereum and Gnosischain.
+Nimbus is a client implementation that strives to be as lightweight as possible in terms of resources used. Nimbus has consensus layer clients for Ethereum and Gnosis Chain.
 
 :::tip Learn More about Nimbus
 
