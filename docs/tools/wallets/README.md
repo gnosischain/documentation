@@ -21,7 +21,6 @@ Visit [Gnosis Wallets](https://gnosiswallets.com/) to find a wallet that fits yo
 - [Ambire Wallet](https://www.ambire.com/)
 - [Coinbase Wallet](https://www.coinbase.com/wallet)
 - [DEX Wallet](https://www.dexwallet.io/)
-- [DinoWallet](https://dinowallet.org/)
 - [Enkrypt](https://www.enkrypt.com/?mtm_campaign=Gnosis%20Chain%20Wallet%20Wiki&mtm_kwd=Wiki)
 - [Frame](https://frame.sh/)
 - [Mt Pelerin](https://www.mtpelerin.com/bridge-wallet)
