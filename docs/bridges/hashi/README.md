@@ -28,7 +28,7 @@ Existing oracle adapters:
 - [Telepathy ZK light client](https://docs.telepathy.xyz/)
 - [Dendreth ZK light client](https://github.com/metacraft-labs/DendrETH)
 - [Gnosis AMB bridge](../tokenbridge/amb-bridge.md)
-- [Sygma protocol](https://medium.com/buildwithsygma)
+- [Sygma protocol](https://buildwithsygma.com/)
 - [Wormhole](https://wormhole.com/)
 
 In progress:
