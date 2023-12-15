@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 2023/12/06
+title: Core Devs Call - 2023/12/13
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, gnosis]
 ---
