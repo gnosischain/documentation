@@ -28,15 +28,15 @@ Existing oracle adapters:
 - [Telepathy ZK light client](https://docs.telepathy.xyz/)
 - [Dendreth ZK light client](https://github.com/metacraft-labs/DendrETH)
 - [Gnosis AMB bridge](../tokenbridge/amb-bridge.md)
-- [Sygma protocol](https://medium.com/buildwithsygma)
+- [Sygma protocol](https://buildwithsygma.com/)
 - [Wormhole](https://wormhole.com/)
-
-In progress:
-
-- [Celer](https://cbridge-docs.celer.network/)
+- [Celer](https://cbridge.celer.network/1/100/SOS)
 - [LayerZero](https://layerzero.network/)
-- [Multichain](https://multichain.xyz/)
-- [Axelar](https://axelar.network/)
+- [Chainlink CCIP](https://docs.chain.link/ccip)
+- [Connext](https://www.connext.network/)
+- [Hyperlane](https://www.hyperlane.xyz/)
+- [Optimism bridge](https://app.optimism.io/bridge/deposit)
+- [Zetachain](https://www.zetachain.com/)
 
 ## Resources
 
