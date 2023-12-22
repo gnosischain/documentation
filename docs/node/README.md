@@ -8,21 +8,25 @@ title: Run a Node
 
 **Image:** Gnosis nodes around the world, circa Oct 2023 (source: https://www.d14n.info/)
 
-## A Community-run Chain
+## Open Infrastructure Powered by Solo Stakers
+
+An open, resilient and credibly neutral infrastructure is only possible if it’s powered by solo stakers around the world. A community-run, geographically distributed validator set ensures that the network doesn’t fall into the hands of small, powerful constituents with specific commercial or political intentions. Gnosis is persistently committed to building the open infrastructure for a decentralized internet because we believe that web3 applications require an unstoppable network, a level playing field that’s open to anyone. We believe that everyone should have access to the tools of web3 that empower users to take ownership of their data and digital assets.
+
+### Featured Headlines
 
 - Gnosis is a community-run chain that is created by nodes run by thousands of ordinary people around the globe. As a distributed network, a diverse set of nodes ensure that the network is resilient to technical failures. A diversity of nodes run across many countries ensures the network can remain [credibly neutral infrastructure](https://nakamoto.com/credible-neutrality/).
 - Running a node is perhaps the most profound way to contribute to a blockchain network. By running a node, you -are- the network. Together with other nodes run by others around the planet, you form part of a global network that is anti-fragile and resilient.
 - Gnosis has a strong culture of homestakers running nodes from their homes, that are not reliant on cloud providers or datacenters.
 - Gnosis has a stretch goal to have a node in every country by 2025.
 
-### Gnosis vs. Ethereum
+#### Gnosis vs. Ethereum
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
-- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~$100 at Nov 2022) instead of the 32 ETH (~$38,400 at Nov 2022) minimum required for Ethereum
+- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~210 at Dec 2023) instead of the 32 ETH (~$72,500 at Dec 2023) minimum required for Ethereum
 - Gnosis runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus.
 
-### Proof-of-Stake
+#### Proof-of-Stake
 
 - Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
 - Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior.
