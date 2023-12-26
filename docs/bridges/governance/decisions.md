@@ -8,6 +8,13 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Increase required block confirmation for AMB to 130 blocks, remove Autonolas LP token fee
+
+🗳 Justification: To increase the participation of the Telepathy light client on the AMB, we [increase the required block confirmations](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xbd070bf3e3a1047b073d00c34fb73b39dd24678dd41c6f0c6855fec8411de165) from 100 blocks (~20 mins) to 130 blocks (~26 mins). This will ensure that the majority of the txs can be signed by Telepathy. End users should expect 6 more minutes delay.
+Besides, as requested from Autonolas team, we [remove the Autonolas LP token fee](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x27127a754307d26d7a9a4bfdcb01242103212ebec979039702e12de615125af5) on ETH↔GC Omnibridge, from previously 0.01% to 0.
+
+✅ Implemented: Dec 18, 2023
+
 ## Remove OLAS token fee from ETH-GC Omnibridge
 
 🗳 Justification: As requested from Autonolas team, we [removed OLAS token fee](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x4efc19db4b29b2812b17e74cf4f8c91eef02a68a966a64617810c74589f5ab8b) on ETH↔GC Omnibridge, from previously 0.01% to 0.  
