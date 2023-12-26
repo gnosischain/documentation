@@ -2,7 +2,7 @@
 title: Lighthouse
 ---
 
-import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/_partials/_beacon_folder_structure.md';
+import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 
 # Run Beacon Node: Lighthouse
 
@@ -62,7 +62,7 @@ Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/.
 ```shell
 # Usage
 $ lighthouse bn
-  --checkpointSyncUrl https://checkpoint.gnosischain.com/
+  --checkpoint-sync-url https://checkpoint.gnosischain.com/
 ```
 
 :::info More about Checkpoint Sync
@@ -87,7 +87,6 @@ Most users should use the `latest-modern` tag, which corresponds to the latest s
 The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
 
 :::
-
 
 ### 1. Folder Structure
 
@@ -148,7 +147,6 @@ networks:
     name: gnosis_net
 ```
 
-
 ### 3. Start Containers
 
 Start the consensus layer client listed in the compose file:
@@ -162,7 +160,7 @@ docker-compose up -d
 
 Check your logs for each service (`execution` and `consensus`) with:
 
-import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/_partials/_monitor_logs_docker.md';
+import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/\_partials/\_monitor_logs_docker.md';
 
 <MonitorLogsDockerPartial />
 
