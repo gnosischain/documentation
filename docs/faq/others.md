@@ -33,6 +33,9 @@
 
 8. What is d14n.info?
 
+   :::note
+   The site is deprecated.
+   :::
    [d14n.info](https://www.d14n.info/) is a real-time dashboard that measures decentralization of the Gnosis Chain and Ethereum networks. We use the Nakamoto Coefficient as the primary quantitative measure across multiple dimensions of the network.
    You may also check out [Gnosis Metrics](https://www.gnosismetrics.com/#overview)
 
