@@ -64,7 +64,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 | Beacon Checkpoint Sync        | https://checkpoint.chiadochain.net    |
 | Fork monitor                  | https://forkmon.chiadochain.net       |
 | EthStats                      | https://ethstats.chiadochain.net      |
-| Faucet                        | https://gnosisfaucet.com              |
+| Faucet                        | https://faucet.chiadochain.net/       |
 
 ### Key Parameters
 
