@@ -61,7 +61,7 @@ WIP
     --metrics-port=<PORT>
 
 https://lighthouse-book.sigmaprime.io/advanced_metrics.html
- https://github.com/sigp/lighthouse-metrics
+https://github.com/sigp/lighthouse-metrics
 </TabItem>
 <TabItem value="Lodestar" label="Lodestar">
 
@@ -92,7 +92,6 @@ https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
 
 </Tabs>
 
-
 ## Monitoring the network
 
 ### Ethstats
@@ -120,6 +119,9 @@ Forkmon (Fork monitor) is another tool to monitor Node's status.
 
 ### d14n.info
 
+:::note
+The site is deprecated
+:::
 [d14n.info](https://d14n.info/) is a real-time dashboard that measures decentralization of Gnosis Chain and Ethereum networks.
 
 ![d14n dashboard](../../../static/img/node/monitor-node/d14n.png)
