@@ -22,7 +22,7 @@ Welcome to the Developers section! This section gives an extensive overview on h
 ## Tutorials
 
 - [Account Abstraction](/developers/account-abstraction/safe): Integrate account abstraction into your project.
-- [Building a Sull Stack dApp](/developers/building/full-stack-dapp): Create a full stack dApp that interacts with Gnosis Chain.
+- [Building a Full Stack dApp](/developers/building/full-stack-dapp): Create a full stack dApp that interacts with Gnosis Chain.
 - [Launching ERC20 Tokens](/developers/building/token): Launch your own token on Gnosis Chain.
 - [Launching NFTs](/developers/building/nft): Launch NFTs on Gnosis Chain. 
 
