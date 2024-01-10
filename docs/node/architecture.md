@@ -36,8 +36,8 @@ Gnosis Execution Layer is the legacy xDai "Eth1" network. The Execution Layer is
 Node Operators will need to run an Execution Layer client, which will interact with the Execution Layer network.
 
 - [Nethermind](./manual/execution/nethermind.md)
+- [Erigon](./manual/execution/erigon.md)
 - [Geth](./manual/execution/geth.md) (in progress)
-- [Erigon](./manual/execution/erigon.md) (in progress)
 
 Gnosis used to be supported by the [Parity OpenEthereum client](./manual/execution/openethereum.md), but it has since been deprecated.
 
