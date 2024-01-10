@@ -1,42 +1,33 @@
 ---
-description: Development wise, since Gnosis is an Ethereum Virtual Machine based chain, development is nearly identical. 
+description: Gnosis Chain is a community-owned EVM-based network that is operated by a diverse set of validators around the world
 keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum] 
+title: Overview
 ---
 
 # Developers Overview
 
-## Differences between Gnosis and Ethereum
+Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
 
-Development wise, since Gnosis is an Ethereum Virtual Machine based chain, development is nearly identical. Check out the [protocol specification](/specs) for more details.
+## Getting Started
 
-## Why Gnosis?
+- [Deploying a Smart Contract](/developers/smart-contracts/): Understand how to deploy contracts on Gnosis Chain.
+- [Interacting with Gnosis Chain](/developers/interact): Learn how to interact with Gnosis Chain wallets, APIs, SDKs, etc.
+- [Building dApps](/developers/building/first-contract): Learn how to build your first dApp on Gnosis Chain.
 
-* Fast transaction times (5 seconds) & low transaction fees (500 tx for $.01).
-* A [stable token for transactions](/about/tokens/xdai) & gas fees.
-* Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
-* Full-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).
-* Wide-ranging [Community Support](/about/overview/community).
-* Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.
+## How-tos
 
-## Transaction Fees
+- [Verify Cntracts](/developers/verify): Learn how to verify your deployed contracts.
+- [Bridge](/developers/tutorials): Bridge assets to Gnosis Chain.
 
-Transaction fees are assessed for any Gnosis transactions such as sending xDai to another wallet or interacting with a smart contract. These fees are currently sent to the validator who seals the block in which the transactions take place (transaction fees are not split among pool participants, they are only received by the validator). Currently, transaction fees on Gnosis are extremely low. As chain usage grows, these fees may be redirected to support additional aspects of the protocol. 
+## Tutorials
 
-[Here is a link to the official Ethereum docs for Transaction and Gas Fees](https://ethereum.org/en/developers/docs/gas/)
+- [Account Abstraction](/developers/account-abstraction/safe): Integrate account abstraction into your project.
+- [Building a Full Stack dApp](/developers/building/full-stack-dapp): Create a full stack dApp that interacts with Gnosis Chain.
+- [Launching ERC20 Tokens](/developers/building/token): Launch your own token on Gnosis Chain.
+- [Launching NFTs](/developers/building/nft): Launch NFTs on Gnosis Chain. 
 
-## Resources
-
-<div className="row">
-<box href="/tools/wallets" title="Wallets">Download a wallet to start using Gnosis.</box>
-<box href="/tools/faucets" title="Faucets">Free fund your wallet with xDai to pay fees.</box>
-<box href="/tools/explorers" title="Explorers">See your transactions, accounts, blocks, and more tools.</box>
-<box href="/tools/rpc" title="RPC Providers">Connect your development environment and wallets to a public RPC node.</box>
-<box href="/node" title="Run a Node">Setup and run your own node.</box>
-<box href="/developers/smart-contracts/" title="Dev Tools">Setup your development environment.</box>
-<box href="/developers/building/first-contract" title="Tutorials">Learn how to build dApps.</box>
-<box href="/bridges" title="Bridges">Gnosis' native bridges allow for sending tokens and data...</box>
-</div>
-
-## Featured Tutorials
-
-<tutorialsFeatured />
+## Tools
+- [Tools](/tools): A list of useful tools during the development process.
+- [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
+- [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
+- [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.
