@@ -132,6 +132,7 @@ const sidebars = {
 
   developers: [
     "developers/README",
+    "developers/intro",
     {
       type: "category",
       label: "Deploying a Smart Contract",
