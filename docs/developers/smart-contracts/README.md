@@ -25,7 +25,6 @@ You may also use smart contract marketplace [Cookbook](https://www.cookbook.dev/
 Great development tools are compatible with Gnosis
 
 <div className="row">
-<box href="/developers/smart-contracts/remix" title="Remix" />
 <box href="/developers/smart-contracts/foundry" title="Foundry" />
 <box href="/developers/smart-contracts/truffle" title="Truffle" />
 <box href="/developers/smart-contracts/hardhat" title="Hardhat" />
