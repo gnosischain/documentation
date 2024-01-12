@@ -135,13 +135,20 @@ const sidebars = {
     "developers/intro",
     {
       type: "category",
+      label: "Getting Started",
+      collapsed: false,
+      items: [
+        "developers/getting-started/quickstart",
+      ],
+    },
+    {
+      type: "category",
       label: "Deploying a Smart Contract",
       collapsed: false,
       link: { type: "doc", id: "developers/smart-contracts/README" },
       items: [
         "developers/smart-contracts/truffle",
         "developers/smart-contracts/hardhat",
-        "developers/smart-contracts/remix",
         "developers/smart-contracts/foundry",
         "developers/smart-contracts/cookbook",
       ],
