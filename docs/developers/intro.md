@@ -21,6 +21,6 @@ Gnosis Chain uses DAO governance mechanism to ensure anyone can participate in t
 
 ## Fees
 
-Each transaction on the Gnosis Chain (sending tokens, interacting with smart contracts, etc.) is associated with the fee in xDai stablecoin. It is onne of the main differences from other EVM chains where users pay in a native token of that network. This approach reduces the volatility risks and simplifies the development experience.
+Each transaction on the Gnosis Chain (sending tokens, interacting with smart contracts, etc.) is associated with the fee in xDai stablecoin. It is one of the main differences from other EVM chains where users pay in a native token of that network. This approach reduces the volatility risks and simplifies the development experience.
 
 Also, transaction fees are not split among pool participants of the validation process. They are received only by the validator who sealed the block. Note, this is subject to change. As the network grows, the fees may be redirected to support additional aspects of the protocol.
