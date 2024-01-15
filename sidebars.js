@@ -139,6 +139,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "developers/getting-started/quickstart",
+        "developers/getting-started/contracts",
       ],
     },
     {
