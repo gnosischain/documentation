@@ -12,7 +12,7 @@ The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosisch
 
 :::
 
-The [xDai bridge](https://bridge.gnosischain.com) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
+The [xDai bridge](https://bridge.gnosischain.com) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/concepts/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge-01.png)
 
@@ -258,7 +258,7 @@ The xDai bridge currently generates bridge revenue through earned yield on stabl
 
 ![](/img/bridges/diagrams/dai-bridge-01.png)
 
-The [xDai token](/about/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+The [xDai token](/concepts/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
 1. Users lock an amount of DAI on the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum
 2. `UserRequestForAffirmation` event is triggered

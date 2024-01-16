@@ -46,7 +46,7 @@ title: Offline and Sync Issue
     
 9. **My Gnosis node is crashed a month ago, was there a breaking chain upgrade a month ago?**
 
-    Gnosis Chain had the [Shapella](https://docs.gnosischain.com/specs/hard-forks/shanghai-capella) upgrade early August 2023, validators had to update their clients to continue validating.
+    Gnosis Chain had the [Shapella](https://docs.gnosischain.com/concepts/specs/hard-forks/shanghai-capella) upgrade early August 2023, validators had to update their clients to continue validating.
     
 10. **Can I use checkpoint sync with Nethermind?**
 

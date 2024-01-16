@@ -12,8 +12,8 @@ keywords:
 
 | Network Name       | Gnosis                    |
 | ------------------ | ------------------------- |
-| Native (fee) token | [xDai](../tokens/xdai.md) |
-| Staking token      | [GNO](../tokens/gno.md)   |
+| Native (fee) token | [xDai](/concepts/tokens/xdai.md) |
+| Staking token      | [GNO](/concepts/tokens/gno.md)   |
 | Chain ID           | 100                       |
 
 ## Key Infra
@@ -64,8 +64,8 @@ keywords:
 
 ## Native Tokens
 
-- Fee Token: [xDai](../tokens/xdai.md)
-- Staking Token: [GNO](../tokens/gno.md)
+- Fee Token: [xDai](/concepts/tokens/xdai)
+- Staking Token: [GNO](/concepts/tokens/gno)
 
 You can find a list of contract addresses for Gnosis Mainnet tokens in the [Useful Addresses](/developers/getting-started/contracts) page.
 
@@ -84,7 +84,7 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 
 ## Key Contracts
 
-- [xDai Bridge](../../bridges/tokenbridge/xdai-bridge#key-contracts)
-- [AMB Bridge](../../bridges/tokenbridge/amb-bridge#key-contracts)
-- [OmniBridge](../../bridges/tokenbridge/omnibridge#key-contracts)
-- [Beacon Chain](../../specs/gbc/README.md)
+- [xDai Bridge](/bridges/tokenbridge/xdai-bridge#key-contracts)
+- [AMB Bridge](/bridges/tokenbridge/amb-bridge#key-contracts)
+- [OmniBridge](/bridges/tokenbridge/omnibridge#key-contracts)
+- [Beacon Chain](/concepts/specs/gbc/README.md)

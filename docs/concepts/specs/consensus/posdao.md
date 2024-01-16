@@ -5,7 +5,7 @@ description: POSDAO describes the pre-merge validator selection method for the G
 # POSDAO
 
 :::caution The merge
-Gnosis transitioned to PoS using the [GNO Token](/about/tokens/gno), this page defines the pre-merge consensus model. Learn more [about The Merge](/specs/consensus/).
+Gnosis transitioned to PoS using the [GNO Token](/concepts/tokens/gno), this page defines the pre-merge consensus model. Learn more [about The Merge](/).
 :::
 
 ## Proof of Stake Decentralized Autonomous Organization

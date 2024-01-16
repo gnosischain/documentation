@@ -8,7 +8,7 @@ tags: [bridges, merge]
 
 ## Overview
 
-- Gnosis will be temporarily pausing its Native Bridges for the duration of the [Merge](/specs/hard-forks/merge)
+- Gnosis will be temporarily pausing its Native Bridges for the duration of the [Merge](/concepts/specs/hard-forks/merge)
 - This is a risk-management operation that will be rolled back once normal operation of the chain has been verified post-Merge
 - This will affect both the [Omnibridge](/bridges/tokenbridge/omnibridge) and [xDai Bridge](/bridges/tokenbridge/xdai-bridge), and any 3rd-party bridges or dApps that utilize the Native Bridge contracts. 
 

@@ -14,7 +14,7 @@ title: Validator Deposits
 
 ### GNO on Gnosis Chain
 
-- Validators need to be funded using [GNO on Gnosis Chain](../../../about/tokens/gno.md)
+- Validators need to be funded using [GNO on Gnosis Chain](/concepts/tokens/gno)
 - You will need to bridge GNO over from Ethereum to Gnosis Chain
 
 :::tip

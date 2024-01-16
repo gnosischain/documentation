@@ -89,12 +89,6 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "about",
-            label: "About",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
             sidebarId: "developers",
             label: "Developers",
           },
@@ -102,36 +96,18 @@ const config = {
             type: "docSidebar",
             position: "left",
             sidebarId: "node",
-            label: "Run a Node",
+            label: "Node operators",
           },
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "bridge",
-            label: "Bridges",
+            sidebarId: "concepts",
+            label: "Concepts",
           },
           {
-            type: "docSidebar",
+            href: "https://ecosystem.gnosischain.com/",
             position: "left",
-            sidebarId: "tools",
-            label: "Tools",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "ecosystems",
-            label: "Ecosystems",
-          },
-          {
-            to: "updates",
-            label: "Updates",
-            position: "left",
-          },
-          {
-            type: "docSidebar",
-            label: "FAQ",
-            sidebarId: "faq",
-            position: "left",
+            label: "Ecosystem",
           },
           {
             href: "https://github.com/gnosischain/developers-portal",
@@ -151,7 +127,7 @@ const config = {
                 to: "/developers",
               },
               {
-                label: "Run a Node",
+                label: "Node operators",
                 to: "/node",
               },
               {

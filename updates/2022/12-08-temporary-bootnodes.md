@@ -8,7 +8,7 @@ tags: [nodes, bootnodes]
 
 
 :::info deprecated update
-Check the latest and recommended bootnodes in the [network page](/about/networks/mainnet#config-repo).
+Check the latest and recommended bootnodes in the [network page](/concepts/networks/mainnet#config-repo).
 :::
 
 ## Overview
