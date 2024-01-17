@@ -10,11 +10,13 @@ Welcome to the Developers section! This section gives an extensive overview on h
 
 ## Getting Started
 
+- [Quickstart](/developers/getting-started/quickstart): Deploy your first contract on Gnosis Chain.
+- [Useful Contracts](/developers/getting-started/contracts): A list of usefull contracts for Gnosis Chain development.
 - [Deploying a Smart Contract](/developers/smart-contracts/): Understand how to deploy contracts on Gnosis Chain.
 - [Interacting with Gnosis Chain](/developers/interact): Learn how to interact with Gnosis Chain wallets, APIs, SDKs, etc.
 - [Building dApps](/developers/building/first-contract): Learn how to build your first dApp on Gnosis Chain.
 
-## How-tos
+## How to
 
 - [Verify Cntracts](/developers/verify): Learn how to verify your deployed contracts.
 - [Bridge](/developers/tutorials): Bridge assets to Gnosis Chain.

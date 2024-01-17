@@ -5,7 +5,7 @@ keywords: [supraoracles, oracle, data feeds, price feeds]
 ---
 
 :::info testnet
-SupraOracles only supports [Chiado testnet](../../../about/networks/chiado.md).
+SupraOracles only supports [Chiado testnet](/concepts/networks/chiado).
 :::
 
 ## What is SupraOracles?

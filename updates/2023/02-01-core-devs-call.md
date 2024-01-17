@@ -50,7 +50,7 @@ Let's take a look at the core devs call updates.
     _ Withdrawal contract will rely on “reserve” contract that will be funded before/after
     _ Treasury will need to send more GNO to the Withdrawal contrat to account for block rewards
     https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96#balances
-    https://github.com/gnosischain/specs/blob/master/execution/withdrawals.md
+    https://github.com/gnosischain/concepts/specs/blob/master/execution/withdrawals.md
   - Alternative approach
     - Minting mGNO on Gnosis Chain thru increment the mGNO token registry thru system call (i.e. “issue” mGNO)
     - Ihor: how do we maintain total token balance (i.e. sum(GNO on Ethereum chain) == 3_000_000)

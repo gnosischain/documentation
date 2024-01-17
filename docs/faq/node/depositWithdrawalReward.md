@@ -77,7 +77,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 16. **What is the deposit contract?**
 
-    The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol), with [some additional functionality](/specs/security-audit).
+    The deposit contract keeps track of validators and staking amounts. The GBC deposit contract is based on [the original Ethereum beacon chain deposit contract](https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol), with [some additional functionality](/concepts/specs/security-audit).
 
 - Contract Security Audit by Chainsecurity: [https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/](https://chainsecurity.com/security-audit/poa-network-stake-beacon-chain-sbc-deposit/)
 - GBC Contract Address: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)
@@ -162,7 +162,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 37. **I want to deposit GNO on the test network. Where can I find the operation guide?**
 
-    More information in the [docs](https://docs.gnosischain.com/about/networks/chiado/#how-to-participate). If you need Chiado GNO you can ask on the Discord.
+    More information in the [docs](https://docs.gnosischain.com/concepts/networks/chiado/#how-to-participate). If you need Chiado GNO you can ask on the Discord.
 
 38. **How long until the GNO from my withdrawal arrives in my wallet? Do you have to claim it manually?**
 

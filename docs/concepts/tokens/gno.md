@@ -67,7 +67,7 @@ https://docs.gnosischain.com/img/tokens/gno.png
 </TabItem>
 <TabItem value="chiado" label="Chiado Testnet">
 
-Check out [Chiado Testnet specs](/about/networks/chiado#gno-token) for more info.
+Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more info.
 
 </TabItem>
 </Tabs>
@@ -90,7 +90,7 @@ Check out [Chiado Testnet specs](/about/networks/chiado#gno-token) for more info
 
 ### Staking
 
-By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](../../node/manual/validator/deposit.md) page.
+By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
 
 In order to establish a highly precise ETH-mirrored environment, it is required to stake a minimum of 32 tokens on the Gnosis Beacon Chain. To facilitate this, the mGNO token serves as a meta-token specifically designed for staking purposes. During the deposit process, an automatic conversion takes place where 1 GNO is transformed into 32 mGNO tokens behind the scenes.
 
@@ -102,7 +102,7 @@ For those who prefer not to manage the infrastructure themselves, liquid staking
 
 - [GnosisDAO Governance Forum](https://forum.gnosis.io/)
 - [GNO Utility and Value Proposition](https://forum.gnosis.io/t/gno-utility-and-value-proposition/2344)
-- [Community](/about/overview/community)
+- [Community](/developers/communication)
 
 ## GNO Token Audit
 

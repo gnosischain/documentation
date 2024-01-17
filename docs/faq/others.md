@@ -53,7 +53,7 @@
 
 12. How do I connect my wallet to Gnosis Chain?
 
-    Click 'Add to Metamask' in [here](https://docs.gnosischain.com/about/networks/mainnet) or view other options from
+    Click 'Add to Metamask' in [here](https://docs.gnosischain.com/concepts/networks/mainnet) or view other options from
     https://docs.gnosischain.com/tools/wallets/
 
 13. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
@@ -111,7 +111,7 @@
 
 21. What DApps can we use on Gnosis?
     All dApps on Gnosis Ecosystem can be found here:
-    https://docs.gnosischain.com/ecosystems/
+    https://ecosystem.gnosischain.com/
 
 22. Is it possible run a Node and qualify for future rewards?
 
@@ -123,7 +123,7 @@
 
 24. Is Gnosis Chain a Testnet or Mainnet released?
 
-    Gnosis Chain is not a testnet. It is a fully operational Layer 1 utilizing Proof of Stake. But if you are wondering, Gnosis Chain has its testnet called Chiado, the details of which can be found here: https://docs.gnosischain.com/about/networks/chiado.
+    Gnosis Chain is not a testnet. It is a fully operational Layer 1 utilizing Proof of Stake. But if you are wondering, Gnosis Chain has its testnet called Chiado, the details of which can be found here: https://docs.gnosischain.com/concepts/networks/chiado.
 
 25. Is the grants program still running?
 

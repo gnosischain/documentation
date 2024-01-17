@@ -12,8 +12,8 @@ keywords:
 
 | Network Name       | Gnosis                    |
 | ------------------ | ------------------------- |
-| Native (fee) token | [xDai](../tokens/xdai.md) |
-| Staking token      | [GNO](../tokens/gno.md)   |
+| Native (fee) token | [xDai](/concepts/tokens/xdai.md) |
+| Staking token      | [GNO](/concepts/tokens/gno.md)   |
 | Chain ID           | 100                       |
 
 ## Key Infra
@@ -64,14 +64,10 @@ keywords:
 
 ## Native Tokens
 
-- Fee Token: [xDai](../tokens/xdai.md)
-- Staking Token: [GNO](../tokens/gno.md)
+- Fee Token: [xDai](/concepts/tokens/xdai)
+- Staking Token: [GNO](/concepts/tokens/gno)
 
-| Token               | Address                                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GNO on Ethereum     | [0x6810e776880c02933d47db1b9fc05908e5386b96](https://etherscan.io/token/0x6810e776880c02933d47db1b9fc05908e5386b96)    |
-| GNO on Gnosis Chain | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb)   |
-| Deposit contract    | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9) |
+You can find a list of contract addresses for Gnosis Mainnet tokens in the [Useful Addresses](/developers/getting-started/contracts) page.
 
 ## Network Config
 
@@ -88,7 +84,7 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 
 ## Key Contracts
 
-- [xDai Bridge](../../bridges/tokenbridge/xdai-bridge#key-contracts)
-- [AMB Bridge](../../bridges/tokenbridge/amb-bridge#key-contracts)
-- [OmniBridge](../../bridges/tokenbridge/omnibridge#key-contracts)
-- [Beacon Chain](../../specs/gbc/README.md)
+- [xDai Bridge](/bridges/tokenbridge/xdai-bridge#key-contracts)
+- [AMB Bridge](/bridges/tokenbridge/amb-bridge#key-contracts)
+- [OmniBridge](/bridges/tokenbridge/omnibridge#key-contracts)
+- [Beacon Chain](/concepts/specs/gbc/README.md)
