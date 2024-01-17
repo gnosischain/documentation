@@ -9,7 +9,7 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 ### Proof-of-Stake
 
 - Gnosis (and Ethereum) utilize a Proof-of-Stake cryptoeconomic incentive system to secure the network and disincentivize malicious behavior by nodes.
-- Nodes that play an active role in validating the network are required to stake [32 mGNO](../about/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties.
+- Nodes that play an active role in validating the network are required to stake [32 mGNO](../concepts/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties.
 - However, if they engage in malicious or disruptive activity on the network, their stake gets "slashed", and they can also be permanently removed from the validator pool.
 - Nodes that go offline also attract a penalty for "inactivity leaks", although these are significantly less harsh if the node is offline only for a short period of time.
 
@@ -46,7 +46,7 @@ Gnosis' rewards curve was [proposed in Nov 2021](https://forum.gnosis.io/t/launc
 
 :::
 
-- The minimum initial stake to run a validator is [1 GNO](/about/tokens/gno) .
+- The minimum initial stake to run a validator is [1 GNO](/concepts/tokens/gno) .
 - The reward rate drops with more active validators
 
 | GNO staked | % of GNO validating | reward for validators | Total GNO rewards | Overall inflation p.a. |

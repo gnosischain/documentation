@@ -28,7 +28,7 @@ An open, resilient and credibly neutral infrastructure is only possible if it’
 
 #### Proof-of-Stake
 
-- Gnosis minimum stake is [1 GNO](../about/tokens/gno.md) to run a validator.
+- Gnosis minimum stake is [1 GNO](/concepts/tokens/gno) to run a validator.
 - Nodes receive [rewards](./rewards-penalties.md) for being an active validator, and suffer [penalties](./rewards-penalties.md) for malicious or negligent behavior.
 
 ## Choosing an Approach
@@ -349,9 +349,9 @@ teku \
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Gnosis network. This requires only 1 GNO. Check out how to [deposit validators](../node/manual/validator/deposit.md).
+Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Gnosis network. This requires only 1 GNO. Check out how to [deposit validators](/node/manual/validator/deposit).
 
-If you don't want to run your own node but interested in staking your GNO to earn fee, look into [liquid staking](../tools/beacon-chain/liquid-staking.md) for an overview about staking options.
+If you don't want to run your own node but interested in staking your GNO to earn fee, look into [liquid staking](/tools/beacon-chain/liquid-staking) for an overview about staking options.
 
 ## Reference
 

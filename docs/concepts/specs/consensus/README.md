@@ -19,7 +19,7 @@ You can read more on the Ethereum merge here: [https://ethereum.org/en/upgrades/
 
 ### Users
 
-You do not need to do anything. Your funds remain as-is during the transition. There were NOT any new token issued before, during or after the Merge. The [$GNO token](/about/tokens/gno) continues to be used for staking, while the [$xDai token](/about/tokens/xdai) is used as the native gas token. 
+You do not need to do anything. Your funds remain as-is during the transition. There were NOT any new token issued before, during or after the Merge. The [$GNO token](/concepts/tokens/gno) continues to be used for staking, while the [$xDai token](/concepts/tokens/xdai) is used as the native gas token. 
 
 :::danger scammer alert
 Please be vigilant of scammers who may use this occasion to launch scam tokens, or phish for seed phrases.  
@@ -63,10 +63,10 @@ You must **run an execution client** alongside your existing consensus client. N
 ## More info
 
 - [Testnet Deployments](https://github.com/gnosischain/consensus-deployment-ansible#readme)
-- [Chiado Testnet](/about/networks/chiado)
+- [Chiado Testnet](/concepts/networks/chiado)
 
 
 ## Pre-merge consensus articles
 
-- [POSDAO](/specs/consensus/posdao)
-- [AURA](/specs/consensus/aura)
+- [POSDAO](/concepts/specs/consensus/posdao)
+- [AURA](/concepts/specs/consensus/aura)
