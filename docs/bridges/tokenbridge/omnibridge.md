@@ -86,7 +86,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 | Token            | Ethereum -> Gnosis | Gnosis -> Ethereum |
 | ---------------- | ------------------ | ------------------ |
 | Approx. Gas Cost |                    |                    |
-| Bridge Fees      | 0%                 | 0%                 |
+| Bridge Fees      | 0%                 | 0.1%               |
 
 #### Single Transaction Limits
 
