@@ -12,24 +12,26 @@ Welcome to the Developers section! This section gives an extensive overview on h
 
 - [Quickstart](/developers/getting-started/quickstart): Deploy your first contract on Gnosis Chain.
 - [Useful Contracts](/developers/getting-started/contracts): A list of usefull contracts for Gnosis Chain development.
-- [Deploying a Smart Contract](/developers/smart-contracts/): Understand how to deploy contracts on Gnosis Chain.
-- [Interacting with Gnosis Chain](/developers/interact): Learn how to interact with Gnosis Chain wallets, APIs, SDKs, etc.
-- [Building dApps](/developers/building/first-contract): Learn how to build your first dApp on Gnosis Chain.
 
 ## How to
 
-- [Verify Cntracts](/developers/verify): Learn how to verify your deployed contracts.
-- [Bridge](/developers/tutorials): Bridge assets to Gnosis Chain.
+- [Interact with Gnosis Chain](/developers/interact/metamask): Learn how to interact with Gnosis Chain wallets, APIs, SDKs, etc.
+- [Deploy a Contract](/developers/smart-contracts/truffle): Learn how to deploy contracts on Gnosis Chain.
+- [Verify a Contract](/developers/verify/blockscout): Learn how to verify your deployed contracts.
+- [Bridge to Gnosis Chain](/bridges/tutorials/using-amb): Bridge assets to Gnosis Chain.
 
 ## Tutorials
 
-- [Account Abstraction](/developers/account-abstraction/safe): Integrate account abstraction into your project.
+- [Deploying a Smart Contract](/developers/smart-contracts/): Understand how to deploy contracts on Gnosis Chain.
 - [Building a Full Stack dApp](/developers/building/full-stack-dapp): Create a full stack dApp that interacts with Gnosis Chain.
 - [Launching ERC20 Tokens](/developers/building/token): Launch your own token on Gnosis Chain.
 - [Launching NFTs](/developers/building/nft): Launch NFTs on Gnosis Chain. 
 
-## Tools
-- [Tools](/tools): A list of useful tools during the development process.
+## Resources
+
+- [Updates](/updates): A slist of latest updates
+- [FAQ](/faq/node/generalQuestions): A list of frequently askedd questions
+- [Communication](/developers/communication): Communication channels
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
 - [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.
