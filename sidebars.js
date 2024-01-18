@@ -106,6 +106,16 @@ const sidebars = {
         "concepts/specs/security-audit",
       ],
     },
+    {
+      type: "category",
+      label: "Account Abstraction",
+      link: { type: "doc", id: "concepts/networks/README" },
+      collapsed: false,
+      items: [
+        "concepts/account-abstraction/safe",
+        "concepts/account-abstraction/particle-network",
+      ],
+    },
   ],
 
   developers: [
@@ -122,78 +132,65 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Deploying a Smart Contract",
+      label: "How to",
       collapsed: false,
-      link: { type: "doc", id: "developers/smart-contracts/README" },
       items: [
-        "developers/smart-contracts/truffle",
-        "developers/smart-contracts/hardhat",
-        "developers/smart-contracts/foundry",
-        "developers/smart-contracts/cookbook",
+        {
+          type: "category",
+          label: "Interact with Gnosis",
+          collapsed: true,
+          items: [
+            "developers/interact/metamask",
+            "developers/interact/web3-js",
+            "developers/interact/ethers-js",
+            "developers/interact/rainbowkit-wagmi",
+            "developers/interact/dynamic",
+          ],
+        },
+        {
+          type: "category",
+          label: "Deploy a Contract",
+          collapsed: true,
+          items: [
+            "developers/smart-contracts/truffle",
+            "developers/smart-contracts/hardhat",
+            "developers/smart-contracts/foundry",
+            "developers/smart-contracts/cookbook",
+          ],
+        },
+        {
+          type: "category",
+          label: "Verify a Contract",
+          collapsed: true,
+          items: [
+            "developers/verify/blockscout",
+            "developers/verify/gnosisscan",
+            "developers/verify/truffle",
+            "developers/verify/sourcify",
+          ],
+        },
+        {
+          type: "category",
+          label: "Bridge to Gnosis Chain",
+          collapsed: true,
+          items: [
+            { type: "doc", label: "Using xDAI Bridge", id: "bridges/tutorials/using-xdai-bridge/README" },
+            { type: "doc", label: "Using AMB", id: "bridges/tutorials/using-amb" },
+            { type: "doc", label: "Using Ominbridge", id: "bridges/tutorials/using-omnibridge/README" }
+          ],
+        },
       ],
     },
     {
       type: "category",
-      label: "Interacting with Gnosis",
-      collapsed: true,
-      link: {
-        slug: "developers/interact",
-        type: "generated-index",
-        title: "Interacting with Gnosis",
-      },
-      items: [
-        "developers/interact/metamask",
-        "developers/interact/web3-js",
-        "developers/interact/ethers-js",
-        "developers/interact/rainbowkit-wagmi",
-        "developers/interact/dynamic",
-      ],
-    },
-    {
-      type: "category",
-      label: "Building DApps",
+      label: "Tutorials",
       collapsed: false,
-      link: { type: "doc", id: "developers/building/first-contract" },
       items: [
         "developers/building/first-contract",
         "developers/building/full-stack-dapp",
         "developers/building/token",
         "developers/building/nft",
       ],
-    },
-    {
-      type: "category",
-      label: "Building Account Abstraction",
-      collapsed: false,
-      link: { type: "doc", id: "developers/account-abstraction/safe" },
-      items: [
-        "developers/account-abstraction/safe",
-        "developers/account-abstraction/gelato",
-        "developers/account-abstraction/particle-network",
-      ],
-    },
-    {
-      type: "category",
-      label: "Verify Contracts",
-      collapsed: false,
-      link: { type: "doc", id: "developers/verify/README" },
-      items: [
-        "developers/verify/blockscout",
-        "developers/verify/gnosisscan",
-        "developers/verify/truffle",
-        "developers/verify/sourcify",
-      ],
-    },
-    {
-      type: "category",
-      label: "Bridge Tutorials",
-      link: {
-        slug: "developers/tutorials",
-        type: "generated-index",
-        title: "Tutorials",
-      },
-      collapsed: false,
-      items: bridgeTutorials,
     },
     {
       type: "category",
