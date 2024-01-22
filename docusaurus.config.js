@@ -98,12 +98,6 @@ const config = {
             sidebarId: "node",
             label: "Node operators",
           },
-           {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "bridge",
-            label: "Bridges",
-          },
           {
             type: "docSidebar",
             position: "left",
