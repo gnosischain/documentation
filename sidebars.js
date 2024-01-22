@@ -56,13 +56,13 @@ const sidebars = {
       type: "category",
       label: "Tokens",
       link: { type: "doc", id: "concepts/tokens/README" },
-      collapsed: false,
+      collapsed: true,
       items: ["concepts/tokens/xdai", "concepts/tokens/gno"],
     },
     {
       type: "category",
       label: "Protocol Specs",
-      collapsed: false,
+      collapsed: true,
       link: { type: "doc", id: "concepts/specs/README" },
       items: [
         {
@@ -110,10 +110,74 @@ const sidebars = {
       type: "category",
       label: "Account Abstraction",
       link: { type: "doc", id: "concepts/networks/README" },
-      collapsed: false,
+      collapsed: true,
       items: [
         "concepts/account-abstraction/safe",
         "concepts/account-abstraction/particle-network",
+      ],
+    },
+    {
+      type: "category",
+      label: "Bridges",
+      collapsed: true,
+      items: [
+        {
+          type: "category",
+          label: "Overview",
+          link: { type: "doc", id: "bridges/README" },
+          collapsed: true,
+          items: [
+            {
+              type: "category",
+              label: "Governance",
+              collapsed: true,
+              link: { type: "doc", id: "bridges/governance/README" },
+              items: ["bridges/governance/decisions"],
+            },
+            "bridges/third-party",
+            "bridges/audits",
+            "bridges/roadmap",
+          ],
+        },
+        {
+          type: "doc",
+          label: "Bridge Explorer",
+          id: "bridges/bridge-explorer",
+        },
+        {
+          type: "category",
+          label: "Hashi",
+          collapsed: true,
+          items: [
+            "bridges/hashi/README",
+            "bridges/hashi/Deployment",
+            "bridges/hashi/Application",
+            "bridges/hashi/Tutorial",
+          ],
+        },
+        {
+          type: "category",
+          label: "Native Bridges",
+          collapsed: true,
+          items: [
+            "bridges/tokenbridge/amb-bridge",
+            "bridges/tokenbridge/xdai-bridge",
+            "bridges/tokenbridge/omnibridge",
+            "bridges/tokenbridge/nft-bridge",
+          ],
+        },
+
+        {
+          type: "category",
+          label: "Tutorials",
+          link: {
+            slug: "bridges/tutorials",
+            type: "generated-index",
+            title: "Tutorials",
+          },
+          collapsed: true,
+          items: bridgeTutorials,
+        },
       ],
     },
   ],
@@ -707,65 +771,6 @@ const sidebars = {
         },
         "tools/token-distribution",
       ],
-    },
-  ],
-  bridge: [
-    {
-      type: "category",
-      label: "Overview",
-      link: { type: "doc", id: "bridges/README" },
-      collapsed: false,
-      items: [
-        {
-          type: "category",
-          label: "Governance",
-          collapsed: false,
-          link: { type: "doc", id: "bridges/governance/README" },
-          items: ["bridges/governance/decisions"],
-        },
-        "bridges/third-party",
-        "bridges/audits",
-        "bridges/roadmap",
-      ],
-    },
-    {
-      type: "doc",
-      label: "Bridge Explorer",
-      id: "bridges/bridge-explorer",
-    },
-    {
-      type: "category",
-      label: "Hashi",
-      collapsed: false,
-      items: [
-        "bridges/hashi/README",
-        "bridges/hashi/Deployment",
-        "bridges/hashi/Application",
-        "bridges/hashi/Tutorial",
-      ],
-    },
-    {
-      type: "category",
-      label: "Native Bridges",
-      collapsed: false,
-      items: [
-        "bridges/tokenbridge/amb-bridge",
-        "bridges/tokenbridge/xdai-bridge",
-        "bridges/tokenbridge/omnibridge",
-        "bridges/tokenbridge/nft-bridge",
-      ],
-    },
-
-    {
-      type: "category",
-      label: "Tutorials",
-      link: {
-        slug: "bridges/tutorials",
-        type: "generated-index",
-        title: "Tutorials",
-      },
-      collapsed: false,
-      items: bridgeTutorials,
     },
   ],
   faq: [
