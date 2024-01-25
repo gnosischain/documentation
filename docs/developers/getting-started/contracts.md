@@ -6,7 +6,7 @@ title: Useful Contracts
 
 # Useful Contracts
 
-Here are some contract addresses that may be useful during Gnosis Chain development.
+Here are some contract addresses that might be useful during Gnosis Chain development.
 
 ## Ethereum Mainnet
 

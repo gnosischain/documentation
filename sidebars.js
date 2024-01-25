@@ -104,6 +104,7 @@ const sidebars = {
         },
         "concepts/specs/bug-bounty",
         "concepts/specs/security-audit",
+        "concepts/specs/deposit-contracts",
       ],
     },
     {
