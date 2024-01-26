@@ -75,7 +75,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Bridge explorer is now live. See <a target="_blank" rel="noopener noreferrer" href="/bridges/bridge-explorer/">Bridge Explorer for more info</a>.',
+          'Chiado testnet Dencun hardfork is happening on 31 January 2024 at 18.40 UTC, Slot: 8265728 Epoch: 516608. Check out <a target="_blank" rel="noopener noreferrer" href="https://www.gnosis.io/blog/chiados-dencun-hardfork">here</a>.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
