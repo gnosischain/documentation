@@ -148,12 +148,7 @@ const sidebars = {
           type: "category",
           label: "Hashi",
           collapsed: true,
-          items: [
-            "bridges/hashi/README",
-            "bridges/hashi/Deployment",
-            "bridges/hashi/Application",
-            "bridges/hashi/Tutorial",
-          ],
+          items: ["bridges/hashi/README"],
         },
         {
           type: "category",
@@ -238,9 +233,21 @@ const sidebars = {
           label: "Bridge to Gnosis Chain",
           collapsed: true,
           items: [
-            { type: "doc", label: "Using xDAI Bridge", id: "bridges/tutorials/using-xdai-bridge/README" },
-            { type: "doc", label: "Using AMB", id: "bridges/tutorials/using-amb" },
-            { type: "doc", label: "Using Ominbridge", id: "bridges/tutorials/using-omnibridge/README" }
+            {
+              type: "doc",
+              label: "Using xDAI Bridge",
+              id: "bridges/tutorials/using-xdai-bridge/README",
+            },
+            {
+              type: "doc",
+              label: "Using AMB",
+              id: "bridges/tutorials/using-amb",
+            },
+            {
+              type: "doc",
+              label: "Using Ominbridge",
+              id: "bridges/tutorials/using-omnibridge/README",
+            },
           ],
         },
       ],
