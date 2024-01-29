@@ -34,7 +34,7 @@ After you create a wallet, add the Chiado network to the list of available netwo
 
 Lastly, top up the wallet with xDAI that you'll use for contract deployments on one of the environments: Chiado Testnet or Gnosis Mainnet. It's recommended to deploy contracts on the testnet first and use the mainnet only after you've done proper security audits.
 
-Testnets on any EVM-compatible chains don't require real funds to pay for transactions. Instead, they use faucets that represent free tokens. You can use the following faucets to get xDAI on Chiado testnet:
+Testnets on any EVM-compatible chains don't require real funds to pay for transactions. Instead, they use faucets that represent free tokens. You can use the following faucets to get xDAI on the Chiado testnet:
 - [Chiado faucet](https://faucet.chiadochain.net/)
 - [Gnosis Chain Faucet](https://gnosisfaucet.com/)
 
