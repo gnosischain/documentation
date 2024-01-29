@@ -9,7 +9,7 @@ The Deposit contracts allow to deposit ERC20 tokens to Gnosis Chain and withdraw
 
 The Deposit contracts on mainnet and Gnosis Chain are almost identical. However, Gnosis Chain users need to manually call the `claimWithdrawal(address)` or `claimWithdrawals(addresses)` method to withdraw the tokens/rewards back, whereas on Ethereum mainnet that's done automatically.
 
-This is due to the different types of reward tokens: native token on mainnet (ETH) and ERC20 token on Gnosis Chain (GNO). An alternative solution could be to mint new reward tokens or transfer GNO tokens on the mainnet each time. This approach would be costly and error-prone.
+The main issue is that GNO is an ERC20 token and it must emit `Transfer` events as per [EIP-20](https://eips.ethereum.org/EIPS/eip-20#transfer), which Gnosis Chain cannot do with system transactions at the moment. That's why it's required to call a normal trasaction to claim GNO tokens. The alternative would be very complex and diverge from Ethereum on the EL side.
 
 The main withdrawal methods look as follows:
 
