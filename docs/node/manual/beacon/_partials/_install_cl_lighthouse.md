@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
     ```
 
  - Execute Lighthouse
-    ```bash 
+    ```bash
     ./lighthouse \
     --network gnosis beacon_node \
     --datadir=data \
@@ -65,7 +65,7 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     ```
 
  - Execute Lighthouse
-    ```bash 
+    ```bash
     ./lighthouse \
     --network gnosis beacon_node \
     --datadir=data \
@@ -105,18 +105,18 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     ```
 - Clone Gonsis Chain configuration repository from github
     ```bash
-    git clone https://github.com/gnosischain/configs.git 
+    git clone https://github.com/gnosischain/configs.git
     ```
 
 
 - Run Lighthouse beacon node
-    ```bash 
-    ./lighthouse \
-    --testnet-dir=./configs/chiado bn \
-    --datadir=data \
-    --execution-endpoints=http://localhost:8551 \
-    --execution-jwt=../jwtsecret/jwt.hex \
-    --checkpoint-sync-url https://checkpoint.chiadochain.net
+    ```bash
+    ./lighthouse bn \
+      --network chiado \
+      --execution-endpoints=http://localhost:8551 \
+      --execution-jwt=../jwtsecret/jwt.hex \
+      --checkpoint-sync-url https://checkpoint.chiadochain.net \
+      --disable-deposit-contract-sync
     ```
 
 </TabItem>
@@ -142,20 +142,20 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
     ```
 - Clone Gonsis Chain configuration repository from github
     ```bash
-    git clone https://github.com/gnosischain/configs.git 
+    git clone https://github.com/gnosischain/configs.git
     ```
 
 
 - Run Lighthouse beacon node
-    ```bash 
-    ./lighthouse \
-    --testnet-dir=./configs/chiado bn \
-    --datadir=data \
-    --execution-endpoints=http://localhost:8551 \
-    --execution-jwt=../jwtsecret/jwt.hex \
-    --checkpoint-sync-url https://checkpoint.chiadochain.net
+    ```bash
+    ./lighthouse bn \
+      --network chiado \
+      --execution-endpoints=http://localhost:8551 \
+      --execution-jwt=../jwtsecret/jwt.hex \
+      --checkpoint-sync-url https://checkpoint.chiadochain.net \
+      --disable-deposit-contract-sync
     ```
-    
+
 </TabItem>
 </Tabs>
 
