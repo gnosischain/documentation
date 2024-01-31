@@ -159,10 +159,10 @@ Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure you
 Windows
 ```
 # Gnosis Mainnet
-./Nethermind.Runner --config gnosis --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+./nethermind --config gnosis --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 
 # Chiado Testnet
-./Nethermind.Runner --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+./nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
 ```
 
 Linux and MAC

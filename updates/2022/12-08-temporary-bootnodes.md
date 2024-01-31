@@ -35,8 +35,8 @@ Nethermind utilizes the flag [`--Discovery.Bootnodes`](https://github.com/Nether
 Docs: [Nethermind Github](https://github.com/NethermindEth/nethermind/blob/3734ff4c150cd177958395e34e731e15d051e1fd/src/Nethermind/Nethermind.Init/Steps/UpdateDiscoveryConfig.cs#L37)
 
 ```
-Nethermind.Runner
-    --config xDai
+nethermind
+    --config gnosis
     --Discovery.Bootnodes ...   # comma separated enode addresses
 ```
 
