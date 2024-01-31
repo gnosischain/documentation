@@ -89,6 +89,7 @@ const sidebars = {
           collapsed: true,
           link: { type: "doc", id: "concepts/specs/hard-forks/README" },
           items: [
+            "concepts/specs/hard-forks/dencun",
             "concepts/specs/hard-forks/shanghai-capella",
             "concepts/specs/hard-forks/merge",
             "concepts/specs/hard-forks/21735000",
