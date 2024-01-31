@@ -57,3 +57,21 @@ Gnosis chain has both a lower `CHURN_LIMIT_QUOTIENT` and faster epoch times. A `
 | ------- | ------------ | ----------------------------- | --------- | ------------------ |
 | Chiado  | 1706724940 | Wed Jan 31 2024 18:15:40 GMT+0000 | -         | 516608           |
 | Mainnet | TBD | TBD | -         | TBD             |
+
+## How to Prepare
+
+### For Validators
+
+1. Update your clients:
+
+    Execution Layer
+
+    - ✅ NethermindEth [v1.25.3](https://github.com/NethermindEth/nethermind/releases/tag/1.25.3)
+    - ✅ ErigonEth [v2.57.1](https://github.com/ledgerwatch/erigon/releases/tag/v2.57.1)
+
+    Consensus Layer
+
+    - ✅ Lighthouse [v4.6.0](https://github.com/sigp/lighthouse/releases/tag/v4.6.0)
+    - ✅ Teku [v24.1.1](https://github.com/Consensys/teku/releases/tag/24.1.1)
+    - ✅ Nimbus [v24.1.2](https://github.com/status-im/nimbus-eth2/releases/tag/v24.1.2)
+    - ⌛️ Lodestar [v1.15.0](https://github.com/ChainSafe/lodestar/releases/tag/v1.15.0)
