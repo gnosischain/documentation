@@ -160,7 +160,6 @@ const sidebars = {
             "bridges/tokenbridge/amb-bridge",
             "bridges/tokenbridge/xdai-bridge",
             "bridges/tokenbridge/omnibridge",
-            "bridges/tokenbridge/nft-bridge",
           ],
         },
 
