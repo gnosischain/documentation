@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 
 - Execute Nethermind
     ```shell
-    ./Nethermind.Runner \
+    ./nethermind \
         --config gnosis \
         --JsonRpc.Enabled true \
         --HealthChecks.Enabled true \
@@ -59,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
 - Run the following command:
     ```shell
-    .\Nethermind.Runner.exe \
+    ./nethermind \
         --config gnosis \
         --JsonRpc.Enabled true \
         --HealthChecks.Enabled true \
@@ -103,7 +103,7 @@ import TabItem from '@theme/TabItem';
 
 - Execute Nethermind
     ```shell
-    ./Nethermind.Runner \
+    ./nethermind \
         --config chiado \
         --JsonRpc.Enabled true \
         --HealthChecks.Enabled true \
@@ -126,7 +126,7 @@ import TabItem from '@theme/TabItem';
 
 - Run the following command:
     ```shell
-    .\Nethermind.Runner.exe \
+    ./nethermind \
         --config chiado \
         --JsonRpc.Enabled true \
         --HealthChecks.Enabled true \
