@@ -75,7 +75,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Chiado testnet Dencun hardfork is happening on 31 January 2024 at 18.40 UTC, Slot: 8265728 Epoch: 516608. Check out <a target="_blank" rel="noopener noreferrer" href="https://www.gnosis.io/blog/chiados-dencun-hardfork">here</a>.',
+          'Chiado testnet Dencun hardfork is completed! Check out <a target="_blank" rel="noopener noreferrer" href="https://x.com/gnosischain/status/1752759697302532405?s=20">here</a>.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,

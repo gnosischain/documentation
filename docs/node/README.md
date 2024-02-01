@@ -286,7 +286,7 @@ Please keep in mind that this is just a basic example, all other settings will b
 Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON RPC is enabled by default.
 
 ```
-Nethermind.Runner --config gnosis \
+nethermind --config gnosis \
     --datadir /data/gnosis \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
