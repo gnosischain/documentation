@@ -4,11 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
 
-  {
-    title : 'Developer Guides',
-    link : '/Technical-Guides',
-    Svg: require('@site/static/img/home/Gnosis-Tutorial.svg').default,
-  },
+  
   {
     title: 'Tutorials',
     link: '/developers',
@@ -24,6 +20,11 @@ const FeatureList = [
     link: '/node',
     Svg: require('@site/static/img/home/Gnosis-Node.svg').default,
   },
+  {
+    title : 'Developer Guides',
+    link : '/Technical-Guides',
+    Svg: require('@site/static/img/home/Gnosis-Tutorial.svg').default,
+  }
 ];
 
 function Feature({Svg, title, link}) {
