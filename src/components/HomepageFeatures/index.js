@@ -3,6 +3,12 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const FeatureList = [
+
+  {
+    title : 'Developer Guides',
+    link : '/Technical-Guides',
+    Svg: require('@site/static/img/home/Gnosis-Tutorial.svg').default,
+  },
   {
     title: 'Tutorials',
     link: '/developers',
