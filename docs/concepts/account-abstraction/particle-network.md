@@ -14,10 +14,10 @@ Particle has integrated Gnosis’ Mainnet and Testnet through both EOA interacti
 Particle Network offers native ERC-4337 Account Abstraction capabilities within their Smart Wallet-as-a-Service stack. This allows developers to facilitate end-to-end utilization of smart accounts, beginning at the onboarding process and ending at the construction and sponsorship of UserOperations. 
 
 This integration is facilitated by:
-- [Particle Network Wallet-as-a-Service](https://particle.network)
-- [Particle Network AA SDK](https://docs.particle.network/developers/account-abstraction/web)
-- [Particle Network Bundler](https://github.com/Particle-Network/particle-bundler-server)
-- [Particle Network Paymaster](https://docs.particle.network/developers/account-abstraction/paymaster)
+- [Particle Network Wallet-as-a-Service](https://developers.particle.network)
+- [Particle Network AA SDK](https://developers.particle.network/reference/introduction-to-smart-waas)
+- [Particle Network Bundler](https://developers.particle.network/docs/particle-bundler)
+- [Particle Network Paymaster](https://developers.particle.network/docs/omnichain-paymaster)
 
 And thus, the collection of these technologies is coined as "Smart Wallet-as-a-Service." You can learn more about Particle Network's Smart Wallet-as-a-Service Modular Stack [here](https://blog.particle.network/announcing-our-smart-wallet-as-a-service-modular-stack-upgrading-waas-with-erc-4337/).
 
