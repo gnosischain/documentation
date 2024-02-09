@@ -217,7 +217,10 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          { to: "/updates/2022/12/10/merge", from: "/updates/20221210-merge" },
+          { 
+            to: "/updates/2022/12/10/merge", 
+            from: "/updates/20221210-merge" 
+          },
           {
             to: "/updates/2022/12/08/temporary-bootnodes",
             from: "/updates/20221208-temporary-bootnodes",
@@ -226,6 +229,15 @@ const config = {
             to: "/updates/2022/12/05/bridges-pause",
             from: "/updates/202212-bridges-pause",
           },
+          {
+            to: "/concepts/networks/chiado",
+            from: "/about/networks/chiado",
+          },
+          {
+            to: "/concepts/networks/mainnet",
+            from: "/about/networks/mainnet",
+          },
+         
         ],
       },
     ],
