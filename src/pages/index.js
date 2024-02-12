@@ -14,7 +14,7 @@ function HomepageHeader() {
         <img src='img/gnosis-chain.svg' alt='Gnosis Chain' />
         <h1 className='margin-vert--md'>Documentation</h1>
 
-        <div className={clsx('margin-vert--xl', styles.flexCol)} >
+        <div className={clsx('margin-top--xl', styles.flexCol)} >
           <h2>Deploy a Dapp in 5 Minutes</h2>
           <div className={styles.copyField}>
             npx build-with-gnosis
@@ -33,10 +33,12 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description={`${siteConfig.tagline}`}>
-      <HomepageHeader />
-
-      <HomepageFeatures />
+      description={`${siteConfig.tagline}`}
+    >
+      <div className={clsx(styles.homePage)} >
+        <HomepageHeader />
+        <HomepageFeatures />
+      </div>
     </Layout>
   );
 }

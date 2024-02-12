@@ -4,11 +4,11 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 4rem 0 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #24644c;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -60,8 +60,9 @@
 
 .icon:hover {
   transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transform: scale(1.2); /* Scale the SVG on hover */
 }
 
-.icon:hover {
-  transform: scale(1.2); /* Scale the SVG on hover */
+.homePage {
+  background: linear-gradient(0deg, #133629 0%, #3E6957 100%) !important;
 }

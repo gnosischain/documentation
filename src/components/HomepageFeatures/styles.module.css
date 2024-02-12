@@ -3,7 +3,59 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
-  background: white;
+  /* background: #24644c; */
+}
+
+.featureRow {
+  justify-content: center;
+  /* gap: 1rem; */
+}
+
+.featureCardContainer {
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.featureCardContainer a {
+  width: 100%;
+}
+
+.featureCardContainer a:hover {
+  text-decoration: none;
+}
+
+.featureCard {
+  background: #F0EBDE;
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  /* max-width: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.featureCard:hover {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transform: scale(1.01); /* Scale the SVG on hover */
+}
+
+.featureCard h3 {
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.featureCard h5 {
+  flex-grow: 1;
+}
+
+.featureCard p {
+  margin-bottom: 0;
+  text-decoration: underline;
 }
 
 .featureSvg {
