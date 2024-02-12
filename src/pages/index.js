@@ -1,13 +1,22 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
+// import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  // const {siteConfig} = useDocusaurusContext();
+
+  const handleClickCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('npx build-with-gnosis');
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className='container margin-vert--lg'>
@@ -18,7 +27,7 @@ function HomepageHeader() {
           <h2>Deploy a Dapp in 5 Minutes</h2>
           <div className={styles.copyField}>
             npx build-with-gnosis
-            <button className={styles.iconButton}>
+            <button className={styles.iconButton} onClick={handleClickCopy}>
               <img className={styles.icon} src='img/copy-icon.svg' alt='Copy' />
             </button>
           </div>

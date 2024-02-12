@@ -88,6 +88,6 @@
 }
 
 .icon:hover {
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-  transform: scale(1.2); /* Scale the SVG on hover */
+  transition: transform 0.3s ease;
+  transform: scale(1.2);
 }
