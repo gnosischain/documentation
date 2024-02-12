@@ -2,9 +2,29 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+ @font-face {
+  font-family: 'GT Planar';
+  src: url("../fonts/GT-Planar-Regular.woff2") format("woff2"),
+    url("../fonts/GT-Planar-Regular.woff") format("woff")
+    url("../fonts/GT-Planar-Regular.ttf") format("true-type");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.homePage {
+  background: linear-gradient(0deg, #133629 0%, #3E6957 100%) !important;
+}
+
+.homePage h1,h2,h3,h4,h5,div {
+  font-family: 'GT Planar', sans-serif;
+}
+
+.homePage h1 {
+  font-size: 2rem;
+}
 
 .heroBanner {
-  padding: 4rem 0 2rem 0;
+  padding: 6rem 0 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -48,6 +68,15 @@
     width: 100%;
     min-width: 100%;
   }
+
+  .homePage h1 {
+    font-size: 1.5rem;
+  }
+
+  .homePage h2 {
+    font-size: 1.2rem;
+  }
+  
 }
 
 .iconButton {
@@ -61,8 +90,4 @@
 .icon:hover {
   transition: transform 0.3s ease; /* Smooth transition for scaling */
   transform: scale(1.2); /* Scale the SVG on hover */
-}
-
-.homePage {
-  background: linear-gradient(0deg, #133629 0%, #3E6957 100%) !important;
 }

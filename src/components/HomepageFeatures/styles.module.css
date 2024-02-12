@@ -46,16 +46,21 @@
 
 .featureCard h3 {
   margin: 2rem 0;
+  font-size: 1.3rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .featureCard h5 {
   flex-grow: 1;
+  font-size: 1rem;
 }
 
 .featureCard p {
   margin-bottom: 0;
   text-decoration: underline;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .featureSvg {
