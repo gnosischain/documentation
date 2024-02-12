@@ -10,14 +10,18 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">Gnosis Chain Docs</h1>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/developers">
-            Start Building!
-          </Link>
+      <div className='container margin-vert--lg'>
+        <img src='img/gnosis-chain.svg' alt='Gnosis Chain' />
+        <h1 className='margin-vert--md'>Documentation</h1>
+
+        <div className={clsx('margin-vert--xl', styles.flexCol)} >
+          <h2>Deploy a Dapp in 5 Minutes</h2>
+          <div className={styles.copyField}>
+            npx build-with-gnosis
+            <button className={styles.iconButton}>
+              <img className={styles.icon} src='img/copy-icon.svg' alt='Copy' />
+            </button>
+          </div>
         </div>
       </div>
     </header>

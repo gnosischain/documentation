@@ -9,6 +9,13 @@
   position: relative;
   overflow: hidden;
   background-color: #24644c;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.heroBanner img {
+  max-width: 600px;
 }
 
 @media screen and (max-width: 996px) {
@@ -17,8 +24,44 @@
   }
 }
 
-.buttons {
+/* general flex column */
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyField {
+  padding: 8px 14px 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #F0EBDE;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 320px) {
+  .copyField {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.iconButton {
+  background-color: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.icon:hover {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Scale the SVG on hover */
 }
