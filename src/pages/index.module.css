@@ -15,9 +15,17 @@
   background: linear-gradient(0deg, #133629 0%, #3E6957 100%) !important;
 }
 
-.homePage h1,h2,h3,h4,h5,div {
+.homePage h1,h2,h3,h4,h5,span {
   font-family: 'GT Planar', sans-serif;
   color: white;
+}
+
+.container {
+  color: white !important;
+}
+
+.announcementBarContent {
+  color: rgb(9, 30, 66) !important;
 }
 
 .homePage h1 {

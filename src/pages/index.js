@@ -19,18 +19,18 @@ function HomepageHeader() {
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className='container margin-vert--lg'>
+      <div className='container margin-vert--lg' id="intro">
         <img src='img/gnosis-chain.svg' alt='Gnosis Chain' />
         <h1 className='margin-vert--md'>Documentation</h1>
 
         <div className={clsx('margin-top--xl', styles.flexCol)} >
           <h2>Deploy a Dapp in 5 Minutes</h2>
-          <div className={styles.copyField}>
+          <span className={styles.copyField}>
             npx build-with-gnosis
             <button className={styles.iconButton} onClick={handleClickCopy}>
               <img className={styles.icon} src='img/copy-icon.svg' alt='Copy' />
             </button>
-          </div>
+          </span>
         </div>
       </div>
     </header>
