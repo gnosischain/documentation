@@ -45,6 +45,8 @@ footer.footer--dark{
   background-color: #000;
 }
 
+/* navbar */
+
 // [data-theme='dark'] nav.navbar{
 //   background-color: #3E6957;
 // }
@@ -89,6 +91,94 @@ nav.navbar {
   filter: brightness(0) invert(1);
 }
 
+nav.navbar .searchBox {
+  display: none !important;
+}
+
+.navbar__toggle.clean-btn {
+  color: white;
+  margin-right: 2rem;
+}
+
+@media (max-width: 996px) {
+  nav.navbar {
+    padding: 0 1rem;
+  }
+  .navbar__toggle.clean-btn {
+    margin-right: 1rem;
+  }
+  .navbar__logo {
+    height: 28px;
+  }
+  .navbar__items.navbar__items--right a {
+    display: none;
+  }
+}
+
+.navbar-sidebar__item:first-child .menu__list {
+  list-style: none;
+}
+
+// Hide search from navbar
+.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+  display: none;
+}
+
+// Hide theme mode (light/dark) from navbar
+.toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  display: none;
+}
+
+.navbar__items--right a {
+  padding-right: 8px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.navbar__items--right a:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+.navbar__logo:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.04);
+}
+
+.navbar-sidebar__item:first-child .menu__list li:nth-last-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 95px);
+  padding-bottom: 20px;
+}
+
+.navbar-sidebar__item:first-child .menu__list li:nth-last-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 20px;
+}
+
+.navbar-sidebar__item:first-child .menu__list li:nth-last-child(1) {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 95px);
+  padding-bottom: 20px;
+}
+
+// .navbar-sidebar__item li .socialButton {
+//   height: 38px;
+//   width: 38px;
+// }
+
+.socialButton {
+  height: 38px;
+  width: 38px;
+}
+
 .theme-doc-markdown.markdown a{
   font-weight: bold;
 }
@@ -99,7 +189,6 @@ nav.navbar {
   margin-left: auto;
   margin-right: auto
 }
-
 
 /* install sections */
 
@@ -214,91 +303,3 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 .hide-tabs-network .network-tabgroup{
   display: none;
 }
-
-nav.navbar .searchBox {
-  display: none !important;
-}
-
-// Hide search and mode toggle from navbar
-.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
-  display: none;
-}
-
-.toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
-  display: none;
-}
-
-.navbar__items--right a {
-  padding-right: 10px;
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
-
-.navbar__toggle.clean-btn {
-  color: white;
-  margin-right: 15px;
-}
-
-// @media (max-width: 1300px) {
-//   .sidebar {
-//     display: none;
-//   }
-// }
-
-// @media (max-width: 1300px) {
-//   .navbar__items--right {
-//     display: none !important; /* Use !important to ensure that your CSS rule overrides any other conflicting styles */
-//   }
-// }
-
-
-// @media (max-width: 1310px) {
-//   .navbar__item {
-//       display: none;
-//   }
-//   .navbar__toggle {
-//     display: inherit;
-//   }
-// }
-
-// /*
-// Hide color mode toggle in small viewports
-//  */
-//  @media (max-width: 1300px) {
-//   .colorModeToggle {
-//     display: none;
-//   }
-// }
-
-// @media (max-width: 1300px) {
-//   .searchBox {
-//     position: absolute;
-//     right: var(--ifm-navbar-padding-horizontal);
-//   }
-// }
-
-// @media (min-width: 1301px) {
-//   .searchBox {
-//     padding: var(--ifm-navbar-item-padding-vertical)
-//       var(--ifm-navbar-item-padding-horizontal);
-//   }
-// }
-
-
-// @media (max-width: 1300px) {
-//   .sidebar {
-//     display: none;
-//   }
-// }
-
-// @media (max-width: 1300px) {
-//   .tableOfContents {
-//     display: none;
-//   }
-
-//   .docItemContainer {
-//     padding: 0 0.3rem;
-//   }
-// }

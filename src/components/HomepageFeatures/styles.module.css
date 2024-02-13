@@ -7,6 +7,8 @@
 
 .featureRow {
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .featureCardContainer {
@@ -14,6 +16,9 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
+
+  flex: 0 0 calc(33.33%); /* Set flex-basis to 33.33% minus margin/padding */
+  /* margin: 5px;  */
 }
 
 .featureCardContainer a {
@@ -29,17 +34,25 @@
 .featureCard {
   background: #F0EBDE;
   border-radius: 20px;
-  padding: 2rem 1rem;
-  max-width: 450px;
+  padding: 2rem 2rem 1rem 2rem;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* height:100%;
   width:100%; */
-  height: 95%;
+  height: 100%;
   width: 95%;
   text-align: center;
+  min-width: 300px;
 }
+
+@media screen and (max-width: 320px) {
+  .featureCard {
+    min-width: 220px;
+  }
+}
+
 
 .featureCard:hover {
   transition: transform 0.3s ease;
@@ -63,6 +76,12 @@
   text-decoration: underline;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.featureImg {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
 }
 
 .featureSvg {
