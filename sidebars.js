@@ -812,6 +812,22 @@ const sidebars = {
       id: "faq/others",
     },
   ],
+
+  // TODO this are new items, data is nonsense
+  about: [
+    {
+      type: "doc",
+      label: "about",
+      id: "tools/README",
+    },
+  ],
+  bridges:[
+    {
+      type: "doc",
+      label: "bridges",
+      id: "bridges/README",
+    },
+  ],
 };
 
 module.exports = sidebars;

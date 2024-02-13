@@ -45,11 +45,43 @@ footer.footer--dark{
   background-color: #000;
 }
 
-[data-theme='dark'] nav.navbar{
-  background-color: #000;
+// [data-theme='dark'] nav.navbar{
+//   background-color: #3E6957;
+// }
+// [data-theme='light'] nav.navbar{
+//   background-color: #3E6957;
+// }
+
+nav.navbar {
+  background-color: #3E6957;
+  height: 110px;
+  padding: 0 2rem;
+  box-shadow: none;
 }
-[data-theme='light'] nav.navbar{
-  background-color: #F0EBDE;
+
+.navbar__inner {
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: -1px;
+}
+
+.navbar__link {
+  color: white;
+  font-size: 1.1rem;
+  padding: 15px 20px;
+}
+
+.navbar__link:hover {
+  color: #DD7143;
+}
+
+.navbar__link--active {
+  background-color: #DD7143;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.navbar__link--active:hover {
+  color: white;
 }
 
 [data-theme='dark'] .navbar__logo img {
@@ -182,3 +214,91 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 .hide-tabs-network .network-tabgroup{
   display: none;
 }
+
+nav.navbar .searchBox {
+  display: none !important;
+}
+
+// Hide search and mode toggle from navbar
+.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+  display: none;
+}
+
+.toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  display: none;
+}
+
+.navbar__items--right a {
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.navbar__toggle.clean-btn {
+  color: white;
+  margin-right: 15px;
+}
+
+// @media (max-width: 1300px) {
+//   .sidebar {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1300px) {
+//   .navbar__items--right {
+//     display: none !important; /* Use !important to ensure that your CSS rule overrides any other conflicting styles */
+//   }
+// }
+
+
+// @media (max-width: 1310px) {
+//   .navbar__item {
+//       display: none;
+//   }
+//   .navbar__toggle {
+//     display: inherit;
+//   }
+// }
+
+// /*
+// Hide color mode toggle in small viewports
+//  */
+//  @media (max-width: 1300px) {
+//   .colorModeToggle {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1300px) {
+//   .searchBox {
+//     position: absolute;
+//     right: var(--ifm-navbar-padding-horizontal);
+//   }
+// }
+
+// @media (min-width: 1301px) {
+//   .searchBox {
+//     padding: var(--ifm-navbar-item-padding-vertical)
+//       var(--ifm-navbar-item-padding-horizontal);
+//   }
+// }
+
+
+// @media (max-width: 1300px) {
+//   .sidebar {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1300px) {
+//   .tableOfContents {
+//     display: none;
+//   }
+
+//   .docItemContainer {
+//     padding: 0 0.3rem;
+//   }
+// }

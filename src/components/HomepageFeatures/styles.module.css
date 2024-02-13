@@ -18,6 +18,8 @@
 
 .featureCardContainer a {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .featureCardContainer a:hover {
@@ -28,7 +30,7 @@
   background: #F0EBDE;
   border-radius: 20px;
   padding: 2rem 1rem;
-  /* max-width: 300px; */
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,11 +68,19 @@
   width: 140px;
 }
 
-[data-theme='dark'] .features {
-  background: #111111;
+.featureCard h3,h5,p {
+  color: #3E6957;
 }
 
-[data-theme='dark'] .features svg {
+/* [data-theme='dark'] .featureCard h3,h5,p {
+  color: #3E6957;
+} */
+
+/* [data-theme='dark'] .features {
+  background: #111111;
+} */
+
+/* [data-theme='dark'] .features svg {
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
-}
+} */
