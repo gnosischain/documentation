@@ -87,6 +87,11 @@ const config = {
         },
         items: [
           {
+            href: "https://www.gnosis.io",
+            position: "left",
+            label: "About",
+          },
+          {
             type: "docSidebar",
             position: "left",
             sidebarId: "developers",
@@ -95,19 +100,30 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "node",
-            label: "Node operators",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "concepts",
-            label: "Concepts",
+            sidebarId: "bridges",
+            label: "Bridges",
           },
           {
             href: "https://ecosystem.gnosischain.com/",
             position: "left",
             label: "Ecosystem",
+          },
+          { 
+            href: "https://twitter.com/gnosischain",
+            label: "Updates",
+          },
+      
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "faq",
+            label: "FAQ",
+          },
+
+          {
+            type: 'html',
+            position: 'left',
+            value: '<button>Run Your Own Node</button>',
           },
           {
             href: "https://github.com/gnosischain/developers-portal",
