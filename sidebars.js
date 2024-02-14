@@ -781,6 +781,47 @@ const sidebars = {
       ],
     },
   ],
+
+  bridges: [ 
+    {
+      type: "category",
+      label: "Overview",
+      link: { type: "doc", id: "bridges/README" },
+      collapsed: false,
+      items: [
+        "bridges/third-party",
+        "bridges/audits",
+        "bridges/roadmap",
+      ],
+    },
+    {
+      type: "category",
+      label: "Hashi",
+      collapsed: true,
+      items: ["bridges/hashi/README"],
+    },
+    {
+      type: "category",
+      label: "Native Bridges",
+      collapsed: true,
+      items: [
+        "bridges/tokenbridge/amb-bridge",
+        "bridges/tokenbridge/xdai-bridge",
+        "bridges/tokenbridge/omnibridge",
+      ],
+    },
+    {
+      type: "category",
+      label: "Tutorials",
+      link: {
+        slug: "bridges/tutorials",
+        type: "generated-index",
+        title: "Tutorials",
+      },
+      collapsed: true,
+      items: bridgeTutorials,
+    },
+  ],
   faq: [
     {
       type: "category",
@@ -812,20 +853,11 @@ const sidebars = {
       id: "faq/others",
     },
   ],
-
-  // TODO this are new items, data is nonsense
-  about: [
+  updates: [
     {
-      type: "doc",
-      label: "about",
-      id: "tools/README",
-    },
-  ],
-  bridges:[
-    {
-      type: "doc",
-      label: "bridges",
-      id: "bridges/README",
+      type: 'link',
+      label: 'Updates',
+      href: 'https://twitter.com/gnosischain',
     },
   ],
 };

@@ -87,15 +87,9 @@ const config = {
         },
         items: [
           {
-            // type: 'html',
-            // value: `
-            // <div class="navbarItem">
-            // <a href="/concepts/">Link to About</>
-            // </div>
-            // `,
-            type: "docSidebar",
+
+            href: "https://www.gnosis.io",
             position: "left",
-            sidebarId: "about",
             label: "About",
           },
           {
@@ -114,6 +108,23 @@ const config = {
             href: "https://ecosystem.gnosischain.com/",
             position: "left",
             label: "Ecosystem",
+          },
+          { 
+            href: "https://twitter.com/gnosischain",
+            label: "Updates",
+          },
+      
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "faq",
+            label: "FAQ",
+          },
+
+          {
+            type: 'html',
+            position: 'left',
+            value: '<button>Run Your Own Node</button>',
           },
           {
             href: "https://ecosystem.gnosischain.com/",
