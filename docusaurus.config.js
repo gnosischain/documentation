@@ -87,6 +87,12 @@ const config = {
         },
         items: [
           {
+            // type: 'html',
+            // value: `
+            // <div class="navbarItem">
+            // <a href="/concepts/">Link to About</>
+            // </div>
+            // `,
             type: "docSidebar",
             position: "left",
             sidebarId: "about",
