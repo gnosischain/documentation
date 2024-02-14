@@ -112,42 +112,14 @@ const config = {
             href: "https://twitter.com/gnosischain",
             label: "Updates",
           },
-      
+    
           {
             type: "docSidebar",
             position: "left",
             sidebarId: "faq",
             label: "FAQ",
           },
-
-          {
-            type: 'html',
-            position: 'left',
-            value: '<button>Run Your Own Node</button>',
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "faq",
-            label: "FAQ",
-          },
-
-          {
-            type: 'html',
-            position: 'left',
-            value: '<button>Run Your Own Node</button>',
-          },
-          {
-            href: "https://ecosystem.gnosischain.com/",
-            position: "left",
-            label: "Updates",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "faq",
-            label: "FAQ",
-          },
+          
           {
             type: "docSidebar",
             position: "left",
