@@ -87,7 +87,6 @@ const config = {
         },
         items: [
           {
-
             href: "https://www.gnosis.io",
             position: "left",
             label: "About",
@@ -114,6 +113,18 @@ const config = {
             label: "Updates",
           },
       
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "faq",
+            label: "FAQ",
+          },
+
+          {
+            type: 'html',
+            position: 'left',
+            value: '<button>Run Your Own Node</button>',
+          },
           {
             type: "docSidebar",
             position: "left",
