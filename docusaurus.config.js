@@ -144,7 +144,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://twitter",
+            href: "https://twitter.com/gnosischain",
             html: `
             <svg class="socialButton" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="53" height="53" rx="26.5" fill="white"/>
@@ -154,7 +154,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://discord",
+            href: "https://t.co/Ug9m92VjGe",
             html: `
             <svg class="socialButton" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="53" height="53" rx="26.5" fill="white"/>
