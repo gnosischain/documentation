@@ -75,7 +75,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Chiado testnet Dencun hardfork is completed! Check out <a target="_blank" rel="noopener noreferrer" href="https://x.com/gnosischain/status/1752759697302532405?s=20">here</a>.',
+          'Gnosis Chain will hard fork on 11 March 2024 at 18:30:20 UTC, Slot: 14237696 Timestamp: 1710181820! Check out <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/gnosischain/status/1757154327817507103">here</a>.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
