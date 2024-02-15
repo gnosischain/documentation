@@ -14,7 +14,7 @@ const FeatureList = [
     id: 1,
     title: 'Bridge with Gnosis',
     subtitle: 'Send messages Crosschain with our bridge solutions like Arbitary Message Bridges',
-    link: '/',
+    link: '/bridges',
     Svg: require('@site/static/img/features/bridge.svg').default,
   },
   {
