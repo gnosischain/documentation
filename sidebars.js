@@ -177,10 +177,9 @@ const sidebars = {
       ],
     },
   ],
-
+  // chain level content for developers 
   developers: [
     "developers/README",
-    "developers/intro",
     {
       type: "category",
       label: "Getting Started",
@@ -276,6 +275,7 @@ const sidebars = {
       ],
     },
   ],
+
 
   node: [
     {
@@ -852,22 +852,22 @@ const sidebars = {
       items: bridgeTutorials,
     },
   ],
-
-  // TODO this are new items, data is nonsense
+  // create a new section for about. 
   about: [
     {
       type: "doc",
-      label: "about",
-      id: "tools/README",
+      label: "About Gnosis Chain",
+      id: "developers/intro",
     },
   ],
-  bridges:[
-    {
-      type: "doc",
-      label: "bridges",
-      id: "bridges/README",
-    },
-  ],
+  //duplicate bridges
+  // bridges:[
+  //   {
+  //     type: "doc",
+  //     label: "bridges",
+  //     id: "bridges/README",
+  //   },
+  // ],
 };
 
 module.exports = sidebars;

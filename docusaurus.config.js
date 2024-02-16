@@ -116,7 +116,7 @@ const config = {
             label: "Ecosystem",
           },
           {
-            href: "https://ecosystem.gnosischain.com/",
+            href: "/Updates",
             position: "left",
             label: "Updates",
           },
