@@ -15,7 +15,12 @@
   background: linear-gradient(0deg, #133629 0%, #3E6957 100%) !important;
 }
 
-.homePage h1,h2,h3,h4,h5,span {
+.homePage h1,
+.homePage h2,
+.homePage h3,
+.homePage h4,
+.homePage h5,
+.homePage span {
   font-family: 'GT Planar', sans-serif;
   color: white;
 }

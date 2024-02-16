@@ -89,7 +89,9 @@
   width: 140px;
 }
 
-.featureCard h3,h5,p {
+.featureCard h3,
+.featureCard h5,
+.featureCard p {
   color: #3E6957;
 }
 
