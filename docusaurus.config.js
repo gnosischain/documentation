@@ -75,7 +75,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Chiado testnet Dencun hardfork is completed! Check out <a target="_blank" rel="noopener noreferrer" href="https://x.com/gnosischain/status/1752759697302532405?s=20">here</a>.',
+          'Gnosis Chain will hard fork on 11 March 2024 at 18:30:20 UTC, Slot: 14237696 Timestamp: 1710181820! Check out <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/gnosischain/status/1757154327817507103">here</a>.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
@@ -265,7 +265,10 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          { to: "/updates/2022/12/10/merge", from: "/updates/20221210-merge" },
+          { 
+            to: "/updates/2022/12/10/merge", 
+            from: "/updates/20221210-merge" 
+          },
           {
             to: "/updates/2022/12/08/temporary-bootnodes",
             from: "/updates/20221208-temporary-bootnodes",
@@ -274,6 +277,15 @@ const config = {
             to: "/updates/2022/12/05/bridges-pause",
             from: "/updates/202212-bridges-pause",
           },
+          {
+            to: "/concepts/networks/chiado",
+            from: "/about/networks/chiado",
+          },
+          {
+            to: "/concepts/networks/mainnet",
+            from: "/about/networks/mainnet",
+          },
+         
         ],
       },
     ],

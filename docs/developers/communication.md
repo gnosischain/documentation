@@ -8,18 +8,21 @@ title: Communication
 
 - [Twitter](https://twitter.com/gnosischain)
 - [YouTube](https://www.youtube.com/GnosisChain)
-- [Email newsletter](https://gnosischain.substack.com)
+- [Email newsletter](https://gnosischain.ghost.io/)
+- [Validator Newsletter](https://gnosisvalidator.substack.com/)
 
 ## Community 
 
-- [Telegram](https://t.me/gnosischain)
 - [Discord](https://discord.gg/gnosischain)
+- [Farcaster](https://warpcast.com/gnosischain)
+- [Telegram - Unofficial](https://t.me/gnosischain)
 - [GitHub](https://github.com/gnosischain)
 - [Governance Forum](https://forum.gnosis.io/)
 
 ## Support
 
 - [Discord](https://discord.gg/gnosischain)
+- [Validator Resources & Feedback Form](https://tally.so/r/3y4V1W)
 - General Inquiries: [community@gnosis.io](mailto:community@gnosis.io) 
 
 ## Events and Press
