@@ -108,7 +108,7 @@ More details on the design: https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn
 
 ## Disable Deposit Function in StakingAura POSDAO contract
 
-🗳 Justification: Staking is deprecated in POSDAO. Current validators will continue until the Gnosis Chain <-> Gnosis Beacon Chain merge but no new deposits are allowed.
+🗳 Justification: Staking is deprecated in POSDAO. Current validators will continue until the Gnosis Chain  {'<->'} Gnosis Beacon Chain merge but no new deposits are allowed.
 
 ✅ Implemented: June 14, 2022
 

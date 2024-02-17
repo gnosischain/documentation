@@ -7,7 +7,7 @@ keywords: [bsc, omnibridge, tokens, transfer]
 # BNB Chain
 
 :::danger
-BSC<->GC has been deprecated on Omnibridge UI. This page provides a way for user to bridge token back to "original" chain, where the canonical token contract is deployed.
+BSC to GC has been deprecated on Omnibridge UI. This page provides a way for user to bridge token back to "original" chain, where the canonical token contract is deployed.
 :::
 | Contract| Address|
 |---|---|

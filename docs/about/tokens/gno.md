@@ -84,7 +84,7 @@ Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more i
 
 ### Bridge
 
-- Ethereum _<_> Gnosis token bridge: [OmniBridge](https://omni.gnosischain.com/)
+- Ethereum to Gnosis token bridge: [OmniBridge](https://omni.gnosischain.com/)
 
 ## Use GNO Tokens
 

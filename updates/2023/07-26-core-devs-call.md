@@ -24,7 +24,7 @@ July 26, 2023
 
 - **Nethermind**:
   Issue when fetching events (`eth_getLogs`) on a contract that hasn’t emitted said event yet
-  {"jsonrpc":"2.0","result":[]}{"jsonrpc":"2.0","error":{"code":-32016,"message":"Request was canceled due to enabled timeout."},"id":null}
+  \{"jsonrpc":"2.0","result":[]\}\{"jsonrpc":"2.0","error":\{"code":-32016,"message":"Request was canceled due to enabled timeout."\},"id":null\}
   There’s a setting on Json RPC to disable streaming
   Erigon will check the code as well
   No specific updates

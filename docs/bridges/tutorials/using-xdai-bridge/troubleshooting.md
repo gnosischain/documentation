@@ -8,7 +8,7 @@ keywords:
 
 Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Try these actions first if your transaction has been **pending for 10 minutes or more** (and you don't want to wait any more time). Actions differ depending on if you are transferring from xDai to Dai or [Dai to xDai](#dai-to-xdai-transaction-is-taking-a-long-time).
 
-If you are using OmniBridge for other ERC20 tokens (not xDai <-> Dai) please see the [OmniBridge page](/bridges/tutorials/using-omnibridge/). **This guide only addresses issues with xDai to Dai transfers.**
+If you are using OmniBridge for other ERC20 tokens (not xDai to Dai) please see the [OmniBridge page](/bridges/tutorials/using-omnibridge/). **This guide only addresses issues with xDai to Dai transfers.**
 
 :::info
 **Things to know**

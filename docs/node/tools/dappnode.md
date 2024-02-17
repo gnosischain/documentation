@@ -69,18 +69,25 @@ Be patient, the installation process can take several minutes. You can check all
   <summary><strong>Docker Command Line Instructions</strong> (only needed if you have trouble with Wagyu)</summary>
   <div>
     <div>
-      <ol>
-        <li>Pull the docker image for the data generator<br/>
-          <pre>docker pull ghcr.io/gnosischain/validator-data-generator:latest</pre>
-        </li>
-        <li>If this is your first time running the process and there is no an existing mnemonic to generate keystores and deposit data, replace the variables below with your info then run the command.
-        <pre>docker run -it --rm -v /path/to/validator_keys:/app/validator_keys ghcr.io/gnosischain/validator-data-generator:latest new-mnemonic --num_validators=NUM --mnemonic_language=english --chain=gnosis --folder=/app/validator_keys --eth1_withdrawal_address=WITHDRAWAL_ADDRESS</pre>
-        </li>
-        <li>Choose a secure password and confirm. You will be shown a mnemonic seed phrase. Write down and store your keystore password and mnemonic safely offline.<br/>
-          <img src="/img/node/dappnode-step3.png"/>
-          Following execution, the path you defined for <code>/path/to/validator_keys</code> will contain the keystores and <code>deposit_data*.json</code> file.
-        </li>
-      </ol>
+    <ol>
+    <li>
+    Pull the docker image for the data generator
+    <pre>{`docker pull ghcr.io/gnosischain/validator-data-generator:latest`}</pre>
+    </li>
+    <li>
+    If this is your first time running the process and there is no existing mnemonic to generate keystores and deposit data, replace the variables below with your info, and then run the command.
+    <pre>
+      docker run -it --rm -v /path/to/validator_keys:/app/validator_keys ghcr.io/gnosischain/validator-data-generator:latest new-mnemonic --num_validators=NUM --mnemonic_language=english --chain=gnosis --folder=/app/validator_keys --eth1_withdrawal_address=WITHDRAWAL_ADDRESS
+    </pre>
+  </li>
+  <li>
+    Choose a secure password and confirm. You will be shown a mnemonic seed phrase. Write down and store your keystore password and mnemonic safely offline.
+    <br/>
+    <img src="/img/node/dappnode-step3.png" alt="DappNode Step 3"/>
+    Following execution, the path you defined for <code>/path/to/validator_keys</code> will contain the keystores and <code>deposit_data*.json</code> file.
+  </li>
+</ol>
+      
     </div>
     <details>
       <summary>Drop down for variable descriptions</summary>

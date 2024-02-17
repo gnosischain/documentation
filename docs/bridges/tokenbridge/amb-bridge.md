@@ -7,7 +7,7 @@ keywords:
 
 ![](/img/bridges/diagrams/amb-bridge.svg)
 
-You can also send arbitrary data between Gnosis and Ethereum using the native Arbitrary Message Bridge (AMB). This allows Gnosis contracts to send data and trigger contract functions on Ethereum and other chains, and vice-versa.
+You can also send arbitrary data between Gnosis and Ethereum using the native Arbitrary Message Bridge (AMB). This allows Gnosis contracts to send data and trigger contract functions on Ethereum and other chains, and vice versa.
 
 The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](/bridges/tokenbridge/omnibridge).
 
@@ -147,7 +147,7 @@ function requireToPassMessage (address _contract,
 
 ![](/img/bridges/diagrams/amb-bridge-contract-flow.png)
 
-#### Foreign Network -> Home Network
+#### Foreign Network to Home Network
 
 1. User calls `foo()` on the originating contract
 2. Originating contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
@@ -155,7 +155,7 @@ function requireToPassMessage (address _contract,
 4. `executeAffirmation()` is called on the Home Bridge contract by a validator once enough signatures are collected.
 5. Home bridge contract decodes the message and calls `foo()` on the target contract.
 
-#### Home Network -> Foreign Network
+#### Home Network to Foreign Network
 
 1. User calls `foo()` on an originating contract
 2. Originating contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
@@ -174,12 +174,12 @@ function requireToPassMessage (address _contract,
 
 There are 5 key components for Telepathy validator in AMB & Omnibridge:
 
-**Off-chain**
+**Off chain**
 
 1. Telepathy Relayer: Provide merkle proof for **Telepathy PubSub**, that the `userRequestForAffirmation` event was emitted on Ethereum.
 2. Telepathy Operator: For every ~12 mins (2 epoch in Ethereum), call **Telepathy Light Client** to update header.
 
-**On-Gnosis Chain**
+**On Gnosis Chain**
 
 3. Telepathy PubSub: Verify the Merkle proof against the block header and publish the event.
 4. Telepathy Light Client: Generate a proof of consensus for block header and verify on-chain.

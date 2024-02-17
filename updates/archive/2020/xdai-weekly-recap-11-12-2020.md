@@ -25,13 +25,12 @@ https://twitter.com/xdaichain/status/1335992610209587205
 
 We are continuing to test our protocol and create short videos for users as public POSDAO gets closer to launch.  See the Staking Operations Section for tutorials on delegator staking, withdrawing, claiming and moving STAKE.
 
-https://youtu.be/CgER1v2xZqs
-Order & Claim a Withdrawal
-{% endembed %}
+## Order & Claim a Withdrawal
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CgER1v2xZqs" frameborder="0" allowfullscreen></iframe>
 
-https://youtu.be/semHaUr6xog
-Move Delegated STAKE
-{% endembed %}
+## Move Delegated STAKE
+<iframe width="560" height="315" src="https://www.youtube.com/embed/semHaUr6xog" frameborder="0" allowfullscreen></iframe>
+
 
 ## :scroll: Proposal to add STAKE as a DAI collateral type
 

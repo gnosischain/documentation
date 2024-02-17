@@ -278,11 +278,11 @@ const config = {
             from: "/updates/202212-bridges-pause",
           },
           {
-            to: "/concepts/networks/chiado",
+            to: "/about/networks/chiado",
             from: "/about/networks/chiado",
           },
           {
-            to: "/concepts/networks/mainnet",
+            to: "/about/networks/mainnet",
             from: "/about/networks/mainnet",
           },
          

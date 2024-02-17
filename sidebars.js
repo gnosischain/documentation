@@ -44,136 +44,68 @@ let bridgeTutorials = [
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  concepts: [
+  about: [
     {
       type: "category",
       label: "Networks",
-      link: { type: "doc", id: "concepts/networks/README" },
+      link: { type: "doc", id: "about/networks/README" },
       collapsed: false,
-      items: ["concepts/networks/mainnet", "concepts/networks/chiado"],
+      items: ["about/networks/mainnet", "about/networks/chiado"],
     },
     {
       type: "category",
       label: "Tokens",
-      link: { type: "doc", id: "concepts/tokens/README" },
+      link: { type: "doc", id: "about/tokens/README" },
       collapsed: true,
-      items: ["concepts/tokens/xdai", "concepts/tokens/gno"],
+      items: ["about/tokens/xdai", "about/tokens/gno"],
     },
     {
       type: "category",
       label: "Protocol Specs",
       collapsed: true,
-      link: { type: "doc", id: "concepts/specs/README" },
+      link: { type: "doc", id: "about/specs/README" },
       items: [
         {
           type: "category",
           label: "Beacon Chain",
           collapsed: true,
-          link: { type: "doc", id: "concepts/specs/gbc/README" },
-          items: ["concepts/specs/gbc/upgradeability"],
+          link: { type: "doc", id: "about/specs/gbc/README" },
+          items: ["about/specs/gbc/upgradeability"],
         },
         {
           type: "category",
           label: "Consensus",
           collapsed: true,
-          link: { type: "doc", id: "concepts/specs/consensus/README" },
+          link: { type: "doc", id: "about/specs/consensus/README" },
           items: [
-            "concepts/specs/consensus/aura",
-            "concepts/specs/consensus/posdao",
-            "concepts/specs/consensus/proof-of-stake",
+            "about/specs/consensus/aura",
+            "about/specs/consensus/posdao",
+            "about/specs/consensus/proof-of-stake",
           ],
         },
         {
           type: "category",
           label: "Hard Forks",
           collapsed: true,
-          link: { type: "doc", id: "concepts/specs/hard-forks/README" },
+          link: { type: "doc", id: "about/specs/hard-forks/README" },
           items: [
-            "concepts/specs/hard-forks/dencun",
-            "concepts/specs/hard-forks/shanghai-capella",
-            "concepts/specs/hard-forks/merge",
-            "concepts/specs/hard-forks/21735000",
-            "concepts/specs/hard-forks/19040000",
-            "concepts/specs/hard-forks/16101500",
-            "concepts/specs/hard-forks/9186425",
-            "concepts/specs/hard-forks/7298030",
-            "concepts/specs/hard-forks/2508800",
-            "concepts/specs/hard-forks/1604400",
-            "concepts/specs/hard-forks/spec.json-update",
-            "concepts/specs/hard-forks/eip-1559",
+            "about/specs/hard-forks/dencun",
+            "about/specs/hard-forks/shanghai-capella",
+            "about/specs/hard-forks/merge",
+            "about/specs/hard-forks/21735000",
+            "about/specs/hard-forks/19040000",
+            "about/specs/hard-forks/16101500",
+            "about/specs/hard-forks/9186425",
+            "about/specs/hard-forks/7298030",
+            "about/specs/hard-forks/2508800",
+            "about/specs/hard-forks/1604400",
+            "about/specs/hard-forks/spec.json-update",
+            "about/specs/hard-forks/eip-1559",
           ],
         },
-        "concepts/specs/bug-bounty",
-        "concepts/specs/security-audit",
-        "concepts/specs/deposit-contracts",
-      ],
-    },
-    {
-      type: "category",
-      label: "Account Abstraction",
-      link: { type: "doc", id: "concepts/networks/README" },
-      collapsed: true,
-      items: [
-        "concepts/account-abstraction/safe",
-        "concepts/account-abstraction/particle-network",
-      ],
-    },
-    {
-      type: "category",
-      label: "Bridges",
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Overview",
-          link: { type: "doc", id: "bridges/README" },
-          collapsed: true,
-          items: [
-            {
-              type: "category",
-              label: "Governance",
-              collapsed: true,
-              link: { type: "doc", id: "bridges/governance/README" },
-              items: ["bridges/governance/decisions"],
-            },
-            "bridges/third-party",
-            "bridges/audits",
-            "bridges/roadmap",
-          ],
-        },
-        {
-          type: "doc",
-          label: "Bridge Explorer",
-          id: "bridges/bridge-explorer",
-        },
-        {
-          type: "category",
-          label: "Hashi",
-          collapsed: true,
-          items: ["bridges/hashi/README"],
-        },
-        {
-          type: "category",
-          label: "Native Bridges",
-          collapsed: true,
-          items: [
-            "bridges/tokenbridge/amb-bridge",
-            "bridges/tokenbridge/xdai-bridge",
-            "bridges/tokenbridge/omnibridge",
-          ],
-        },
-
-        {
-          type: "category",
-          label: "Tutorials",
-          link: {
-            slug: "bridges/tutorials",
-            type: "generated-index",
-            title: "Tutorials",
-          },
-          collapsed: true,
-          items: bridgeTutorials,
-        },
+        "about/specs/bug-bounty",
+        "about/specs/security-audit",
+        "about/specs/deposit-contracts",
       ],
     },
   ],
@@ -853,13 +785,7 @@ const sidebars = {
     },
   ],
   // create a new section for about. 
-  about: [
-    {
-      type: "doc",
-      label: "About Gnosis Chain",
-      id: "developers/intro",
-    },
-  ],
+
   //duplicate bridges
   // bridges:[
   //   {

@@ -22,7 +22,7 @@ title: General Questions
 
    Shapella refers to the combination of both Shanghai and Capella. Shanghai enables GNO staking withdrawals for Gnosis Chain, unlike the previous model that doesn’t allow for staked GNO to be withdrawn. Shanghai is the name given to the execution layer (EL) upgrade, while Capella is the name of the coinciding consensus layer (CL) upgrade.
 
-3. **I have a problem with connect Safe <-> deposit.gnosischain.com since there is new walletconnect in UI. When will it be fixed?**
+3. **I have a problem with connect Safe to deposit.gnosischain.com since there is new walletconnect in UI. When will it be fixed?**
 
     Devs are currently working on it, currently a workaround is to use the wallet extension Rabby and import your Safe in it then to connect it to the page like if it was a Metamask wallet.
 
@@ -30,6 +30,6 @@ title: General Questions
 
     [Cryptio](https://cryptio.co/) is available for German users. 
 
-5. **When is this Gnosis Execution Layer <-> Gnosis Beacon Chain merge scheduled for?**
+5. **When is this Gnosis Execution Layer to Gnosis Beacon Chain merge scheduled for?**
 
    The merge happened in December 2022.
