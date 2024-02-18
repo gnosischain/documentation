@@ -852,7 +852,6 @@ const sidebars = {
       items: bridgeTutorials,
     },
   ],
-  // create a new section for about. 
   about: [
     {
       type: "doc",
@@ -860,14 +859,6 @@ const sidebars = {
       id: "developers/intro",
     },
   ],
-  //duplicate bridges
-  // bridges:[
-  //   {
-  //     type: "doc",
-  //     label: "bridges",
-  //     id: "bridges/README",
-  //   },
-  // ],
 };
 
 module.exports = sidebars;
