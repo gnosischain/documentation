@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[62035],{19711:e=>{e.exports=JSON.parse('{"permalink":"/updates","page":1,"postsPerPage":10,"totalPages":14,"totalCount":131,"nextPage":"/updates/page/2","blogDescription":"Get Gnosis updates, announcements, changelogs, core dev info!","blogTitle":"Gnosis Updates"}')}}]);

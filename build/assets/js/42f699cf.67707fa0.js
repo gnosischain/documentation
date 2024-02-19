@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[76140],{52596:e=>{e.exports=JSON.parse('{"label":"merge","permalink":"/updates/tags/merge","allTagsPath":"/updates/tags","count":2,"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[54892],{94229:e=>{e.exports=JSON.parse('{"label":"bootnodes","permalink":"/updates/tags/bootnodes","allTagsPath":"/updates/tags","count":1,"unlisted":false}')}}]);
