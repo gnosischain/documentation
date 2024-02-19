@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[36287],{87188:e=>{e.exports=JSON.parse('{"permalink":"/updates/tags/bootnodes","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Get Gnosis updates, announcements, changelogs, core dev info!","blogTitle":"Gnosis Updates"}')}}]);

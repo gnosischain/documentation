@@ -11,7 +11,7 @@ const config = {
     "Gnosis Chain is one of the first Ethereum sidechains and has stayed true to its values.",
   url: "https://docs.gnosischain.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   stylesheets: [

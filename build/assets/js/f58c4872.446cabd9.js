@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[22032],{79080:e=>{e.exports=JSON.parse('{"label":"CoreDevsCall","permalink":"/updates/tags/core-devs-call","allTagsPath":"/updates/tags","count":51,"unlisted":false}')}}]);

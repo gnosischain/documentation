@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[58722],{44384:s=>{s.exports=JSON.parse('{"label":"gnosis","permalink":"/updates/tags/gnosis","allTagsPath":"/updates/tags","count":51,"unlisted":false}')}}]);

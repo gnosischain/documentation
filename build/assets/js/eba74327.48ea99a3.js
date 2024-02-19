@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[736],{42061:e=>{e.exports=JSON.parse('{"title":"1-click Tools","slug":"node/tools","permalink":"/node/tools","navigation":{"previous":{"title":"Rewards & Penalties","permalink":"/node/rewards-penalties"},"next":{"title":"DAppNode","permalink":"/node/tools/dappnode"}}}')}}]);
