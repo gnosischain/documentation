@@ -121,7 +121,9 @@ nav.navbar .searchBox {
 
 // Hide search from navbar
 .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module,
-.searchBox_ZlJk {
+.searchBox_ZlJk,
+.navbarSearchContainer_Bca1,
+.navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
   display: none;
 }
 
@@ -196,7 +198,7 @@ nav.navbar .searchBox {
     display: none;
   }
 
-  div.navbar__items:first-child a.navbar__link[href="/tools/"]::before {
+  div.navbar__items:first-child a.navbar__link[href="/about/networks/"]::before {
     content: url("/static/img/featuresIcons/tools.svg");
     display: inline-block;
   }
@@ -212,6 +214,11 @@ nav.navbar .searchBox {
   }
 
   div.navbar__items:first-child a.navbar__link[href="https://ecosystem.gnosischain.com/"]::before {
+    content: url("/static/img/featuresIcons/ecosystem.svg");
+    display: inline-block;
+  }
+
+  div.navbar__items:first-child a.navbar__link[href="/Updates"]::before {
     content: url("/static/img/featuresIcons/ecosystem.svg");
     display: inline-block;
   }
