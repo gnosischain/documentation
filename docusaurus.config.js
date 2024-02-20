@@ -87,52 +87,28 @@ const config = {
         },
         items: [
           {
-            // type: 'html',
-            // value: `
-            // <div class="navbarItem">
-            // <a href="/concepts/">Link to About</>
-            // </div>
-            // `,
             type: "docSidebar",
             position: "left",
             sidebarId: "about",
             label: "About",
           },
           {
-            type: "docSidebar",
+            href: "/updates",
             position: "left",
-            sidebarId: "developers",
-            label: "Developers",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "bridges",
-            label: "Bridges",
+            label: "Updates",
           },
           {
             href: "https://ecosystem.gnosischain.com/",
             position: "left",
             label: "Ecosystem",
           },
-          {
-            href: "/Updates",
-            position: "left",
-            label: "Updates",
-          },
-          {
+           {
             type: "docSidebar",
             position: "left",
             sidebarId: "faq",
             label: "FAQ",
           },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "node",
-            label: "Run your node",
-          },
-
+          
           {
             href: "https://google",
             html: `

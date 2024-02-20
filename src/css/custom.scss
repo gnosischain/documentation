@@ -120,12 +120,12 @@ nav.navbar .searchBox {
 }
 
 // Hide search from navbar
-.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module,
-.searchBox_ZlJk,
-.navbarSearchContainer_Bca1,
-.navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
-  display: none;
-}
+// .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module,
+// .searchBox_ZlJk,
+// .navbarSearchContainer_Bca1,
+// .navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+//   display: none;
+// }
 
 // Hide theme mode (light/dark) from navbar
 .toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module,
@@ -183,56 +183,56 @@ nav.navbar .searchBox {
   width: 38px;
 }
 
-@media (min-width: 1301px) {
-  .navbar__link::before {
-    display: none;
-  }
-}
+// @media (min-width: 1301px) {
+//   .navbar__link::before {
+//     display: none;
+//   }
+// }
 
-@media (max-width: 1300px) {
-  div.navbar__items:first-child a.navbar__link {
-    font-size: 0;
-  }
+// @media (max-width: 1300px) {
+//   div.navbar__items:first-child a.navbar__link {
+//     font-size: 0;
+//   }
 
-  div.navbar__items:first-child a.navbar__link svg{
-    display: none;
-  }
+//   div.navbar__items:first-child a.navbar__link svg{
+//     display: none;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="/about/networks/"]::before {
-    content: url("/static/img/featuresIcons/tools.svg");
-    display: inline-block;
-  }
+//   div.navbar__items:first-child a.navbar__link[href="/about/networks/"]::before {
+//     content: url("/static/img/featuresIcons/tools.svg");
+//     display: inline-block;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="/developers/"]::before {
-    content: url("/static/img/featuresIcons/build.svg");
-    display: inline-block;
-  }
+//   div.navbar__items:first-child a.navbar__link[href="/developers/"]::before {
+//     content: url("/static/img/featuresIcons/build.svg");
+//     display: inline-block;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="/bridges/"]::before {
-    content: url("/static/img/featuresIcons/bridge.svg");
-    display: inline-block;
-  }
+//   div.navbar__items:first-child a.navbar__link[href="/bridges/"]::before {
+//     content: url("/static/img/featuresIcons/bridge.svg");
+//     display: inline-block;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="https://ecosystem.gnosischain.com/"]::before {
-    content: url("/static/img/featuresIcons/ecosystem.svg");
-    display: inline-block;
-  }
+//   div.navbar__items:first-child a.navbar__link[href="https://ecosystem.gnosischain.com/"]::before {
+//     content: url("/static/img/featuresIcons/ecosystem.svg");
+//     display: inline-block;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="/Updates"]::before {
-    content: url("/static/img/featuresIcons/ecosystem.svg");
-    display: inline-block;
-  }
+//   div.navbar__items:first-child a.navbar__link[href="/Updates"]::before {
+//     content: url("/static/img/featuresIcons/ecosystem.svg");
+//     display: inline-block;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="/faq/node/generalQuestions"]::before {
-    content: url("/static/img/featuresIcons/guide.svg");
-    display: inline-block;
-  }
+//   div.navbar__items:first-child a.navbar__link[href="/faq/node/generalQuestions"]::before {
+//     content: url("/static/img/featuresIcons/guide.svg");
+//     display: inline-block;
+//   }
 
-  div.navbar__items:first-child a.navbar__link[href="/node/"]::before {
-    content: url("/static/img/featuresIcons/node.svg");
-    display: inline-block;
-  }
-}
+//   div.navbar__items:first-child a.navbar__link[href="/node/"]::before {
+//     content: url("/static/img/featuresIcons/node.svg");
+//     display: inline-block;
+//   }
+// }
 
 
 
