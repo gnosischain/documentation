@@ -234,6 +234,23 @@ nav.navbar .searchBox {
 //   }
 // }
 
+/* footer */
+.footer__links {
+  justify-content: center;
+}
+
+.footer__links .footer__col {
+  min-width: 220px;
+  max-width: 220px;
+}
+
+@media (max-width: 660px) {
+  .footer__links {
+    padding-top: 1.8rem;
+    flex-direction: column;
+    align-content: center;
+  }
+}
 
 
 .theme-doc-markdown.markdown a{
