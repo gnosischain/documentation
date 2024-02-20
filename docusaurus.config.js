@@ -93,7 +93,7 @@ const config = {
             label: "About",
           },
           {
-            href: "/updates",
+            to: "updates",
             position: "left",
             label: "Updates",
           },
@@ -108,7 +108,7 @@ const config = {
             sidebarId: "faq",
             label: "FAQ",
           },
-          
+
           {
             href: "https://google",
             html: `
