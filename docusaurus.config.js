@@ -237,6 +237,10 @@ const config = {
             to: "/concepts/networks/mainnet",
             from: "/about/networks/mainnet",
           },
+          {
+            to: "/developers/communication",
+            from: "/about/overview/media-kit"
+          }
          
         ],
       },
