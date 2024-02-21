@@ -3,5 +3,5 @@ description: Gelato is web3’s decentralized backend empowering builders to cre
 keywords: [gelato,account-abstraction]
 ---
 
-# Building Account Abstraction with Gelato
+# Building AA with Gelato
  TO DO

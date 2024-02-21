@@ -3,7 +3,7 @@ description: Particle Network is the Intent-Centric, Modular Access Layer of Web
 keywords: [particle-network,account-abstraction]
 ---
 
-# Building Account Abstraction with Particle Network
+# Building AA with Particle Network
 
 With Particle's Smart Wallet-as-a-Service, developers can curate an unparalleled user experience through modular and customizable EOA/AA embedded wallet components. Using MPC-TSS for key management, Particle can streamline user onboarding via familiar Web2 accounts—such as Google accounts, email addresses, and phone numbers.
 

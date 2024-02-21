@@ -4,7 +4,7 @@ keywords: [safe,account-abstraction]
 ---
 
 
-# Building Account Abstraction with Safe
+# Building AA with Safe
 [Safe](https://docs.safe.global/) provides a variety of Account Abstraction stacks for developers to integrate and build Account Abstraction on top of Safe. 
 
 [Safe ](https://docs.safe.global/learn/safe-core) suites:
