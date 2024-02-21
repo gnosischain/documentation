@@ -6,7 +6,7 @@
 Liquid staking providers allow anyone to stake without running the infrastructure themselves. It also gives stakers an opportunity to use their tokenized staked resources (sGNO & rGNO) for yield farming, borrowing or compounding while still protecting the protocol.
 
 :::note
-Staked GNO (sGNO) and reward GNO (rGNO) can be converted to GNO following the Gnosis Execution Layer <-> Gnosis Beacon Chain merge. At that time the staking app will allow you to burn your sGNO and rGNO to redeem your original GNO deposit + your accrued GNO reward.
+Staked GNO (sGNO) and reward GNO (rGNO) can be converted to GNO following the Gnosis Execution Layer \<->\ Gnosis Beacon Chain merge. At that time the staking app will allow you to burn your sGNO and rGNO to redeem your original GNO deposit + your accrued GNO reward.
 :::
 
 ## Stakewise Basics

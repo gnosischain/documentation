@@ -52,7 +52,7 @@ fraction.art is a crowdsale platform that allows users to purchase portions of N
 
 https://medium.com/daofi/daofis-entry-into-nfts-announcing-fraction-art-a-crowdsale-platform-for-fractionalized-nft-art-2920d6740d10
 
-### xDai <-> Polygon Bridge
+### xDai &lt;-&gt; Polygon Bridge
 
 Further expanding L2 sidechain interoperability, the 1Hive team deployed a Connext state channel bridge between xDai and Polygon (Matic). Users can simply and seamlessly move Dai on Polygon into xDai and vice versa, for very low transaction costs.
 

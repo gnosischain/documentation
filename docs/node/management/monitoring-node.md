@@ -4,7 +4,7 @@ title: Monitoring your Node(s)
 
 To monitor a node in the network, you can either observe your own node's status or the entire network.
 Monitoring your own node can give you insight into its status, and setting up a monitoring dashboard using Prometheus and Grafana is commonly used.
-To monitor the network, options include ethstats, forkmon, beacon.gnosischain, and blockscout, each providing different types of information about the network and validator-related metrics.
+To monitor the network, options include ethstats, forkmon, beacon.gnosischain, and blockscout, each providing different types of information about the network and validator related metrics.
 
 ## Monitoring your own node with Prometheus + Grafana
 
@@ -38,13 +38,14 @@ In order to expose your node's clients data to Prometheus, please ensure the exe
 
 <Tabs>
 <TabItem value="Nethermind" label="Nethermind">
-
-    --Metrics.Enabled true
-    --Metrics.ExposePort <PORT>
-    --Metrics.PushGatewayUrl
+ ```
+--Metrics.Enabled true
+--Metrics.ExposePort <PORT>
+--Metrics.PushGatewayUrl
 
 Refer to https://docs.nethermind.io/nethermind/ethereum-client/metrics/setting-up-local-metrics-infrastracture
-
+```
+   
 </TabItem>
 
 <TabItem value="Erigon" label="Erigon">
@@ -56,32 +57,37 @@ WIP
 
 <Tabs>
 <TabItem value="lighthouse" label="Lighthouse">
-
-    --metrics
-    --metrics-port=<PORT>
+```
+--metrics
+--metrics-port=<PORT>
 
 https://lighthouse-book.sigmaprime.io/advanced_metrics.html
 https://github.com/sigp/lighthouse-metrics
+```
+  
 </TabItem>
 <TabItem value="Lodestar" label="Lodestar">
-
-    --metrics=true
-    --metrics.port=<PORT>
+```
+--metrics=true
+--metrics.port=<PORT>
 
 https://chainsafe.github.io/lodestar/usage/prometheus-grafana/
 https://chainsafe.github.io/lodestar/reference/cli/#validator
+```
+
 </TabItem>
 <TabItem value="Teku" label="Teku">
-
-    --metrics-enabled=true
-
+```
+--metrics-enabled=true
+```
 https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/
 
 </TabItem>
 <TabItem value="Nimbus" label="Nimbus">
-
+```
     --metrics
     --metrics-port=<PORT>
+```
 
 https://nimbus.guide/metrics-pretty-pictures.html#simple-metrics
 </TabItem>

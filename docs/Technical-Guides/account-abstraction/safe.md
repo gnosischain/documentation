@@ -7,15 +7,15 @@ keywords: [safe,account-abstraction]
 # Building Account Abstraction with Safe
 [Safe](https://docs.safe.global/) provides a variety of Account Abstraction stacks for developers to integrate and build Account Abstraction on top of Safe. 
 
-[Safe {Core}](https://docs.safe.global/learn/safe-core) suites:
-1. [Safe{Core} Account Abstraction SDK](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk)
-2. [Safe{Core} API](https://docs.safe.global/learn/safe-core/safe-core-api)
-3. [Safe{Core} Protocol](https://docs.safe.global/learn/safe-core/safe-core-protocol)
+[Safe ](https://docs.safe.global/learn/safe-core) suites:
+1. [Safe Account Abstraction SDK](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk)
+2. [Safe API](https://docs.safe.global/learn/safe-core/safe-core-api)
+3. [Safe \{Core\} Protocol](https://docs.safe.global/learn/safe-core/safe-core-protocol)
 
-## Safe{Core} Account Abstraction SDK
-![](../../../static/img/developers/Safe/safe-AA-SDK.png)
+## Safe Account Abstraction SDK
+<!-- ![](../../../static/img/developers/Safe/safe-AA-SDK.png) -->
 
-Safe{Core} Account Abstraction SDK allows developers to create AA functionalities into their apps.
+Safe\{Core\} Account Abstraction SDK allows developers to create AA functionalities into their apps.
 
 ### [Protocol Kit](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/protocol-kit)
 Protocol Kit provides functionalities such as creating new Safe accounts, updating the configuration of existing Safes, and proposing and executing transactions.

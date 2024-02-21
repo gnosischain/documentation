@@ -6,7 +6,7 @@ keywords: [chainlink, oracle, data feeds, price feeds]
 
 # Chainlink Price Feeds
 
-Chainlink allows smart contracts to receive aggregated price feeds and access external data using a decentralized network of oracles. The Gnosis <-> Chainlink integration was completed by [Protofire with a Chainlink Community Grant.](https://blog.chain.link/protofire-receives-a-chainlink-community-grant-for-an-integration-with-xdai/)
+Chainlink allows smart contracts to receive aggregated price feeds and access external data using a decentralized network of oracles. The Gnosis \<->\ Chainlink integration was completed by [Protofire with a Chainlink Community Grant.](https://blog.chain.link/protofire-receives-a-chainlink-community-grant-for-an-integration-with-xdai/)
 
 :::info
 Chainlink offers a tutorial on using secure data feeds with Gnosis. [See it in action](https://blog.chain.link/build-a-dapp-on-xdai-chain-with-secure-data-feeds/)

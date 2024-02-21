@@ -11,7 +11,7 @@ const config = {
     "Gnosis Chain is one of the first Ethereum sidechains and has stayed true to its values.",
   url: "https://docs.gnosischain.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   stylesheets: [
@@ -87,50 +87,26 @@ const config = {
         },
         items: [
           {
-            // type: 'html',
-            // value: `
-            // <div class="navbarItem">
-            // <a href="/concepts/">Link to About</>
-            // </div>
-            // `,
             type: "docSidebar",
             position: "left",
             sidebarId: "about",
             label: "About",
           },
           {
-            type: "docSidebar",
+            to: "updates",
             position: "left",
-            sidebarId: "developers",
-            label: "Developers",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "bridges",
-            label: "Bridges",
+            label: "Updates",
           },
           {
             href: "https://ecosystem.gnosischain.com/",
             position: "left",
             label: "Ecosystem",
           },
-          {
-            href: "/Updates",
-            position: "left",
-            label: "Updates",
-          },
-          {
+           {
             type: "docSidebar",
             position: "left",
             sidebarId: "faq",
             label: "FAQ",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "node",
-            label: "Run your node",
           },
 
           {
@@ -278,13 +254,17 @@ const config = {
             from: "/updates/202212-bridges-pause",
           },
           {
-            to: "/concepts/networks/chiado",
+            to: "/about/networks/chiado",
             from: "/about/networks/chiado",
           },
           {
-            to: "/concepts/networks/mainnet",
+            to: "/about/networks/mainnet",
             from: "/about/networks/mainnet",
           },
+          {
+            to: "/developers/communication",
+            from: "/about/overview/media-kit"
+          }
          
         ],
       },

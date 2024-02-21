@@ -7,7 +7,7 @@ keywords:
 
 ## Submitting AMB Confirmations Manually
 
-### Ethereum <-> Gnosis Chain
+### Between Ethereum and Gnosis Chain
 
 The Arbitrary Message Bridge between the Ethereum Mainnet and Gnosis Chain requires a request-and-claim scheme to transfer data from Gnosis Chain, and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Ethereum side.
 
@@ -27,9 +27,9 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower.
 :::
 
-### Goerli <-> Chiado
+### Goerli and Chiado
 
-At the moment, the only way to use AMB between Goerli <-> is through a smart contract call.
+At the moment, the only way to use AMB between Goerli and Chiado is through a smart contract call.
 
 The process of claiming the message from Chiado to Goerli works similarly to the mainnet, but with a different contract address.
 

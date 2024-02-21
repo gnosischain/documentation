@@ -56,7 +56,7 @@ footer.footer--dark{
 
 nav.navbar {
   background-color: #3E6957;
-  height: 85px;
+  height: 80px;
   padding: 0 2rem;
   box-shadow: none;
 }
@@ -69,7 +69,7 @@ nav.navbar {
 .navbar__link {
   color: white;
   font-size: 1.1rem;
-  padding: 8px 20px;
+  padding: 3px 14px;
 }
 
 .navbar__link:hover {
@@ -79,7 +79,7 @@ nav.navbar {
 .navbar__link--active {
   background-color: #DD7143;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .navbar__link--active:hover {
@@ -120,10 +120,12 @@ nav.navbar .searchBox {
 }
 
 // Hide search from navbar
-.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module,
-.searchBox_ZlJk {
-  display: none;
-}
+// .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module,
+// .searchBox_ZlJk,
+// .navbarSearchContainer_Bca1,
+// .navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+//   display: none;
+// }
 
 // Hide theme mode (light/dark) from navbar
 .toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module,
@@ -171,6 +173,10 @@ nav.navbar .searchBox {
   padding-bottom: 20px;
 }
 
+.navbar-sidebar__brand {
+  background-color: #325b4b;
+}
+
 // .navbar-sidebar__item li .socialButton {
 //   height: 38px;
 //   width: 38px;
@@ -181,52 +187,74 @@ nav.navbar .searchBox {
   width: 38px;
 }
 
-@media (min-width: 1301px) {
-  .navbar__link::before {
-    display: none;
-  }
+// @media (min-width: 1301px) {
+//   .navbar__link::before {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1300px) {
+//   div.navbar__items:first-child a.navbar__link {
+//     font-size: 0;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link svg{
+//     display: none;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/about/networks/"]::before {
+//     content: url("/static/img/featuresIcons/tools.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/developers/"]::before {
+//     content: url("/static/img/featuresIcons/build.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/bridges/"]::before {
+//     content: url("/static/img/featuresIcons/bridge.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="https://ecosystem.gnosischain.com/"]::before {
+//     content: url("/static/img/featuresIcons/ecosystem.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/Updates"]::before {
+//     content: url("/static/img/featuresIcons/ecosystem.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/faq/node/generalQuestions"]::before {
+//     content: url("/static/img/featuresIcons/guide.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/node/"]::before {
+//     content: url("/static/img/featuresIcons/node.svg");
+//     display: inline-block;
+//   }
+// }
+
+/* footer */
+.footer__links {
+  justify-content: center;
 }
 
-@media (max-width: 1300px) {
-  div.navbar__items:first-child a.navbar__link {
-    font-size: 0;
-  }
-
-  div.navbar__items:first-child a.navbar__link svg{
-    display: none;
-  }
-
-  div.navbar__items:first-child a.navbar__link[href="/tools/"]::before {
-    content: url("/static/img/featuresIcons/tools.svg");
-    display: inline-block;
-  }
-
-  div.navbar__items:first-child a.navbar__link[href="/developers/"]::before {
-    content: url("/static/img/featuresIcons/build.svg");
-    display: inline-block;
-  }
-
-  div.navbar__items:first-child a.navbar__link[href="/bridges/"]::before {
-    content: url("/static/img/featuresIcons/bridge.svg");
-    display: inline-block;
-  }
-
-  div.navbar__items:first-child a.navbar__link[href="https://ecosystem.gnosischain.com/"]::before {
-    content: url("/static/img/featuresIcons/ecosystem.svg");
-    display: inline-block;
-  }
-
-  div.navbar__items:first-child a.navbar__link[href="/faq/node/generalQuestions"]::before {
-    content: url("/static/img/featuresIcons/guide.svg");
-    display: inline-block;
-  }
-
-  div.navbar__items:first-child a.navbar__link[href="/node/"]::before {
-    content: url("/static/img/featuresIcons/node.svg");
-    display: inline-block;
-  }
+.footer__links .footer__col {
+  min-width: 220px;
+  max-width: 220px;
 }
 
+@media (max-width: 660px) {
+  .footer__links {
+    padding-top: 1.8rem;
+    flex-direction: column;
+    align-content: center;
+  }
+}
 
 
 .theme-doc-markdown.markdown a{

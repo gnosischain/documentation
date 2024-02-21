@@ -32,11 +32,11 @@ title: Running Nodes
 
    Be sure to use the right port used by your client. For example the default port for Lighthouse might be 5052, Avado nodes seems to use 5051, etc...
 
-6. **I am getting the error error: Api { error: ServerMessage { code: -32602, message: "ExecutionPayloadV1 expected" } } on Lighthouse? Why?**
+6. **I am getting the error error: Api \{ error: ServerMessage \{ code: -32602, message: "ExecutionPayloadV1 expected" \} \} on Lighthouse? Why?**
 
    If you're using Nethermind with the old xdai presets, replace them with gnosis
 
-7. **I am getting the error error: Api { error: ServerMessage { code: -32602, message: "ExecutionPayloadV1 expected" } } on Lighthouse? Why?**
+7. **I am getting the error error: Api \{ error: ServerMessage \{ code: -32602, message: "ExecutionPayloadV1 expected" \} \} on Lighthouse? Why?**
 
    If you're using Nethermind with the old xdai presets, replace them with gnosis
 
