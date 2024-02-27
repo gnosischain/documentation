@@ -80,6 +80,11 @@ const config = {
         textColor: "#091E42",
         isCloseable: false,
       },
+      colorMode: {
+        defaultMode: 'dark', // Set default mode to dark
+        disableSwitch: true,  // Disable the theme switch
+        respectPrefersColorScheme: false, // Do not change theme based on user preference
+      },
       navbar: {
         logo: {
           alt: "Gnosis Logo",

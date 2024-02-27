@@ -130,7 +130,7 @@ nav.navbar .searchBox {
 // Hide theme mode (light/dark) from navbar
 .toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module,
 .toggle_vylO.colorModeToggle_DEke {
-  display: none;
+  // display: none;
 }
 
 .navbar__items--right a {
@@ -380,4 +380,17 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 .hide-tabs-os .os-tabgroup,
 .hide-tabs-network .network-tabgroup{
   display: none;
+}
+
+body {
+  background: url("/static/img/gnosis-owl-background.svg") no-repeat;
+  background-position: left 30vw bottom -5vw;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-position: left 2vw bottom -20vw;
+  }
 }
