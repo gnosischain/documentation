@@ -35,7 +35,7 @@ const FeatureList = [
     id: 4,
     title: 'Technical guide for Developer integrations',
     subtitle: 'Learn how to build with different developer integration, SDKs and APIs on gnosis chain.',
-    link: '/technical-guides',
+    link: '/technicalguides',
     Svg: require('@site/static/img/features/guide.svg').default,
   },
   {
