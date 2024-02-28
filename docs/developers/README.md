@@ -10,6 +10,36 @@ Welcome to the Developers section! This section gives an extensive overview on h
 
 ## Getting Started
 
+<!-- it's examples of how to use CardContainer and Card -->
+<CardContainer>
+    <Card
+        title="Quickstart"
+        subtitle="Deploy your first contract on Gnosis Chain."
+        url="/developers/getting-started/quickstart" 
+    />
+    <Card
+        title="Useful Contracts"
+        subtitle="A list of usefull contracts for Gnosis Chain development.."
+        url="/developers/getting-started/contracts" 
+    />
+    <Card
+        title="3 Quickstart"
+        subtitle="Deploy your first contract on Gnosis Chain. Deploy your first contract on Gnosis Chain. Deploy your first contract on Gnosis Chain. Deploy your first contract on Gnosis Chain."
+        url="/developers/getting-started/quickstart" 
+    />
+    <Card
+        title="4 Quickstart"
+        subtitle="Deploy your first contract on Gnosis Chain. Deploy your first contract on Gnosis Chain. Deploy your first contract on Gnosis Chain. Deploy your first contract on Gnosis Chain."
+        url="/developers/getting-started/quickstart" 
+    />
+</CardContainer>
+
+<Card
+    title="5 Quickstart"
+    subtitle="Deploy your first contract on Gnosis Chain."
+    url="/developers/getting-started/quickstart" 
+/>
+
 - [Quickstart](/developers/getting-started/quickstart): Deploy your first contract on Gnosis Chain.
 - [Useful Contracts](/developers/getting-started/contracts): A list of usefull contracts for Gnosis Chain development.
 

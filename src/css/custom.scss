@@ -389,8 +389,45 @@ body {
   background-attachment: fixed;
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'GT Planar', sans-serif;
+}
+
 @media (max-width: 500px) {
   body {
     background-position: left 2vw bottom -20vw;
   }
+}
+
+.custom-card-link {
+  flex: 1;
+  margin: 5px;
+  min-width: 240px;
+}
+
+.custom-card-link:hover {
+  text-decoration: none;
+}
+
+.custom-card {
+  background: #3E695766;
+  border: 3px solid #3E6957 !important;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  font-weight: normal;
+}
+
+.custom-card:hover {
+  background: rgb(96 174 141 / 40%);
+}
+
+.custom-card h2 {
+  font-weight: bold;
+}
+
+.custom-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
