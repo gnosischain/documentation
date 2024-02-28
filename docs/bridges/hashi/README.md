@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to Hashi
 description: Hashi is an EVM oracle aggregator
 keywords: [hashi, oracle aggregator]
 ---

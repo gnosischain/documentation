@@ -1,5 +1,6 @@
 ---
 title: Roadmap
+sidebar_position: 2
 description: Gnosis is investing significant resources into trust-minimization of its Bridges, to ensure trust and safety of users. 
 keywords: [bridge roadmap, trustless bridge, light client, zksnark]
 ---
