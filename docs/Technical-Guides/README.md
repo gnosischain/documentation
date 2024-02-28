@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title : Developer Guides
 description : Technical Guides for developers to build on Gnosis Chain
 ---
