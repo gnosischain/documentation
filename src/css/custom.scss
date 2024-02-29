@@ -382,10 +382,10 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   display: none;
 }
 
-body {
+#__docusaurus {
   background: url("/static/img/gnosis-owl-background.svg") no-repeat;
-  background-position: left 30vw bottom -5vw;
-  background-size: 100% 100%;
+  background-position: right bottom -5vw;
+  background-size: contain;
   background-attachment: fixed;
 }
 
