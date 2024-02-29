@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-// import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 function HomepageHeader() {
-  // const {siteConfig} = useDocusaurusContext();
-
   const handleClickCopy = async () => {
     try {
       await navigator.clipboard.writeText('npx build-with-gnosis');
@@ -38,13 +35,34 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext()
+  const [linePosition, setLinePosition] = useState(0)
+
+  useEffect(() => {
+    const updateNavbarPosition = () => {
+      const navbar = document.querySelector('.navbar')
+      if (navbar) {
+        const rect = navbar.getBoundingClientRect()
+        setLinePosition(rect.bottom)
+      }
+    }
+
+    window.addEventListener('scroll', updateNavbarPosition)
+
+    updateNavbarPosition()
+
+    return () => {
+      window.removeEventListener('scroll', updateNavbarPosition)
+    }
+  }, [])
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description={`${siteConfig.tagline}`}
     >
       <div className={clsx(styles.homePage)} >
+        <div className={clsx(styles.fixedLine)} style={{top: linePosition}}></div>
         <HomepageHeader />
         <HomepageFeatures />
       </div>
