@@ -1,4 +1,5 @@
 --- 
+sidebar_position: 2
 description: Learn how to deploy your first contract on Gnosis Chain
 keywords: [gnosis chain, quickstart]
 title: Quickstart

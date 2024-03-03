@@ -7,7 +7,7 @@ const FeatureList = [
     id: 0,
     title: 'Build on Gnosis Chain',
     subtitle: 'Get to know how to build and interact with Gnosis Chain',
-    link: '/developers/intro',
+    link: '/developers/overview',
     Svg: require('@site/static/img/features/build.svg').default,
   },
   {

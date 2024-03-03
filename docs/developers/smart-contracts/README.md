@@ -1,4 +1,5 @@
 ---
+sidebar_position: 5
 description: Gnosis is an EVM based chain, meaning deployment steps are the same as deployment to Ethereum or other chains.
 keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum] 
 ---
