@@ -16,11 +16,11 @@
 }
 
 .fixedLine {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 3%;
   width: 94%;
-  height: 1px;
+  height: 1.5px;
   background-color: white;
 }
 
