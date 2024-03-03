@@ -1,5 +1,6 @@
 ---
 title: Third-party Bridges
+sidebar_position: 4
 description: Gnosis bridges with other blockchains.
 keywords: [gnosis bridge, xdai bridge, omni bridge, hop, connext, celer, nomad, transferto, anyswap, xp network]
 ---

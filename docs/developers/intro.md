@@ -19,6 +19,22 @@ Gnosis Chain uses DAO governance mechanism to ensure anyone can participate in t
 * Wide-ranging [Community Support](/developers/communication).
 * Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.
 
+### Coming Soon: Building on Top of Gnosis Pay
+
+We're excited to announce a groundbreaking development in the Gnosis ecosystem: a self-custodial Visa card, powered by Gnosis Pay. This innovative product leverages the robust and decentralized Gnosis Chain, offering users a seamless bridge between the traditional financial system and the decentralized finance (DeFi) world. We will soon be opening our SDK for Developers in our ecosystem to build financial products on Gnosis Pay cards.
+
+##### Gnosis Pay: A Gateway to DeFi
+
+Gnosis Pay stands at the forefront of decentralized payment networks, removing barriers and creating a fluid, integrated financial experience. By utilizing Gnosis Chain's infrastructure, Gnosis Pay ensures secure, fast, and reliable transactions.
+
+###### Key Features:
+
+- **Self-Custodial Visa Card:** Take control of your finances with a Visa card that puts you in charge of your assets.
+- **Decentralized and Secure:** Built on Gnosis Chain, Gnosis Pay offers a decentralized solution that doesn't compromise on security.
+- **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide. 
+
+For more information, visit [Gnosis Pay](https://gnosispay.com/).
+
 ## Fees
 
 Each transaction on the Gnosis Chain (sending tokens, interacting with smart contracts, etc.) is associated with the fee in xDai stablecoin. It is one of the main differences from other EVM chains where users pay in a native token of that network. This approach reduces the volatility risks and simplifies the development experience.

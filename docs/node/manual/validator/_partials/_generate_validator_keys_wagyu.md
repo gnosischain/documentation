@@ -25,7 +25,7 @@
   ![DAppNode Step 3j](/img/node/dappnode-step3j.png)
 
   :::info 
-  If you are running this program to generate keys within the context of the DAppNode <\> Gnosis Chain Hardware Validator Incentive Program, make sure to generate 4 validators and to fill in the ETH1 Withdrawal Address Field with an address you have full control over.  Also make sure to choose a directory that reflects the folder where you want the files to be saved.
+  If you are running this program to generate keys within the context of the DAppNode Gnosis Chain Hardware Validator Incentive Program, make sure to generate 4 validators and to fill in the ETH1 Withdrawal Address Field with an address you have full control over.  Also make sure to choose a directory that reflects the folder where you want the files to be saved.
   :::
 
   ![DAppNode Step 3k](/img/node/dappnode-step3k.png)

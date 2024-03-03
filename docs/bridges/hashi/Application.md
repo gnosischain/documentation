@@ -8,12 +8,12 @@ The applications below are still WIP. It is only for demo purpose.
 
 ## Safe on Hashi
 
-Cross-chain transaction using Safe can be a painful experience. The current approach is to set up Safe individually on each chain, and these Safes are independent of each other. There are [discussions](https://forum.safe.global/t/how-can-a-safe-hold-asset-on-multiple-chains/2242) about how to hold assets on multiple chains and this project aims to tackle the issue by leveraging the security provided by Hashi.
+Cross chain transaction using Safe can be a painful experience. The current approach is to set up Safe individually on each chain, and these Safes are independent of each other. There are [discussions](https://forum.safe.global/t/how-can-a-safe-hold-asset-on-multiple-chains/2242) about how to hold assets on multiple chains and this project aims to tackle the issue by leveraging the security provided by Hashi.
 In this project, two kinds of approaches are demonstrated: Push and Pull flow.
 
 ### Push flow
 
-In push flow, a cross-chain transaction is initiated by Safe from source chain (Goerli), and claimed by Safe from destination chain (Gnosis Chain).
+In push flow, a cross chain transaction is initiated by Safe from source chain (Goerli), and claimed by Safe from destination chain (Gnosis Chain).
 Goerli's Safe calls [Yaho](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaho.sol) contract to bundle the transaction and relay the message to bridge. Once the message is relayed to Gnosis Chain, it will be stored in Adapter(s) contract. With messageId and message, any user or Safe from Gnosis Chain can call [Yaru](https://github.com/gnosis/hashi/blob/main/packages/evm/contracts/Yaru.sol) to claim the transaction.
 
 Push flow utilizes the same logic as [message dispatching using Yaru and Yaho](#message-dispatching-using-yaho-and-yaru).
@@ -47,7 +47,7 @@ https://hashiadapters-dashboard-tvw47.ondigitalocean.app/
 ## Message Dispatching using Yaho and Yaru
 
 For relaying message between Ethereum/Goerli and Gnosis Chain, several contracts need to be deployed on top of the [current AMB deployments](https://docs.gnosischain.com/bridges/hashi/#goerli---gnosis-chain): Yaho, Yaru, AMB Message Relay, AMB Adapter, and Hashi.
-The addresses from this article are for Goerli <-> Gnosis Chain.
+The addresses from this article are for Goerli to Gnosis Chain.
 
 \*\* In the current deployment, `gas` is added as a parameter in `dispatchMessagesToAdapters()` to justify the [amb's gas requirement](https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/arbitrary_message/MessageDelivery.sol#L40). It is not added into the official hashi code at the moment as [it might raise incompatibility issue for other adapters](https://github.com/gnosis/hashi/pull/19#discussion_r1278769527). Please be aware that these contracts might be changed anytime.
 

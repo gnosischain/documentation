@@ -45,17 +45,212 @@ footer.footer--dark{
   background-color: #000;
 }
 
-[data-theme='dark'] nav.navbar{
-  background-color: #000;
+/* navbar */
+
+// [data-theme='dark'] nav.navbar{
+//   background-color: #3E6957;
+// }
+// [data-theme='light'] nav.navbar{
+//   background-color: #3E6957;
+// }
+
+nav.navbar {
+  background-color: #3E6957;
+  height: 80px;
+  padding: 0 2rem;
+  box-shadow: none;
 }
-[data-theme='light'] nav.navbar{
-  background-color: #F0EBDE;
+
+.navbar__link {
+  color: white;
+  font-size: 1.1rem;
+  padding: 5px 20px;
+}
+
+.navbar__link:hover {
+  color: #DD7143;
+}
+
+.navbar__link--active {
+  background-color: #DD7143;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.navbar__link--active:hover {
+  color: white;
 }
 
 [data-theme='dark'] .navbar__logo img {
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
+
+nav.navbar .searchBox {
+  display: none !important;
+}
+
+.navbar__toggle.clean-btn {
+  color: white;
+  margin-right: 2rem;
+}
+
+@media (max-width: 996px) {
+  nav.navbar {
+    padding: 0 1rem;
+  }
+  .navbar__toggle.clean-btn {
+    margin-right: 1rem;
+  }
+  .navbar__logo {
+    height: 28px;
+  }
+  .navbar__items.navbar__items--right a {
+    display: none;
+  }
+}
+
+.navbar-sidebar__item:first-child .menu__list {
+  list-style: none;
+}
+
+// Hide search from navbar
+// .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module,
+// .searchBox_ZlJk,
+// .navbarSearchContainer_Bca1,
+// .navbarSearchContainer_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module {
+//   display: none;
+// }
+
+// Hide theme mode (light/dark) from navbar
+.toggle_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module,
+.toggle_vylO.colorModeToggle_DEke {
+  // display: none;
+}
+
+.navbar__items--right a {
+  padding-right: 8px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.navbar__items--right a:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+.navbar__logo:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.04);
+}
+
+.navbar-sidebar__item:first-child .menu__list li:nth-last-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 95px);
+  padding-bottom: 20px;
+}
+
+.navbar-sidebar__item:first-child .menu__list li:nth-last-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 20px;
+}
+
+.navbar-sidebar__item:first-child .menu__list li:nth-last-child(1) {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 95px);
+  padding-bottom: 20px;
+}
+
+.navbar-sidebar__brand {
+  background-color: #325b4b;
+}
+
+// .navbar-sidebar__item li .socialButton {
+//   height: 38px;
+//   width: 38px;
+// }
+
+.socialButton {
+  height: 38px;
+  width: 38px;
+}
+
+// @media (min-width: 1301px) {
+//   .navbar__link::before {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1300px) {
+//   div.navbar__items:first-child a.navbar__link {
+//     font-size: 0;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link svg{
+//     display: none;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/about/networks/"]::before {
+//     content: url("/static/img/featuresIcons/tools.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/developers/"]::before {
+//     content: url("/static/img/featuresIcons/build.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/bridges/"]::before {
+//     content: url("/static/img/featuresIcons/bridge.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="https://ecosystem.gnosischain.com/"]::before {
+//     content: url("/static/img/featuresIcons/ecosystem.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/Updates"]::before {
+//     content: url("/static/img/featuresIcons/ecosystem.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/faq/node/generalQuestions"]::before {
+//     content: url("/static/img/featuresIcons/guide.svg");
+//     display: inline-block;
+//   }
+
+//   div.navbar__items:first-child a.navbar__link[href="/node/"]::before {
+//     content: url("/static/img/featuresIcons/node.svg");
+//     display: inline-block;
+//   }
+// }
+
+/* footer */
+.footer__links {
+  justify-content: center;
+}
+
+.footer__links .footer__col {
+  min-width: 220px;
+  max-width: 220px;
+}
+
+@media (max-width: 660px) {
+  .footer__links {
+    padding-top: 1.8rem;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
 
 .theme-doc-markdown.markdown a{
   font-weight: bold;
@@ -67,7 +262,6 @@ footer.footer--dark{
   margin-left: auto;
   margin-right: auto
 }
-
 
 /* install sections */
 
@@ -181,4 +375,58 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 .hide-tabs-os .os-tabgroup,
 .hide-tabs-network .network-tabgroup{
   display: none;
+}
+
+#__docusaurus {
+  background: url("/static/img/gnosis-owl-background.svg") no-repeat;
+  background-position: right bottom -5vw;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'GT Planar', sans-serif;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-position: left 2vw bottom -20vw;
+  }
+}
+
+.custom-card-link {
+  flex: 1;
+  margin: 5px;
+  min-width: 240px;
+}
+
+.custom-card-link:hover {
+  text-decoration: none;
+}
+
+.custom-card {
+  background: #3E695766;
+  border: 3px solid #3E6957 !important;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  font-weight: normal;
+}
+
+.custom-card:hover {
+  background: rgb(96 174 141 / 40%);
+}
+
+.custom-card h2 {
+  font-weight: bold;
+}
+
+.custom-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+aside {
+  border-right: none !important;
 }

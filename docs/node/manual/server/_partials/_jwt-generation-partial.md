@@ -12,10 +12,11 @@ openssl rand -hex 32 | tr -d "\n" > "./jwtsecret/jwt.hex"
 
 <details>
     <summary>Other ways to generate the <code>jwt.hex</code> file</summary>
+    
+<!-- Create fix for rendering -->
+<!-- 1. Use the auto-generated random one below (<a href="#generate-jwt" onClick={()=>{ javascript:window.location.reload(); }}>regenerate</a>), and place it into the `./jwtsecret/jwt.hex` file: -->
 
-1. Use the auto-generated random one below (<a href="#generate-jwt" onClick={()=>{ javascript:window.location.reload(); }}>regenerate</a>), and place it into the `./jwtsecret/jwt.hex` file:
-
-<JWTGenerator />
+<!-- <JWTGenerator /> -->
 
 2. Use an execution or consensus client to generate the `./jwtsecret/jwt.hex` file (check their documentation).
 3. Use an online generator like [this](https://seanwasere.com/generate-random-hex/). Copy and paste this value into a `./jwtsecret/jwt.hex` file.

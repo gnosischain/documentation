@@ -2,33 +2,63 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const FeatureList = [  
   {
-    title: 'Tutorials',
-    link: '/developers',
-    Svg: require('@site/static/img/home/Gnosis-Tutorial.svg').default,
+    id: 0,
+    title: 'Build on Gnosis Chain',
+    subtitle: 'Get to know how to build and interact with Gnosis Chain',
+    link: '/developers/intro',
+    Svg: require('@site/static/img/features/build.svg').default,
   },
   {
-    title: 'Tools',
-    link: '/tools',
-    Svg: require('@site/static/img/home/Gnosis-Tools.svg').default,
+    id: 1,
+    title: 'Bridge with Gnosis',
+    subtitle: 'Send messages Crosschain with our bridge solutions like Arbitary Message Bridges.',
+    link: '/bridges',
+    Svg: require('@site/static/img/features/bridge.svg').default,
   },
   {
-    title: 'Run your node',
+    id: 2,
+    title: 'Run your own node',
+    subtitle: 'Join our network of over 100k nodes.',
     link: '/node',
-    Svg: require('@site/static/img/home/Gnosis-Node.svg').default,
+    Svg: require('@site/static/img/features/node.svg').default,
   },
+  {
+    id: 3,
+    title : 'Tools for Builders',
+    link : '/tools',
+    subtitle: 'RPC Providers, Faucets, etc. Everything you need to to develop on Gnosis.',
+    Svg: require('@site/static/img/features/tools.svg').default,
+  },
+  {
+    id: 4,
+    title: 'Technical guide for Developer integrations',
+    subtitle: 'Learn how to build with different developer integration, SDKs and APIs on gnosis chain.',
+    link: '/technicalguides',
+    Svg: require('@site/static/img/features/guide.svg').default,
+  },
+  {
+    id: 5,
+    title : 'Contribute to Gnosis developer ecosystem',
+    subtitle: '',
+    link : '/',
+    Svg: require('@site/static/img/features/ecosystem.svg').default,
+  }
 ];
 
-function Feature({Svg, title, link}) {
+function Feature({Svg, title, subtitle, link}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx(styles.featureCardContainer)}>
       <a href={link}>
-        <div className="text--center">
-          <Svg className={styles.featureSvg} role="img" />
-        </div>
-        <div className="text--center padding-horiz--md">
+        <div className={clsx(styles.featureCard)}>
+          <div className={clsx(styles.featureImg)}>
+            <Svg className={styles.featureSvg} role='img' />
+          </div>
           <h3>{title}</h3>
+          <h5>{subtitle}</h5>
+
+          <p>Learn more</p>
         </div>
       </a>
     </div>
@@ -38,10 +68,10 @@ function Feature({Svg, title, link}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+      <div className='container margin-bottom--xl'>
+        <div className={clsx('row', styles.featureRow)} >
+          {FeatureList.map(({ id, ...props}) => (
+            <Feature key={id} {...props} />
           ))}
         </div>
       </div>

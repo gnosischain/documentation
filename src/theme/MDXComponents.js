@@ -3,6 +3,8 @@ import Box from '@site/src/components/Box';
 import TutorialsFeatured from '@site/src/components/TutorialsFeatured';
 import tabs from '@theme/Tabs';
 import tabItem from '@theme/TabItem';
+import Card from '@site/src/components/Card/Card';
+import CardContainer from '@site/src/components/Card/CardContainer';
 
 export default {
   ...MDXComponents,
@@ -10,4 +12,6 @@ export default {
   tutorialsFeatured: TutorialsFeatured,
   Tabs: tabs,
   TabItem: tabItem,
+  Card,
+  CardContainer
 };

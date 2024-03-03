@@ -8,7 +8,7 @@ Click `getThresholdHash` function.
 ![](../../../static/img/bridges/hashi/getThresholdHash.png)
 
 Enter the domain (chain ID, i.e. 5 for Goerli) and id (block number from domain) for the block you want to query.  
-The result will be the block hash that has passed the threshold from adapters (i.e. 2 out of 4 in Goerli <-> GC). Not every block will be stored by the adapters and reach threshold, if no threshold has been reached, the result will be bytes32(0). You can utilize [Adapters Dashboard](https://hashiadapters-dashboard-tvw47.ondigitalocean.app/) to check which block has been stored.
+The result will be the block hash that has passed the threshold from adapters (i.e. 2 out of 4 in Goerli  < > GC). Not every block will be stored by the adapters and reach threshold, if no threshold has been reached, the result will be bytes32(0). You can utilize [Adapters Dashboard](https://hashiadapters-dashboard-tvw47.ondigitalocean.app/) to check which block has been stored.
 
 ![](../../../static/img/bridges/hashi/callgetThresholdHash.png)
 
