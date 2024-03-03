@@ -116,11 +116,12 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 
 Chiado was previously launched with network ID 100100. Soon after launch, the network entered a forked state. The root causes were identified and fixed as part of the Chiado relaunch.
 
-### Chiado 0.1
+<!-- ### Chiado 0.1
 
-TODO
+TODO -->
 
 ### Appendix
 
-[^1]: See [Github Issue on Testnet GNO on Chiado Staking Contracts](https://github.com/gnosischain/pm/issues/100)
-[^2]: See [Github Issue on Goerli-Chiado Bridge Deployment](https://github.com/gnosischain/pm/issues/40)
+[1]: See [Github Issue on Testnet GNO on Chiado Staking Contracts](https://github.com/gnosischain/pm/issues/100)
+
+[2]: See [Github Issue on Goerli-Chiado Bridge Deployment](https://github.com/gnosischain/pm/issues/40)

@@ -395,9 +395,9 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .custom-card-link {
-  flex: 1;
+  flex:4;
   margin: 5px;
-  min-width: 240px;
+  min-width: 220px;
 }
 
 .custom-card-link:hover {
@@ -406,8 +406,8 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .custom-card {
   background: #3E695766;
-  border: 3px solid #3E6957 !important;
-  border-radius: 10px;
+  border: 2px solid #3E6957 !important;
+  border-radius: 15px;
   color: white;
   padding: 20px;
   font-weight: normal;
@@ -429,4 +429,14 @@ body, h1, h2, h3, h4, h5, h6 {
 
 aside {
   border-right: none !important;
+}
+
+.custom-small-card {
+  // background: #3E695766;
+  border: 2px solid #3E6957 !important;
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  font-weight: normal;
+  margin: 1px;
 }

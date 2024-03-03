@@ -1,6 +1,4 @@
-# FAQ
-
-## Validators
+# Validators FAQ
 
 1. Where can I track my validator performance?
 
