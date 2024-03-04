@@ -454,3 +454,8 @@ aside ul.menu__list {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: white;
+  background-color: #3e6957;
+}
