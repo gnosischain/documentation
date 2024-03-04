@@ -7,6 +7,19 @@ title: Overview
 
 # Why Build on Gnosis Chain?
 
+<!-- this is an examples of how to use CardContainer and FeatureCard -->
+<CardContainer>
+    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
+        <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
+        <p>A <a href="/concepts/tokens/xdai">stable token for transactions</a> & gas fees</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
+        <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
+    </FeatureCard>
+</CardContainer>
+
 * Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01).
 * A [stable token for transactions](/concepts/tokens/xdai) & gas fees.
 * Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
