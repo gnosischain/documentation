@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 title: Using Hardhat
 description: Using Hardhat with Gnosis
 keywords: [Hardhat, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide] 

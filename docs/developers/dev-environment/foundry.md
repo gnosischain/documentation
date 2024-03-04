@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 title: Using Foundry
 description: Using Foundry with Gnosis
 keywords: [Foundry, Forge, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide] 

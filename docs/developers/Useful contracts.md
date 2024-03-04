@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 description: A list of the most useful Gnosis Chain contract addresses
 keywords: [gnosis chain, contracts] 
 title: Useful Contracts

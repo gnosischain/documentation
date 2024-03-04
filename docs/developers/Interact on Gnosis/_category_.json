@@ -1,0 +1,13 @@
+{
+    "position": 5,
+    "label": "Interact with contracts on Gnosis",
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+      "type": "generated-index",
+      "title": "Interact with your Smart Contracts on Gnosis Chain "
+    },
+    "customProps": {
+      "description": "Different libraries for you to interact on Gnosis Chain"
+    }
+  }
