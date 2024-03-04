@@ -6,12 +6,26 @@ keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 
 # Bridges Overview
 
-Welcome to Gnosis Bridge!
-
-This documentation will guide you to interact with the Gnosis Bridge Explorer.
+Welcome to Gnosis Bridge! 🎉 This documentation is the home to all things bridges and will guide you to interact with the Gnosis Bridge Explorer.
 
 ## What is Gnosis Bridge Explorer ?
-(Need to add points to this)
+Gnosis Bridge Explorer is the main Bridge interface for transferring tokens between Ethereum and Gnosis Chain. 
+
+You can :
+- search for your transactions and their status
+- monitor the bridge validator activity and bridge configuration
+- claim their bridge transactions in bridge explorer.
+
+## Transactions​
+
+### How to search for your transation?​
+
+<!-- Select xDAI for xDAI bridge transaction or Omnibridge for Omnibridge transaction. -->
+Search the transaction by inserting the transaction hash or initiator/receiver address.
+You can use different filter options to filter out the unrelevant transactions.
+Click on the transaction item to check the details of the transaction.
+
+More details here: https://docs.gnosischain.com/bridges/bridge-explorer
 
 ## How to use Gnosis Bridge Explorer ?
 

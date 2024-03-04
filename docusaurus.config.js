@@ -43,7 +43,6 @@ const config = {
           editUrl: "https://github.com/gnosischain/documentation/tree/main",
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: {

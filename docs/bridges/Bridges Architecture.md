@@ -1,6 +1,6 @@
 ---
 description: Architecture of Gnosis' Bridges
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 ## Conceptual Architecture
