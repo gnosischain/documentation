@@ -409,7 +409,7 @@ body, h1, h2, h3, h4, h5, h6 {
   border: 2px solid #3E6957 !important;
   border-radius: 15px;
   color: white;
-  padding: 20px;
+  padding: 15px;
   font-weight: normal;
 }
 
@@ -423,8 +423,9 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .custom-card-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction:row;
+  flex-wrap:wrap;
+
 }
 
 aside {

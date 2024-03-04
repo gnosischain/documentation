@@ -5,7 +5,7 @@ import tabs from '@theme/Tabs';
 import tabItem from '@theme/TabItem';
 import Card from '@site/src/components/Card/Card';
 import CardContainer from '@site/src/components/Card/CardContainer';
-import SmallCard from '../components/Card/smallCard';
+// import SmallCard from '../components/Card/smallCard';
 
 export default {
   ...MDXComponents,
@@ -14,6 +14,6 @@ export default {
   Tabs: tabs,
   TabItem: tabItem,
   Card,
-  CardContainer,
-  SmallCard
+  CardContainer
+  // SmallCard
 };
