@@ -50,9 +50,9 @@ Welcome to the Developers section! This section gives an extensive overview on h
 </CardContainer>
 
 
-- [Updates](/updates): A slist of latest updates
-- [FAQ](/faq/node/generalQuestions): A list of frequently askedd questions
-- [Communication](/developers/communication): Communication channels
+<br>
+</br>
+
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
 - [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.

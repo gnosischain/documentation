@@ -13,14 +13,14 @@ const FeatureList = [
   {
     id: 1,
     title: 'Bridge with Gnosis',
-    subtitle: 'Send messages Crosschain with our bridge solutions like Arbitary Message Bridges.',
+    subtitle: 'Use Gnosis Bridge to bridge tokens from different chains and vice versa',
     link: '/bridges',
     Svg: require('@site/static/img/features/bridge.svg').default,
   },
   {
     id: 2,
     title: 'Run your own node',
-    subtitle: 'Join our network of over 100k nodes.',
+    subtitle: 'Join our network of over 100k nodes',
     link: '/node',
     Svg: require('@site/static/img/features/node.svg').default,
   },
@@ -34,7 +34,7 @@ const FeatureList = [
   {
     id: 4,
     title: 'Technical guide for Developer integrations',
-    subtitle: 'Learn how to build with different developer integration, SDKs and APIs on gnosis chain.',
+    subtitle: 'Learn how to build interactive dApps on Gnosis chain with different developer integration, SDKs and APIs',
     link: '/technicalguides',
     Svg: require('@site/static/img/features/guide.svg').default,
   },
