@@ -84,6 +84,11 @@ const config = {
         disableSwitch: true,  // Disable the theme switch
         respectPrefersColorScheme: false, // Do not change theme based on user preference
       },
+      docs:{
+        sidebar:{
+          hideable: true,
+        }
+      },
       navbar: {
         logo: {
           alt: "Gnosis Logo",
