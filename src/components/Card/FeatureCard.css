@@ -1,0 +1,26 @@
+.custom-feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  border-left: 3px solid #3E6957;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  min-width: 220px;
+  flex: 1;
+}
+
+.custom-feature-card img {
+  margin-left: 0 !important;
+  height: 40px;
+}
+
+.custom-feature-card > * {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.custom-feature-card a {
+  color: white;
+  text-decoration: underline;
+  font-weight: normal !important;
+}
