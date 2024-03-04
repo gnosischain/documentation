@@ -459,3 +459,63 @@ aside ul.menu__list {
   color: white;
   background-color: #3e6957;
 }
+
+:root {
+  --doc-sidebar-hidden-width: 80px !important;
+}
+
+@media (min-width: 997px) {
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module, 
+  .collapseSidebarButton_PEFL {
+    position: fixed !important;
+    top: 120px !important;
+    left: 10px !important;
+    background-color: transparent !important;
+    border: none !important;
+    display: block !important;
+    height: 40px !important;
+  }
+
+  .docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Sidebar-styles-module,
+  .docSidebarContainer_YfHR {
+    clip-path: none !important;
+  }
+
+  .expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Sidebar-ExpandButton-styles-module,
+  .expandButton_TmdG {
+    width: 100px !important;
+    position: fixed !important;
+    top: 126px !important;
+    left: 33px !important;
+    background-color: transparent !important;
+    border: none !important;
+    display: block !important;
+    height: 40px !important;
+  }
+
+  .sidebar_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-styles-module,
+  .sidebar_njMd {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: calc(var(--ifm-navbar-height) + 70px) !important;
+  }
+
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module svg,
+  .collapseSidebarButton_PEFL svg,
+  .expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Sidebar-ExpandButton-styles-module svg,
+  .expandButton_TmdG svg {
+    display: none !important;
+  }
+
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module::before,
+  .collapseSidebarButton_PEFL::before {
+    content: url("/static/img/arrow-to-left.svg");
+  }
+
+  .expandButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Sidebar-ExpandButton-styles-module::before,
+  .expandButton_TmdG::before  {
+    content: url("/static/img/arrow-to-right.svg");
+  }
+
+}
