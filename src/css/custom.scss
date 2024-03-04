@@ -432,6 +432,14 @@ aside {
   border-right: none !important;
 }
 
+
+aside li.menu__list-item:not(.menu__list-item--collapsed):not(.menu__list-item-collapsible):not(.theme-doc-sidebar-item-category):not(.theme-doc-sidebar-item-link-level-1) {
+  border-left: 1px solid #3E6957;
+  border-radius: 0;
+  margin-top: 0;
+  padding-top: 0.25rem;
+}
+
 .custom-small-card {
   // background: #3E695766;
   border: 2px solid #3E6957 !important;
@@ -440,4 +448,9 @@ aside {
   padding: 10px;
   font-weight: normal;
   margin: 1px;
+}
+
+aside ul.menu__list {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
