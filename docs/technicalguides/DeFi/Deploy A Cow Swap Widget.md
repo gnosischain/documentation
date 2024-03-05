@@ -1,5 +1,4 @@
-[UNDER CONSTRUCTION 🚧 🛑 🚧 🛑]
-# Deploy Your Own Swap Frontend 
+# Deploy Your Own Cow Swap Frontend 
 
 
 This tutorial will guide you through deploying Cow Swap swap frontends using the `@widget-examples` code examples. Cow Swap is a decentralized exchange platform, and with these examples, you can quickly set up your own swap frontend.
