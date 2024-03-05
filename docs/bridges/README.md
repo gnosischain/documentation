@@ -90,9 +90,6 @@ This section shows the insight of current bridges validators, including last see
 ![](../../static/img//bridges/bridge-explorer/validator-status.png)
 
 
-
-
-
 If you are not coming from Ethereum, you can use one of the following bridges:
 - [Jumper](https://jumper.exchange/) (by Li.Fi)
 - [Bungee](https://www.bungee.exchange)
