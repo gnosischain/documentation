@@ -7,6 +7,9 @@ import Card from '@site/src/components/Card/Card';
 import FeatureCard from '@site/src/components/Card/FeatureCard';
 import CardContainer from '@site/src/components/Card/CardContainer';
 
+// import SmallCard from '../components/Card/smallCard';
+
+
 export default {
   ...MDXComponents,
   box: Box,

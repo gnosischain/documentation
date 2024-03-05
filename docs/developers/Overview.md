@@ -5,8 +5,10 @@ keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum]
 title: Overview
 ---
 
+
 # Why Build on Gnosis Chain?
 
+<!-- this is an examples of how to use CardContainer and FeatureCard -->
 <CardContainer>
     <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
         <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
@@ -20,6 +22,8 @@ title: Overview
 </CardContainer>
 
 
+# Why Build on Gnosis Chain?
+
 
 * Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01).
 * A [stable token for transactions](/concepts/tokens/xdai) & gas fees.
@@ -31,6 +35,7 @@ title: Overview
 ## Getting Started
 
 Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
+
 
 
 <CardContainer>
@@ -62,9 +67,8 @@ Welcome to the Developers section! This section gives an extensive overview on h
 </CardContainer>
 
 
+
 ## Resources
-
-
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
 - [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.
@@ -84,7 +88,3 @@ Gnosis Pay stands at the forefront of decentralized payment networks, removing b
 - **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide. 
 
 For more information, visit [Gnosis Pay](https://gnosispay.com/).
-
-
-
-
