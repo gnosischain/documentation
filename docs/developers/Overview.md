@@ -5,6 +5,7 @@ keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum]
 title: Overview
 ---
 
+
 # Why Build on Gnosis Chain?
 
 <!-- this is an examples of how to use CardContainer and FeatureCard -->
@@ -36,32 +37,6 @@ title: Overview
 Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
 
 
-<!-- it's examples of how to use CardContainer and Card -->
-<CardContainer>
-    <Card
-        title=" 🛠️ Quickstart"
-        subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
-        url="/developers/quickstart" 
-    />
-    <Card
-        title=" 🧱 Build contracts on Gnosis "
-        subtitle="Template contracts that you can deploy on Gnosis Chain."
-        url="/category/build-contracts-on-gnosis" 
-    />
-    <Card
-        title=" 📺 Developement Environments"
-        subtitle="Deploy smart contracts with development environment."
-        url="/developers/category/deploy-contracts-on-gnosis" 
-    />
-    <Card
-        title=" 🎮 Interact with Smart Contracts"
-        subtitle="Interact with smart contracts using library of your choice!"
-        url="/developers/category/interact-with-contracts-on-gnosis" 
-    />
-    <Card
-    title=" 🧩 Verify Smart Contracts on Gnosis Chain"
-    subtitle="Verify your smart contracts! "
-    url="/developers/Verify%20Smart%20Contracts/" 
 
 <CardContainer>
     <Card
@@ -87,13 +62,13 @@ Welcome to the Developers section! This section gives an extensive overview on h
     <Card
     title=" 🧩 Verify Smart Contracts on Gnosis Chain"
     subtitle="Verify your smart contracts! "
-    url="/developers/Verify%20Smart%20Contracts/" 
+    url="/developers/Verify%20Smart%20Contracts/"
     />
 </CardContainer>
 
 
-## Resources
 
+## Resources
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
 - [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.
@@ -113,4 +88,3 @@ Gnosis Pay stands at the forefront of decentralized payment networks, removing b
 - **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide. 
 
 For more information, visit [Gnosis Pay](https://gnosispay.com/).
-
