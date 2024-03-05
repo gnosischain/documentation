@@ -1,7 +1,7 @@
 ---
+sidebar_position: 2
 description: List of JSON RPC endpoints and providers to connect your dapp to Gnosis or Chiado
-keywords:
-  [rpc, node, rpc node, json rpc, infrastructure, rpc provider, rpc endpoint]
+keywords: [rpc, node, rpc node, json rpc, infrastructure, rpc provider, rpc endpoint]
 ---
 
 import Tabs from "@theme/Tabs";
