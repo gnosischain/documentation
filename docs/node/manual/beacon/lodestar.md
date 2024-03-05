@@ -56,7 +56,7 @@ $ lodestar beacon
 
 :::info More about Checkpoint Sync
 
-- Lodestar's [Checkpoint Sync docs](https://chainsafe.github.io/lodestar/usage/beacon-management/#checkpoint-sync)
+- Lodestar's [Checkpoint Sync docs](https://chainsafe.github.io/lodestar/getting-started/starting-a-node/#checkpoint-sync)
 - Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
 
 :::

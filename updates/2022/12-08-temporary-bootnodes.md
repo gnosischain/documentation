@@ -106,9 +106,9 @@ lighthouse
 
 ### Lodestar
 
-Lodestar utilizes multiple [`--bootnodes`](https://chainsafe.github.io/lodestar/reference/cli/#beacon) flags to specify custom bootnodes. 
+Lodestar utilizes multiple [`--bootnodes`](https://chainsafe.github.io/lodestar/beacon-management/beacon-cli/#-bootnodes) flags to specify custom bootnodes. 
 
-Docs: https://chainsafe.github.io/lodestar/reference/cli/#beacon
+Docs: https://chainsafe.github.io/lodestar/beacon-management/networking/#peer-discovery-discv5
 
 ```
 lodestar

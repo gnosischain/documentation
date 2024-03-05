@@ -38,7 +38,7 @@ Follow the syntax of the Lodestar CLI commands and their options.
 validator voluntary-exit --network gnosis --pubkeys 0xF00
 ```
 
-- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#validator-voluntary-exit-examples).
+- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#validator-voluntary-exit).
 
 ### Nimbus
 
