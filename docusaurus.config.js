@@ -209,6 +209,10 @@ const config = {
                 label: "GitHub",
                 href: "https://github.com/gnosischain",
               },
+              {
+                label: "Gnosis Chain Media Kit",
+                href: "https://github.com/gnosischain/media-kit",
+              },
             ],
           },
         ],
