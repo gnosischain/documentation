@@ -7,6 +7,7 @@ title: Overview
 
 # Why Build on Gnosis Chain?
 
+<!-- this is an examples of how to use CardContainer and FeatureCard -->
 <CardContainer>
     <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
         <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
@@ -20,6 +21,8 @@ title: Overview
 </CardContainer>
 
 
+# Why Build on Gnosis Chain?
+
 
 * Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01).
 * A [stable token for transactions](/concepts/tokens/xdai) & gas fees.
@@ -32,6 +35,33 @@ title: Overview
 
 Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
 
+
+<!-- it's examples of how to use CardContainer and Card -->
+<CardContainer>
+    <Card
+        title=" 🛠️ Quickstart"
+        subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
+        url="/developers/quickstart" 
+    />
+    <Card
+        title=" 🧱 Build contracts on Gnosis "
+        subtitle="Template contracts that you can deploy on Gnosis Chain."
+        url="/category/build-contracts-on-gnosis" 
+    />
+    <Card
+        title=" 📺 Developement Environments"
+        subtitle="Deploy smart contracts with development environment."
+        url="/developers/category/deploy-contracts-on-gnosis" 
+    />
+    <Card
+        title=" 🎮 Interact with Smart Contracts"
+        subtitle="Interact with smart contracts using library of your choice!"
+        url="/developers/category/interact-with-contracts-on-gnosis" 
+    />
+    <Card
+    title=" 🧩 Verify Smart Contracts on Gnosis Chain"
+    subtitle="Verify your smart contracts! "
+    url="/developers/Verify%20Smart%20Contracts/" 
 
 <CardContainer>
     <Card
@@ -83,7 +113,4 @@ Gnosis Pay stands at the forefront of decentralized payment networks, removing b
 - **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide. 
 
 For more information, visit [Gnosis Pay](https://gnosispay.com/).
-
-
-
 

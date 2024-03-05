@@ -406,7 +406,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .custom-card {
   background: #3E695766;
-  border: 2px solid #3E6957;
+  border: 1px solid #3E6957 !important;
   border-radius: 15px;
   color: white;
   padding: 15px;
@@ -433,7 +433,6 @@ aside {
 }
 
 
-
 aside li.menu__list-item:not(.menu__list-item--collapsed):not(.menu__list-item-collapsible):not(.theme-doc-sidebar-item-category):not(.theme-doc-sidebar-item-link-level-1) {
   border-left: 2px solid #3E6957;
   border-radius: 0;
@@ -441,7 +440,6 @@ aside li.menu__list-item:not(.menu__list-item--collapsed):not(.menu__list-item-c
   margin-right: 2px;
   padding-top: 0.25rem;
 }
-
 
 .custom-small-card {
   // background: #3E695766;
