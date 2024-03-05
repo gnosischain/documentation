@@ -406,7 +406,11 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .custom-card {
   background: #3E695766;
+<<<<<<< HEAD
   border: 1px solid #3E6957 !important;
+=======
+  border: 2px solid #3E6957 !important;
+>>>>>>> dev
   border-radius: 15px;
   color: white;
   padding: 15px;
@@ -432,6 +436,7 @@ aside {
   border-right: none !important;
 }
 
+<<<<<<< HEAD
 
 aside li.menu__list-item:not(.menu__list-item--collapsed):not(.menu__list-item-collapsible):not(.theme-doc-sidebar-item-category):not(.theme-doc-sidebar-item-link-level-1) {
   border-left: 2px solid #3E6957;
@@ -441,6 +446,8 @@ aside li.menu__list-item:not(.menu__list-item--collapsed):not(.menu__list-item-c
   padding-top: 0.25rem;
 }
 
+=======
+>>>>>>> dev
 .custom-small-card {
   // background: #3E695766;
   border: 2px solid #3E6957 !important;
@@ -448,6 +455,7 @@ aside li.menu__list-item:not(.menu__list-item--collapsed):not(.menu__list-item-c
   color: white;
   padding: 10px;
   font-weight: normal;
+<<<<<<< HEAD
   margin: 5px;
 }
 
@@ -589,4 +597,7 @@ aside ul.menu__list {
     content: url("/static/img/arrow-to-right.svg");
   }
 
+=======
+  margin: 1px;
+>>>>>>> dev
 }

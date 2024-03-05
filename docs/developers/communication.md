@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 sidebar_position: 7
+=======
+sidebar_position: 3
+>>>>>>> dev
 description: A list of official communication channels for Gnosis
 keywords: [gnosis, gnosis twitter, gnosis telegram, gnosis discord, governance forum]
 title: Communication
