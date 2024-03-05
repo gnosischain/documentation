@@ -4,8 +4,27 @@ description: Gnosis Chain is a community-owned EVM-based network that is operate
 keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum] 
 title: Overview
 ---
+<<<<<<< HEAD
+
 # Why Build on Gnosis Chain?
 
+<!-- this is an examples of how to use CardContainer and FeatureCard -->
+<CardContainer>
+    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
+        <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
+        <p>A <a href="/concepts/tokens/xdai">stable token for transactions</a> & gas fees</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
+        <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
+    </FeatureCard>
+</CardContainer>
+
+=======
+# Why Build on Gnosis Chain?
+
+>>>>>>> dev
 * Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01).
 * A [stable token for transactions](/concepts/tokens/xdai) & gas fees.
 * Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
@@ -15,6 +34,38 @@ title: Overview
 
 ## Getting Started
 
+<<<<<<< HEAD
+Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
+
+
+
+<!-- it's examples of how to use CardContainer and Card -->
+<CardContainer>
+    <Card
+        title=" 🛠️ Quickstart"
+        subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
+        url="/developers/quickstart" 
+    />
+    <Card
+        title=" 🧱 Build contracts on Gnosis "
+        subtitle="Template contracts that you can deploy on Gnosis Chain."
+        url="/category/build-contracts-on-gnosis" 
+    />
+    <Card
+        title=" 📺 Developement Environments"
+        subtitle="Deploy smart contracts with development environment."
+        url="/developers/category/deploy-contracts-on-gnosis" 
+    />
+    <Card
+        title=" 🎮 Interact with Smart Contracts"
+        subtitle="Interact with smart contracts using library of your choice!"
+        url="/developers/category/interact-with-contracts-on-gnosis" 
+    />
+    <Card
+    title=" 🧩 Verify Smart Contracts on Gnosis Chain"
+    subtitle="Verify your smart contracts! "
+    url="/developers/Verify%20Smart%20Contracts/" 
+=======
 <!-- it's examples of how to use CardContainer and Card -->
 <CardContainer>
     <Card
@@ -41,10 +92,16 @@ title: Overview
     title="5 Quickstart"
     subtitle="Deploy your first contract on Gnosis Chain."
     url="/developers/getting-started/quickstart" 
+>>>>>>> dev
 />
 </CardContainer>
 
 
+<<<<<<< HEAD
+<br>
+</br>
+
+=======
 ## How to
 
 - [Interact with Gnosis Chain](/developers/interact/metamask): Learn how to interact with Gnosis Chain wallets, APIs, SDKs, etc.
@@ -64,6 +121,7 @@ title: Overview
 - [Updates](/updates): A slist of latest updates
 - [FAQ](/faq/node/generalQuestions): A list of frequently askedd questions
 - [Communication](/developers/communication): Communication channels
+>>>>>>> dev
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
 - [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.
@@ -84,9 +142,12 @@ Gnosis Pay stands at the forefront of decentralized payment networks, removing b
 
 For more information, visit [Gnosis Pay](https://gnosispay.com/).
 
+<<<<<<< HEAD
+=======
 # Developers Overview
 
 Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
 
 
+>>>>>>> dev
 

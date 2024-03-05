@@ -1,0 +1,13 @@
+{
+    "position": 3,
+    "label": "Build contracts on Gnosis",
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+      "type": "generated-index",
+      "title": "Template Contracts"
+    },
+    "customProps": {
+      "description": "Different example smart contracts that you can deploy on Gnosis Chain"
+    }
+  }

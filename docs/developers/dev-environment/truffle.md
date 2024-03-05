@@ -1,4 +1,5 @@
---- 
+---
+sidebar_position: 3
 title: Using Truffle
 description: Using Truffle with Gnosis
 keywords: [Truffle, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethereum, Guide]

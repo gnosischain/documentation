@@ -1,0 +1,10 @@
+{
+    "position": 3,
+    "label": "Build with Bridges",
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+      "type": "generated-index",
+      "title": "How to build using AMB,Omnibridge and xDAI bridge"
+    }
+  }

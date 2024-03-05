@@ -43,7 +43,6 @@ const config = {
           editUrl: "https://github.com/gnosischain/documentation/tree/main",
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: {
@@ -84,6 +83,11 @@ const config = {
         defaultMode: 'dark', // Set default mode to dark
         disableSwitch: true,  // Disable the theme switch
         respectPrefersColorScheme: false, // Do not change theme based on user preference
+      },
+      docs:{
+        sidebar:{
+          hideable: true,
+        }
       },
       navbar: {
         logo: {
@@ -204,6 +208,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/gnosischain",
+              },
+              {
+                label: "Gnosis Chain Media Kit",
+                href: "https://github.com/gnosischain/media-kit",
               },
             ],
           },
