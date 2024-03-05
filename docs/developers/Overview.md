@@ -63,13 +63,11 @@ Welcome to the Developers section! This section gives an extensive overview on h
 
 
 ## Resources
-
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
 - [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/rpc): A list of RPC providers that provide access to the network.
 
 ### Coming Soon: Building on Top of Gnosis Pay
-
 We're excited to announce a groundbreaking development in the Gnosis ecosystem: a self-custodial Visa card, powered by Gnosis Pay. This innovative product leverages the robust and decentralized Gnosis Chain, offering users a seamless bridge between the traditional financial system and the decentralized finance (DeFi) world. We will soon be opening our SDK for Developers in our ecosystem to build financial products on Gnosis Pay cards.
 
 ##### Gnosis Pay: A Gateway to DeFi
