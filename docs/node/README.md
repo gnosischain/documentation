@@ -25,7 +25,7 @@ We believe that everyone should have access to the tools of web3 that empower us
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
-- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~250 at Feb 2024) instead of the 32 ETH (~$81.000 at Feb 2024) minimum required for Ethereum
+- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~400 at March 2024) instead of the 32 ETH (~$120.000 at Feb 2024) minimum required for Ethereum
 - Gnosis Chain runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus.
 
 ## Choosing an Approach
