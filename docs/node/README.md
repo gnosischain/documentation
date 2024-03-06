@@ -12,8 +12,6 @@ title: Run a Node
 
 Gnosis is persistently committed to building the open infrastructure for a decentralized internet because we believe that web3 applications require an unstoppable network, a level playing field that’s open to anyone. 
 
-We believe that everyone should have access to the tools of web3 that empower users to take ownership of their data and digital assets.
-
 ### Featured Headlines
 
 - Gnosis minimum stake is 1 GNO to run a validator.
