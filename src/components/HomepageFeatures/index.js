@@ -20,7 +20,7 @@ const FeatureList = [
   {
     id: 2,
     title: 'Run your own node',
-    subtitle: 'Join our network of over 100k nodes',
+    subtitle: 'Join our network of over 200k nodes',
     link: '/node',
     Svg: require('@site/static/img/features/node.svg').default,
   },
