@@ -65,7 +65,7 @@ Import an interchange file to the slashing protection DB:
 validator slashing-protection import --network gnosis --file interchange.json
 ```
 
-- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/reference/cli/#validator-slashing-protection).
+- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#validator-slashing-protection-import).
 
 ## Nimbus
 

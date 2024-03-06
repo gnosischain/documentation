@@ -68,8 +68,8 @@ https://github.com/sigp/lighthouse-metrics
     --metrics=true
     --metrics.port=<PORT>
 
-https://chainsafe.github.io/lodestar/usage/prometheus-grafana/
-https://chainsafe.github.io/lodestar/reference/cli/#validator
+https://chainsafe.github.io/lodestar/logging-and-metrics/prometheus-grafana/
+https://chainsafe.github.io/lodestar/beacon-management/beacon-cli/#-metrics
 </TabItem>
 <TabItem value="Teku" label="Teku">
 
