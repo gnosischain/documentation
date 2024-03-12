@@ -3,6 +3,15 @@ sidebar_position: 1
 sidebar_label: Account Abstraction
 ---
 
+# Understanding Account Abstraction
+
+<CardContainer>
+<Card
+    title="What is Account Abstraction ? "
+    subtitle=" "
+    url=""
+    />
+</CardContainer>
 
 # Account Abstraction on Gnosis Chain
 
