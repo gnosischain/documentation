@@ -74,7 +74,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Gnosis Chain will hard fork on 11 March 2024 at 18:30:20 UTC, Slot: 14237696 Timestamp: 1710181820! Check out <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/gnosischain/status/1757154327817507103">here</a>.',
+          'Dencun upgrade is now live on Gnosis Chain. Check out <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/gnosischain/status/1767259776101052684">here</a>.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
