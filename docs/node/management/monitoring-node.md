@@ -40,7 +40,7 @@ In order to expose your node's clients data to Prometheus, please ensure the exe
 <TabItem value="Nethermind" label="Nethermind">
  ```
 --Metrics.Enabled true
---Metrics.ExposePort <PORT>
+--Metrics.ExposePort $PORT
 --Metrics.PushGatewayUrl
 
 Refer to https://docs.nethermind.io/nethermind/ethereum-client/metrics/setting-up-local-metrics-infrastracture
@@ -57,24 +57,25 @@ WIP
 
 <Tabs>
 <TabItem value="lighthouse" label="Lighthouse">
-```
+
+```shell
+
 --metrics
---metrics-port=<PORT>
+--metrics-port=$PORT
 
 https://lighthouse-book.sigmaprime.io/advanced_metrics.html
 https://github.com/sigp/lighthouse-metrics
 ```
+
   
 </TabItem>
 <TabItem value="Lodestar" label="Lodestar">
-```
+```shell
 --metrics=true
---metrics.port=<PORT>
+--metrics.port=$PORT
 
-https://chainsafe.github.io/lodestar/usage/prometheus-grafana/
-https://chainsafe.github.io/lodestar/reference/cli/#validator
-```
-
+https://chainsafe.github.io/lodestar/logging-and-metrics/prometheus-grafana/
+https://chainsafe.github.io/lodestar/beacon-management/beacon-cli/#-metrics
 </TabItem>
 <TabItem value="Teku" label="Teku">
 ```
@@ -84,12 +85,14 @@ https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/
 
 </TabItem>
 <TabItem value="Nimbus" label="Nimbus">
-```
+
+```shell
     --metrics
-    --metrics-port=<PORT>
+    --metrics-port=$PORT
 ```
 
 https://nimbus.guide/metrics-pretty-pictures.html#simple-metrics
+
 </TabItem>
 <TabItem value="Prysm" label="Prysm">
 
