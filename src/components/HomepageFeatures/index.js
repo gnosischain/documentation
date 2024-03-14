@@ -12,8 +12,8 @@ const FeatureList = [
   },
   {
     id: 1,
-    title: 'Bridge with Gnosis',
-    subtitle: 'Use Gnosis Bridge to bridge tokens from different chains and vice versa',
+    title: 'Bridge to Gnosis',
+    subtitle: 'Use Gnosis Bridges to bridge tokens from different chains and vice versa',
     link: '/bridges',
     Svg: require('@site/static/img/features/bridge.svg').default,
   },

@@ -6,7 +6,7 @@ keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 
 # Overview
 
-Welcome to Gnosis Bridge! 🎉 This documentation is the home to all things bridges and will guide you to interact with the Gnosis Bridge Explorer.
+Welcome to Gnosis Bridges! 🎉 This documentation is the home to all things bridges and will guide you to interact with the Gnosis Bridge Explorer.
 
 # Bridge Explorer
 
