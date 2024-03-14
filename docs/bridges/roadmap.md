@@ -16,16 +16,11 @@ Gnosis has provided a $600k grant to [0xParc](https://0xparc.org/) to fund R&D i
 There is an additional effort by the original xDai team into [BLS-signature based trustless bridge](https://forum.gnosis.io/t/gip-57-should-gnosis-dao-support-research-of-a-zksnark-enabled-light-client-and-bridge/5421/15?u=dan-gnosis), as an alternative to a SNARKs.
 
 ### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms
+Hashi, a cross chain protocol based on distributed trust of the underlying security mechanisms
+Hashi is an EVM Hash Oracle Aggregator designed to enhance cross-chain bridge security by aggregating block headers from various sources. By requiring validation from multiple independent mechanisms, Hashi ensures greater resilience against security incidents. It supports 15+ General Message Passing bridges and ZK light clients, promoting redundancy and reducing reliance on single mechanisms. Integrating Hashi into Gnosis Chain's bridges strengthens security, decentralization, and interoperability. This initiative aims to set a new standard for cross-chain transactions, enhancing user confidence and bolstering the Gnosis ecosystem's security posture. [Check out the proposal](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) .
 
-*Expected release in Q2 2023*
-
-Hashi is an EVM Header Oracle Aggregator, designed to facilitate a [principled approach to cross-chain bridge security](https://ethresear.ch/t/a-principled-approach-to-bridges/14725?u=auryn). The primary insight being that the vast majority of bridge-related security incidents could have had minimal impact if the systems relying on them had built in some redundancy. 
-
-This means not completely trusting ANY bridge mechanism and, instead, distributing our trust among many parallel mechanisms.
-
-Each bridge mechanism is treated as an oracle for any given header. Users choose which combination of bridges to trust and how many must agree.
-
-Orcale examples: Any Arbitrary Message Bridge, such as Wormhole or our own AMB, ZKP light client based implementations, such as SuccinctLabs, https://github.com/metacraft-labs/DendrETH and zkBridge.
+### Telepathy, zkSNARK-enabled Light Client bridge validator
+Succinct Lab's zkSNARK-enabled Light Client, Telepathy, launched in July 2023, has emerged as a key component of the AMB bridge ecosystem. Utilizing zkSNARKs, Telepathy provides validity proofs, ensuring trustless verification of transaction events across chains. This solution has become one of the most active bridge validators in the AMB network, enhancing security and reliability for cross-chain transactions.
 
 ![Hashi Architecture](../../static/img/bridges/diagrams/Hashi-architecture.png)
 
