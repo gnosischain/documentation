@@ -1,0 +1,10 @@
+{
+    "position": 2,
+    "label": "How to use Gnosis Bridges",
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+      "type": "generated-index",
+      "title": "Learn how to use xDAI bridge and Omni Bridge"
+    }
+  }
