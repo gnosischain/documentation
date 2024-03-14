@@ -4,11 +4,10 @@ description: Gnosis Chain is a community-owned EVM-based network that is operate
 keywords: [gnosis developers, dev tools, tutorials, why gnosis, ethereum] 
 title: Overview
 ---
-
-
 # Why Build on Gnosis Chain?
 
-<!-- this is an examples of how to use CardContainer and FeatureCard -->
+
+
 <CardContainer>
     <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
         <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
@@ -28,6 +27,10 @@ title: Overview
      <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
         <p>Wide-ranging [Community Support](/developers/communication).</p>
     </FeatureCard>
+    <outlineCard
+       subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
+/>
+
 </CardContainer>
 
 ## Getting Started
