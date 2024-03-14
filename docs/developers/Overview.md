@@ -16,26 +16,23 @@ title: Overview
     <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
         <p>A <a href="/concepts/tokens/xdai">stable token for transactions</a> & gas fees</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
+        <p>Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.</p>
+    </FeatureCard>
+     <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
+        <p>Fully-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).</p>
+    </FeatureCard>
+     <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
+        <p>Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.</p>
+    </FeatureCard>
+     <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
+        <p>Wide-ranging [Community Support](/developers/communication).</p>
     </FeatureCard>
 </CardContainer>
-
-
-# Why Build on Gnosis Chain?
-
-
-* Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01).
-* A [stable token for transactions](/concepts/tokens/xdai) & gas fees.
-* Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.
-* Full-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).
-* Wide-ranging [Community Support](/developers/communication).
-* Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.
 
 ## Getting Started
 
 Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
-
 
 
 <CardContainer>
@@ -77,11 +74,11 @@ Welcome to the Developers section! This section gives an extensive overview on h
 
 We're excited to announce a groundbreaking development in the Gnosis ecosystem: a self-custodial Visa card, powered by Gnosis Pay. This innovative product leverages the robust and decentralized Gnosis Chain, offering users a seamless bridge between the traditional financial system and the decentralized finance (DeFi) world. We will soon be opening our SDK for Developers in our ecosystem to build financial products on Gnosis Pay cards.
 
-##### Gnosis Pay: A Gateway to DeFi
+### Gnosis Pay: A Gateway to DeFi
 
 Gnosis Pay stands at the forefront of decentralized payment networks, removing barriers and creating a fluid, integrated financial experience. By utilizing Gnosis Chain's infrastructure, Gnosis Pay ensures secure, fast, and reliable transactions.
 
-###### Key Features:
+### Key Features:
 
 - **Self-Custodial Visa Card:** Take control of your finances with a Visa card that puts you in charge of your assets.
 - **Decentralized and Secure:** Built on Gnosis Chain, Gnosis Pay offers a decentralized solution that doesn't compromise on security.
