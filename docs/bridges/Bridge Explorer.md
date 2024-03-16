@@ -4,8 +4,6 @@ title: Using Gnosis Bridge Explorer
 keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 ---
 
-This documentation will guide you to interact with the Gnosis Bridge Explorer.
-
 # Bridge Explorer
 
 Bridge explorer allows user to check bridge transactions of xDAI bridge and Omnibridge, bridges configurations, and validators status. Users may also claim their bridge transactions in bridge explorer.
