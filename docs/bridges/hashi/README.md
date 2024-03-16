@@ -17,4 +17,3 @@ the systems relying on them had built in some redundancy. In other words, it's m
 validated by multiple independent mechanisms, rather than by just one.
 
 We call this setup a **RAIHO** (Redundant Array of Independent Hash Oracles).
-
