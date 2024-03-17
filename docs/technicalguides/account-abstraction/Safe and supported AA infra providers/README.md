@@ -1,21 +1,21 @@
 ---
+sidebar_position: 1
 description: Safe is the most trusted decentralized custody protocol and collective asset management platform on Ethereum and the EVM
 keywords: [safe,account-abstraction]
 ---
 
-
-# Building AA with Safe
+# Building Account Abstraction with Safe
 [Safe](https://docs.safe.global/) provides a variety of Account Abstraction stacks for developers to integrate and build Account Abstraction on top of Safe. 
 
-[Safe ](https://docs.safe.global/learn/safe-core) suites:
-1. [Safe Account Abstraction SDK](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk)
-2. [Safe API](https://docs.safe.global/learn/safe-core/safe-core-api)
-3. [Safe \{Core\} Protocol](https://docs.safe.global/learn/safe-core/safe-core-protocol)
+[Safe Core](https://docs.safe.global/learn/safe-core) suites:
+1. [Safe Core Account Abstraction SDK](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk)
+2. [Safe Core  API](https://docs.safe.global/learn/safe-core/safe-core-api)
+3. [Safe Core Protocol](https://docs.safe.global/learn/safe-core/safe-core-protocol)
 
-## Safe Account Abstraction SDK
-<!-- ![](../../../static/img/developers/Safe/safe-AA-SDK.png) -->
+## Safe Core Account Abstraction SDK
+Safe Core Account Abstraction SDK allows developers to create AA functionalities into their apps.
+![](../../../../static/img/developers/Safe/safe-AA-SDK.png)
 
-Safe\{Core\} Account Abstraction SDK allows developers to create AA functionalities into their apps.
 
 ### [Protocol Kit](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/protocol-kit)
 Protocol Kit provides functionalities such as creating new Safe accounts, updating the configuration of existing Safes, and proposing and executing transactions.
@@ -28,6 +28,7 @@ Follow the [tutorial on Safe](https://docs.safe.global/learn/safe-core/safe-core
 Auth Kit enables users to sign in using an email address, social media account, or traditional crypto wallets like Metamask. It creates an Ethereum/Gnosis address and let users to authenticate the account using above-mentioned authentication methods.
 
 Follow the [tutorial on Safe](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/auth-kit#quickstart) to create a Signing Account using your email or social media account. Once authenticated, you can sign transactions and interact with any Safe Smart Accounts you own.
+
 
 ### [Onramp Kit](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/onramp-kit)
 Onramp Kit allows users to buy cryptocurrencies using a credit card or other payment methods.
@@ -44,3 +45,9 @@ Currently, the Relay Kit is only compatible with [Gelato relay](https://docs.gel
 
 
 Follow the [tutorial on Safe](https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/relay-kit#quickstart) to send some tokens to another address using the Relay Kit to pay for he gas fees. 
+
+To learn more about how to use Gelato with Safe, checkout the demos linked below.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

@@ -5,53 +5,47 @@ sidebar_label: Account Abstraction
 
 # Understanding Account Abstraction
 
+<FeatureCard imgUrl="">
+        <h2>What is Account Abstraction ? </h2>
+        <p>Account abstraction allows for more flexible and user-friendly account models beyond the traditional externally owned accounts (EOAs). With AA, smart contract wallets can initiate transactions, enabling more complex logic like multi-signature verification, recovery mechanisms, and gas fee payments in tokens. AA revolves around the idea of avoiding the need for change in concensus layer.</p>
+</FeatureCard>
+
 <CardContainer>
-<Card
-    title="What is Account Abstraction ? "
-    subtitle="Account abstraction allows for more flexible and user-friendly account models beyond the traditional externally owned accounts (EOAs). With AA, smart contract wallets can initiate transactions, enabling more complex logic like multi-signature verification, recovery mechanisms, and gas fee payments in tokens. AA revolves around the idea of avoiding the need for change in concensus layer."
+    <Card
+    title="Programmable wallets more advance than EOA "
     url=""
     />
+    <Card
+    title="Seamless and frictionless user onboarding experience"
+    url=""
+    />
+    <Card
+    title="Batched transaction for sending multiple transactions"
+    url=""
+    />
+    <Card
+    title="Sponsoring user gas fees for gasless experience"
+    url=""
+    /> 
+    <Card
+    title="Allowing users to pay gas fees in USDC/USDT without the need of native gas token"
+    url=""
+    /> 
 </CardContainer>
 
-<CardContainer>
-    <FeatureCard imgUrl="">
-        <p>Programmable wallets with arbitary logic</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="">
-        <p>Batched transaction for sending multiple transactions</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="">
-        <p>Allowing users to pay gas fees in ERC-20 tokens without having ETH</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="">
-        <p>Sponsoring user gas fees for gasless experience</p>
-    </FeatureCard>
-</CardContainer>
 
-
-
+---
 
 # Account Abstraction on Gnosis Chain
 
-Gnosis Chain offers a range of account abstraction (AA) providers designed to enhance user experience by simplifying transaction processes and improving security for your dApp. This README provides an overview of the available AA options on Gnosis Chain, helping developers choose the best fit for their projects.
-
-## Providers for Account Abstraction on Gnosis Chain
+Gnosis Chain offers a range of account abstraction (AA) providers designed to enhance user experience of dApps, so that users can do on-chain activities and transactions cheaper and leverage the power of AA stack with different provider solutions for the non-web3 users.
+### Providers for Account Abstraction on Gnosis Chain
 
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-### Particle Network
 
-Particle Network provides a Smart Wallet-as-a-Service, leveraging modular and customizable wallet components. It supports native ERC-4337 AA capabilities, streamlining user onboarding and transaction processes.
-
-- **Key Features:**
-  - Integration with Gnosis Mainnet and Testnet.
-  - Simplified user onboarding via Web2 accounts.
-  - Native support for ERC-4337 AA.
-  - Intrinsic modularity with various AA infrastructure providers.
-
-For more details, refer to the [Particle Network documentation](https://docs.particle.network/).
 
 ### AA with Safe and Gelato
 

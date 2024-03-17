@@ -5,11 +5,23 @@ keywords: [particle-network,account-abstraction]
 
 # Building AA with Particle Network
 
+Particle Network provides a Smart Wallet-as-a-Service, leveraging modular and customizable wallet components. It supports native ERC-4337 AA capabilities, streamlining user onboarding and transaction processes.
+
+- **Key Features:**
+  - Integration with Gnosis Mainnet and Testnet.
+  - Simplified user onboarding via Web2 accounts.
+  - Native support for ERC-4337 AA.
+  - Intrinsic modularity with various AA infrastructure providers.
+
+For more details, refer to the [Particle Network documentation](https://docs.particle.network/).
+
+
+
+## Understanding Particle Network's Smart Wallet-as-a-Service
+
 With Particle's Smart Wallet-as-a-Service, developers can curate an unparalleled user experience through modular and customizable EOA/AA embedded wallet components. Using MPC-TSS for key management, Particle can streamline user onboarding via familiar Web2 accounts—such as Google accounts, email addresses, and phone numbers.
 
 Particle has integrated Gnosis’ Mainnet and Testnet through both EOA interactions and native ERC-4337 SimpleAccount implementations.
-
-## Particle Network Smart Wallet-as-a-Service
 
 Particle Network offers native ERC-4337 Account Abstraction capabilities within their Smart Wallet-as-a-Service stack. This allows developers to facilitate end-to-end utilization of smart accounts, beginning at the onboarding process and ending at the construction and sponsorship of UserOperations. 
 
@@ -25,7 +37,7 @@ And thus, the collection of these technologies is coined as "Smart Wallet-as-a-S
 
 ## Particle Network AA SDK
 
-Natively incorporated into Particle Network's embedded MPC-TSS wallet, the Particle Network AA SDK simplifies utilization of ERC-4337 Account Abstraction by facilitating the creation of a smart accounts, constructing UserOperations, sponsoring transactions, paying gas fees in ERC20 tokens, etc. –all formatted to minimize complexity.
+The Particle Network AA SDK simplifies utilization of ERC-4337 Account Abstraction by facilitating the creation of a smart accounts, constructing UserOperations, sponsoring transactions, paying gas fees in ERC20 tokens, etc. –all formatted to minimize complexity.
 
 Directly within the Particle Network AA SDK, you can choose a specific smart account implementation to use. Currently, the options include Biconomy, CyberConnect, and SimpleAccount, with more on the way.
 
