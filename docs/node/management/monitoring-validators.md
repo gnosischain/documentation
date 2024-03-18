@@ -6,7 +6,7 @@ After setting up your validators, ensuring they are running and, most importantl
 
 ## Tool
 
-The [bootnode.dev](bootnode.dev) team has created a [Telegram bot](https://t.me/gbc_validators_bot) to assist you. Anyone running validators can set it up by just providing withdrawal address(es). The Bot will retrieve all the validators for you. Once registered, the bot will update you on your validators' performance and alert you if any issue occurs.
+The [bootnode.dev](https://www.bootnode.dev/) team has created a [Telegram bot](https://t.me/gbc_validators_bot) to assist you. Anyone running validators can set it up by just providing withdrawal address(es). The Bot will retrieve all the validators for you. Once registered, the bot will update you on your validators' performance and alert you if any issue occurs.
 
 ### Continuously updated information on
 
