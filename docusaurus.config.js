@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+import Head from "@docusaurus/Head";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -68,6 +69,10 @@ const config = {
   ],
 
   themeConfig:
+
+  <Head>
+    <meta name="thumbnail" content="img/preview-gnosis.svg" />
+  </Head>
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/gnosis-social-card.jpg",
@@ -220,8 +225,9 @@ const config = {
       metadata: [
         {
           name: "google-site-verification",
-          // content: "P--3KGPeNoGjwcr2ZM1-m42FLjd8WL_Ly7XWTedX2U4",
+          content: "P--3KGPeNoGjwcr2ZM1-m42FLjd8WL_Ly7XWTedX2U4",
         },
+        {name: 'twitter:card', content: 'summary_large_image'},
       ],
     }),
 
