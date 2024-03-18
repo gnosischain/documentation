@@ -2,23 +2,114 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+ @font-face {
+  font-family: 'GT Planar';
+  src: url("../fonts/GT-Planar-Regular.woff2") format("woff2"),
+    url("../fonts/GT-Planar-Regular.woff") format("woff")
+    url("../fonts/GT-Planar-Regular.ttf") format("true-type");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.homePage {
+  background: linear-gradient(0deg, #133629 0%, #3E6957 100%) !important;
+}
+
+.fixedLine {
+  position: sticky;
+  top: 0;
+  left: 3%;
+  width: 94%;
+  height: 1.5px;
+  background-color: white;
+}
+
+.homePage h1,
+.homePage h2,
+.homePage h3,
+.homePage h4,
+.homePage h5,
+.homePage span {
+  font-family: 'GT Planar', sans-serif;
+  color: white;
+}
+
+.container {
+  color: white !important;
+}
+
+.announcementBarContent {
+  color: rgb(9, 30, 66) !important;
+}
+
+.homePage h1 {
+  font-size: 2rem;
+}
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 3rem 0 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #24644c;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@media screen and (max-width: 996px) {
+.heroBanner img {
+  max-width: 550px;
+}
+
+@media screen and (max-width: 1000px) {
   .heroBanner {
     padding: 2rem;
   }
 }
 
-.buttons {
+/* general flex column */
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyField {
+  padding: 8px 14px 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #F0EBDE;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 320px) {
+  .copyField {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .homePage h1 {
+    font-size: 1.5rem;
+  }
+
+  .homePage h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.iconButton {
+  background-color: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.icon:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.2);
 }

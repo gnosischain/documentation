@@ -1,17 +1,17 @@
 ---
+sidebar_position: 1
+title: Tools Overview
 description: Gnosis developer tools includes wallets, faucets, explorers, rpc providers and more.
 keyworkds: [gnosis tools, dev tools, wallets, faucet, gnosis explorer, rpc provider, rpc node]
 ---
 
-# Tools
+# Tools Overview
+A home to all developer tools that would be helpful when you would be building dApps on Gnosis Chain. Find the support to following in this section :
+- Blockchain explorers
+- Faucets
+- Oracles
+- RPC Providers
+- Wallets
 
-<div className="row">
-<box href="/tools/wallets" title="Wallets">Download a wallet to start using Gnosis.</box>
-<box href="/tools/faucets" title="Faucets">Free fund your wallet with xDai to pay fees.</box>
-<box href="/tools/explorers" title="Explorers">See your transactions, accounts, blocks, and more tools.</box>
-<box href="/tools/rpc" title="RPC Providers">Connect your development environment and wallets to a public RPC node.</box>
-</div>
+If you would like to request your product as part of developer tool for Gnosis Chain ecosystem, you can share request here. 
 
-## Featured Tutorials
-
-<tutorialsFeatured />

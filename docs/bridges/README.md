@@ -1,60 +1,22 @@
 ---
-title: Overview
-description: Architecture of Gnosis' Bridges
-keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
+sidebar_position: 1
+title: Intro to Gnosis Bridges
+keywords: [gnosis bridges, omnibridge, xdai bridge]
 ---
 
-# Bridges Overview
+Welcome to Gnosis Bridges! 🎉 
+Currently, there are two types of bridges offered by Gnosis, [xDai Bridge](https://bridge.gnosischain.com/) and [OmniBridge](https://omni.gnosischain.com/bridge). Let's take a quick look at both of these.
 
-Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](/bridges/tokenbridge/amb-bridge#bridge-validators). There is a [roadmap](/bridges/roadmap) to move towards [trustless bridges](/bridges/roadmap#trustless-bridges).
+<Card
+        title="What is Omni Bridge ?"
+        subtitle="Omnibridge is a native token bridge that mints the canonical representations of bridged assets on Gnosis and connects Gnosis to Ethereum. The first time a token is bridged, a new ERC677 token contract is deployed on GC with an additional suffix to differentiate the token. It will say 'token name on xDai', as this was the original chain name prior to re-branding.The requested token amount is minted and sent to the account initiating the transfer (or an alternative receiver account specified by the sender).
+        Read more here on architecture of Omni Bridge."
+        url="https://omni.gnosischain.com/" 
+/>
 
-There is a growing ecosystem of [3rd-party Bridges](third-party.md) that build on top of native bridges, that provide users with fast liquidity and user experience.
+<Card
+        title="What is xDai Bridge ?"
+        subtitle="The xDai bridge is a native Dai bridge from Ethereum that is used to mint and burn xDai, the native asset used for gas and transaction fees on Gnosis. This bridge allows users to transform DAI (an ERC20 stable token) on the mainnet into xDAI on a compatible chain. xDAI tokens can then be sent quickly and with minimal cost on the xDAI network. The xDAI chain has been a breakout success in the Ethereum community, providing an easy way for vendors to accept a stable cryptocurrency. Read more here on architecture of xDai Bridge."
+        url="https://bridge.gnosischain.com/" 
+/>
 
-Gnosis' native bridges are first-class citizens in the chain's architecture due to the [native xDai bridge's](/bridges/tokenbridge/xdai-bridge) integral role in minting and burning the native [xDai token](/concepts/tokens/xdai) used for gas.
-
-## Conceptual Architecture
-
-Gnosis has three main types of bridges:
-
-- **Native Bridges**: built into the chain itself, and mint the [canonical token](./tokenbridge/omnibridge.md#canonical-token-registries) representation of the original asset on Gnosis (e.g. "Canonical Dai", "Canonical ETH")
-- **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for canonical tokens created by native bridges
-- **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own canonical token on Gnosis
-
-![Diagrams overview of Bridges](../../static/img/bridges/diagrams/bridge-overview.svg)
-
-## Native Bridges
-
-Gnosis has two native bridges:
-
-- **xDai Bridge** that is used to mint the native stablecoin by bridging Dai from Ethereum
-- **Omnibridge** and underlying **Arbitrary Message Bridge** that are used for bridging tokens and data
-
-### Bridging Dai
-
-See the [xDai Bridge](/bridges/tokenbridge/xdai-bridge).
-
-### Bridging Data
-
-See the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge) or AMB Bridge for short.
-
-### Bridging Tokens
-
-See the [Omnibridge](/bridges/tokenbridge/omnibridge), which is built on top of the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge).
-
-## Canonical Bridged Tokens
-
-Tokens that are bridged using [Omnibridge](/bridges/tokenbridge/omnibridge) are regarded as canonical representations of the origin token on Gnosis Chain.
-
-- [Canonical Bridged Tokens](https://gnosis.blockscout.com/tokens?tab=bridged)
-- Select the origin chain by using **Filter** option.
-
-## Roadmap
-
-Gnosis has a [long-term roadmap](/bridges/roadmap) to move towards trustless bridges, and is actively funding research and development in this area.
-
-## Feedback & Suggestion
-
-We would love to hear from you on suggestions and ideas on bridges in Gnosis Chain.
-
-- [Gnosis Bridges Improvement Proposals](https://docs.google.com/forms/d/1V5RH7rIcHw-7JSePErUNutWO_p59HwbbsNedoWidTKA/viewform?edit_requested=true)
-- [AMB developers form](https://docs.google.com/forms/d/1wj31wGZ2sxMd_n35ZTavqegQo8XEp2C9brBPLFwCMn0/viewform?edit_requested=true#responses)

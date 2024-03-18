@@ -1,4 +1,4 @@
-# FAQ
+# Bridges FAQs
 
 1. Can I bridge tokens between Gnosis Chain and BSC using Omni Bridge
 

@@ -1,4 +1,4 @@
-# FAQ
+# Gnosis Chain FAQs
 
 1. Where can I bridge my tokens to Gnosis Chain?
 
