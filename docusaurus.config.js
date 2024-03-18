@@ -71,7 +71,7 @@ const config = {
   themeConfig:
 
   <Head>
-    <meta name="thumbnail" content="img/preview-gnosis.svg" />
+    <meta name="thumbnail" content="img/preview-gnosis.png" />
   </Head>
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
