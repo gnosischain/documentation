@@ -220,7 +220,7 @@ const config = {
       metadata: [
         {
           name: "google-site-verification",
-          content: "P--3KGPeNoGjwcr2ZM1-m42FLjd8WL_Ly7XWTedX2U4",
+          // content: "P--3KGPeNoGjwcr2ZM1-m42FLjd8WL_Ly7XWTedX2U4",
         },
       ],
     }),
