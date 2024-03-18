@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player'
 
 ## What is uRamp ?
 
-uRamp offers seamless on and off ramp to users by allowing them to on ramp to ERC20 tokens across EVM chains by sending EUR to their Monerium IBAN. 
+uRamp offers seamless on and off ramp to users by allowing them to on ramp to ERC20 tokens across EVM chains by sending EUR to their Monerium IBAN. Similarly, it allows users to off ramp from  ERC20 tokens from EVM chains to EUR in their bank account.
 
 The existing user experience in Web3 for on and off ramping between fiat and on chain assets is very clunky and requires users to go through many steps and incur heavy fees with no certainty of when they will receive their fiat in bank account and vice versa. uRamp is being built to provide an easy to use product allowing people to on and offramp between their IBANs and wallets seamlessly by integrating both Monerium and Li.Fi and leveraging their powers of collateralised stablecoin offering, native IBANs, low model and cross chain bridging and swapping.
 
