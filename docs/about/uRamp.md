@@ -10,9 +10,9 @@ import ReactPlayer from 'react-player'
 
 uRamp offers seamless on and off ramp to users by allowing them to on ramp to any ERC20 token on any EVM chain by sending EUR to their Monerium IBAN. Similarly it allows users to off ramp from any ERC20 token on any EVM chain to EUR in their bank account.
 
-The existing user experience in Web3 for on and off ramping between fiat and on chain assets is very clunky and requires users to go through many steps and incur heavy fees with no certainty of when they will receive their fiat in bank account and vice versa. uRamp is being built to provide an easy to use product allowing people to on and offramp between their IBANs and wallets seamlessly by integrating both Monerium and LiFi and leveraging their powers of collateralised stablecoin offering, native IBANs, 0 fees model and cross chain bridging and swapping.
+The existing user experience in Web3 for on and off ramping between fiat and on chain assets is very clunky and requires users to go through many steps and incur heavy fees with no certainty of when they will receive their fiat in bank account and vice versa. uRamp is being built to provide an easy to use product allowing people to on and offramp between their IBANs and wallets seamlessly by integrating both Monerium and Li.Fi and leveraging their powers of collateralised stablecoin offering, native IBANs, 0 fees model and cross chain bridging and swapping.
 
-uRamp is supposed to be a simple representation of possibilities of Gnosis Chain when combined with Monerium and LiFi.
+uRamp is supposed to be a simple representation of possibilities of Gnosis Chain when combined with Monerium and Li.Fi .
 
 ## How to use uRamp ?
 
@@ -31,9 +31,9 @@ Go to https://uramp.gnosis.io/login and follow the steps mentioned or you can fo
 3. Specify the bank details including Name, IBAN, BIC and Note (optional)
 4. Verify the quote and sign a transaction to execute the transfer 
 5. Example: ETH on mainnet to EUR
-    1. ETH is swapped for USDC on mainnet by LiFi
-    2. USDC on mainnet is bridged to USDC on Gnosis Chain by LiFi
-    3. USDC on Gnosis Chain is swapped to EURe on Gnosis Chain by LiFi
+    1. ETH is swapped for USDC on mainnet by Li.Fi
+    2. USDC on mainnet is bridged to USDC on Gnosis Chain by Li.Fi
+    3. USDC on Gnosis Chain is swapped to EURe on Gnosis Chain by Li.Fi
     4. EURe on Gnosis Chain is burnt by Monerium
     5. EUR is deposited in specified IBAN by Monerium
 
@@ -48,7 +48,7 @@ Go to https://uramp.gnosis.io/login and follow the steps mentioned or you can fo
 7. Example: EUR to ETH on mainnet
     1. Send EUR to Monerium IBAN
     2. Monerium mints EURe to the user wallet on Gnosis Chain
-    3. uRamp prompts user to sign LiFi transaction (if quote is still valid and balance has increased)
-    4. EURe on Gnosis Chain is swapped to USDC on Gnosis Chain by LiFi
-    5. USDC on Gnosis Chain is bridged to USDC on mainnet by LiFi
-    6. USDC is swapped for ETH on mainnet by LiFi
+    3. uRamp prompts user to sign Li.Fi transaction (if quote is still valid and balance has increased)
+    4. EURe on Gnosis Chain is swapped to USDC on Gnosis Chain by Li.Fi
+    5. USDC on Gnosis Chain is bridged to USDC on mainnet by Li.Fi
+    6. USDC is swapped for ETH on mainnet by Li.Fi
