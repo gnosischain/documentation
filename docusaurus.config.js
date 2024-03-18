@@ -71,7 +71,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/gnosis-social-card.jpg",
+      image: "img/preview-gnosis.png",
       announcementBar: {
         id: "support_us",
         content:
@@ -224,8 +224,6 @@ const config = {
           content: "P--3KGPeNoGjwcr2ZM1-m42FLjd8WL_Ly7XWTedX2U4",
         },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: 'thumbnail', content: 'img/preview-gnosis.png' },
-
       ],
     }),
 
