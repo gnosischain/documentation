@@ -74,9 +74,6 @@ Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more i
 
 ## Get GNO Tokens
 
-### Buy GNO
-- https://buyxdai.com/gno
-
 ### Markets
 
 - [CoinMarketCap](https://coinmarketcap.com/currencies/gnosis-gno/)
@@ -85,6 +82,7 @@ Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more i
 ### Bridge
 
 - Ethereum to Gnosis token bridge: [OmniBridge](https://omni.gnosischain.com/)
+<!-- non native bridges  -->
 
 ## Use GNO Tokens
 

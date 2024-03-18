@@ -6,8 +6,7 @@ import tabItem from '@theme/TabItem';
 import Card from '@site/src/components/Card/Card';
 import FeatureCard from '@site/src/components/Card/FeatureCard';
 import CardContainer from '@site/src/components/Card/CardContainer';
-
-// import SmallCard from '../components/Card/smallCard';
+// import outlineCard from '@site/src/components/Card/outlineCard';
 
 
 export default {
@@ -18,5 +17,6 @@ export default {
   TabItem: tabItem,
   Card,
   CardContainer,
-  FeatureCard
+  FeatureCard,
+
 };

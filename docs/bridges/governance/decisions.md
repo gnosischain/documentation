@@ -8,6 +8,20 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Onboarding EURC.e to Gnosis Chain, reset default dailyLimit and executionDailyLimit, remove fees for existing tokens, replace Telepathy validator address
+🗳 Justification:
+1. To comply with Circle’s bridged token standard, we have deployed Bridged EURC on the Gnosis Chain. Unlike the typical bridged token from Omnibridge, Bridged EURC on Gnosis Chain uses the latest version of the FiatToken standard, v2.2. Therefore, registering Bridged EURC on Gnosis Chain’s Omnibridge and setting default values for dailyLimit and executionDailyLimit are necessary to meet the token bridge limit requirements. Setting default dailyLimit and executionDailyLimit will not affect the current bridged token, but only newly bridged token, and it can be reset for individual tokens by calling setDailyLimit and setExecutionDailyLimit through governance process. 
+    - Bridged EURC on Gnosis Chain (EURC.e): 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6
+    - new default dailyLimit: 10000000000000000000000000000000000010
+    - new default executionDailyLimit: 10000000000000000000000000000000000010
+2. Removing the fee of the following tokens as well as setting default fee to 0, meaning all the future newly bridged token from Omnibridge will be zero fee.
+    BAL, PNK, CRV, CRVUSD, LINK, HOPR, COW, DXD, WSTETH 
+3. Increasing the daily and transactions limits for: WETH, WBTC, GNO, USDC, USDT, HOPR
+4. Replacing Telepathy validator address with a new one.
+
+✅ Implemented: Mar 13, 2023
+
+
 ## Increase required block confirmation for AMB to 130 blocks, remove Autonolas LP token fee
 
 🗳 Justification: To increase the participation of the Telepathy light client on the AMB, we [increase the required block confirmations](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xbd070bf3e3a1047b073d00c34fb73b39dd24678dd41c6f0c6855fec8411de165) from 100 blocks (~20 mins) to 130 blocks (~26 mins). This will ensure that the majority of the txs can be signed by Telepathy. End users should expect 6 more minutes delay.

@@ -20,7 +20,7 @@ function HomepageHeader() {
         <img src='img/gnosis-chain.svg' alt='Gnosis Chain' />
         <h1 className='margin-vert--md'>Documentation</h1>
 
-        <div className={clsx('margin-top--xl', styles.flexCol)} >
+        {/* <div className={clsx('margin-top--xl', styles.flexCol)} >
           <h2>Deploy a Dapp in 5 Minutes</h2>
           <span className={styles.copyField}>
             npx build-with-gnosis
@@ -28,7 +28,7 @@ function HomepageHeader() {
               <img className={styles.icon} src='img/copy-icon.svg' alt='Copy' />
             </button>
           </span>
-        </div>
+        </div> */}
       </div>
     </header>
   );

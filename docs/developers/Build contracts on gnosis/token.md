@@ -1,5 +1,5 @@
 ---
-title: Launching an ERC-20 Token
+title: Creating an ERC-20 Token
 description: Tutorial to deploy an ERC-20 token to Gnosis.
 keywords: [token deploy, token contract, deploy token, erc20, erc20 standard, erc20 token]
 ---

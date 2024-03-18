@@ -1,8 +1,8 @@
 {
-    "position": 4,
-    "label": "Token Bridge",
+    "position": 6,
+    "label": "Understanding Token Bridges",
     "collapsible": true,
-    "collapsed": false,
+    "collapsed":true,
     "link": {
       "type": "generated-index",
       "title": "Understanding different token bridges offered on Gnosis Chain"

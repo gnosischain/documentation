@@ -18,7 +18,6 @@ Convert DAI from Ethereum to xDai using the [xDai Bridge](/bridges/tokenbridge/x
 
 Gateways and Exchanges allow users to get xDai using FIAT or swap other crypto into xDai.
 
-- https://buyxdai.com/xdai
 - [AscendEX](https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xdai)
 - [Mt Pelerin](https://www.mtpelerin.com/buy-xdai)
 - [Ramp](https://ramp.network/buy/?swapAsset=XDAI)

@@ -50,7 +50,7 @@ For a message/tokens to be relayed to another network, bridge validators need to
 | [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
 | [gno:0x90776017057b84bc47D7e7383b65C463C80a6cdd](https://gnosisscan.io/address/0x90776017057b84bc47D7e7383b65C463C80a6cdd) | Gateway           |
-| [gno:0xfdbf5711f77b97ea7f1f812832884c7328a682ec](https://gnosisscan.io/address/0xfdbf5711f77b97ea7f1f812832884c7328a682ec) | Telepathy         |
+| [gno:0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) | Telepathy         |
 
 </TabItem>
 
@@ -190,7 +190,7 @@ Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 
 | Role                | Address                                                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Telepathy PubSub    | [0xa96c29A4114B414543Bdc9be5616dE270b9e88ec](https://gnosisscan.io/address/0xa96c29A4114B414543Bdc9be5616dE270b9e88ec) |
-| Telepathy Validator | [0xfDBf5711f77B97EA7F1f812832884c7328a682eC](https://gnosisscan.io/address/0xfdbf5711f77b97ea7f1f812832884c7328a682ec) |
+| Telepathy Validator | [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) |
 
 For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
 
