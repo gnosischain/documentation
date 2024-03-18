@@ -15,7 +15,7 @@ The [bootnode.dev](https://www.bootnode.dev/) team has created a [Telegram bot](
 - Validator’s overall performance(daily, weekly, and monthly) based on the last 100 attestations.
 - Rewards earned in GNO (daily, weekly, and monthly).
 - The total amount of rewards you can claim.
-- Additionally, the Bot provides subsidized rewards claims, sponsored by [bootnode.dev](bootnode.dev).
+- Additionally, the Bot provides subsidized rewards claims, sponsored by [bootnode.dev](https://www.bootnode.dev/).
 
 ### Immediate alert when
 
