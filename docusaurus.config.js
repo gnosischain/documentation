@@ -71,7 +71,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/preview-gnosis.png",
+      image: "img/thumbnail.png",
       announcementBar: {
         id: "support_us",
         content:
