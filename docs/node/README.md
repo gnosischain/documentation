@@ -178,10 +178,10 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 
 Below are a few projects which can help you install and control clients just with a few clicks:
 
-- [DappNode](../node/tools/dappnode.md) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
-- [Stereum](../node/tools/stereum.md) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
-- [Sedge](../node/tools/sedge.md) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
-- [eth-docker](../node/tools/eth-docker.md) - A docker automation project for Gnosis consensus and execution clients. Easy to setup by answering simple dialog-based questions on terminal.
+- [DappNode](../node/Node%20Tools/dappnode.md) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [Stereum](../node/Node%20Tools/stereum.md) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
+- [Sedge](../node/Node%20Tools/sedge.md) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
+- [eth-docker](../node/Node%20Tools/eth-docker.md) - A docker automation project for Gnosis consensus and execution clients. Easy to setup by answering simple dialog-based questions on terminal.
 
 ### Manual setup
 
@@ -199,12 +199,12 @@ Instructions for installing each client are provided in the documentation linked
 
 Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
-** Execution clients **
+**Execution clients**
 
 - [Nethermind](https://downloads.nethermind.io/)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 
-** Consensus clients **
+**Consensus clients**
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases)
 - [Lodestar](https://github.com/ChainSafe/lodestar/releases)
@@ -213,7 +213,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 [Client diversity](https://eth2book.info/capella/part2/incentives/diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
-#### **Verifying the software**
+#### Verifying the software
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Gnosis client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
@@ -227,7 +227,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### **Client setup**
+#### Client setup
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
@@ -237,7 +237,7 @@ Other basic configuration options are, e.g. choosing a network - Mainnet or test
 
 For testing purposes, you might prefer to run a client on Chiado testnet.
 
-##### **Starting the execution client**
+##### Starting the execution client
 
 Before starting the Gnosis client software, perform a last check that your environment is ready. For example, make sure:
 
@@ -259,7 +259,7 @@ This token is generated automatically by the client software, but in some cases,
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### **Running an execution client**
+#### Running an execution client
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
