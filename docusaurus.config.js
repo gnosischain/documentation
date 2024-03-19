@@ -4,6 +4,7 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Gnosis Chain",
@@ -24,7 +25,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "gnosischain", // Usually your GitHub org/user name.
   projectName: "documentation", // Usually your repo name.
-
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -70,7 +70,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/gnosis-social-card.jpg",
+      image: "img/thumbnail.png",
       announcementBar: {
         id: "support_us",
         content:
@@ -222,7 +222,8 @@ const config = {
           name: "google-site-verification",
           content: "P--3KGPeNoGjwcr2ZM1-m42FLjd8WL_Ly7XWTedX2U4",
         },
-      ],
+        { name: "twitter:card", content: "summary_large_image" },
+      ]
     }),
 
   plugins: [

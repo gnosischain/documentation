@@ -41,7 +41,7 @@ const FeatureList = [
   {
     id: 5,
     title : 'Contribute to Gnosis developer ecosystem',
-    subtitle: '',
+    subtitle: 'Coming up soon.',
     link : '/',
     Svg: require('@site/static/img/features/ecosystem.svg').default,
   }
@@ -57,7 +57,6 @@ function Feature({Svg, title, subtitle, link}) {
           </div>
           <h3>{title}</h3>
           <h5>{subtitle}</h5>
-
           <p>Learn more</p>
         </div>
       </a>
