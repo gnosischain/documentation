@@ -1,5 +1,6 @@
 ---
 title: Run a Node
+sidebar_position : 1
 ---
 
 # Run a Node

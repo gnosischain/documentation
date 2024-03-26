@@ -1,5 +1,6 @@
 ---
 title: "Interactive Guide"
+sidebar_position : 3
 ---
 
 :::tip Before you start
@@ -20,7 +21,7 @@ import InstallIntroPartial from '@site/docs/node/manual/\_partials/\_install-int
 
 <div className='hide-tabs'>
 
-## Step 0: Review prerequisites and best practices
+## Review prerequisites and best practices
 
 import InstallPrereqsPartial from '@site/docs/node/manual/server/\_partials/\_install-prereqs.md';
 

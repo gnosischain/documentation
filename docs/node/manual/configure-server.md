@@ -1,5 +1,5 @@
 ---
-title: "Step 1: Configure Server"
+title: "Configure Server"
 ---
 
 # Configure Server
