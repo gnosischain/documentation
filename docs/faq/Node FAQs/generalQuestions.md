@@ -9,7 +9,7 @@ title: General Questions
 :::
 
 :::info
-** :bulb: This document is continuously being improved.** 
+**:bulb: This document is continuously being improved.** 
 :::
 
 # General Questions
@@ -18,18 +18,15 @@ title: General Questions
    
    Validators propose and vote on blocks to include in the chain. The chain is secured by a staked amount of GNO. Validators stake GNO and receive additional GNO as rewards for correct behavior (proposing and attesting blocks) and a slashed balance as penalties for incorrect behavior (offline node, attesting invalid blocks).
 
-2. **What is Shapella?**
+2. **What is PoS (Proof-of-Stake)?**
 
-   Shapella refers to the combination of both Shanghai and Capella. Shanghai enables GNO staking withdrawals for Gnosis Chain, unlike the previous model that doesn’t allow for staked GNO to be withdrawn. Shanghai is the name given to the execution layer (EL) upgrade, while Capella is the name of the coinciding consensus layer (CL) upgrade.
+ Proof-of-Stake (PoS) is a consensus mechanism for processing transactions and creating new blocks in a blockchain. Staking is when you pledge your coins to be used for verifying transactions. The same PoS implementation underlies both Gnosis Chain and Ethereum's consensus mechanism, except for a few differences outlined [here](https://docs.gnosischain.com/about/).
 
-3. **I have a problem with connect Safe to deposit.gnosischain.com since there is new walletconnect in UI. When will it be fixed?**
+3. **What is Gnosis Chain?**
 
-    Devs are currently working on it, currently a workaround is to use the wallet extension Rabby and import your Safe in it then to connect it to the page like if it was a Metamask wallet.
+ Gnosis Chain is an EVM-compatible Layer-1 blockchain that aspires to be the most secure, resilient and credibly neutral blockchain, buttressed by a deeply decentralized network secured by over 200K validators.
 
-4. **What tax software has integrated GC?**
+5. **What tax software has integrated GC?**
 
     [Cryptio](https://cryptio.co/) is available for German users. 
 
-5. **When is this Gnosis Execution Layer to Gnosis Beacon Chain merge scheduled for?**
-
-   The merge happened in December 2022.
