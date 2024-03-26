@@ -57,7 +57,7 @@ Gnosis chain has both a lower `CHURN_LIMIT_QUOTIENT` and faster epoch times. A `
 | Network | Timestamp  | Date & Time (UTC)                 | Fork Hash | Beacon Chain Epoch |
 | ------- | ---------- | --------------------------------- | --------- | ------------------ |
 | Chiado  | 1706724940 | Wed Jan 31 2024 18:15:40 GMT+0000 | -         | 516608             |
-| Mainnet | TBD        | TBD                               | -         | TBD                |
+| Mainnet | 1710181820 | Monday March 11 202418:30:20 +UTC | -         | 889856             |
 
 ## How to Prepare
 
