@@ -1,5 +1,6 @@
 ---
-title: "Step 1: Configure Server"
+sidebar_position: 1
+title: "Step : 1 - Configure Server"
 ---
 
 # Configure Server

@@ -1,8 +1,7 @@
 ---
 title: Lodestar
 ---
-
-import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/_partials/_beacon_folder_structure.md';
+import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 
 # Run Beacon Node: Lodestar
 

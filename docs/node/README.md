@@ -1,5 +1,6 @@
 ---
 title: Run a Node
+sidebar_position : 1
 ---
 
 # Run a Node
@@ -23,7 +24,7 @@ Gnosis is persistently committed to building the open infrastructure for a decen
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
-- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (~400 at March 2024) instead of the 32 ETH (~$120.000 at Feb 2024) minimum required for Ethereum
+- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (around $350 at March 2024) instead of the 32 ETH (around $100.000 at March 2024) minimum required for Ethereum
 - Gnosis Chain runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus.
 
 ## Choosing an Approach
@@ -56,6 +57,7 @@ Gnosis clients are able to run on consumer grade computers and don't require any
   - Because of the required storage size for full node, the price of a rented server might get high
 
 - Own hardware
+
   - More trustless and sovereign approach
   - One time investment
   - An option to buy preconfigured machines
@@ -94,6 +96,7 @@ The size of the database and speed of the initial synchronization depends on the
 Also make sure your internet connection is not limited by a bandwidth cap. It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
 **Operating System**
+
 All clients support major operating systems - Linux, MacOS, Windows. This means you can run nodes on regular desktop or server machines with the operating system (OS) that suits you the best. Make sure your OS is up to date to avoid potential issues and security vulnerabilities.
 
 **Requirements**
@@ -111,7 +114,7 @@ Requirements vary client to client, for more detail see the associated system re
 | Erigon          | [Erigon: System Requirements](https://github.com/ledgerwatch/erigon#system-requirements)                                 |
 | Geth            | [Geth: Hardware](https://geth.ethereum.org/docs/interface/hardware)                                                      |
 
-\*\* Gnosis chain only supports Nethermind and Erigon at the moment.
+**Gnosis Chain only supports Nethermind and Erigon at the moment.**
 
 | Consensus Layer |                                                                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -121,11 +124,11 @@ Requirements vary client to client, for more detail see the associated system re
 | Teku            | TBD                                                                                                                                   |
 | Prysm           | [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices) |
 
-\*\* Gnosis chain doesn't support Prysm at the moment.
+**Gnosis Chain doesn't support Prysm at the moment.**
 
 Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node.
 
-**Gnosis in Ethereumverse**
+### **Gnosis in Ethereumverse**
 
 Running a Gnosis node requires no different hardware configuration from other nodes in Ethereum universe.
 
@@ -158,7 +161,7 @@ Validators are advised to consider those numbers when planning their infrastruct
 | 128                  | 4.6 MB/s        | 3.8 MB/s         | 21.5 TB                     |
 | >256                 | 4.6 MB/s        | 3.9 MB/s         | 21.7 TB                     |
 
-#### **Plug-and-play solutions**
+### **Plug-and-play solutions**
 
 The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the most straightforward experience: order, connect, run. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software.
 
@@ -213,7 +216,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 [Client diversity](https://eth2book.info/capella/part2/incentives/diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
-#### Verifying the software
+#### **Verifying the software**
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Gnosis client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
@@ -227,7 +230,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Client setup
+### **Client setup**
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
@@ -237,7 +240,7 @@ Other basic configuration options are, e.g. choosing a network - Mainnet or test
 
 For testing purposes, you might prefer to run a client on Chiado testnet.
 
-##### Starting the execution client
+#### **Starting the execution client**
 
 Before starting the Gnosis client software, perform a last check that your environment is ready. For example, make sure:
 
@@ -259,7 +262,7 @@ This token is generated automatically by the client software, but in some cases,
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Running an execution client
+#### **Running an execution client**
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
@@ -290,7 +293,7 @@ Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/f
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
-##### **Starting the consensus client**
+#### **Starting the consensus client**
 
 The consensus client must be started with the right port configuration to establish a local RPC connection to the execution client. The consensus clients have to be run with the exposed execution client port as configuration argument.
 
@@ -340,7 +343,7 @@ teku \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
 
-### Adding Validators
+### **Adding Validators**
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
