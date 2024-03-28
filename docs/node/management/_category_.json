@@ -1,0 +1,9 @@
+{
+    "position": 4,
+    "label": "Management",
+    "collapsible": true,
+    "collapsed":true,
+    "link": {
+      "type": "generated-index"
+    }
+  }

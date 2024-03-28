@@ -7,7 +7,7 @@ title: Deposit, Withdrawals, and Rewards
 :::
 
 :::info
-** :bulb: This document is continuously being improved.** 
+**:bulb: This document is continuously being improved.** 
 :::
 
 # Deposit, Withdrawals and Rewards

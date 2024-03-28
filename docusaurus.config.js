@@ -265,8 +265,8 @@ const config = {
             from: "/about/networks/mainnet",
           },
           {
-            to: "/developers/communication",
-            from: "/about/overview/media-kit"
+            to: "/about/communication",
+            from: "/developers/communication"
           }
          
         ],
