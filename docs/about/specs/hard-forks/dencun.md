@@ -63,16 +63,17 @@ Gnosis chain has both a lower `CHURN_LIMIT_QUOTIENT` and faster epoch times. A `
 
 ### For Validators
 
-1. Update your clients:
+Update your clients:
 
    Execution Layer
 
-   - ✅ NethermindEth [v1.25.3](https://github.com/NethermindEth/nethermind/releases/tag/1.25.3)
-   - ✅ ErigonEth [v2.57.1](https://github.com/ledgerwatch/erigon/releases/tag/v2.57.1)
+   - ✅ NethermindEth [v1.25.4+](https://github.com/NethermindEth/nethermind/releases/)
+   - ✅ ErigonEth [v2.58.0+](https://github.com/ledgerwatch/erigon/releases/)
 
    Consensus Layer
 
-   - ✅ Lighthouse [v4.6.0](https://github.com/sigp/lighthouse/releases/tag/v4.6.0)
-   - ✅ Teku [v24.1.1](https://github.com/Consensys/teku/releases/tag/24.1.1)
-   - ✅ Nimbus [v24.1.2](https://github.com/status-im/nimbus-eth2/releases/tag/v24.1.2)
-   - ✅ Lodestar [v1.15.0](https://github.com/ChainSafe/lodestar/releases/tag/v1.15.0)
+   - ✅ Lighthouse [v5.0.0+](https://github.com/sigp/lighthouse/releases/)
+   - ✅ Teku [v24.2.0+](https://github.com/Consensys/teku/releases/)
+   - ✅ Nimbus [v24.2.1+](https://github.com/status-im/nimbus-eth2/releases/)
+   - ✅ Lodestar [v1.16.0+](https://github.com/ChainSafe/lodestar/releases/)
+
