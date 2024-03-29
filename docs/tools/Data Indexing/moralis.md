@@ -4,7 +4,11 @@ description: Enterprise-grade APIs and real-time blockchain data that make Web3 
 keywords: [moralis, api, query data, wallet data, nft data, token data]
 ---
 
-[Moralis](https://moralis.io/?utm_source=gnosis-docs&utm_medium=link) is a blockchain data platform that provides developers with all the data they need to build better blockchain applications. From NFT data and token data, through to raw blockchain data, Moralis offers a wide range of products that cover all major crypto and blockchain use cases, and it supports [Gnosis](https://moralis.io/chains/gnosis/?utm_source=gnosis-docs&utm_medium=link) together with all other major EVM chains.
+[Moralis](https://moralis.io/?utm_source=gnosis-docs&utm_medium=partner-docs) is a blockchain data platform that provides developers with all the data they need to build better blockchain applications. From NFT data and token data, through to raw blockchain data, Moralis offers a wide range of products that cover all major crypto and blockchain use cases, and it supports [Gnosis](https://moralis.io/chains/gnosis/?utm_source=gnosis-docs&utm_medium=partner-docs) together with all other major EVM chains.
+
+## Moralis Nodes
+
+With [Moralis Nodes](https://moralis.io/nodes/?utm_source=gnosis-docs&utm_medium=partner-docs), you can get access to reliable and high performing RPC nodes on Gnosis and all other major EVM blockchains. 
 
 ## Moralis APIs
 
@@ -12,23 +16,23 @@ All Moralis APIs are supported on Gnosis and across all other major EVM blockcha
 
 ### Wallet API
 
-With Moralis [Wallet API](https://moralis.io/api/wallet/?utm_source=gnosis-docs&utm_medium=link) you can get Wallet balances for tokens, NFTs and native assets, get full wallet history, net worth and a lot more.
+With Moralis [Wallet API](https://moralis.io/api/wallet/?utm_source=gnosis-docs&utm_medium=partner-docs) you can get Wallet balances for tokens, NFTs and native assets, get full wallet history, net worth and a lot more.
 
 ### NFT API
 
-With Moralis [NFT API](https://moralis.io/api/nft/?utm_source=gnosis-docs&utm_medium=link) you can get NFT data like collections, owners, prices, images and metadata.
+With Moralis [NFT API](https://moralis.io/api/nft/?utm_source=gnosis-docs&utm_medium=partner-docs) you can get NFT data like collections, owners, prices, images and metadata.
 
 ### Token API
 
-With Moralis [Token API](https://moralis.io/api/token/?utm_source=gnosis-docs&utm_medium=link) you can get ERC20 token data like prices, ownership, metadata, transfers, approvals, liquidity, mints and burns.
+With Moralis [Token API](https://moralis.io/api/token/?utm_source=gnosis-docs&utm_medium=partner-docs) you can get ERC20 token data like prices, ownership, metadata, transfers, approvals, liquidity, mints and burns.
 
 ### Blockchain API
 
-With Moralis [Blockchain API](http://moralis.io/api/blockchain) you can get core blockchain data like blocks, transactions and logs.
+With Moralis [Blockchain API](http://moralis.io/api/blockchain/?utm_source=gnosis-docs&utm_medium=partner-docs) you can get core blockchain data like blocks, transactions and logs.
 
 ## Moralis Streams
 
-Moralis [Streams](https://moralis.io/streams/?utm_source=gnosis-docs&utm_medium=link) allow you to stream blockchain data in real-time via webhooks. Subscribe to any on-chain event, like NFT or token mints, transfers or swaps, add powerful filters and then watch the data flow to your destination in real time.
+Moralis [Streams](https://moralis.io/streams/?utm_source=gnosis-docs&utm_medium=partner-docs) allow you to stream blockchain data in real-time via webhooks. Subscribe to any on-chain event, like NFT or token mints, transfers or swaps, add powerful filters and then watch the data flow to your destination in real time.
 
 Use it to build things like wallet notifications, Telegram alerts or just to keep your user balances up to date in real-time by streaming data to your database.
 
@@ -36,10 +40,10 @@ Use it to build things like wallet notifications, Telegram alerts or just to kee
 
 In order to use the Moralis APIs you need a Moralis account and a Moralis API key.
 
-1. Go to [admin.moralis.io](https://admin.moralis.io/?utm_source=gnosis-docs&utm_medium=link) and create a Moralis account
+1. Go to [admin.moralis.io](https://admin.moralis.io/?utm_source=gnosis-docs&utm_medium=partner-docs) and create a Moralis account
 2. Login to access the admin interface
 3. Go to settings and find your API key
-4. Find all endpoints and SDKs in the [Moralis documentation](https://docs.moralis.io)
+4. Find all endpoints and SDKs in the [Moralis documentation](https://docs.moralis.io/?utm_source=gnosis-docs&utm_medium=partner-docs)
 
 You can now call any Moralis endpoint, see below for an example.
 
@@ -90,7 +94,7 @@ try {
 
 ## Getting started with Moralis Streams
 
-1. Go to [admin.moralis.io](https://admin.moralis.io/?utm_source=gnosis-docs&utm_medium=link) and create a Moralis account
+1. Go to [admin.moralis.io](https://admin.moralis.io/?utm_source=gnosis-docs&utm_medium=partner-docs) and create a Moralis account
 2. Login to access the admin interface
 3. Go to the Streams page
 4. From there you can configure your Moralis Stream from the UI
@@ -99,22 +103,22 @@ try {
 7. Configure which chains you want the Stream to be active on.
 8. Set up your destination webhook (where the data should be sent)
 
-You can also set up Streams programmatically, check out the [Moralis Streams documentation](https://docs.moralis.io/streams-api/evm) for a guide on how to do that.
+You can also set up Streams programmatically, check out the [Moralis Streams documentation](https://docs.moralis.io/streams-api/evm/?utm_source=gnosis-docs&utm_medium=partner-docs) for a guide on how to do that.
 
 ## Tutorials & Guides
 
 ### Tutorials
 
-- [How to get all NFTs owned by a wallet address](https://docs.moralis.io/web3-data-api/evm/how-to-get-all-nfts-owned-by-an-address/?utm_source=gnosis-docs&utm_medium=link)
-- [How to get the metadata of an NFT](https://docs.moralis.io/web3-data-api/evm/how-to-get-the-metadata-of-an-nft/?utm_source=gnosis-docs&utm_medium=link)
-- [How to get all tokens owned by a wallet address](https://docs.moralis.io/web3-data-api/evm/how-to-get-all-erc20-tokens-owned-by-an-address/?utm_source=gnosis-docs&utm_medium=link)
-- [How to get the price of any ERC20 token](https://docs.moralis.io/web3-data-api/evm/how-to-get-the-price-of-an-erc20-token/?utm_source=gnosis-docs&utm_medium=link)
-- [How to get all token transfers of a wallet address](https://docs.moralis.io/web3-data-api/evm/how-to-get-all-erc20-transfers-by-wallet/?utm_source=gnosis-docs&utm_medium=link)
+- [How to get all NFTs owned by a wallet address](https://docs.moralis.io/web3-data-api/evm/how-to-get-all-nfts-owned-by-an-address/?utm_source=gnosis-docs&utm_medium=partner-docs)
+- [How to get the metadata of an NFT](https://docs.moralis.io/web3-data-api/evm/how-to-get-the-metadata-of-an-nft/?utm_source=gnosis-docs&utm_medium=partner-docs)
+- [How to get all tokens owned by a wallet address](https://docs.moralis.io/web3-data-api/evm/how-to-get-all-erc20-tokens-owned-by-an-address/?utm_source=gnosis-docs&utm_medium=partner-docs)
+- [How to get the price of any ERC20 token](https://docs.moralis.io/web3-data-api/evm/how-to-get-the-price-of-an-erc20-token/?utm_source=gnosis-docs&utm_medium=partner-docs)
+- [How to get all token transfers of a wallet address](https://docs.moralis.io/web3-data-api/evm/how-to-get-all-erc20-transfers-by-wallet/?utm_source=gnosis-docs&utm_medium=partner-docs)
 
 ### Guides
 
-- [How to build an automated Telegram bot](https://docs.moralis.io/guides/automated-blockchain-telegram-bot/?utm_source=gnosis-docs&utm_medium=link)
-- [How to build an NFT gates website with NextJS](https://docs.moralis.io/guides/token-gating-website-nextjs/?utm_source=gnosis-docs&utm_medium=link)
+- [How to build an automated Telegram bot](https://docs.moralis.io/guides/automated-blockchain-telegram-bot/?utm_source=gnosis-docs&utm_medium=partner-docs)
+- [How to build an NFT gates website with NextJS](https://docs.moralis.io/guides/token-gating-website-nextjs/?utm_source=gnosis-docs&utm_medium=partner-docs)
 - [How to build a ZapperFi clone](https://docs.moralis.io/guides/zapper-clone/?utm_source=gnosis-docs&utm_medium=link)
 - [How to get Token Prices](https://www.youtube.com/watch?v=laDsODyofVU)
 - [How to build a Blur NFT Marketplace clone](https://www.youtube.com/watch?v=WVEqX8DL4KE)
