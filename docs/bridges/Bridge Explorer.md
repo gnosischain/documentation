@@ -6,7 +6,7 @@ keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 
 # Bridge Explorer
 
-Bridge explorer allows user to check bridge transactions of xDAI bridge and Omnibridge, bridges configurations, and validators status. Users may also claim their bridge transactions in bridge explorer.
+Bridge explorer allows user to check bridge transactions of Gnosis Bridge, bridges configurations, and validators status. Users may also claim their bridge transactions in bridge explorer.
 
 :::info
 https://bridge-explorer.gnosischain.com/
@@ -17,10 +17,9 @@ https://bridge-explorer.gnosischain.com/
 
 ### How to search for your transation?
 
-1. Select **xDAI** for [xDAI bridge](./tokenbridge/xdai-bridge.md) transaction or **Omnibridge** for [Omnibridge](./tokenbridge/omnibridge.md) transaction.
-2. Search the transaction by inserting the transaction hash or initiator/receiver address.
-3. You can use different filter options to filter out the unrelevant transactions.
-4. Click on the transaction item to check the details of the transaction.
+1. Search the transaction by inserting the transaction hash or initiator/receiver address.
+2. You can use different filter options to filter out the unrelevant transactions.
+3. Click on the transaction item to check the details of the transaction.
 
 ![Search Transaction](../../static/img/bridges/bridge-explorer/search-tx.png)
 
