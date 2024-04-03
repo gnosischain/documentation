@@ -4,7 +4,7 @@ title: How to use Gnosis Bridge ?
 keywords: [gnosis bridges, omnibridge, xdai bridge]
 ---
 :::info
-To begin using Gnosis Bridge Explorer, you need to go on this following link : https://bridge.gnosischain.com/
+To begin using Gnosis Bridge App, you need to go on this following link : https://bridge.gnosischain.com/
 :::
 
 :::note
