@@ -7,14 +7,14 @@ keywords: [omnibridge, token bridge, token claim]
 # Omnibridge
 
 :::info
-Omnibridge can be accessed at [omni.gnosischain.com](https://omni.gnosischain.com/)
+Legacy Omnibridge can be accessed at https://omni.legacy.gnosischain.com/bridge
 :::
 
 ![](/img/bridges/diagrams/token-bridge-01.png)
 
 ## Key Information
 
-[Omnibridge](https://omni.gnosischain.com/) is a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), Omnibridge bridge is now more secure with trustless zero-knowledge light client technology. Check out how Omnibridge works with Telepathy validator [here](amb-bridge.md#how-it-works-with-telepathy-validator).
+[Omnibridge](https://omni.legacy.gnosischain.com/bridge) is a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), Omnibridge bridge is now more secure with trustless zero-knowledge light client technology. Check out how Omnibridge works with Telepathy validator [here](amb-bridge.md#how-it-works-with-telepathy-validator).
 
 The Omnibridge currently connects Gnosis to Ethereum.
 
