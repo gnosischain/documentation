@@ -53,7 +53,11 @@ https://bridge-explorer.gnosischain.com/bridge-explorer/latest-transactions
 3. Click **Claim** button to claim your transaction.
 
 
-![Search Transaction](../../static/img/bridges/bridge-explorer/claim-new.png)
+![Claim Transaction](../../static/img/bridges/bridge-explorer/claim-new.png)
+
+You can also claim your transaction from Transaction page.
+
+![Claim Transaction page](../../static/img/bridges/bridge-explorer/claim-tx-page.png)
 
 ### Daily bridge limits
 
