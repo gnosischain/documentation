@@ -38,7 +38,8 @@ You can view and monitor your transactions by visiting this URL: https://bridge.
 
 - To see status of one specific transaction by pasting the transaction hash in the explorer : https://bridge.gnosischain.com/bridge-explorer
 
-
+You can also check out all the transactions you have done by checking out the history from "My Transactions" of your connected wallet.
+![My transactions](../../static/img/bridges/bridge-explorer/transaction-history.png)
 
 :::note
 If you are bridging from Gnosis to Ethereum, you have to claim your funds on Ethereum after the bridge transcation has been validated. You can do this by finding your transaction on the Bridge Explorer and clicking “claim”
