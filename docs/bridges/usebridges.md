@@ -34,9 +34,9 @@ Transactions from Ethereum to Gnosis Chain are expected to take ~26 mins (130 bl
 
 
 
-You can view and monitor your transactions by visiting this URL: https://bridge-explorer.gnosischain.com/bridge-explorer/latest-transactions
+You can view and monitor your transactions by visiting this URL: https://bridge.gnosischain.com/bridge-explorer/latest-transactions
 
-- To see status of one specific transaction by pasting the transaction hash in the explorer : https://bridge-explorer.gnosischain.com/bridge-explorer
+- To see status of one specific transaction by pasting the transaction hash in the explorer : https://bridge.gnosischain.com/bridge-explorer
 
 
 
