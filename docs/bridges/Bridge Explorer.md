@@ -6,10 +6,10 @@ keywords: [gnosis bridge, bridge architecture, omnibridge, xdai bridge]
 
 # Bridge Explorer
 
-Bridge explorer allows user to check bridge transactions of xDAI bridge and Omnibridge, bridges configurations, and validators status. Users may also claim their bridge transactions in bridge explorer.
+Bridge explorer allows user to check bridge transactions of Gnosis Bridge, bridges configurations, and validators status. Users may also claim their bridge transactions in bridge explorer.
 
 :::info
-https://bridge-explorer.gnosischain.com/
+https://bridge-explorer.gnosischain.com/bridge-explorer/latest-transactions
 :::
 
 
@@ -17,12 +17,11 @@ https://bridge-explorer.gnosischain.com/
 
 ### How to search for your transation?
 
-1. Select **xDAI** for [xDAI bridge](./tokenbridge/xdai-bridge.md) transaction or **Omnibridge** for [Omnibridge](./tokenbridge/omnibridge.md) transaction.
-2. Search the transaction by inserting the transaction hash or initiator/receiver address.
-3. You can use different filter options to filter out the unrelevant transactions.
-4. Click on the transaction item to check the details of the transaction.
+1. Search the transaction by inserting the transaction hash or initiator/receiver address.
+2. You can use different filter options to filter out the unrelevant transactions.
+3. Click on the transaction item to check the details of the transaction.
 
-![Search Transaction](../../static/img/bridges/bridge-explorer/search-tx.png)
+![Search Transaction](../../static/img/bridges/bridge-explorer/search-new-tx.png)
 
 ### What does different filters mean?
 
@@ -53,8 +52,12 @@ https://bridge-explorer.gnosischain.com/
 2. Search for your transaction
 3. Click **Claim** button to claim your transaction.
 
-![claim tx](../../static/img/bridges/bridge-explorer/claim-tx.png)
 
+![Claim Transaction](../../static/img/bridges/bridge-explorer/claim-new.png)
+
+You can also claim your transaction from Transaction page.
+
+![Claim Transaction page](../../static/img/bridges/bridge-explorer/claim-tx-page.png)
 
 ### Daily bridge limits
 
@@ -72,18 +75,18 @@ This section shows insight of bridge limit and is reset every `Daily limit reset
 6. **Daily limit reset**: In how many hours will the daily limit get reset to zero.
 7. **Token address**: Token address of corresponding token, native token(xDAI) don't have an address.
 
-![](../../static/img/bridges/bridge-explorer/bridge-info.png)
+![](../../static/img/bridges/bridge-explorer/bridge-info-new.png)
 
 ### Configuration
 
 This section shows the address of key contracts.
-![](../../static/img/bridges/bridge-explorer/bridge-configuration.png)
+![](../../static/img/bridges/bridge-explorer/bridge-configuration-new.png)
 
 ## Validators
 
 This section shows the insight of current bridges validators, including last seen ago, total signed and executed transactions in 24 hours, balance of validators and their addresses.
 
-![](../../static/img//bridges/bridge-explorer/validator-status.png)
+![](../../static/img//bridges/bridge-explorer/validator-status-new.png)
 
 
 If you are not coming from Ethereum, you can use one of the following bridges:

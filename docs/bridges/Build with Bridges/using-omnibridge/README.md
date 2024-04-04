@@ -7,28 +7,28 @@ keywords: [omnibridge, token bridge, gnosis, bsc, ethereum]
 # OmniBridge
 
 :::info
-The OmniBridge and the OmniBridge UI are experimental software in Beta which you use at your own risk. The OmniBridge UI can be accessed here: https://omni.gnosischain.com/bridge
+The Legacy OmniBridge and the legacy OmniBridge UI are now deprecated but still available, use it at your own risk. The OmniBridge UI can be accessed here: https://omni.legacy.gnosischain.com/bridge
 :::
 The Omnibridge can be used to bridge ERC-20 tokens between Ethereum and Gnosis. The first time a token is bridged, a new ERC677 token contract is deployed on GC with an additional suffix to differentiate the token. It will say "token name on xDai", as this was the original chain name prior to re-branding. If a token has been bridged previously, the previously deployed contract is used. The requested token amount is minted and sent to the account initiating the transfer (or an alternative receiver account specified by the sender).
 
-- [Tokenbridge Docs: Using the Omnibridge UI](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens)
+- [Tokenbridge Docs](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens)
 
 ## Transfer any ERC-20 token from Ethereum to Gnosis
 
-It is possible to use the OmniBridge UI to transfer any ERC20 from Ethereum to xDai. Any user can initiate this initial transfer. Once the token exists on Gnosis, it can be transferred back and forth using the same UI.
+It is possible to use the [Gnosis Bridge](https://bridge.gnosischain.com) to transfer any ERC20 from Ethereum to xDai. Any user can initiate this initial transfer. Once the token exists on Gnosis, it can be transferred back and forth using the same UI.
 
 ### Token Transfer
 
 In this example, we transfer the Basic Attention Token (BAT) from Ethereum to xDai. When this process was started, this token does not yet exist on Gnosis. It takes less than 5 minutes and some ETH for gas fees.
 
-1. Go the the [OmniBridge UI](https://omni.gnosischain.com/bridge)
+1. Go the the [Legacy OmniBridge UI](https://omni.legacy.gnosischain.com/bridge)
 
 - Connect your wallet to the Ethereum Mainnet
 - Select the token you want to transfer (here we select BAT) and enter the amount
 - Click Unlock and approve the account interaction.
 
 :::note
-These screenshots were taken back when Basic Attention Token (BAT) was first bridged. The steps are the same, but note that the url is old and is now https://omni.gnosischain.com/bridge
+These screenshots were taken back when Basic Attention Token (BAT) was first bridged. The steps are the same, but note that the url is old and is now https://omni.legacy.gnosischain.com/bridge
 :::
 ![](/img/bridges/omni-tokentransfer1.jpg) 2. Confirm the transaction to approve
 ![](/img/bridges/omni-tokentransfer2.jpg) 3. Once transaction approval is complete, you can now Transfer BAT to BAT on xDai. Click Transfer.
@@ -67,7 +67,7 @@ When switching between networks within the same bridge, press the arrows icon in
 ## Transfer Tokens without the UI
 
 The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process.
-There is an [OMNIBRIDGE UI](https://omni.gnosischain.com/bridge) also available which calls the methods of the multi-token mediators contracts described below.
+There is [Legacy OMNIBRIDGE UI](https://omni.legacy.gnosischain.com/bridge) also available which calls the methods of the multi-token mediators contracts described below.
 
 ### General Case: ERC-20 Token Transfer
 

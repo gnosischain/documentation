@@ -8,11 +8,12 @@ keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 
 :::info
 
-The xDai bridge can be found at [bridge.gnosischain.com](https://bridge.gnosischain.com/)
+The Legacy xDai bridge can be found at https://bridge.legacy.gnosischain.com/
+
 
 :::
 
-The [xDai bridge](https://bridge.gnosischain.com) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/concepts/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
+The [Legacy xDai bridge](https://bridge.legacy.gnosischain.com/) is a native Dai bridge from Ethereum that is used to mint and burn [xDai](/concepts/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
 
 ![xDai Bridge Diagram](/img/bridges/diagrams/dai-bridge-01.png)
 

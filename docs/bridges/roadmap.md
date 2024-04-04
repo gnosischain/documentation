@@ -14,6 +14,4 @@ Hashi is an EVM Hash Oracle Aggregator designed to enhance cross-chain bridge se
 ### Telepathy, zkSNARK-enabled Light Client bridge validator
 Succinct Lab's zkSNARK-enabled Light Client, Telepathy, launched in July 2023, has emerged as a key component of the AMB bridge ecosystem. Utilizing zkSNARKs, Telepathy provides validity proofs, ensuring trustless verification of transaction events across chains. This solution has become one of the most active bridge validators in the AMB network, enhancing security and reliability for cross-chain transactions.
 
-![Hashi Architecture](../../static/img/bridges/diagrams/Hashi-architecture.png)
-
 After successful audits and release, we aim to gradually migrate our canonical bridges to Hashi’s distributed trust model.

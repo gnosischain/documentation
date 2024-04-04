@@ -7,37 +7,23 @@ sidebar_position: 4
 
 Gnosis has three main types of bridges:
 
-- **Native Bridges**: built into the chain itself, and mint the [canonical token](./tokenbridge/omnibridge.md#canonical-token-registries) representation of the original asset on Gnosis (e.g. "Canonical Dai", "Canonical ETH")
+- **Native Bridges**: built into the chain itself, and mint the xDAI and ERC20 token from Ethereum to Gnosis Chain
 - **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for canonical tokens created by native bridges
 - **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own canonical token on Gnosis
 
 ![Diagrams overview of Bridges](../../static/img/bridges/diagrams/bridge-overview.svg)
 
-## Native Bridges
+## Gnosis Chain Bridge
 
-Gnosis has two native bridges:
+Gnosis Chain bridge :
+- allows to mint the native stablecoin xDAI on gnosis chain by bridging DAI from Ethereum
+- allows to bridge ERC2O token from Ethereum to Gnosis Chain
 
-- **xDai Bridge** that is used to mint the native stablecoin by bridging Dai from Ethereum
-- **Omnibridge** and underlying **Arbitrary Message Bridge** that are used for bridging tokens and data
-
-### Bridging Dai
-
-See the [xDai Bridge](/bridges/tokenbridge/xdai-bridge).
 
 ### Bridging Data
 
 See the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge) or AMB Bridge for short.
 
-### Bridging Tokens
-
-See the [Omnibridge](/bridges/tokenbridge/omnibridge), which is built on top of the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge).
-
-## Canonical Bridged Tokens
-
-Tokens that are bridged using [Omnibridge](/bridges/tokenbridge/omnibridge) are regarded as canonical representations of the origin token on Gnosis Chain.
-
-- [Canonical Bridged Tokens](https://gnosis.blockscout.com/tokens?tab=bridged)
-- Select the origin chain by using **Filter** option.
 
 ## Roadmap
 
