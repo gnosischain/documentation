@@ -34,9 +34,9 @@ Transactions from Ethereum to Gnosis Chain are expected to take ~26 mins (130 bl
 
 
 
-You can view and monitor your transactions by visiting this URL: https://bridge-explorer.dev.gnosisdev.com/bridge-explorer
+You can view and monitor your transactions by visiting this URL: https://bridge-explorer.gnosischain.com/bridge-explorer/latest-transactions
 
-- To see status of one specific transaction by pasting the transaction hash in https://bridge-explorer.dev.gnosisdev.com/bridge-explorer
+- To see status of one specific transaction by pasting the transaction hash in the explorer : https://bridge-explorer.gnosischain.com/bridge-explorer
 
 
 
@@ -45,7 +45,7 @@ If you are bridging from Gnosis to Ethereum, you have to claim your funds on Eth
 :::
 
 :::note
-Please note that Gnosis bridges have certain limits. You can check these limits by visiting this URL: https://bridge-explorer.dev.gnosisdev.com/bridge-explorer/bridges.
+Please note that Gnosis bridges have certain limits. You can check these limits by visiting this URL: https://bridge-explorer.gnosischain.com/bridge-explorer/bridges/
 If you are bridging funds that exceed the daily limit, your transaction will be delayed till after the bridge limits reset (every 24h).
 :::
 
