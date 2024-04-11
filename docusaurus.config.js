@@ -270,7 +270,7 @@ const config = {
           },
           {
             to: "about/overview/media-kit",
-            from: "https://github.com/gnosischain/media-kit"
+            from: "about/communication#events-and-press"
           }
         ],
       },
