@@ -267,10 +267,6 @@ const config = {
           {
             to: "/about/communication",
             from: "/developers/communication"
-          },
-          {
-            to: "about/overview/media-kit",
-            from: "about/communication#events-and-press"
           }
         ],
       },
