@@ -267,8 +267,11 @@ const config = {
           {
             to: "/about/communication",
             from: "/developers/communication"
+          },
+          {
+            to: "about/overview/media-kit",
+            from: "https://github.com/gnosischain/media-kit"
           }
-         
         ],
       },
     ],

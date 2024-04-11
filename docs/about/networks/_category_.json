@@ -2,7 +2,7 @@
     "position": 1,
     "label": "Networks Overview",
     "collapsible": true,
-    "collapsed": false,
+    "collapsed": true,
     "link": {
       "type": "generated-index"
     }

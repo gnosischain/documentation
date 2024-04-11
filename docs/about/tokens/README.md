@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 description: Gnosis uses a unique dual-token model, xdai for fees, gno for consensus
 keywords: [gnosis tokens, gnosis gno, gno token, xdai token, fee token, gno validation]
 ---
