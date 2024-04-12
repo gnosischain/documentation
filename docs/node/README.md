@@ -216,7 +216,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 [Client diversity](https://eth2book.info/capella/part2/incentives/diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
-#### **Verifying the software**
+#### Verifying the software
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Gnosis client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
@@ -262,7 +262,7 @@ This token is generated automatically by the client software, but in some cases,
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### **Running an execution client**
+#### Running an execution client
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
