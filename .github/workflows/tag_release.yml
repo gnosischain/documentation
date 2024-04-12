@@ -1,0 +1,48 @@
+name: Create Github Release
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  release:
+    name: Github Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Create Github Release
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            if (!${{ github.ref_name }}) {
+              core.setFailed("RELEASE_TAG is not defined.")
+
+              return;
+            }
+            try {
+              const response = await github.rest.repos.createRelease({
+                name: ${{ github.ref_name }},
+                tag_name: ${{ github.ref_name }},
+                draft: false,
+                generate_release_notes: true,
+                owner: context.repo.owner,
+                prerelease: false,
+                repo: context.repo.repo,
+              });
+
+              core.exportVariable('RELEASE_ID', response.data.id);
+              core.exportVariable('RELEASE_UPLOAD_URL', response.data.upload_url);
+            } catch (error) {
+              core.setFailed(error.message);
+            }
