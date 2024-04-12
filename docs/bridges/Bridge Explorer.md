@@ -36,7 +36,7 @@ https://bridge-explorer.gnosischain.com/bridge-explorer/latest-transactions
 **Direction**
 
 1. Gnosis > Mainnet: The transaction is initiated from Gnosis Chain, and bridged to Ethereum mainnet, user need to claim the transaction on Ethereum mainnet.
-2. Mainnet > Gnosis: The transaction is initiated from Ethereum mainnet, and bridged to Gnossi Chain.
+2. Mainnet > Gnosis: The transaction is initiated from Ethereum mainnet, and bridged to Gnosis Chain.
 
 **Signed by**
 
@@ -70,7 +70,7 @@ This section shows insight of bridge limit and is reset every `Daily limit reset
    - Ethereum -> Gnosis Chain: Maximum amount of DAI/token that bridge validators can execute and bridge from Gnosis to Ethereum in a day.
    - Gnosis Chain -> Ethereum: Maximum amount of XDAI/token that bridge validators can execute and bridge from Ethereum to Gnosis in a day.
 3. **Min. per transaction**: Minimum amount of token that users can bridge in a single transaction.
-4. **Max. per transaction**: Maximum amount of DAI that users can bridge in a single transaction.
+4. **Max. per transaction**: Maximum amount of token that users can bridge in a single transaction.
 5. **Execution max. per transaction**: Maximum amount of token that validators can execute in a single transaction.
 6. **Daily limit reset**: In how many hours will the daily limit get reset to zero.
 7. **Token address**: Token address of corresponding token, native token(xDAI) don't have an address.

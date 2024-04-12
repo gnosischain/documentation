@@ -62,7 +62,9 @@ For more information on Gelato , visit the [Gelato documentation](https://docs.g
 
 For more details, refer to the [Safe documentation](https://docs.safe.global/).
 
-## Choosing the Right Option
+:::info
+AA with ZeroDev (coming up soon)
+:::
+---
 
-When deciding on an AA solution for your project on Gnosis Chain, consider the specific needs of your application, such as the level of security required, the desired user experience, and the technical capabilities of your team. Each option offers unique features and benefits, so it's important to evaluate them in the context of your project's requirements.
 

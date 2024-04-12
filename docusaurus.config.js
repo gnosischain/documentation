@@ -268,7 +268,6 @@ const config = {
             to: "/about/communication",
             from: "/developers/communication"
           }
-         
         ],
       },
     ],
