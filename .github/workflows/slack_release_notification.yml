@@ -1,0 +1,46 @@
+name: Slack Notify Release
+on:
+  workflow_call:
+    secrets:
+      RELEASES_SLACK_WEBHOOK_URL:
+        required: true
+    inputs:
+      environment:
+        type: string
+        required: true
+      message:
+        type: string 
+        required: true
+      service:
+        type: string 
+        required: true
+      success:
+        type: boolean 
+        required: true
+
+jobs:
+  notify:
+    name: Notify ${{ inputs.service }} release in ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
+
+      - name: Extract commit
+        id: commit
+        uses: prompt/actions-commit-hash@v2
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
+
+      - id: slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: "{\"username\":\"Releases\",\"icon_url\":\"https://avatars3.githubusercontent.com/u/134083290\",\"text\":\"${{ inputs.message }} - ${{ github.event.head_commit.message }}\",\"attachments\":[{\"text\":\"\",\"color\":\"${{ inputs.success == true && '#36a64f' || '#FF3131' }}\",\"author_name\":\"${{ inputs.service }}\",\"title\":\"\",\"fields\":[{\"title\":\"Environment\",\"short\":true,\"value\":\"`${{ inputs.environment }}`\"},{\"title\":\"Branch\",\"short\":true,\"value\":\"${{ steps.extract_branch.outputs.branch }}\"},{\"title\":\"Commit\",\"short\":true,\"value\":\"${{ steps.commit.outputs.short }}\"},{\"title\":\"Status\",\"short\":true,\"value\":\"${{ inputs.success == true && '🟢 SUCCEEDED' || '🔴 FAILED' }}\"},{\"title\":\"Time\",\"short\":true,\"value\":\"${{ steps.date.outputs.date }}\"}]}]}"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.RELEASES_SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: "INCOMING_WEBHOOK"
