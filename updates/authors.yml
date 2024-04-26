@@ -1,26 +1,8 @@
 dapplion:
   name: Lion - dapplion
-  title: Merge coordinator
+  title: Hard Fork Coordinator
   url: https://github.com/dapplion
   image_url: https://avatars.githubusercontent.com/u/35266934
-
-plato-gno:
-  name: Plato
-  title: Cat Herder @ Gnosis
-  url: https://github.com/plato-gno
-  image_url: https://avatars.githubusercontent.com/u/98335261
-
-alebanzas:
-  name: Ale Banzas
-  title: DevRel @ Gnosis
-  url: https://github.com/alebanzas
-  image_url: https://avatars.githubusercontent.com/u/1384638
-
-barichek:
-  name: barichek
-  title: Bridges @ Gnosis
-  url: https://github.com/barichek
-  image_url: https://avatars.githubusercontent.com/u/57619852
 
 armaganercan:
   name: 0xarmagan
@@ -33,3 +15,22 @@ filoozom:
   title: Head Of Infrastructure @ Gnosis
   url: https://github.com/filoozom/
   image_url: https://avatars.githubusercontent.com/u/6319092?v=4
+
+########### Ex Gnosis Chain people #####
+plato-gno:
+  name: Plato
+  title: Cat Herder @ Gnosis
+  url: https://github.com/plato-gno
+  image_url: https://avatars.githubusercontent.com/u/98335261
+
+alebanzas:
+  name: Ale Banzas
+  title: Ex-DevRel @ Gnosis
+  url: https://github.com/alebanzas
+  image_url: https://avatars.githubusercontent.com/u/1384638
+
+barichek:
+  name: barichek
+  title: Ex-Bridges @ Gnosis
+  url: https://github.com/barichek
+  image_url: https://avatars.githubusercontent.com/u/57619852

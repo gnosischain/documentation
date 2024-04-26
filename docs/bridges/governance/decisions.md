@@ -8,6 +8,14 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Unlock 5.4k EURe due to a Bridge App bug 
+🗳 Justification:
+Due to a bug in the new Bridge App (calling `transfer` instead of `relayTokens` ), which in the meantime has been fixed, 5.4k EURe were accidentally locked in the bridge.
+The proposal will mint 5.4k Omnibridge EURe (not canonical EURe) on Ethereum (based on the 5.4k canonical EURe that were locked on Gnosis chain side), so that the user can send it back to Omnibridge and unlock their EURe on Gnosis Chain.
+
+✅ Implemented: Apr 22, 2023
+
+
 ## Onboarding EURC.e to Gnosis Chain, reset default dailyLimit and executionDailyLimit, remove fees for existing tokens, replace Telepathy validator address
 🗳 Justification:
 1. To comply with Circle’s bridged token standard, we have deployed Bridged EURC on the Gnosis Chain. Unlike the typical bridged token from Omnibridge, Bridged EURC on Gnosis Chain uses the latest version of the FiatToken standard, v2.2. Therefore, registering Bridged EURC on Gnosis Chain’s Omnibridge and setting default values for dailyLimit and executionDailyLimit are necessary to meet the token bridge limit requirements. Setting default dailyLimit and executionDailyLimit will not affect the current bridged token, but only newly bridged token, and it can be reset for individual tokens by calling setDailyLimit and setExecutionDailyLimit through governance process. 
