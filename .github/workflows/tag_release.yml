@@ -32,8 +32,8 @@ jobs:
             }
             try {
               const response = await github.rest.repos.createRelease({
-                name: ${{ github.ref_name }},
-                tag_name: ${{ github.ref_name }},
+                name: ${{ toJson(github.ref_name) }},
+                tag_name: ${{ toJson(github.ref_name) }},
                 draft: false,
                 generate_release_notes: true,
                 owner: context.repo.owner,
