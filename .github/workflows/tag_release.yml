@@ -5,6 +5,10 @@ on:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
 
+# Permission can be added at job level or workflow level    
+permissions:
+  contents: write # This is required for actions/checkout and create release
+
 jobs:
   release:
     name: Github Release
@@ -25,7 +29,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            if (!${{ github.ref_name }}) {
+            if (!${{ toJson(github.ref_name) }}) {
               core.setFailed("RELEASE_TAG is not defined.")
 
               return;
