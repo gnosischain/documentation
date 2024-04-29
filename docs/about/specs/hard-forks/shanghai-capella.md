@@ -12,11 +12,12 @@ Validator withdrawal allows a validator's account balance get withdrawn from Bea
 
 Check out [validator withdrawal](/node/management/withdrawals) for more details.
 
-## When did Shanghai/Capella hardfork happen?
+## Upgrade Schedule
 
-Epoch: 648704  
-Slot: 10379264  
-Time: August 1, 2023 at 11:34.20 UTC
+| Network | Timestamp    | Date & Time (UTC)             | Fork Hash | Beacon Chain Epoch |
+| ------- | ------------ | ----------------------------- | --------- | ------------------ |
+| Chiado  | 1684934220 | May-24-2023 13:17:00 +UTC | 0xa15a4252 | 244224             |
+| Mainnet | 1690889660 | Aug-01-2023 11:34:20 +UTC | 0x2efe91ba | 648704             |
 
 ## How to Prepare
 
@@ -32,22 +33,22 @@ Time: August 1, 2023 at 11:34.20 UTC
 
    Execution Layer:
 
-   ✅ NethermindEth [v1.19.3](https://github.com/NethermindEth/nethermind/releases/tag/1.19.3)  
+   ✅ NethermindEth [v1.19.3](https://github.com/NethermindEth/nethermind/releases/tag/1.19.3)
    ✅ ErigonEth [v2.48.0](https://github.com/ledgerwatch/erigon/releases/tag/v2.48.0)
 
    Consensus Layer:
 
-   ✅ Lighthouse [v4.3.0](https://github.com/sigp/lighthouse/releases/tag/v4.3.0)  
-   ✅ Teku [v23.6.1](https://github.com/Consensys/teku/releases/tag/23.6.1)  
-   ✅ Nimbus v23.6.0 (only with the following Docker image: http://ghcr.io/gnosischain/gnosis-nimbus-eth2:v23.6.0)  
+   ✅ Lighthouse [v4.3.0](https://github.com/sigp/lighthouse/releases/tag/v4.3.0)
+   ✅ Teku [v23.6.1](https://github.com/Consensys/teku/releases/tag/23.6.1)
+   ✅ Nimbus v23.6.0 (only with the following Docker image: http://ghcr.io/gnosischain/gnosis-nimbus-eth2:v23.6.0)
    ✅ Lodestar [v1.9.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.9.1)
 
    DAppNode Packages
 
-   ✅ Teku Gnosis v0.1.9  
-   ✅ Lighthouse Gnosis v0.1.10  
-   ✅ Lodestar Gnosis v0.1.2  
-   ✅ Nethermind xDAI v1.0.34  
+   ✅ Teku Gnosis v0.1.9
+   ✅ Lighthouse Gnosis v0.1.10
+   ✅ Lodestar Gnosis v0.1.2
+   ✅ Nethermind xDAI v1.0.34
    ⌛️ Erigon and Nimbus - Forthcoming
 
 ## How to claim your withdrawal?
