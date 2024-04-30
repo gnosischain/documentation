@@ -14,7 +14,7 @@ tags: [bridges, merge]
 
 ### Pausing of Bridges
 
-24 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](/bridges/governance) will execute a transaction to set the the following bridge parameters. 
+24 hours prior to the Merge TTD (currently tracking for ~8th Dec 2022 18:43 UTC), the [Gnosis Bridge Governance Multisig](/bridges/governance) will execute a transaction to set the following bridge parameters. 
 
 | Bridge                                                                                                                             | Details                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
