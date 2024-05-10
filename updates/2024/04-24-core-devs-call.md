@@ -28,7 +28,7 @@ April 24, 2024
         * One potential bug remaining
         * Includes half-path and snap sync server for newly synced nodes by default
         * Snap sync in ~45 minutes with one peer
-            * Nethermind <> Nethermind snap sync tested and working
+            * Nethermind ↔ Nethermind snap sync tested and working
             * Nethermind from Geth also worked
 
 
