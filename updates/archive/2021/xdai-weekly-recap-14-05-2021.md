@@ -86,7 +86,7 @@ UI Customizations include additional items added to the Apps Menu and trading ic
 
 ### Project Page Updates
 
-Explore xDai diversity and the the more than 100+ projects and growing currently deployed on the xDai chain. We updated our projects page to include additional NFT and DeFi projects and more. If you have a project utilizing xDai, please get in touch so we can add it to our list.
+Explore xDai diversity and more than 100+ projects and growing currently deployed on the xDai chain. We updated our projects page to include additional NFT and DeFi projects and more. If you have a project utilizing xDai, please get in touch so we can add it to our list.
 
 ### Cryptokek Integration
 

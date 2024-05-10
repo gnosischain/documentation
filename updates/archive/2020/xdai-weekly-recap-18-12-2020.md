@@ -25,7 +25,7 @@ https://twitter.com/blockscoutcom/status/1339631851644719104
 
 ## :christmas\_tree: Swether NFTs
 
-Just in time for the holidays you can create your own custom NFT in a holiday sweater pattern, and the xDai logo is one a handful available to add! This fun project is made possible by the The Treum team, part of ConsenSys Mesh.\
+Just in time for the holidays you can create your own custom NFT in a holiday sweater pattern, and the xDai logo is one a handful available to add! This fun project is made possible by The Treum team, part of ConsenSys Mesh.\
 \
 Bonus for US residents - mint a token and get a FREE SWEATSHIRT with your design on it! Swether minting season ends Dec 31, 2020.\
 \

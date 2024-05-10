@@ -21,7 +21,7 @@ It is possible to use the [Gnosis Bridge](https://bridge.gnosischain.com) to tra
 
 In this example, we transfer the Basic Attention Token (BAT) from Ethereum to xDai. When this process was started, this token does not yet exist on Gnosis. It takes less than 5 minutes and some ETH for gas fees.
 
-1. Go the the [Legacy OmniBridge UI](https://omni.legacy.gnosischain.com/bridge)
+1. Go to the [Legacy OmniBridge UI](https://omni.legacy.gnosischain.com/bridge)
 
 - Connect your wallet to the Ethereum Mainnet
 - Select the token you want to transfer (here we select BAT) and enter the amount
