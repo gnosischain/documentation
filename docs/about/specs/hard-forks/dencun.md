@@ -56,23 +56,23 @@ Gnosis chain has both a lower `CHURN_LIMIT_QUOTIENT` and faster epoch times. A `
 
 | Network | Timestamp  | Date & Time (UTC)                 | Fork Hash | Beacon Chain Epoch |
 | ------- | ---------- | --------------------------------- | --------- | ------------------ |
-| Chiado  | 1706724940 | Wed Jan 31 2024 18:15:40 GMT+0000 | -         | 516608             |
-| Mainnet | 1710181820 | Monday March 11 202418:30:20 +UTC | -         | 889856             |
+| Chiado  | 1706724940 | Wed Jan 31 2024 18:15:40 GMT+0000 |  0x5fbc16bc  | 516608             |
+| Mainnet | 1710181820 | Monday March 11 202418:30:20 +UTC |  0x1384dfc1  | 889856             |
 
 ## How to Prepare
 
 ### For Validators
 
-1. Update your clients:
+Update your clients:
 
    Execution Layer
 
-   - ✅ NethermindEth [v1.25.3](https://github.com/NethermindEth/nethermind/releases/tag/1.25.3)
-   - ✅ ErigonEth [v2.57.1](https://github.com/ledgerwatch/erigon/releases/tag/v2.57.1)
+   - ✅ NethermindEth [v1.25.4+](https://github.com/NethermindEth/nethermind/releases/)
+   - ✅ ErigonEth [v2.58.0+](https://github.com/ledgerwatch/erigon/releases/)
 
    Consensus Layer
 
-   - ✅ Lighthouse [v4.6.0](https://github.com/sigp/lighthouse/releases/tag/v4.6.0)
-   - ✅ Teku [v24.1.1](https://github.com/Consensys/teku/releases/tag/24.1.1)
-   - ✅ Nimbus [v24.1.2](https://github.com/status-im/nimbus-eth2/releases/tag/v24.1.2)
-   - ✅ Lodestar [v1.15.0](https://github.com/ChainSafe/lodestar/releases/tag/v1.15.0)
+   - ✅ Lighthouse [v5.0.0+](https://github.com/sigp/lighthouse/releases/)
+   - ✅ Teku [v24.2.0+](https://github.com/Consensys/teku/releases/)
+   - ✅ Nimbus [v24.2.1+](https://github.com/status-im/nimbus-eth2/releases/)
+   - ✅ Lodestar [v1.16.0+](https://github.com/ChainSafe/lodestar/releases/)

@@ -31,7 +31,7 @@ In the second part of the tutorial, you will learn how to bridge GNO between Goe
 
 5. When the transaction is included in the block, click on the transaction link to get the transaction details
    ![](/img/bridges/omni-bridge-to-native-eth3.png)
-6. Use the "View in ALM App" link on the page with transaction details, or use the transaction hash and go the the [ALM site](https://alm-bridge-monitor.gnosischain.com/) and enter it manually to track status of the transfer and finalize bridge operations if required.  
+6. Use the "View in ALM App" link on the page with transaction details, or use the transaction hash and go to the [ALM site](https://alm-bridge-monitor.gnosischain.com/) and enter it manually to track status of the transfer and finalize bridge operations if required.  
    ![](/img/bridges/omni-bridge-to-native-eth4.png)
 7. Eventually, when an executing transaction on the Mainnet is processed, the WETH will be unlocked and unwrapped to ETH native tokens:
    ![](/img/bridges/omni-bridge-to-native-eth5.png)
