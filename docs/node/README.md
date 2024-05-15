@@ -5,9 +5,9 @@ sidebar_position : 1
 
 # Run a Node
 
-<img src="/img/node/validator_distribution_Oct23.png" width="100%"/>
+![Screenshot 2024-05-15 at 13 11 23](https://github.com/gnosischain/documentation/assets/75987728/72e33372-bb7e-4f03-8559-8c6e9c232672)
 
-**Image:** Gnosis nodes around the world, circa Oct 2023 (source: https://www.d14n.info/)
+**Image:** Gnosis nodes around the world, circa May 15 2024
 
 ## Open Infrastructure Powered by Solo Stakers
 
