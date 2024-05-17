@@ -146,7 +146,7 @@ const config = {
             items: [
               {
                 label: "Developers",
-                to: "/developers",
+                to: "/developers/overview",
               },
               {
                 label: "Node operators",
