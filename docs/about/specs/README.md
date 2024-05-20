@@ -12,7 +12,7 @@ keywords: [gnosis specs, gnosis specifications, gnosis block size, block speed, 
 | Block Size | 30M gas units |
 | Block Speed | 5 seconds |
 | Gas price | check [gas price oracle](/tools/oracles/gas-price) |
-| Patchset | London |
+| Patchset | Cancun |
 | Fee Token | [xDai](/concepts/tokens/xdai) |
 | Consensus Token | [GNO](/concepts/tokens/gno) |
 | Chain ID (Gnosis) | 100 (hexa 0x64) |
