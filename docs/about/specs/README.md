@@ -9,7 +9,7 @@ keywords: [gnosis specs, gnosis specifications, gnosis block size, block speed, 
 
 | Property |  |
 | - | - |
-| Block Size | 30M gas units |
+| Block Size | 17M gas units |
 | Block Speed | 5 seconds |
 | Gas price | check [gas price oracle](/tools/oracles/gas-price) |
 | Patchset | London |
