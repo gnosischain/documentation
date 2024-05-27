@@ -172,7 +172,7 @@ function requireToPassMessage (address _contract,
 #### Foreign Network to Home Network
 
 1. User calls `foo()` on the originating contract
-2. Originating contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
+2. Originating contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
 3. `UserRequestForAffirmation` event is emitted, and listening validators relay the message to the Home side where signatures are collected
 4. `executeAffirmation()` is called on the Home Bridge contract by a validator once enough signatures are collected.
 5. Home bridge contract decodes the message and calls `foo()` on the target contract.
@@ -180,8 +180,8 @@ function requireToPassMessage (address _contract,
 #### Home Network to Foreign Network
 
 1. User calls `foo()` on an originating contract
-2. Originating contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
-3. Signatures are collected from validators, and once enough are collected `requireToConfirmMessage()` is called
+2. Originating contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
+3. Signatures are collected from validators by calling `submitSignatures()`, and once enough are collected `CollectedSignatures()` event is emitted.
 4. Message is relayed to the Foreign Bridge contract, and `executeSignatures()` is called
 5. Foreign bridge contract decodes the message and calls `foo()` on target contract
 
@@ -211,8 +211,9 @@ Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 
 
 | Role                | Address                                                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Telepathy PubSub    | [0xa96c29A4114B414543Bdc9be5616dE270b9e88ec](https://gnosisscan.io/address/0xa96c29A4114B414543Bdc9be5616dE270b9e88ec) |
-| Telepathy Validator | [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) |
+| Telepathy PubSub    | [0x30Ec3049F571cf61099535bd73EcbC8968e6311a](https://gnosisscan.io/address/0x30Ec3049F571cf61099535bd73EcbC8968e6311a) |
+| Telepathy Validator | [0x456c255a8bc1f33778603a2a48eb6b0c69f4d48](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) |
+| Telepathy Light Client | [0x251cee0641afed44f625fafa1cd2b410f7868591](https://gnosisscan.io/address/0x251cee0641afed44f625fafa1cd2b410f7868591) |
 
 For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
 
