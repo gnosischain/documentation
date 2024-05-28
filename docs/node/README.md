@@ -166,7 +166,7 @@ Validators are advised to consider those numbers when planning their infrastruct
 The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the most straightforward experience: order, connect, run. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software.
 
 - [DappNode](https://docs.gnosischain.com/node/tools/dappnode/)
-- [Avado](https://docs.ava.do/packages/gnosis/)
+- [Avado]([https://docs.ava.do/packages/gnosis/](https://docs.ava.do/more-staking-opportunities/gnosis-staking))
 - [Stereum](https://stereum.net/)
 
 ## Spinning up the node
