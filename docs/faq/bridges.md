@@ -35,3 +35,20 @@
 9. I’m having issues using Omni bridge to bridge assets held in a SAFE between Ethereum and Gnosis Chain, I get a “failure to connect” ERROR.
 
    Rabby wallet ( https://rabby.io/ ) wallet is good workaround allowing to load SAFE into it and inject them in similarly to Metamask.
+
+10. I bridge my WETH from Gnosis Chain to Ethereum, but I don't see my WETH balance increases on Ethereum.
+
+      When bridging [WETH](https://gnosisscan.io/token/0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1) from Gnosis Chain, Omnibridge will automatically unwrap your WETH on Ethereum to ETH, so you will only accept ETH on Ethereum. The transaction calls [WETHOmnibridgeHelper](https://etherscan.io/address/0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a) to withdraw ETH from [WETH](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) token contract, create a new contract to receive the ETH and eventually self destruct that contract and send the ETH to the user. Check out [this transaction](https://etherscan.io/tx/0xfed3bfb9a86b4c65039de6e64f4582e7fad8b1cac0b67f69c185c0332b3fab7e) for more details.
+
+11. How do I know if xDAI get minted to my account when I'm using xDAI bridge for bridging DAI from Ethereum?
+
+      Because xDAI is gas token(or native token) on Gnosis Chain, newly minted xDAI by xDAI bridge will not create a transaction. You may check your balance increment visually by looking for **coin balance history** section in blockscout: https://gnosis.blockscout.com/address/$YOUR_ADDRESS?tab=coin_balance_history or querying the balance programmatically using eth_getBalance api.
+
+12. I want to bridge my AgEUR or EURe, what bridge should I use?
+
+      To bridge AgEUR : https://app.angle.money/bridges-agEUR    
+      To bridge EURe: You will need have an account in [Monerium app](https://monerium.app/), click **Send Money**, select **Cross-Chain** and enter the amount you want to send, then click **Send**.. Double check the message is correct and sign the message. 
+      ![Step1](../../static/img/faq/bridge/EURe-step1.png)    
+      ![Step2](../../static/img/faq/bridge/EURe-step2.png)  
+      ![Step3](../../static/img/faq/bridge/EURe-step3.png)  
+      ![Step4](../../static/img/faq/bridge/EURe-step4.png)  

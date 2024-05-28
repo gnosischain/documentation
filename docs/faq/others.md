@@ -2,10 +2,10 @@
 
 1. Where can I bridge my tokens to Gnosis Chain?
 
-   Between Ethereum and Gnosis Chain : For DAI/xDAI : https://bridge.xdaichain.com/ ; For ERC20 : https://omni.xdaichain.com/
-   More chains and options : https://jumper.exchange/ ; others third party bridges : https://docs.gnosischain.com/bridges/third-party
+   Between Ethereum and Gnosis Chain : https://bridge.gnosischain.com/
+   More chains and options : [jumper](https://jumper.exchange/), [bungee](https://www.bungee.exchange/), [hop](https://app.hop.exchange/)
+   For specific tokens like AgEUR and EURe, please use [the token's authorised bridge](bridges.md#bridges-faqs) instead of Omnibridge.
 
-   To bridge AgEUR : https://app.angle.money/bridges-agEUR
 
 2. What is Gnosis Faucet?
 
