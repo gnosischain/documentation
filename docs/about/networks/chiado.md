@@ -82,7 +82,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 - Name: Testnet xDai on Chiado
 - Type: Native Asset
 
-You can find a list of contract addresses for Chiado tokens in the [Useful Addresses](/developers/getting-started/contracts) page.
+You can find a list of contract addresses for Chiado tokens in the [Useful Addresses](/developers/UsefulContracts) page.
 
 ## Network Config
 
