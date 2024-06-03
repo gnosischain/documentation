@@ -24,7 +24,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 
 - Chiado is a Gnosis testnet that was launched in October 2022
 - Chiado's primary purpose is to be a long-lived testnet with tooling for developers
-- Chiado's secondary purpose was to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../concepts/specs/consensus/aura.md) to the [Beacon Chain](../../concepts/specs/gbc/README.md).
+- Chiado's secondary purpose was to test "The Merge", Gnosis' transition from [Proof-of-Authority](../../about/specs/consensus/aura.md) to the [Beacon Chain](../../about/specs/gbc/README.md).
 - Chiado is named after the [Chiado metro station](<https://en.wikipedia.org/wiki/Baixa-Chiado_(Lisbon_Metro)>) in Lisbon, Portugal.
 
 ### Validators
@@ -82,7 +82,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 - Name: Testnet xDai on Chiado
 - Type: Native Asset
 
-You can find a list of contract addresses for Chiado tokens in the [Useful Addresses](/developers/getting-started/contracts) page.
+You can find a list of contract addresses for Chiado tokens in the [Useful Addresses](/developers/UsefulContracts) page.
 
 ## Network Config
 

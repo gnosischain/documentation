@@ -5,9 +5,9 @@ sidebar_position : 1
 
 # Run a Node
 
-<img src="/img/node/validator_distribution_Oct23.png" width="100%"/>
+![Screenshot 2024-05-15 at 13 11 23](https://github.com/gnosischain/documentation/assets/75987728/72e33372-bb7e-4f03-8559-8c6e9c232672)
 
-**Image:** Gnosis nodes around the world, circa Oct 2023 (source: https://www.d14n.info/)
+**Image:** Gnosis nodes around the world, circa May 15 2024
 
 ## Open Infrastructure Powered by Solo Stakers
 
@@ -66,14 +66,14 @@ Gnosis clients are able to run on consumer grade computers and don't require any
 Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
 
 - [Gateway](https://gateway.fm/)
-- [Gnosis](../tools/rpc/README.mdx#gnosis)
+- [Gnosis](../tools/RPC%20Providers/README.md)
 - [Ankr](https://www.ankr.com/rpc/gnosis/)
 - [Chainnodes](https://www.chainnodes.org/chains/gnosis)
 - [Blast](https://blastapi.io/public-api/gnosis)
 - [GetBlock](https://getblock.io/nodes/gno/)
 - [BlockPI](https://docs.blockpi.io/documentations/api-reference/gnosis)
 
-Check out also [rpc providers](../tools/rpc/README.mdx) for more options on hosted nodes.
+Check out also [rpc providers](../tools/RPC%20Providers/README.md) for more options on hosted nodes.
 
 #### **Hardware**
 

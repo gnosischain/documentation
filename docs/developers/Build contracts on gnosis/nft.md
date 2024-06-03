@@ -40,7 +40,7 @@ NFTs are not necessarily ERC-721 tokens, they can also be [ERC-1155](https://eip
 If you're looking for a way to create NFTs without coding, check out [Nifty.Ink](https://nifty.ink/explore)
 :::
 
-For this walk through, we're going to be using [Hardhat](https://hardhat.org/) ([configure it with Gnosis](/developers/smart-contracts/hardhat#config-hardhat-for-gnosis)).
+For this walk through, we're going to be using [Hardhat](https://hardhat.org/) ([configure it with Gnosis](../dev-environment/hardhat.md/#config-hardhat-for-gnosis)).
 
 ## Prerequisites 
 To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/developers/building/first-contract).
