@@ -12,7 +12,7 @@ Gnosis is an open peer-to-peer network of nodes operated by anyone in the world 
 
 Gnosis utilizes the same architecture as Ethereum, and has committed to building together with Ethereum and contributing to the research, engineering and tooling for Ethereum's stack.
 
-Gnosis started out as a [proof-of-authority ](../concepts/specs/consensus/aura.md) sidechain to Ethereum with its own consensus algorithm in 2017. Gnosis [Merged](/updates/2022/12/10/merge) successful at block 6,306,357 deprecating legacy differences and aligning with Ethereum's new architecture, beginning with the Merge, with a goal of achieving 1:1 parity with Ethereum.
+Gnosis started out as a [proof-of-authority ](../about/specs/consensus/aura.md) sidechain to Ethereum with its own consensus algorithm in 2017. Gnosis [Merged](/updates/2022/12/10/merge) successful at block 6,306,357 deprecating legacy differences and aligning with Ethereum's new architecture, beginning with the Merge, with a goal of achieving 1:1 parity with Ethereum.
 
 ## Composite Network Architecture
 
@@ -26,11 +26,11 @@ To run a Gnosis node, you need to run an Execution Layer and Consensus Layer cli
 
 ![](../../static/img/node/execution-layer-architecture.png)
 
-Gnosis Execution Layer is the legacy xDai "Eth1" network. The Execution Layer is where smart contracts and the EVM and network rules reside. Prior to the Merge, the Execution Layer utilized a [Proof-of-Authority consensus](../concepts/specs/consensus/aura.md), which was deprecated by the merge in favor of the Consensus Layer instead.
+Gnosis Execution Layer is the legacy xDai "Eth1" network. The Execution Layer is where smart contracts and the EVM and network rules reside. Prior to the Merge, the Execution Layer utilized a [Proof-of-Authority consensus](../about/specs/consensus/aura.md), which was deprecated by the merge in favor of the Consensus Layer instead.
 
 | Period               | Ethereum        | Gnosis                                              |
 | -------------------- | --------------- | --------------------------------------------------- |
-| Pre-Merge Consensus  | Proof-of-Work   | [Proof-of-Authority](../concepts/specs/consensus/aura.md) |
+| Pre-Merge Consensus  | Proof-of-Work   | [Proof-of-Authority](../about/specs/consensus/aura.md) |
 | Post-Merge Consensus | Consensus Layer | Consensus Layer                                     |
 
 Node Operators will need to run an Execution Layer client, which will interact with the Execution Layer network.

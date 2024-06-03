@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Third party Bridges and On-Ramp Solutions"
 sidebar_position: 4
-keywords: [gnosis bridges, on ramp solutions] 
+keywords: [gnosis bridges, on ramp solutions, third party, omni bridge] 
 title: Third Party bridges and On-Ramp Solutions
 ---
 
@@ -9,10 +9,6 @@ title: Third Party bridges and On-Ramp Solutions
 - Jumper (by Li Fi)
 - Bungee (by Socket)
 - ShapeShift
-
-### Native bridges
-- xDai Bridge
-- Omni Bridge
 
 ### Third-party bridges
 - Connext Bridge
@@ -24,3 +20,7 @@ title: Third Party bridges and On-Ramp Solutions
 - Mt Pelerin 
 - Ramp
 - AscendEX
+
+### Legacy bridges
+- xDai Bridge
+- Omni Bridge

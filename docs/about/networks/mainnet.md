@@ -87,4 +87,4 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 - [xDai Bridge](/bridges/tokenbridge/xdai-bridge#key-contracts)
 - [AMB Bridge](/bridges/tokenbridge/amb-bridge#key-contracts)
 - [OmniBridge](/bridges/tokenbridge/omnibridge#key-contracts)
-<!-- - [Beacon Chain](/concepts/specs/gbc/README.md) -->
+- [Beacon Chain](/about/specs/gbc/README.md)

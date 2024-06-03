@@ -66,7 +66,7 @@ Syncing [Gnosis using Nethermind](/node/manual) requires \~200GB (and growing) o
 
 11. Can I use a node provider to run a Gnosis node?
 
-Check the [RPC Providers](../tools/rpc/README.mdx) page for the complete list.
+Check the [RPC Providers](../tools/RPC%20Providers/README.md) page for the complete list.
 
 12. Can I use DappNode?
 

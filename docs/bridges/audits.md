@@ -23,7 +23,7 @@ The OmniBridge and xDai Bridge have undergone multiple independent security audi
 **Contracts**: https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
 **Audit Report**: [ChainSafe Audit Report](../../static/files/dai-xdai-08-23.pdf)
 
-**Reference**: [Savings xDAI](../bridges/tokenbridge/xdai-bridge.md#savings-xdai)
+**Reference**: [Savings xDAI](../bridges/Token%20Bridge/xdai-bridge.md#savings-xdai)
 
 ## OmniBridge v6.0 Smart Contracts Audit by ChainSecurity
 

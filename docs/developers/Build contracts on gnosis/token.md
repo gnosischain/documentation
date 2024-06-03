@@ -44,7 +44,7 @@ Then run:
 ```bash
 npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
-Configure [hardhat with Gnosis](../smart-contracts/hardhat.md).
+Configure [hardhat with Gnosis](../dev-environment/hardhat.md#config-hardhat-for-gnosis).
 
 ## Step 2: Add Contract Code
 We're going to import and use OpenZeppelin's ERC-20 contract implementation.
