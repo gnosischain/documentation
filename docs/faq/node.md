@@ -152,7 +152,7 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 11. Where does the automatic balance withdraw to?
 
-    In case you are using a legacy withdrawal credential 0x00, it will not be withdrawn and you will have to perform a migration to 0x01 credentials to complete the withdrawal. If you have already configured your withdrawal address and have a withdrawal credential of 0x01, then rewards in excess of 1 GNO (32 mGNO) will be transferred to your withdrawal address.
+    In case you are using a legacy withdrawal credential 0x00, it will not be withdrawn and you will have to perform a migration to 0x01 credentials to complete the withdrawal. If you have already configured your withdrawal address and have a withdrawal credential of 0x01, then rewards in excess of 1 GNO will be transferred to your withdrawal address.
 
 12. Once I have changed my credential to 0x01, can I change it to an alternative withdrawal address?
 

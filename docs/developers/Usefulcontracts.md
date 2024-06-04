@@ -40,7 +40,6 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | GNO | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb) |
 | wxDAI | [0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d](https://gnosisscan.io/token/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d)   |
-| mGNO | [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68) |
 | Deposit contract    | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9) |
 
 ### Gnosis Chain bridge contract addresses
@@ -94,7 +93,6 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | GnosisBridge(GNO) | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://blockscout.com/gnosis/chiado/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
 | wxDAI | [0x18c8a7ec7897177E4529065a7E7B0878358B3BfF](https://gnosis-chiado.blockscout.com/address/0x18c8a7ec7897177E4529065a7E7B0878358B3BfF)   |
-| mGNO | [0xc5be8bf53755a41c2385e7aa86f6a9e28746f466](https://blockscout.com/gnosis/chiado/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) |
 | Deposit Contract       | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.com/gnosis/chiado/address/0xb97036A26259B7147018913bD58a774cf91acf25) |
 | Governance Safe                     | [0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2](https://blockscout.com/gnosis/chiado/address/0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2)    
 

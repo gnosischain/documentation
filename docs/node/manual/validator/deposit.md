@@ -112,7 +112,7 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 ## Option 2: Direct interaction with Contracts
 
-A modification to the Gnosis Chain deposit contract allows you to deposit in batches (this functionality is not available for the ETH2 deposit contract). One transaction can be used to initiate deposits for up to 128 validators. The assumption is that every validator deposits 1 GNO(which is converted to 32mGNO) in every entry of the batch. The following script simplifies the process.
+A modification to the Gnosis Chain deposit contract allows you to deposit in batches (this functionality is not available for the ETH2 deposit contract). One transaction can be used to initiate deposits for up to 128 validators. The assumption is that every validator deposits 1 GNO in every entry of the batch. The following script simplifies the process.
 
 ### Step 1: Get Deposit Script
 
