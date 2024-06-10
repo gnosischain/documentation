@@ -24,12 +24,12 @@ jobs:
               run: |
                 for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
-            - uses: actions/checkout@v2
-              with:
-                fetch-depth: 0
+            # Ref: https://github.com/actions/checkout/issues/1471#issuecomment-1771231294
+            - uses: actions/checkout@v4
             
             - name: Tag checkout
-              run:
+              run: |
+                git fetch --prune --unshallow --tags
                 git checkout ${{ github.event.inputs.tag }}
 
             - uses: actions/cache@v2
@@ -39,8 +39,6 @@ jobs:
 
             - name: Setup Node.js
               uses: actions/setup-node@v2
-              with:
-                node-version: 18.14.0
 
             - name: Install
               run: |
@@ -71,6 +69,10 @@ jobs:
                 aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*.html" --exclude "sitemap.xml" --cache-control max-age=86400,public
                 aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
                 aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*" --include "sitemap.xml" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/xml
+
+            - name: 'Cloudfront: cache invalidation'
+              run: |
+                aws cloudfront create-invalidation --distribution-id ${{ secrets.PROD_AWS_CLOUDFRONT_ID }} --paths "/*"
 
     notify:
       uses: ./.github/workflows/slack_release_notification.yml

@@ -56,6 +56,23 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 | Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
 
 </TabItem>
+
+<TabItem value="sepolia-chiado" label="Sepolia-Chiado">
+
+### Sepolia - Chiaado
+
+| Contract                     | Address                                                                                                                               |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Omnibrdge (Sepolia)          | [0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e](https://sepolia.etherscan.io/address/0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e)         |
+| AMB (Sepolia)                | [0xf2546d6648bd2af6a008a7e7c1542bb240329e11](https://sepolia.etherscan.io/address/0xf2546d6648bd2af6a008a7e7c1542bb240329e11)         |
+| Validator Contract (Sepolia) | [0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a](https://sepolia.etherscan.io/address/0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a)         |
+| Omnibridge (Chiado)          | [0x82f63B9730f419CbfEEF10d58a522203838d74c8](https://gnosis-chiado.blockscout.com/address/0x82f63B9730f419CbfEEF10d58a522203838d74c8) |
+| AMB (Chiado)                 | [0x8448E15d0e706C0298dECA99F0b4744030e59d7d](https://gnosis-chiado.blockscout.com/address/0x8448E15d0e706C0298dECA99F0b4744030e59d7d) |
+| Validator Contract (Chiado)  | [0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976](https://gnosis-chiado.blockscout.com/address/0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976) |
+
+
+</TabItem>
+
 <TabItem value="goerli" label="Goerli-Chiado">
 
 ### Goerli - Chiado
@@ -80,21 +97,6 @@ The bridge betwee Goerli and Chiado is deprecating soon.
 
 </TabItem>
 
-<TabItem value="sepolia-chiado" label="Sepolia-Chiado">
-
-### Sepolia - Chiaado
-
-| Contract                     | Address                                                                                                                               |
-|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Omnibrdge (Sepolia)          | [0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e](https://sepolia.etherscan.io/address/0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e)         |
-| AMB (Sepolia)                | [0xf2546d6648bd2af6a008a7e7c1542bb240329e11](https://sepolia.etherscan.io/address/0xf2546d6648bd2af6a008a7e7c1542bb240329e11)         |
-| Validator Contract (Sepolia) | [0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a](https://sepolia.etherscan.io/address/0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a)         |
-| Omnibridge (Chiado)          | [0x82f63B9730f419CbfEEF10d58a522203838d74c8](https://gnosis-chiado.blockscout.com/address/0x82f63B9730f419CbfEEF10d58a522203838d74c8) |
-| AMB (Chiado)                 | [0x8448E15d0e706C0298dECA99F0b4744030e59d7d](https://gnosis-chiado.blockscout.com/address/0x8448E15d0e706C0298dECA99F0b4744030e59d7d) |
-| Validator Contract (Chiado)  | [0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976](https://gnosis-chiado.blockscout.com/address/0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976) |
-
-
-</TabItem>
 
 </Tabs>
 

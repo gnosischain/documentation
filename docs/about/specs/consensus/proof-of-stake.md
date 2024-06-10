@@ -1,4 +1,4 @@
-# Proof of Stake (PoS):
+# Proof of Stake (PoS)
 
 [Proof of Stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/) (PoS) is a consensus mechanism utilized in blockchain networks to establish network consensus and authenticate transactions. In PoS, participants are chosen to create new blocks and validate transactions based on the number of coins they hold or "stake." The more coins one possesses, the greater their likelihood of selection. PoS depends on participants having a financial stake in the network, rather than energy-intensive computations.
 

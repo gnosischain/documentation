@@ -142,7 +142,7 @@ contract WavePortal {
 ## Deploying your Contract
 
 To deploy your contract to Gnosis, let's update your config file at  `hardhat.config.js`.
-For a complete configuration check [hardhat config guide](../smart-contracts/hardhat.md).
+For a complete configuration check [hardhat config guide](../dev-environment/hardhat.md#config-hardhat-for-gnosis).
 
 ```js showLineNumbers title=hardhat.config.js
 require("@nomiclabs/hardhat-waffle");

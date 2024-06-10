@@ -9,7 +9,7 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 ### Proof-of-Stake
 
 - Gnosis (and Ethereum) utilize a Proof-of-Stake cryptoeconomic incentive system to secure the network and disincentivize malicious behavior by nodes.
-- Nodes that play an active role in validating the network are required to stake [32 mGNO](../concepts/tokens/gno.md) (i.e. 1 GNO) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties.
+- Nodes that play an active role in validating the network are required to stake [1 GNO ](../about/tokens/gno.md) per validator. They receive periodic rewards for each epoch that they stay online and performing their duties.
 - However, if they engage in malicious or disruptive activity on the network, their stake gets "slashed", and they can also be permanently removed from the validator pool.
 - Nodes that go offline also attract a penalty for "inactivity leaks", although these are significantly less harsh if the node is offline only for a short period of time.
 
@@ -95,8 +95,8 @@ The most common "penalty" validators encounter is if they are offline, or are la
 Gnosis will move into a "inactivity leak" mode, if a large number (i.e. >1/3) of validators are offline at the same time causing the network to not finalize.
 
 - "Offline" validators receive increasingly large penalties based on their track records
-- This is designed to restore finality by reducing the stake of "offline" validators, who may get ejected from the network if their stake drops below the minimum required (i.e. 16 mGNO or 0.5 GNO)
-- While the initial stake is 1 GNO , a validator is allowed to continue validating even after being penalized so long as the stake is above 16 mGNO.
+- This is designed to restore finality by reducing the stake of "offline" validators, who may get ejected from the network if their stake drops below the minimum required (i.e. 0.5 GNO)
+- While the initial stake is 1 GNO , a validator is allowed to continue validating even after being penalized so long as the stake is above 0.5 GNO.
 
 ### Slashings
 

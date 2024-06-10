@@ -54,17 +54,20 @@ For a message/tokens to be relayed to another network, bridge validators need to
 
 </TabItem>
 
+<TabItem value="sepolia-chiado" label="Sepolia <-> Chiado">
+
+0x725bC6F18F8CDd7f57A9aB9A9f2Ea17A199185e5    
+0xb1562173109932146a7fBBF28d7c6652bc2DaACE
+
+</TabItem>
+
 <TabItem value="goerli-chiado" label="Goerli <-> Chiado">
 
 [0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49)
 
 </TabItem>
 
-<TabItem value="sepolia-chiado" label="Sepolia <-> Chiado">
 
-0x725bC6F18F8CDd7f57A9aB9A9f2Ea17A199185e5
-
-</TabItem>
 </Tabs>
 
 ### Bridge Governance
@@ -103,6 +106,21 @@ References:
 
 </TabItem>
 
+<TabItem value="sepolia-chiado" label="Sepolia-Chiado">
+
+### Sepolia - Chiaado
+
+| Contract                     | Address                                                                                                                               |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| AMB (Sepolia)          | [0xf2546D6648BD2af6a008A7e7C1542BB240329E11](https://sepolia.etherscan.io/address/0xf2546D6648BD2af6a008A7e7C1542BB240329E11)         |
+| Validator Contract (Sepolia) | [0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a](https://sepolia.etherscan.io/address/0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a)         |
+| AMB (Chiado)                 | [0x8448E15d0e706C0298dECA99F0b4744030e59d7d](https://gnosis-chiado.blockscout.com/address/0x8448E15d0e706C0298dECA99F0b4744030e59d7d) |
+| Validator Contract (Chiado)  | [0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976](https://gnosis-chiado.blockscout.com/address/0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976) |
+
+
+</TabItem>
+
+
 <TabItem value="goerli" label="Goerli-Chiado">
 
 ### Goerli - Chiado
@@ -127,21 +145,6 @@ The bridge betwee Goerli and Chiado is deprecating soon.
 
 </TabItem>
 
-<TabItem value="sepolia-chiado" label="Sepolia-Chiado">
-
-### Sepolia - Chiaado
-
-| Contract                     | Address                                                                                                                               |
-|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Omnibrdge (Sepolia)          | [0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e](https://sepolia.etherscan.io/address/0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e)         |
-| AMB (Sepolia)                | [0xf2546d6648bd2af6a008a7e7c1542bb240329e11](https://sepolia.etherscan.io/address/0xf2546d6648bd2af6a008a7e7c1542bb240329e11)         |
-| Validator Contract (Sepolia) | [0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a](https://sepolia.etherscan.io/address/0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a)         |
-| Omnibridge (Chiado)          | [0x82f63B9730f419CbfEEF10d58a522203838d74c8](https://gnosis-chiado.blockscout.com/address/0x82f63B9730f419CbfEEF10d58a522203838d74c8) |
-| AMB (Chiado)                 | [0x8448E15d0e706C0298dECA99F0b4744030e59d7d](https://gnosis-chiado.blockscout.com/address/0x8448E15d0e706C0298dECA99F0b4744030e59d7d) |
-| Validator Contract (Chiado)  | [0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976](https://gnosis-chiado.blockscout.com/address/0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976) |
-
-
-</TabItem>
 
 </Tabs>
 
@@ -172,7 +175,7 @@ function requireToPassMessage (address _contract,
 #### Foreign Network to Home Network
 
 1. User calls `foo()` on the originating contract
-2. Originating contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
+2. Originating contract calls `requireToPassMessage()` on Foreign Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
 3. `UserRequestForAffirmation` event is emitted, and listening validators relay the message to the Home side where signatures are collected
 4. `executeAffirmation()` is called on the Home Bridge contract by a validator once enough signatures are collected.
 5. Home bridge contract decodes the message and calls `foo()` on the target contract.
@@ -180,8 +183,8 @@ function requireToPassMessage (address _contract,
 #### Home Network to Foreign Network
 
 1. User calls `foo()` on an originating contract
-2. Originating contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and includes some tokens for gas.
-3. Signatures are collected from validators, and once enough are collected `requireToConfirmMessage()` is called
+2. Originating contract calls `requireToPassMessage()` on Home Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
+3. Signatures are collected from validators by calling `submitSignatures()`, and once enough are collected `CollectedSignatures()` event is emitted.
 4. Message is relayed to the Foreign Bridge contract, and `executeSignatures()` is called
 5. Foreign bridge contract decodes the message and calls `foo()` on target contract
 
@@ -211,8 +214,9 @@ Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 
 
 | Role                | Address                                                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Telepathy PubSub    | [0xa96c29A4114B414543Bdc9be5616dE270b9e88ec](https://gnosisscan.io/address/0xa96c29A4114B414543Bdc9be5616dE270b9e88ec) |
-| Telepathy Validator | [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) |
+| Telepathy PubSub    | [0x30Ec3049F571cf61099535bd73EcbC8968e6311a](https://gnosisscan.io/address/0x30Ec3049F571cf61099535bd73EcbC8968e6311a) |
+| Telepathy Validator | [0x456c255a8bc1f33778603a2a48eb6b0c69f4d48](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) |
+| Telepathy Light Client | [0x251cee0641afed44f625fafa1cd2b410f7868591](https://gnosisscan.io/address/0x251cee0641afed44f625fafa1cd2b410f7868591) |
 
 For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
 

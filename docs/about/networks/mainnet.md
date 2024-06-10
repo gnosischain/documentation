@@ -12,8 +12,8 @@ keywords:
 
 | Network Name       | Gnosis                    |
 | ------------------ | ------------------------- |
-| Native (fee) token | [xDai](/concepts/tokens/xdai.md) |
-| Staking token      | [GNO](/concepts/tokens/gno.md)   |
+| Native (fee) token | [xDai](/about/tokens/xdai.md) |
+| Staking token      | [GNO](/about/tokens/gno.md)   |
 | Chain ID           | 100                       |
 
 ## Key Infra
@@ -24,7 +24,7 @@ keywords:
 | ------------------------ | ------------------------------------------- |
 | Execution Layer RPC      | https://rpc.gnosis.gateway.fm               |
 | Execution Layer RPC      | https://rpc.gnosischain.com                 |
-| More RPC endpoints       | [RPC Providers](../../tools/rpc/README.mdx) |
+| More RPC endpoints       | [RPC Providers](../../tools/RPC%20Providers/README.md) |
 | Execution Layer Explorer | https://gnosisscan.io                       |
 | Execution Layer Explorer | https://blockscout.com/xdai/mainnet         |
 | Fork monitor             | https://forkmon.gnosischain.com             |
@@ -64,10 +64,10 @@ keywords:
 
 ## Native Tokens
 
-- Fee Token: [xDai](/concepts/tokens/xdai)
-- Staking Token: [GNO](/concepts/tokens/gno)
+- Fee Token: [xDai](/about/tokens/xdai)
+- Staking Token: [GNO](/about/tokens/gno)
 
-You can find a list of contract addresses for Gnosis Mainnet tokens in the [Useful Addresses](/developers/getting-started/contracts) page.
+You can find a list of contract addresses for Gnosis Mainnet tokens in the [Useful Addresses](/developers/Usefulcontracts) page.
 
 ## Network Config
 
@@ -87,4 +87,4 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 - [xDai Bridge](/bridges/tokenbridge/xdai-bridge#key-contracts)
 - [AMB Bridge](/bridges/tokenbridge/amb-bridge#key-contracts)
 - [OmniBridge](/bridges/tokenbridge/omnibridge#key-contracts)
-- [Beacon Chain](/concepts/specs/gbc/README.md)
+- [Beacon Chain](/about/specs/gbc/README.md)

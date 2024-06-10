@@ -2,10 +2,10 @@
 
 1. Where can I bridge my tokens to Gnosis Chain?
 
-   Between Ethereum and Gnosis Chain : For DAI/xDAI : https://bridge.xdaichain.com/ ; For ERC20 : https://omni.xdaichain.com/
-   More chains and options : https://jumper.exchange/ ; others third party bridges : https://docs.gnosischain.com/bridges/third-party
+   Between Ethereum and Gnosis Chain : https://bridge.gnosischain.com/
+   More chains and options : [jumper](https://jumper.exchange/), [bungee](https://www.bungee.exchange/), [hop](https://app.hop.exchange/)
+   For specific tokens like AgEUR and EURe, please use [the token's authorised bridge](bridges.md#bridges-faqs) instead of Omnibridge.
 
-   To bridge AgEUR : https://app.angle.money/bridges-agEUR
 
 2. What is Gnosis Faucet?
 
@@ -19,9 +19,7 @@
 
    When you stake your GNO on Stakewise you receive sGNO.
 
-5. What is mGNO?
-
-   To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a metaToken similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO.
+https://docs.gnosischain.com/faq/others
 
 6. What is LGNO?
 

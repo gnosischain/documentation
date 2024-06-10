@@ -5,7 +5,7 @@ keywords: [SupraOracles, verifiable random function, random number generation]
 ---
 
 :::info testnet
-SupraOracles only supports [Chiado testnet](../../../concepts/networks/chiado.md).
+SupraOracles only supports [Chiado testnet](../../../about/networks/chiado.md).
 :::
 
 ## What is a Verifiable Random Function (VRF)?

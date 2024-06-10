@@ -66,7 +66,7 @@ Syncing [Gnosis using Nethermind](/node/manual) requires \~200GB (and growing) o
 
 11. Can I use a node provider to run a Gnosis node?
 
-Check the [RPC Providers](../tools/rpc/README.mdx) page for the complete list.
+Check the [RPC Providers](../tools/RPC%20Providers/README.md) page for the complete list.
 
 12. Can I use DappNode?
 
@@ -152,7 +152,7 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 11. Where does the automatic balance withdraw to?
 
-    In case you are using a legacy withdrawal credential 0x00, it will not be withdrawn and you will have to perform a migration to 0x01 credentials to complete the withdrawal. If you have already configured your withdrawal address and have a withdrawal credential of 0x01, then rewards in excess of 1 GNO (32 mGNO) will be transferred to your withdrawal address.
+    In case you are using a legacy withdrawal credential 0x00, it will not be withdrawn and you will have to perform a migration to 0x01 credentials to complete the withdrawal. If you have already configured your withdrawal address and have a withdrawal credential of 0x01, then rewards in excess of 1 GNO will be transferred to your withdrawal address.
 
 12. Once I have changed my credential to 0x01, can I change it to an alternative withdrawal address?
 

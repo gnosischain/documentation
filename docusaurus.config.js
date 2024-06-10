@@ -13,7 +13,7 @@ const config = {
   url: "https://docs.gnosischain.com",
   baseUrl: "/",
   onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "ignore",
   favicon: "img/favicon.ico",
   stylesheets: [
     {
@@ -146,7 +146,7 @@ const config = {
             items: [
               {
                 label: "Developers",
-                to: "/developers",
+                to: "/developers/overview",
               },
               {
                 label: "Node operators",
@@ -255,14 +255,6 @@ const config = {
           {
             to: "/updates/2022/12/05/bridges-pause",
             from: "/updates/202212-bridges-pause",
-          },
-          {
-            to: "/about/networks/chiado",
-            from: "/about/networks/chiado",
-          },
-          {
-            to: "/about/networks/mainnet",
-            from: "/about/networks/mainnet",
           },
           {
             to: "/about/communication",

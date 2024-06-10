@@ -16,7 +16,7 @@ To stake on GBC, follow the Validator instructions starting with [Validator Requ
 | GBC Deposit Contract | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)                     |
 | GNO-> mGNO contract  | [0x647507A70Ff598F386CB96ae5046486389368C66](https://gnosis.blockscout.com/address/0x647507A70Ff598F386CB96ae5046486389368C66)                     |
 | GNO token on Gnosis  | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://blockscout.com/xdai/mainnet/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb/token-transfers) |
-| mGNO token on Gnosis | [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosis.blockscout.com/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)                     |
+
 
 ### **Initial Parameters (subject to change)**
 
