@@ -11,7 +11,7 @@ The native Arbitrary Message Bridge (AMB) allows user to send arbitrary data bet
 
 The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](/bridges/tokenbridge/omnibridge), and is part of the [Tokenbridge Architecture](https://tokenbridge.net/).
 
-With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 23mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out [how AMB & Omnibridge works with Telepathy validator](#how-it-works-with-telepathy-validator).
+With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 23mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out [how AMB & Omnibridge works with Telepathy validator](#how-it-works-with-telepathy-validator).
 
 ## Key Information
 
@@ -102,11 +102,11 @@ As the Arbitrary Message Bridge is a message passing bridge, there are no fees o
 
 ### Bridge Validators
 
-- See [Bridge Validator](/bridges/governance/validators#amb--omnibridge)
+- See [Bridge Validator](/bridges/management/validators#amb--omnibridge)
 
 ### Bridge Governance
 
-- See [Bridge Governance](/bridges/governance)
+- See [Bridge Governance](/bridges/management)
 
 ## How it works
 
