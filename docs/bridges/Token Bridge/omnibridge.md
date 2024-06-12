@@ -7,14 +7,14 @@ keywords: [omnibridge, token bridge, token claim]
 # Omnibridge
 
 :::info
-Legacy Omnibridge can be accessed at https://omni.legacy.gnosischain.com/bridge
+The Omnibride can be used in https://bridge.gnosischain.com/.       
+Please avoid using the legacy Omnibridge: https://omni.legacy.gnosischain.com/bridge
 :::
 
-![](/img/bridges/diagrams/token-bridge-01.png)
 
 ## Key Information
 
-[Omnibridge](https://omni.legacy.gnosischain.com/bridge) is a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/tokenbridge/amb-bridge) and thus relies on the same group of [Trusted Bridge Validators](/bridges/tokenbridge/amb-bridge#bridge-validators) and trust model as the AMB. With [Telepathy added as the 8th validator](../governance/decisions.md#add-telepathy-validator-in-the-amb), Omnibridge bridge is now more secure with trustless zero-knowledge light client technology. Check out how Omnibridge works with Telepathy validator [here](amb-bridge.md#how-it-works-with-telepathy-validator).
+[Omnibridge](https://bridge.gnosischain.com/) is a native token bridge that mints the canonical representations of bridged assets on Gnosis. The Omnibridge is built on top of the [Arbitrary Message Bridge (AMB)](/bridges/Token%20Bridge/amb-bridge) and thus relies on the same group of [bridge validators](/bridges/Token%20Bridge/amb-bridge#bridge-validators) and trust model as the AMB.
 
 The Omnibridge currently connects Gnosis to Ethereum.
 
@@ -24,7 +24,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 
 |                       | Detail                                                |
 | --------------------- | ----------------------------------------------------- |
-| Frontend URL          | https://omni.gnosischain.com                          |
+| Frontend URL          | https://bridge.gnosischain.com/                       |
 | Trust Model           | [4-of-8 Validator Multisig](#bridge-validators)       |
 | Governance            | [8-of-16 Multisig](#bridge-governance)                |
 | Governance Parameters | Validator Set, Daily Limits, Fees                     |
@@ -51,7 +51,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 
 | Contract                              | Gnosis Address                                                                                                                            |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| AMB Proxy Contract                    | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
+| AMB Proxy Contract (Home)             | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
 | Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
 | Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
 
@@ -104,14 +104,20 @@ The bridge betwee Goerli and Chiado is deprecating soon.
 
 | Token            | Ethereum -> Gnosis | Gnosis -> Ethereum |
 | ---------------- | ------------------ | ------------------ |
-| Approx. Gas Cost |                    |                    |
-| Bridge Fees      | 0%                 | 0.1%               |
+| Default Bridge Fees      | 0%                 | 0.1%               |
+
+```mdx-code-block
+<details>
+  <summary>Fees and transaction limits of specific token</summary>
+  <div>
+```
 
 #### Single Transaction Limits
 
 :::warning
 Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want native xDai, use the [xDai Bridge](xdai-bridge)
 :::
+
 
 | Token     | Ethereum -> Gnosis | Gnosis -> Ethereum  |
 | --------- | ------------------ | ------------------- |
@@ -149,25 +155,30 @@ Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want 
 Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
 :::
 
+```mdx-code-block
+  </div>
+</details>
+```
+
+
+
 ### Bridge Validators
 
-For a message/tokens to be relayed to another network, bridge validators need to affirm the transaction. Bridge validators are run by trusted members of the Gnosis community. Since Omnibridge is based on the Arbitrary Message Bridge functionality, the set of validators is the actual set of AMB validators. The same [validator set](amb-bridge#bridge-validators) is used as the AMB bridge, as the OmniBridge is built on top of the AMB Bridge.
 
-### Bridge Validator Flow
+- See [Bridge Validator](/bridges/governance/validators#amb--omnibridge)
 
-![](/img/bridges/diagrams/amb-bridge-validator-flow.png)
 
 ### Bridge Governance
 
 - See [Bridge Governance](/bridges/governance)
 
-## Bridge Design
+## How it works
 
 ### Ethereum -> Gnosis
 
 ![](/img/bridges/diagrams/token-bridge-01.png)
 
-1. Token spend approval by user.
+1. User `approve` Omnibridge as token spender.
 2. User call `relayTokens()` on Mediator contract.
 3. Mediator calls `requireToPassMessage()` on the Bridge.
 4. `UserRequestForAffirmation` event is emitted for validators to validate the message.
@@ -196,7 +207,7 @@ The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md
 
 ### Mediator Contracts
 
-To handle the approval of token transfers, the Omnibridge makes use of what is called a mediator contract.
+To handle the approval of token transfers, the Omnibridge makes use of what is called a mediator contract. No matter which side of the chain is originated, the following flows are valid.
 ![](/img/bridges/diagrams/amb-bridge-contract-flow-mediator.svg)
 
 1. User calls token contract's `approve()` function to approve the balance to be transferred.
@@ -273,7 +284,7 @@ Additional References:
 
 In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis, even if the underlying asset is the same.
 
-For example, there are two different representations of USDC on Gnosis:
+For example, there are two different representations of USDC on Gnosis(created by Omnibridge, it follows ERC677 standard):
 
 | Asset              | Token Contract                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -282,46 +293,22 @@ For example, there are two different representations of USDC on Gnosis:
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
 
-## Managing the Bridge
+### USDC.e: A USDC token on Gnosis Chain that complies with Circle standard
 
-Bridge administrators can perform 4 groups of operations with the xDai bridge. All operations are performed by owners of the Multisignature Wallet which requires several accounts to confirm the operation transaction.
+:::info   
+When using [Bridge UI](https://bridge.gnosischain.com/):     
+Bridging from Ethereum, users bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) and get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0).    
+Bridging from Gnosis Chain, users bridge [USDC on xDAI](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) and get [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).    
+Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and USDC on xDAI
+:::
 
-| Network     | Multisignature Wallet Address                                                                                          |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
-| ETH Mainnet | [0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd](https://etherscan.io/address/0xff1a8EDA5eAcdB6aAf729905492bdc6376DBe2dd)  |
-| Gnosis      | [0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://gnosisscan.io/address/0x0d3726e5a9f37234d6b55216fc971d30f150a60f) |
+USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://github.com/circlefin/stablecoin-evm/blob/master/doc/bridged_USDC_standard.md). To ensure smooth bridging operations, when using [Bridge UI](https://bridge.gnosischain.com/) to bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) from Ethereum, user will get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0) by default.
 
-### Interacting with Bridge Contracts
 
-1. One of the multisig wallet owners encodes the method call with a set of parameters (if any). For example, this can be done with the [ABI Encoding Service](https://abi.hashex.org/).
-2. The encoded sequence of bytes is used to create a transaction for the multisig wallet contract. This is done with the `submitTransaction()` method of the multisig wallet contract. The method raises the event `Submission` containing the index of the registered transaction. The index is shared with the other owners of the wallet.
-3. The rest of the owners confirm the transaction by invoking `confirmTransaction` from the multisig wallet contract. As soon as enough confirmations are received, the method encoded in step 1 is invoked automatically. This is important because adequate gas limits must be set for that transaction and for the set of confirmations sent by the wallet owner finalizing the operation.
-4. If the method is not invoked because the gas limit is exceeded, the owners can execute the confirmed transaction manually by sending `executeTransaction()`.  
-   This process can vary depending on the action being taken.
+1. Bridging from ETH:    
+   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
+2. Bridging from GC:    
+   a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).    
+   b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.
 
-### Upgrading Bridge Contract
-
-There are two possible scenarios for how the bridge or validators contracts can be upgraded:
-
-- Security fix when only the contract implementation is changed
-- Improvement when the contract implementation upgrade requires initialization of storage values.
-
-A more detailed explanation can be found on the [xDai Bridge page](./xdai-bridge.md). The steps are the same but the contract addresses differ.
-
-### Managing Bridge Validators
-
-Bridge validators are separate from chain validators, and currently composed of a subset of Gnosis Chain validators. This is a dynamic set, as the bridge governors can vote to increase the current set as well as propose and vote on other bridge related measures.  
-After a ballot is finalized, the new validator is added to the bridge management multisignature wallets (one on each side of the bridge).
-The submitter will execute these methods: `addValidator` and (optionally if the voting threshold is to be changed) the `setRequiredSignatures` method. After encoding the data for each of these methods, it is sent to each contract (one on either side of the bridge) using the `submitTransaction()` execution method.
-
-:::info
-Before starting, current validators should determine:
-
-1. Who will add the new validator (the submitter)
-2. Coordinate a time when the other validators will confirm the transaction, as the bridge will be stopped to complete the upgrade.
-3. Ask the Omnibridge team to add a new bridge validator to the Certifier contract and confirm it has been added. This enables the node to relay bridge transactions with zero gas price.
-   :::
-
-- [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
-
-Additional steps for setting up a validator node can be found in [governance](../governance/README.md#how-to-setup) and [here](https://github.com/gnosischain/documentation/issues/72)
+For more detail, check out [this twitter post](https://x.com/gnosischain/status/1800565095065641409).
