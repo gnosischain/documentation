@@ -4,6 +4,11 @@ description: Advanced operations to bridge between Gnosis and other chains
 keywords:
   [alternate receiver, custom rpc endpoints, bridge, omnibridge ui, safe]
 ---
+:::info
+The following tutorial is refering to the legacy Omnibridge.     
+The new Bridge UI for Omnibridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).     
+Please avoid using the legacy Omnibridge: https://omni.legacy.gnosischain.com/bridge
+:::
 
 # Advanced
 

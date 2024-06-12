@@ -4,6 +4,13 @@ keywords:
   [troubleshooting, bridge problems, issues, token bridge, gnosis bridge]
 ---
 
+:::info
+The following tutorial is refering to the legacy xDAI bridge.     
+The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).     
+Please avoid using the legacy xDAI bridge: https://bridge.legacy.gnosischain.com/
+:::
+
+
 # Troubleshoot Bridge Issues
 
 Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Try these actions first if your transaction has been **pending for 10 minutes or more** (and you don't want to wait any more time). Actions differ depending on if you are transferring from xDai to Dai or [Dai to xDai](#dai-to-xdai-transaction-is-taking-a-long-time).
