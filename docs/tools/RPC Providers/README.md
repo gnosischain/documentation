@@ -187,3 +187,16 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## All That Node
+
+Free API keys available after signing up.
+
+All That Node provides lowest latency archival nodes for Gnosis, including debug and trace APIs. 
+
+- [All That Node](https://www.allthatnode.com/)
+
+```shell
+# Gnosis Mainnet RPC
+https://gnosis-mainnet.g.allthatnode.com/full/evm/<API_KEY>
+```
