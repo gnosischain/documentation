@@ -1,4 +1,5 @@
 ---
+sidebar_position: 7
 title: Bridge Management
 description: The bridge management includes management of bridge governors and bridge validators. 
 keywords: [bridge management, bridge governance, bridge validator]

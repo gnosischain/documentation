@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 title: Working with Hashi
 description: Hashi is an EVM oracle aggregator
 keywords: [hashi, oracle aggregator]

@@ -1,5 +1,6 @@
 ---
-title: Using the AMB
+sidebar_position: 5
+title: Build with Bridges using the AMB
 description: How to use the Arbitrary Message Bridge
 keywords:
   [amb bridge, arbitrary message bridge, using amb, bridge, gnosis bridge]
