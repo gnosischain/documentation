@@ -1,6 +1,6 @@
 ---
 title: Audits
-sidebar_position: 9
+sidebar_position: 8
 description: The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments.
 keywords: [omnibridge audit, xdai bridge audit, security audit]
 ---

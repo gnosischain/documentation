@@ -14,7 +14,7 @@ title: Staking and Liquid Staking
 
 1. **Where can I swap mGNO to GNO?**
 
-    Get the full balance in wei by inserting your address in balanceOf on this contract then go to this other contract and use the function "unwrap with _token" and enter 0x722fc4DAABFEaff81b97894fC623f91814a1BF68 and then in "_amount" enter the amount to convert as you go previously
+    mGNO is deprecated now, you can stake GNO directly
     
 3. **What’s the best place to stake my GNO bag?**
 
@@ -46,7 +46,7 @@ title: Staking and Liquid Staking
     
 10. **Is there any way to stake more than 32 mGNO per validator?**
 
-    mGNO is actually deprecated, but the effective balance of your validator cannot exceed 1 GNO (or 32 mGNO) as the exceeding balance will be ready to be claimed as partial withdrawals.
+    mGNO is actually deprecated, but the effective balance of your validator cannot exceed 1 GNO as the exceeding balance will be ready to be claimed as partial withdrawals.
     
 11. **Rewards for staking are given in GNO, but what happens to the xDai used to pay gas from all transactions on the network?   Where does the GNO come from since it isn't used for gas in the transaction?**
 

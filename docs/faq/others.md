@@ -19,9 +19,7 @@
 
    When you stake your GNO on Stakewise you receive sGNO.
 
-5. What is mGNO?
-
-   To create a more accurate ETH-mirrored environment, a minimum of 32 tokens are used for staking purposes on the Gnosis Beacon Chain. The mGNO token is a metaToken similar to a wrapped token created for this purpose. During deposits, 1 GNO is automatically converted to 32 mGNO.
+https://docs.gnosischain.com/faq/others
 
 6. What is LGNO?
 

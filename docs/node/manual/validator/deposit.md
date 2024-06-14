@@ -112,7 +112,7 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 ## Option 2: Direct interaction with Contracts
 
-A modification to the Gnosis Chain deposit contract allows you to deposit in batches (this functionality is not available for the ETH2 deposit contract). One transaction can be used to initiate deposits for up to 128 validators. The assumption is that every validator deposits 1 GNO(which is converted to 32mGNO) in every entry of the batch. The following script simplifies the process.
+A modification to the Gnosis Chain deposit contract allows you to deposit in batches (this functionality is not available for the ETH2 deposit contract). One transaction can be used to initiate deposits for up to 128 validators. The assumption is that every validator deposits 1 GNO in every entry of the batch. The following script simplifies the process.
 
 ### Step 1: Get Deposit Script
 
@@ -174,6 +174,66 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 - Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
 - Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://gnosischa.in//](https://gnosischa.in/).
+
+## Option 3: Running Your Own Deposit UI Instance Locally
+
+### Step 1: Dependencies
+
+Ensure that you have [NodeJS](https://nodejs.org/en) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed. 
+You can check the installation by running ```node -v``` and ```npm -v``` in your terminal.
+
+Additionally, install [Next.js](https://nextjs.org/) by running the command ```npm install next```.
+
+
+### Step 2: Download the Deposit UI from GitHub
+
+Download the Deposit UI files from the corresponding Gnosis Chain [GitHub Repo](https://github.com/gnosischain/gbc-deposit-ui/). Extract the ZIP file to wherever you want to.
+
+
+### Step 3: Edit Configuration Files
+
+1. Edit the file ```wagmi.ts``` in the ```main project folder```: change the **Mainnet RPC** to ```https://gnosis-rpc.publicnode.com``` on ```line 11``` (you may also choose another RPC, not all work)
+2. Edit the file ```fetchEvents.ts``` in the ```utils folder```: change the ```BLOCK_RANGE_SIZE``` to **```10000```** on ```line 6``` (previous value was ```1000000```)
+
+
+### Step 4: Run the UI
+
+1. Run the UI using the command ```npm run dev``` (in the main folder of the UI); if this doesn't work, it might need to be built or dependencies are missing try something like ```npm install typescript```.
+2. Open [http://localhost:3000/](http://localhost:3000/) in your browser, the UI should appear now if it all works correctly.
+
+
+### Step 5: Use the UI
+1. Connect your wallet and ensure you are connected on the right network (Gnosis Chain).
+2. Ensure that you have an adequate amount of GNO in your wallet to deposit to all pending validators listed in your ```deposit_data.json```.
+3. Add your ```deposit_data.json``` file to the UI once you're asked for it.
+4. Wait for the UI to load the completed deposits from the external RPC. Please have some patience as the RPC is rate limited.
+
+
+:::tip
+
+This process will take about 20 minutes. The UI will not show any progress for getting the blocks from the RPC once you've submitted your JSON file. If you use the browser console window (using right-click "Inspect"), you can see the block number going up though.
+
+:::
+
+
+### Step 6: Send Deposit Transactions
+
+For each validator in the file, a deposit transaction will be generated and sent to your wallet. Verify the transaction details (closer described in Option 1 above). Once verified, send out the transactions and wait for validator activation.
+
+
+### Step 7: Validator Activation
+
+:::tip
+
+It will take about 1.5 hours for your validators to start proposing and attesting to blocks.
+
+:::
+
+- Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
+- This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
+- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://gnosischa.in/](https://gnosischa.in/).
+
+
 
 ## Appendix
 

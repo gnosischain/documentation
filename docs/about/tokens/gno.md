@@ -1,7 +1,7 @@
 ---
 title: GNO Token
 description: GNO is the staking token of Gnosis and the governance token for the GnosisDAO.
-keywords: [gnosis tokens, gnosis gno token, fee token, gno validation, omni bridge, mgno, ethereum gno]
+keywords: [gnosis tokens, gnosis gno token, fee token, gno validation, omni bridge, ethereum gno]
 ---
 
 GNO is the key token of the Gnosis ecosystem. It's used for staking on the Gnosis Beacon Chain and acts as the governance token for the GnosisDAO.
@@ -90,7 +90,8 @@ Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more i
 
 By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
 
-In order to establish a highly precise ETH-mirrored environment, it is required to stake a minimum of 32 tokens on the Gnosis Beacon Chain. To facilitate this, the mGNO token serves as a meta-token specifically designed for staking purposes. During the deposit process, an automatic conversion takes place where 1 GNO is transformed into 32 mGNO tokens behind the scenes.
+In order to establish a highly precise ETH-mirrored environment, it is required to stake a minimum of 32 tokens on the Gnosis Beacon Chain. To facilitate this, the mGNO token serves as a meta-token spe
+cifically designed for staking purposes. During the deposit process, an automatic conversion takes place where 1 GNO is transformed into 32 mGNO tokens behind the scenes.
 
 The mGNO contract address on the Gnosis network is as follows: [0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68).
 

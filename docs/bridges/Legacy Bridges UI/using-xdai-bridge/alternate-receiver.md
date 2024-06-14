@@ -5,6 +5,12 @@ keywords: [xdai bridge, alternate receiver, gnosis bridge]
 
 # Alternate Receiver
 
+:::info
+The following tutorial is refering to the legacy xDAI bridge.     
+The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).     
+Please avoid using the legacy xDAI bridge: https://bridge.legacy.gnosischain.com/
+:::
+
 The feature _Alternative Receiver_ has integrated in the contracts of the xDai bridge as part of [an upgrade](https://forum.poa.network/t/migration-of-the-xdai-tokenbridge-completed/3212). With this feature it becomes possible to transfer tokens through the bridge to any account by very simple actions. It means that Alice can send Dai to Bob’s account on Gnosis chain in one transaction, and Bob can send xDai to Clare’s account on the Ethereum Mainnet in one transaction too.
 
 Due to different nature of tokens on two sides of the xDai bridge the operations to transfer assets to an alternative receiver from one chain to another differ as well.
