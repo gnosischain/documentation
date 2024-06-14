@@ -23,7 +23,7 @@ Gnosis Chain bridge :
 
 ### Bridging Data
 
-See the [Arbitrary Message Passing Bridge](/bridges/tokenbridge/amb-bridge) or AMB Bridge for short.
+See the [Arbitrary Message Passing Bridge](/docs/bridges/About%20Token%20Bridges/amb-bridge.md) or AMB Bridge for short.
 
 
 ## Roadmap
