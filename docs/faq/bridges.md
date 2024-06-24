@@ -48,7 +48,93 @@
 
       To bridge AgEUR : https://app.angle.money/bridges-agEUR    
       To bridge EURe: You will need have an account in [Monerium app](https://monerium.app/), click **Send Money**, select **Cross-Chain** and enter the amount you want to send, then click **Send**.. Double check the message is correct and sign the message. 
+
+```mdx-code-block
+<details>
+<summary>Step by Step</summary>
+<div>
+```
       ![Step1](../../static/img/faq/bridge/EURe-step1.png)    
       ![Step2](../../static/img/faq/bridge/EURe-step2.png)  
       ![Step3](../../static/img/faq/bridge/EURe-step3.png)  
       ![Step4](../../static/img/faq/bridge/EURe-step4.png)  
+
+```mdx-code-block
+</div>
+</details>
+```
+
+13. How do I check if my message from AMB(or Omnibridge) has been executed?
+
+      For Omnibridge, you can visit https://bridge.gnosischain.com/bridge-explorer and enter the transaction hash or address you want to search for.    
+      For AMB, you can check it by messageId.    
+      1. Find the message Id from the transaction log: In the block explorer, check the `Logs` tab of your transaction receipt, and find `messageId` in event `UserRequestForAffirmation`(bridging from ETH) or `UserRequestForSignature`(bridging from Gnosis Chain). The data type of `messageId` is `bytes32`.    
+      2. On the destination chain's AMB, query the `messageCallStatus(bytes32 messageId)` by pasting the `messageId`. If it returns true, it means the message has been executed. If false, it means the message has not been executed.    
+         Foreign AMB (Ethereum): https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract#F18
+         Home AMB (Gnosis Chain): https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#readProxyContract#F23
+      3. To find out the transaction of the message being executed, you can find the log which emit the event `AffirmationCompleted` (bridging from ETH), or `RelayedMessage` (bridging from GC).     
+      Here is an example script using viem.    
+
+```mdx-code-block
+<details>
+<summary>Sample script</summary>
+<div>
+```
+
+```
+import { createPublicClient, http, parseAbiItem } from "viem";
+import { gnosis, mainnet} from "viem/chains";
+
+const main = async() => {
+
+
+   const gnoClient = createPublicClient({
+      chain: gnosis,
+      transport: http()
+   })
+   const ethClient = createPublicClient({
+      chain: mainnet,
+      transport: http()
+   })
+
+   const homeAMB = "0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59"
+   const foreignAMB = "0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e"
+   
+   // Choose either home or foreign
+
+   // Foreign 
+   const foreignLogs =  await ethClient.getContractEvents({ 
+      address: foreignAMB,
+      abi: [parseAbiItem("event RelayedMessage(address indexed sender,address indexed executor,bytes32 indexed messageId,bool status)")],
+      eventName: 'RelayedMessage',
+      args: {
+         messageId: // replace the messageId
+      },
+      fromBlock: 	// replace from Block to recent block
+      toBlock: 'latest'
+      })
+
+      console.log(foreignLogs[0].transactionHash)
+      
+      // Home 
+      const homeLogs = await gnoClient.getContractEvents({ 
+      address: homeAMB,
+      abi: [parseAbiItem("event AffirmationCompleted(address indexed sender,address indexed executor,bytes32 indexed messageId,bool status)")],
+      eventName: 'AffirmationCompleted',
+      args: {
+         messageId: // replace the messageId
+      },
+      fromBlock: // replace from Block to recent block
+      toBlock: 'latest'
+      })
+
+      console.log(homeLogs[0].transactionHash)
+};  
+
+main();
+```
+
+```mdx-code-block
+</div>
+</details>
+```
