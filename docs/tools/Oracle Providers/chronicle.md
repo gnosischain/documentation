@@ -81,3 +81,8 @@ interface ISelfKisser {
 ```
 ### More examples
 For more examples on integrating Chronicle Oracles, please check the [documentation portal](https://docs.chroniclelabs.org/). 
+
+### Get in touch
+
+If you have any questions or need support, drop us a message on [Discord](https://discord.com/invite/CjgvJ9EspJ).
+
