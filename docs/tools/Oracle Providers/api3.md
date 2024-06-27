@@ -11,7 +11,7 @@ Read more about how The API3 DAO works. [Click here](https://docs.api3.org/explo
 ## Airnode
 Developers can use [Airnode](https://docs.api3.org/explore/airnode/what-is-airnode.html) to request off-chain data inside their Smart Contracts on the Gnosis Chain. An Airnode is a first-party oracle that pushes off-chain API data to your on-chain contract. Airnode lets API providers easily run their own first-party oracle nodes. That way, they can provide data to any on-chain dApp that's interested in their services, all without an intermediary.
 An on-chain smart contract makes a request in the [RRP (Request Response Protocol)](https://docs.api3.org/reference/airnode/latest/concepts/) contract (`AirnodeRrpV0.sol`) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
-<!-- ![API3 Remix deploy](/img/tools/api3/airnode1.png) -->
+
 <img src="/img/tools/api3/airnode1.png" width="600"/>
 ## Requesting off-chain data by calling an Airnode
 Requesting off-chain data essentially involves triggering an Airnode and getting its response through your smart contract. The smart contract in this case would be the requester contract which will make a request to the desired off-chain Airnode and then capture its response.
@@ -60,7 +60,7 @@ contract Requester is RrpRequesterV0, Ownable {
     function fulfill(bytes32 requestId, bytes calldata data)
         external
         onlyAirnodeRrp
-	@@ -87,10 +85,18 @@ contract Requester is RrpRequesterV0 {
+        contract Requester is RrpRequesterV0 {
         int256 decodedData = abi.decode(data, (int256));
         fulfilledData[requestId] = decodedData;
     }
@@ -78,7 +78,7 @@ The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have alread
 
 |         Contract         |                     Addresses                    |
 |:------------------------:|:------------------------------------------------:|
-	@@ -117,137 +123,64 @@ The callback to the Requester contains two parameters:
+ The callback to the Requester contains two parameters:
 Sponsors should not fund a `sponsorWallet` with more then they can trust the Airnode with, as the Airnode controls the private key to the `sponsorWallet`. The deployer of such Airnode undertakes no custody obligations, and the risk of loss or misuse of any excess funds sent to the `sponsorWallet` remains with the sponsor.
 :::
 
@@ -143,8 +143,8 @@ Once you are done configuring and activating the dAPI, you can now integrate it.
 You can now see the deployed proxy contract address. You can now use this to read from the configured dAPI.
 
 ### Reading from a dAPI
-
-	@@ -257,83 +190,101 @@ Here's an example of a basic contract that reads from a dAPI.
+Here's an example of a basic contract that reads from a dAPI.
+```
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 import "@openzeppelin/contracts@4.9.5/access/Ownable.sol";
@@ -233,7 +233,7 @@ contract QrngExample is RrpRequesterV0, Ownable {
     function makeRequestUint256() external {
         bytes32 requestId = airnodeRrp.makeFullRequest(
             airnode,
-	@@ -344,30 +295,81 @@ contract RemixQrngExample is RrpRequesterV0 {
+	contract RemixQrngExample is RrpRequesterV0 {
             this.fulfillUint256.selector,
             ""
         );
@@ -309,7 +309,7 @@ contract QrngExample is RrpRequesterV0, Ownable {
 
 - The `makeRequestUint256()` function calls the `airnodeRrp.makeFullRequest()` function of the `AirnodeRrpV0.sol` protocol contract which adds the request to its storage and returns a `requestId`.
 
-	@@ -384,8 +386,9 @@ You can try QRNG on the Gnosis Chain for free. Check out the all the QRNG Provid
+You can try QRNG on the Gnosis Chain for free. Check out the all the QRNG Provid
 Here are some additional developer resources
 
 - [API3 Docs](https://docs.api3.org/)
