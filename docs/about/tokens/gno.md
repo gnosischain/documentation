@@ -90,7 +90,9 @@ Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more i
 
 By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
 
+
 :::note Historical use of `mGNO`
+
 
 Historically, deposits on the Beacon Chain were made with a token called `mGNO` ([0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)), with a conversion rate of `1 GNO = 32 mGNO`. This was done to mimic Ethereum's `32 ETH` staking requirement, but is now deprecated and no longer serves any purpose.
 
