@@ -101,6 +101,7 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
 - [xDai Bridge Validators](/bridges/management/validators#xdai-bridge)
 - [AMB & OmniBridge Validators](/bridges/management/validators#amb--omnibridge)
 
+
 ```mdx-code-block
 <details>
   <summary>Setting up GNO bridge validators: Gnosis Chain &lt;-&gt;Ethereum</summary>
@@ -249,7 +250,6 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
   </div>
 </details>
 ```
-
 
 
 ## Summary of different roles in bridge

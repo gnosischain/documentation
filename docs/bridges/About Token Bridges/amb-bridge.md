@@ -66,6 +66,7 @@ With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepa
 | AMB Helper Contract (Chiado)  | [0x3cc500B3c01D04C265c9293cB35BA2Fd8eA6dc1b](https://gnosis-chiado.blockscout.com/address/0x3cc500B3c01D04C265c9293cB35BA2Fd8eA6dc1b?tab=read_contract) |
 
 
+
 </TabItem>
 
 
