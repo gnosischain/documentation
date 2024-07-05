@@ -27,7 +27,7 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 | [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde) | GnosisDAO         |
 | [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
-| [gno:0x90776017057b84bc47D7e7383b65C463C80a6cdd](https://gnosisscan.io/address/0x90776017057b84bc47D7e7383b65C463C80a6cdd) | Gateway           |
+| [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://gnosisscan.io/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) | Gateway           |
 | [gno:0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) | Telepathy         |
 
 </TabItem>
@@ -74,7 +74,7 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://gnosis.blockscout.com/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
 | Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://gnosis.blockscout.com/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
-| Gateway      | [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://gnosis.blockscout.com/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) |
+| Gateway      | [gno:0x90776017057b84bc47D7e7383b65C463C80a6cdd](https://gnosis.blockscout.com/address/0x90776017057b84bc47D7e7383b65C463C80a6cdd) |
 
 </TabItem>
 
