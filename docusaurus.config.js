@@ -107,15 +107,21 @@ const config = {
             label: "Updates",
           },
           {
-            href: "https://ecosystem.gnosischain.com/",
+            type: "docSidebar",
             position: "left",
-            label: "Ecosystem",
+            sidebarId: "shutterizedgc",
+            label: "Shutterized Gnosis Chain",
           },
            {
             type: "docSidebar",
-            position: "left",
+            position: "right",
             sidebarId: "faq",
             label: "FAQ",
+          },
+          {
+            href: "https://ecosystem.gnosischain.com/",
+            position: "right",
+            label: "Ecosystem",
           },
           {
             href: "https://twitter.com/gnosischain",
