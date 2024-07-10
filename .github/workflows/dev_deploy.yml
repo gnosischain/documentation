@@ -17,17 +17,16 @@ on:
     branches:
       - 'dev'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     name: Deployment
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Remove broken apt repos [Ubuntu]
         if: ${{ matrix.os }} == 'ubuntu-latest'
         run: |
