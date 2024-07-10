@@ -9,17 +9,16 @@ on:
 permissions:
   contents: write # This is required for actions/checkout and create release
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   release:
     name: Github Release
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.8.0
-        with:
-          access_token: ${{ github.token }}
-
       - name: Create Github Release
         uses: actions/github-script@v6
         with:
