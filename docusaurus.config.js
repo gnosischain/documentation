@@ -74,7 +74,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Dencun upgrade is now live on Gnosis Chain. Check out <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/gnosischain/status/1767259776101052684">here</a>.',
+          'Shutterized Gnosis Chain is live now.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
