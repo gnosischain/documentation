@@ -1,26 +1,15 @@
----
-sidebar_position: 2
-title: Adding Shutterized Gnosis Chain RPC URL to wallet
-description: The Shutterized Gnosis Chain tackles significant issues, focusing on base-layer neutrality, countering the risk of malicious Maximal Extractable Value (MEV), and maintaining censorship resistance.
+import React from 'react';
+import Button from '@site/src/components/Button';
 
-keywords: [shutter network shutterized gnosis chain MEV attacks frontrunning] 
----
-
-
-```javascript
-// changeNetwork.js 
-
-async function changeOrAddNetwork() {
+// JavaScript function for changing or adding the network
+export async function changeOrAddNetwork() {
     const chainId = '0x64';
     if (window.ethereum) {
         try {
-
             // Try to switch to the network
             await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
-                params: [{
-                    chainId: chainId,
-                }],
+                params: [{ chainId: chainId }],
             });
             console.log('Switched to the network with chainId:', chainId);
         } catch (switchError) {
@@ -54,6 +43,3 @@ async function changeOrAddNetwork() {
         console.error('MetaMask is not installed!');
     }
 }
-  <Button onclick="changeOrAddNetwork()">Add
-    </Button>
-```
