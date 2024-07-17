@@ -105,7 +105,7 @@ const config = {
             to: "updates",
             position: "left",
             label: "Updates",
-          },
+          },    
            {
             type: "docSidebar",
             position: "left",

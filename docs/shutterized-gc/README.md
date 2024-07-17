@@ -20,7 +20,7 @@ Transactions on the Shutterized Gnosis Chain are only decrypted and executed aft
 ### Add the RPC endpoint to your wallet: Take the first step towards secure and private trades on the Gnosis Chain.
 
 <Button
-  label="Add np"
+  label="Add Shutterized Gnosis Chain"
   onClick={changeOrAddNetwork}
 />
 
