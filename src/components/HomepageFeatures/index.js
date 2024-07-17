@@ -35,9 +35,9 @@ const FeatureList = [
   },
   {
     id: 4,
-    title: 'Technical guide for Developer integrations',
+    title: 'Technical guides',
     subtitle:
-      'Learn how to build interactive dApps on Gnosis chain with different developer integration, SDKs and APIs',
+      'Check out different developer integrations, SDKs on Gnosis Chain',
     link: '/technicalguides',
     Svg: require('@site/static/img/features/guide.svg').default,
   },
@@ -45,7 +45,7 @@ const FeatureList = [
     id: 5,
     title: 'Shutterized Gnosis Chain',
     subtitle:
-      'RPC Providers, Faucets, etc. Everything you need to to develop on Gnosis',
+      'Learn about Shutterized Gnosis Chain, RPC details and more.',
     link: '/shutterized-gc',
     Svg: require('@site/static/img/features/shutter.svg').default,
   },
