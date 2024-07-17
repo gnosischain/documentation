@@ -1,5 +1,7 @@
 ---
 title: Generate Validator Keys
+sidebar_position : 1
+
 ---
 
 The purpose of the validator private key is to actively sign on-chain operations such as block proposals and attestations. 

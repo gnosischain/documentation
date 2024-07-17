@@ -1,5 +1,6 @@
 ---
 title: Validator Deposits
+sidebar_position : 2
 ---
 
 ## Overview

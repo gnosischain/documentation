@@ -105,22 +105,16 @@ const config = {
             to: "updates",
             position: "left",
             label: "Updates",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "shutterizedgc",
-            label: "Shutterized Gnosis Chain",
-          },
+          },    
            {
             type: "docSidebar",
-            position: "right",
+            position: "left",
             sidebarId: "faq",
             label: "FAQ",
           },
           {
             href: "https://ecosystem.gnosischain.com/",
-            position: "right",
+            position: "left",
             label: "Ecosystem",
           },
           {

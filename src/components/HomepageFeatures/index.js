@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-const FeatureList = [  
+const FeatureList = [
   {
     id: 0,
     title: 'Build on Gnosis Chain',
@@ -13,7 +13,8 @@ const FeatureList = [
   {
     id: 1,
     title: 'Bridge to Gnosis',
-    subtitle: 'Use Gnosis Bridges to bridge tokens from different chains and vice versa',
+    subtitle:
+      'Use Gnosis Bridges to bridge tokens from different chains and vice versa',
     link: '/bridges',
     Svg: require('@site/static/img/features/bridge.svg').default,
   },
@@ -26,25 +27,28 @@ const FeatureList = [
   },
   {
     id: 3,
-    title : 'Tools for Builders',
-    link : '/tools',
-    subtitle: 'RPC Providers, Faucets, etc. Everything you need to to develop on Gnosis.',
+    title: 'Tools for Builders',
+    link: '/tools',
+    subtitle:
+      'RPC Providers, Faucets, etc. Everything you need to to develop on Gnosis.',
     Svg: require('@site/static/img/features/tools.svg').default,
   },
   {
     id: 4,
-    title: 'Technical guide for Developer integrations',
-    subtitle: 'Learn how to build interactive dApps on Gnosis chain with different developer integration, SDKs and APIs',
+    title: 'Technical guides',
+    subtitle:
+      'Check out different developer integrations, SDKs on Gnosis Chain',
     link: '/technicalguides',
     Svg: require('@site/static/img/features/guide.svg').default,
   },
   {
     id: 5,
-    title : 'Contribute to Gnosis developer ecosystem',
-    subtitle: 'Coming up soon.',
-    link : '/',
-    Svg: require('@site/static/img/features/ecosystem.svg').default,
-  }
+    title: 'Shutterized Gnosis Chain',
+    subtitle:
+      'Learn about Shutterized Gnosis Chain, RPC details and more.',
+    link: '/shutterized-gc',
+    Svg: require('@site/static/img/features/shutter.svg').default,
+  },
 ];
 
 function Feature({Svg, title, subtitle, link}) {
