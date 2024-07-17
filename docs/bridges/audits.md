@@ -17,7 +17,7 @@ The scope for auditing includes the following repos:
 
 ### Omega
 
-**Completed**: June 27, 2024
+**Completed**: June 27, 2024  
 **Conclusion**: 1 high severity issues, 4 low severity issues, 10 info issues. All issues has been resolved or acknowledged.
 **Audit Report**:[Omega-Gnosis-Hashi Final Audit Report](../../static/files/Omega-Gnosis-Hashi%20Final%20Report.pdf)
 
@@ -33,8 +33,8 @@ The scope for auditing includes the following repos:
 
 (intermediate reports, final pending)
 
-**Completed**: June 12, 2024
-**Conclusion**: 4 issues, 13 suggestions. All issues has been resolved or acknowledged.
+**Completed**: June 12, 2024  
+**Conclusion**: 4 issues, 13 suggestions. All issues has been resolved or acknowledged.  
 **Audit Report**:[Least Authority-Gnosis-Hashi Audit Report](../../static/files/Least%20Authority-Gnosis%20Hash%20Audit%20Report.pdf)
 
 ## xDAI bridge upgrade Audit by Omega and ChainSafe
