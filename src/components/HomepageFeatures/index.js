@@ -30,7 +30,8 @@ const FeatureList = [
     title: 'Tools for Builders',
     link: '/tools',
     subtitle:
-      'RPC Providers, Faucets, etc. Everything you need to to develop on Gnosis.',
+
+      'RPC Providers, Faucets, etc. Everything you need to develop on Gnosis.',
     Svg: require('@site/static/img/features/tools.svg').default,
   },
   {
