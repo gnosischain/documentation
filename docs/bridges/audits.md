@@ -23,19 +23,15 @@ The scope for auditing includes the following repos:
 
 ### g0
 
-(intermediate reports, final pending)
-
 **Completed**: June 28, 2024
 **Conclusion**: 1 critical issue, 3 medium issues, 4 minor issues, 4 note issues. All issues has been resolved or acknowledged.
-**Audit Report**:[g0-Gnosis-Hashi Audit Report](../../static/files//g0%20-%20Gnosis%20Hashi%20Audit%20Report.pdf)
+**Audit Report**:[g0-Gnosis-Hashi Audit Report](../../static/files/g0-Hashi-Gnosis-FinalAuditReport.pdf)
 
 ### Least Authority
 
-(intermediate reports, final pending)
-
 **Completed**: June 12, 2024  
 **Conclusion**: 4 issues, 13 suggestions. All issues has been resolved or acknowledged.  
-**Audit Report**:[Least Authority-Gnosis-Hashi Audit Report](../../static/files/Least%20Authority-Gnosis%20Hash%20Audit%20Report.pdf)
+**Audit Report**:[Least Authority-Gnosis-Hashi Audit Report](../../static/files/Least%20Authority-Gnosis%20Hashi%20Final%20Audit%20Report.pdf)
 
 ## xDAI bridge upgrade Audit by Omega and ChainSafe
 
