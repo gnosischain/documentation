@@ -3,7 +3,7 @@ description: Particle Network is the Intent-Centric, Modular Access Layer of Web
 keywords: [particle-network,account-abstraction]
 ---
 
-# Building AA with Particle Network
+# Building AA powered dApp with Particle Network
 
 Particle Network provides a Smart Wallet-as-a-Service, leveraging modular and customizable wallet components. It supports native ERC-4337 AA capabilities, streamlining user onboarding and transaction processes.
 
