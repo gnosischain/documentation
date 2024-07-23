@@ -7,6 +7,32 @@ keywords: [omnibridge audit, xdai bridge audit, security audit]
 
 The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments. We have engaged in the auditing process after introducing major functionality, and have acknowledged and/or fixed all issues found during these audits. Audit results are presented starting with the most recent.
 
+## Hashi integration by Omega, g0, Least Authority
+
+The scope for auditing includes the following repos:
+
+1. https://github.com/gnosis/hashi except for GiriGiriBashi.sol
+2. AMB: https://github.com/crosschain-alliance/tokenbridge-contracts/tree/feat/hashi-integration-amb
+3. XDAI: https://github.com/crosschain-alliance/tokenbridge-contracts/tree/feat/hashi-integration-xdai-bridge
+
+### Omega
+
+**Completed**: June 27, 2024  
+**Conclusion**: 1 high severity issues, 4 low severity issues, 10 info issues. All issues has been resolved or acknowledged.
+**Audit Report**:[Omega-Gnosis-Hashi Final Audit Report](../../static/files/Omega-Gnosis-Hashi%20Final%20Report.pdf)
+
+### g0
+
+**Completed**: June 28, 2024
+**Conclusion**: 1 critical issue, 3 medium issues, 4 minor issues, 4 note issues. All issues has been resolved or acknowledged.
+**Audit Report**:[g0-Gnosis-Hashi Audit Report](../../static/files/g0-Hashi-Gnosis-FinalAuditReport.pdf)
+
+### Least Authority
+
+**Completed**: June 12, 2024  
+**Conclusion**: 4 issues, 13 suggestions. All issues has been resolved or acknowledged.  
+**Audit Report**:[Least Authority-Gnosis-Hashi Audit Report](../../static/files/Least%20Authority-Gnosis%20Hashi%20Final%20Audit%20Report.pdf)
+
 ## xDAI bridge upgrade Audit by Omega and ChainSafe
 
 ### Omega

@@ -1,5 +1,6 @@
 ---
 title: Validator Deposits
+sidebar_position : 2
 ---
 
 ## Overview
@@ -33,7 +34,7 @@ In this example we use MetaMask.
 
 ![](/img/node/UI-1A.png)
 
-![](/img/node/UI-2A.png)
+![](/img/node/UI-2A.jpg)
 
 ### Step 2: Upload `deposit_data.json`
 
@@ -43,23 +44,23 @@ In this example we use MetaMask.
 If you can't upload the file, you may want to check the file permissions to make sure the user account you are logged in as has read permissions. You can grant permissions using the `sudo chmod` command.
 :::
 
-<img src="/img/node/upload-info1.png" width="500" />
+![](/img/node/upload-info1.jpg)
 
 ### Step 3: Validate Deposit data
 
 3. The app will validate the json file and list the number of validator deposits you are making and the required GNO to deposit. Click **Deposit** to continue.
 
-<img src="/img/node/deposit-2.png" width="500" />
+![](/img/node/deposit-2.png)
 
-### Step 4: Acknowledge Risks
+<!-- ### Step 4: Acknowledge Risks
 
 4. Check that you understand the risks and [ensure you are interacting with the correct contract](#step-5-verify-transaction-parameters) before proceeding.
 
 <img src="/img/node/deposit-3.png" width="500" />
 <br />
-<img src="/img/node/deposit-4.png" width="500" />
+<img src="/img/node/deposit-4.png" width="500" /> -->
 
-### Step 5: Verify Transaction Parameters
+### Step 4: Verify Transaction Parameters
 
 You are responsible for the transaction. Fraudulent websites might try to lure you into sending funds to them, instead of the official deposit contract. Make sure that you are sending the transaction with the correct data.
 
@@ -90,15 +91,15 @@ Check that the transaction's data includes the Deposit Contract address ([0x0B98
 
 :::
 
-### Step 6: Complete Deposit
+### Step 5: Complete Deposit
 
-5. Complete the deposit.
+4. Complete the deposit.
 
 ![](/img/node/confirm.png)
 
 ![](/img/node/dep-made.png)
 
-### Step 7: Validator Activation
+### Step 6: Validator Activation
 
 :::tip
 
@@ -109,6 +110,13 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 - Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
 - Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://gnosischa.in/](https://gnosischa.in/).
+
+### Step 7 (optional): Subscribe Autoclaim
+
+5. Select the Autoclaim Rewards tab. Set the frequency and minimum threshold for automatic token claims based on your preference. After configuring, click **Register** to continue.
+
+
+![](/img/node/autoclaim.jpg)
 
 ## Option 2: Direct interaction with Contracts
 
@@ -241,8 +249,8 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 Required:
 
-1. Chiado Testnet xDai: https://faucet.chiadochain.net/
-2. Chiado Testnet GNO: This can be obtained from discord upon request
+1. Chiado Testnet xDai and GNO: https://faucet.chiadochain.net/
+2. Connect to Deposit UI [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) using Gnosis Chiado Testnet and follow the Option 1: Deposit UI.
 
-You can run the [deposit UI](https://deposit.gnosischain.com) locally following its repository `README` instructions:
-[https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui](https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui)
+<!-- You can run the [deposit UI](https://deposit.gnosischain.com) locally following its repository `README` instructions:
+[https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui](https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui) -->
