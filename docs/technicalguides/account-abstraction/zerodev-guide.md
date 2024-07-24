@@ -117,7 +117,7 @@ function App() {
 }
 ```
 
-### 5. Send a UserOp for sponsored transaction
+### 5. Sending UserOp sponsored transaction
 
 ```typescript
 import { parseAbi } from "viem"
