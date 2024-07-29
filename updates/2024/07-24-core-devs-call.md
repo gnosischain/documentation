@@ -4,7 +4,7 @@ title: Gnosis Core Devs Call Notes
 ---
 
 ---
-title: Core Devs Call - 2024/07/17
+title: Core Devs Call - 2024/07/24
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, Gnosis Chain]
 ---
