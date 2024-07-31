@@ -26,7 +26,7 @@ There are several options including [MetaMask](/tools/wallets/metamask), hardwar
 
 ### Connecting with MetaMask
 
-Select the MetaMask option in the connect wallet menu. Check that the correct MetaMask account is active and [connected to Safe](/tools/wallets/metamask/#manual-configuration).
+Select the MetaMask option in the connect wallet menu. Check that the correct MetaMask account is active and [connected to Safe](../wallets/metamask#b-manual-configuration).
 
 ![](/img/tools/safe/mm_connect.png)
 

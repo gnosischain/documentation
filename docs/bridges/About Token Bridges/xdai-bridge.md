@@ -1,5 +1,6 @@
 ---
 title: xDai Bridge
+sidebar_position: 2
 description: The xDai bridge is a native Dai bridge from Ethereum that is used to mint and burn xDai, the native asset used for gas and transaction fees on Gnosis.
 keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 ---
@@ -111,11 +112,11 @@ Daily Limit is reset according to the following logic: the smart contract stores
 ### Bridge Validators
 
 
-- See [Bridge Validator](/bridges/management/validators#xdaibridge)
+- See [Bridge Validator](../management/validators#xdai-bridge)
 
 ### Bridge Governance
 
-- See [Bridge Governance](/bridges/management)
+- See [Bridge Governance](../management/README.md)
 
 
 

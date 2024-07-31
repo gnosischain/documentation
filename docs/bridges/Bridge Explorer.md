@@ -95,7 +95,7 @@ If you are not coming from Ethereum, you can use one of the following bridges:
 - [Hop](https://app.hop.exchange/)
 - [Connext Bridge](https://bridge.connext.network/)
 
-Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](/bridges/tokenbridge/amb-bridge#bridge-validators). There is a [roadmap](/bridges/roadmap) to move towards [trustless bridges](/bridges/roadmap#trustless-bridges).
+Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](../bridges/About%20Token%20Bridges/amb-bridgeamb-bridge#bridge-validators). There is a [roadmap](../bridges/roadmap.md) as well that you can follow.
 
-Gnosis' native bridges are first-class citizens in the chain's architecture due to the [native xDai bridge's](/bridges/tokenbridge/xdai-bridge) integral role in minting and burning the native [xDai token](/concepts/tokens/xdai) used for gas.
+Gnosis' native bridges are first-class citizens in the chain's architecture due to the [native Omni and xDai bridge's](../bridges/About%20Token%20Bridges/README.md) integral role in minting and burning the native [xDai token](../about/tokens/xdai.md) used for gas.
 

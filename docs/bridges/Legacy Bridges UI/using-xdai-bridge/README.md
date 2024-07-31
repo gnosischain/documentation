@@ -9,7 +9,7 @@ keywords: [xdai bridge, token bridge, ethereum, gnosis, gnosis bridge]
 ### Moving Dai from Ethereum to xDai on Gnosis
 
 :::note
-You will need some Dai to transfer AND some ETH for gas (transaction fees). [Bridge minimum/maximum amounts](../../Token%20Bridge/xdai-bridge.md#fees--daily-limits) are set by the [bridge governors](../../Token%20Bridge/xdai-bridge.md#bridge-governance). Bridge may take some time to update chain stats, try refreshing or waiting a minute if you receive any errors. You can also select a [different RPC](#custom-rpc) in the Settings dropdown.
+You will need some Dai to transfer AND some ETH for gas (transaction fees). [Bridge minimum/maximum amounts](../../Token%20Bridge/xdai-bridge.md#fees--daily-limits) are set by the [bridge governors](../../management/README.md). Bridge may take some time to update chain stats, try refreshing or waiting a minute if you receive any errors. You can also select a [different RPC](#custom-rpc) in the Settings dropdown.
 :::
 
 
@@ -45,7 +45,7 @@ You will need a **small additional amount of xDai** to process the first transac
 
 ### How To Use the xDai Bridge with Safe (formerly Gnosis Safe)
 
-The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Leacy Omnibridge + Gnosis Safe](../using-omnibridge/README.md) instructions.
+The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Legacy Omnibridge + Gnosis Safe](../using-omnibridge/README.md) instructions.
 
 #### Initiating a Transaction
 
