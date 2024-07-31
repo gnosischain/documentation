@@ -4,7 +4,7 @@
 
    Between Ethereum and Gnosis Chain : https://bridge.gnosischain.com/
    More chains and options : [jumper](https://jumper.exchange/), [bungee](https://www.bungee.exchange/), [hop](https://app.hop.exchange/)
-   For specific tokens like AgEUR and EURe, please use [the token's authorised bridge](bridges.md#bridges-faqs) instead of Omnibridge.
+   For specific tokens like AgEUR and EURe, please use [the token's authorised bridge](../faq/bridges.md) instead of Omnibridge.
 
 
 2. What is Gnosis Faucet?

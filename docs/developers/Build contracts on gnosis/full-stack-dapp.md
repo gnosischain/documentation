@@ -18,7 +18,7 @@ This Dapp will allow you to wave at Gnosis, and see how many times you have wave
 1. Creating and connecting your wallet to Gnosis
 2. Setting up your project
 3. Smart-contract development
-4. Using Hardhat for contract devlopment
+4. Using Hardhat for contract development
 5. Deploying your contract on Gnosis
 6. Integrating your smart contract with your project's front end
 

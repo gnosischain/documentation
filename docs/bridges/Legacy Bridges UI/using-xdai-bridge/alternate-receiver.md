@@ -127,5 +127,6 @@ The xDai Bridge Alternative Receiver functionality. The transfer requires 2 tran
 6. Copy and paste the signature blob and the output from step 4 into the [Ethereum proxy contract](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract)'s `executeSignatures` method (you will need some Eth for gas). Connect your wallet and click write. After the transaction processes, the funds should appear in the receiver wallet.
    ![](/img/bridges/xDai-manual-xDai-Dai-execSignatures.png)
 
-- [How to bridge Dai to a different address on Gnosis](/bridges/tutorials/using-xdai-bridge/alternate-receiver)
+- [How to bridge Dai to a different address on Gnosis](../../Legacy%20Bridges%20UI/using-xdai-bridge/alternate-receiver.md)
+
 - [TokenBridge Docs: Alternative Receiver for the xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge)

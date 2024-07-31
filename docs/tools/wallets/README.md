@@ -1,6 +1,6 @@
 ---
 description: Find your Gnosis Chain wallet
-keyworkds: [gnosis tools, dev tools, wallets, safe, seed, metamask, ledger, trezor]
+keywords: [gnosis tools, dev tools, wallets, safe, seed, metamask, ledger, trezor]
 ---
 
 # Wallets

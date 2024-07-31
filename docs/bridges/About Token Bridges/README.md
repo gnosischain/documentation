@@ -23,12 +23,12 @@ Gnosis Chain bridge :
 
 ### Bridging Data
 
-See the [Arbitrary Message Passing Bridge](/docs/bridges/About%20Token%20Bridges/amb-bridge.md) or AMB Bridge for short.
+See the [Arbitrary Message Passing Bridge](../About%20Token%20Bridges/amb-bridge.md) or AMB Bridge for short.
 
 
 ## Roadmap
 
-Gnosis has a [long-term roadmap](/bridges/roadmap) to move towards trustless bridges, and is actively funding research and development in this area.
+Gnosis has a [long-term roadmap](../roadmap.md) to move towards trustless bridges, and is actively funding research and development in this area.
 
 ## Feedback & Suggestion
 
