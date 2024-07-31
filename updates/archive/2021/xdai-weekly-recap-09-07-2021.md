@@ -48,7 +48,7 @@ https://twitter.com/xdaichain/status/1412707810320785413
 
 Round 2 resulted in over **2 Million transactions on xDai over 9 days**! Players around the globe enjoyed the first blockchain RTS game and the new features in v0.6
 
-View your personal metrics with this dashboard created by a community memeber!
+View your personal metrics with this dashboard created by a community member!
 
 https://twitter.com/cronii0x/status/1413253390663094273
 

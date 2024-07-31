@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Tools Overview
 description: Gnosis developer tools includes wallets, faucets, explorers, rpc providers and more.
-keyworkds: [gnosis tools, dev tools, wallets, faucet, gnosis explorer, rpc provider, rpc node]
+keywords: [gnosis tools, dev tools, wallets, faucet, gnosis explorer, rpc provider, rpc node]
 ---
 
 # Tools Overview

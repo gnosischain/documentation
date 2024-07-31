@@ -1,6 +1,6 @@
 ---
 description: BlockScout is a full-featured, open-source explorer for Gnosis mainnet, Chiado testnet and many other chains.
-keyworkds: [explorer, block explorer, blockscout]
+keywords: [explorer, block explorer, blockscout]
 ---
 
 # BlockScout

@@ -38,7 +38,7 @@ High pool APY is currently **19.18%**, low is **11.43%** _(stats as of 21/05/202
 
 ### Stakefish onboarded as a new validator
 
-The Stakefish team was added as a validator to futher decentralize the protocol.
+The Stakefish team was added as a validator to further decentralize the protocol.
 
 https://twitter.com/stakefish/status/1394235551838920709
 
