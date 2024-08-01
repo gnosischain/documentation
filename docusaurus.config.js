@@ -74,7 +74,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'Shutterized Gnosis Chain is live now.',
+          'Shutter Embedded Encryption on Gnosis Chain is live now.',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,

@@ -3,7 +3,7 @@ sidebar_position: 3
 title : Deployed Contracts
 ---
 
-### Deployed Contract for Shutterized Gnosis Chain Mainnet([Github](https://github.com/shutter-network/shutter-keyper-deployment/tree/gnosis/main?tab=readme-ov-file#contract-deployments))
+### Deployed Contract for integrated Shutter Network on Gnosis Chain([Github](https://github.com/shutter-network/shutter-keyper-deployment/tree/gnosis/main?tab=readme-ov-file#contract-deployments))
 
 | Contract Name | Gnosis Chain Mainnet |
 | ------------  | ------------------------------------ |
