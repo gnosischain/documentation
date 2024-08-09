@@ -24,6 +24,10 @@
 
   ![DAppNode Step 3j](/img/node/dappnode-step3j.png)
 
+:::caution Be sure to enter a withdrawal address at this step. This address will be used to receive partial or full withdrawals. You can also choose not to enter an address at this step, but be aware that updating it later can be difficult. [Withdrawals](../node/management/withdrawals.md)
+
+Please note that once you have chosen a withdrawal address (either at this step or later), it will not be possible to update it to another address. Therefore, make sure to choose an address that you control and that is secure. :::
+
   :::info 
   If you are running this program to generate keys within the context of the DAppNode Gnosis Chain Hardware Validator Incentive Program, make sure to generate 4 validators and to fill in the ETH1 Withdrawal Address Field with an address you have full control over.  Also make sure to choose a directory that reflects the folder where you want the files to be saved.
   :::
