@@ -11,7 +11,7 @@ Voluntary exit procedures vary depending on your client.
 :::caution
 Exits are non-reversible; once you have exited you cannot restart your validator.
 
-You must have a `0x01` type withdrawal address before exiting your validator [withdrawal credentials](withdrawals.md#check-withdrawal-credential). 
+It is recommended to update your withdrawal credentials to the `0x01` type before exiting your validator. Updating your withdrawal credentials later, when your node is stopped, will be more difficult. [withdrawal credentials](withdrawals.md#check-withdrawal-credential). 
 :::
 
 ### Dappnode
