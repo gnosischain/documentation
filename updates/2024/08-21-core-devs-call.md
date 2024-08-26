@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 2024/8/21
+title: Core Devs Call - 2024/08/21
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, Gnosis Chain]
 ---
