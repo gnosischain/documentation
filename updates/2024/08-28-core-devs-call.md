@@ -1,10 +1,8 @@
-* * *
-
-title: Core Devs Call - 08/28/2024  
-authors: \[dapplion, armaganercan, filoozom\]  
-tags: \[CoreDevsCall, Gnosis Chain\]
-
-* * *
+---
+title: Core Devs Call - 2024/08/21
+authors: [dapplion, armaganercan, filoozom]
+tags: [CoreDevsCall, Gnosis Chain]
+---
 
 # Gnosis Core Devs Call Notes Aug 28, 2024
 
