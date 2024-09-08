@@ -27,8 +27,8 @@ Below is the list of actions that can be executed in BlockScout and Etherscan, o
 :::info
 MetaMask will show a high gas estimate for this transaction. In most cases the final gas consumption will be significantly lower.
 :::
-                                                                                                                                      
+
 ## Deploying custom ERC-20 Bridge
 
-- [Tokenbridge Docs: Deploying custom token bridge on top of AMB](https://docs.tokenbridge.net/eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension)
-- [Tokenbridge Docs: Deplying a custom UI token bridge on top of AMB](https://docs.tokenbridge.net/eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb)
+- [Tokenbridge Docs: Deploying custom token bridge on top of AMB](https://github.com/tokenbridge/docs/blob/master/eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/deploy-erc20-erc677-erc827-to-erc677-amb-bridge-extension.md)
+- [Tokenbridge Docs: Deplying a custom UI token bridge on top of AMB](hhttps://github.com/tokenbridge/docs/blob/master/eth-xdai-amb-bridge/erc20-to-erc20-extension-linked-with-a-particular-token/ui-to-transfer-tokens-through-amb.md)

@@ -25,7 +25,7 @@ As we enter July, the pre-staking program is 2 months old and interest and parti
 
 ### ✅ STAKE officially added to Balancer Pools
 
-While the STAKE Balancer pool has been active for several weeks, the token was still in pending mode as the Balancer team made sure it met criteria for inclusion (many tokens are denied a listing here).  STAKE passed the test and is now officially added to Balancer.\
+While the STAKE Balancer pool has been active for several weeks, the token was still in pending mode as the Balancer team made sure it met criteria for inclusion (many tokens are denied a listing here). STAKE passed the test and is now officially added to Balancer.\
 [https://pools.balancer.exchange/#/pool/0x834fb8276B4E8a24010e2108fDd7F8417C8922bD](https://pools.balancer.exchange/#/pool/0x834fb8276B4E8a24010e2108fDd7F8417C8922bD)
 
 ## 👷‍♀️ Integrations & Development
@@ -44,7 +44,7 @@ https://www.xdaichain.com/for-developers/developer-resources/blocknative-notific
 
 ### ✅ xMoon.Exchange MVDEX
 
-Austin Griffith has created a Minimal Viable Decentralized Exchange (MVDEX) on xDai for exchanging and trading Reddit MOON Tokens. The UI let users bridge Dai from Ethereum to xDai, and Moons from Rinkeby to xMoons on xDai. Here, users can trade xMoons for xDai and vice versa! 
+Austin Griffith has created a Minimal Viable Decentralized Exchange (MVDEX) on xDai for exchanging and trading Reddit MOON Tokens. The UI let users bridge Dai from Ethereum to xDai, and Moons from Rinkeby to xMoons on xDai. Here, users can trade xMoons for xDai and vice versa!
 
 https://youtu.be/_ikHSyThDiA
 
@@ -52,9 +52,6 @@ https://youtu.be/_ikHSyThDiA
 
 ### ✅ Chico Crypto hypes xDai tech
 
-While this video centers on the Energy Web(EW) Chain, Chico talks about interoperability and the tools EW is leveraging, including the TokenBridge that sits at the heart of the xDai Chain. Many projects are finding the open-source tools developed and maintained by POA and xDai (specifically BlockScout & [TokenBridge](https://docs.tokenbridge.net/)) vital to their specific use-cases.
+While this video centers on the Energy Web(EW) Chain, Chico talks about interoperability and the tools EW is leveraging, including the TokenBridge that sits at the heart of the xDai Chain. Many projects are finding the open-source tools developed and maintained by POA and xDai (specifically BlockScout & [TokenBridge](https://github.com/tokenbridge/docs/tree/master)) vital to their specific use-cases.
 
 https://youtu.be/KHeKo_7JYMk
-
-
-

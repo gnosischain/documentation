@@ -15,7 +15,7 @@ import ArchiveWarning from '@site/src/components/ArchiveWarning';
 
 The RaidGuild team completed the UI for the OmniBridge, a bridge which allows users to seamlessly move ERC20s between Ethereum and xDai. Any ERC20 can be moved, if it doesn't exist yet on xDai the bridge can be used to create this initial transfer as well! The Omnibridge is a huge step forward for interoperability between chains.
 
-https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20
+https://github.com/tokenbridge/docs/blob/master/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20.md
 
 https://twitter.com/DekanBro/status/1315826308803424279
 
@@ -51,9 +51,9 @@ https://twitter.com/xdaichain/status/1316434022650777600
 
 ### ✓ Dark Forest v0.4 Wrap Up
 
-Dark Forest (DF) is the first large-scale game to use zksnarks, allowing for a multi-player incomplete information game environment. This run of DF resulted in a huge spike in transactions and RPC calls on xDai, many driven by bot activity. The traffic spikes stressed the system at times and we learned a lot about scaling and RPC optimization from over 500 participants and many bots accessing the game.  Look for a postmortem from the DarkForest team soon.
+Dark Forest (DF) is the first large-scale game to use zksnarks, allowing for a multi-player incomplete information game environment. This run of DF resulted in a huge spike in transactions and RPC calls on xDai, many driven by bot activity. The traffic spikes stressed the system at times and we learned a lot about scaling and RPC optimization from over 500 participants and many bots accessing the game. Look for a postmortem from the DarkForest team soon.
 
-We are excited to continue our optimization efforts with the RPC read layer and this test was a great opportunity to highlight xDai features like a Burner wallet with auto-transaction acceptance (this made the game much more playable) and micro-tx ability for players. We look forward to the next iteration of DF! 
+We are excited to continue our optimization efforts with the RPC read layer and this test was a great opportunity to highlight xDai features like a Burner wallet with auto-transaction acceptance (this made the game much more playable) and micro-tx ability for players. We look forward to the next iteration of DF!
 
 ## :tools: Tech and Distribution Updates
 
@@ -70,8 +70,3 @@ https://twitter.com/xdaichain/status/1316807583676674048
 ### ✓ Reddit Moon Farming
 
 https://cointelegraph.com/news/redditors-are-now-spam-farming-bricks-and-moons?utm_source=Telegram&utm_medium=social
-
-
-
-
-
