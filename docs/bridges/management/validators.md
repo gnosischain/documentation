@@ -34,7 +34,7 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 
 <TabItem value="sepolia-chiado" label="Sepolia <-> Chiado">
 
-0x725bC6F18F8CDd7f57A9aB9A9f2Ea17A199185e5    
+0x725bC6F18F8CDd7f57A9aB9A9f2Ea17A199185e5  
 0xb1562173109932146a7fBBF28d7c6652bc2DaACE
 
 </TabItem>
@@ -45,20 +45,15 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 
 </TabItem>
 
-
 </Tabs>
 
 ### Omnibridge validator workflow
 
-
 ![](/img/bridges/diagrams/amb-bridge-validator-flow.png)
-
-
 
 ## xDAI bridge
 
-
-The xDAI bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle. 
+The xDAI bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle.
 
 <Tabs>
 
@@ -80,8 +75,8 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 <TabItem value="chiado-sepolia" label="Chiado<->Sepolia">
 
-  0x725bc6f18f8cdd7f57a9ab9a9f2ea17a199185e5    
-  0xb1562173109932146a7fbbf28d7c6652bc2daace
+0x725bc6f18f8cdd7f57a9ab9a9f2ea17a199185e5  
+ 0xb1562173109932146a7fbbf28d7c6652bc2daace
 
 </TabItem>
 
@@ -94,26 +89,21 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 </TabItem>
 
-
 </Tabs>
 
 ### Bridge Validator Flow
 
 ![](/img/bridges/diagrams/xdai-bridge-validator-flow.png)
 
-
 ### Resources
 
-- [TokenBridge Docs: Migrating Oracle to new Server](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server)
- 
-
+- [TokenBridge Docs: Migrating Oracle to new Server](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
 
 ```mdx-code-block
 <details>
   <summary>Setting up GNO bridge validators: Gnosis Chain &lt;-&gt;Ethereum</summary>
   <div>
 ```
-
 
 ## GNO bridge validators GC &lt;-&gt; ETH Mainnet
 

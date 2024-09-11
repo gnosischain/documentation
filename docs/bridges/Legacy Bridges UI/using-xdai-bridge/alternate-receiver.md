@@ -6,8 +6,8 @@ keywords: [xdai bridge, alternate receiver, gnosis bridge]
 # Alternate Receiver
 
 :::info
-The following tutorial is refering to the legacy xDAI bridge.     
-The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).     
+The following tutorial is refering to the legacy xDAI bridge.  
+The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).  
 Please avoid using the legacy xDAI bridge: https://bridge.legacy.gnosischain.com/
 :::
 
@@ -129,4 +129,4 @@ The xDai Bridge Alternative Receiver functionality. The transfer requires 2 tran
 
 - [How to bridge Dai to a different address on Gnosis](../../Legacy%20Bridges%20UI/using-xdai-bridge/alternate-receiver.md)
 
-- [TokenBridge Docs: Alternative Receiver for the xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge)
+- [TokenBridge Docs: Alternative Receiver for the xDai Bridge](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge.md)

@@ -8,12 +8,11 @@ keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 # xDai Bridge
 
 :::info
-The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.     
+The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.  
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
 :::
 
 The [xDai bridge](https://bridge.gnosischain.com) is a native DAI bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
-
 
 Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis notifies the [block rewards contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA). The consensus algorithm then mints xDai to the user's corresponding address on Gnosis in the next block.
 
@@ -39,21 +38,20 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 | Contract                      | Ethereum Address                                                                                                                            |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract                | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
+| xDAI Bridge Contract          | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
 | Validator Management Contract | [eth:0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#code)              |
-
 
 </TabItem>
 <TabItem value="gnosis" label="Gnosis">
 
 ### Gnosis
 
-| Contract                      | Gnosis Address                                                                                                                                               |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| xDAI Bridge Contract                | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs)              |
-| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
-| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
-| ERC20ToNative Helper Contract | [gno:0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract)              |
+| Contract                      | Gnosis Address                                                                                                                                  |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| xDAI Bridge Contract          | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs) |
+| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)              |
+| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)   |
+| ERC20ToNative Helper Contract | [gno:0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract) |
 
 </TabItem>
 
@@ -61,13 +59,12 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 ### Sepolia - Chiado
 
-| Contract           | Address                                                                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract (Sepolia)    | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2) |
-| Validator Contract (Sepolia) | [0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59](https://goerli.etherscan.io/address/0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59) |
+| Contract                       | Address                                                                                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| xDAI Bridge Contract (Sepolia) | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2)         |
+| Validator Contract (Sepolia)   | [0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59](https://goerli.etherscan.io/address/0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59)          |
 | xDAI Bridge Contract (Chiado)  | [0xccA0Dc2A058884e62082312F09541cC7566406f0](https://gnosis-chiado.blockscout.com/address/0xccA0Dc2A058884e62082312F09541cC7566406f0) |
-| Validator Contract (Chiado) | [0x138190e157d7604B8f89637AA10508Abd4c673B2](https://gnosis-chiado.blockscout.com/address/0x138190e157d7604B8f89637AA10508Abd4c673B2) |
-
+| Validator Contract (Chiado)    | [0x138190e157d7604B8f89637AA10508Abd4c673B2](https://gnosis-chiado.blockscout.com/address/0x138190e157d7604B8f89637AA10508Abd4c673B2) |
 
 </TabItem>
 
@@ -75,12 +72,12 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 ### Goerli - Chiado
 
-| Contract           | Address                                                                                                                      |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract (Goerli)    | [0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24](https://goerli.etherscan.io/address/0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24) |
-| Validator Contract (Goerli) | [0x1F35121d14ABC91689a7903bf911dce83B0c6EF6](https://goerli.etherscan.io/address/0x1F35121d14ABC91689a7903bf911dce83B0c6EF6) |
-| xDAI Bridge Contract (Chiado)  | [0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2](https://gnosis-chiado.blockscout.com/address/0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2) |
-| Validator Contract (Chiado) | [0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce](https://gnosis-chiado.blockscout.com/address/0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce) |
+| Contract                      | Address                                                                                                                               |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| xDAI Bridge Contract (Goerli) | [0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24](https://goerli.etherscan.io/address/0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24)          |
+| Validator Contract (Goerli)   | [0x1F35121d14ABC91689a7903bf911dce83B0c6EF6](https://goerli.etherscan.io/address/0x1F35121d14ABC91689a7903bf911dce83B0c6EF6)          |
+| xDAI Bridge Contract (Chiado) | [0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2](https://gnosis-chiado.blockscout.com/address/0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2) |
+| Validator Contract (Chiado)   | [0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce](https://gnosis-chiado.blockscout.com/address/0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce) |
 
 </TabItem>
 
@@ -90,11 +87,10 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xdaibridge-upgrade-sdai](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai), with the commit hash `bf602f35e624cc6c58c827e7c56b23c8b1afa69a`
 :::
 
-References:    
-** Some of the informations from TokenBridge Docs are outdated, please verify the information before you bridge.
-- [TokenBridge Docs: About xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
-- [TokenBridge Docs: Bridge Contract Management](https://docs.tokenbridge.net/xdai-bridge/xdai-bridge-contracts-management)
+References:  
+\*\* Some of the informations from TokenBridge Docs are outdated, please verify the information before you bridge.
 
+- https://github.com/tokenbridge/docs
 
 ### Fees & Daily Limits
 
@@ -111,14 +107,11 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ### Bridge Validators
 
-
 - See [Bridge Validator](../management/validators#xdai-bridge)
 
 ### Bridge Governance
 
 - See [Bridge Governance](../management/README.md)
-
-
 
 ## How it Works
 
@@ -126,7 +119,7 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ![](/img/bridges/diagrams/dai-bridge-01.png)
 
-The [xDai token](/concepts/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers. 
+The [xDai token](/concepts/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
 1. Users lock DAI on the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum by approving the bridge contract and calling `relayTokens`.
 2. `UserRequestForAffirmation` event is triggered
@@ -167,8 +160,7 @@ This final step may be delayed if Ethereum mainnet is congested.
 
 References:
 
-- [TokenBridge Docs: Withdrawing xDai to Dai](https://docs.tokenbridge.net/xdai-bridge/using-the-xdai-bridge/withdrawal-authorization-flow)
-
+- [TokenBridge Docs: Withdrawing xDai to Dai](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/using-the-xdai-bridge/withdrawal-authorization-flow.md)
 
 ### Savings xDAI
 
@@ -267,11 +259,10 @@ The second contract is the Interest Receiver. This will be the address provided 
 | SavingsXDAI Adapter      | [0xc1529e13A5842D790da01F778Bf23a3677830986](https://gnosis-chiado.blockscout.com/address/0xc1529e13A5842D790da01F778Bf23a3677830986) |
 | Bridge Interest Receiver | [0x65e75819E4e8250a03958Ba303E8f95F8f578168](https://gnosis-chiado.blockscout.com/address/0x65e75819E4e8250a03958Ba303E8f95F8f578168) |
 
-
 </TabItem>
 
 </Tabs>
 
 ## Resources
 
-- [Tokenbridge Docs on xDai Bridge](https://docs.tokenbridge.net/xdai-bridge/about)
+- [Tokenbridge Docs on xDai Bridge](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/about.md)
