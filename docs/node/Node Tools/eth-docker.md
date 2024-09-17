@@ -1,18 +1,18 @@
 ---
-title: eth-docker
+title: Eth-docker
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# eth-docker
+# Eth-docker
 
-[eth-docker](https://eth-docker.net/) is a docker automation project for Ethereum consensus and execution clients. It aims to make running a Ethereum staking full node simpler than setting everything up manually, while allowing the user choice when it comes to the exact client mix they wish to run.
+[Eth-docker](https://eth-docker.net/) is a docker automation project for Ethereum consensus and execution clients. It aims to make running a Ethereum staking full node simpler than setting everything up manually, while allowing the user choice when it comes to the exact client mix they wish to run.
 
-eth-docker allows user to set up Gnosis clients by answering simple dialog-based questions on terminal.
+Eth-docker allows user to set up Gnosis clients by answering simple dialog-based questions on terminal.
 
 ## References
-1. eth-docker Docs: https://eth-docker.net/
+1. Eth-docker Docs: https://eth-docker.net/
 2. Github: https://github.com/eth-educators/eth-docker
 
 

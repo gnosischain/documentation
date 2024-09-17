@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 2024/08/21
+title: Core Devs Call - 2024/08/28
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, Gnosis Chain]
 ---
@@ -86,3 +86,4 @@ Aug 28, 2024
     *   Started to integrate the Nethermind implementation
         
     *   Might require a new repo
+
