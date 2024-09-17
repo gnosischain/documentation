@@ -92,7 +92,7 @@ For testing purpose, we've set up testnet environemnt. Users are welcome to expe
 ## Omnibridge
 
 - Sepolia address
-  1. Foreign Omnibridge: [0xc4e06E44B2d1e148beFAa3cB2012A985EFe7032a](https://sepolia.etherscan.io/address/0xc4e06E44B2d1e148beFAa3cB2012A985EFe7032a) ✅
+  1. Foreign Omnibridge: [0xc4e06E44B2d1e148beFAa3cB2012A985EFe7032a](https://sepolia.etherscan.io/address/0xc4e06E44B2d1e148beFAa3cB2012A985EFe7032a)
   2. WETH Router: [0x65E64139f202F89cb6b4bFc140bf01Cda1886465](https://sepolia.etherscan.io/address/0x65E64139f202F89cb6b4bFc140bf01Cda1886465#code)
 - Chiado address
   1. Home Omnibridge: [0xB866dC5321Ca41a22938A7afD5Bc3c5069975874](https://gnosis-chiado.blockscout.com/address/0xB866dC5321Ca41a22938A7afD5Bc3c5069975874?tab=write_proxy)
