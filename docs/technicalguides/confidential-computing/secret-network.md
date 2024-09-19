@@ -1,6 +1,6 @@
 # Secret Network
 
-On most blockchains, all data is public by default. While this works for many of the popular Web3 applications we see today, having the ability to keep some data confidential unlocks powerful new use-cases. Incorporating decentralized confidential computing (DeCC) enables things like private voting for DAOs, secure random number generation for gaming, encrypted databases for various applications, encrypted data tied to NFTs, sealed-bid auctions, and encrypted order books for DeFi applications. All of this can be built on Gnosis by utilizing [Secret Network](https://scrt.network)’s Confidential Computing Layer.
+On most blockchains, all data is public by default. While this works for many of the popular Web3 applications we see today, having the ability to keep some data confidential unlocks powerful new capabilities. Incorporating decentralized confidential computing (DeCC) enables things like private voting for DAOs, secure random number generation for gaming, encrypted databases for various applications, encrypted data tied to NFTs, sealed-bid auctions, and encrypted order books for DeFi applications. All of this can be built on Gnosis by utilizing [Secret Network](https://scrt.network)’s Confidential Computing Layer.
 
 ## Integrating Secret's Confidential Computing Layer​
 
