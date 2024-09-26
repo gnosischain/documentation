@@ -29,7 +29,7 @@ If you are using OmniBridge for other ERC20 tokens (not xDai to Dai) please see 
 
 ## Bridge UI is Offline or in Maintenance Mode
 
-We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/gnosischain) for up-to-date information.
+We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/gnosis) for up-to-date information.
 
 ## I Only See Bridging in 1 Direction
 
