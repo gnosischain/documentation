@@ -3,7 +3,7 @@ title: Monitoring and Alerts
 ---
 
 :::info
-**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosischain) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
+**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosis) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
 :::
 
 :::info
