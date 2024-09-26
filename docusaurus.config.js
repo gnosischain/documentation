@@ -175,7 +175,7 @@ const config = {
               },
               {
                 label: "Discord",
-                href: "https://discord.gg/gnosischain",
+                href: "https://discord.gg/gnosis",
               },
               {
                 label: "Twitter",
