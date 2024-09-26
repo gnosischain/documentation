@@ -80,7 +80,7 @@ More info -> [https://medium.com/immunefi/xdai-stake-hosts-2-000-000-bug-bounty-
 ## What’s next?
 
 - [Submit a bug](https://bugs.immunefi.com/)
-- Any questions about the program? Reach out to us in our [Discord](https://discord.gg/gnosischain) channel!
+- Any questions about the program? Reach out to us in our [Discord](https://discord.gg/gnosis) channel!
 
 ## FAQ
 
