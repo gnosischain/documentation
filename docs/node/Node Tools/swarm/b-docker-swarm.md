@@ -34,7 +34,7 @@ The guide below is for a full Bee node with staking. To run a light node (upload
 If you are running on a home Wi-Fi you may need to configure your router to use [port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide) or take other steps to ensure your node is reachable by other nodes on the network. See [here](https://docs.ethswarm.org/docs/bee/installation/connectivity/#navigating-through-the-nat) for more guidance. If you are running on a VPS or cloud based server you will likely have no issues.
 :::
 
-* Docker - [Get Docker] (https://docs.docker.com/get-started/get-docker/) install instructions from the official docs.
+* Docker - [Get Docker](https://docs.docker.com/get-started/get-docker/) install instructions from the official docs.
 * Dual core, recent generation, 2ghz processor
 * 4gb RAM
 * 30gb SSD
