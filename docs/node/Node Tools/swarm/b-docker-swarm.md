@@ -5,17 +5,15 @@ keywords: [swarm, storage, decentralized, decentralised, docker, docker compose]
 
 # Swarm with Docker
 
-Docker containers for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
-
+The following is a guide to get you started running a Bee full node with staking on Swarm using Docker. Docker containers for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
 
 :::caution
-In the examples below we specify the exact version number of the image using the 2.2.0 tag. It's recommended to only use the exact version number tags. You can find all available tags for Bee on [Docker Hub](https://hub.docker.com/r/ethersphere/bee/tags).
+In the examples below we specify the exact version number of the image using the 2.2.0 tag. It's recommended to only use the exact version number tags. Make sure to check that you're on the latest version of Bee by reviewing the tags for Bee on [Docker Hub](https://hub.docker.com/r/ethersphere/bee/tags), and replace 2.2.0 in the commands below if there is a newer full release. 
 :::
 
 :::warning
 Note that in all the examples below we map the Bee API to 127.0.0.1 (localhost), since we do not want to expose our Bee API endpoint to the public internet, as that would allow anyone to control our node. Make sure you do the same, and it's also recommended to use a  firewall to protect access to your node(s).
 :::
-
 
 :::info
 The guide below is for a full Bee node with staking. To run a light node (uploads and downloads only), set `BEE_FULL_NODE` to false, or to run in ultra light (allows downloads only) mode you can set both `BEE_FULL_NODE` and `BEE_SWAP_ENABLE` to false.
@@ -41,19 +39,27 @@ While it is possible to run multiple Bee nodes on a single machine, due to the h
 * 4gb RAM
 * 30gb SSD
 * Stable internet connection
-* A Gnosis Chain RPC endpoint (either by running your own node or from a third party provider such as Infura, or from one of the free publicly available RPC endpoints listed in the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/).
+
+### Software
+
+* A Gnosis Chain RPC endpoint (either by running your own node or the [free RPC endpoint](https://xdai.fairdatasociety.org) offered from the Fair Data Society. Other free public options are available at the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/). 
 * [jq utility](https://jqlang.github.io/jq/) for formatting API output (optional)
 
 :::info
-The [`jq` utility](https://jqlang.github.io/jq/) is used here to automatically format the output from the Bee API. It can help make API output more readable. 
+The [`jq` utility](https://jqlang.github.io/jq/) is used in this guide to automatically format the output from the Bee API. It can help make API output much more readable, however it is totally optional. 
 :::
 
+### Tokens
 
-## Bee with Docker
+* A small amount of xDAI to pay for Gnosis Chain transactions, 0.1 xDAI should be enough
+* 10 xBZZ (BZZ on Gnosis Chain) is required for staking 
 
-This section will guide you through setting up and running a single Bee full node using Docker. 
 
-### Full node startup command
+## Full node setup process 
+
+This section will guide you through setting up and running a single Bee full node using Docker. In the guide, we use a single line command for running our Bee node, with the Bee config options being set through environment variables, and a single volume hosted for our node's data. 
+
+### Start node
 
 ```bash
 docker run -d --rm --name bee-1 \
@@ -63,7 +69,7 @@ docker run -d --rm --name bee-1 \
   -e BEE_FULL_NODE="true" \
   -e BEE_SWAP_ENABLE="true" \
   -e BEE_PASSWORD="flummoxedgranitecarrot" \
-  -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://rpc.gnosis.gateway.fm" \
+  -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" \
   -v bee-1:/home/bee/.bee \
   ethersphere/bee:2.2.0 start
 ```
@@ -71,21 +77,21 @@ docker run -d --rm --name bee-1 \
 Here is the same command in a single line in case you run into issues with the line breaks in the command above:
 
 ```bash
-docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://rpc.gnosis.gateway.fm" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
+docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
 ```
 
 #### Command explained:
 
 - **`-d`**: Runs the container in the background.
-- **`--rm`**: Automatically removes the container when it stops.
+- **`--rm`**: Automatically removes the container when it stops (however, importantly, the Docker volume which contains your node's data will NOT be removed).
 - **`--name bee-1`**: Names the container `bee-1`.
 - **`-p 127.0.0.1:1633:1633`**: Exposes the API on port 1633, only accessible locally.
 - **`-p 1634:1634`**: Exposes the P2P port 1634 to the public.
 - **`-e BEE_API_ADDR=":1633"`**: Sets the Bee API to use port 1633.
 - **`-e BEE_FULL_NODE="true"`**: Runs as a full node.
 - **`-e BEE_SWAP_ENABLE="true"`**: Enables the SWAP protocol for payments.
-- **`-e BEE_PASSWORD="flummoxedgranitecarrot"`**: Sets the keystore password.
-- **`-e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://rpc.gnosis.gateway.fm"`**: Connects to the Gnosis Chain.
+- **`-e BEE_PASSWORD="flummoxedgranitecarrot"`**: Sets the keystore password, make sure to replace with your own.
+- **`-e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org"`**: Connects to the Gnosis Chain.
 - **`-v bee-1:/home/bee/.bee`**: Persists node data in the `bee-1` volume.
 - **`ethersphere/bee:2.2.0 start`**: Runs Bee version 2.2.0 and starts the node.
 
@@ -119,24 +125,51 @@ The output should contain a line which prints the address of your node. Copy thi
 "time"="2024-09-24 22:06:51.363708" "level"="warning" "logger"="node/chequebook" "msg"="cannot continue until there is at least min xDAI (for Gas) available on address" "min_amount"="0.0003576874793" "address"="0x91A7e3AC06020750D32CeffbEeFD55B4c5e42bd6"
 ```
 
+You can use `Ctrl + C` to exit the logs.
+
 Before moving on to funding, stop your node:
 
 ```bash
 docker stop bee-1
 ```
 
-### Step 4: Funding 
-
-To obtain xDAI and fund your node, you can [follow the instructions](https://docs.ethswarm.org/docs/installation/install#4-fund-node) from the main install section.
-
-After you have some xDAI, send it to the address you copied above, in our case it is `0x91A7e3AC06020750D32CeffbEeFD55B4c5e42bd6`. You only need to send a very small amount of xDAI to get started, such as 0.01 xDAI. 
-
-### Step 5: Initialize node
-
-After you have a small amount of xDAI in your node's Gnosis Chain address, you can now restart your node so that it can issue the required smart contract transactions and also sync data. 
+And let's confirm that it has stopped:
 
 ```bash
-docker start bee-1
+docker ps
+```
+
+We can confirm no Docker container processes are currently running.
+
+```bash
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+````
+
+### Fund node
+
+Check the logs from the previous step. Look for the line which says: 
+
+```
+"time"="2024-09-24 18:15:34.520716" "level"="info" "logger"="node" "msg"="using ethereum address" "address"="0x1A801dd3ec955E905ca424a85C3423599bfb0E66"
+```
+That address is your node's address on Gnosis Chain which needs to be funded with xDAI and xBZZ. Copy it and save it for the next step.
+
+xDAI is widely available from many different centralized and decentralized exchanges, just make sure that you are getting xDAI on Gnosis Chain, and not DAI on some other chain. See [this page](https://www.ethswarm.org/get-bzz) for a list of resources for getting xBZZ (again, make certain that you are getting the Gnosis Chain version, and not BZZ on Ethereum).  
+
+After acquiring some xDAI and some xBZZ, send them to the address you copied above.
+
+***How Much to Send?***
+
+Only a very small amount of xDAI is needed to get started, 0.1 is more than enough.
+ 
+You can start with just 2 or 3 xBZZ for uploading small amounts of data, but you will need at least 10 xBZZ if you plan on staking.
+
+### Initialize full node
+
+After you have a small amount of xDAI in your node's Gnosis Chain address, you can now restart your node using the same command as before so that it can issue the required smart contract transactions and also sync data. 
+
+```bash
+docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
 ```
 
 Let's check the logs to see what's happening:
@@ -204,7 +237,7 @@ version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please
 "time"="2024-09-24 22:21:19.664897" "level"="info" "logger"="node" "msg"="waiting to sync postage contract data, this may take a while... more info available in Debug loglevel"
 ```
 
-Your node will take some time to finish syncing postage contract data as indicated by the final line:
+Your node will take some time to finish [syncing postage contract data](https://docs.ethswarm.org/docs/develop/access-the-swarm/buy-a-stamp-batch/) as indicated by the final line:
 
 ```bash
 "msg"="waiting to sync postage contract data, this may take a while... more info available in Debug loglevel"
@@ -245,7 +278,7 @@ curl -s  http://localhost:1633/status | jq
 ```
 We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. However, we do not need to wait until our node is full synced before staking, so we can move directly to the next step.
 
-### Step 6: Add Stake
+### Stake node
 
 You can use the following command to stake 10 xBZZ:
 
@@ -285,3 +318,53 @@ Here we can see the `pullsyncRate` is about 482 chunks per second, meaning our n
 ```
 
 Congratulations! You have now installed your Bee node and are connected to the network as a full staking node. Your node will now be in the process of syncing chunks from the network. Once it is fully synced, your node will finally be eligible for earning staking rewards. 
+
+### Logs and Monitoring
+
+Docker provides convenient built-in tools for logging and monitoring your node, which you've already encountered if you've read through earlier sections of this guide.
+
+**Viewing Node Logs:**
+
+To monitor your node’s logs in real-time, use the following command:
+
+```bash
+docker logs -f bee-1
+```
+
+This command will continuously output the logs of your Bee node, helping you track its operations. The `-f` flag ensures that you see new log entries as they are written. Press `Ctrl + C` to stop following the logs.
+
+**Checking the Node's Status**
+
+To view general information about your Bee node's Docker container, including its uptime and port mappings, run:
+
+```bash
+docker ps
+```
+
+This will provide an overview of your running containers, including your Bee node, as shown below:
+
+```bash
+CONTAINER ID   IMAGE                   COMMAND       CREATED         STATUS         PORTS
+                                   NAMES
+1384b686047b   ethersphere/bee:2.2.0   "bee start"   4 minutes ago   Up 4 minutes   127.0.0.1:1633->1633/tcp, 0.0.0.0:1634->1634/tcp, :::1634->1634/tcp   bee-1
+```
+
+**Stopping Your Node**
+
+To gracefully stop your Bee node, use the following command:
+
+```bash
+docker stop bee-1
+```
+
+Replace `bee-1` with the name of your node if you've given it a different name.
+
+:::info
+Since we used the `--rm` flag when starting the container, the container will be automatically removed once stopped. This means you cannot restart the container using the `docker start` command:
+
+```bash
+docker start bee-1
+```
+
+If you'd like to preserve the container for later restarts, remove the `--rm` flag when starting the container, which will allow you to stop and restart it as needed.
+:::

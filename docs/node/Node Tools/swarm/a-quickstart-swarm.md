@@ -6,11 +6,8 @@ keywords: [swarm, storage, decentralized, decentralised]
 
 # Swarm Quickstart
 
-The following is a guide to get you started staking on Swarm as quickly as possible.
+The following is a guide to get you started running a Bee full node with staking on Swarm using [the official shell script provided by Swarm](https://github.com/ethersphere/bee/blob/master/install.sh) which automatically detects your system and installs the correct version of Bee. 
 
-:::caution
-While it is possible to run multiple Bee nodes on a single machine, due to the high rate of I/O operations required by a full Bee node in operation, it is not recommended to run more than a handful of Bee nodes on the same physical disk (depending on the disk speed). 
-:::
 
 :::warning
 Note that we append 127.0.0.1 (localhost) to our Bee API's port (1633 by default), since we do not want to expose our Bee API endpoint to the public internet, as that would allow anyone to control our node. Make sure you do the same, and it's also recommended to use a  firewall to protect access to your node(s).
@@ -30,28 +27,39 @@ The guide below is for a full Bee node with staking. To run a light node (upload
 If you are running on a home Wi-Fi you may need to configure your router to use [port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide) or take other steps to ensure your node is reachable by other nodes on the network. See [here](https://docs.ethswarm.org/docs/bee/installation/connectivity/#navigating-through-the-nat) for more guidance. If you are running on a VPS or cloud based server you will likely have no issues.
 :::
 
+:::caution
+While it is possible to run multiple Bee nodes on a single machine, due to the high rate of I/O operations required by a full Bee node in operation, it is not recommended to run more than a handful of Bee nodes on the same physical disk (depending on the disk speed). 
+:::
+
 * Dual core, recent generation, 2ghz processor
 * 4gb RAM
 * 30gb SSD
-* Stable internet connection
-* A computer running a supported version of Linux (almost all commonly used distros should work)
-* A Gnosis Chain RPC endpoint (either by running your own node or from a third party provider such as Infura, or from one of the free publicly available RPC endpoints listed in the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/).
-* [jq utility](https://jqlang.github.io/jq/) for formatting API output (optional)
+* Stable internet connection 
+
+### Software 
+
+* A computer running a supported version of Linux (almost all commonly used distros should work). macOS will also work but you may need to slightly modify some commands.
+* A Gnosis Chain RPC endpoint (either by running your own node or the [free RPC endpoint](https://xdai.fairdatasociety.org) offered from the Fair Data Society. Other free public options are available at the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/). 
+* (Optional) [jq utility](https://jqlang.github.io/jq/) for formatting API output. 
+* (Optional) [bashtop utility] for monitoring processes (such as our Bee node).
+
 
 :::info
-The [`jq` utility](https://jqlang.github.io/jq/) is used here to automatically format the output from the Bee API. It can help make API output more readable. 
+The [`jq` utility](https://jqlang.github.io/jq/) is used in this guide to automatically format the output from the Bee API. It can help make API output much more readable, however it is totally optional. 
 :::
-
-
 
 ### Tokens
 
 * A small amount of xDAI to pay for Gnosis Chain transactions, 0.1 xDAI should be enough
 * 10 xBZZ (BZZ on Gnosis Chain) is required for staking 
 
-## Installation 
+## Full node setup process 
 
-One of the easiest ways to get started with Bee is the the Bee install shell script for Linux which automatically detects its execution environment and installs the latest stable version of Bee.
+Run the install shell script using either `curl` or `wget`:
+
+:::caution
+In the example below, the version is specified using `TAG=v2.2.0`, make sure that you [check if there is a newer tagged version of Bee](https://github.com/ethersphere/bee/tags) and if so, modify the commands below to use the most recent tag number so that you have the latest version of Bee.
+:::
 
 **wget**
 
@@ -98,19 +106,20 @@ Use "bee [command] --help" for more information about a command.
 ```
 
 
-## Starting Bee
+### Start node
 
-Let's try starting up our node for the first time, make sure to pick a [strong password](https://xkcd.com/936/) of your own:
+Let's try starting up our node for the first time with the command below, make sure to pick a [strong password](https://xkcd.com/936/) of your own:
 
 ```bash
 bee start \
   --password flummoxedgranitecarrot \
   --full-node \
   --swap-enable \
-  --bee-api 127.0.0.1:1633 \
-  --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm
+  --api-addr 127.0.0.1:1633 \
+  --blockchain-rpc-endpoint https://xdai.fairdatasociety.org
 ```
 :::info
+
 Command explained:
 
 1. **`bee start`**: This is the command to start the Bee node.
@@ -121,9 +130,9 @@ Command explained:
 
 4. **`--swap-enable`**: This flag enables SWAP, which is the bandwidth incentives scheme for Swarm. It will initiate a transaction to set up the SWAP chequebook on Gnosis Chain (required for light and full nodes).
 
-5. **`--bee-api 127.0.0.1:1633`**: Specifies that the Bee API will be accessible locally only via `127.0.0.1` on port `1633` and not accessible to the public. 
+5. **`--api-addr 127.0.0.1:1633`**: Specifies that the Bee API will be accessible locally only via `127.0.0.1` on port `1633` and not accessible to the public. 
 
-6. **`--blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm`**: Sets the RPC endpoint for interacting with the Gnosis blockchain (required for light and full nodes).
+6. **`--blockchain-rpc-endpoint https://xdai.fairdatasociety.org`**: Sets the RPC endpoint for interacting with the Gnosis blockchain (required for light and full nodes).
 :::
 
 
@@ -170,9 +179,9 @@ version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please
 "time"="2024-09-24 18:15:38.728534" "level"="warning" "logger"="node/chequebook" "msg"="cannot continue until there is at least min xDAI (for Gas) available on address" "min_amount"="0.0003750000017" "address"="0x1A801dd3ec955E905ca424a85C3423599bfb0E66"
 ```
 
-Here you can see that the node has started up successfully, but our node needs to be funded with xDAI to pay for Gnosis Chain transactions, and to be funded with xBZZ (BZZ on Gnosis Chain), to pay for uploading data or to participate in staking.
+Here you can see that the node has started up successfully, but our node still needs to be funded with xDAI and xBZZ (xDAI for Gnosis Chain transactions and xBZZ for uploads/downloads and staking). 
 
-## Funding Bee
+### Fund node
 
 Check the logs from the previous step. Look for the line which says: 
 
@@ -185,14 +194,14 @@ xDAI is widely available from many different centralized and decentralized excha
 
 After acquiring some xDAI and some xBZZ, send them to the address you copied above.
 
-### How Much to Send?
+***How Much to Send?***
 
 Only a very small amount of xDAI is needed to get started, 0.1 is more than enough.
  
 You can start with just 2 or 3 xBZZ for uploading small amounts of data, but you will need at least 10 xBZZ if you plan on staking.
 
 
-## Initialization
+### Initialize full node
 
 After sending the required tokens (~0.1 xDAI and 10 xBZZ) to your node's Gnosis Chain address, close the bee process in your terminal (`Ctrl + C`). Then start it again with the same command:
 
@@ -201,8 +210,8 @@ bee start \
   --password flummoxedgranitecarrot \
   --full-node \
   --swap-enable \
-  --bee-api 127.0.0.1:1633 \
-  --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm
+  --api-addr 127.0.0.1:1633 \
+  --blockchain-rpc-endpoint https://xdai.fairdatasociety.org
 ```
 After funding and restarting your node, the logs printed to the terminal should look something like this:
 
@@ -293,10 +302,10 @@ curl -s  http://localhost:1633/status | jq
   "lastSyncedBlock": 36172390
 }
 ```
-We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. 
+We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. However, we do not need to wait until our node is fully synced in order to stake our node, so we can now move immediately to the next step.
 
 
-## Staking
+### Stake node
 
 Now we're ready to begin staking, we will slightly modify our startup command so that it now runs in the background instead of taking control of our terminal:
 
@@ -305,8 +314,8 @@ nohup bee start \
   --password flummoxedgranitecarrot \
   --full-node \
   --swap-enable \
-  --bee-api 127.0.0.1:1633 \
-  --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm > bee.log 2>&1 &
+  --api-addr 127.0.0.1:1633 \
+  --blockchain-rpc-endpoint https://xdai.fairdatasociety.org > bee.log 2>&1 &
 ```
 
 :::info
@@ -338,30 +347,35 @@ If the staking transaction is successful a `txHash` will be returned:
 ```
 {"txHash":"0x258d64720fe7abade794f14ef3261534ff823ef3e2e0011c431c31aea75c2dd5"}
 ```
+ 
+Congratulations! You have now installed your Bee node and are connected to the network as a full staking node. Your node will now be in the process of syncing chunks from the network. Once it is fully synced, your node will finally be eligible for earning staking rewards. 
 
-We can view more details about our node with the `/status` endpoint:
+### Logs and monitoring
 
-```
-curl localhost:1633/status | jq
-```
-
-Here we can see the `pullsyncRate` is about 482 chunks per second, meaning our node is still in the process of syncing chunks from the network. Once fully synced, this value should go to zero.
+With our previously modified command, our Bee node will now be running in the background and the logs will be written to the `bee.log` file. To review our node's logs we can simply view the file contents:
 
 ```bash
-{
-  "overlay": "22d502d022de0f8e9d477bc61144d0d842d9d82b8241568c6fe4e41f0b466615",
-  "proximity": 256,
-  "beeMode": "full",
-  "reserveSize": 860973,
-  "reserveSizeWithinRadius": 645270,
-  "pullsyncRate": 482.1258095802469,
-  "storageRadius": 11,
-  "connectedPeers": 196,
-  "neighborhoodSize": 6,
-  "batchCommitment": 74511810560,
-  "isReachable": true,
-  "lastSyncedBlock": 36167475
-}
+cat bee.log
 ```
 
-Congratulations! You have now installed your Bee node and are connected to the network as a full staking node. Your node will now be in the process of syncing chunks from the network. Once it is fully synced, your node will finally be eligible for earning staking rewards. 
+The file will continue to update with all the latest logs as they are output:
+
+```bash
+"time"="2024-09-27 18:05:34.096641" "level"="info" "logger"="node/kademlia" "msg"="connected to peer" "peer_address"="03b48e678938d63c0761c74a805fbe0446684c9c417330c2bec600ecfd6c492f" "proximity_order"=8
+"time"="2024-09-27 18:05:35.168425" "level"="info" "logger"="node/kademlia" "msg"="connected to peer" "peer_address"="0e9388fff473a9c74535337c32cc74d8f921514d2635d0c4a49c6e8022f5594e" "proximity_order"=4
+"time"="2024-09-27 18:05:35.532723" "level"="info" "logger"="node/kademlia" "msg"="disconnected peer" "peer_address"="3c195cd8882ee537d170e92d959ad6bd72a76a50097a671c72646e83b45a1832"
+```
+
+There are many different ways to monitor your Bee node's process, but one convenient way to do so is the [bashtop command line tool](https://github.com/aristocratos/bashtop). The method of [installation](https://github.com/aristocratos/bashtop?tab=readme-ov-file#installation) will vary depending on your system.
+
+After installation, we can launch it with the `bashtop` command:
+
+```bash
+bashtop
+```
+
+![](/img/node/bashtop_01.png)
+
+We can use the `f` key to filter for our Bee node's specific process by searching for the `bee` keyword (use the arrow keys to navigate and `enter` to select). From here we can view info about our node's process, or shut it down using the `t` key (for "terminate").
+
+![](/img/node/bashtop_02.png)
