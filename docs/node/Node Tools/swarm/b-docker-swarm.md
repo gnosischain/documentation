@@ -39,7 +39,6 @@ If you are running on a home Wi-Fi you may need to configure your router to use 
 * 4gb RAM
 * 30gb SSD
 * Stable internet connection
-* A computer running a supported version of Linux (almost all commonly used distros should work)
 * A Gnosis Chain RPC endpoint (either by running your own node or from a third party provider such as Infura, or from one of the free publicly available RPC endpoints listed in the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/).
 * [jq utility](https://jqlang.github.io/jq/) for formatting API output (optional)
 
