@@ -5,8 +5,6 @@ keywords: [swarm, storage, decentralized, decentralised, docker, docker compose]
 
 # Swarm with Docker
 
-Docker is one option for running a Bee node, and when combined with Docker Compose, it even offers a convenient solution for spinning up and managing a small "hive" of Bee nodes.  
-
 Docker containers for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
 
 :::caution
