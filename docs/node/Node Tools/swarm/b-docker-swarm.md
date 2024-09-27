@@ -23,19 +23,36 @@ Note that in all the examples below we map the Bee API to 127.0.0.1 (localhost),
 
 
 :::info
-The guides below are for a full Bee node with staking. To run a light node (uploads and downloads only), set `--full-node` / `BEE_FULL_NODE` to false, or to run in ultra light (allows downloads only) mode you can set both `--full-node` / `BEE_FULL_NODE` and `--swap-enable` / `BEE_SWAP_ENABLE` to false.
+The guide below is for a full Bee node with staking. To run a light node (uploads and downloads only), set `BEE_FULL_NODE` to false, or to run in ultra light (allows downloads only) mode you can set both `BEE_FULL_NODE` and `BEE_SWAP_ENABLE` to false.
 :::
 
 
 
-## Install Docker and Docker Compose
+## Prerequisites
 
-* [Official Docker install instructions](https://docs.docker.com/engine/install/)
-* [Official Docker Compose plugin instructions](https://docs.docker.com/compose/install/linux/)
+### Hardware
+
+:::warning
+If you are running on a home Wi-Fi you may need to configure your router to use [port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide) or take other steps to ensure your node is reachable by other nodes on the network. See [here](https://docs.ethswarm.org/docs/bee/installation/connectivity/#navigating-through-the-nat) for more guidance. If you are running on a VPS or cloud based server you will likely have no issues.
+:::
+
+* Docker - [Get Docker] (https://docs.docker.com/get-started/get-docker/) install instructions from the official docs.
+* Dual core, recent generation, 2ghz processor
+* 4gb RAM
+* 30gb SSD
+* Stable internet connection
+* A computer running a supported version of Linux (almost all commonly used distros should work)
+* A Gnosis Chain RPC endpoint (either by running your own node or from a third party provider such as Infura, or from one of the free publicly available RPC endpoints listed in the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/).
+* [jq utility](https://jqlang.github.io/jq/) for formatting API output (optional)
+
+:::info
+The [`jq` utility](https://jqlang.github.io/jq/) is used here to automatically format the output from the Bee API. It can help make API output more readable. 
+:::
+
 
 ## Bee with Docker
 
-This section will guide you through setting up and running a single Bee full node using Docker only. 
+This section will guide you through setting up and running a single Bee full node using Docker. 
 
 ### Full node startup command
 
@@ -57,7 +74,6 @@ Here is the same command in a single line in case you run into issues with the l
 ```bash
 docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://rpc.gnosis.gateway.fm" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
 ```
-
 
 #### Command explained:
 
@@ -206,10 +222,10 @@ Eventually you will be able to see when your node finishes syncing, and the logs
 "time"="2024-09-24 22:30:33.610825" "level"="info" "logger"="node/kademlia" "msg"="disconnected peer" "peer_address"="6ceb30c7afc11716f866d19b7eeda9836757031ed056b61961e949f6e705b49e"
 ```
 
-Your node will now begin syncing chunks from the network, this will also take some time. You check your node's progress with the `/status` endpoint:
+Your node will now begin syncing chunks from the network, this process can take several hours. You check your node's progress with the `/status` endpoint:
 
 ```bash
-noah@NoahM16:~/improve-docker$ curl -s  http://localhost:1633/status | jq
+curl -s  http://localhost:1633/status | jq
 ```
 
 ```bash
@@ -287,206 +303,13 @@ The output from this will be extensive, but we only need to review a small secti
 
 By checking the last few peers from the output we can see that the `reserveSize` is around 2490864 chunks. Given our own node's `pullsyncRate` of 497, syncing will take around and hour and a half (this time may vary significantly). Once our `pullsyncRate` goes to zero and our `reserveSize` matches that of our peers, our node is fully synced and we can then move on to staking.
 
-## Docker Compose
 
-You may wish to run your node using Docker Compose. While Docker Compose does add some additional complexity to your setup, it also makes the node configuration much more readable and easy to understand.
+### Step 6: Add Stake
 
-Copy this configuration to a `docker-compose.yml` file:
-
-```bash
-services:
-  bee-1:
-    image: ethersphere/bee:2.2.0
-    restart: unless-stopped
-    environment:
-      BEE_API_ADDR: ":1633"
-      BEE_FULL_NODE: "true"
-      BEE_SWAP_ENABLE: "true"
-      BEE_BLOCKCHAIN_RPC_ENDPOINT: "https://rpc.gnosis.gateway.fm"
-      BEE_PASSWORD: "flummoxedgranitecarrot"
-    ports:
-      - 127.0.0.1:1633:1633
-      - 1634:1634
-    volumes:
-      - bee-1:/home/bee/.bee
-    command: start
-volumes:
-  bee-1:
-```
-
-
-
-
-## Running a Hive
-
-In order to run multiple Bee nodes as a "hive", all we need to do is repeat the process for running one node and then extend our Docker Compose configuration.
-
-To start with, shut down your node from the first part of this guide if it is still running:
-
-```shell
-docker compose down
-```
-
-### Step 1: Create new directories for additional node(s)
-
-Now create a new directory for your second node:
-
-
-```shell
-mkdir node_02
-```
-
-We also create a new data directory and set ownership to match the user in the official [Bee Dockerfile](https://github.com/ethersphere/bee/blob/master/Dockerfile).
-
-```shell
-mkdir node_02/.bee
-sudo chown -R 999:999 node_02/.bee
-```
-
-Repeat this process for however many new nodes you want to add.
-
-### Step 2: Create new configuration file(s)
-
-And add a `bee.yml` configuration file. You can use the same configuration as for your first node. Here we will use the configuration for a full node:
-
-```yaml
-# GENERAL BEE CONFIGURATION
-api-addr: :1633
-p2p-addr: :1634
-password: aaa4eabb0813df71afa45d
-data-dir: /home/bee/.bee
-cors-allowed-origins: ["*"]
-
-# DEBUG CONFIGURATION
-verbosity: 5
-
-# BEE MAINNET CONFIGURATION
-bootnode: /dnsaddr/mainnet.ethswarm.org
-
-# BEE MODE: FULL NODE CONFIGURATION
-full-node: true
-swap-enable: true
-blockchain-rpc-endpoint: https://xdai.fairdatasociety.org
-```
-
-```bash
-sudo vi ./node_02/bee.yml
-```
-
-After saving the configuration, print out the configuration to make sure it was properly saved:
-
-```bash
-cat ./node_02/bee.yml
-```
-
-Repeat this step for any other additional node directories you created in the previous step.
-
-### Step 3: Modify Docker Compose configuration
-
-Here is the Docker compose configuration for running a hive of two Bee nodes:
-
-```yaml
-services:
-  bee_01:
-    container_name: bee-node_01
-    image: ethersphere/bee:2.2.0
-    command: start --config /home/bee/bee.yml
-    volumes:
-      - ./node_01/.bee:/home/bee/.bee
-      - ./node_01/bee.yml:/home/bee/bee.yml
-    ports:
-      - 127.0.0.1:1633:1633 # bee api port
-      - 1634:1634 # p2p port
-  bee_02:
-    container_name: bee-node_02
-    image: ethersphere/bee:2.2.0
-    command: start --config /home/bee/bee.yml
-    volumes: 
-      - ./node_02/.bee:/home/bee/.bee
-      - ./node_02/bee.yml:/home/bee/bee.yml
-    ports:
-      - 127.0.0.1:1636:1633 # bee api port
-      - 1637:1634 # p2p port
-```
-
-Here is a list of the changes we made to extend our setup:
-
-   1. Created an additional named service with a new unique name (bee_02).
-   1. Created a unique name for each `container_name` value (bee-node_01 --> bee-node_02).
-   1. Made sure that `volumes` has the correct directory for each node (./node_01/ --> ./node_02/).
-   1. Updated the `ports` we map to so that each node has its own set of ports (ie, for node_02, we map 127.0.0.1:1636 to 1633 because node_01 is already using 127.0.0.1:1633, and do the same with the rest of the ports).
-
-### Step 4: Start up the hive 
-
-Start up the hive:
-
-```shell
-docker compose up -d
-```
-
-After starting up the hive, check that both nodes are running:
-
-```shell
-docker ps
-```
-
-```shell
-CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS
-                                              NAMES
-a62ec5143d30   ethersphere/bee:2.2.0   "bee start --config …"   2 seconds ago   Up 1 second   127.0.0.1:1636->1633/tcp, 0.0.0.0:1637->1634/tcp, :::1637->1634/tcp,   bee-node_02
-a3496b9bb2c8   ethersphere/bee:2.2.0   "bee start --config …"   2 seconds ago   Up 1 second   127.0.0.1:1633->1633/tcp, 0.0.0.0:1634->1634/tcp, :::1634->1634/tcp   bee-node_01
-```
-
-And we can also check the logs for each node:
-
-```shell
-docker logs -f bee-node_01
-```
-
-Copy the address from the logs:
-
-```shell
-"time"="2024-07-23 11:54:08.657999" "level"="warning" "logger"="node/chequebook" "msg"="cannot continue until there is at least min xDAI (for Gas) available on address" "min_xdai_amount"="0.000500000002" "address"="0x0E386401AFA8A9e23c6FFD81C7078505a36dB435"
-```
-
-```shell
-docker logs -f bee-node_02
-```
-And copy the second address:
-```shell
-"time"="2024-07-23 11:54:08.532812" "level"="warning" "logger"="node/chequebook" "msg"="cannot continue until there is at least min xDAI (for Gas) available on address" "min_xdai_amount"="0.000500000002" "address"="0xa4DBEa11CE6D089455d1397c0eC3D705f830De69"
-```
-
-### Step 5: Fund nodes 
-
-You can fund your nodes by sending xDAI and xBZZ the addresses you collected from the previous step.
-
-To obtain xDAI and fund your node, you can [follow the instructions](/docs/bee/installation/install#4-fund-node) from the main install section.
-
-Since you're running a hive, the [node-funder](https://github.com/ethersphere/node-funder) tool is recommended, as it will allow you to rapidly fund and stake multiple nodes.
-
-If you plan on staking, you will also want to [get some xBZZ](https://www.ethswarm.org/get-bzz) to stake. You will need 10 xBZZ for each node.
-
-
-### Step 6: Add stake
-
-:::info
-The Bee API will not be available while your nodes are warming up, so wait until your nodes are fully initialized before staking.
-:::
-
-In order to stake you simply need to call the `/stake` endpoint with an amount of stake in PLUR as a parameter for each node.
-
-
-For bee-node_01:
+To add stake, make a POST request to the `/stake` endpoint and input the amount you wish to stake in PLUR as a parameter after `/stake`. For example, to stake an amount equal to 10 xBZZ:
 
 ```bash
 curl -X POST localhost:1633/stake/100000000000000000
 ```
 
-And for bee-node_02, note that we updated the port to match the one for the Bee API address we mapped to in the Docker Compose file:
-
-```bash
-curl -X POST localhost:1636/stake/100000000000000000
-```
-
-You may also wish to make use of the [node-funder](https://github.com/ethersphere/node-funder) tool, which in addition to allowing you to fund multiple addresses at once, also allows you to stake multiple addresses at once.
+Note that since we have mapped our host and container to the same port, we can use the default `1633` port to make our request. If you are running multiple nodes, make sure to update this command for other nodes which will be mapped to different ports on the host machine.

@@ -8,6 +8,20 @@ keywords: [swarm, storage, decentralized, decentralised]
 
 The following is a guide to get you started staking on Swarm as quickly as possible.
 
+:::caution
+While it is possible to run multiple Bee nodes on a single machine, due to the high rate of I/O operations required by a full Bee node in operation, it is not recommended to run more than a handful of Bee nodes on the same physical disk (depending on the disk speed). 
+:::
+
+:::warning
+Note that we append 127.0.0.1 (localhost) to our Bee API's port (1633 by default), since we do not want to expose our Bee API endpoint to the public internet, as that would allow anyone to control our node. Make sure you do the same, and it's also recommended to use a  firewall to protect access to your node(s).
+:::
+
+:::info
+The guide below is for a full Bee node with staking. To run a light node (uploads and downloads only), set `--full-node` to false, or to run in ultra light (downloads only) mode you can set both `--full-node` and `--swap-enable` to false.
+:::
+
+
+
 ## Prerequisites
 
 ### Hardware
@@ -22,6 +36,12 @@ If you are running on a home Wi-Fi you may need to configure your router to use 
 * Stable internet connection
 * A computer running a supported version of Linux (almost all commonly used distros should work)
 * A Gnosis Chain RPC endpoint (either by running your own node or from a third party provider such as Infura, or from one of the free publicly available RPC endpoints listed in the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/).
+* [jq utility](https://jqlang.github.io/jq/) for formatting API output (optional)
+
+:::info
+The [`jq` utility](https://jqlang.github.io/jq/) is used here to automatically format the output from the Bee API. It can help make API output more readable. 
+:::
+
 
 
 ### Tokens
@@ -86,7 +106,8 @@ bee start \
   --password flummoxedgranitecarrot \
   --full-node \
   --swap-enable \
-  --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm 
+  --bee-api 127.0.0.1:1633 \
+  --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm
 ```
 
 Logs will begin printing to the terminal, and should look like this:
@@ -154,7 +175,7 @@ Only a very small amount of xDAI is needed to get started, 0.1 is more than enou
 You can start with just 2 or 3 xBZZ for uploading small amounts of data, but you will need at least 10 xBZZ if you plan on staking.
 
 
-## Staking
+## Initialization
 
 After sending the required tokens (~0.1 xDAI and 10 xBZZ) to your node's Gnosis Chain address, close the bee process in your terminal (`Ctrl + C`). Then start it again with the same command:
 
@@ -163,6 +184,7 @@ bee start \
   --password flummoxedgranitecarrot \
   --full-node \
   --swap-enable \
+  --bee-api 127.0.0.1:1633 \
   --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm
 ```
 After funding and restarting your node, the logs printed to the terminal should look something like this:
@@ -208,7 +230,112 @@ version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please
 "time"="2024-09-24 18:57:27.619437" "level"="info" "logger"="node/chequebook" "msg"="chequebook deployed" "chequebook_address"="0x261a07a63dC1e7200d51106155C8929b432181fb"
 ```
 
-Now that your node is funded, it is able to issue the transactions for deploying the chequebook contract, which is a prerequisite for running a staking node.
+Here we can see that after our node has been funded, it was able to issue the transactions for deploying the chequebook contract, which is a prerequisite for running a staking node.
+
+Next your node will begin to sync [postage stamp data](https://docs.ethswarm.org/docs/develop/access-the-swarm/buy-a-stamp-batch), which can take ~5 to 10 minutes. You will see this log message while your node is syncing postage stamp data:
+
+```bash
+"time"="2024-09-24 22:21:19.664897" "level"="info" "logger"="node" "msg"="waiting to sync postage contract data, this may take a while... more info available in Debug loglevel"
+```
+
+After your node finishes syncing postage stamp data it will start in full node mode and begin to sync all the chunks of data it is responsible for storing as a full node:
+
+
+```bash
+"time"="2024-09-24 22:30:19.154067" "level"="info" "logger"="node" "msg"="starting in full mode"
+"time"="2024-09-24 22:30:19.155320" "level"="info" "logger"="node/multiresolver" "msg"="name resolver: no name resolution service provided"
+"time"="2024-09-24 22:30:19.341032" "level"="info" "logger"="node/storageincentives" "msg"="entered new phase" "phase"="reveal" "round"=237974 "block"=36172090
+"time"="2024-09-24 22:30:33.610825" "level"="info" "logger"="node/kademlia" "msg"="disconnected peer" "peer_address"="6ceb30c7afc11716f866d19b7eeda9836757031ed056b61961e949f6e705b49e"
+```
+
+This process can take a while, up to several hours depending on your system and network. You can check the progress of your node through the logs which print out to the Bee API:
+
+You check your node's progress with the `/status` endpoint:
+
+:::info
+The [`jq` utility](https://jqlang.github.io/jq/) is used here to automatically format the output from the Bee API. It can help make API output more readable. You may need to install it, the exact steps will depend on your Linux distro and package manager of choice. Also feel free to remove the `| jq` from the command as it is only a convenience, not a requirement.
+:::
+
+```bash
+curl -s  http://localhost:1633/status | jq
+```
+
+```bash
+{
+  "overlay": "22dc155fe072e131449ec7ea2f77de16f4735f06257ebaa5daf2fdcf14267fd9",
+  "proximity": 256,
+  "beeMode": "full",
+  "reserveSize": 686217,
+  "reserveSizeWithinRadius": 321888,
+  "pullsyncRate": 497.8747754074074,
+  "storageRadius": 11,
+  "connectedPeers": 148,
+  "neighborhoodSize": 4,
+  "batchCommitment": 74510761984,
+  "isReachable": false,
+  "lastSyncedBlock": 36172390
+}
+```
+We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. 
+
+To find out how long it will take to finish syncing, we can check our peer's status with the `/status/peers` endpoint:
+
+```bash
+curl -s  http://localhost:1633/status/peers | jq
+```
+The output from this will be extensive, but we only need to review a small section of it:
+
+```bash
+...
+    {
+      "overlay": "22cd0d2a15273c0a3043e750f4039edcce1a9c41a89b89252f0251b043c52297",
+      "proximity": 11,
+      "beeMode": "full",
+      "reserveSize": 2595113,
+      "reserveSizeWithinRadius": 2490862,
+      "pullsyncRate": 0,
+      "storageRadius": 11,
+      "connectedPeers": 195,
+      "neighborhoodSize": 5,
+      "batchCommitment": 74510761984,
+      "isReachable": true,
+      "lastSyncedBlock": 36172425
+    },
+    {
+      "overlay": "22cbe9286f116c30627a6efb6ae130ca4988e926ce38dd632a22c30fa55e3f9b",
+      "proximity": 11,
+      "beeMode": "full",
+      "reserveSize": 2493083,
+      "reserveSizeWithinRadius": 2490855,
+      "pullsyncRate": 0,
+      "storageRadius": 11,
+      "connectedPeers": 225,
+      "neighborhoodSize": 5,
+      "batchCommitment": 74510761984,
+      "isReachable": true,
+      "lastSyncedBlock": 36172425
+    },
+    {
+      "overlay": "22da691645f7ef8e1f4b67cf0f8209e092e199b4b2d26c57c2023603f3402968",
+      "proximity": 13,
+      "beeMode": "full",
+      "reserveSize": 2490864,
+      "reserveSizeWithinRadius": 2490855,
+      "pullsyncRate": 0,
+      "storageRadius": 11,
+      "connectedPeers": 214,
+      "neighborhoodSize": 5,
+      "batchCommitment": 74510761984,
+      "isReachable": true,
+      "lastSyncedBlock": 36172425
+    }
+  ]
+}
+```
+
+By checking the last few peers from the output we can see that the `reserveSize` is around 2490864 chunks. Given our own node's `pullsyncRate` of 497, syncing will take around and hour and a half (this time may vary significantly). Once our `pullsyncRate` goes to zero and our `reserveSize` matches that of our peers, our node is fully synced and we can then move on to staking.
+
+## Staking
 
 Now we're ready to begin staking, we will slightly modify our startup command. When running a staking node, we want it to run in the background, and we also want it to continue running when the terminal is closed, so we will use `nohup` and `&`. Also, since it's now running in the background and we won't be able to view the logs and errors, we add `> bee.log 2>&1 &` at the end which redirects all Bee logs into the `bee.log` file, and additionally redirects all standard output (stdout) and standard errors (stderr) into the same file.
 
@@ -217,6 +344,7 @@ nohup bee start \
   --password flummoxedgranitecarrot \
   --full-node \
   --swap-enable \
+  --bee-api 127.0.0.1:1633 \
   --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm > bee.log 2>&1 &
 ```
 
@@ -243,10 +371,6 @@ If the staking transaction is successful a `txHash` will be returned:
 ```
 
 We can view more details about our node with the `/status` endpoint:
-
-:::info
-The [`jq` utility](https://jqlang.github.io/jq/) is used here to automatically format the output from the Bee API. It can help make API output more readable. You may need to install it, the exact steps will depend on your Linux distro and package manager of choice. Also feel free to remove the `| jq` from the command as it is only a convenience, not a requirement.
-:::
 
 ```
 curl localhost:1633/status | jq
