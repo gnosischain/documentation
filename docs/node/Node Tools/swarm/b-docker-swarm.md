@@ -7,9 +7,6 @@ keywords: [swarm, storage, decentralized, decentralised, docker, docker compose]
 
 Docker containers for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
 
-:::caution
-While it is possible to run multiple Bee nodes on a single machine, due to the high rate of I/O operations required by a full Bee node in operation, it is not recommended to run more than a handful of Bee nodes on the same physical disk (depending on the disk speed). 
-:::
 
 :::caution
 In the examples below we specify the exact version number of the image using the 2.2.0 tag. It's recommended to only use the exact version number tags. You can find all available tags for Bee on [Docker Hub](https://hub.docker.com/r/ethersphere/bee/tags).
@@ -33,6 +30,11 @@ The guide below is for a full Bee node with staking. To run a light node (upload
 :::warning
 If you are running on a home Wi-Fi you may need to configure your router to use [port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide) or take other steps to ensure your node is reachable by other nodes on the network. See [here](https://docs.ethswarm.org/docs/bee/installation/connectivity/#navigating-through-the-nat) for more guidance. If you are running on a VPS or cloud based server you will likely have no issues.
 :::
+
+:::caution
+While it is possible to run multiple Bee nodes on a single machine, due to the high rate of I/O operations required by a full Bee node in operation, it is not recommended to run more than a handful of Bee nodes on the same physical disk (depending on the disk speed). 
+:::
+
 
 * Docker - [Get Docker](https://docs.docker.com/get-started/get-docker/) install instructions from the official docs.
 * Dual core, recent generation, 2ghz processor
@@ -241,72 +243,45 @@ curl -s  http://localhost:1633/status | jq
   "lastSyncedBlock": 36172390
 }
 ```
-We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. 
-
-To find out how long it will take to finish syncing, we can check our peer's status with the `/status/peers` endpoint:
-
-```bash
-curl -s  http://localhost:1633/status/peers | jq
-```
-The output from this will be extensive, but we only need to review a small section of it:
-
-```bash
-...
-    {
-      "overlay": "22cd0d2a15273c0a3043e750f4039edcce1a9c41a89b89252f0251b043c52297",
-      "proximity": 11,
-      "beeMode": "full",
-      "reserveSize": 2595113,
-      "reserveSizeWithinRadius": 2490862,
-      "pullsyncRate": 0,
-      "storageRadius": 11,
-      "connectedPeers": 195,
-      "neighborhoodSize": 5,
-      "batchCommitment": 74510761984,
-      "isReachable": true,
-      "lastSyncedBlock": 36172425
-    },
-    {
-      "overlay": "22cbe9286f116c30627a6efb6ae130ca4988e926ce38dd632a22c30fa55e3f9b",
-      "proximity": 11,
-      "beeMode": "full",
-      "reserveSize": 2493083,
-      "reserveSizeWithinRadius": 2490855,
-      "pullsyncRate": 0,
-      "storageRadius": 11,
-      "connectedPeers": 225,
-      "neighborhoodSize": 5,
-      "batchCommitment": 74510761984,
-      "isReachable": true,
-      "lastSyncedBlock": 36172425
-    },
-    {
-      "overlay": "22da691645f7ef8e1f4b67cf0f8209e092e199b4b2d26c57c2023603f3402968",
-      "proximity": 13,
-      "beeMode": "full",
-      "reserveSize": 2490864,
-      "reserveSizeWithinRadius": 2490855,
-      "pullsyncRate": 0,
-      "storageRadius": 11,
-      "connectedPeers": 214,
-      "neighborhoodSize": 5,
-      "batchCommitment": 74510761984,
-      "isReachable": true,
-      "lastSyncedBlock": 36172425
-    }
-  ]
-}
-```
-
-By checking the last few peers from the output we can see that the `reserveSize` is around 2490864 chunks. Given our own node's `pullsyncRate` of 497, syncing will take around and hour and a half (this time may vary significantly). Once our `pullsyncRate` goes to zero and our `reserveSize` matches that of our peers, our node is fully synced and we can then move on to staking.
-
+We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. However, we do not need to wait until our node is full synced before staking, so we can move directly to the next step.
 
 ### Step 6: Add Stake
 
-To add stake, make a POST request to the `/stake` endpoint and input the amount you wish to stake in PLUR as a parameter after `/stake`. For example, to stake an amount equal to 10 xBZZ:
+You can use the following command to stake 10 xBZZ:
 
 ```bash
-curl -X POST localhost:1633/stake/100000000000000000
+curl -XPOST localhost:1633/stake/100000000000000000
 ```
 
-Note that since we have mapped our host and container to the same port, we can use the default `1633` port to make our request. If you are running multiple nodes, make sure to update this command for other nodes which will be mapped to different ports on the host machine.
+If the staking transaction is successful a `txHash` will be returned:
+
+```
+{"txHash":"0x258d64720fe7abade794f14ef3261534ff823ef3e2e0011c431c31aea75c2dd5"}
+```
+
+We can view more details about our node with the `/status` endpoint:
+
+```
+curl localhost:1633/status | jq
+```
+
+Here we can see the `pullsyncRate` is about 482 chunks per second, meaning our node is still in the process of syncing chunks from the network. Once fully synced, this value should go to zero. This process can take several hours.
+
+```bash
+{
+  "overlay": "22d502d022de0f8e9d477bc61144d0d842d9d82b8241568c6fe4e41f0b466615",
+  "proximity": 256,
+  "beeMode": "full",
+  "reserveSize": 860973,
+  "reserveSizeWithinRadius": 645270,
+  "pullsyncRate": 482.1258095802469,
+  "storageRadius": 11,
+  "connectedPeers": 196,
+  "neighborhoodSize": 6,
+  "batchCommitment": 74511810560,
+  "isReachable": true,
+  "lastSyncedBlock": 36167475
+}
+```
+
+Congratulations! You have now installed your Bee node and are connected to the network as a full staking node. Your node will now be in the process of syncing chunks from the network. Once it is fully synced, your node will finally be eligible for earning staking rewards. 

@@ -97,6 +97,7 @@ Flags:
 Use "bee [command] --help" for more information about a command.
 ```
 
+
 ## Starting Bee
 
 Let's try starting up our node for the first time, make sure to pick a [strong password](https://xkcd.com/936/) of your own:
@@ -109,6 +110,22 @@ bee start \
   --bee-api 127.0.0.1:1633 \
   --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm
 ```
+:::info
+Command explained:
+
+1. **`bee start`**: This is the command to start the Bee node.
+
+2. **`--password flummoxedgranitecarrot`**: The password to decrypt the private key associated with the node. Replace "flummoxedgranitecarrot" with your actual password.
+
+3. **`--full-node`**: This option enables the node to run in full mode, sharing its disk with the network, and becoming eligible for staking.
+
+4. **`--swap-enable`**: This flag enables SWAP, which is the bandwidth incentives scheme for Swarm. It will initiate a transaction to set up the SWAP chequebook on Gnosis Chain (required for light and full nodes).
+
+5. **`--bee-api 127.0.0.1:1633`**: Specifies that the Bee API will be accessible locally only via `127.0.0.1` on port `1633` and not accessible to the public. 
+
+6. **`--blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm`**: Sets the RPC endpoint for interacting with the Gnosis blockchain (required for light and full nodes).
+:::
+
 
 Logs will begin printing to the terminal, and should look like this:
 
@@ -278,66 +295,10 @@ curl -s  http://localhost:1633/status | jq
 ```
 We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. 
 
-To find out how long it will take to finish syncing, we can check our peer's status with the `/status/peers` endpoint:
-
-```bash
-curl -s  http://localhost:1633/status/peers | jq
-```
-The output from this will be extensive, but we only need to review a small section of it:
-
-```bash
-...
-    {
-      "overlay": "22cd0d2a15273c0a3043e750f4039edcce1a9c41a89b89252f0251b043c52297",
-      "proximity": 11,
-      "beeMode": "full",
-      "reserveSize": 2595113,
-      "reserveSizeWithinRadius": 2490862,
-      "pullsyncRate": 0,
-      "storageRadius": 11,
-      "connectedPeers": 195,
-      "neighborhoodSize": 5,
-      "batchCommitment": 74510761984,
-      "isReachable": true,
-      "lastSyncedBlock": 36172425
-    },
-    {
-      "overlay": "22cbe9286f116c30627a6efb6ae130ca4988e926ce38dd632a22c30fa55e3f9b",
-      "proximity": 11,
-      "beeMode": "full",
-      "reserveSize": 2493083,
-      "reserveSizeWithinRadius": 2490855,
-      "pullsyncRate": 0,
-      "storageRadius": 11,
-      "connectedPeers": 225,
-      "neighborhoodSize": 5,
-      "batchCommitment": 74510761984,
-      "isReachable": true,
-      "lastSyncedBlock": 36172425
-    },
-    {
-      "overlay": "22da691645f7ef8e1f4b67cf0f8209e092e199b4b2d26c57c2023603f3402968",
-      "proximity": 13,
-      "beeMode": "full",
-      "reserveSize": 2490864,
-      "reserveSizeWithinRadius": 2490855,
-      "pullsyncRate": 0,
-      "storageRadius": 11,
-      "connectedPeers": 214,
-      "neighborhoodSize": 5,
-      "batchCommitment": 74510761984,
-      "isReachable": true,
-      "lastSyncedBlock": 36172425
-    }
-  ]
-}
-```
-
-By checking the last few peers from the output we can see that the `reserveSize` is around 2490864 chunks. Given our own node's `pullsyncRate` of 497, syncing will take around and hour and a half (this time may vary significantly). Once our `pullsyncRate` goes to zero and our `reserveSize` matches that of our peers, our node is fully synced and we can then move on to staking.
 
 ## Staking
 
-Now we're ready to begin staking, we will slightly modify our startup command. When running a staking node, we want it to run in the background, and we also want it to continue running when the terminal is closed, so we will use `nohup` and `&`. Also, since it's now running in the background and we won't be able to view the logs and errors, we add `> bee.log 2>&1 &` at the end which redirects all Bee logs into the `bee.log` file, and additionally redirects all standard output (stdout) and standard errors (stderr) into the same file.
+Now we're ready to begin staking, we will slightly modify our startup command so that it now runs in the background instead of taking control of our terminal:
 
 ```bash
 nohup bee start \
@@ -347,6 +308,14 @@ nohup bee start \
   --bee-api 127.0.0.1:1633 \
   --blockchain-rpc-endpoint https://rpc.gnosis.gateway.fm > bee.log 2>&1 &
 ```
+
+:::info
+1. **`nohup`**: This ensures that the `bee start` process will continue even after the terminal is closed.
+
+2. **`> bee.log 2>&1`**: Redirects both standard output and standard error to a log file called `bee.log`. 
+
+3. **`&`**: This sends the process to the background, allowing the terminal to be used for other commands while the Bee node continues running.
+:::
 
 Let's check the Bee API to confirm the node is running:
 
