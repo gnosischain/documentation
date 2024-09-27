@@ -4,7 +4,7 @@ keywords: [swarm, storage, decentralized, decentralised]
 ---
 
 
-# Swarm Quickstart
+# Swarm Quickstart Shell Script
 
 The following is a guide to get you started running a Bee full node with staking on Swarm using [the official shell script provided by Swarm](https://github.com/ethersphere/bee/blob/master/install.sh) which automatically detects your system and installs the correct version of Bee. 
 
