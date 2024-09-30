@@ -3,6 +3,8 @@ description: A quickstart guide for getting up and running with Swarm as quick a
 keywords: [swarm, storage, decentralized, decentralised]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Swarm Quickstart Shell Script
 
@@ -61,17 +63,31 @@ Run the install shell script using either `curl` or `wget`:
 In the example below, the version is specified using `TAG=v2.2.0`, make sure that you [check if there is a newer tagged version of Bee](https://github.com/ethersphere/bee/tags) and if so, modify the commands below to use the most recent tag number so that you have the latest version of Bee.
 :::
 
+
+<Tabs
+defaultValue="curl"
+values={[
+{label: 'Curl', value: 'curl'},
+{label: 'Wget', value: 'wget'},
+]}>
+
+<TabItem value="curl">
+
+```bash
+curl -s https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.2.0 bash
+```
+</TabItem>
+<TabItem value="wget">
+
 **wget**
 
 ```bash
 wget -q -O - https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.2.0 bash
 ```
+</TabItem>
 
-**curl**
-
-```bash
-curl -s https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.2.0 bash
-```
+</Tabs>
+ 
 Let's check that the script ran properly:
 
 ```bash=
