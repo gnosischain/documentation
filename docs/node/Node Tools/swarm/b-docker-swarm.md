@@ -5,7 +5,7 @@ keywords: [swarm, storage, decentralized, decentralised, docker, docker compose]
 
 # Swarm with Docker
 
-The following is a guide to get you started running a Bee full node with staking on Swarm using Docker. Docker containers for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
+The following is a guide to get you started running a Bee full node with staking on Swarm using Docker. Docker images for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
 
 :::caution
 In the examples below we specify the exact version number of the image using the 2.2.0 tag. It's recommended to only use the exact version number tags. Make sure to check that you're on the latest version of Bee by reviewing the tags for Bee on [Docker Hub](https://hub.docker.com/r/ethersphere/bee/tags), and replace 2.2.0 in the commands below if there is a newer full release. 
@@ -26,7 +26,7 @@ The guide below is for a full Bee node with staking. To run a light node (upload
 ### Hardware
 
 :::warning
-If you are running on a home Wi-Fi you may need to configure your router to use [port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide) or take other steps to ensure your node is reachable by other nodes on the network. See [here](https://docs.ethswarm.org/docs/bee/installation/connectivity/#navigating-through-the-nat) for more guidance. If you are running on a VPS or cloud based server you will likely have no issues.
+If you are running on a home network you may need to configure your router to use [port forwarding](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide) or take other steps to ensure your node is reachable by other nodes on the network. See [here](https://docs.ethswarm.org/docs/bee/installation/connectivity/#navigating-through-the-nat) for more guidance. If you are running on a VPS or cloud based server you will likely have no issues.
 :::
 
 :::caution
@@ -62,7 +62,8 @@ This section will guide you through setting up and running a single Bee full nod
 ### Start node
 
 ```bash
-docker run -d --rm --name bee-1 \
+docker run -d --name bee-1 \
+  --restart always \
   -p 127.0.0.1:1633:1633 \
   -p 1634:1634 \
   -e BEE_API_ADDR=":1633" \
@@ -77,13 +78,13 @@ docker run -d --rm --name bee-1 \
 Here is the same command in a single line in case you run into issues with the line breaks in the command above:
 
 ```bash
-docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
+docker run -d --name bee-1 --restart always -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
 ```
 
 #### Command explained:
 
 - **`-d`**: Runs the container in the background.
-- **`--rm`**: Automatically removes the container when it stops (however, importantly, the Docker volume which contains your node's data will NOT be removed).
+- **`--restart always`**: Sets the [restart policy](https://docs.docker.com/engine/containers/start-containers-automatically/) for the container to `always`
 - **`--name bee-1`**: Names the container `bee-1`.
 - **`-p 127.0.0.1:1633:1633`**: Exposes the API on port 1633, only accessible locally.
 - **`-p 1634:1634`**: Exposes the P2P port 1634 to the public.
@@ -98,7 +99,7 @@ docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_A
 This setup runs the Bee node in a container, with full-node functionality, SWAP enabled, and connections to the Gnosis blockchain for chequebook and postage stamp management, while persisting its data using a volume. 
 
 :::info
-Here we have included the password as part of the start command by setting it as an environment variable with `-e BEE_PASSWORD="flummoxedgranitecarrot"`. You may wish to use a password file instead, which can be set with the `BEE_PASSWORD_FILE` command. However this will likely require some modifications on your host machine, which will vary from system to system.
+We have included the password as part of the start command by setting it as an environment variable with `-e BEE_PASSWORD="flummoxedgranitecarrot"`. You may wish to use a password file instead, which can be set with the `BEE_PASSWORD_FILE` command. However this will likely require some modifications on your host machine, the details of which will vary from system to system.
 :::
 
 ```bash
@@ -119,7 +120,7 @@ And check the logs:
 docker logs -f bee-1
 ```
 
-The output should contain a line which prints the address of your node. Copy this address and save it for use in the next section.
+The output should contain a line which prints a message notifying you of the minimum required xDAI for running a node as well as the address of your node. Copy the address and save it for use in the next section.
 
 ```bash
 "time"="2024-09-24 22:06:51.363708" "level"="warning" "logger"="node/chequebook" "msg"="cannot continue until there is at least min xDAI (for Gas) available on address" "min_amount"="0.0003576874793" "address"="0x91A7e3AC06020750D32CeffbEeFD55B4c5e42bd6"
@@ -169,7 +170,7 @@ You can start with just 2 or 3 xBZZ for uploading small amounts of data, but you
 After you have a small amount of xDAI in your node's Gnosis Chain address, you can now restart your node using the same command as before so that it can issue the required smart contract transactions and also sync data. 
 
 ```bash
-docker run -d --rm --name bee-1 -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
+docker start bee-1
 ```
 
 Let's check the logs to see what's happening:
@@ -276,7 +277,7 @@ curl -s  http://localhost:1633/status | jq
   "lastSyncedBlock": 36172390
 }
 ```
-We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. However, we do not need to wait until our node is full synced before staking, so we can move directly to the next step.
+We can see that our node has not yet finished syncing chunks since the `pullsyncRate` is around 497 chunks per second. Once the node is fully synced, this value will go to zero. It can take several hours for syncing to complete, but we do not need to wait until our node is full synced before staking, so we can move directly to the next step. 
 
 ### Stake node
 
@@ -292,38 +293,25 @@ If the staking transaction is successful a `txHash` will be returned:
 {"txHash":"0x258d64720fe7abade794f14ef3261534ff823ef3e2e0011c431c31aea75c2dd5"}
 ```
 
-We can view more details about our node with the `/status` endpoint:
-
-```
-curl localhost:1633/status | jq
-```
-
-Here we can see the `pullsyncRate` is about 482 chunks per second, meaning our node is still in the process of syncing chunks from the network. Once fully synced, this value should go to zero. This process can take several hours.
+We can also confirm that our node has been staked with the `/stake` endpoint:
 
 ```bash
-{
-  "overlay": "22d502d022de0f8e9d477bc61144d0d842d9d82b8241568c6fe4e41f0b466615",
-  "proximity": 256,
-  "beeMode": "full",
-  "reserveSize": 860973,
-  "reserveSizeWithinRadius": 645270,
-  "pullsyncRate": 482.1258095802469,
-  "storageRadius": 11,
-  "connectedPeers": 196,
-  "neighborhoodSize": 6,
-  "batchCommitment": 74511810560,
-  "isReachable": true,
-  "lastSyncedBlock": 36167475
-}
+curl localhost:1633/stake
+```
+
+The results will be displayed in PLUR units (1 PLUR is equal to 1e-16 xBZZ). If you have properly staked the minimum 10 xBZZ, you should see the output below:
+
+```bash
+{"stakedAmount":"100000000000000000"}
 ```
 
 Congratulations! You have now installed your Bee node and are connected to the network as a full staking node. Your node will now be in the process of syncing chunks from the network. Once it is fully synced, your node will finally be eligible for earning staking rewards. 
 
-### Logs and Monitoring
+### Logs and monitoring
 
 Docker provides convenient built-in tools for logging and monitoring your node, which you've already encountered if you've read through earlier sections of this guide.
 
-**Viewing Node Logs:**
+**Viewing node logs:**
 
 To monitor your node’s logs in real-time, use the following command:
 
@@ -333,21 +321,42 @@ docker logs -f bee-1
 
 This command will continuously output the logs of your Bee node, helping you track its operations. The `-f` flag ensures that you see new log entries as they are written. Press `Ctrl + C` to stop following the logs.
 
-**Checking the Node's Status**
+You can read more about how Docker manages container logs [in their official docs](https://docs.docker.com/reference/cli/docker/container/logs/).
 
-To view general information about your Bee node's Docker container, including its uptime and port mappings, run:
+**Checking the Node's status with the Bee API**
 
-```bash
-docker ps
-```
-
-This will provide an overview of your running containers, including your Bee node, as shown below:
+To check your node's status as a staking node, we can use the `/redistributionstate` endpoint:
 
 ```bash
-CONTAINER ID   IMAGE                   COMMAND       CREATED         STATUS         PORTS
-                                   NAMES
-1384b686047b   ethersphere/bee:2.2.0   "bee start"   4 minutes ago   Up 4 minutes   127.0.0.1:1633->1633/tcp, 0.0.0.0:1634->1634/tcp, :::1634->1634/tcp   bee-1
+curl -s http://localhost:1633/redistributionstate | jq
 ```
+
+Below is the output for a node which has been running for several days:
+
+```bash
+{
+  "minimumGasFunds": "11080889201250000",
+  "hasSufficientFunds": true,
+  "isFrozen": false,
+  "isFullySynced": true,
+  "phase": "claim",
+  "round": 212859,
+  "lastWonRound": 207391,
+  "lastPlayedRound": 210941,
+  "lastFrozenRound": 210942,
+  "lastSelectedRound": 212553,
+  "lastSampleDuration": 491687776653,
+  "block": 32354719,
+  "reward": "1804537795127017472",
+  "fees": "592679945236926714",
+  "isHealthy": true
+}
+```
+
+For a complete breakdown of this output, check out [this section in the Bee docs](https://docs.ethswarm.org/docs/bee/working-with-bee/bee-api#redistributionstate).
+
+You can read more other important endpoints for monitoring your Bee node in the [official Bee docs](https://docs.ethswarm.org/docs/bee/working-with-bee/bee-api), and you can find complete information about all available endpoints in [the API reference docs](https://docs.ethswarm.org/api/).
+
 
 **Stopping Your Node**
 
@@ -358,13 +367,3 @@ docker stop bee-1
 ```
 
 Replace `bee-1` with the name of your node if you've given it a different name.
-
-:::info
-Since we used the `--rm` flag when starting the container, the container will be automatically removed once stopped. This means you cannot restart the container using the `docker start` command:
-
-```bash
-docker start bee-1
-```
-
-If you'd like to preserve the container for later restarts, remove the `--rm` flag when starting the container, which will allow you to stop and restart it as needed.
-:::

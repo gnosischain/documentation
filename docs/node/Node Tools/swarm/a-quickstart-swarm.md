@@ -363,6 +363,18 @@ If the staking transaction is successful a `txHash` will be returned:
 ```
 {"txHash":"0x258d64720fe7abade794f14ef3261534ff823ef3e2e0011c431c31aea75c2dd5"}
 ```
+
+We can also confirm that our node has been staked with the `/stake` endpoint:
+
+```bash
+curl localhost:1633/stake
+```
+
+The results will be displayed in PLUR units (1 PLUR is equal to 1e-16 xBZZ). If you have properly staked the minimum 10 xBZZ, you should see the output below:
+
+```bash
+{"stakedAmount":"100000000000000000"}
+```
  
 Congratulations! You have now installed your Bee node and are connected to the network as a full staking node. Your node will now be in the process of syncing chunks from the network. Once it is fully synced, your node will finally be eligible for earning staking rewards. 
 
@@ -395,3 +407,37 @@ bashtop
 We can use the `f` key to filter for our Bee node's specific process by searching for the `bee` keyword (use the arrow keys to navigate and `enter` to select). From here we can view info about our node's process, or shut it down using the `t` key (for "terminate").
 
 ![](/img/node/bashtop_02.png)
+
+**Checking the Node's status with the Bee API**
+
+To check your node's status as a staking node, we can use the `/redistributionstate` endpoint:
+
+```bash
+curl -s http://localhost:1633/redistributionstate | jq
+```
+
+Below is the output for a node which has been running for several days:
+
+```bash
+{
+  "minimumGasFunds": "11080889201250000",
+  "hasSufficientFunds": true,
+  "isFrozen": false,
+  "isFullySynced": true,
+  "phase": "claim",
+  "round": 212859,
+  "lastWonRound": 207391,
+  "lastPlayedRound": 210941,
+  "lastFrozenRound": 210942,
+  "lastSelectedRound": 212553,
+  "lastSampleDuration": 491687776653,
+  "block": 32354719,
+  "reward": "1804537795127017472",
+  "fees": "592679945236926714",
+  "isHealthy": true
+}
+```
+
+For a complete breakdown of this output, check out [this section in the Bee docs](https://docs.ethswarm.org/docs/bee/working-with-bee/bee-api#redistributionstate).
+
+You can read more other important endpoints for monitoring your Bee node in the [official Bee docs](https://docs.ethswarm.org/docs/bee/working-with-bee/bee-api), and you can find complete information about all available endpoints in [the API reference docs](https://docs.ethswarm.org/api/).
