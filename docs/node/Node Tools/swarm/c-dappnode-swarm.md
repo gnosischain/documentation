@@ -84,3 +84,5 @@ In order to earn rewards, your bee node must stake a minimum of `10` xBZZ. Once 
 - Swarm Documentation - https://docs.ethswarm.org/
 - Swarm Repo - https://github.com/ethersphere/bee
 - Swarm Dappnode Package Repo - https://github.com/w3rkspacelabs/dappnodepackage-swarm 
+
+
