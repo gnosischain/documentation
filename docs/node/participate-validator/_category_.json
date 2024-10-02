@@ -1,0 +1,9 @@
+{
+    "position": 4,
+    "label": "Participate as a Validator",
+    "collapsible": true,
+    "collapsed":true,
+    "link": {
+      "type": "generated-index"
+    }
+  }
