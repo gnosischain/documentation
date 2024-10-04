@@ -60,7 +60,8 @@ Oct 02, 2024
 # Chain Infra
 
 * **Gateway**
-  * Gateway: Created new extended feature batch limit
+  * Gateway: Created new extended feature batch limit.
+ 	 * allowing 500 requests
   * RPC works well with the latest version.
 
 # Innovation
@@ -71,7 +72,7 @@ Oct 02, 2024
     * Working on next iteration. Tomorrow will be live
         * New deployment on Chiado
     * Nethermind: 
-        * Started pay discovery
+        * peer discovery testing is underway
     * Erigon: 
         * Team working on for implementation
         * New team member!
