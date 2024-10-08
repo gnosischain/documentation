@@ -8,7 +8,7 @@ keywords: [gnosis, gnosis twitter, gnosis telegram, gnosis discord, governance f
 
 - [Twitter](https://twitter.com/gnosischain)
 - [YouTube](https://www.youtube.com/GnosisChain)
-- [Email newsletter](https://gnosischain.ghost.io/)
+- [Email newsletter](https://gnosis.ghost.io/)
 - [Validator Newsletter](https://gnosisvalidator.substack.com/)
 
 ## Community 
