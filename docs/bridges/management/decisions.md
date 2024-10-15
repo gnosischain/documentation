@@ -8,27 +8,42 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
-## Unlock 5.4k EURe due to a Bridge App bug 
+## Upgrade AMB implementation contract for Hashi integraion, remove Telepathy validator, refund TRAC token due to accidental transfer
+
+🗳 Justification:
+
+1. Upgrade AMB proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
+   1. Foreign AMB implementation contract: [0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316](https://etherscan.io/address/0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316#readContract), version: 6
+   2. Home AMB Implementation contract: [0xA033535983d1aBcc2648af730EDCb198909903D7](https://gnosis.blockscout.com/address/0xA033535983d1aBcc2648af730EDCb198909903D7#code), version: 6
+2. Remove Telepathy from AMB’s validator list
+   1. Succinct Labs is deprecating the Telepathy platform; thus, we are removing Telepathy [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) from validator list. We will add the new SP1 based implementation when ready.
+3. Unlock TRAC token to users
+   1. Users transferred TRAC token directly into Omnibridge instead of calling relayTokens, resulting in TRAC token locked in Omnibridge: https://etherscan.io/tx/0xf1192bff538080c848ecbf9385a63656ddc5312e51e97d09debf7b06a25316e9. We will bridge the locked TRAC token to Gnosis Chain so that users can receive the token.
+
+✅ Implemented: Sept 23, 2024
+
+## Unlock 5.4k EURe due to a Bridge App bug
+
 🗳 Justification:
 Due to a bug in the new Bridge App (calling `transfer` instead of `relayTokens` ), which in the meantime has been fixed, 5.4k EURe were accidentally locked in the bridge.
 The proposal will mint 5.4k Omnibridge EURe (not canonical EURe) on Ethereum (based on the 5.4k canonical EURe that were locked on Gnosis chain side), so that the user can send it back to Omnibridge and unlock their EURe on Gnosis Chain.
 
-✅ Implemented: Apr 22, 2023
-
+✅ Implemented: Apr 22, 2024
 
 ## Onboarding EURC.e to Gnosis Chain, reset default dailyLimit and executionDailyLimit, remove fees for existing tokens, replace Telepathy validator address
+
 🗳 Justification:
-1. To comply with Circle’s bridged token standard, we have deployed Bridged EURC on the Gnosis Chain. Unlike the typical bridged token from Omnibridge, Bridged EURC on Gnosis Chain uses the latest version of the FiatToken standard, v2.2. Therefore, registering Bridged EURC on Gnosis Chain’s Omnibridge and setting default values for dailyLimit and executionDailyLimit are necessary to meet the token bridge limit requirements. Setting default dailyLimit and executionDailyLimit will not affect the current bridged token, but only newly bridged token, and it can be reset for individual tokens by calling setDailyLimit and setExecutionDailyLimit through governance process. 
-    - Bridged EURC on Gnosis Chain (EURC.e): 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6
-    - new default dailyLimit: 10000000000000000000000000000000000010
-    - new default executionDailyLimit: 10000000000000000000000000000000000010
+
+1. To comply with Circle’s bridged token standard, we have deployed Bridged EURC on the Gnosis Chain. Unlike the typical bridged token from Omnibridge, Bridged EURC on Gnosis Chain uses the latest version of the FiatToken standard, v2.2. Therefore, registering Bridged EURC on Gnosis Chain’s Omnibridge and setting default values for dailyLimit and executionDailyLimit are necessary to meet the token bridge limit requirements. Setting default dailyLimit and executionDailyLimit will not affect the current bridged token, but only newly bridged token, and it can be reset for individual tokens by calling setDailyLimit and setExecutionDailyLimit through governance process.
+   - Bridged EURC on Gnosis Chain (EURC.e): 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6
+   - new default dailyLimit: 10000000000000000000000000000000000010
+   - new default executionDailyLimit: 10000000000000000000000000000000000010
 2. Removing the fee of the following tokens as well as setting default fee to 0, meaning all the future newly bridged token from Omnibridge will be zero fee.
-    BAL, PNK, CRV, CRVUSD, LINK, HOPR, COW, DXD, WSTETH 
+   BAL, PNK, CRV, CRVUSD, LINK, HOPR, COW, DXD, WSTETH
 3. Increasing the daily and transactions limits for: WETH, WBTC, GNO, USDC, USDT, HOPR
 4. Replacing Telepathy validator address with a new one.
 
-✅ Implemented: Mar 13, 2023
-
+✅ Implemented: Mar 13, 2024
 
 ## Increase required block confirmation for AMB to 130 blocks, remove Autonolas LP token fee
 
@@ -130,7 +145,7 @@ More details on the design: https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn
 
 ## Disable Deposit Function in StakingAura POSDAO contract
 
-🗳 Justification: Staking is deprecated in POSDAO. Current validators will continue until the Gnosis Chain  {'<->'} Gnosis Beacon Chain merge but no new deposits are allowed.
+🗳 Justification: Staking is deprecated in POSDAO. Current validators will continue until the Gnosis Chain {'<->'} Gnosis Beacon Chain merge but no new deposits are allowed.
 
 ✅ Implemented: June 14, 2022
 
