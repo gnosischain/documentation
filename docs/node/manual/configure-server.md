@@ -37,10 +37,10 @@ Some users recommend using [Chrony](https://chrony.tuxfamily.org/) as a [method 
 :::
 
 ### Create JWT
-<!-- Create a fix for rendering  -->
-<!-- import JwtGenerationPartial from '@site/docs/node/manual/server/_partials/_jwt-generation-partial.mdx';
 
-<JwtGenerationPartial /> -->
+import JwtGenerationPartial from '@site/docs/node/manual/server/_partials/_jwt-generation-partial.md';
+
+<JwtGenerationPartial />
 
 ## Set up Networking
 
