@@ -6,7 +6,7 @@ title: Erigon
 
 Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations. Erigon is written in Go and licensed under the GNU LGPLv3.
 
-Repository: [https://github.com/ledgerwatch/erigon](https://github.com/ledgerwatch/erigon)
+Repository: [https://github.com/erigontech/erigon](https://github.com/erigontech/erigon)
 
 There are 2 main options for running Erigon:
 
@@ -39,7 +39,7 @@ version: "3"
 services:
   execution:
     container_name: execution
-    image: thorax/erigon:devel
+    image: erigontech/erigon:latest
     restart: unless-stopped
     volumes:
       - /home/$USER/gnosis/execution:/home/erigon/.local/share/erigon
