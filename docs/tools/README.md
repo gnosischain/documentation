@@ -11,6 +11,7 @@ A home to all developer tools that would be helpful when you would be building d
 - Faucets
 - Oracles
 - RPC Providers
+- User Onboarding
 - Wallets
 
 If you would like to request your product as part of developer tool for Gnosis Chain ecosystem, you can share request here. 
