@@ -12,7 +12,7 @@ Nethermind currently holds the supermajority client position on Gnosis Chain. We
 
 **Nethermind reference:**
 
-[https://docs.nethermind.io/nethermind/](https://docs.nethermind.io/nethermind/)
+[Nethermind documentation](https://docs.nethermind.io)
 
 There are 2 main options for running Nethermind:
 * Option 1: [Using Docker](#using-docker)
@@ -79,20 +79,20 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     command: |
-      --config=gnosis
-      --datadir=/data
-      --log=INFO
-      --Sync.SnapSync=false
-      --JsonRpc.Enabled=true
-      --JsonRpc.Host=0.0.0.0
-      --JsonRpc.Port=8545
-      --JsonRpc.EnabledModules=[Web3,Eth,Subscribe,Net,]
-      --JsonRpc.JwtSecretFile=/jwt.hex
-      --JsonRpc.EngineHost=0.0.0.0
-      --JsonRpc.EnginePort=8551
-      --Network.DiscoveryPort=30303
-      --HealthChecks.Enabled=false
-      --Pruning.CacheMb=2048
+      --config gnosis
+      --datadir /data
+      --log INFO
+      --Sync.SnapSync false
+      --JsonRpc.Enabled true
+      --JsonRpc.Host 0.0.0.0
+      --JsonRpc.Port 8545
+      --JsonRpc.EnabledModules [web3,eth,subscribe,net]
+      --JsonRpc.JwtSecretFile /jwt.hex
+      --JsonRpc.EngineHost 0.0.0.0
+      --JsonRpc.EnginePort 8551
+      --Network.DiscoveryPort 30303
+      --HealthChecks.Enabled false
+      --Pruning.CacheMb 2048
     logging:
       driver: "local"
 
@@ -147,31 +147,28 @@ docker-compose up -d
 
 ### Installing Nethermind {#installing-nethermind}
 
-[https://downloads.nethermind.io/](https://downloads.nethermind.io/)
-
+[github.com/nethermindeth/nethermind/releases/latest](https://github.com/NethermindEth/nethermind/releases/latest)
 
 ### Running Nethermind {#running-nethermind}
 
-Nethermind has ‘Nethermind launcher’ an easy GUI where you can configure your node from release.
-
-[https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#running-release)
+[docs.nethermind.io/get-started/running-node](https://docs.nethermind.io/get-started/running-node)
 
 Windows
 ```
 # Gnosis Mainnet
-./nethermind --config gnosis --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+./nethermind --config gnosis --JsonRpc.JwtSecretFile path/to/jwt.hex
 
 # Chiado Testnet
-./nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+./nethermind --config chiado --JsonRpc.JwtSecretFile path/to/jwt.hex
 ```
 
-Linux and MAC
+Linux and macOS
 ```
 # Gnosis Mainnet
-nethermind --config gnosis --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+nethermind --config gnosis --JsonRpc.JwtSecretFile path/to/jwt.hex
 
 # Chiado Testnet
-nethermind --config chiado --JsonRpc.JwtSecretFile=<PATH to jwt.hex>
+nethermind --config chiado --JsonRpc.JwtSecretFile path/to/jwt.hex
 ```
 
 
@@ -187,6 +184,6 @@ Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from
 
 ```yaml
     command: |
-      --config=gnosis_archive
+      --config gnosis_archive
 ```
 
