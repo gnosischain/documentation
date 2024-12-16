@@ -1,15 +1,14 @@
 ---
 sidebar_position: 6
 title: Bridge Management
-description: The bridge management includes management of bridge governors and bridge validators. 
+description: The bridge management includes management of bridge governors and bridge validators.
 keywords: [bridge management, bridge governance, bridge validator]
 ---
 
 Bridge Management encompasses the governance and coordination of bridge-related operations and events. It involves two distinct entities: Bridge Governors and Bridge Validators. Bridge Governors oversee bridge operations on both the Ethereum and Gnosis sides, making critical decisions on bridge parameters and validator settings. Bridge Validators ensure the accurate and timely relaying of messages by monitoring event emissions, validating the associated logic, and invoking the relevant functions on the destination chain.
 
-
-
 ## Bridge Governance
+
 ### Overview
 
 In response to increased usage and value locked in the xDai bridge and Omnibridge, a proposal was introduced to extend security and decision making powers to a wider group of participants (governors).
@@ -45,10 +44,10 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 | Gnosis Bridge Team | eth:0x4b5F5231e2F08Ad49d79Ce5672A8339a63Cfbd43 <br /> gno:0xEF138856d0581641A57245Ee5CFfc9ceaA059623 |
 | Giveth             | 0x839395e20bbB182fa440d08F850E6c7A8f6F0780                                                           |
 | KarpatkeyDAO       | 0xb8173f558f75EE263013fd6294177bf75279a21e                                                           |
-| 1Hive              | 0x86Da253817DC599059e3AD5A1F098F7b96aBf34c                                                           |
+| Hopr               | 0xA07888742c18d7e658132AE0148fF205fFF46481                                                           |
 | Peerion            | 0x1685324Bf373670ad5C9c56bd88A1dc1C063b0f9                                                           |
 | 01Node             | 0x0101016044726994aFd16f4A99f0d960090D35e7                                                           |
-| Cow Protocol       | 0xAC0622953d25e1a6c4e0f32Ffc1A9C1cE350B60E                                                           |
+| Cow Protocol       | 0xf59e447e97bc03c2b0c5719e2e551f0b15b724e5                                                           |
 | Safe               | 0xDdf2d07267EAF2cE3E13ee4319bE1F34D55ed992                                                           |
 | Agave              | 0xc44caeb7F0724A156806664d2361fD6f32a2d2C8                                                           |
 
@@ -70,7 +69,6 @@ Post created on the Gnosis Forum in the [GnosisDAO](https://forum.gnosis.io/). T
 Check out all the governance decisions in the past in [Governance Decisions](decisions.md)!
 :::
 
-
 ### Governor: Upgrading a Contract
 
 There are two possible scenarios for how the bridge or validators contracts can be upgraded:
@@ -84,8 +82,8 @@ There are two possible scenarios for how the bridge or validators contracts can 
 4. Create the transaction on using [Governor's Safe](README.md#bridge-governor-multisig) and let all the governors sign the message.
 5. Once the threshold is reached, execute the transaction.
 
-
 ### Governor: Adding/Removing a validator
+
 1. Call `addValidator(address validator)` or `removeValidator(address validator)` in the [Governor's Safe](README.md#bridge-governor-multisig) to add or remove a validator.
 2. (Optional) Call `setRequiredSignatures(uint256 _requiredSignatures)` to update the required signatures in order to execute a message.
 
@@ -93,14 +91,12 @@ There are two possible scenarios for how the bridge or validators contracts can 
 
 Different limits are set for the [xDai Bridge](../Token%20Bridge/xdai-bridge.md#fees--daily-limits) and the [OmniBridge](../Token%20Bridge/omnibridge.md#fees--daily-limits) by the bridge governors. Please see their respective documentation pages for more information.
 
-
 ## Bridge Validators
 
 Bridge Validators monitor events on both sides of the chains to ensure that the user's bridging requests are validated promptly. In the Gnosis Chain, there are both trusted and trustless validators. [Telepathy](/bridges/Token%20Bridge/amb-bridge#how-it-works-with-telepathy-validator), a trustless ZK-based validator on AMB, secures transactions using zero-knowledge proofs, while the rest of the validators sign the message to validate the message. The threshold of signatures from validators has to be reached in order to execute the message on the destination chain.
 
 - [xDai Bridge Validators](/bridges/management/validators#xdai-bridge)
 - [AMB & OmniBridge Validators](/bridges/management/validators#amb--omnibridge)
-
 
 ```mdx-code-block
 <details>
@@ -251,8 +247,8 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
 </details>
 ```
 
-
 ## Summary of different roles in bridge
+
 - **Governor** role (representation of a multisig contract):
   - add/remove validators
   - set daily limits on either direction
@@ -270,8 +266,3 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
     - In xDAI bridge: Send DAI token to the Foreign xDAI Bridge to receive xDAI token from the Home xDAI Bridge, send xDAI token to the Home xDAI Bridge to unlock DAI token from the Foreign xDAI Bridge;
     - In AMB: Invoke Home/Foreign Bridge to send a message that will be executed on the other chain as an arbitrary contract method invocation;
     - In Omnibridge: Approve & relay ERC20 tokens to the Foreign Omnibridge which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home chain, and transfer ERC20 tokens to the Home Omnibridge which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign chain.
-
-
-
-
-

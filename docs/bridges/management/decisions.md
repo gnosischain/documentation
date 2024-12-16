@@ -8,6 +8,16 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Increase required block confirmation for AMB to 175 blocks, replace CowSwap’s lost address, and replace 1Hive with Hopr
+
+🗳 Justification:
+
+1. Governor wallet: Replace CowSwap’s lost address `0xAC0622953d25e1a6c4e0f32Ffc1A9C1cE350B60E` with new address `0xf59e447e97bc03c2b0c5719e2e551f0b15b724e5`
+2. Governor wallet: Replace 1Hive `0x86Da253817DC599059e3AD5A1F098F7b96aBf34c` with Hopr `0xA07888742c18d7e658132AE0148fF205fFF46481`.
+3. Foreign AMB: Increase `requiredBlockConfirmation` from 130 to 175 to wait for Light Client based oracle to generate the event proof.
+
+✅ Implemented: Dec 16, 2024
+
 ## Upgrade AMB implementation contract for Hashi integraion, remove Telepathy validator, refund TRAC token due to accidental transfer
 
 🗳 Justification:
