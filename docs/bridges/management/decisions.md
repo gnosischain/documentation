@@ -8,6 +8,7 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+
 ## Increase required block confirmation for AMB to 175 blocks, replace CowSwap’s lost address, and replace 1Hive with Hopr
 
 🗳 Justification:
