@@ -74,7 +74,7 @@ Dec 11, 2024
 ### Reth
 * Had issues with post-block processing, the state wasn’t getting committed to the database
     * This was fixed and ~1000 blocks were synced successfully after the merge
-* Working on a Reth <> Hive integration
+* Working on a Reth and Hive integration
 
 
 # Pectra
