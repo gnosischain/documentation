@@ -17,7 +17,7 @@ Repository: [https://github.com/gnosischain/go-ethereum](https://github.com/gnos
 > go install ./cmd/geth
 ```
 
-### Running Nethermind
+### Running geth
 
 ```
 # Gnosis Mainnet
