@@ -136,7 +136,7 @@ Running a Gnosis node requires no different hardware configuration from other no
 
 | Hardware                                            | Price (USD) |
 | --------------------------------------------------- | ----------- |
-| [Rock 5B board(16GB)](https://twitter.com/theradxa) | $189        |
+| [Rock 5B board(16GB)](http://radxa.com/products/rock5/5b/) | $189        |
 | Acrylic case with passive heatsink                  | $13         |
 | Crucial P2 NVMe SSD 2TB                             | $140        |
 | MicroSD                                             | $8          |
