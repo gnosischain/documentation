@@ -1,9 +1,4 @@
 ---
-title: Gnosis Core Devs Call Notes
-
----
-
----
 title: Core Devs Call - 12/18/2024
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, Gnosis Chain]
