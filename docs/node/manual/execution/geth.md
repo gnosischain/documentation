@@ -19,6 +19,7 @@ Repository: [https://github.com/gnosischain/go-ethereum](https://github.com/gnos
 
 ### Running geth
 
+
 ```
 # Gnosis Mainnet
 > geth --gnosis --authrpc.jwtsecret /path/to/jwt.hex
