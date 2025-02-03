@@ -8,7 +8,7 @@ keywords: [bridge validator]
 
 Unlike bridge governance, a bridge validator in Gnosis Chain is an entity responsible for monitoring event emissions from one blockchain, validating the associated logic, signing the validated events, and subsequently invoking the relevant functions on the destination chain to confirm the validation.
 
-Bridge validators are formed by different trusted entities such as Gnosis DAO, Safe, etc, and trustless entity such as Succinct Labs Telepathy for AMB.
+Bridge validators are formed by different trusted entities such as Gnosis DAO, Safe, etc, and trustless entity such as Hashi for AMB.
 
 ## AMB & Omnibridge
 
@@ -28,7 +28,6 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 | [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
 | [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://gnosisscan.io/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) | Gateway           |
-| [gno:0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) | Telepathy         |
 
 </TabItem>
 
