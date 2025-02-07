@@ -32,24 +32,24 @@ Operations may include:
 
 There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a proposal.
 
-| Governor           | Address                                                                                              |
-| ------------------ | ---------------------------------------------------------------------------------------------------- |
-| GnosisDAO          | 0x57B11cC8F93f2cfeC4c1C5B95213f17cAD81332B                                                           |
-| Metacartel         | 0xd945325557f1FB4374fBf10Ae86D385632Df870A                                                           |
-| RaidGuild          | 0xd26a3F686D43f2A62BA9eaE2ff77e9f516d945B9                                                           |
-| Protofire          | 0x80BA18503a1Fa16Ea22F3ef1Af23e2994EaC1d97                                                           |
-| Succinct Labs      | 0x72Ff26D9517324eEFA89A48B75c5df41132c4f54                                                           |
-| Lab10              | 0x10DD75875a2a8a284529Ae7223B1aCE410d606bd                                                           |
-| Gateway            | 0x5b10cE4DDD27F57d4D432D409A5321219cbA7893                                                           |
-| Gnosis Bridge Team | eth:0x4b5F5231e2F08Ad49d79Ce5672A8339a63Cfbd43 <br /> gno:0xEF138856d0581641A57245Ee5CFfc9ceaA059623 |
-| Giveth             | 0x839395e20bbB182fa440d08F850E6c7A8f6F0780                                                           |
-| KarpatkeyDAO       | 0xb8173f558f75EE263013fd6294177bf75279a21e                                                           |
-| Hopr               | 0xA07888742c18d7e658132AE0148fF205fFF46481                                                           |
-| Peerion            | 0x1685324Bf373670ad5C9c56bd88A1dc1C063b0f9                                                           |
-| 01Node             | 0x0101016044726994aFd16f4A99f0d960090D35e7                                                           |
-| Cow Protocol       | 0xf59e447e97bc03c2b0c5719e2e551f0b15b724e5                                                           |
-| Safe               | 0xDdf2d07267EAF2cE3E13ee4319bE1F34D55ed992                                                           |
-| Agave              | 0xc44caeb7F0724A156806664d2361fD6f32a2d2C8                                                           |
+| Governor                  | Address                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| GnosisDAO                 | 0x57B11cC8F93f2cfeC4c1C5B95213f17cAD81332B                                                           |
+| Metacartel                | 0xd945325557f1FB4374fBf10Ae86D385632Df870A                                                           |
+| Kleros                    | 0xb2a33ae0E07fD2ca8DBdE9545F6ce0b3234dc4e8                                                           |
+| Protofire                 | 0x80BA18503a1Fa16Ea22F3ef1Af23e2994EaC1d97                                                           |
+| Nethermind                | 0x544cE64C3Fc6Da72CEB2456CC4cF19E7c7972eFA                                                           |
+| Lab10                     | 0x10DD75875a2a8a284529Ae7223B1aCE410d606bd                                                           |
+| Gateway                   | 0x5b10cE4DDD27F57d4D432D409A5321219cbA7893                                                           |
+| Gnosis Bridge Team        | eth:0x4b5F5231e2F08Ad49d79Ce5672A8339a63Cfbd43 <br /> gno:0xEF138856d0581641A57245Ee5CFfc9ceaA059623 |
+| Giveth                    | 0x839395e20bbB182fa440d08F850E6c7A8f6F0780                                                           |
+| KarpatkeyDAO              | 0xb8173f558f75EE263013fd6294177bf75279a21e                                                           |
+| Hopr                      | 0xA07888742c18d7e658132AE0148fF205fFF46481                                                           |
+| Aave-Chan Initiative(ACI) | 0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4                                                           |
+| Erigon                    | 0xcF9ebF877688Ed88a7479A6e63457Fd78D4275cE                                                           |
+| Cow Protocol              | 0xf59e447e97bc03c2b0c5719e2e551f0b15b724e5                                                           |
+| Safe                      | 0xDdf2d07267EAF2cE3E13ee4319bE1F34D55ed992                                                           |
+| Agave                     | 0xc44caeb7F0724A156806664d2361fD6f32a2d2C8                                                           |
 
 ## Governance Process
 

@@ -8,6 +8,24 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Replacing bridge governors
+
+🗳 Justification:
+Add signers:
+
+- Aavechan: 0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4
+- Kleros: 0xb2a33ae0E07fD2ca8DBdE9545F6ce0b3234dc4e8
+- Erigon: 0xcF9ebF877688Ed88a7479A6e63457Fd78D4275cE
+- Nethermind: 0x544cE64C3Fc6Da72CEB2456CC4cF19E7c7972eFA
+
+Remove Signers:
+
+- DaoHaus: 0x1685324Bf373670ad5C9c56bd88A1dc1C063b0f9
+- RaidGuild: 0xd26a3F686D43f2A62BA9eaE2ff77e9f516d945B9
+- Succinct: 0x72Ff26D9517324eEFA89A48B75c5df41132c4f54
+- 01node: 0x0101016044726994aFd16f4A99f0d960090D35e7
+
+✅ Implemented: Jan 31, 2025
 
 ## Increase required block confirmation for AMB to 175 blocks, replace CowSwap’s lost address, and replace 1Hive with Hopr
 

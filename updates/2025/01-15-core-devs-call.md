@@ -1,5 +1,6 @@
 ---
-title: Core Devs Call - 01/015/2025
+title: Core Devs Call - 01/15/2025
+
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, Gnosis Chain]
 ---
