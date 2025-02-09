@@ -100,6 +100,4 @@ Check that the key is imported by running
 ```
 
 ## Step 4: Deposit for validator
-Once the exeution and consensus clients are fully synced, you may proceed to [deposit for validator](../manual/README.md#step-4c-fund-your-validator).
-
-
+Once the execution and consensus clients are fully synced, you may proceed to [deposit for validator](../manual/README.md#step-4c-fund-your-validator).

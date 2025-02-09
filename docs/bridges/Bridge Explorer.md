@@ -15,10 +15,10 @@ https://bridge-explorer.gnosischain.com/bridge-explorer/latest-transactions
 
 ## Transactions
 
-### How to search for your transation?
+### How to search for your transaction?
 
 1. Search the transaction by inserting the transaction hash or initiator/receiver address.
-2. You can use different filter options to filter out the unrelevant transactions.
+2. You can use different filter options to filter out the irrelevant transactions.
 3. Click on the transaction item to check the details of the transaction.
 
 ![Search Transaction](../../static/img/bridges/bridge-explorer/search-new-tx.png)

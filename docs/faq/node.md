@@ -52,7 +52,7 @@
    1. Double-check that you’re uploading your keystores to web3signer Gnosis
    2. Try restarting both Web3Signer Gnosis and your Consensus Client
    3. If this is the first time you’re uploading your keystores, make sure you uncheck the import slashing data option
-   4. Triple-check your password is right and was inputed as you intended
+   4. Triple-check your password is right and was inputted as you intended
 
 9. Which clients are supported by GBC?
 

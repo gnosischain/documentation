@@ -73,7 +73,7 @@ With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepa
 ### Goerli - Chiado
 
 :::note
-The bridge betwee Goerli and Chiado is deprecating soon.
+The bridge between Goerli and Chiado is deprecating soon.
 :::
 
 | Contract                      | Address                                                                                                                      |
@@ -148,7 +148,7 @@ function requireToPassMessage (address _contract,
 
 ![AMB&Omnibridge with Telepathy Validator](../../../static/img/bridges/AMBValidators.png)
 
-\*\* In the graph above, light green compoenents work as the same as [Call a cross-chain method via AMB](#call-a-cross-chain-method-via-amb) on the previous section.
+\*\* In the graph above, light green components work as the same as [Call a cross-chain method via AMB](#call-a-cross-chain-method-via-amb) on the previous section.
 
 There are 5 key components for Telepathy validator in AMB & Omnibridge:
 

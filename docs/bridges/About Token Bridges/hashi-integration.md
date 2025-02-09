@@ -79,7 +79,7 @@ For Omnibridge / AMB:
 
 # Testnet environment
 
-For testing purpose, we've set up testnet environemnt. Users are welcome to experiment with the testnet environments:
+For testing purpose, we've set up testnet environment. Users are welcome to experiment with the testnet environments:
 
 - Sepolia addresses
   1. ForeignAMB: [0x2F62433e00168af10c70bc39e2fDbEe5DaCA257b](https://sepolia.etherscan.io/address/0x2F62433e00168af10c70bc39e2fDbEe5DaCA257b)
