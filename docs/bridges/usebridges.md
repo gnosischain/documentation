@@ -44,7 +44,7 @@ You can also check out all the transactions you have done by checking out the hi
 ![My transactions](../../static/img/bridges/bridge-explorer/transaction-history.png)
 
 :::note
-If you are bridging from Gnosis to Ethereum, you have to claim your funds on Ethereum after the bridge transcation has been validated. You can do this by finding your transaction on the Bridge Explorer and clicking “claim”
+If you are bridging from Gnosis to Ethereum, you have to claim your funds on Ethereum after the bridge transaction has been validated. You can do this by finding your transaction on the Bridge Explorer and clicking “claim”
 :::
 ![Search Transaction](../../static/img/bridges/bridge-explorer/claim-new.png)
 

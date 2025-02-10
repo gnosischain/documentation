@@ -54,7 +54,7 @@ title: Running Nodes
 
 11. **How many GNO should I have to make it worth running a node?**
 
-    It really depends on you but basically the more GNO you can stake (up to a few hundreds per node, for a regular Intel NUC 11), the more the cost of buying and running the node will be split and proportionally smaller for each validator.... If you're very good with DIY and have no fear of experimenting, you can even validate using a Rasbperry Pi like a few validator are doing in the community.
+    It really depends on you but basically the more GNO you can stake (up to a few hundreds per node, for a regular Intel NUC 11), the more the cost of buying and running the node will be split and proportionally smaller for each validator.... If you're very good with DIY and have no fear of experimenting, you can even validate using a Raspberry Pi like a few validator are doing in the community.
 
 12. **I am running 4 validators on my DappNode, and it seems like a waste of the machine. Is there an easy way to add more validators?**
 
@@ -136,7 +136,7 @@ title: Running Nodes
 
     Gnosis VIP was run by Gnosis Builders team, which has been retired. It will go live soon. Stayed tuned!
 
-32. **My nodes are producing negative income for some reason. I have to admit I have neglected them for a while. Do I need to update them? The dappstore is showing the version of teku and nethermind I got running as the current version, the nodes are 100% synced. They are producing positve and negative income in irregular intervals, dashboard shows them as healthy, I'm kinda lost tbh, any help?**
+32. **My nodes are producing negative income for some reason. I have to admit I have neglected them for a while. Do I need to update them? The dappstore is showing the version of teku and nethermind I got running as the current version, the nodes are 100% synced. They are producing positive and negative income in irregular intervals, dashboard shows them as healthy, I'm kinda lost tbh, any help?**
 
     It might be due to unstable connection. You can check the logs to see the number of peers both for your CL and EL. Also, keeping your clients up-to-date is essential.
 

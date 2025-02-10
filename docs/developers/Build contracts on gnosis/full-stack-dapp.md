@@ -81,7 +81,7 @@ Make sure to select yes for this option:
 
 We will be using Waffle and Ethers.js later on.
 
-Run the below just in case they wern't automatically added:
+Run the below just in case they weren't automatically added:
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
@@ -252,7 +252,7 @@ You can verify the deployment on https://gnosisscan.io/, by putting your contrac
 
 ## Adding your Front End
 
-To get your front end up and running quickly, vist this [Replit link](https://replit.com/@nitric1/Gnosis-Chain-Hello-World?v=1#README.md) and fork it by clicking the **Use Template** Button on the right side of the page.
+To get your front end up and running quickly, visit this [Replit link](https://replit.com/@nitric1/Gnosis-Chain-Hello-World?v=1#README.md) and fork it by clicking the **Use Template** Button on the right side of the page.
 
 ![Diagram](/img/full-stack-dapp/replit-fork.drawio.png)
 

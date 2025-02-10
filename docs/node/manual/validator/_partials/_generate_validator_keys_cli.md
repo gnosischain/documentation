@@ -35,7 +35,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
     ```
 
 - Execute Validator Data Generation tool and follow the instructions.
-    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/). 
+    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/).
     > Tip: add the [`--eth1_withdrawal_address`](https://github.com/gnosischain/validator-data-generator/#new-mnemonic-arguments) flag when creating your keys, **pointing to an address you control**.
 
     - If you want to generate a new mnemonic:
@@ -82,9 +82,9 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 </Tabs>
 
 - Create a password to encrypt the keys.
-- The mnemonic (seed phrase) will show on screen. Save it in a secure place (idealy offline).
+- The mnemonic (seed phrase) will show on screen. Save it in a secure place (ideally offline).
 - Type your mnemonic to confirm in the tool.
-- Wait until the keys are created. Two types of files will be generated: 
+- Wait until the keys are created. Two types of files will be generated:
     - `deposit_data-*.json`
     - One `keystore-*.json` per validator
 - Save the location of the generated keys, and copy them in a backup USB memory or any other secure storage.

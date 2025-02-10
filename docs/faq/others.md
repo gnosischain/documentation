@@ -52,7 +52,7 @@ https://docs.gnosischain.com/faq/others
 
 12. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
 
-    This has been down for some time now due to the old team that was running xdai not maintain it anymore. You will need to use the block explorer to interact with the contracts without the UI in oder for it to be withdrawn.
+    This has been down for some time now due to the old team that was running xdai not maintain it anymore. You will need to use the block explorer to interact with the contracts without the UI in order for it to be withdrawn.
 
     These are the steps that need to be taken:
 

@@ -116,11 +116,11 @@ The steps below assume:
 The steps below assume that the account performing the actions is funded with some xDai to cover gas fees.  
 Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BlockScout.
 :::info
-Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, [follow the steps](hhttps://docs.blockscout.com/for-users/verifying-a-smart-contract) to verify the contract before starting.
+Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, [follow the steps](https://docs.blockscout.com/for-users/verifying-a-smart-contract) to verify the contract before starting.
 :::
 
 1. **Call the transferAndCall method to transfer tokens**
-   The token contract deployed by the mutli-token mediator supports the ERC677 standard, so instead of calling `approve` and `relayTokens`, a single method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it regarding this action at the same time.
+   The token contract deployed by the multi-token mediator supports the ERC677 standard, so instead of calling `approve` and `relayTokens`, a single method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it regarding this action at the same time.
    Go to the "Write Proxy" tab of the token contract in BlockScout
    ![](/img/bridges/omni-gno-eth-manual1.png)
    In the transferAndCall method enter the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`), amount of tokens to transfer, and "0x" in the \_data field. Press Write to send the transaction.

@@ -69,7 +69,7 @@ Issues are categorized by type:
 For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
 - Submit a PR against the `dev` branch of the `gnosischain/documentation` repo
-- Follow the PR template instructions carefuly
+- Follow the PR template instructions carefully
 
 ## Create a release
 
@@ -98,9 +98,9 @@ We selected a collection of best practices from the industry to make the website
 - [Bias-free communication (by Microsoft)](https://docs.microsoft.com/en-us/style-guide/bias-free-communication)
 - [Global communications (by Microsoft)](https://docs.microsoft.com/en-us/style-guide/global-communications/)
 
-## Transfering Gitbook Pages
+## Transferring Gitbook Pages
 
-When transfering documents from the old gitbook, consider the funcionality difference detailed below, and the following:
+When transferring documents from the old gitbook, consider the functionality difference detailed below, and the following:
 
 - Relevance and validity of the content
 - `xdaichain` was renamed to `gnosis`

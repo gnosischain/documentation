@@ -128,7 +128,7 @@ PUID=1000
 FEE_RECIPIENT=0x0000000000000000000000000000000000000000
 GRAFFITI=gnosischain/teku
 ```
-Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
 Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-proposer-default-fee-recipient) flag in Teku docs.
 
 Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored.

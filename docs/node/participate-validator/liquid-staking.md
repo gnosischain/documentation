@@ -20,9 +20,9 @@ StakeWise V3 provides users with a marketplace of staking providers, each compet
 
 ![](/img/node/stakewise-2.png)
 
-osGNO ([0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0](https://gnosisscan.io/token/0xf490c80aae5f2616d3e3bda2483e30c4cb21d1a0)) is a non-rebasing token, meaning that the balance of tokens held by the user is naturally static, but the value of each token rises continually as the underlying amount of GNO per token increases due to staking rewards. This enables seemless integration of osGNO into other DeFi applications like decentralised exchanges and lending protocols. This also means that osGNO is not issued 1:1 with GNO tokens, and you will receive less osGNO tokens than the underlying amount of GNO tokens backing them.
+osGNO ([0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0](https://gnosisscan.io/token/0xf490c80aae5f2616d3e3bda2483e30c4cb21d1a0)) is a non-rebasing token, meaning that the balance of tokens held by the user is naturally static, but the value of each token rises continually as the underlying amount of GNO per token increases due to staking rewards. This enables seamless integration of osGNO into other DeFi applications like decentralised exchanges and lending protocols. This also means that osGNO is not issued 1:1 with GNO tokens, and you will receive less osGNO tokens than the underlying amount of GNO tokens backing them.
 
-StakeWise processes two fees as part of its V3 implementation on Gnosis Chain: 
+StakeWise processes two fees as part of its V3 implementation on Gnosis Chain:
 
 * A flat fee of 5% of all staking rewards associated with your osGNO tokens is sent to StakeWise DAO. This fee is omitted for users who stake with StakeWise but do not mint osGNO; and
 

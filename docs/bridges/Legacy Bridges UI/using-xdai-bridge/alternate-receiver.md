@@ -6,7 +6,7 @@ keywords: [xdai bridge, alternate receiver, gnosis bridge]
 # Alternate Receiver
 
 :::info
-The following tutorial is refering to the legacy xDAI bridge.  
+The following tutorial is referring to the legacy xDAI bridge.  
 The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).  
 Please avoid using the legacy xDAI bridge: https://bridge.legacy.gnosischain.com/
 :::

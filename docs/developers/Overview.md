@@ -42,22 +42,22 @@ Welcome to the Developers section! This section gives an extensive overview on h
     <Card
         title=" 🛠️ Quickstart"
         subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
-        url="/developers/quickstart" 
+        url="/developers/quickstart"
     />
     <Card
         title=" 🧱 Build contracts on Gnosis "
         subtitle="Template contracts that you can deploy on Gnosis Chain."
-        url="/category/build-contracts-on-gnosis" 
+        url="/category/build-contracts-on-gnosis"
     />
     <Card
-        title=" 📺 Developement Environments"
+        title=" 📺 Development Environments"
         subtitle="Deploy smart contracts with development environment."
-        url="/developers/category/deploy-contracts-on-gnosis" 
+        url="/developers/category/deploy-contracts-on-gnosis"
     />
     <Card
         title=" 🎮 Interact with Smart Contracts"
         subtitle="Interact with smart contracts using library of your choice!"
-        url="/developers/category/interact-with-contracts-on-gnosis" 
+        url="/developers/category/interact-with-contracts-on-gnosis"
     />
     <Card
     title=" 🧩 Verify Smart Contracts on Gnosis Chain"
@@ -85,6 +85,6 @@ Gnosis Pay stands at the forefront of decentralized payment networks, removing b
 
 - **Self-Custodial Visa Card:** Take control of your finances with a Visa card that puts you in charge of your assets.
 - **Decentralized and Secure:** Built on Gnosis Chain, Gnosis Pay offers a decentralized solution that doesn't compromise on security.
-- **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide. 
+- **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide.
 
 For more information, visit [Gnosis Pay](https://gnosispay.com/).

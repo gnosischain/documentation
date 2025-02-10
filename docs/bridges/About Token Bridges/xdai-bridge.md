@@ -88,7 +88,7 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 :::
 
 References:  
-\*\* Some of the informations from TokenBridge Docs are outdated, please verify the information before you bridge.
+\*\* Some of the information from TokenBridge Docs are outdated, please verify the information before you bridge.
 
 - https://github.com/tokenbridge/docs
 
