@@ -22,6 +22,10 @@ The following third-party bridges allow seamless asset transfers to and from Gno
 | Debridge | Multiple EVM Chains, Solana  | [Visit](https://app.debridge.finance/?address=&inputChain=100) |
 | Jumper   | Multiple EVM Chains, Solana | [Visit](https://jumper.exchange/?fromChain=100) |
 | Bungee | Multiple EVM Chains  | [Visit](https://www.bungee.exchange/) |
+| Hop | Multiple EVM Chains  | [Visit](https://app.hop.exchange/#/send?sourceNetwork=ethereum&destNetwork=gnosis) |
+| Hyperbridge | Multiple EVM Chains  | [Visit](https://app.hyperbridge.network/) |
+
+
 
 
 
