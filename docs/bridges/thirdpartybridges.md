@@ -24,6 +24,7 @@ The following third-party bridges allow seamless asset transfers to and from Gno
 | Bungee | Multiple EVM Chains  | [Visit](https://www.bungee.exchange/) |
 | Hop | Multiple EVM Chains  | [Visit](https://app.hop.exchange/#/send?sourceNetwork=ethereum&destNetwork=gnosis) |
 | Hyperbridge | Multiple EVM Chains  | [Visit](https://app.hyperbridge.network/) |
+| Crosscurve | Multiple EVM Chains  | [Visit](https://app.crosscurve.fi/swap?inputChainId=27&inputToken=0x0000000000000000000000000000000000000000&outputChainId=1) |
 
 
 

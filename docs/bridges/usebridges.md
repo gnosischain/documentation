@@ -54,12 +54,8 @@ If you are bridging funds that exceed the daily limit, your transaction will be 
 :::
 
 :::info
-If you are not coming from Ethereum, you can use one of the following bridges:
-
-Jumper (provided by Li.Fi)
-Bungee
-Hop
-Connext
+If you are not coming from other chains, you can choose from a list of third-party bridges here:
+[Third-party bridges](/docs/bridges/thirdpartybridges.md)
 :::
 
 ### Need more help?
