@@ -20,3 +20,4 @@ If the faucet is not functioning properly, feel free to seek assistance on the [
 
 - [Stakely](https://stakely.io/en/faucet/gnosis-chain-xdai)
 - [dRPC](https://drpc.org/faucet/gnosis)
+- [Tenderly](https://docs.tenderly.co/virtual-testnets/unlimited-faucet?mtm_campaign=ext-docs&mtm_kwd=gnosis)

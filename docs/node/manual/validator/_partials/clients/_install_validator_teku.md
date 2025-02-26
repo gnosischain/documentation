@@ -29,7 +29,7 @@ To run a validator, we need to first import the keys generated in the previous s
 
 
 
-```shell   
+```shell
 echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/keystore-${m_...}.json.txt
 ```
 
@@ -60,7 +60,7 @@ cd teku-${version}
   --validators-graffiti=${GRAFFITI}
 # highlight-end
 ```
-    
+
 If you wish to run validator only, run the following command:
 
 ```shell
@@ -72,10 +72,10 @@ If you wish to run validator only, run the following command:
 # highlight-end
 ```
 
-Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
 Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-proposer-default-fee-recipient) flag in Teku docs.
 
-Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored, and [`beacon-node-api-endpoint`](https://docs.teku.consensys.net/Reference/CLI/Subcommands/Validator-Client#beacon-node-api-endpoint-beacon-node-api-endpoints) with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051). 
+Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored, and [`beacon-node-api-endpoint`](https://docs.teku.consensys.net/Reference/CLI/Subcommands/Validator-Client#beacon-node-api-endpoint-beacon-node-api-endpoints) with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051).
 
 Replace [`validators-graffiti`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
@@ -90,5 +90,5 @@ Learn more about the CLI commands and their options [here](https://docs.teku.con
 <TabItem value="chiado">
     <div data-comment="TODO: document chiado validation process"></div>
 </TabItem>
-       
+
 </Tabs>

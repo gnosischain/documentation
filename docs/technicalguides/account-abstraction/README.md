@@ -6,7 +6,7 @@ sidebar_label: Account Abstraction
 # Understanding Account Abstraction
 <FeatureCard imgUrl="">
         <h2>What is Account Abstraction ? </h2>
-        <p>Account abstraction allows for more flexible and user-friendly account models beyond the traditional externally owned accounts (EOAs). With AA, smart contract wallets can initiate transactions, enabling more complex logic like multi-signature verification, recovery mechanisms, and gas fee payments in tokens. AA revolves around the idea of avoiding the need for change in concensus layer.</p>
+        <p>Account abstraction allows for more flexible and user-friendly account models beyond the traditional externally owned accounts (EOAs). With AA, smart contract wallets can initiate transactions, enabling more complex logic like multi-signature verification, recovery mechanisms, and gas fee payments in tokens. AA revolves around the idea of avoiding the need for change in consensus layer.</p>
 </FeatureCard>
 
 <CardContainer>

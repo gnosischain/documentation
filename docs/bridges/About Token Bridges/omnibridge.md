@@ -79,7 +79,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 ### Goerli - Chiado
 
 :::note
-The bridge betwee Goerli and Chiado is deprecating soon.
+The bridge between Goerli and Chiado is deprecating soon.
 :::
 
 | Contract                      | Address                                                                                                                      |

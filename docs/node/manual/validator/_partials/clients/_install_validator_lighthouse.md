@@ -27,10 +27,10 @@ To run a validator, we need to first import the keys generated in the previous s
 * In a new command line window, navigate to the `consensus` folder and execute Lighthouse validator client
 * To ease the import process, we will create a `password.txt` file containing the password used to encrypt the validator keys.
 
-```shell   
+```shell
 echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 ```
-    
+
 * Import the validator keys using lighthouse:
 
 ```shell
@@ -41,8 +41,8 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
     --directory keystores \
     --datadir validators
 ```
-    
-* Start your lighhouse validator:
+
+* Start your lighthouse validator:
 
 ```shell
 ./lighthouse validator_client \
@@ -59,7 +59,7 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
     --graffiti "gnosis-docs-graffiti"
 # highlight-end
 ```
-Replace `suggested-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt competely. It is strongly recommended that you configure this value in your setup.
+Replace `suggested-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
 Learn more about [suggested fee recipient](https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html) flag in Lighthouse docs.
 
 Replace `graffiti` with your own [graffiti](https://lighthouse-book.sigmaprime.io/graffiti.html). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
@@ -70,5 +70,5 @@ Replace `graffiti` with your own [graffiti](https://lighthouse-book.sigmaprime.i
 <TabItem value="chiado">
     <div data-comment="TODO: document chiado validation process"></div>
 </TabItem>
-       
+
 </Tabs>
