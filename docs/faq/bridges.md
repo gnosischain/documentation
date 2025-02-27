@@ -2,7 +2,7 @@
 
 1. Can I bridge tokens between Gnosis Chain and BSC using Omni Bridge
 
-   The BSC - Gnosis Chain bridge has been depreciated you can instead use a third party bridge like Jumper for example.
+   The BSC - Gnosis Chain bridge has been deprecated you can instead use a third party bridge like Jumper for example.
 
 2. What is the best way to bridge it to another chain?
 
