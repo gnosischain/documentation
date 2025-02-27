@@ -7,7 +7,7 @@ title: DAppNode
 [DAppNode](https://dappnode.com/) is a simple platform for deploying and hosting DApps, P2P clients, and blockchain nodes. It provides a user-friendly way to set up and configure nodes with a couple of clicks.  It is a Free Open Source Software, and can be used in the following ways
 
 1. Purchase one of their pre-installed [DAppNode Servers](https://dappnode.com/en-us/collections/frontpage). These are designed to be able to be run by those with very little technical know-how, and requires no command line at any point.
-2. Install DAppNode software on any compatible hardware or even a VPS. The installation is done by following the their official installation documentation [Here](https://docs.dappnode.io/user/quick-start/Core/installation)
+2. Install DAppNode software on any compatible hardware or even a VPS. The installation is done by following their official installation documentation [Here](https://docs.dappnode.io/user/quick-start/Core/installation)
 
 ## Using DAppNode {#install-on-dappnode}
 
@@ -25,16 +25,16 @@ Make sure to select the Gnosis chain tab,
 
 The next step is to select the combination of client you want to use in your dappnode. For this process you need to select:
 
-- 1. Select the execution client: Nethermind-xdai. Click in the package
+- 1. Select the execution client: Nethermind-xdai. Click on the package
 - 2. Select the consensus client, here you can install one of the following options: Teku-gnosis, Lighthouse-gnosis and Prysm-gnosis
-- 3. Install the web3signer. This is required becausethis is the package that will contain the keystores.
+- 3. Install the web3signer. This is required because this is the package that will contain the keystores.
 
 ![Select the execution and consensus clients](/img/node/dappnode-stakers-ui-2.png)
 
 1. Select the Execution client. For now, or in the moment this guide was created, nethermind is the only execution client that supports gnosis chain.
    ![Execution client ](/img/node/dappnode-execution-client.png)
 
-2. Select the consensus client. You will see the next fields when you click in the package chard.
+2. Select the consensus client. You will see the next fields when you click in the package chart.
 
 ![Select a consensus client](/img/node/dappnode-consensus-client.png)
 
