@@ -30,13 +30,17 @@ Feb 19, 2025
 
 # Testing
 ## Hive
+
 * No updates
+
 
 ## Ethereum/tests
 * Ethereum/tests
   * Generated 4/8 Pectra test suites for Gnosis Chain
+
   * There are new tests by the EF we could use, Kamil is looking into it  
     * [Ethpandaops Assertoor](https://github.com/ethpandaops/assertoor)
+
 
 # Client updates
 ## EL
@@ -45,7 +49,9 @@ Feb 19, 2025
 
 ### Erigon
 * Released v3.0.0-beta2, which includes changes for testnets
+
 * Still looking into the `eth_estimateGas` issue for Coswap
+
 * Code complete for Shutter regarding main functionality
   * Will spend the next 2 weeks testing this on Chiado
 
@@ -53,10 +59,12 @@ Feb 19, 2025
 * Not present
 
 ### Reth
+
 * Syncing mainnet, Cancun ready
 * Started working on Pectra features
   * Issue with pending non-blob transactions
   * `eth_sendRawTransaction RESPONSE {"jsonrpc":"2.0","error":{"code":-32010,"message":"Syncing"},"id":1}`
+
 
 ## CL
 
@@ -91,3 +99,4 @@ Feb 19, 2025
     * **Slot 20905984** - Tue 01/04/2025, 16:01:00 UTC
 
   * **We should push for consolidations after mainnet to make the network more efficient**
+
