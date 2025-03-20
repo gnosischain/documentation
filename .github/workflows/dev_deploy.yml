@@ -28,13 +28,13 @@ jobs:
 
     steps:
       - name: Remove broken apt repos [Ubuntu]
-        if: ${{ matrix.os }} == 'ubuntu-latest'
+        if: runner.os == 'Linux'
         run: |
           for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
       - uses: actions/checkout@v4
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}

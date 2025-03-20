@@ -12,6 +12,13 @@ The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/x
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
 :::
 
+:::warning
+
+With the Hashi migration for the xDAI bridge, `transfer` will no longer mint xDAI, and users must use `relayTokens` instead.
+For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-of-the-transfer-function-on-xdai-bridge/8575).
+
+:::
+
 The [xDai bridge](https://bridge.gnosischain.com) is a native DAI bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
 
 Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis notifies the [block rewards contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA). The consensus algorithm then mints xDai to the user's corresponding address on Gnosis in the next block.

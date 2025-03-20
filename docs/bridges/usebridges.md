@@ -16,14 +16,14 @@ You will need xDAI to perform any transactions on Gnosis Chain as it’s the cha
 ### Follow the below steps to get xDAI into your Ethereum address: 
 1. Go to the Gnosis Chain Bridge UI and connect your wallet to the Ethereum Mainnet.
 2. Once connected, you will see your address populated in the header, and your DAI balance will be displayed on the page.
-3. Enter the amount of Dai you would like to transfer to Gnosis, and click the Transfer button.
+3. Enter the amount of DAI you would like to transfer to Gnosis, and click the Transfer button.
 4. The web3 wallet window will open with transaction details. The default gas price is fine, if you would like a faster transaction you can increase. Click Submit or Confirm (depending on wallet) to initiate the transaction.
 5. Wait for the transaction confirmation (this can take some time if the network is super congested). The transaction is considered finalized after 8 blocks. To check on a pending transaction, click on the tx in the UI.
 
 
 ### Follow the below steps to get ERC20 token from Ethereum address to Gnosis Chain:
 
-1. Go the Gnosis Bridge UI
+1. Go to the Gnosis Bridge UI
 2. Connect your wallet to the Ethereum Mainnet
 3. Select the token you want to transfer and enter the amount of token you want.
 4. Click Bridge and sign the transaction
