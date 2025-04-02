@@ -14,7 +14,7 @@ Erigon, Gateway, Nethermind, Geth, Gnosis DevOps, Gnosis Core Devs, Gnosis Comms
 
 With diverse voices present, our discussions are rich and multifaceted and aim to foster innovation within the community.
 
-Watch the record [here](https://youtu.be/va89vpPhTW8?feature=shared)
+Watch the record [here](https://youtu.be/tUEmmtWmu2M?feature=shared)
 
 March 26, 2025
 
