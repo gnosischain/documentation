@@ -5,9 +5,9 @@ sidebar_position : 1
 
 # Run a Node
 
-![Screenshot 2024-05-15 at 13 11 23](https://github.com/gnosischain/documentation/assets/75987728/72e33372-bb7e-4f03-8559-8c6e9c232672)
+![Screenshot 2025-04-09 at 09 55 38](https://github.com/user-attachments/assets/98a33f0a-37b3-4c14-8536-7ee91e67b100)
 
-**Image:** Gnosis nodes around the world, circa May 15 2024
+**Image:** Gnosis nodes around the world, circa April 9 2025
 
 ## Open Infrastructure Powered by Solo Stakers
 
@@ -24,7 +24,7 @@ Gnosis is persistently committed to building the open infrastructure for a decen
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
-- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (around $350 at March 2024) instead of the 32 ETH (around $100.000 at March 2024) minimum required for Ethereum
+- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (around $100 at April 2025) instead of the 32 ETH (around $47.000 at April 2025) minimum required for Ethereum
 - Gnosis Chain runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus.
 
 ## Choosing an Approach
