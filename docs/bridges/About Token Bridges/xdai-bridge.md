@@ -7,6 +7,13 @@ keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 
 # xDai Bridge
 
+:::danger
+Bridging DAI/xDAI using https://bridge.gnosischain.com is currently unavailable.
+We are currently working on resolving the UI issues. We appreciate your patience.
+
+In the meantime, you can still interact directly with the smart contract to relay DAI and xDAI via the xDAI Bridge. To claim the DAI on Ethereum, please check the [tutorial](#claim-dai-on-ethereum-using-smart-contract).
+:::
+
 :::info
 The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.  
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
@@ -269,6 +276,19 @@ The second contract is the Interest Receiver. This will be the address provided 
 </TabItem>
 
 </Tabs>
+
+## Tutorials
+
+### Claim DAI on Ethereum using smart contract
+
+1. Fetch the value of `recipient`, `value` and `nonce` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce)` from the Gnosis Chain.
+   ![](../../../static/img/bridges/xdaibridge/gc-xdai-tx.png)
+2. Go to the [xDAI bridge helper contract on Gnosis Chain](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract).  
+   3. Call [`getMessageHash(address _recipient,  uint256 _value, _origTxHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x30322ce7) : with `recipient` and `value` from the `UserRequestForSignature` and `_origTxHash` as `nonce` from `UserRequestForSignature` (not the transaction hash!). Fetch the returned message hash.  
+   4. Call [`getMessage(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x0139a221) & [`getSignatures(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x9bc51068) with the message hash from the previous step.
+   ![](../../../static/img/bridges/xdaibridge/xdai-helper.png)
+3. Use the value returned from the previous step to call `executeSignatures(bytes message, bytes signatures)`[Ethereum xDAI Bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#writeProxyContract#F7).
+   ![](../../../static/img/bridges/xdaibridge/xdai-execute-signatures.png)
 
 ## Resources
 

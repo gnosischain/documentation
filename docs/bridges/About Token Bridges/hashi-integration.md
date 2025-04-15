@@ -54,7 +54,7 @@ For Omnibridge / AMB:
 
 ## xDAI briddge
 
-![](../../../static/img/bridges/hashi/Hashi-Gnosis-AMB.png)
+![](../../../static/img/bridges/hashi/Hashi-Gnosis-xDAI.png)
 
 **Ethereum → Gnosis Chain**
 
