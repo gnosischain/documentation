@@ -8,6 +8,22 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Upgrade xDAI implementation contract for Hashi integraion, replacing Metacartel with Monerium
+
+🗳 Justification:
+
+1. Upgrade xDAI proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
+   1. Foreign xDAI implementation contract: [0xb54042F5bA4B048fEa54aaE70abbbe41AC716299](https://etherscan.io/address/0xb54042F5bA4B048fEa54aaE70abbbe41AC716299#readContract), version: 9
+   2. Home xDAI Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosisscan.io/address/0xb740472c650fe949931b9df0cb253b48c80c82de#readContract), version: 6
+2. set Hashi Manager for xDAI Bridge
+   1. Hashi Manager on ETH: [0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD](https://etherscan.io/address/0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD)
+   2. Hashi Manager on Gnosis Chain: [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosisscan.io/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49)
+3. Replace MetaCartel in Bridge governors with Monerium
+   1. MetaCartel: 0xd945325557f1FB4374fBf10Ae86D385632Df870A
+   2. Monerium: 0xB646B8b5Fe6cBc7770578B7679208337ef747ae4
+
+✅ Implemented: Apr 15, 2025
+
 ## Replacing bridge governors
 
 🗳 Justification:
