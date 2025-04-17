@@ -21,7 +21,8 @@ Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com
 
 :::warning
 
-With the Hashi migration for the xDAI bridge, `transfer` will no longer mint xDAI, and users must use `relayTokens` instead.
+
+Calling `transfer` will no longer mint xDAI, and users must use `relayTokens` instead.
 For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-of-the-transfer-function-on-xdai-bridge/8575).
 
 :::
@@ -98,7 +99,7 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 </Tabs>
 
 :::info
-The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xdaibridge-upgrade-sdai](https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai), with the commit hash `bf602f35e624cc6c58c827e7c56b23c8b1afa69a`
+The current deployment of xDAI bridge contract is from https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge, with the commit hash `fb6bae7589a102613b48c12addb425b72836574e`
 :::
 
 References:  
