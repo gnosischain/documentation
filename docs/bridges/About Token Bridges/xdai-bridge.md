@@ -7,12 +7,20 @@ keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 
 # xDai Bridge
 
+:::danger
+Bridging DAI/xDAI using https://bridge.gnosischain.com is currently unavailable.
+We are currently working on resolving the UI issues. We appreciate your patience.
+
+In the meantime, you can still interact directly with the smart contract to relay DAI and xDAI via the xDAI Bridge. To claim the DAI on Ethereum, please check the [tutorial](#claim-dai-on-ethereum-using-smart-contract).
+:::
+
 :::info
 The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.  
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
 :::
 
 :::warning
+
 
 Calling `transfer` will no longer mint xDAI, and users must use `relayTokens` instead.
 For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-of-the-transfer-function-on-xdai-bridge/8575).
