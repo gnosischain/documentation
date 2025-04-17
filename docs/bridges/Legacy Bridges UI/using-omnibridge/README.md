@@ -108,7 +108,7 @@ The steps below assume:
    You can monitor the confirmation and AMB request execution with the [AMB Live Monitoring tool](https://alm-bridge-monitor.gnosischain.com/). Specify the hash (tx id) of the transaction used to call `relayTokens` in the ALM entry page to check the status of the AMB request initiated by this transaction in real time. If the AMB request is executed successfully:
 
 - **If token has not been transferred with AMB before:** If this is the first transaction for this particular token using the AMB, a new ERC677 token contract will be deployed to Gnosis. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
-- **If token has been previously transferred with AMB:** If If the ERC677 token has already been registered by the mediator for the original ERC20 token, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
+- **If token has been previously transferred with AMB:** If the ERC677 token has already been registered by the mediator for the original ERC20 token, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
   Once the process is complete and indexed by BlockScout, it is possible to find the token contract on Gnosis Chain. Check out the [Bridged token registry](https://blockscout.com/xdai/mainnet/bridged-tokens) to view it.
 
 #### Gnosis -> Ethereum
