@@ -73,7 +73,7 @@ const config = {
       image: "img/thumbnail.png",
       announcementBar: {
         id: "support_us",
-        content: "Shutter Embedded Encryption on Gnosis Chain is live now.",
+        content: "Pectra Upgrade is coming to Gnosis Chain.",
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
