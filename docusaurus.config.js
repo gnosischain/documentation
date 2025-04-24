@@ -117,6 +117,11 @@ const config = {
             label: "Ecosystem",
           },
           {
+            href: "https://www.notion.so/gnosischain/The-dApp-Stack-1c03b92f9cd080039675db6ec9abc9c8",
+            position: "left",
+            label: "dApp Stack",
+          },
+          {
             href: "https://twitter.com/gnosischain",
             html: `
             <svg class="socialButton" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
