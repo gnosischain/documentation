@@ -75,19 +75,6 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 </TabItem>
 
-<TabItem value="goerli" label="Goerli-Chiado">
-
-### Goerli - Chiado
-
-| Contract                      | Address                                                                                                                               |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract (Goerli) | [0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24](https://goerli.etherscan.io/address/0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24)          |
-| Validator Contract (Goerli)   | [0x1F35121d14ABC91689a7903bf911dce83B0c6EF6](https://goerli.etherscan.io/address/0x1F35121d14ABC91689a7903bf911dce83B0c6EF6)          |
-| xDAI Bridge Contract (Chiado) | [0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2](https://gnosis-chiado.blockscout.com/address/0xbb3c86f9918C3C1d83668fA84e79E876d147fFf2) |
-| Validator Contract (Chiado)   | [0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce](https://gnosis-chiado.blockscout.com/address/0x0ee7EBC72b26e8CeAbbdF275A19dA8e4361685Ce) |
-
-</TabItem>
-
 </Tabs>
 
 :::info

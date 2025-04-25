@@ -75,7 +75,7 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 <TabItem value="chiado-sepolia" label="Chiado<->Sepolia">
 
 0x725bc6f18f8cdd7f57a9ab9a9f2ea17a199185e5  
- 0xb1562173109932146a7fbbf28d7c6652bc2daace
+0xb1562173109932146a7fbbf28d7c6652bc2daace
 
 </TabItem>
 
@@ -96,17 +96,46 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 ### Resources
 
-- [TokenBridge Docs: Migrating Oracle to new Server](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
-
 ```mdx-code-block
 <details>
-  <summary>Setting up GNO bridge validators: Gnosis Chain &lt;-&gt;Ethereum</summary>
+  <summary>Setting up  bridge validators with docker compose</summary>
   <div>
 ```
 
-## GNO bridge validators GC &lt;-&gt; ETH Mainnet
+**Setup bridge validator for AMB**
 
-### How to setup
+1. Created .env.amb and configure the value based on https://github.com/gnosischain/tokenbridge/blob/master/oracle/.env.example.amb
+2. Configure your docker compose based on https://github.com/gnosischain/tokenbridge/blob/master/oracle/docker-compose-amb.yml
+3. Run
+
+```
+ env ORACLE_VALIDATOR_ADDRESS=<validator address> \
+ env ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY=<validator address private key> \
+ docker-compose -f docker-compose-amb.yml up -d --build
+```
+
+**Setup bridge validator for xDAI**
+
+1. Create .env.xdai and configure the value based on https://github.com/gnosischain/tokenbridge/blob/master/oracle/.env.example.xdai
+2. Configure your docker compose based on https://github.com/gnosischain/tokenbridge/blob/master/oracle/docker-compose-xdai.yml
+3. Run
+
+```
+ env ORACLE_VALIDATOR_ADDRESS=<validator address> \
+ env ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY=<validator address private key> \
+ docker-compose -f docker-compose-xdai.yml up -d --build
+```
+
+```mdx-code-block
+  </div>
+</details>
+```
+
+```mdx-code-block
+<details>
+  <summary>Setting up  bridge validators with Ansible</summary>
+  <div>
+```
 
 1. Checkout https://github.com/dharmendrakariya/chiado-ansible-bridges (yes I know it says Chiado but we use it for mainnet)
 2. replace group_vars/amb.yml in https://github.com/dharmendrakariya/chiado-ansible-bridges with following settings:
@@ -246,3 +275,5 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
   </div>
 </details>
 ```
+
+- [TokenBridge Docs: Migrating Oracle to new Server](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)

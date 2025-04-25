@@ -12,27 +12,25 @@ The native Arbitrary Message Bridge (AMB) allows user to send arbitrary data bet
 
 The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](../About%20Token%20Bridges/omnibridge.md), and is part of the [Tokenbridge Architecture](https://github.com/tokenbridge/docs).
 
-With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepathy-validator-in-the-amb), AMB bridge is now more secure with trustless zero-knowledge light client technology. Due to the light client finality requirements (at least 23mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact. For more details, check out [how AMB & Omnibridge works with Telepathy validator](#how-it-works-with-telepathy-validator).
+Due to the light client finality requirements (at least 23mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact.
 
-## Key Information
-
-### Overview
+## Overview
 
 |                       | Detail                                                |
 | --------------------- | ----------------------------------------------------- |
 | Frontend URL          | N/A                                                   |
-| Trust Model           | [4-of-8 Validator Multisig](#bridge-validators)       |
+| Trust Model           | [4-of-7 Validator Multisig](#bridge-validators)       |
 | Governance            | [8-of-16 Multisig](#bridge-governance)                |
 | Governance Parameters | [Validators](#bridge-validators)                      |
 | Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
 
-## Key Contracts
+### Contracts
 
 <Tabs>
 <TabItem value="ethereum" label="Ethereum">
 
-### Ethereum
+**Ethereum**
 
 | Contract                          | Address                                                                                                                                  |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,7 +42,7 @@ With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepa
 
 <TabItem value="gnosis" label="Gnosis">
 
-### Gnosis
+**Gnosis**
 
 | Contract                            | Address                                                                                                                                   |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -56,7 +54,7 @@ With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepa
 
 <TabItem value="sepolia-chiado" label="Sepolia-Chiado">
 
-### Sepolia - Chiaado
+**Sepolia - Chiado**
 
 | Contract                     | Address                                                                                                                                                 |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -68,33 +66,7 @@ With [Telepathy added as the 8th validator](../managementdecisions.md#add-telepa
 
 </TabItem>
 
-<TabItem value="goerli" label="Goerli-Chiado">
-
-### Goerli - Chiado
-
-:::note
-The bridge between Goerli and Chiado is deprecating soon.
-:::
-
-| Contract                      | Address                                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
-| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
-| GNO on Goerli                 | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5) |
-
-| Contract                    | Address                                                                                                                               |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Home)  | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://gnosis-chiado.blockscout.com/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
-| AMB Contract Proxy (Home)   | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://gnosis-chiado.blockscout.com/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
-| GnosisBridge(GNO) on Chiado | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://gnosis-chiado.blockscout.com/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
-
-</TabItem>
-
 </Tabs>
-
-### Fees & Daily Limits
-
-As the Arbitrary Message Bridge is a message passing bridge, there are no fees or daily limits associated with it.
 
 ### Bridge Validators
 
@@ -144,35 +116,6 @@ function requireToPassMessage (address _contract,
 4. Message is relayed to the Foreign Bridge contract, and [`executeSignatures()`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) is called
 5. Foreign bridge contract decodes the message and calls `foo()` on target contract
 
-### How it works with Telepathy validator
-
-![AMB&Omnibridge with Telepathy Validator](../../../static/img/bridges/AMBValidators.png)
-
-\*\* In the graph above, light green components work as the same as [Call a cross-chain method via AMB](#call-a-cross-chain-method-via-amb) on the previous section.
-
-There are 5 key components for Telepathy validator in AMB & Omnibridge:
-
-**Off chain**
-
-1. Telepathy Relayer: Provide merkle proof for **Telepathy PubSub**, that the `userRequestForAffirmation` event was emitted on Ethereum.
-2. Telepathy Operator: For every ~12 mins (2 epoch in Ethereum), call **Telepathy Light Client** to update header.
-
-**On Gnosis Chain**
-
-3. Telepathy PubSub: Verify the Merkle proof against the block header and publish the event.
-4. Telepathy Light Client: Generate a proof of consensus for block header and verify on-chain.
-5. Telepathy Validator: Subscribe to `UserRequestForAffirmation` event, and handle the published event by calling `executeAffirmation()` on AMB.
-
-Once the user initiate cross-chain method via AMB on Ethereum, it will take ~12 mins for the transaction to get finalized in block and for Telepathy light client to obtain the block header information. Thus, user has to wait for approx. 30 mins for the message to get bridged to Gnosis Chain.
-
-| Role                   | Address                                                                                                                |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Telepathy PubSub       | [0x30Ec3049F571cf61099535bd73EcbC8968e6311a](https://gnosisscan.io/address/0x30Ec3049F571cf61099535bd73EcbC8968e6311a) |
-| Telepathy Validator    | [0x456c255a8bc1f33778603a2a48eb6b0c69f4d48](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E)  |
-| Telepathy Light Client | [0x251cee0641afed44f625fafa1cd2b410f7868591](https://gnosisscan.io/address/0x251cee0641afed44f625fafa1cd2b410f7868591) |
-
-For more details, check out [Telepathy Validator for Omnibridge](https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn) and https://docs.telepathy.xyz/.
-
 ### How to check if AMB is down (not relaying message)
 
 In certain circumstances, i.e. hardfork, AMB will be planned for downtime (not relaying message) to ensure security of the bridge. Planned downtime will be announced in public channel like Discord and Twitter, prior to the event.  
@@ -192,17 +135,13 @@ By setting `maxGasPerTx` to 0, the [condition in `_sendMessage()`](https://githu
 | Authorization | Check that `msg.sender` is the address of the bridge contract                                                                                                                                                                                                                                                                  |
 | Replay Attack | `transactionHash()` allows for checking of a hash of the transaction that invoked the `requireToPassMessage()` call. The invoking contract (in some cases, the mediator contract) is responsible for providing a _unique sequence_ (can be a nonce) as part of the `_data` param in the `requireToPassMessage()` function call |
 
-### Mediator Contracts
-
-A mediator contract is needed if there is an approval flow, such as when transferring an NFT or ERC-20 token. For a more in-depth explanation, see the [Omnibridge page](omnibridge#mediator-contracts).
-
 ### AMB Components
 
 | Component        | Description                                                                                                                                                                                                                 |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | System Contracts | AMB Implementation Contracts (Home Bridge and Foreign Bridge), Governance Multisigs, gas limit helpers, failed call management helpers (for when gas estimate was insufficient), and fee management helpers to collect fees |
-| Oracles          | Containerized microservices that listen for on-chain events and send confirmations to relay messages. [More on them here](https://github.com/omni/tokenbridge/blob/master/oracle/README.md).                                |
-| DevOps           | [Bridge monitoring](https://github.com/omni/tokenbridge/blob/master/monitor/README.md), [ALM](https://github.com/omni/tokenbridge/tree/master/alm), docker compose, ansible playbooks                                       |
+| Bridge validator | Containerized microservices that listen for on-chain events and send confirmations to relay messages. [More on them here](https://github.com/gnosischain/tokenbridge/blob/master/oracle/README.md.md).                      |
+| DevOps           | [Bridge validator](https://github.com/gnosischain/tokenbridge/blob/master/oracle/README.md),[Bridge UI](https://github.com/gnosischain/bridge-monitor), docker compose, ansible playbooks                                   |
 | dApp Contracts   | extensions (pair mediator contracts on both sides of the AMB), such as the Omnibridge                                                                                                                                       |
 
 ### Use Cases of AMB
