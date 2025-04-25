@@ -71,7 +71,7 @@ Additional Info related to specific contracts is [available here](https://github
 | ChainStorageContainer-CTC-batches   | [0xEc64fee4f95E48A3BAd799A5912F183d222086A8](https://gnosis.blockscout.com/address/0xEc64fee4f95E48A3BAd799A5912F183d222086A8/transactions) |
 | ChainStorageContainer-SCC-batches   | [0x26EbaD990cC56ef36166d1C4114CEF25F024b75D](https://gnosis.blockscout.com/address/0x26EbaD990cC56ef36166d1C4114CEF25F024b75D/transactions) |
 | ChugSplashDictator                  | [0x77fAf5Aa4EB7874a676F773fc308e0FD8e9400f7](https://gnosis.blockscout.com/address/0x77fAf5Aa4EB7874a676F773fc308e0FD8e9400f7/transactions) |
-| ERC1820Registry                     | [x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24](https://gnosis.blockscout.com/address/0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24/transactions)  |
+| ERC1820Registry                     | [0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24](https://gnosis.blockscout.com/address/0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24/transactions)  |
 | L1StandardBridge                    | [0x3804bA4ecC886AAe91A6D57dE880616E17C8269C](https://gnosis.blockscout.com/address/0x3804bA4ecC886AAe91A6D57dE880616E17C8269C/transactions) |
 | OVM_L1CrossDomainMessenger          | [0x6A52b1dbE0293F1ba1bc136b0f8C8f0395F940b9](https://gnosis.blockscout.com/address/0x6A52b1dbE0293F1ba1bc136b0f8C8f0395F940b9/transactions) |
 | OVM_Proposer                        | [0xE57cfefE4B7EddE88af28d4ffB3BD63b272f578A](https://gnosis.blockscout.com/address/0xE57cfefE4B7EddE88af28d4ffB3BD63b272f578A/transactions) |
