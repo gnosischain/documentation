@@ -54,8 +54,8 @@ Update your clients:
 
    - ✅ NethermindEth [v1.31.9](https://github.com/NethermindEth/nethermind/releases/tag/1.31.9)
    - ✅ ErigonEth [v3.0.2](https://github.com/erigontech/erigon/releases/tag/v3.0.2)
-   - ✅ Reth [v1.3.12](https://github.com/paradigmxyz/reth/releases/tag/v1.3.12)
-   - ✅ Geth [v1.15.10](https://github.com/ethereum/go-ethereum/releases/tag/v1.15.10)
+   - ✅ Reth [Link to client](https://github.com/gnosischain/reth_gnosis/pkgs/container/reth_gnosis)
+   - ✅ Geth [v1.15.10-gc](https://github.com/gnosischain/go-ethereum/releases/tag/v1.15.10-gc)
 
    Consensus Layer
 
