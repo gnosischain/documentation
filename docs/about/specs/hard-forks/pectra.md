@@ -16,6 +16,7 @@ The table below lists differences if any.
 | [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002): Execution layer triggerable exits         | EL      | Not modified, same addresses as Ethereum
 | [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251): Increase the MAX_EFFECTIVE_BALANCE        | CL      | Not modified
 | [EIP-7549](https://eips.ethereum.org/EIPS/eip-7549): Move committee index outside Attestation  | CL      | Not modified
+| [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623): Increase calldata cost 
 | [EIP-7685](https://eips.ethereum.org/EIPS/eip-7685): General purpose execution layer requests  | Both    | Not modified
 | [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691): Blob throughput increase                  | Both    | Constants modified
 | [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702): Set EOA account code                      | EL      | Not modified
