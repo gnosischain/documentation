@@ -1,6 +1,6 @@
 ---
 title: Omnibridge
-sidebar_position: 1 
+sidebar_position: 1
 description: Omnibridge a native token bridge that mints the canonical representations of bridged assets on Gnosis
 keywords: [omnibridge, token bridge, token claim]
 ---
@@ -8,10 +8,9 @@ keywords: [omnibridge, token bridge, token claim]
 # Omnibridge
 
 :::info
-The Omnibride can be used in https://bridge.gnosischain.com/.       
+The Omnibride can be used in https://bridge.gnosischain.com/.  
 Please avoid using the legacy Omnibridge: https://omni.legacy.gnosischain.com/bridge
 :::
-
 
 ## Key Information
 
@@ -26,7 +25,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 |                       | Detail                                                |
 | --------------------- | ----------------------------------------------------- |
 | Frontend URL          | https://bridge.gnosischain.com/                       |
-| Trust Model           | [4-of-8 Validator Multisig](#bridge-validators)       |
+| Trust Model           | [4-of-7 Validator Multisig](#bridge-validators)       |
 | Governance            | [8-of-16 Multisig](#bridge-governance)                |
 | Governance Parameters | Validator Set, Daily Limits, Fees                     |
 | Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
@@ -63,7 +62,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 ### Sepolia - Chiaado
 
 | Contract                     | Address                                                                                                                               |
-|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Omnibrdge (Sepolia)          | [0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e](https://sepolia.etherscan.io/address/0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e)         |
 | AMB (Sepolia)                | [0xf2546d6648bd2af6a008a7e7c1542bb240329e11](https://sepolia.etherscan.io/address/0xf2546d6648bd2af6a008a7e7c1542bb240329e11)         |
 | Validator Contract (Sepolia) | [0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a](https://sepolia.etherscan.io/address/0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a)         |
@@ -71,41 +70,15 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 | AMB (Chiado)                 | [0x8448E15d0e706C0298dECA99F0b4744030e59d7d](https://gnosis-chiado.blockscout.com/address/0x8448E15d0e706C0298dECA99F0b4744030e59d7d) |
 | Validator Contract (Chiado)  | [0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976](https://gnosis-chiado.blockscout.com/address/0x9e8a89ebcb83065eaaf4b7ff720caa5e6b25c976) |
 
-
 </TabItem>
-
-<TabItem value="goerli" label="Goerli-Chiado">
-
-### Goerli - Chiado
-
-:::note
-The bridge between Goerli and Chiado is deprecating soon.
-:::
-
-| Contract                      | Address                                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
-| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
-| GNO on Goerli                 | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5) |
-
-
-| Contract                    | Address                                                                                                                               |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Home)  | [0x09D549a48AC52F3f9945E7de6402c609c92aa2E1](https://gnosis-chiado.blockscout.com/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1) |
-| AMB Contract Proxy (Home)   | [0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a](https://gnosis-chiado.blockscout.com/address/0x99Ca51a3534785ED619f46A79C7Ad65Fa8d85e7a) |
-| GnosisBridge(GNO) on Chiado | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://gnosis-chiado.blockscout.com/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
-
-
-</TabItem>
-
 
 </Tabs>
 
 ### Fees & Daily Limits
 
-| Token            | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ---------------- | ------------------ | ------------------ |
-| Default Bridge Fees      | 0%                 | 0.1%               |
+| Token               | Ethereum -> Gnosis | Gnosis -> Ethereum |
+| ------------------- | ------------------ | ------------------ |
+| Default Bridge Fees | 0%                 | 0.1%               |
 
 ```mdx-code-block
 <details>
@@ -118,7 +91,6 @@ The bridge between Goerli and Chiado is deprecating soon.
 :::warning
 Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want native xDai, use the [xDai Bridge](xdai-bridge)
 :::
-
 
 | Token     | Ethereum -> Gnosis | Gnosis -> Ethereum  |
 | --------- | ------------------ | ------------------- |
@@ -161,14 +133,9 @@ Daily Limit is reset according to the following logic: the smart contract stores
 </details>
 ```
 
-
-
 ### Bridge Validators
 
-
 - See [Bridge Validator](../management/validators#amb--omnibridge)
-
-
 
 ### Bridge Governance
 
@@ -206,17 +173,6 @@ Daily Limit is reset according to the following logic: the smart contract stores
 9. Mediator contract unlocks the tokens
 
 The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
-
-### Mediator Contracts
-
-To handle the approval of token transfers, the Omnibridge makes use of what is called a mediator contract. No matter which side of the chain is originated, the following flows are valid.
-![](/img/bridges/diagrams/amb-bridge-contract-flow-mediator.svg)
-
-1. User calls token contract's `approve()` function to approve the balance to be transferred.
-2. `relayTokens()` is called on the Mediator contract
-3. Mediator calls `transferFrom()` on the token contract, transferring the approved balance
-4. If this is the first time that token is being bridged to the destination network, it will also query the token's name, symbol and decimals so a new contract can be deployed on the destination network
-5. Mediator contract then calls `requireToPassMessage()` on the bridge contract
 
 ## Exceptions and Special Cases
 
@@ -297,20 +253,19 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 ### USDC.e: A USDC token on Gnosis Chain that complies with Circle standard
 
-:::info   
-When using [Bridge UI](https://bridge.gnosischain.com/):     
-Bridging from Ethereum, users bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) and get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0).    
-Bridging from Gnosis Chain, users bridge [USDC on xDAI](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) and get [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).    
+:::info  
+When using [Bridge UI](https://bridge.gnosischain.com/):  
+Bridging from Ethereum, users bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) and get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0).  
+Bridging from Gnosis Chain, users bridge [USDC on xDAI](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) and get [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).  
 Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and USDC on xDAI
 :::
 
 USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://github.com/circlefin/stablecoin-evm/blob/master/doc/bridged_USDC_standard.md). To ensure smooth bridging operations, when using [Bridge UI](https://bridge.gnosischain.com/) to bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) from Ethereum, user will get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0) by default.
 
-
-1. Bridging from ETH:    
+1. Bridging from ETH:  
    a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
-2. Bridging from GC:    
-   a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).    
+2. Bridging from GC:  
+   a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).  
    b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.
 
 For more detail, check out [this twitter post](https://x.com/gnosischain/status/1800565095065641409).

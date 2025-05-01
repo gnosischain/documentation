@@ -73,7 +73,7 @@ const config = {
       image: "img/thumbnail.png",
       announcementBar: {
         id: "support_us",
-        content: "Pectra Upgrade is coming to Gnosis Chain.",
+        content: "Pectra Upgrade is live on Gnosis Chain.",
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
