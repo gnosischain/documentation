@@ -82,6 +82,35 @@ For Omnibridge / AMB:
 3. If Hashi is enabled & mandatory, off chain executor calls Ethereum’s Yaru.executeMessages(), which check if the hash is agreed upon adapters and set isApprovedByHashi(messageId) to true eventually.
 4. User claims token by calling Ethereum’s ForeignxDAIBridge.executeSignatures(). DAI is transfer to the receiver eventually.
 
+# Hashi Manager contract
+
+Hashi Manager contract is the contract that controls the Hashi oracle and relevant information.
+
+<Tabs>
+<TabItem value="amb" label="AMB">
+
+| Contract                      | Address                                                                                                                |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Hashi Manager on Ethereum     | [0x93f6eE78451AaCc1Db1db49a12aBfCc4662B9Cc9](https://etherscan.io/address/0x93f6eE78451AaCc1Db1db49a12aBfCc4662B9Cc9)  |
+| Hashi Manager on Gnosis Chain | [0x74CACae9801bA4Fe0027Ed6F58d53797CCa7296E](https://gnosisscan.io/address/0x74CACae9801bA4Fe0027Ed6F58d53797CCa7296E) |
+
+</TabItem>
+
+<TabItem value="xdai" label="xDai">
+
+| Contract                      | Address                                                                                                                |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Hashi Manager on Ethereum     | [0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD ](https://etherscan.io/address/0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD) |
+| Hashi Manager on Gnosis Chain | [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosisscan.io/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49) |
+
+</TabItem>
+</Tabs>
+
+1. Set the oracle sets (reporter address from source chain, adapter address on target chain) for certain route (i.e. Ethereum -> Gnosis Chain, Gnosis Chain -> Ethereum).
+2. Set the target address: the bridge contract on the target chain.
+3. Set exepected adapter hash: the adapter address on the same chain.
+4. Set Yaho, Yaru: For message relaying and executing logic. Check out how it works [here](https://crosschain-alliance.gitbook.io/hashi/getting-started/how-hashi-works)
+
 ## Reference
 
 1. AMB contracts: https://github.com/crosschain-alliance/tokenbridge-contracts/tree/feat/hashi-integration-amb
