@@ -5,7 +5,7 @@ title: Lighthouse
 # Run Validator: Lighthouse
 
 :::caution
-The Validator requires a Consensus Client (also known as Beacon Node) in order to operate. See See [Step 3: Run Beacon Node - Lighthouse](../../beacon/lighthouse.md) for more information.
+The Validator requires a Consensus Client (also known as Beacon Node) in order to operate. See [Step 3: Run Beacon Node - Lighthouse](../../beacon/lighthouse.md) for more information.
 :::
 
 ## Option 1: Run as System Process {#system-process}
