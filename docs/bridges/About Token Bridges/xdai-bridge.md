@@ -66,6 +66,7 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 ### Sepolia - Chiado
 
+
 | Contract                       | Address                                                                                                                                            |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | xDAI Bridge Contract (Sepolia) | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2)                      |
@@ -73,6 +74,7 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 | xDAI Bridge Contract (Chiado)  | [0xccA0Dc2A058884e62082312F09541cC7566406f0](https://gnosis-chiado.blockscout.com/address/0xccA0Dc2A058884e62082312F09541cC7566406f0)              |
 | Validator Contract (Chiado)    | [0x138190e157d7604B8f89637AA10508Abd4c673B2](https://gnosis-chiado.blockscout.com/address/0x138190e157d7604B8f89637AA10508Abd4c673B2)              |
 | ERC20ToNative Helper Contract  | [0x9866D9d242Ac9D7EC4AC56ce61D0d957A02FD8e2](https://gnosis-chiado.blockscout.com/address/0x9866D9d242Ac9D7EC4AC56ce61D0d957A02FD8e2#readContract) |
+
 
 </TabItem>
 

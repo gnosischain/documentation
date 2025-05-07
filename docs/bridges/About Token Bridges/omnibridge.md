@@ -133,6 +133,7 @@ Daily Limit is reset according to the following logic: the smart contract stores
 </details>
 ```
 
+
 ### Terminology
 
 - **Home (Native) Network**: Gnosis Chain.
@@ -175,10 +176,12 @@ The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md
 3. Home Omnibridge contract burns tokens and calls bridge contract's `requireToPassMessage()` function.
 4. `UseRequestForSignature` event is emitted for validators to validate the message.
 5. Validators listen to the event: call `submitSignature` on Gnosis chain.
+
 6. `CollectedSignatures` event is emitted when enough bridge validator's signature is collected.
 7. User calls AMB `executeSignatures()` on Ethereum. To fetch the calldata for the function, please check [guideline here](./amb-bridge.md#how-to-call-executesignatures-on-foreign-amb-ethereum)
 8. AMB calls `handleBridgedTokens()` on Foreign Omnibridge contract.
 9. Foreign Omnibridge contract unlocks the tokens.
+
 
 ## Exceptions and Special Cases
 

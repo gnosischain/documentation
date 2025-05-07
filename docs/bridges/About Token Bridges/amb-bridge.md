@@ -115,6 +115,7 @@ function requireToPassMessage (address _contract,
 4. Anyone can execute the call by calling [`executeSignatures(bytes message, bytes signatures)`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) on Foreign AMB. To fetch the calldata for `executeSignatures` function, please follow the [guideline below](#how-to-call-executesignatures-on-foreign-amb-ethereum).
 5. Foreign AMB contract decodes the message and calls `foo()` on target contract
 
+
 ### How to call executeSignatures on Foreign AMB (Ethereum)
 
 When the transaction is initiated from Home Network (Gnosis Chain), one has to claim the transaction on Ethereum explicitly. Here is how you can fetch the calldata required to call Foreign AMB to claim the transaction.
@@ -124,6 +125,7 @@ When the transaction is initiated from Home Network (Gnosis Chain), one has to c
 2. Go to [AMB Helper contract](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract) on Gnosis Chain, paste the `encodedData` from `UserReqeustForSignature` into `getSignatures(bytes _message)` (the message starts with 0x0005). Fetch the return value from `getSignatures`.
    ![](../../../static/img/bridges/amb-getsignatures.png)
 3. On Foreign AMB, call `executeSigantures(bytes _data, bytes _signatures)`, where `_data` is the `encodedData` from `UserRequestForSignature` and `_signatures` is from the return value of `getSignatures` method. Please make sure that the caller account has enough ETH for the gas fee.
+
 
 ### How to check if AMB is down (not relaying message)
 
