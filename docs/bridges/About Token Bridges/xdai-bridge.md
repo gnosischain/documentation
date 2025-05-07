@@ -10,6 +10,13 @@ keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 :::info
 The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.  
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
+
+:::
+
+:::danger
+
+xDAI bridge contract is undergoing a critical upgrade: DAI will be replaced with USDS as the default accepted token on Ethereum, while xDAI will continue to be minted on Gnosis Chain. Please refer to [xDaiBridge-usds-migration page](usds-xdaibridge-migration.md) for more details.
+
 :::
 
 The [xDai bridge](https://bridge.gnosischain.com) is a native DAI bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
@@ -107,7 +114,13 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ![](/img/bridges/diagrams/dai-bridge-01.png)
 
-The [xDai token](/concepts/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+The [xDai token](/concepts/tokens/xdai) is minted when Dai\*\* is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+
+:::danger
+
+\*\*xDAI bridge contract is undergoing a critical upgrade: DAI will be replaced with USDS as the default accepted token on Ethereum, while xDAI will continue to be minted on Gnosis Chain. Please refer to [xDaiBridge-usds-migration page](usds-xdaibridge-migration.md) for more details.
+
+:::
 
 :::warning
 
@@ -146,7 +159,7 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce)` event is emitted from [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosis.blockscout.com/tx/0x2657493921d5dd1f6d225e23ab578a0d0c6e19c2dfaaef36f305cf4a333686fc?tab=logs)
 3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `submitSignature` on Home xDAI Bridge. For more details about how Hashi works in this case, check out [here](./hashi-integration.md).
 4. After enough signatures are collected, `CollectedSignatures` event is emitted/
-5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-dai-on-ethereum). DAI is unlocked to the receiver on Ethereum.
+5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-dai-on-ethereum). DAI\*\* is unlocked to the receiver on Ethereum.
 6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDAI Bridge. Please be aware that after Hashi upgrade, `transactionHash` has been replaced with the value of `nonce`. Please check [here](./hashi-integration.md) for more information on how it works.
 
 ### Savings xDAI
@@ -260,5 +273,5 @@ The second contract is the Interest Receiver. This will be the address provided 
    2. Call [`getMessage(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x0139a221) & [`getSignatures(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x9bc51068) with the message hash from the previous step.
       ![](../../../static/img/bridges/xdaibridge/xdai-helper.png)
 
-3. Use the value returned from the previous step to call `executeSignatures(bytes message, bytes signatures)`[Ethereum xDAI Bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#writeProxyContract#F7).
+3. Use the value returned from the previous step to call `executeSignatures(bytes message, bytes signatures)` on [xDAI Foreign Bridge on Ethereum](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#writeProxyContract#F7).
    ![](../../../static/img/bridges/xdaibridge/xdai-execute-signatures.png)
