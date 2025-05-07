@@ -8,6 +8,17 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Upgrading Deposit Contract: Introducing new batchDeposit function
+
+🗳 Justification:
+
+1. Upgrade the deposit contract proxy to new implementation contract, which introduced a new `batchDeposit` function that allows specifying a different deposit amount for each validator. This is required for batching for 0x02-type withdrawal credentials which have variable amounts instead the previous default of 1 GNO.
+   1. Deposit contract proxy contract: 0x0B98057eA310F4d31F2a452B414647007d1645d9
+   2. Old implementation contract: [\*0x4feF25519256e24A1FC536F7677152dA742Fe3Ef](https://gnosisscan.io/address/0x4feF25519256e24A1FC536F7677152dA742Fe3Ef)\*
+   3. New implementation contract: [0x49de1aced385334f1a66d86db363264eb5b6a708](https://gnosisscan.io/address/0x49de1aced385334f1a66d86db363264eb5b6a708#code)
+
+✅ Implemented: May 2, 2025
+
 ## Upgrade xDAI implementation contract for Hashi integraion, replacing Metacartel with Monerium
 
 🗳 Justification:

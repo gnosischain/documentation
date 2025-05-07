@@ -133,6 +133,13 @@ Daily Limit is reset according to the following logic: the smart contract stores
 </details>
 ```
 
+
+### Terminology
+
+- **Home (Native) Network**: Gnosis Chain.
+- **Foreign Network**: Ethereum.
+- **Mediator Contract**: Omnibridge contract, built on top of AMB.
+
 ### Bridge Validators
 
 - See [Bridge Validator](../management/validators#amb--omnibridge)
@@ -143,18 +150,20 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ## How it works
 
+The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
+
 ### Ethereum -> Gnosis
 
 ![](/img/bridges/diagrams/token-bridge-01.png)
 
 1. User `approve` Omnibridge as token spender.
-2. User call `relayTokens()` on Mediator contract.
-3. Mediator calls `requireToPassMessage()` on the Bridge.
-4. `UserRequestForAffirmation` event is emitted for validators to validate the message.
-5. Message is relayed to the mediator contract when consensus is met by calling `executeAffirmation()`.
-6. ABM calls mediator on Gnosis chain:
-   - token does not exist: the mediator deploys a new token registry and mints the relayed amount.
-   - token exists: the relayed amount is minted in the token address.
+2. User call `relayTokens()` on [Foreign Omnibridge contract](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract).
+3. Omnibridge contract calls Foreign AMB `requireToPassMessage()`.
+4. `UserRequestForAffirmation` event is emitted from Foreign AMB and `TokensBridgingInitiated(address indexed token, address indexed sender, uint256 value, bytes32 indexed messageId)` event is emitted from Foreign Omnibridge.
+5. Message is relayed to the Omnibridge contract when bridge validator threshold is met by calling [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract)`executeAffirmation()` on Gnosis Chain.
+6. AMB calls [Omnibridge on Gnosis chain](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract):
+   - token does not exist: the Omnibridge deploys a new token registry and mints the relayed amount.
+   - token exists: the relayed Omnibridge is minted in the token address.
 
 ---
 
@@ -164,15 +173,15 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 1. User calls `transferAndCall` on ERC-677 token contract to send tokens to Omnibridge contract
 2. `OnTokenTransfer` is called
-3. Mediator contract burns tokens and calls bridge contract's `requireToPassMessage()` function.
+3. Home Omnibridge contract burns tokens and calls bridge contract's `requireToPassMessage()` function.
 4. `UseRequestForSignature` event is emitted for validators to validate the message.
 5. Validators listen to the event: call `submitSignature` on Gnosis chain.
-6. `CollectedSignatures` event is emitted when consensus is met.
-7. User calls AMB (Ethereum side) `executeSignatures()`
-8. ABM calls `handleBridgedTokens()` on Mediator.
-9. Mediator contract unlocks the tokens
 
-The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
+6. `CollectedSignatures` event is emitted when enough bridge validator's signature is collected.
+7. User calls AMB `executeSignatures()` on Ethereum. To fetch the calldata for the function, please check [guideline here](./amb-bridge.md#how-to-call-executesignatures-on-foreign-amb-ethereum)
+8. AMB calls `handleBridgedTokens()` on Foreign Omnibridge contract.
+9. Foreign Omnibridge contract unlocks the tokens.
+
 
 ## Exceptions and Special Cases
 
@@ -231,7 +240,7 @@ A partial token list of inflationary tokens is included below:
 
 Additional References:
 
-- [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/413) (also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
+- [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/4134) (also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
 
 ### Canonical Token Registries
 
