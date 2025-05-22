@@ -2212,7 +2212,7 @@ The following third-party bridges allow seamless asset transfers to and from Gno
 The Arbitrary Message Bridge between the Ethereum Mainnet and Gnosis Chain requires a request-and-claim scheme to transfer data from Gnosis Chain, and some users and applications may want to use a manual process to gather the oracles confirmations and send them to the AMB contracts on the Ethereum side.
 
 :::info
-This approach is the equivalent of the set of actions performed by the [OmniBridge UI](https://omni.gnosischain.com/bridge) after pressing the "Claim" button, or by the [AMB Live Monitoring app](https://alm-bridge-monitor.gnosischain.com/) after pressing the "Execute" button.
+This approach is the equivalent of the set of actions performed by the [Bridge UI](https://bridge.gnosischain.com/) after pressing the "Claim" button
 :::
 Below is the list of actions that can be executed in BlockScout and Etherscan, or, if you are familiar with the contract interaction through Web3 provider, it can be done by importing the contract's ABI to your application.
 
@@ -2479,6 +2479,13 @@ Daily Limit is reset according to the following logic: the smart contract stores
 </details>
 ```
 
+
+### Terminology
+
+- **Home (Native) Network**: Gnosis Chain.
+- **Foreign Network**: Ethereum.
+- **Mediator Contract**: Omnibridge contract, built on top of AMB.
+
 ### Bridge Validators
 
 - See [Bridge Validator](../management/validators#amb--omnibridge)
@@ -2489,18 +2496,20 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ## How it works
 
+The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
+
 ### Ethereum -> Gnosis
 
 ![](/img/bridges/diagrams/token-bridge-01.png)
 
 1. User `approve` Omnibridge as token spender.
-2. User call `relayTokens()` on Mediator contract.
-3. Mediator calls `requireToPassMessage()` on the Bridge.
-4. `UserRequestForAffirmation` event is emitted for validators to validate the message.
-5. Message is relayed to the mediator contract when consensus is met by calling `executeAffirmation()`.
-6. ABM calls mediator on Gnosis chain:
-   - token does not exist: the mediator deploys a new token registry and mints the relayed amount.
-   - token exists: the relayed amount is minted in the token address.
+2. User call `relayTokens()` on [Foreign Omnibridge contract](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract).
+3. Omnibridge contract calls Foreign AMB `requireToPassMessage()`.
+4. `UserRequestForAffirmation` event is emitted from Foreign AMB and `TokensBridgingInitiated(address indexed token, address indexed sender, uint256 value, bytes32 indexed messageId)` event is emitted from Foreign Omnibridge.
+5. Message is relayed to the Omnibridge contract when bridge validator threshold is met by calling [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract)`executeAffirmation()` on Gnosis Chain.
+6. AMB calls [Omnibridge on Gnosis chain](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract):
+   - token does not exist: the Omnibridge deploys a new token registry and mints the relayed amount.
+   - token exists: the relayed Omnibridge is minted in the token address.
 
 ---
 
@@ -2510,15 +2519,15 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 1. User calls `transferAndCall` on ERC-677 token contract to send tokens to Omnibridge contract
 2. `OnTokenTransfer` is called
-3. Mediator contract burns tokens and calls bridge contract's `requireToPassMessage()` function.
+3. Home Omnibridge contract burns tokens and calls bridge contract's `requireToPassMessage()` function.
 4. `UseRequestForSignature` event is emitted for validators to validate the message.
 5. Validators listen to the event: call `submitSignature` on Gnosis chain.
-6. `CollectedSignatures` event is emitted when consensus is met.
-7. User calls AMB (Ethereum side) `executeSignatures()`
-8. ABM calls `handleBridgedTokens()` on Mediator.
-9. Mediator contract unlocks the tokens
 
-The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md).
+6. `CollectedSignatures` event is emitted when enough bridge validator's signature is collected.
+7. User calls AMB `executeSignatures()` on Ethereum. To fetch the calldata for the function, please check [guideline here](./amb-bridge.md#how-to-call-executesignatures-on-foreign-amb-ethereum)
+8. AMB calls `handleBridgedTokens()` on Foreign Omnibridge contract.
+9. Foreign Omnibridge contract unlocks the tokens.
+
 
 ## Exceptions and Special Cases
 
@@ -2577,7 +2586,7 @@ A partial token list of inflationary tokens is included below:
 
 Additional References:
 
-- [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/413) (also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
+- [GIP-31: Hardfork that removed `transferAfterCall` from Bridged Token methods](https://forum.gnosis.io/t/gip-31-should-gnosis-chain-perform-a-hardfork-to-upgrade-the-token-contract-vulnerable-to-the-reentrancy-attack/4134) (also see [writeup](https://hackmd.io/@koal/SJiDiO0bc))
 
 ### Canonical Token Registries
 
@@ -2625,12 +2634,12 @@ For more detail, check out [this twitter post](https://x.com/gnosischain/status/
 :::info
 The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.  
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
+
 :::
 
-:::warning
+:::danger
 
-Calling `transfer` will no longer mint xDAI, and users must use `relayTokens` instead.
-For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-of-the-transfer-function-on-xdai-bridge/8575).
+xDAI bridge contract is undergoing a critical upgrade: DAI will be replaced with USDS as the default accepted token on Ethereum, while xDAI will continue to be minted on Gnosis Chain. Please refer to [xDaiBridge-usds-migration page](usds-xdaibridge-migration.md) for more details.
 
 :::
 
@@ -2681,12 +2690,15 @@ Once Dai is bridged into the xDai bridge, the xDai bridge contract on Gnosis not
 
 ### Sepolia - Chiado
 
-| Contract                       | Address                                                                                                                               |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract (Sepolia) | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2)         |
-| Validator Contract (Sepolia)   | [0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59](https://goerli.etherscan.io/address/0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59)          |
-| xDAI Bridge Contract (Chiado)  | [0xccA0Dc2A058884e62082312F09541cC7566406f0](https://gnosis-chiado.blockscout.com/address/0xccA0Dc2A058884e62082312F09541cC7566406f0) |
-| Validator Contract (Chiado)    | [0x138190e157d7604B8f89637AA10508Abd4c673B2](https://gnosis-chiado.blockscout.com/address/0x138190e157d7604B8f89637AA10508Abd4c673B2) |
+
+| Contract                       | Address                                                                                                                                            |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| xDAI Bridge Contract (Sepolia) | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2)                      |
+| Validator Contract (Sepolia)   | [0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59](https://goerli.etherscan.io/address/0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59)                       |
+| xDAI Bridge Contract (Chiado)  | [0xccA0Dc2A058884e62082312F09541cC7566406f0](https://gnosis-chiado.blockscout.com/address/0xccA0Dc2A058884e62082312F09541cC7566406f0)              |
+| Validator Contract (Chiado)    | [0x138190e157d7604B8f89637AA10508Abd4c673B2](https://gnosis-chiado.blockscout.com/address/0x138190e157d7604B8f89637AA10508Abd4c673B2)              |
+| ERC20ToNative Helper Contract  | [0x9866D9d242Ac9D7EC4AC56ce61D0d957A02FD8e2](https://gnosis-chiado.blockscout.com/address/0x9866D9d242Ac9D7EC4AC56ce61D0d957A02FD8e2#readContract) |
+
 
 </TabItem>
 
@@ -2728,17 +2740,30 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ![](/img/bridges/diagrams/dai-bridge-01.png)
 
-The [xDai token](/concepts/tokens/xdai) is minted when Dai is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+The [xDai token](/concepts/tokens/xdai) is minted when Dai\*\* is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
-1. Users lock DAI on the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#code) on Ethereum by approving the bridge contract and calling `relayTokens`.
-2. `UserRequestForAffirmation` event is triggered
-3. Validators observe the deposit and invoke `executeAffirmation` function on Gnosis bridge contract
-4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDAI to mint.
-5. The [block reward contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance.
+:::danger
 
-User may check the balance change visually using Blockscout's [coin balance history](https://gnosis.blockscout.com/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C?tab=coin_balance_history) or programmatically using [eth_getBalance](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_getbalance) API.
+\*\*xDAI bridge contract is undergoing a critical upgrade: DAI will be replaced with USDS as the default accepted token on Ethereum, while xDAI will continue to be minted on Gnosis Chain. Please refer to [xDaiBridge-usds-migration page](usds-xdaibridge-migration.md) for more details.
 
-You can also view a receiver's address and amount of xDai received in the [block reward contract's](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called, it emits the `AddedReceiver` event:
+:::
+
+:::warning
+
+Calling `transfer` on Foreign xDAI bridge will no longer mint xDAI on Gnosis Chain, and users must use `relayTokens` instead.
+For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-of-the-transfer-function-on-xdai-bridge/8575).
+
+:::
+
+1. Users initiate the relay transaction on Ethereum by approving the bridge contract and calling the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) `relayTokens(address recipient, uint256 value)`.
+2. `UserRequestForAffirmation(address recipient, uint256 value, bytes32 nonce)` event is emitted from the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016).
+3. Bridge validators observe the event and call `executeAffirmation(address recipient, uint256 value, bytes32 nonce)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
+4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDAI to mint. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `executeAffirmation` on Home xDAI Bridge. For more details about how Hashi works in this case, check out [here](./hashi-integration.md)
+5. The [block reward contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)` event is emitted within the same transaction and receiver address will be credited for the equivalent xDAI amount.
+
+User may check the balance change visually using Blockscout's [coin balance history](https://gnosis.blockscout.com/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C?tab=coin_balance_history) or programmatically using [eth_getBalance](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_getbalance) API by querying the balance on block number where `AddedReceiver` event is emitted.
+
+You can also view a receiver's address and amount of xDai received in the [block reward contract's](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called and enough signatures has been collected from bridge valdiators, it emits the `AddedReceiver` event:
 
 ```
 AddedReceiver(
@@ -2756,20 +2781,12 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 
 ![](/img/bridges/diagrams/dai-bridge-02.png)
 
-1. User transfer xDAI to Gnosis Chain's xDAI bridge, xDAI is burned.
-2. `UserRequestForSignature` event emitted (see [example transaction](https://blockscout.com/xdai/mainnet/tx/0x8e23cf0ab01476c2df5b71a72603f2c229d3d9a63ad6ca71ce164798f3733826/internal-transactions)).
-3. Validators listen to the event and call `submitSignature` on Gnosis chain.
-4. After enough signatures are collected, `CollectedSignatures` event is emitted
-5. Anyone can execute the withdrawal on Ethereum (user via UI or validator). DAI is unlocked to the receiver on Ethereum.
-6. `RelayedMessage` emitted on mainnet
-
-:::note
-This final step may be delayed if Ethereum mainnet is congested.
-:::
-
-References:
-
-- [TokenBridge Docs: Withdrawing xDai to Dai](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/using-the-xdai-bridge/withdrawal-authorization-flow.md)
+1. User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. The equivalent amount of xDAI is burned.
+2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce)` event is emitted from [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosis.blockscout.com/tx/0x2657493921d5dd1f6d225e23ab578a0d0c6e19c2dfaaef36f305cf4a333686fc?tab=logs)
+3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `submitSignature` on Home xDAI Bridge. For more details about how Hashi works in this case, check out [here](./hashi-integration.md).
+4. After enough signatures are collected, `CollectedSignatures` event is emitted/
+5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-dai-on-ethereum). DAI\*\* is unlocked to the receiver on Ethereum.
+6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDAI Bridge. Please be aware that after Hashi upgrade, `transactionHash` has been replaced with the value of `nonce`. Please check [here](./hashi-integration.md) for more information on how it works.
 
 ### Savings xDAI
 
@@ -2872,22 +2889,18 @@ The second contract is the Interest Receiver. This will be the address provided 
 
 </Tabs>
 
-## Tutorials
+### How to claim DAI on Ethereum
 
-### Claim DAI on Ethereum using smart contract
-
-1. Fetch the value of `recipient`, `value` and `nonce` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce)` from the Gnosis Chain.
+1. Fetch the value of `recipient`, `value` and `nonce` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce)` from the transction which is emitted by [Home xDAI Bridge](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) Gnosis Chain.
    ![](../../../static/img/bridges/xdaibridge/gc-xdai-tx.png)
-2. Go to the [xDAI bridge helper contract on Gnosis Chain](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract).  
-   3. Call [`getMessageHash(address _recipient,  uint256 _value, _origTxHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x30322ce7) : with `recipient` and `value` from the `UserRequestForSignature` and `_origTxHash` as `nonce` from `UserRequestForSignature` (not the transaction hash!). Fetch the returned message hash.  
-   4. Call [`getMessage(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x0139a221) & [`getSignatures(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x9bc51068) with the message hash from the previous step.
-   ![](../../../static/img/bridges/xdaibridge/xdai-helper.png)
-3. Use the value returned from the previous step to call `executeSignatures(bytes message, bytes signatures)`[Ethereum xDAI Bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#writeProxyContract#F7).
+2. Go to the [xDAI bridge helper contract on Gnosis Chain](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract).
+
+   1. Call [`getMessageHash(address _recipient,  uint256 _value, _origTxHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x30322ce7) : with `recipient` and `value` from the `UserRequestForSignature` and `_origTxHash` as `nonce` from `UserRequestForSignature` (not the transaction hash!). Fetch the returned message hash.
+   2. Call [`getMessage(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x0139a221) & [`getSignatures(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x9bc51068) with the message hash from the previous step.
+      ![](../../../static/img/bridges/xdaibridge/xdai-helper.png)
+
+3. Use the value returned from the previous step to call `executeSignatures(bytes message, bytes signatures)` on [xDAI Foreign Bridge on Ethereum](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#writeProxyContract#F7).
    ![](../../../static/img/bridges/xdaibridge/xdai-execute-signatures.png)
-
-## Resources
-
-- [Tokenbridge Docs on xDai Bridge](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/about.md)
 
 ---
 
@@ -2967,9 +2980,9 @@ Due to the light client finality requirements (at least 23mins on Ethereum), the
 
 ### Terminology
 
-- **Home (Native) Network**: Of the two networks being bridged between, the home or native network is the one with fast and inexpensive operations. All bridge operations to collect validator confirmations are performed on this side of the bridge. It is the Gnosis Chain in this case.
-- **Foreign Network**: Can be any EVM chain, generally it refers to Ethereum.
-- **Originating Contract**: An arbitrary contract where the message originates, typically this is where the user interacts and requests for a function to be invoked on another network.
+- **Home (Native) Network**: Gnosis Chain.
+- **Foreign Network**: Ethereum.
+- **Originating Contract**: An arbitrary contract where the message originates, typically this is where the user interacts and requests for a function to be invoked on another network. For example, Omnibridge is the originating contract that use AMB contract as data messaging layer.
 
 ### Call a cross-chain method via AMB:
 
@@ -2987,21 +3000,32 @@ function requireToPassMessage (address _contract,
 
 ![](/img/bridges/diagrams/amb-bridge-contract-flow.png)
 
-#### Foreign Network to Home Network
+#### Ethereum to Gnosis Chain
 
 1. User calls `foo()` on the originating contract
-2. Originating contract calls [`requireToPassMessage()`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F10) on Foreign Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
-3. `UserRequestForAffirmation` event is emitted, and listening validators relay the message to the Home side where signatures are collected
-4. [`executeAffirmation()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F15) is called on the Home Bridge contract by a validator once enough signatures are collected.
-5. Home bridge contract decodes the message and calls `foo()` on the target contract.
+2. Originating contract calls [`requireToPassMessage()`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F10) on [Foreign AMB contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
+3. `UserRequestForAffirmation(bytes32 indexed messageId, bytes encodedData)` event is emitted from [Foreign AMB contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), and listening bridge validators relay the message to the Home side where signatures are collected by calling Home AMB `executeAffirmation(bytes message)`, where `message` parameter is the `encodedData` from `UserRequestForAffirmation` event. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `executeAffirmation` on Home AMB. For more details about how Hashi works in this case, check out [here](./hashi-integration.md)
+4. Once enough signatures has been collected by bridge valdiators, the transaction will emit `CollectedSignatures (address authorityResponsibleForRelay, bytes32 messageHash, uint256 NumberOfCollectedSignatures)` and calls `foo()` on the target contract.
 
-#### Home Network to Foreign Network
+#### Gnosis Chain to Ethereum
 
 1. User calls `foo()` on an originating contract
 2. Originating contract calls [`requireToPassMessage()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F14) on Home Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
-3. Signatures are collected from validators by calling [`submitSignatures()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F5), and once enough are collected `CollectedSignatures()` event is emitted.
-4. Message is relayed to the Foreign Bridge contract, and [`executeSignatures()`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) is called
-5. Foreign bridge contract decodes the message and calls `foo()` on target contract
+3. Signatures are collected from validators by calling [`submitSignatures()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F5), and once enough are collected `CollectedSignatures()` event is emitted. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `executeAffirmation` on Home AMB. For more details about how Hashi works in this case, check out [here](./hashi-integration.md)
+4. Anyone can execute the call by calling [`executeSignatures(bytes message, bytes signatures)`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) on Foreign AMB. To fetch the calldata for `executeSignatures` function, please follow the [guideline below](#how-to-call-executesignatures-on-foreign-amb-ethereum).
+5. Foreign AMB contract decodes the message and calls `foo()` on target contract
+
+
+### How to call executeSignatures on Foreign AMB (Ethereum)
+
+When the transaction is initiated from Home Network (Gnosis Chain), one has to claim the transaction on Ethereum explicitly. Here is how you can fetch the calldata required to call Foreign AMB to claim the transaction.
+
+1. Find the originating transaction on Gnosis Chain that interact with the Home AMB, and look for `UserRequestForSignature(bytes32 indexed messageId, bytes encodedData)`. [Example](https://gnosisscan.io/tx/0x946d5a926b4e6c55b51eae53b6fea118d7d4fd5ebfa44d6256ef4ce7b4d927be#eventlog)
+   ![](../../../static/img/bridges/amb-userrequestforsignature.png)
+2. Go to [AMB Helper contract](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract) on Gnosis Chain, paste the `encodedData` from `UserReqeustForSignature` into `getSignatures(bytes _message)` (the message starts with 0x0005). Fetch the return value from `getSignatures`.
+   ![](../../../static/img/bridges/amb-getsignatures.png)
+3. On Foreign AMB, call `executeSigantures(bytes _data, bytes _signatures)`, where `_data` is the `encodedData` from `UserRequestForSignature` and `_signatures` is from the return value of `getSignatures` method. Please make sure that the caller account has enough ETH for the gas fee.
+
 
 ### How to check if AMB is down (not relaying message)
 
@@ -3159,6 +3183,35 @@ For Omnibridge / AMB:
 3. If Hashi is enabled & mandatory, off chain executor calls Ethereum’s Yaru.executeMessages(), which check if the hash is agreed upon adapters and set isApprovedByHashi(messageId) to true eventually.
 4. User claims token by calling Ethereum’s ForeignxDAIBridge.executeSignatures(). DAI is transfer to the receiver eventually.
 
+# Hashi Manager contract
+
+Hashi Manager contract is the contract that controls the Hashi oracle and relevant information.
+
+<Tabs>
+<TabItem value="amb" label="AMB">
+
+| Contract                      | Address                                                                                                                |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Hashi Manager on Ethereum     | [0x93f6eE78451AaCc1Db1db49a12aBfCc4662B9Cc9](https://etherscan.io/address/0x93f6eE78451AaCc1Db1db49a12aBfCc4662B9Cc9)  |
+| Hashi Manager on Gnosis Chain | [0x74CACae9801bA4Fe0027Ed6F58d53797CCa7296E](https://gnosisscan.io/address/0x74CACae9801bA4Fe0027Ed6F58d53797CCa7296E) |
+
+</TabItem>
+
+<TabItem value="xdai" label="xDai">
+
+| Contract                      | Address                                                                                                                |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Hashi Manager on Ethereum     | [0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD ](https://etherscan.io/address/0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD) |
+| Hashi Manager on Gnosis Chain | [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosisscan.io/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49) |
+
+</TabItem>
+</Tabs>
+
+1. Set the oracle sets (reporter address from source chain, adapter address on target chain) for certain route (i.e. Ethereum -> Gnosis Chain, Gnosis Chain -> Ethereum).
+2. Set the target address: the bridge contract on the target chain.
+3. Set exepected adapter hash: the adapter address on the same chain.
+4. Set Yaho, Yaru: For message relaying and executing logic. Check out how it works [here](https://crosschain-alliance.gitbook.io/hashi/getting-started/how-hashi-works)
+
 ## Reference
 
 1. AMB contracts: https://github.com/crosschain-alliance/tokenbridge-contracts/tree/feat/hashi-integration-amb
@@ -3166,6 +3219,161 @@ For Omnibridge / AMB:
 3. Test: https://github.com/crosschain-alliance/tokenbridge-contracts-migration-tests
 4. Audits: https://crosschain-alliance.gitbook.io/hashi/v0.2/audit-report#gnosis-bridge-hashi-integration
 5. Hashi: https://crosschain-alliance.gitbook.io/hashi/v0.2/introduction
+
+---
+
+// File: bridges/About Token Bridges/usds-xdaibridge-migration
+
+# USDS migration on xDai Bridge
+
+:::danger
+
+The bridge migration has not yet taken place.  
+Please prepare for the upcoming upgrade by switching the entry point contract from xDAI Foreign Bridge to Bridge Router contract.
+:::
+
+## 1. General Overview
+
+- **What changed?**
+
+  - The [xDAI bridge on Ethereum](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) no longer accepts DAI as collateral. It now uses [USDS](https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F).
+  - On Gnosis Chain, users still receive xDAI as usual.
+
+- **Why it matters?**
+
+  - Any application sending or claiming DAI must adapt to the new USDS flows.
+  - To send or claim tokens, you interact with the **BridgeRouter** contract, which directs transactions to the right bridge logic.
+
+- **When will it happen?**
+  - **The exact date for the migration is to be determined** and will be anounced in our comms channel (X, Discord, Telegram, Gnosis Docs).
+  - Before the migration happen, third party applications are given **1 month**(June 8, 2025) to adapt to the changes by switching the entry point contract to Bridge Router.
+
+---
+
+## 2. Key Contracts & Addresses
+
+| Contract                 | Chain    | Address                                                                                                                 |
+| ------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **BridgeRouter (Proxy)** | Ethereum | [`0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0`](https://etherscan.io/address/0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0) |
+| BridgeRouter Impl.       | Ethereum | [`0x691c025Efa7ea1c87DF256F2Da9208E5345D40b1`](https://etherscan.io/address/0x691c025Efa7ea1c87DF256F2Da9208E5345D40b1) |
+
+---
+
+## 3. Technical Details
+
+:::info
+Please refer to [here](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdai-usds-migration/USDSMigration.md) for details regarding the contracts, workflow pre & post migration.
+:::
+
+**How it works after the migration**
+
+**Relay tokens**
+![](../../../static/img/bridges/xdaibridge/bridge-router-relay-token.svg)
+
+**Claim tokens**
+![](../../../static/img/bridges/xdaibridge/bridge-router-claim-token.svg)
+
+**Scenarios**
+
+1. `BridgeRouter.relayTokens(address token, address recipient, uint256 amount)`  
+   -> When token is DAI / USDS from Ethereum, receive xDAI on GC.  
+   -> When token is other tokens from Ethereum, receive the bridged version token on GC.
+2. `BridgeRouter.executeSignatures(bytes memory message, bytes memory signatures)`  
+   -> claim DAI on Ethereum
+3. `BridgeRouter.executeSignaturesUSDS(bytes memory message, bytes memory signatures)`  
+   -> claim USDS on Ethereum
+4. `BridgeRouter.safeExecuteSignaturesWithAutoGasLimit(bytes memory message, bytes memory signatures)`  
+   -> claim token from Omnibridge
+5. `xDAIForeignBridge.relayTokens(address recipient, uint256 amount)`  
+   -> relay USDS from Ethereum, receive xDAI on GC
+6. `xDAIForeignBridge.executeSignatures(bytes memory message, bytes memory signatures)`  
+   -> claim DAI on Ethereum
+7. `xDAIForeignBridge.executeSignaturesUSDS(bytes memory message, bytes memory signatures)`  
+   -> claim USDS on Ethereum
+
+### 3.1 How to Relay Tokens
+
+1. **Approve** the BridgeRouter to spend your token:
+
+   ```solidity
+   // if sending DAI or USDS:
+   IERC20(token).approve(BridgeRouterAddress, amount);
+   ```
+
+2. **Call** `relayTokens` on BridgeRouter:
+
+   ```solidity
+   BridgeRouter.relayTokens(
+     address token,            // address of DAI or USDS
+     address recipient, // who receives xDAI on Gnosis Chain
+     uint256 amount            // how much to send
+   );
+   ```
+
+- **What happens inside?**
+
+  - If `token` is DAI: it's converted to USDS, then locked in xDAI Foreign Bridge cotntracts.
+  - If `token` is USDS: it's locked in xDAI Foreign Bridge cotntracts directly.
+  - If `token` is any other ERC20 or ETH: it goes through Omnibridge as before.
+
+---
+
+### 3.2 How to Claim Tokens
+
+Once your tokens have been initiated from Gnosis Chain, you can claim them back on Ethereum:
+
+- **Claim DAI:**
+
+  ```solidity
+  BridgeRouter.executeSignatures(message, signatures);
+  ```
+
+  - Always returns DAI.
+
+- **Claim USDS (new):**
+
+  ```solidity
+  BridgeRouter.executeSignaturesUSDS(message, signatures);
+  ```
+
+  - Only works after the upgrade; [reverts](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdai-usds-migration/contracts/upgradeable_contracts/erc20_to_native/BridgeRouter.sol#L105) before.
+
+- **Other tokens:**
+
+  ```solidity
+  BridgeRouter.safeExecuteSignaturesWithAutoGasLimit(message, signatures);
+  ```
+
+  - Same process as before via Omnibridge.
+
+- To fetch the `message` and `signatures` parameters, please check the guide for xDai Bridge [here](./xdai-bridge.md#how-to-claim-dai-on-ethereum), for AMB/Omnibridge [here](./amb-bridge.md#how-to-call-executesignatures-on-foreign-amb-ethereum).
+
+---
+
+## 4. Next Steps
+
+- **Update your code**:
+
+  - Replace direct xDAI Foreign bridge calls with **BridgeRouter** methods (`relayTokens`, `executeSignatures`, `executeSignaturesUSDS`).
+
+- **Monitor migration**:
+
+  - Ensure you use `executeSignaturesUSDS` only once the upgrade is live.
+
+### 4.1 How to test with post migration environment
+
+To simulate the actual mainnet environment, we use Tenderly Virtual TestNets for both Ethereum and Gnosis Chain. Third-party applications are encouraged to use the following RPC endpoints to simulate the post-migration environment.
+
+Switch your RPC:
+
+| Chain        | Description | URL                                                                                           |
+| ------------ | ----------- | --------------------------------------------------------------------------------------------- |
+| Ethereum     | RPC         | https://virtual.mainnet.rpc.tenderly.co/f7d3ce08-c1ea-42da-87f1-4a40f335dda9                  |
+| Ethereum     | Explorer    | https://dashboard.tenderly.co/explorer/vnet/f7d3ce08-c1ea-42da-87f1-4a40f335dda9/transactions |
+| Gnosis Chain | RPC         | https://virtual.gnosis.rpc.tenderly.co/c9ef8faf-bac8-40d0-8530-ded119b8012a                   |
+| Gnosis Chain | Explorer    | https://dashboard.tenderly.co/explorer/vnet/c9ef8faf-bac8-40d0-8530-ded119b8012a/transactions |
+
+If you run into any issues or have any questions, please reach out to our comms channel: [Telegram](https://t.me/gnosischain), [X](https://x.com/gnosischain), [Discord](https://discord.com/invite/gnosis) for assistance.
 
 ---
 
@@ -4734,6 +4942,17 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
 # Governance Decisions
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
+
+## Upgrading Deposit Contract: Introducing new batchDeposit function
+
+🗳 Justification:
+
+1. Upgrade the deposit contract proxy to new implementation contract, which introduced a new `batchDeposit` function that allows specifying a different deposit amount for each validator. This is required for batching for 0x02-type withdrawal credentials which have variable amounts instead the previous default of 1 GNO.
+   1. Deposit contract proxy contract: 0x0B98057eA310F4d31F2a452B414647007d1645d9
+   2. Old implementation contract: [\*0x4feF25519256e24A1FC536F7677152dA742Fe3Ef](https://gnosisscan.io/address/0x4feF25519256e24A1FC536F7677152dA742Fe3Ef)\*
+   3. New implementation contract: [0x49de1aced385334f1a66d86db363264eb5b6a708](https://gnosisscan.io/address/0x49de1aced385334f1a66d86db363264eb5b6a708#code)
+
+✅ Implemented: May 2, 2025
 
 ## Upgrade xDAI implementation contract for Hashi integraion, replacing Metacartel with Monerium
 
@@ -11953,48 +12172,45 @@ Repository: [https://github.com/gnosischain/reth_gnosis](https://github.com/gnos
 
 ## Option 1: Using Docker
 
-### Pull the image
+You can run the node using Docker. You can pull the image from the Docker Hub by running the following command:
 
-```
-> docker pull ghcr.io/gnosischain/reth_gnosis:master
-```
-
-### Setup the node
-
-```
-> mkdir ./reth_data
-> ./scripts/setup.sh --datadir ./reth_data --chain chiado --docker
+```bash
+docker pull ghcr.io/gnosischain/reth_gnosis:master
 ```
 
-Use `--gnosis` instead of `--chiado` to configure for Gnosis Chain.
+### Running Reth for Gnosis
 
-### Run the node
+You might want to create a directory where you want all data files (reth's database, configs, etc.) to be stored, and to mount it as a volume to the image. For example, let's create `./reth_data` in the current folder.
 
-Move your JWT secret file:
+> Note that a temporary directory will be created (to download the post-merge state) where reth is executed, and this directory will be removed after the initialization is done.
 
+```bash
+mkdir ./reth_data
 ```
-> cp /path/to/jwtsecret ./reth_data/jwtsecret
+
+Before running the node, move your jwtsecret file to the `./reth_data` directory. You can run it by running the following command:
+
+```bash
+cp /path/to/jwtsecret ./reth_data/jwtsecret
 ```
 
-Run Reth for Chiado:
-
-```
-> docker run \
+```bash
+docker run \
     -v ./reth_data:/data \
     ghcr.io/gnosischain/reth_gnosis:master node \
-    --chain chainspecs/chiado.json \
+    --chain chiado \
     --datadir /data \
     --authrpc.jwtsecret=/data/jwtsecret
 ```
 
-Full command for Gnosis with network and RPC:
+This runs Chiado, and you can use `--chain gnosis` for Gnosis Chain mainnet. A full command (along with network and config) would look like this:
 
-```
-> docker run --network host \
+```bash
+docker run --network host \
     -v $DATA_DIR:/data \
     ghcr.io/gnosischain/reth_gnosis:master node \
     -vvvv \
-    --chain chainspecs/gnosis.json \
+    --chain gnosis \
     --datadir /data \
     --http \
     --http.port=8545 \
@@ -12008,42 +12224,44 @@ Full command for Gnosis with network and RPC:
     --discovery.addr=0.0.0.0
 ```
 
-## Option 2: Build from Source
+## Option 2: Build from source
 
-### Build the project
+Currently the recommended way of running reth is by building it from source. To do so, you need to have Rust installed. You can install it by following the instructions on the [official website](https://www.rust-lang.org/tools/install).
 
-Install [Rust](https://www.rust-lang.org/tools/install) first. Then:
+After installing Rust, you can clone the repository and build the project by running the following commands:
 
-```
-> git clone https://github.com/gnosischain/reth_gnosis.git
-> cd reth_gnosis
-> git checkout pectra-alphas
-> cargo build --release
-```
+```bash
+git clone https://github.com/gnosischain/reth_gnosis.git
+cd reth_gnosis
+git checkout master
 
-### Setup the node
-
-```
-> mkdir ./reth_data
-> ./scripts/setup.sh --datadir ./reth_data --chain chiado
+cargo build --release
 ```
 
-Use `--gnosis` for Gnosis Chain.
+This will build the project in debug mode.
 
-### Run the node
+### Node Setup
 
-Move your JWT secret file:
+You might want to create a directory where you want all data files (reth's database, configs, etc.) to be stored. For example, let's create `./reth_data` in the current folder.
 
+> Note that a temporary directory will be created (to download the post-merge state) where reth is executed, and this directory will be removed after the initialization is done.
+
+```bash
+mkdir ./reth_data
 ```
-> cp /path/to/jwtsecret ./reth_data/jwtsecret
+
+### Running Reth for Gnosis
+
+Before running the node, move your jwtsecret file to the `./reth_data` directory. Now you can run it by running the following command:
+
+```bash
+cp /path/to/jwtsecret ./reth_data/jwtsecret
 ```
 
-Run Reth:
-
-```
-> ./target/release/reth node \
+```bash
+./target/release/reth node \
     -vvvv \
-    --chain ./scripts/chainspecs/chiado.json \
+    --chain chiado \
     --datadir ./reth_data \
     --http \
     --http.port=8545 \
@@ -12057,7 +12275,14 @@ Run Reth:
     --discovery.addr=0.0.0.0
 ```
 
-Use `./scripts/chainspecs/gnosis.json` for Gnosis Chain.
+This runs Chiado, and you can use `--chain gnosis` for Gnosis Chain.
+
+### Data directory
+
+Providing a `--datadir` is optional, but recommended. If you don't provide it, the database will be created in the OS specific default location:
+- Linux: `$XDG_DATA_HOME/reth/` or `$HOME/.local/share/reth/`
+- Windows: `{FOLDERID_RoamingAppData}/reth/`
+- macOS: `$HOME/Library/Application Support/reth/`
 
 ---
 
@@ -15440,6 +15665,215 @@ const txHash = await smartAccountClient.sendTransaction({
 	maxPriorityFeePerGas: gasPrices.fast.maxPriorityFeePerGas, // if using Pimlico
 })
 ```
+
+---
+
+// File: technicalguides/account-abstraction/eip7702
+
+# EIP‑7702 & Gnosis Pectra Upgrade  
+
+> **Status:** Live on Gnosis mainnet since **7 May 2025** (Pectra).  
+> **Transaction Type:** `0x04` – *set‑code*.
+
+EIP‑7702 lets any Externally‑Owned Account (EOA) **attach byte‑code for the duration of a single transaction**. In practice, this means:
+
+* Batch / atomic multi‑calls  
+* Sponsored gas (paymasters)  
+* Session‑keys & delegated rights  
+* Smooth account‑abstraction UX **without** permanent smart‑wallet deployment
+
+## 1 Transaction Anatomy
+
+```
+type = 0x04
+to   = <EOA address (self)>
+data = <byte‑code OR ABI‑encoded delegatecall>
+authorizationList[] = signed structs binding code + gas limits
+```
+
+During execution the EOA temporarily holds code, executes, then the EVM **auto‑reverts to a pure EOA**.
+
+---
+
+## 2  Local Dev Setup<a id="2-local-dev-setup"></a>
+
+```bash
+# Node.js ≥ 22
+npm i -g hardhat@next            # Hardhat 3 Alpha
+mkdir eip7702-demo && cd $_
+npm init -y
+npx hardhat@next --init          # enable ESM, Node test runner, Viem
+npm i viem dotenv @openzeppelin/contracts
+```
+
+`.env`
+
+```env
+RPC_URL=https://rpc.gnosis.gateway.fm
+PRIVATE_KEY=<EOA_PRIVATE_KEY>
+RELAY_KEY=<OPTIONAL_RELAY_PRIVATE_KEY>
+```
+
+---
+
+## 3  Example Contracts<a id="3-hello-world-contracts"></a>
+
+### 3.1 `Delegation.sol`
+
+```solidity
+// SPDX‑License‑Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Delegation {
+    event Log(string message);
+
+    function initialize() external payable {
+        emit Log("Hello, world!");
+    }
+
+    function ping() external pure {
+        emit Log("Pong!");
+    }
+}
+```
+
+### 3.2 Optional Helpers
+
+Add the usual `Counter.sol`, `ERC20Token.sol`, or a minimal `SimpleDelegate.sol` proxy if you want to experiment with batch calls.
+
+Deploy via a Hardhat script (`scripts/deploy.ts` – omitted for brevity).
+
+---
+
+## 4  Sending EIP‑7702 Transactions<a id="4-sending-eip-7702-transactions"></a>
+
+This flow **designates** a contract on‑the‑fly and invokes `initialize()` in the **same** tx.
+
+### 4.1  `config.ts`
+
+```ts
+import { createWalletClient, http } from "viem";
+import { gnosis } from "viem/chains";
+import { privateKeyToAccount } from "viem/accounts";
+import { eip7702Actions } from "viem/experimental";
+
+export const relay = privateKeyToAccount(process.env.RELAY_KEY!);
+
+export const walletClient = createWalletClient({
+  account: relay,              // relayer sponsors gas
+  chain: gnosis,
+  transport: http(process.env.RPC_URL!)
+}).extend(eip7702Actions());
+```
+
+### 4.2  `sendTx.ts`
+
+```ts
+import { encodeFunctionData } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
+import { walletClient } from "./config";
+import { abi, contractAddress } from "./contract";
+
+const eoa = privateKeyToAccount(process.env.PRIVATE_KEY!);      // delegator
+
+// 1. Sign authorization binding contract → EOA
+const authorization = await walletClient.signAuthorization({
+  account: eoa,
+  contractAddress
+});
+
+// 2. Broadcast 0x04 transaction
+const txHash = await walletClient.sendTransaction({
+  authorizationList: [authorization],
+  to: eoa.address,                            // self-call
+  data: encodeFunctionData({
+    abi,
+    functionName: "initialize"
+  })
+});
+
+console.log("tx sent:", txHash);
+```
+
+#### Self‑Executed Variant
+
+If **the same EOA** pays gas, add `executor: "self"` when signing:
+
+```ts
+const authorization = await walletClient.signAuthorization({
+  account: eoa,
+  contractAddress,
+  executor: "self"
+});
+```
+
+---
+
+## 5  Contract Writes with EIP‑7702<a id="5-contract-writes-with-eip-7702"></a>
+
+`writeContract()` is syntactic sugar for the pattern above — perfect for **batch calls**.
+
+### 5.1  `writeContract.ts`
+
+```ts
+import { walletClient } from "./config";
+import { abi, contractAddress } from "./contract";
+import { privateKeyToAccount } from "viem/accounts";
+
+const eoa = privateKeyToAccount(process.env.PRIVATE_KEY!);
+
+// Authorize once
+const auth = await walletClient.signAuthorization({
+  account: eoa,
+  contractAddress
+});
+
+// Designate + call initialize()
+await walletClient.writeContract({
+  abi,
+  address: eoa.address,              // target is SELF
+  authorizationList: [auth],
+  functionName: "initialize"
+});
+
+// Later calls need **no** authorization
+await walletClient.writeContract({
+  abi,
+  address: eoa.address,
+  functionName: "ping"
+});
+```
+
+### 5.2  Batch Transfer Example
+
+```ts
+import { encodeFunctionData, parseEther } from "viem";
+
+const batchData = encodeFunctionData({
+  abi,
+  functionName: "multiSend",
+  args: [[
+    { to: "0xRecipient1", value: parseEther("0.01"), data: "0x" },
+    { to: "0xRecipient2", value: parseEther("0.02"), data: "0x" }
+  ]]
+});
+
+await walletClient.sendTransaction({
+  authorizationList: [auth],
+  to: eoa.address,
+  data: batchData
+});
+```
+
+---
+
+## 6  Best Practices
+
+* **Replay‑safe:** Ensure `authorization.nonce == tx.nonce + 1` (`executor: "self"` handles this).  
+* **Code size ≤ 24 576 bytes** or the tx will revert.  
+* **Audit everything** – attached code runs with EOA’s permissions.  
+* **Gas caps** – always set sensible `maxFeePerGas` when using paymasters.  
+* **Chain gating** – check fork block ≥ `PectraBlockNumber` before sending `0x04`.
 
 ---
 
