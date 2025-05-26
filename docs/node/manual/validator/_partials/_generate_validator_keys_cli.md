@@ -17,7 +17,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 ]}>
 <TabItem value="others">
 
-- Copy the download link for Linux, MacOS or Arm64 package from the [validator data generation tool](https://github.com/gnosischain/validator-data-generator/releases).
+- Copy the download link for Linux, MacOS or Arm64 package from the [ETHstaker Deposit CLI](https://github.com/eth-educators/ethstaker-deposit-cli/releases).
 
 - Download the Validator Data Generation tool
     ```shell
@@ -35,8 +35,8 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
     ```
 
 - Execute Validator Data Generation tool and follow the instructions.
-    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/).
-    > Tip: add the [`--eth1_withdrawal_address`](https://github.com/gnosischain/validator-data-generator/#new-mnemonic-arguments) flag when creating your keys, **pointing to an address you control**.
+    In case of doubts, check the [tool documentation](https://deposit-cli.ethstaker.cc/landing.html).
+    > Tip: add the [`--eth1_withdrawal_address`](https://deposit-cli.ethstaker.cc/new_mnemonic.html) flag when creating your keys, **pointing to an address you control**.
 
     - If you want to generate a new mnemonic:
         ```shell
@@ -52,9 +52,9 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 </TabItem>
 <TabItem value="win">
 
-- Download the Windows version of the [Validator Data Generation tool](https://github.com/gnosischain/validator-data-generator/releases) from the releases page.
+- Download the Windows version of the [ETHstaker Deposit CLI](https://github.com/eth-educators/ethstaker-deposit-cli/releases) from the releases page.
 - Execute Validator Data Generation tool and follow the instructions.
-    In case of doubts, check the [tool documentation](https://github.com/gnosischain/validator-data-generator/)
+    In case of doubts, check the [tool documentation](https://deposit-cli.ethstaker.cc/landing.html)
 
     - If you want to generate a new mnemonic:
         ```shell
@@ -90,5 +90,5 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 - Save the location of the generated keys, and copy them in a backup USB memory or any other secure storage.
 
 :::success
-For custom setup and more instructions, check the [Validator Data Generation tool documentation](https://github.com/gnosischain/validator-data-generator/).
+For custom setup and more instructions, check the [ETHstaker Deposit CLI documentation](https://deposit-cli.ethstaker.cc/landing.html).
 :::
