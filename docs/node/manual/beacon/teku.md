@@ -7,12 +7,12 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 
 :::caution Version check
 
-This page's content is up-to-date for [Teku v23.3.0](https://github.com/ConsenSys/teku/releases/tag/23.3.0).
+This page's content is up-to-date for [Teku v25.4.1](https://github.com/Consensys/teku/releases/tag/25.4.1).
 
 :::
 
 :::caution
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
 :::
 
 ## Overview
@@ -25,7 +25,7 @@ Teku is a consensus client built to meet institutional needs and security requir
 
 Visit Teku's page on how to download Teku.
 
-https://docs.teku.consensys.net/en/latest/
+https://docs.teku.consensys.io/introduction
 
 :::
 

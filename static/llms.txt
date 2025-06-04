@@ -10121,14 +10121,15 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Execution client:', value: 'label'},
   {label: 'Nethermind', value: 'nethermind'},
   {label: 'Erigon', value: 'erigon'},
-  {label: 'Besu', value: 'besu'},
   {label: 'Geth', value: 'geth'},
+  {label: 'Reth', value: 'reth'},
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="nethermind"></TabItem>
   <TabItem value="erigon"></TabItem>
   <TabItem value="besu"></TabItem>
   <TabItem value="geth"></TabItem>
+  <TabItem value="reth"></TabItem>
 </Tabs>
 
 <Tabs className="tabgroup-with-label cl-tabgroup" groupId="consensus-clients" defaultValue="lighthouse" values={[
@@ -10137,14 +10138,12 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Lodestar', value: 'lodestar'},
   {label: 'Teku', value: 'teku'},
   {label: 'Nimbus', value: 'nimbus'},
-  {label: 'Prysm', value: 'prysm'}
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="lighthouse"></TabItem>
   <TabItem value="lodestar"></TabItem>
   <TabItem value="teku"></TabItem>
   <TabItem value="nimbus"></TabItem>
-  <TabItem value="prysm"></TabItem>
 </Tabs>
 
 <p className="unsupported">* disabled options: unsupported clients</p>
@@ -10770,13 +10769,13 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 
 :::caution Version check
 
-This page's content is up-to-date for [Lighthouse v4.2.0](https://github.com/sigp/lighthouse/releases/tag/v4.2.0).
+This page's content is up-to-date for [Lighthouse v7.0.1](https://github.com/sigp/lighthouse/releases/tag/v7.0.1).
 
 :::
 
 :::caution Prerequisites
 
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
 
 :::
 
@@ -10946,11 +10945,11 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 # Run Beacon Node: Lodestar
 
 :::caution Version check
-This page's content is up-to-date for [Lodestar v1.5.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.5.1).
+This page's content is up-to-date for [Lodestar v25.5.0](https://github.com/Consensys/teku/releases/tag/25.5.0).
 :::
 
 :::caution Prerequisites
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
 :::
 
 ## Overview
@@ -11250,67 +11249,6 @@ docker-compose up -d
 
 ---
 
-// File: node/manual/beacon/prysm
-
-# Run Beacon Node: Prysm
-
-:::danger
-This client is not yet ready for public use. Validators are encouraged to run Lighthouse, Teku or Lodestar in the interim.
-:::
-
-The [Prysm](https://github.com/prysmaticlabs/prysm) project is a Go implementation of the Ethereum protocols consensus layer, by [prysmaticlabs](https://prysmaticlabs.com/)
-
-This project builds a customized version of the prysm client with Gnosis Chain modifications.
-Repository: [https://github.com/gnosischain/prysm-client](https://github.com/gnosischain/prysm-client)
-
-## Option 1: Run as System Process
-
-:::danger
-This client is not yet ready for public use. Validators are encouraged to run Teku, Lodestar, or Lighthouse in the interim.
-:::
-
-## Option 2: Run using Docker
-
-:::danger
-
-This client is not yet ready for public use. Validators are encouraged to run Teku, Lodestar, or Lighthouse in the interim.
-
-:::
-
-**Beacon Node**
-
-```shell
-docker pull gnosischain/prysm-beacon:latest-<gnosis or chiado>
-```
-
-**Validator Node **
-
-```shell
-docker pull gnosischain/prysm-validator:latest-<gnosis or chiado>
-```
-
-Example Docker-compose.yml
-
-[https://github.com/gnosischain/prysm-client/blob/main/docker-compose.yml](https://github.com/gnosischain/prysm-client/blob/main/docker-compose.yml)
-
-**Import validator keys **
-
-Add your keystores in `./keystores` and the `password.txt` in a file `./keystores/password.txt`
-
-**Run Beacon Chain node with the attached Validator Process**
-
-```shell
-docker-compose up -d consensus
-docker-compose up -d validator
-```
-
-**Make Deposit **
-:::caution
-**At this stage you should have your EL and CL fully Synced and validators must be imported to your CL **
-:::
-
----
-
 // File: node/manual/beacon/teku
 
 import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
@@ -11319,12 +11257,12 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 
 :::caution Version check
 
-This page's content is up-to-date for [Teku v23.3.0](https://github.com/ConsenSys/teku/releases/tag/23.3.0).
+This page's content is up-to-date for [Teku v25.4.1](https://github.com/Consensys/teku/releases/tag/25.4.1).
 
 :::
 
 :::caution
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
 :::
 
 ## Overview
@@ -11337,7 +11275,7 @@ Teku is a consensus client built to meet institutional needs and security requir
 
 Visit Teku's page on how to download Teku.
 
-https://docs.teku.consensys.net/en/latest/
+https://docs.teku.consensys.io/introduction
 
 :::
 
@@ -11800,18 +11738,6 @@ import InstallErigonPartial from '@site/docs/node/manual/execution/_partials/_in
 
 ---
 
-// File: node/manual/execution/besu
-
-# Besu
-
-Hyperledger [Besu](https://besu.hyperledger.org/en/stable/) is an open source Ethereum client developed under the Apache 2.0 license and written in Java. It runs on public and private networks.
-
-:::note
-Besu is currently working on a Gnosis implementation, please, use [Nethermind](./nethermind.md)
-:::
-
----
-
 // File: node/manual/execution/erigon
 
 # Erigon
@@ -11937,7 +11863,7 @@ Refer to [Erigon Guide](../README.md#step-2-run-an-execution-client).
 
 ## Erigon Archive Node
 
-[Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) is the default option by Erigon. It takes about 370GB (January 2023) to run a Gnosis Chain Archive node. Please check the [system requirements](https://github.com/ledgerwatch/erigon#system-requirements) of your server before running an archive node.
+[Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) is the default option by Erigon. It takes about 640GB (May 2025) to run a Gnosis Chain Archive node. Please check the [system requirements](https://github.com/ledgerwatch/erigon#system-requirements) of your server before running an archive node.
 
 To run an Erigon pruned node, `--prune=htcr` command need to be added.
 
@@ -12164,15 +12090,32 @@ Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from
 
 // File: node/manual/execution/reth
 
-# Reth
+# Reth 
 
-[Reth](https://github.com/gnosischain/reth_gnosis) is a high-performance Ethereum client written in Rust. It currently supports only post-merge state (no pre-merge sync support). You can run it using Docker or build it from source.
+Gnosis‑compatible **Reth** client — **not a fork**, but an **extension** built with the `NodeBuilder` API.
 
-Repository: [https://github.com/gnosischain/reth_gnosis](https://github.com/gnosischain/reth_gnosis)
+Refer to the official Reth documentation → [reth.rs](https://reth.rs)
 
-## Option 1: Using Docker
+Repository: [gnosischain/reth_gnosis](https://github.com/gnosischain/reth_gnosis)
 
-You can run the node using Docker. You can pull the image from the Docker Hub by running the following command:
+---
+
+
+# Installation
+
+Reth differs from other clients: **you must import a post‑merge state**.  
+All file downloads are handled internally in the setup script.
+
+You can run the node in two ways:
+
+1. **Docker** – zero‑build, quick start  
+2. **Build from source** – recommended for development / custom builds
+
+---
+
+## Option 1 – Using Docker
+
+Pull the image:
 
 ```bash
 docker pull ghcr.io/gnosischain/reth_gnosis:master
@@ -12180,55 +12123,42 @@ docker pull ghcr.io/gnosischain/reth_gnosis:master
 
 ### Running Reth for Gnosis
 
-You might want to create a directory where you want all data files (reth's database, configs, etc.) to be stored, and to mount it as a volume to the image. For example, let's create `./reth_data` in the current folder.
-
-> Note that a temporary directory will be created (to download the post-merge state) where reth is executed, and this directory will be removed after the initialization is done.
+Create a data directory (DB, configs, etc.):
 
 ```bash
 mkdir ./reth_data
 ```
 
-Before running the node, move your jwtsecret file to the `./reth_data` directory. You can run it by running the following command:
+> A **temporary directory** is created during initialisation to download the post‑merge snapshot and is removed automatically afterwards.
+
+Copy your Engine API `jwtsecret` into that folder:
 
 ```bash
 cp /path/to/jwtsecret ./reth_data/jwtsecret
 ```
 
-```bash
-docker run \
-    -v ./reth_data:/data \
-    ghcr.io/gnosischain/reth_gnosis:master node \
-    --chain chiado \
-    --datadir /data \
-    --authrpc.jwtsecret=/data/jwtsecret
-```
-
-This runs Chiado, and you can use `--chain gnosis` for Gnosis Chain mainnet. A full command (along with network and config) would look like this:
+#### Quick Chiado run
 
 ```bash
-docker run --network host \
-    -v $DATA_DIR:/data \
-    ghcr.io/gnosischain/reth_gnosis:master node \
-    -vvvv \
-    --chain gnosis \
-    --datadir /data \
-    --http \
-    --http.port=8545 \
-    --http.addr=0.0.0.0 \
-    --http.corsdomain='*' \
-    --http.api=admin,net,eth,web3,debug,trace \
-    --authrpc.port=8546 \
-    --authrpc.jwtsecret=/data/jwtsecret \
-    --authrpc.addr=0.0.0.0 \
-    --discovery.port=30303 \
-    --discovery.addr=0.0.0.0
+docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:master node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
 ```
 
-## Option 2: Build from source
+#### Full Gnosis Chain example
 
-Currently the recommended way of running reth is by building it from source. To do so, you need to have Rust installed. You can install it by following the instructions on the [official website](https://www.rust-lang.org/tools/install).
+```bash
+docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:master node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
+```
 
-After installing Rust, you can clone the repository and build the project by running the following commands:
+---
+
+## Option 2 – Build from Source
+
+### Prerequisites
+
+* Stable [Rust toolchain](https://www.rust-lang.org/tools/install)  
+* Typical C tool‑chain dependencies (`clang`, `cmake`, `pkg-config`, …)
+
+### Clone & build
 
 ```bash
 git clone https://github.com/gnosischain/reth_gnosis.git
@@ -12238,51 +12168,42 @@ git checkout master
 cargo build --release
 ```
 
-This will build the project in debug mode.
+> **Note**: The original instructions state “This will build the project in debug mode.”  
+> Using `--release` actually produces an optimised binary at `./target/release/reth`.
 
-### Node Setup
-
-You might want to create a directory where you want all data files (reth's database, configs, etc.) to be stored. For example, let's create `./reth_data` in the current folder.
-
-> Note that a temporary directory will be created (to download the post-merge state) where reth is executed, and this directory will be removed after the initialization is done.
+### Node setup
 
 ```bash
-mkdir ./reth_data
-```
-
-### Running Reth for Gnosis
-
-Before running the node, move your jwtsecret file to the `./reth_data` directory. Now you can run it by running the following command:
-
-```bash
+mkdir ./reth_data                         # persistent DB/config folder
 cp /path/to/jwtsecret ./reth_data/jwtsecret
 ```
 
+### Quick Chiado run
+
 ```bash
-./target/release/reth node \
-    -vvvv \
-    --chain chiado \
-    --datadir ./reth_data \
-    --http \
-    --http.port=8545 \
-    --http.addr=0.0.0.0 \
-    --http.corsdomain='*' \
-    --http.api=admin,net,eth,web3,debug,trace \
-    --authrpc.port=8546 \
-    --authrpc.jwtsecret=./reth_data/jwtsecret \
-    --authrpc.addr=0.0.0.0 \
-    --discovery.port=30303 \
-    --discovery.addr=0.0.0.0
+./target/release/reth node   -vvvv   --chain chiado   --datadir ./reth_data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=./reth_data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
 ```
 
-This runs Chiado, and you can use `--chain gnosis` for Gnosis Chain.
+Replace `--chain chiado` with `--chain gnosis` for **Gnosis mainnet**.
 
-### Data directory
+---
 
-Providing a `--datadir` is optional, but recommended. If you don't provide it, the database will be created in the OS specific default location:
-- Linux: `$XDG_DATA_HOME/reth/` or `$HOME/.local/share/reth/`
-- Windows: `{FOLDERID_RoamingAppData}/reth/`
-- macOS: `$HOME/Library/Application Support/reth/`
+### Data directory defaults
+
+If `--datadir` is omitted, Reth falls back to the OS‑specific default path:
+
+| OS      | Default path                                         |
+|---------|------------------------------------------------------|
+| Linux   | `$XDG_DATA_HOME/reth/` or `$HOME/.local/share/reth/` |
+| macOS   | `$HOME/Library/Application Support/reth/`            |
+| Windows | `%APPDATA%\reth\`                                  |
+
+---
+
+## Next steps
+
+* Join the **Gnosis Reth Discord** → [discord.gg/gnosischain](https://discord.gg/gnosischain)  
+* Track upstream Reth development → [paradigmxyz/reth](https://github.com/paradigmxyz/reth)
 
 ---
 
@@ -15252,7 +15173,7 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-Vanigate to the EIP-5792 page.
+Navigate to the EIP-5792 page.
 
 ---
 

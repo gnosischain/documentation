@@ -125,6 +125,6 @@ Refer to [Erigon Guide](../README.md#step-2-run-an-execution-client).
 
 ## Erigon Archive Node
 
-[Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) is the default option by Erigon. It takes about 370GB (January 2023) to run a Gnosis Chain Archive node. Please check the [system requirements](https://github.com/ledgerwatch/erigon#system-requirements) of your server before running an archive node.
+[Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) is the default option by Erigon. It takes about 640GB (May 2025) to run a Gnosis Chain Archive node. Please check the [system requirements](https://github.com/ledgerwatch/erigon#system-requirements) of your server before running an archive node.
 
 To run an Erigon pruned node, `--prune=htcr` command need to be added.
