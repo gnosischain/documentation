@@ -33,7 +33,7 @@ Also, note the **App ID** from the settings, we will need to configure while ini
 
 ### 3. Setup Privy Provider and Gnosis Config
 
-We can now initialize **PrivyProvider**. Replace the App ID field with your own Privy App ID and import the chains you want to support in your dapp. In our case, we have imported **gnosisChiado** and **gnosis** from viem. We can also also customize with theme, logo and , colours and other [configs](https://docs.privy.io/guide/react/configuration/appearance#app-name).
+We can now initialize **PrivyProvider**. Replace the App ID field with your own Privy App ID and import the chains you want to support in your dapp. In our case, we have imported **gnosisChiado** and **gnosis** from viem. We can also customize with theme, logo and , colours and other [configs](https://docs.privy.io/guide/react/configuration/appearance#app-name).
 
 ```shell
 'use client';
