@@ -1,72 +1,77 @@
 ---
-title: Reth
+title: Reth 
 ---
 
-# Reth
+# Reth 
 
-[Reth](https://github.com/gnosischain/reth_gnosis) is a high-performance Ethereum client written in Rust. It currently supports only post-merge state (no pre-merge sync support). You can run it using Docker or build it from source.
+Gnosis‑compatible **Reth** client — **not a fork**, but an **extension** built with the `NodeBuilder` API.
 
-Repository: [https://github.com/gnosischain/reth_gnosis](https://github.com/gnosischain/reth_gnosis)
+Refer to the official Reth documentation → [reth.rs](https://reth.rs)
 
-## Option 1: Using Docker
+Repository: [gnosischain/reth_gnosis](https://github.com/gnosischain/reth_gnosis)
 
-You can run the node using Docker. You can pull the image from the Docker Hub by running the following command:
+---
+
+
+# Installation
+
+Reth differs from other clients: **you must import a post‑merge state**.  
+All file downloads are handled internally in the setup script.
+
+You can run the node in two ways:
+
+1. **Docker** – zero‑build, quick start  
+2. **Build from source** – recommended for development / custom builds
+
+---
+
+## Option 1 – Using Docker
+
+Pull the image:
 
 ```bash
-docker pull ghcr.io/gnosischain/reth_gnosis:master
+docker pull ghcr.io/gnosischain/reth_gnosis:v0.1.0
+
 ```
 
 ### Running Reth for Gnosis
 
-You might want to create a directory where you want all data files (reth's database, configs, etc.) to be stored, and to mount it as a volume to the image. For example, let's create `./reth_data` in the current folder.
-
-> Note that a temporary directory will be created (to download the post-merge state) where reth is executed, and this directory will be removed after the initialization is done.
+Create a data directory (DB, configs, etc.):
 
 ```bash
 mkdir ./reth_data
 ```
 
-Before running the node, move your jwtsecret file to the `./reth_data` directory. You can run it by running the following command:
+> A **temporary directory** is created during initialisation to download the post‑merge snapshot and is removed automatically afterwards.
+
+Copy your Engine API `jwtsecret` into that folder:
 
 ```bash
 cp /path/to/jwtsecret ./reth_data/jwtsecret
 ```
 
-```bash
-docker run \
-    -v ./reth_data:/data \
-    ghcr.io/gnosischain/reth_gnosis:master node \
-    --chain chiado \
-    --datadir /data \
-    --authrpc.jwtsecret=/data/jwtsecret
-```
-
-This runs Chiado, and you can use `--chain gnosis` for Gnosis Chain mainnet. A full command (along with network and config) would look like this:
+#### Quick Chiado run
 
 ```bash
-docker run --network host \
-    -v $DATA_DIR:/data \
-    ghcr.io/gnosischain/reth_gnosis:master node \
-    -vvvv \
-    --chain gnosis \
-    --datadir /data \
-    --http \
-    --http.port=8545 \
-    --http.addr=0.0.0.0 \
-    --http.corsdomain='*' \
-    --http.api=admin,net,eth,web3,debug,trace \
-    --authrpc.port=8546 \
-    --authrpc.jwtsecret=/data/jwtsecret \
-    --authrpc.addr=0.0.0.0 \
-    --discovery.port=30303 \
-    --discovery.addr=0.0.0.0
+docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
 ```
 
-## Option 2: Build from source
+#### Full Gnosis Chain example
 
-Currently the recommended way of running reth is by building it from source. To do so, you need to have Rust installed. You can install it by following the instructions on the [official website](https://www.rust-lang.org/tools/install).
+```bash
+docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
+```
 
-After installing Rust, you can clone the repository and build the project by running the following commands:
+---
+
+## Option 2 – Build from Source
+
+### Prerequisites
+
+* Stable [Rust toolchain](https://www.rust-lang.org/tools/install)  
+* Typical C tool‑chain dependencies (`clang`, `cmake`, `pkg-config`, …)
+
+### Clone & build
 
 ```bash
 git clone https://github.com/gnosischain/reth_gnosis.git
@@ -76,48 +81,39 @@ git checkout master
 cargo build --release
 ```
 
-This will build the project in debug mode.
+> **Note**: The original instructions state “This will build the project in debug mode.”  
+> Using `--release` actually produces an optimised binary at `./target/release/reth`.
 
-### Node Setup
-
-You might want to create a directory where you want all data files (reth's database, configs, etc.) to be stored. For example, let's create `./reth_data` in the current folder.
-
-> Note that a temporary directory will be created (to download the post-merge state) where reth is executed, and this directory will be removed after the initialization is done.
+### Node setup
 
 ```bash
-mkdir ./reth_data
-```
-
-### Running Reth for Gnosis
-
-Before running the node, move your jwtsecret file to the `./reth_data` directory. Now you can run it by running the following command:
-
-```bash
+mkdir ./reth_data                         # persistent DB/config folder
 cp /path/to/jwtsecret ./reth_data/jwtsecret
 ```
 
+### Quick Chiado run
+
 ```bash
-./target/release/reth node \
-    -vvvv \
-    --chain chiado \
-    --datadir ./reth_data \
-    --http \
-    --http.port=8545 \
-    --http.addr=0.0.0.0 \
-    --http.corsdomain='*' \
-    --http.api=admin,net,eth,web3,debug,trace \
-    --authrpc.port=8546 \
-    --authrpc.jwtsecret=./reth_data/jwtsecret \
-    --authrpc.addr=0.0.0.0 \
-    --discovery.port=30303 \
-    --discovery.addr=0.0.0.0
+./target/release/reth node   -vvvv   --chain chiado   --datadir ./reth_data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=./reth_data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
 ```
 
-This runs Chiado, and you can use `--chain gnosis` for Gnosis Chain.
+Replace `--chain chiado` with `--chain gnosis` for **Gnosis mainnet**.
 
-### Data directory
+---
 
-Providing a `--datadir` is optional, but recommended. If you don't provide it, the database will be created in the OS specific default location:
-- Linux: `$XDG_DATA_HOME/reth/` or `$HOME/.local/share/reth/`
-- Windows: `{FOLDERID_RoamingAppData}/reth/`
-- macOS: `$HOME/Library/Application Support/reth/`
+### Data directory defaults
+
+If `--datadir` is omitted, Reth falls back to the OS‑specific default path:
+
+| OS      | Default path                                         |
+|---------|------------------------------------------------------|
+| Linux   | `$XDG_DATA_HOME/reth/` or `$HOME/.local/share/reth/` |
+| macOS   | `$HOME/Library/Application Support/reth/`            |
+| Windows | `%APPDATA%\reth\`                                  |
+
+---
+
+## Next steps
+
+* Join the **Gnosis Reth Discord** → [discord.gg/gnosischain](https://discord.gg/gnosischain)  
+* Track upstream Reth development → [paradigmxyz/reth](https://github.com/paradigmxyz/reth)

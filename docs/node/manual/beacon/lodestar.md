@@ -6,11 +6,11 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 # Run Beacon Node: Lodestar
 
 :::caution Version check
-This page's content is up-to-date for [Lodestar v1.5.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.5.1).
+This page's content is up-to-date for [Lodestar v25.5.0](https://github.com/Consensys/teku/releases/tag/25.5.0).
 :::
 
 :::caution Prerequisites
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
 :::
 
 ## Overview
