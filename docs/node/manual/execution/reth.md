@@ -30,7 +30,8 @@ You can run the node in two ways:
 Pull the image:
 
 ```bash
-docker pull ghcr.io/gnosischain/reth_gnosis:master
+docker pull ghcr.io/gnosischain/reth_gnosis:v0.1.0
+
 ```
 
 ### Running Reth for Gnosis
@@ -52,13 +53,13 @@ cp /path/to/jwtsecret ./reth_data/jwtsecret
 #### Quick Chiado run
 
 ```bash
-docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:master node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
+docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
 ```
 
 #### Full Gnosis Chain example
 
 ```bash
-docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:master node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
+docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
 ```
 
 ---
