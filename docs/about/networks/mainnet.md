@@ -1,5 +1,5 @@
 ---
-description: Gnosis mainnet infrstructure details.
+description: Gnosis mainnet infrastructure details.
 keywords:
   [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, xdai]
 ---
