@@ -8,7 +8,7 @@ keywords: [bridge architecture]
 
 Gnosis has three main types of bridges:
 
-- **Native Bridge**: built into the chain itself, and mint the xDAI and ERC20 token from Ethereum to Gnosis Chain
+- **Native Bridge**: built into the chain itself, and mint the xDAI and ERC20 tokens from Ethereum to Gnosis Chain
 - **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for canonical tokens created by native bridges
 - **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own canonical token on Gnosis
 
@@ -17,8 +17,8 @@ Gnosis has three main types of bridges:
 ## Gnosis Chain Bridge
 
 Gnosis Chain bridge :
-- allows to mint the native stablecoin xDAI on gnosis chain by bridging DAI from Ethereum
-- allows to bridge ERC2O token from Ethereum to Gnosis Chain
+- allows minting the native stablecoin xDAI on gnosis chain by bridging DAI from Ethereum
+- allows to bridge ERC20 token from Ethereum to Gnosis Chain
 
 
 ### Bridging Data
