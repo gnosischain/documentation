@@ -17,7 +17,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 ]}>
 <TabItem value="others">
 
-- Copy the download link for Linux, MacOS or Arm64 package from the [ETHstaker Deposit CLI](https://github.com/eth-educators/ethstaker-deposit-cli/releases).
+- Copy the download link for Linux, MacOS or Arm64 package from the [ETHstaker Deposit CLI](https://github.com/ethstaker/ethstaker-deposit-cli/releases).
 
 - Download the Validator Data Generation tool
     ```shell
@@ -52,7 +52,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 </TabItem>
 <TabItem value="win">
 
-- Download the Windows version of the [ETHstaker Deposit CLI](https://github.com/eth-educators/ethstaker-deposit-cli/releases) from the releases page.
+- Download the Windows version of the [ETHstaker Deposit CLI](https://github.com/ethstaker/ethstaker-deposit-cli/releases) from the releases page.
 - Execute Validator Data Generation tool and follow the instructions.
     In case of doubts, check the [tool documentation](https://deposit-cli.ethstaker.cc/landing.html)
 
