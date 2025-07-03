@@ -14,7 +14,7 @@ To monitor the network, options include ethstats, forkmon, beacon.gnosischain, a
 
 ![Prometheus-Grafana-NodeExporter](../../../static/img/node/prometheus-grafana.png)
 
-To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/eth-educators/ethstaker-guides/blob/main/monitoring.md).
+To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/ethstaker/ethstaker-guides/blob/main/monitoring.md).
 
 You may also refer to the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)and [CoinCashew's guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-i-installation/monitoring-your-validator-with-grafana-and-prometheus) for best monitoring practices.
 
