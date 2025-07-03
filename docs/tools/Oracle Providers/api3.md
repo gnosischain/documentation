@@ -1,112 +1,40 @@
 ---
-title: API3
-description: API3 is a collaborative project to deliver traditional API services to smart contract platforms in a decentralized and trust-minimized way. It is governed by a decentralized autonomous organization (DAO), namely the API3 DAO.
-keywords: [api3, airnode, oracle, data feeds, dapis, qrng]
+title: Api3
+description: Api3 delivers first-party oracles that pay you — connecting real-world data directly to smart contracts while reclaiming lost value through Oracle Extractable Value (OEV).
+keywords: [api3, oracle, data feeds, dapis, price feeds]
 ---
-# API3
-[API3](https://api3.org/) is a collaborative project to deliver traditional API services to smart contract platforms in a decentralized and trust-minimized way. It is governed by a decentralized autonomous organization (DAO), namely the [API3 DAO](https://api3.org/dao).
-:::info The API3 DAO
-Read more about how The API3 DAO works. [Click here](https://docs.api3.org/explore/dao-members/)
-:::
-## Airnode
-Developers can use [Airnode](https://docs.api3.org/explore/airnode/what-is-airnode.html) to request off-chain data inside their Smart Contracts on the Gnosis Chain. An Airnode is a first-party oracle that pushes off-chain API data to your on-chain contract. Airnode lets API providers easily run their own first-party oracle nodes. That way, they can provide data to any on-chain dApp that's interested in their services, all without an intermediary.
-An on-chain smart contract makes a request in the [RRP (Request Response Protocol)](https://docs.api3.org/reference/airnode/latest/concepts/) contract (`AirnodeRrpV0.sol`) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
+# Api3
+[Api3](https://api3.org/) delivers first-party oracles that pay you.
 
-<img src="/img/tools/api3/airnode1.png" width="600"/>
-## Requesting off-chain data by calling an Airnode
-Requesting off-chain data essentially involves triggering an Airnode and getting its response through your smart contract. The smart contract in this case would be the requester contract which will make a request to the desired off-chain Airnode and then capture its response.
-The requester calling an Airnode primarily focuses on two tasks:
-- Make the request
-- Accept and decode the response
-<img src="/img/tools/api3/airnode2.png" width="600"/>
-<br></br>
-**Here is an example of a basic requester contract to request data from an Airnode:**
+By connecting real-world data providers directly to smart contracts, Api3 eliminates intermediaries, ensuring unmatched transparency and security. With pioneering mechanisms to recapture Oracle Extractable Value [(OEV)](https://docs.api3.org/dapps/), Api3 empowers dApps with reliable data while minimizing and reclaiming the value they would otherwise leak to external actors. Api3 is redefining the oracle space by elevating oracles from mere data providers to entities that help builders retain the value they create.
+Explore the [Api3 Market](https://market.api3.org/gnosis) and start earning.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
-import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol";
-import "@openzeppelin/contracts@4.9.5/access/Ownable.sol";
-// A Requester that will return the requested data by calling the specified Airnode.
-contract Requester is RrpRequesterV0, Ownable {
-    mapping(bytes32 => bool) public incomingFulfillments;
-    mapping(bytes32 => int256) public fulfilledData;
-    // Make sure you specify the right _rrpAddress for your chain while deploying the contract.
-    constructor(address _rrpAddress) RrpRequesterV0(_rrpAddress) {}
-    // To receive funds from the sponsor wallet and send them to the owner.
-    receive() external payable {
-        payable(owner()).transfer(address(this).balance);
-    }
-    // The main makeRequest function that will trigger the Airnode request.
-    function makeRequest(
-        address airnode,
-        bytes32 endpointId,
-        address sponsor,
-        address sponsorWallet,
-        bytes calldata parameters
-    ) external {
-        bytes32 requestId = airnodeRrp.makeFullRequest(
-            airnode,                        // airnode address
-            endpointId,                     // endpointId
-            sponsor,                        // sponsor's address
-            sponsorWallet,                  // sponsorWallet
-            address(this),                  // fulfillAddress
-            this.fulfill.selector,          // fulfillFunctionId
-            parameters                      // encoded API parameters
-        );
-        incomingFulfillments[requestId] = true;
-    }
-    
-    function fulfill(bytes32 requestId, bytes calldata data)
-        external
-        onlyAirnodeRrp
-        contract Requester is RrpRequesterV0 {
-        int256 decodedData = abi.decode(data, (int256));
-        fulfilledData[requestId] = decodedData;
-    }
-    // To withdraw funds from the sponsor wallet to the contract.
-    function withdraw(address airnode, address sponsorWallet) external onlyOwner {
-        airnodeRrp.requestWithdrawal(
-        airnode,
-        sponsorWallet
-        );
-    }
-}
-```
-
-The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have already been deployed on-chain. You can check the address for Gnosis Chain [here](https://docs.api3.org/reference/airnode/latest/). You can also try [deploying it on Remix](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/RequesterWithWithdrawal.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
-
-|         Contract         |                     Addresses                    |
-|:------------------------:|:------------------------------------------------:|
- The callback to the Requester contains two parameters:
-Sponsors should not fund a `sponsorWallet` with more then they can trust the Airnode with, as the Airnode controls the private key to the `sponsorWallet`. The deployer of such Airnode undertakes no custody obligations, and the risk of loss or misuse of any excess funds sent to the `sponsorWallet` remains with the sponsor.
+:::note
+You can check out our docs for a quickstart that will take you from start to finish [here](https://docs.api3.org/dapps/quickstart/)
 :::
 
-[Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/RequesterWithWithdrawal.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
+## Using dAPIs - Api3 Datafeeds
 
-## Using dAPIs - API3 Datafeeds
+[dAPIs](https://docs.api3.org/dapps/quickstart/) are continuously updated streams of off-chain data, such as the latest cryptocurrency prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
 
-[dAPIs](https://docs.api3.org/reference/dapis/understand/) are continuously updated streams of off-chain data, such as the latest cryptocurrency, stock and commodity prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
-
-The data feeds are continuously updated by [first-party oracles](https://docs.api3.org/explore/introduction/first-party.html) using signed data. dApp owners can read the on-chain value of any dAPI in real-time.
+The data feeds are continuously updated by first-party oracles using signed data. dApp owners can read the on-chain value of any dAPI in real-time.
 
 Due to being composed of first-party data feeds, dAPIs offer security, transparency, cost-efficiency and scalability in a turn-key package.
 
-Apart from relying on deviation threshold and heartbeat configuration updates, unlike traditional data feeds, [OEV Network](https://docs.api3.org/explore/introduction/oracle-extractable-value.html) enables dApps using dAPIs to auction off the right to update the data feeds to searcher bots. Searcher bots can bid for price updates through the OEV Network to update the data feeds. All the OEV proceeds go back to the dApp.
+Apart from relying on deviation threshold and heartbeat configuration updates, unlike traditional data feeds, OEV Network enables dApps using dAPIs to auction off the right to update the data feeds to searcher bots. Searcher bots can bid for price updates through the OEV Network to update the data feeds. All the OEV proceeds go back to the dApp.
 
-The [API3 Market](https://market.api3.org/gnosis) enables users to connect to a dAPI and access the associated data feed services.
+The [Api3 Market](https://market.api3.org/gnosis) enables users to connect to a dAPI and access the associated data feed services.
 
 ![img](/img/tools/api3/dapi-main.png)
 
-[*To learn more about how dAPIs work, click here*](https://docs.api3.org/explore/dapis/what-are-dapis.html)
 
 ### Subscribing to dAPIs
 
-The [API3 Market](https://market.api3.org/gnosis) lets users access dAPIs on both [Gnosis Mainnet](https://market.api3.org/gnosis) and [Testnet](https://market.api3.org/gnosis-testnet).
+The [Api3 Market](https://market.api3.org/gnosis) lets users access dAPIs on both [Gnosis Mainnet](https://market.api3.org/gnosis) and [Testnet](https://market.api3.org/gnosis-testnet).
 
 #### Exploring, selecting and configuring your dAPI
 
-The [API3 Market](https://market.api3.org/gnosis) provides a list of all the dAPIs available across multiple chains including testnets. You can filter the list by mainnet or testnet chains. After selecting the chain, you can now search for a specific dAPI by name. Once selected, you will land on the details page (eg ETH/USD on Gnosis Testnet) where you can find more information about the dAPI. 
+The [Api3 Market](https://market.api3.org/gnosis) provides a list of all the dAPIs available across multiple chains including testnets. You can filter the list by mainnet or testnet chains. After selecting the chain, you can now search for a specific dAPI by name. Once selected, you will land on the details page (eg ETH/USD on Gnosis Testnet) where you can find more information about the dAPI. 
 
 The current supported configurations for dAPIs are:
 
@@ -120,7 +48,7 @@ The current supported configurations for dAPIs are:
 
 ![img](/img/tools/api3/dapi-1.png)
 
-#### Activating your dAPI
+#### Activating your price feed
 
 :::note
 Note
@@ -142,7 +70,7 @@ Once you are done configuring and activating the dAPI, you can now integrate it.
 
 You can now see the deployed proxy contract address. You can now use this to read from the configured dAPI.
 
-### Reading from a dAPI
+### Reading from a dAPI (Price Feed)
 Here's an example of a basic contract that reads from a dAPI.
 ```
 // SPDX-License-Identifier: MIT
@@ -175,147 +103,14 @@ contract DataFeedReaderExample is Ownable {
 
 - `readDataFeed()` is a view function that returns the latest price of the set dAPI.
 
-You can read more about dAPIs [here](https://docs.api3.org/guides/dapis/subscribing-to-dapis/).
+### Try deploying it through Remix! 
+[Remix link here](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/DapiReader.sol&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js)
 
-### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/DapiReader.sol&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js)
 
 
-## API3 QRNG
-
-[API3 QRNG](https://docs.api3.org/explore/qrng/) is a public utility we provide with the courtesy of Australian National University (ANU), Quintessence Labs and Quantum Blockchains. It is powered by an Airnode hosted by the QRNG Providers, meaning that it is a first-party service. It is served as a public good and is free of charge (apart from the gas costs), and it provides ‘true’ quantum randomness via an easy-to-use solution when requiring RNG on-chain.
-
-To request randomness on-chain, the requester submits a request for a random number to `AirnodeRrpV0`. The QRNG Airnode gathers the request from the `AirnodeRrpV0` protocol contract, retrieves the random number off-chain, and sends it back to `AirnodeRrpV0`. Once received, it performs a callback to the requester with the random number.
-
-Click here to check out the [AirnodeRrpV0](https://docs.api3.org/reference/qrng/chains.html) and available [QRNG Providers](https://docs.api3.org/reference/qrng/providers.html) on Gnosis.
-
-Here is an example of a basic `QrngRequester` that requests a random number:
-
-```solidity
-//SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
-import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol";
-import "@openzeppelin/contracts@4.9.5/access/Ownable.sol";
-/// @title Example contract that uses Airnode RRP to access QRNG services
-contract QrngExample is RrpRequesterV0, Ownable {
-    event RequestedUint256(bytes32 indexed requestId);
-    event ReceivedUint256(bytes32 indexed requestId, uint256 response);
-    event RequestedUint256Array(bytes32 indexed requestId, uint256 size);
-    event ReceivedUint256Array(bytes32 indexed requestId, uint256[] response);
-    event WithdrawalRequested(address indexed airnode, address indexed sponsorWallet);
-    address public airnode;                 /// The address of the QRNG Airnode
-    bytes32 public endpointIdUint256;       /// The endpoint ID for requesting a single random number
-    bytes32 public endpointIdUint256Array;  /// The endpoint ID for requesting an array of random numbers
-    address public sponsorWallet;           /// The wallet that will cover the gas costs of the request
-    uint256 public _qrngUint256;            /// The random number returned by the QRNG Airnode
-    uint256[] public _qrngUint256Array;     /// The array of random numbers returned by the QRNG Airnode
-    mapping(bytes32 => bool) public expectingRequestWithIdToBeFulfilled;
-    constructor(address _airnodeRrp) RrpRequesterV0(_airnodeRrp) {}
-    /// @notice Sets the parameters for making requests
-    function setRequestParameters(
-        address _airnode,
-        bytes32 _endpointIdUint256,
-        bytes32 _endpointIdUint256Array,
-        address _sponsorWallet
-    ) external {
-        airnode = _airnode;
-        endpointIdUint256 = _endpointIdUint256;
-        endpointIdUint256Array = _endpointIdUint256Array;
-        sponsorWallet = _sponsorWallet;
-    }
-    /// @notice To receive funds from the sponsor wallet and send them to the owner.
-    receive() external payable {
-        payable(owner()).transfer(msg.value);
-        emit WithdrawalRequested(airnode, sponsorWallet);
-    }
-    /// @notice Requests a `uint256`
-    /// @dev This request will be fulfilled by the contract's sponsor wallet,
-    /// which means spamming it may drain the sponsor wallet.
-    function makeRequestUint256() external {
-        bytes32 requestId = airnodeRrp.makeFullRequest(
-            airnode,
-	contract RemixQrngExample is RrpRequesterV0 {
-            this.fulfillUint256.selector,
-            ""
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = true;
-        emit RequestedUint256(requestId);
-    }
-    /// @notice Called by the Airnode through the AirnodeRrp contract to
-    /// fulfill the request
-    function fulfillUint256(bytes32 requestId, bytes calldata data)
-        external
-        onlyAirnodeRrp
-    {
-        require(
-            expectingRequestWithIdToBeFulfilled[requestId],
-            "Request ID not known"
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = false;
-        uint256 qrngUint256 = abi.decode(data, (uint256));
-        _qrngUint256 = qrngUint256;
-        // Do what you want with `qrngUint256` here...
-        emit ReceivedUint256(requestId, qrngUint256);
-    }
-    /// @notice Requests a `uint256[]`
-    /// @param size Size of the requested array
-    function makeRequestUint256Array(uint256 size) external {
-        bytes32 requestId = airnodeRrp.makeFullRequest(
-            airnode,
-            endpointIdUint256Array,
-            address(this),
-            sponsorWallet,
-            address(this),
-            this.fulfillUint256Array.selector,
-            // Using Airnode ABI to encode the parameters
-            abi.encode(bytes32("1u"), bytes32("size"), size)
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = true;
-        emit RequestedUint256Array(requestId, size);
-    }
-    /// @notice Called by the Airnode through the AirnodeRrp contract to
-    /// fulfill the request
-    function fulfillUint256Array(bytes32 requestId, bytes calldata data)
-        external
-        onlyAirnodeRrp
-    {
-        require(
-            expectingRequestWithIdToBeFulfilled[requestId],
-            "Request ID not known"
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = false;
-        uint256[] memory qrngUint256Array = abi.decode(data, (uint256[]));
-        // Do what you want with `qrngUint256Array` here...
-        _qrngUint256Array = qrngUint256Array;
-        emit ReceivedUint256Array(requestId, qrngUint256Array);
-    }
-    /// @notice Getter functions to check the returned value.
-    function getRandomNumber() public view returns (uint256) {
-        return _qrngUint256;
-    }
-    function getRandomNumberArray() public view returns(uint256[] memory) {
-        return _qrngUint256Array;
-    }
-    /// @notice To withdraw funds from the sponsor wallet to the contract.
-    function withdraw() external onlyOwner {
-        airnodeRrp.requestWithdrawal(
-        airnode,
-        sponsorWallet
-        );
-    }
-}
-```
-
-- The `setRequestParameters()` takes in `airnode` , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get the Airnode address and the endpoint ID [here](https://docs.api3.org/reference/qrng/providers.html).
-
-- The `makeRequestUint256()` function calls the `airnodeRrp.makeFullRequest()` function of the `AirnodeRrpV0.sol` protocol contract which adds the request to its storage and returns a `requestId`.
-
-You can try QRNG on the Gnosis Chain for free. Check out the all the QRNG Provid
-Here are some additional developer resources
 
 - [API3 Docs](https://docs.api3.org/)
 - [API3 Market](https://market.api3.org/gnosis)
-- [Get started with dAPIs](https://docs.api3.org/guides/dapis/)
-- [get started with QRNG](https://docs.api3.org/guides/qrng/)
 - [Github](https://github.com/api3dao/)
 - [Medium](https://medium.com/api3)
 - [YouTube](https://www.youtube.com/API3DAO)
