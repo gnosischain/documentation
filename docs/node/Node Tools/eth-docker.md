@@ -13,7 +13,7 @@ Eth-docker allows user to set up Gnosis clients by answering simple dialog-based
 
 ## References
 1. Eth-docker Docs: https://eth-docker.net/
-2. Github: https://github.com/eth-educators/eth-docker
+2. Github: https://github.com/ethstaker/eth-docker
 
 
 ## Prerequisite
@@ -30,7 +30,7 @@ Open a new terminal, copy and paste the command below.
 Download eth-docker
 
 ```bash
-cd ~ && git clone https://github.com/eth-educators/eth-docker.git && cd eth-docker
+cd ~ && git clone https://github.com/ethstaker/eth-docker.git && cd eth-docker
 ```
 
 Install pre-requisites such as Docker
