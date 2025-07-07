@@ -72,16 +72,6 @@ wss://rpc.chiadochain.net/wss
 </TabItem>
 </Tabs>
 
-## Nodies DLB
-
-[Nodies DLB](https://nodies.app) offers free public endpoints for Gnosis Mainnet and Chiado (available on request), in addition to Pay-As-You-Go and enterprise plans that cater to the individual needs of developers.
-
-- [Docs](https://docs.nodies.app/)
-
-```
-https://lb.nodies.app/v1/406d8dcc043f4cb3959ed7d6673d311a
-```
-
 ## Ankr
 
 - [Ankr's Docs for Gnosis RPCs](https://www.ankr.com/protocol/public/gnosis/)
@@ -103,33 +93,6 @@ https://rpc.ankr.com/gnosis_testnet
 </TabItem>
 </Tabs>
 
-## Chainnodes
-
-Chainnodes provides low-latency archival nodes for Gnosis, including debug and trace APIs.
-Once signed up you can use your dedicated HTTP and Websocket RPC URL with
-high throughput for your production grade projects.
-
-- [Chainnodes](https://www.chainnodes.org/)
-- [Docs](https://www.chainnodes.org/docs)
-
-Free API keys after signing up.
-
-## Quicknode
-
-- [Quicknode's Docs for Gnosis RPCs](https://www.quicknode.com/docs/gnosis)
-
-## Chainstack
-
-- [Chainstack's Docs for Gnosis RPCs](https://chainstack.com/build-better-with-gnosis-chain/)
-
-## POKT
-
-- [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/supported-blockchains/)
-
-```
-https://gnosis-pokt.nodies.app
-```
-
 ## Blast
 
 - [Blast's Docs for Gnosis RPCs](https://blastapi.io/public-api/gnosis)
@@ -140,18 +103,6 @@ https://gnosis-mainnet.public.blastapi.io
 
 # WSS RPC
 wss://gnosis-mainnet.public.blastapi.io
-```
-
-## GetBlock
-
-- [GetBlock's Docs for Gnosis Chain RPCs](https://getblock.io/nodes/gno/)
-
-```shell
-# HTTP RPC
-https://go.getblock.io/<ACCESS_TOKEN>
-
-# WSS RPC
-wss://go.getblock.io/<ACCESS_TOKEN>
 ```
 
 ## BlockPI Network
@@ -179,6 +130,55 @@ https://rpc.chain49.com/gnosis/<API_KEY>
 https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 
+## Chainnodes
+
+Chainnodes provides low-latency archival nodes for Gnosis, including debug and trace APIs.
+Once signed up you can use your dedicated HTTP and Websocket RPC URL with
+high throughput for your production grade projects.
+
+- [Chainnodes](https://www.chainnodes.org/)
+- [Docs](https://www.chainnodes.org/docs)
+
+Free API keys after signing up.
+
+## Chainstack
+
+- [Chainstack's Docs for Gnosis RPCs](https://chainstack.com/build-better-with-gnosis-chain/)
+
+## GetBlock
+
+- [GetBlock's Docs for Gnosis Chain RPCs](https://getblock.io/nodes/gno/)
+
+```shell
+# HTTP RPC
+https://go.getblock.io/<ACCESS_TOKEN>
+
+# WSS RPC
+wss://go.getblock.io/<ACCESS_TOKEN>
+```
+
+## Grove
+
+[Grove](https://grove.city/) 🌿 provides decentralized Gnosis access on the Unstoppable [Pocket Network](https://pocket.network). 
+
+```
+# Public Endpoint
+https://gnosis.rpc.grove.city/v1/01fdb492
+
+# Private Endpoint - Get one Free at https://portal.grove.city/ !
+https://gnosis.rpc.grove.city/v1/<APP_ID>
+```
+
+## Nodies DLB
+
+[Nodies DLB](https://nodies.app) offers free public endpoints for Gnosis Mainnet and Chiado (available on request), in addition to Pay-As-You-Go and enterprise plans that cater to the individual needs of developers.
+
+- [Docs](https://docs.nodies.app/)
+
+```
+https://lb.nodies.app/v1/406d8dcc043f4cb3959ed7d6673d311a
+```
+
 ## OnFinality
 
 - [OnFinality](https://onfinality.io)
@@ -187,3 +187,15 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## POKT
+
+- [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/supported-blockchains/)
+
+```
+https://gnosis-pokt.nodies.app
+```
+
+## Quicknode
+
+- [Quicknode's Docs for Gnosis RPCs](https://www.quicknode.com/docs/gnosis)
