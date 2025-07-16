@@ -74,65 +74,15 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 
 </Tabs>
 
-### Fees & Daily Limits
-
-| Token               | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ------------------- | ------------------ | ------------------ |
-| Default Bridge Fees | 0%                 | 0.1%               |
-
-```mdx-code-block
-<details>
-  <summary>Fees and transaction limits of specific token</summary>
-  <div>
-```
-
-#### Single Transaction Limits
-
 :::warning
 Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want native xDai, use the [xDai Bridge](xdai-bridge)
 :::
-
-| Token     | Ethereum -> Gnosis | Gnosis -> Ethereum  |
-| --------- | ------------------ | ------------------- |
-| Dai\*\*\* | 1,000,000,000      | 1,000,000,000 WXDAI |
-| USDC      | 1,000,000,000      | 10,000,000          |
-| USDT      | 1,000,000,000      | 5,000,000           |
-| WETH      | 690                | 690                 |
-| WBTC      | 12                 | 12                  |
-| GNO       | 18350              | 18350               |
-| GIV       | 60000000           | 60000000            |
-| CLNY      | 14000000           | 14000000            |
-| DXD       | 1000               | 1000                |
-| HOPR      | 7000000            | 7000000             |
-| HAUS      | 120000             | 120000              |
-
-#### Daily Limits
-
-| Token     | Ethereum -> Gnosis        | Gnosis -> Ethereum             |
-| --------- | ------------------------- | ------------------------------ |
-| Dai\*\*\* | 1,000,000,000,000,000,000 | 1,000,000,000,000,000,000 xDai |
-| USDC      | 1,000,000,000,000,000,000 | 10,000,000                     |
-| USDT      | 1,000,000,000,000,000,000 | 5,000,000                      |
-| WETH      | 690                       | 690                            |
-| WBTC      | 12.00000001               | 12.00000001                    |
-| GNO       | 18350                     | 18350                          |
-| GIV       | 60000000                  | 60000000                       |
-| CLNY      | 14000000                  | 14000000                       |
-| DXD       | 1000                      | 1000                           |
-| HOPR      | 7000000                   | 7000000                        |
-| HAUS      | 120000                    | 120000                         |
 
 \*\*\* Bridging Dai Using Omnibridge
 
 :::note
 Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
 :::
-
-```mdx-code-block
-  </div>
-</details>
-```
-
 
 ### Terminology
 

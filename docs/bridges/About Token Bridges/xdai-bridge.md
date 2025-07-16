@@ -89,15 +89,6 @@ References:
 
 - https://github.com/tokenbridge/docs
 
-### Fees & Daily Limits
-
-| Type               | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ------------------ | ------------------ | ------------------ |
-| Bridge Fees        | 0%                 | 0%                 |
-| Min Transfer       | 0.005 Dai          | 10 xDai            |
-| Daily Limit        | 10,000,000 Dai     | 10,000,000 xDai    |
-| Max Single Deposit | 9,999,999 Dai      | 10,000,000 xDai    |
-
 :::note
 Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
 :::
