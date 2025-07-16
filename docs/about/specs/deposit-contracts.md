@@ -1,6 +1,6 @@
 ---
 description: Gnosis Chain deposit contracts
-keywords: [gnosis, gnosis contracts, deposi contracts]
+keywords: [gnosis, gnosis contracts, deposit contracts]
 ---
 
 # Deposit Contracts
