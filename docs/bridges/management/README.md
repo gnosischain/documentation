@@ -35,7 +35,7 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 | Governor                  | Address                                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------------------- |
 | GnosisDAO                 | 0x57B11cC8F93f2cfeC4c1C5B95213f17cAD81332B                                                           |
-| Metacartel                | 0xd945325557f1FB4374fBf10Ae86D385632Df870A                                                           |
+| Monerium                  | 0xB646B8b5Fe6cBc7770578B7679208337ef747ae4                                                           |
 | Kleros                    | 0xb2a33ae0E07fD2ca8DBdE9545F6ce0b3234dc4e8                                                           |
 | Protofire                 | 0x80BA18503a1Fa16Ea22F3ef1Af23e2994EaC1d97                                                           |
 | Nethermind                | 0x544cE64C3Fc6Da72CEB2456CC4cF19E7c7972eFA                                                           |

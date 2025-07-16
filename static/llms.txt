@@ -2234,6 +2234,228 @@ MetaMask will show a high gas estimate for this transaction. In most cases the f
 
 ---
 
+// File: bridges/brige-limits
+
+Below is a summary of each token’s transaction limits on both Ethereum and Gnosis Chain, along with quick links to inspect their on-chain contract addresses:
+
+The below list only mentions the top 10 most actively bridged assets. For a detailed view for all assets, checkout the [Bridge Explorer's limit dashbaord](https://bridge.gnosischain.com/bridge-explorer/bridges).
+
+
+| Token | ETH Max/Tx                                | ETH Daily Limit                                 | ETH Exec Daily              | Gnosis Max/Tx                          | Gnosis Daily Limit                     | Gnosis Exec Daily                             | Ethereum Address                                                                                                                   | Gnosis Address                                                                                                                   |
+|-------|--------------------------------------------|--------------------------------------------------|-----------------------------|----------------------------------------|----------------------------------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| GNO   | 1000000000000000000000000000               | 1000000000000000000000000000000000000           | 36000000000000000000001     | 36000000000000000000000               | 36000000000000000000001               | 1000000000000000000000000000000000000        | [0x6810e776880C02933D47DB1b9fc05908e5386b96](https://etherscan.io/address/0x6810e776880C02933D47DB1b9fc05908e5386b96)            | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/address/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb)             |
+| WBTC  | 100000000000000000                         | 100000000000000000000000000                   | 100000000000000000000000000 | 100000000000000000                   | 100000000000000000000000000           | 100000000000000000000000000                  | [0xEF826da5AaDAE742ce32cE0C460F30Ab281e51a2](https://etherscan.io/address/0xEF826da5AaDAE742ce32cE0C460F30Ab281e51a2)            | [0xD7cd100056B477C08B419a28E976D8Ade354251a](https://gnosisscan.io/address/0xD7cd100056B477C08B419a28E976D8Ade354251a)             |
+| WETH  | 1000000000000000000000000000000000000      | 1000000000000000000000000000000000001          | 1000000000000000000000000000000000001 | 1000000000000000000000000000000000000 | 1000000000000000000000000000000000001  | 1000000000000000000000000000000000001       | [0xb1A7F8b3AdA1Cbd7752c1306725b07D2F8B4e726](https://etherscan.io/address/0xb1A7F8b3AdA1Cbd7752c1306725b07D2F8B4e726)            | [0x9ba1E2F45aC86b88926a9E6F43120f42BB7eDe40](https://gnosisscan.io/address/0x9ba1E2F45aC86b88926a9E6F43120f42BB7eDe40)             |
+| SAFE  | 1000000000000000000000000000000000000      | 10000000000000000000000000000000000010         | 10000000000000000000000000000000000010 | 1000000000000000000000000000000000000 | 10000000000000000000000000000000000010 | 10000000000000000000000000000000000010      | [0x5aFE3855358E112B5647B952709E6165e1c1eEEe](https://etherscan.io/address/0x5aFE3855358E112B5647B952709E6165e1c1eEEe)            | [0x4d18815D14fe5c3304e87B3FA18318baa5c23820](https://gnosisscan.io/address/0x4d18815D14fe5c3304e87B3FA18318baa5c23820)             |
+| COW   | 1000000000000000000000000000               | 1000000000000000000000000000000000000          | 1000000000000000000000000000000000000  | 1000000000000000000000000000           | 1000000000000000000000000000000000000   | 1000000000000000000000000000000000000       | [0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB](https://etherscan.io/address/0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB)            | [0x177127622c4A00F3d409B75571e12cB3c8973d3c](https://gnosisscan.io/address/0x177127622c4A00F3d409B75571e12cB3c8973d3c)             |
+| HOPR  | 1000000000000000000000000000               | 1000000000000000000000000000000000000          | 40000000000000000000000001 | 20000000000000000000000001            | 40000000000000000000000001             | 1000000000000000000000000000000000000        | [0xF5581dFeFD8Fb0e4aeC526bE659CFaB1f8c781dA](https://etherscan.io/address/0xF5581dFeFD8Fb0e4aeC526bE659CFaB1f8c781dA)            | [0xD057604A14982FE8D88c5fC25Aac3267eA142a08](https://gnosisscan.io/address/0xD057604A14982FE8D88c5fC25Aac3267eA142a08)             |
+| USDT  | 1000000000000000                           | 1000000000000000000000000                       | 35000000000000               | 10000000000000                         | 35000000000000                          | 1000000000000000000000000                    | [0xdAC17F958D2ee523a2206206994597C13D831ec7](https://etherscan.io/address/0xdAC17F958D2ee523a2206206994597C13D831ec7)            | [0x4ECaBa5870353805a9F068101A40E0f32ed605C6](https://gnosisscan.io/address/0x4ECaBa5870353805a9F068101A40E0f32ed605C6)             |
+| USDC  | 1000000000000000                           | 1000000000000000000000000                       | 35000000000000               | 10000000000000                         | 35000000000000                          | 1000000000000000000000000                    | [0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48)            | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83)             |
+| OLAS  | 1000000000000000000000000000000000000      | 1000000000000000000000000000000000001          | 1000000000000000000000000000000000001 | 1000000000000000000000000000000000000 | 1000000000000000000000000000000000001  | 1000000000000000000000000000000000001       | [0x0001A500A6B18995B03f44bb040A5fFc28E45CB0](https://etherscan.io/address/0x0001A500A6B18995B03f44bb040A5fFc28E45CB0)            | [0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f](https://gnosisscan.io/address/0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f)             |
+
+## Fees
+
+| Token               | Ethereum -> Gnosis | Gnosis -> Ethereum |
+| ------------------- | ------------------ | ------------------ |
+| Default Bridge Fees | 0%                 | 0.1%               |
+
+## Check Limits thorugh Smart Contracts
+
+![alt text](bridge.png)
+
+This guide explains how to programmatically retrieve daily usage and per-transaction limits for WETH bridging between Ethereum Mainnet and Gnosis Chain. All calls are against the respective bridge proxy contracts’ **read** ABI.
+
+* **Contract (Ethereum→Gnosis)**
+  `0x88ad09518695c6c3712AC10a214bE5109a655671`
+* **Contract (Gnosis→Ethereum)**
+  `0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`
+
+> **Prerequisites**
+>
+> * A Web3 client (e.g., [viem](https://github.com/wagmi-dev/viem), Ethers.js)
+> * RPC access to Ethereum Mainnet and Gnosis Chain
+> * The WETH token address on each chain
+>
+>   * Mainnet WETH: `0xC02aaa39b223FE8D0A0e5C4F27eAD9083C756Cc2`
+>   * Gnosis WETH: (check the token registry for the canonical address)
+
+---
+
+## Ethereum → Gnosis
+
+1. **Get Current Day Index**
+
+   ```js
+   const dayIndex = await contract.read.day();
+   ```
+
+   ↳ Etherscan UI: [day()](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F8)
+
+2. **Daily Deposit Usage & Limit**
+
+   * **Total WETH Deposited Today**
+
+     ```js
+     const used = await contract.read.totalSpentPerDay([WETH_ADDRESS, dayIndex]);
+     ```
+
+     ↳ [totalSpentPerDay(address token, uint256 day)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F26)
+   * **Daily Deposit Limit**
+
+     ```js
+     const limit = await contract.read.dailyLimit(WETH_ADDRESS);
+     ```
+
+     ↳ [dailyLimit(address token)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F3)
+
+3. **Daily Withdrawal Usage & Limit**
+
+   * **Total WETH Withdrawn Today**
+
+     ```js
+     const usedExec = await contract.read.totalExecutedPerDay([WETH_ADDRESS, dayIndex]);
+     ```
+
+     ↳ [totalExecutedPerDay(address token, uint256 day)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F25)
+   * **Daily Withdrawal Limit**
+
+     ```js
+     const execLimit = await contract.read.executionDailyLimit(WETH_ADDRESS);
+     ```
+
+     ↳ [executionDailyLimit(address token)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F4)
+
+4. **Per-Transaction Deposit Bounds**
+
+   * **Minimum Deposit per Tx**
+
+     ```js
+     const minTx = await contract.read.minPerTx(WETH_ADDRESS);
+     ```
+
+     ↳ [minPerTx(address token)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F20)
+   * **Maximum Deposit per Tx**
+
+     ```js
+     const maxTx = await contract.read.maxPerTx(WETH_ADDRESS);
+     ```
+
+     ↳ [maxPerTx(address token)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F15)
+
+5. **Maximum Withdrawal per Tx**
+
+   ```js
+   const execMax = await contract.read.executionMaxPerTx(WETH_ADDRESS);
+   ```
+
+   ↳ [executionMaxPerTx(address token)](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#readProxyContract#F5)
+
+---
+
+## Gnosis → Ethereum
+
+> All methods mirror those on the Ethereum proxy, but point at the Gnosis chain contract.
+
+1. **Get Current Day Index**
+
+   ```js
+   const dayIndex = await gnosisContract.read.day();
+   ```
+
+   ↳ [day()](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F12)
+
+2. **Daily Deposit Usage & Limit**
+
+   * **Total WETH Deposited Today**
+
+     ```js
+     const used = await gnosisContract.read.totalSpentPerDay([WETH_ADDRESS, dayIndex]);
+     ```
+
+     ↳ [totalSpentPerDay(address token, uint256 day)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F28)
+   * **Daily Deposit Limit**
+
+     ```js
+     const limit = await gnosisContract.read.dailyLimit(WETH_ADDRESS);
+     ```
+
+     ↳ [dailyLimit(address token)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F3)
+
+3. **Daily Withdrawal Usage & Limit**
+
+   * **Total WETH Withdrawn Today**
+
+     ```js
+     const usedExec = await gnosisContract.read.totalExecutedPerDay([WETH_ADDRESS, dayIndex]);
+     ```
+
+     ↳ [totalExecutedPerDay(address token, uint256 day)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F27)
+   * **Daily Withdrawal Limit**
+
+     ```js
+     const execLimit = await gnosisContract.read.executionDailyLimit(WETH_ADDRESS);
+     ```
+
+     ↳ [executionDailyLimit(address token)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F4)
+
+4. **Per-Transaction Deposit Bounds**
+
+   * **Minimum Deposit per Tx**
+
+     ```js
+     const minTx = await gnosisContract.read.minPerTx(WETH_ADDRESS);
+     ```
+
+     ↳ [minPerTx(address token)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F23)
+   * **Maximum Deposit per Tx**
+
+     ```js
+     const maxTx = await gnosisContract.read.maxPerTx(WETH_ADDRESS);
+     ```
+
+     ↳ [maxPerTx(address token)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F19)
+
+5. **Maximum Withdrawal per Tx**
+
+   ```js
+   const execMax = await gnosisContract.read.executionMaxPerTx(WETH_ADDRESS);
+   ```
+
+   ↳ [executionMaxPerTx(address token)](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#readProxyContract#F5)
+
+---
+
+## Example (using viem)
+
+```ts
+import { createPublicClient, http } from "viem";
+import { mainnet, gnosis } from "viem/chains";
+
+const ethClient = createPublicClient({ chain: mainnet, transport: http() });
+const gnoClient = createPublicClient({ chain: gnosis, transport: http() });
+
+const ETH_BRIDGE = "0x88ad09518695c6c3712AC10a214bE5109a655671";
+const GNO_BRIDGE = "0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d";
+const WETH = "0xC02aaa39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+
+async function fetchLimits() {
+  const [dayEth] = await ethClient.read({ address: ETH_BRIDGE, abi: bridgeAbi, functionName: "day" });
+  const [dayGno] = await gnoClient.read({ address: GNO_BRIDGE, abi: bridgeAbi, functionName: "day" });
+
+ 
+}
+```
+
+---
+
+**Notes:**
+
+* All values are returned in **wei** (base units).
+* Day indexing increments every 24 hours from the bridge’s genesis timestamp.
+* Ensure your RPC node’s clock is in sync to avoid off-by-one-day errors.
+
+---
+
 // File: bridges/roadmap
 
 Gnosis is investing significant resources into trust-minimization of its Bridges, to ensure trust and safety of users.
@@ -2420,65 +2642,15 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 
 </Tabs>
 
-### Fees & Daily Limits
-
-| Token               | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ------------------- | ------------------ | ------------------ |
-| Default Bridge Fees | 0%                 | 0.1%               |
-
-```mdx-code-block
-<details>
-  <summary>Fees and transaction limits of specific token</summary>
-  <div>
-```
-
-#### Single Transaction Limits
-
 :::warning
 Bridging DAI token to Gnosis Chain DOES NOT mint native xDai token. If you want native xDai, use the [xDai Bridge](xdai-bridge)
 :::
-
-| Token     | Ethereum -> Gnosis | Gnosis -> Ethereum  |
-| --------- | ------------------ | ------------------- |
-| Dai\*\*\* | 1,000,000,000      | 1,000,000,000 WXDAI |
-| USDC      | 1,000,000,000      | 10,000,000          |
-| USDT      | 1,000,000,000      | 5,000,000           |
-| WETH      | 690                | 690                 |
-| WBTC      | 12                 | 12                  |
-| GNO       | 18350              | 18350               |
-| GIV       | 60000000           | 60000000            |
-| CLNY      | 14000000           | 14000000            |
-| DXD       | 1000               | 1000                |
-| HOPR      | 7000000            | 7000000             |
-| HAUS      | 120000             | 120000              |
-
-#### Daily Limits
-
-| Token     | Ethereum -> Gnosis        | Gnosis -> Ethereum             |
-| --------- | ------------------------- | ------------------------------ |
-| Dai\*\*\* | 1,000,000,000,000,000,000 | 1,000,000,000,000,000,000 xDai |
-| USDC      | 1,000,000,000,000,000,000 | 10,000,000                     |
-| USDT      | 1,000,000,000,000,000,000 | 5,000,000                      |
-| WETH      | 690                       | 690                            |
-| WBTC      | 12.00000001               | 12.00000001                    |
-| GNO       | 18350                     | 18350                          |
-| GIV       | 60000000                  | 60000000                       |
-| CLNY      | 14000000                  | 14000000                       |
-| DXD       | 1000                      | 1000                           |
-| HOPR      | 7000000                   | 7000000                        |
-| HAUS      | 120000                    | 120000                         |
 
 \*\*\* Bridging Dai Using Omnibridge
 
 :::note
 Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
 :::
-
-```mdx-code-block
-  </div>
-</details>
-```
-
 
 ### Terminology
 
@@ -2712,15 +2884,6 @@ References:
 \*\* Some of the information from TokenBridge Docs are outdated, please verify the information before you bridge.
 
 - https://github.com/tokenbridge/docs
-
-### Fees & Daily Limits
-
-| Type               | Ethereum -> Gnosis | Gnosis -> Ethereum |
-| ------------------ | ------------------ | ------------------ |
-| Bridge Fees        | 0%                 | 0%                 |
-| Min Transfer       | 0.005 Dai          | 10 xDai            |
-| Daily Limit        | 10,000,000 Dai     | 10,000,000 xDai    |
-| Max Single Deposit | 9,999,999 Dai      | 10,000,000 xDai    |
 
 :::note
 Daily Limit is reset according to the following logic: the smart contract stores total amount of processed tokens per current day and reverts on a new transfer if it exceeds the daily limit. Id of the day is calculated using the formula `timestamp / (number of seconds in 1 day)`, where `timestamp` is the Unix timestamp.
@@ -3377,1435 +3540,6 @@ If you run into any issues or have any questions, please reach out to our comms 
 
 ---
 
-// File: bridges/Legacy Bridges UI/nft-bridge
-
-# NFT Bridge
-
-Gnosis does not support the native bridging of NFTs, which is usually done through [3rd-party NFT Bridges](../../about/third-parties.md) (e.g. [XP NFT Bridge](https://bridge.xp.network/))
-
-There is a [legacy native NFT bridge](https://github.com/tokenbridge/docs/blob/master/eth-xdai-amb-bridge/nft-omnibridge-extension/README.md) that is no longer actively maintained.
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/README
-
-# OmniBridge
-
-:::info
-The Legacy OmniBridge UI is now deprecated but still available, use it at your own risk. The OmniBridge UI can be accessed here: https://omni.legacy.gnosischain.com/bridge
-:::
-The Omnibridge can be used to bridge ERC-20 tokens between Ethereum and Gnosis. The first time a token is bridged, a new ERC677 token contract is deployed on GC with an additional suffix to differentiate the token. It will say "token name on xDai", as this was the original chain name prior to re-branding. If a token has been bridged previously, the previously deployed contract is used. The requested token amount is minted and sent to the account initiating the transfer (or an alternative receiver account specified by the sender).
-
-- [Tokenbridge Docs](https://github.com/tokenbridge/docs/tree/master/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens)
-
-## Transfer any ERC-20 token from Ethereum to Gnosis
-
-It is possible to use the [Gnosis Bridge](https://bridge.gnosischain.com) to transfer any ERC20 from Ethereum to xDai. Any user can initiate this initial transfer. Once the token exists on Gnosis, it can be transferred back and forth using the same UI.
-
-### Token Transfer
-
-In this example, we transfer the Basic Attention Token (BAT) from Ethereum to xDai. When this process was started, this token does not yet exist on Gnosis. It takes less than 5 minutes and some ETH for gas fees.
-
-1. Go to the [Legacy OmniBridge UI](https://omni.legacy.gnosischain.com/bridge)
-
-- Connect your wallet to the Ethereum Mainnet
-- Select the token you want to transfer (here we select BAT) and enter the amount
-- Click Unlock and approve the account interaction.
-
-:::note
-These screenshots were taken back when Basic Attention Token (BAT) was first bridged. The steps are the same, but note that the url is old and is now https://omni.legacy.gnosischain.com/bridge
-:::
-![](/img/bridges/omni-tokentransfer1.jpg) 2. Confirm the transaction to approve
-![](/img/bridges/omni-tokentransfer2.jpg) 3. Once transaction approval is complete, you can now Transfer BAT to BAT on xDai. Click Transfer.
-![](/img/bridges/omni-tokentransfer3.jpg) 4. Press Confirm to approve the transfer and pay the gas fees. These may be expensive depending on network congestion. We recommend [checking current gas prices](https://ethgas.watch/). Because of high fees, it also may make sense to bridge over a larger amount of tokens in a single transaction rather than several smaller ones.
-![](/img/bridges/omni-tokentransfer4.jpg) 5. The bridge transaction will begin to process. While you are waiting for block confirmations, you can click on the ALM monitor link to view progress of your transfer, or you can view the [ALM monitor here](https://alm-bridge-monitor.gnosischain.com/) and look up your transaction by the transaction hash.
-![](/img/bridges/omni-tokentransfer5.jpg)  
-Viewing the ALM app:  
-![](/img/bridges/omni-tokentransfer6.jpg)
-:::note
-Back when BAT was first bridged, only 2/3 confirmations were required. Now the validator set has expanded so 4/8 confirmations are required.
-::: 6. After a successful transfer, you can check the token on BlockScout to see that it exists. Check Bridged tokens at https://blockscout.com/xdai/mainnet/bridged-tokens.
-![](/img/bridges/omni-tokentransfer7.jpg) 7. Note the contract address and be sure to [add the token to your wallet](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H).
-
-### Switch Bridges and Networks in the UI
-
-#### Bridges
-
-The OmniBridge UI supports several bridges. To switch chains, click on the Bridge Selector to choose. Once selected, a popup will instruct you to change networks in MetaMask. Click the buttons directly in the popup to complete the process.
-
-1. Choose from selector
-   ![](/img/bridges/omni-switchnetwork1.png)
-2. Click to switch to target network (Binance Smart Chain in the screenshot)
-   ![](/img/bridges/omni-switchnetwork2.png)
-3. Click approve to add the network to MetaMask. If you get a warning that the network details don't match, it's likely ok. Be sure to check [chainlist.org](https://chainlist.org/) to verify the network details just in case.
-   ![](/img/bridges/omni-switchnetwork3.png)
-4. Click "Switch Network" to allow the site to switch the network.
-   ![](/img/bridges/omni-switchnetwork4.png)
-5. UI should display that you are connected to the new chain. Your wallet address will now change from being highlighted red to blue.
-   ![](/img/bridges/omni-switchnetwork5.png)
-
-#### Networks
-
-When switching between networks within the same bridge, press the arrows icon in the top middle, then confirm the network switch in MetaMask.
-![](/img/bridges/omni-switchnetwork6.png)
-
-## Transfer Tokens without the UI
-
-The instructions below use the Etherscan UI and the Blockscout UI to demonstrate the token transfer process.
-There is [Legacy OMNIBRIDGE UI](https://omni.legacy.gnosischain.com/bridge) also available which calls the methods of the multi-token mediators contracts described below.
-
-### General Case: ERC-20 Token Transfer
-
-The general case describes a "pure" ERC20 token. For tokens compatible with ERC677 and ERC827 token standards the steps may be simplified - see the [separate section below](#simplification-for-erc677erc827-tokens).
-
-#### Ethereum -> Gnosis Chain
-
-The steps below assume:
-
-- The account performing the actions owns some amount of an ERC20 token on Ethereum.
-- The account is funded with some ether to cover gas fees.
-- The MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for Etherscan.  
-  For demonstration purposes we transfer Sai tokens.
-  ![](/img/bridges/omni-erc20manual1.png)
-
-1. **Approve the mediator contract to transfer tokens.** The mediator contract uses the `transferFrom` functionality of the ERC20 token contract to lock the tokens; it must be explicitly approved to perform this operation.
-   ![](/img/bridges/omni-erc20manual2.png)
-   First, connect to the Web3 provider (MetaMask or other). Next, click on Write Contract and go to the approve method. Enter the following:
-   `guy (address)` field: the mediator contract address on Ethereum (`0x88ad09518695c6c3712AC10a214bE5109a655671`)
-   `wad (uint256)`: the amount of tokens to transfer in wei
-   ![](/img/bridges/omni-erc20manual3.png)
-   Press the "Write" button to send the transaction.
-   ![](/img/bridges/omni-erc20manual4.png)
-   The wallet window will appear. Gas price can be adjusted to speed up transaction verification. After the transaction is confirmed in the wallet, it is necessary to wait for verification. Depending on the gas price specified and traffic congestion it can take several seconds to several minutes.
-2. **Initiate the transfer request.**  
-   Copy the contract address before proceeding:
-   ![](/img/bridges/omni-erc20manual5.png)
-   Next, open the mediator contract ([`0x88ad09518695c6c3712AC10a214bE5109a655671`](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671)) in Etherscan.
-   ![](/img/bridges/omni-erc20manual6.png)
-   The mediator contract is a proxy contract; Click contract then click the "Write as Proxy" tab.
-   ![](/img/bridges/omni-erc20manual7.png)
-   Since you are opening a new contract in Etherscan, you will connect to the Web3 provider (your wallet of choice) again. Then, in the `relayTokens` method enter the token contract address and the amount of tokens to transfer.
-   ![](/img/bridges/omni-erc20manual8.png)
-   Press the "Write" button to send the transaction.
-   ![](/img/bridges/omni-erc20manual9.png)  
-   The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in MetaMask, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
-   Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to Gnosis chain to invoke the multi-token mediator contract and complete the tokens transfer.
-   You can monitor the confirmation and AMB request execution with the [AMB Live Monitoring tool](https://alm-bridge-monitor.gnosischain.com/). Specify the hash (tx id) of the transaction used to call `relayTokens` in the ALM entry page to check the status of the AMB request initiated by this transaction in real time. If the AMB request is executed successfully:
-
-- **If token has not been transferred with AMB before:** If this is the first transaction for this particular token using the AMB, a new ERC677 token contract will be deployed to Gnosis. The token contract will be initialized with the same symbol and decimals as for the original token on Ethereum. The name of the new token will be extended with the letters "on xDai" (e.g. "Dai Stablecoin v1.0 on xDai"). At the end, the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
-- **If token has been previously transferred with AMB:** If If the ERC677 token has already been registered by the mediator for the original ERC20 token, deployment of the contract will be skipped but the requested amount of tokens will be minted and sent to the account that called `relayTokens`.
-  Once the process is complete and indexed by BlockScout, it is possible to find the token contract on Gnosis Chain. Check out the [Bridged token registry](https://blockscout.com/xdai/mainnet/bridged-tokens) to view it.
-
-#### Gnosis -> Ethereum
-
-The steps below assume that the account performing the actions is funded with some xDai to cover gas fees.  
-Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BlockScout.
-:::info
-Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, [follow the steps](https://docs.blockscout.com/for-users/verifying-a-smart-contract) to verify the contract before starting.
-:::
-
-1. **Call the transferAndCall method to transfer tokens**
-   The token contract deployed by the multi-token mediator supports the ERC677 standard, so instead of calling `approve` and `relayTokens`, a single method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it regarding this action at the same time.
-   Go to the "Write Proxy" tab of the token contract in BlockScout
-   ![](/img/bridges/omni-gno-eth-manual1.png)
-   In the transferAndCall method enter the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`), amount of tokens to transfer, and "0x" in the \_data field. Press Write to send the transaction.
-   ![](/img/bridges/omni-gno-eth-manual2.png)
-   The MetaMask window will appear. Gas price should be 1 GWei, adjust if needed. Once the transaction is confirmed in MetaMask, wait for verification by the Gnosis chain validators. This is typically completed in a few seconds.
-   Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations on Gnosis chain and transfer them to Ethereum. The transaction sent by a validator to Ethereum will execute the request to unlock the tokens.  
-   You can monitor this process using the [AMB Live Monitoring tool](https://alm-bridge-monitor.gnosischain.com/). Specify the hash (tx id) of the transaction used to call transferAndCall in the ALM entry page and it will check the status of the AMB request initiated by this transaction in real time. The requested amount of tokens minus any fees will be unlocked on Ethereum.
-
-#### Simplification for ERC677/ERC827 tokens
-
-If the token on Ethereum is ERC677 or ERC827 compatible it is possible to omit the approve method call and only call the `transferAndCall` method in the token contract.
-:::note
-This example uses the STAKE token, [whose utility will be depreciated after the merge of xDAI/Gnosis](https://forum.gnosis.io/t/gip-16-gnosis-chain-xdai-gnosis-merge/1904). However, the token will still exist and these steps are still relevant.
-:::
-Below is example with the STAKE token contract:
-![](/img/bridges/omni-erc677-simplification1.png)  
-Click Write Contract and specify the multi-token mediator contract address on Ethereum (0x88ad09518695c6c3712AC10a214bE5109a655671) as the recipient of the tokens, the amount of tokens in wei the "value" field, and `0x` in the "data" field. Click Write to execute.
-![](/img/bridges/omni-erc677-simplification2.png)
-
-#### Simplification for token transfers from the Gnosis Chain side
-
-:::danger
-Do Not Use the `transfer` method to send tokens to the multi-token mediator on Ethereum. It will lead to loss of tokens.
-:::
-The token contact deployed on Gnosis Chain is a customized version of ERC677 standard. It contains the changes that allow calling the transfer method to withdraw tokens from Gnosis instead of `transferAndCall`. So, it is enough to specify the multi-token mediator contract address on Gnosis chain (`0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d`) as the recipient and amount of tokens to initiate request to transfer tokens back to Ethereum.
-
-:::warning
-The method described above works only for tokens deployed by the multi-token mediator on Gnosis chain.
-:::
-
-## Bridging Tokens Minted on Gnosis
-
-Tokens minted natively on Gnosis Chain are now available to bridge to Ethereum. Note that you will need to pay gas costs for the destination chain (which can be quite high for Ethereum) with the destination currency (such as ether) when bridging.
-Bridging requires 2 steps:
-
-1. Unlock the Token (allow the application to transfer)
-2. Request the Transfer (requires 2 transactions, 1 from sending chain and the 2nd on destination chain to claim)
-   Please see the [previous section on bridging from Gnosis to Ethereum](#gnosis---ethereum) for specific instructions, as the steps are the same.
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/advanced
-
-:::info
-The following tutorial is referring to the legacy Omnibridge.
-The new Bridge UI for Omnibridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).
-Please avoid using the legacy Omnibridge: https://omni.legacy.gnosischain.com/bridge
-:::
-
-
-## Alternate Receiver
-
-The default bridge mode sends funds to the same address across chains, as the same algorithm is used to derive an address from a private key across the chains where the OmniBridge is deployed. However, it is easy to specify another address to receive funds on the chain you are bridging to. This may be desirable when sending funds from a multi-sig wallet (like Gnosis Safe), or as a transfer method to another address on a secondary chain.
-
-### Set and Alternate Receiver
-
-1. Click on the "Advanced" link on the Omnibridge UI. A text field will appear.
-2. Paste the `0x...` address you are transferring funds to on the receiving chain.
-3. Proceed with the Request
-   ![](/img/bridges/omni-alternate-receiver.gif)
-
-:::info
-Claims on the receiving chain can be completed using any address with enough funds. Copy the tx hash from the first transaction (it will be linked during tx processing or when complete in the history tab of the bridge. You can also find in your MetaMask wallet) and paste into https://alm-bridge-monitor.gnosischain.com/ to search and execute.
-:::
-
-## Set Custom RPC Endpoints
-
-If you are experiencing an issue with an Ethereum or Gnosis Chain RPC endpoint when trying to bridge you can easily set your own endpoint in the interface.
-Note that these are Read Only, if you need to use the RPCs to process transactions, you can [set custom RPCs in your web3 wallet like MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-Network-RPC-and-or-Block-Explorer) as well.
-
-### RPC Endpoints:
-
-- [Gnosis RPC's](/tools/rpc/)
-- [Ethereum RPC's](https://www.alchemy.com/list-of/rpc-node-providers-on-ethereum)
-
-1. Go to [the bridge UI](https://omni.gnosischain.com/bridge) and click settings at the top.
-2. Add your RPC of choice and click **Save**. Note that the URL options change based off which networks you have selected to bridge between.
-   ![](/img/bridges/omni-custom-rpc1.png)
-
-## Infinite Unlock
-
-You must give approval to the bridge contracts to access and send ERC-20 tokens. This is similar to Uniswap or another DEX that asks for approval to spend your tokens.
-You can give this permission on a per transaction basis, or you can unlock an unlimited amount to transfer with the infinite unlock option. Infinite unlock saves on transaction fees, but does introduce security risk if the contract is compromised. If compromised, a malicious 3rd party may have the ability to access all funds rather than a finite approved amount.
-
-### Set Infinite Unlock
-
-1. Go to Settings on the top of the page
-2. Toggle "Infinite Unlock" and click **Save**. When you process your next unlock, the transaction will allow all transfers of that token without needing to unlock again.
-   ![](/img/bridges/omni-infinite-unlock1.png)
-3. If you don't wish to use infinite unlock but would like te instead set a custom limit, when the MetaMask window pops up to ask for approval you have the option to set a spend limit. Click "Edit Permission" and it will take you to the following screen:
-   ![](/img/bridges/omni-custom-limit.png)
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/bnb-chain
-
-# BNB Chain
-
-:::danger
-BSC to GC has been deprecated on Omnibridge UI. This page provides a way for user to bridge token back to "original" chain, where the canonical token contract is deployed.
-:::
-| Contract| Address|
-|---|---|
-|AMB (BSC)| [0x05185872898b6f94aa600177ef41b9334b1fa48b](https://bscscan.com/address/0x05185872898b6f94aa600177ef41b9334b1fa48b#readProxyContract) |
-|AMB (GC)| [0x162e898bd0aacb578c8d5f8d6ca588c13d2a383f](https://gnosisscan.io/address/0x162e898bd0aacb578c8d5f8d6ca588c13d2a383f#readProxyContract)|
-|Omnibridge (BSC) |[0xF0b456250DC9990662a6F25808cC74A6d1131Ea9](https://bscscan.com/address/0xf0b456250dc9990662a6f25808cc74a6d1131ea9)|
-| Omnibridge(GC)|[0x59447362798334d3485c64d1e4870fde2ddc0d75](https://gnosisscan.io/address/0x59447362798334d3485c64d1e4870fde2ddc0d75)|
-| Validator Contract (BSC)|[0xFCE050274760d7C1AB809271Fb753dCEdac811b8](https://bscscan.com/address/0xFCE050274760d7C1AB809271Fb753dCEdac811b8)|
-|Validator Contract(GC)|[0x6f00218e7D985FE1211f5d47B350708fF915A842](https://gnosisscan.io/address/0x6f00218e7d985fe1211f5d47b350708ff915a842#writeProxyContract)|
-
-## Gnosis -> BSC
-
-The steps below assume that the account performing the actions is funded with some xDai to cover gas fees.  
-Also, the MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BlockScout.
-:::info
-Make sure that the token contract is verified in BlockScout. Token contracts deployed as part of the multi-token mediator operations are not verified automatically, so if the token does not allow read and write in the block explorer, [follow the steps](https://docs.blockscout.com/for-users/verifying-a-smart-contract) to verify the contract before starting.
-:::
-
-1. **Call the transferAndCall method to transfer tokens**
-   The token contract deployed by the mutli-token mediator supports the ERC677 standard, so instead of calling `approve` and `relayTokens`, a single method `transferAndCall` can be used to transfer tokens to the mediator contract and notify it regarding this action at the same time.
-   Go to the "Write Proxy" tab of the token contract in BlockScout
-   ![](/img/bridges/omni-gno-eth-manual1.png)
-   In the transferAndCall method enter the multi-token mediator contract address on Gnosis chain (`0x59447362798334d3485c64d1e4870fde2ddc0d75`), amount of tokens to transfer, and "0x" in the \_data field. Press Write to send the transaction.
-   ![](/img/bridges/omni-gno-eth-manual2.png)
-   The MetaMask window will appear. Gas price should be 1 GWei, adjust if needed. Once the transaction is confirmed in MetaMask, wait for verification by the Gnosis chain validators. This is typically completed in a few seconds.
-   Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for one more block. After that, they will collect confirmations on Gnosis chain and transfer them to BSC. The transaction sent by a validator to BSC will execute the request to unlock the tokens.
-
-## BSC -> Gnosis Chain
-
-The steps below assume:
-
-- The account performing the actions owns some amount of an ERC20 token on BSC.
-- The account is funded with some ether to cover gas fees.
-- The MetaMask/NiftyWallet must be unlocked and rights to access the account must be granted for BinanceScan.  
-  For demonstration purposes we transfer Sai tokens.
-  ![](/img/bridges/omni-erc20manual1.png)
-
-1. **Approve the mediator contract to transfer tokens.** The mediator contract uses the `transferFrom` functionality of the ERC20 token contract to lock the tokens; it must be explicitly approved to perform this operation.
-   ![](/img/bridges/omni-erc20manual2.png)
-   First, connect to the Web3 provider (MetaMask or other). Next, click on Write Contract and go to the approve method. Enter the following:
-   `guy (address)` field: the mediator contract address on BSC (`0xF0b456250DC9990662a6F25808cC74A6d1131Ea9`)
-   `wad (uint256)`: the amount of tokens to transfer in wei
-   ![](/img/bridges/omni-erc20manual3.png)
-   Press the "Write" button to send the transaction.
-   ![](/img/bridges/omni-erc20manual4.png)
-   The wallet window will appear. Gas price can be adjusted to speed up transaction verification. After the transaction is confirmed in the wallet, it is necessary to wait for verification. Depending on the gas price specified and traffic congestion it can take several seconds to several minutes.
-2. **Initiate the transfer request.**  
-   Copy the contract address before proceeding:
-   ![](/img/bridges/omni-erc20manual5.png)
-   Next, open the mediator contract ([`0xF0b456250DC9990662a6F25808cC74A6d1131Ea9`](https://bscscan.com/address/0xF0b456250DC9990662a6F25808cC74A6d1131Ea9#readProxyContract)) in Etherscan.
-   ![](/img/bridges/omni-erc20manual6.png)
-   The mediator contract is a proxy contract; Click contract then click the "Write as Proxy" tab.
-   ![](/img/bridges/omni-erc20manual7.png)
-   Since you are opening a new contract in Etherscan, you will connect to the Web3 provider (your wallet of choice) again. Then, in the `relayTokens` method enter the token contract address and the amount of tokens to transfer.
-   ![](/img/bridges/omni-erc20manual8.png)
-   Press the "Write" button to send the transaction.
-   ![](/img/bridges/omni-erc20manual9.png)  
-   The MetaMask/NiftyWallet will appear and the gas price can be adjusted to speed up the transaction verification. Once the transaction is confirmed in MetaMask, wait for confirmation. Depending on the gas price specified and traffic congestion it could take from several seconds to several minutes.
-   Once the transaction is included in a block, the Arbitrary Message Bridge validators will wait for 8 additional blocks. Then, they will send confirmations to Gnosis chain to invoke the multi-token mediator contract and complete the tokens transfer.
-
-For more details, check out [here](README.md#transfer-tokens-without-the-ui)
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/debugging-omnibridge-txns
-
-# Debugging OmniBridge Transactions
-
-:::info
-This page is mostly for application developers, if you sent tokens through the OmniBridge and would like to get the status whether the tokens were sent successfully or not, please use [Bridge Explorer](https://bridge.gnosischain.com/bridge-explorer) instead.
-:::
-Firstly, the [Foreign Arbitrary Message Bridge contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e) which is used by the OmniBridge, emits the `UserRequestForAffirmation` event as part of the a deposit request made by user (on the Ethereum side).
-
-```
-event UserRequestForAffirmation(bytes32 indexed messageId, bytes encodedData);
-```
-
-For example, [this is the event in the OmniBridge transaction](https://etherscan.io/tx/0x804a4b28520faad8b68d122cafdffedd2e185a9aa734b69f264a652d5c53afa4#eventlog), and the topic `0x482515ce3d9494a37ce83f18b72b363449458435fafdd7a53ddea7460fe01b58`
-![](/img/bridges/omni-debugging1.png)  
-In the event definition and from the example, the Id of the AMB message is trackable as part of the event. The event from the example shows the message Id: `0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402`.  
-On the other side of the bridge, if the message was executed successfully the [AMB contract](https://gnosis.blockscout.com/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) emits the `AffirmationCompleted` event.
-
-```
-event AffirmationCompleted(
-    address indexed sender,
-    address indexed executor,
-    bytes32 indexed messageId,
-    bool status
-);
-```
-
-Here is [the event corresponding to the example](https://blockscout.com/xdai/mainnet/tx/0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b/logs)  
-![](/img/bridges/omni-debugging2.png)
-The topic of the event is `0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7`. And the message Id is represented as a separate topic in the event.
-That's why it is possible to use different ways to filter out the corresponding transaction if the message Id of the OmniBridge deposit is known (it always can be received from the deposit transaction).
-For example, you can use the BlockScout API for this: https://docs.blockscout.com/for-users/api/rpc-endpoints. Example of the request to the BlockScout:
-
-```
-https://gnosis.blockscout.com/api?module=logs&action=getLogs&fromBlock=1&toBlock=latest&address=0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59&topic0=0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7&topic3=0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402&topic0_3_opr=and
-```
-
-It will return the JSON with the transaction hash correlated to the emission of the event `AffirmationCompleted` with the message Id:
-
-```
-{
-  "message": "OK",
-  "result": [
-    {
-      "address": "0x75df5af045d91108662d8080fd1fefad6aa0bb59",
-      "blockNumber": "0xbc8133",
-      "data": "0x0000000000000000000000000000000000000000000000000000000000000001",
-      "gasPrice": "0x3b9aca00",
-      "gasUsed": "0x2d572",
-      "logIndex": "0x8",
-      "timeStamp": "0x5f7ab6dd",
-      "topics": [
-        "0xe194ef610f9150a2db4110b3db5116fd623175dca3528d7ae7046a1042f84fe7",
-        "0x00000000000000000000000088ad09518695c6c3712ac10a214be5109a655671",
-        "0x000000000000000000000000f6a78083ca3e2a662d6dd1703c939c8ace2e268d",
-        "0x000500004ac82b41bd819dd871590b510316f2385cb196fb0000000000000402"
-      ],
-      "transactionHash": "0x092f1c8a02f305e5bfb671b923710cdd150c5b0e41df048c75b790538a25025b",
-      "transactionIndex": "0x5"
-    }
-  ],
-  "status": "1"
-}
-```
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/safe
-
-# OmniBridge with Safe App
-
-OmniBridge is compatible with the Gnosis Safe apps interface, allowing for bridge interaction and ERC20 transfers between Gnosis Chain and Ethereum using a Multisig Wallet. The following instructions are for bridging **ERC20s between Ethereum and Gnosis**. To transfer xDai to Dai and vice versa, see the [xDai Bridge + Gnosis Safe](../using-xdai-bridge/safe.md) instructions.
-
-:::warning
-Each Gnosis Safe is deployed independently on Gnosis and/or Ethereum. Cross-chain safes do not share the same contract addresses (even when they have the same owners etc), so it is **important to use the Alternate Recipient Address feature** when bridging with a safe.
-:::
-
-## Add the App
-
-1. Go to your Gnosis Safe and login and connect as you normally would.
-
-- Gnosis Safe on Ethereum/Gnosis: [https://gnosis-safe.io/app/](https://gnosis-safe.io/app/)  
-  Select corresponding network on top right corner.
-
-2. Go to Apps -> Add Custom App
-
-![](/img/bridges/omnibridge/gn-1.png)
-
-3. Add the App Url: [https://omni.gnosischain.com/](https://omni.gnosischain.com/) The App name should populate as OmniBridge. Agree to the terms and click Add.
-
-![](/img/bridges/omnibridge/gn2.png)
-
-4. App will be added to the interface, click to access.
-
-![](/img/bridges/omnibridge/gnosis-3.png)
-
-## Bridge App on Origin Chain: Initiating a Transaction
-
-5. Open the application and interact with the bridge as you normally would to begin the transfer process. \*\*\*\* In this example we bridge from xDai to Ethereum.
-
-:::warning
-Note that when bridging with a safe you will set an alternate receiver. This may be a 2nd safe contract on the receiving chain or an individual address to receive the funds. **If you bridge without setting a Recipient Address, your funds may be lost.**
-:::
-
-To set an Alternate Recipient, click on **Advanced**, then enter in the **0x address** into the Recipient Address box that will receive funds on the receiving chain. You can set a Gnosis safe address on the receiving chain as the recipient or another accessible address. Complete the rest of the information (token type and amount to transfer) and click **Request**. If you need more details related to OmniBridge transfers, see the [OmniBridge Instructions Page](./).
-
-![](/img/bridges/omnibridge/gnosis-4.png)
-
-6. Once you have requested the transfer, the required number of safe owners need to submit, sign and confirm to process the request.
-
-![](/img/bridges/omnibridge/gnosis-submit-sign.png)
-
-![](/img/bridges/omnibridge/gnosis-6.png)
-
-Once the first transaction is processed, close the safe application and switch chains to complete the claim.
-
-## Bridge App on Receiving Chain: Claiming a Bridge Transaction
-
-In this example, we sent STAKE from xDai to a Gnosis Safe address on Ethereum. To claim this transaction, login to Gnosis Safe on Ethereum and open the OmniBridge Application (you may need to [add it using the steps above](#add-the-app) if you have not added previously)
-
-7. You should see the claim screen, click the **Claim** button to begin the process. If you do not see this screen, click on **History** at the top of the OmniBridge app.
-
-![](/img/bridges/omnibridge/omni-1.png)
-
-8. Click the **Claim** button.
-
-![](/img/bridges/omnibridge/omni-2.png)
-
-9. All required owners must confirm the transaction before it is processed. Once completed, the funds are added to the Safe.
-
-![](/img/bridges/omnibridge/omni-3.png)
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/specific-tokens
-
-# Specific Tokens
-
-In some cases it is convenient to use ETH, the native token for the Ethereum Mainnet, in the form of a wrapped ERC20 token. This allows to unify interfaces for operations with assets. The recent Wrapped ETH token contract is [WETH9](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2).
-When the ETH-Gnosis OmniBridge first started, wrapped ETH was bridged to the Gnosis chain in form of ERC677 token: Wrapped ETH on xDai.
-Although the bridged token can be transferred back to ETH, it is still be in form of the ERC20 token, and it cannot be used in transactions to pay for gas fees. In this case, if a user has no ETH, it is impossible for them to unwrap these ETH tokens.
-This set of instructions demonstrates how the Wrapped ETH can be bridged from Gnosis chain directly to ETH tokens using a new `relay-and-call` feature implemented in the OmniBridge contracts. In the last part of this guide there is also an instruction on how to transfer ETH to WETH on Gnosis chain using a single operation. This may not be used often but some users may find it handy.
-This instruction assumes that you have access to BlockScout and Etherscan. You also must have a bit of xDai to pay for gas fees for a bridge transaction on Gnosis chain.
-
-In the second part of the tutorial, you will learn how to bridge GNO between Goerli and Chiado testnet. You are required to have some xDAI on Chiado and ETH on Goerli to complete the transaction.
-
-## Bridge wEth on Gnosis to Native Eth on Ethereum
-
-1. Change the chain to Gnosis in MetaMask
-2. Find the wEth token in BlockScout, and go to the [Write Proxy](https://gnosis.blockscout.com/address/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1?tab=write_proxy) tab.
-   ![](/img/bridges/omni-bridge-to-native-eth1.png)
-3. Scroll to the `transferAndCall` method:
-   ![](/img/bridges/omni-bridge-to-native-eth2.png)
-4. Enter the following information as parameters to call the method:
-
-- `_to`(address): `0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d` . This is sthe address of the OmniBridge contract on Gnosis.
-- `_value`(uint256): amount of wETH to be bridged (bridge fees wikll be subtracted from this value).
-- `_data`(bytes): the concatenation of the following:
-- the address of the wETH OmniBridge helper contract on the Ethereum Mainnet (`0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a`)
-- the address of the ETH recipient without the leading `0x`
-  For example, for the recipient `0xbf3d6f830ce263cae987193982192cd990442b53`, the value in `_data` field is `0xa6439ca0fcba1d0f80df0be6a17220fed9c9038abf3d6f830ce263cae987193982192cd990442b53`
-  Click **Write** to send the transaction.
-
-5. When the transaction is included in the block, click on the transaction link to get the transaction details
-   ![](/img/bridges/omni-bridge-to-native-eth3.png)
-6. Use the "View in ALM App" link on the page with transaction details, or use the transaction hash and go to the [ALM site](https://alm-bridge-monitor.gnosischain.com/) and enter it manually to track status of the transfer and finalize bridge operations if required.  
-   ![](/img/bridges/omni-bridge-to-native-eth4.png)
-7. Eventually, when an executing transaction on the Mainnet is processed, the WETH will be unlocked and unwrapped to ETH native tokens:
-   ![](/img/bridges/omni-bridge-to-native-eth5.png)
-
----
-
-## Bridge Eth to Gnosis Chain
-
-1. Visit the WETH OmniBridge helper contract on [Etherscan](https://etherscan.io/address/0xa6439ca0fcba1d0f80df0be6a17220fed9c9038a#writeContract) and connect your wallet.
-2. Scroll to the `wrapAndRelayTokens` method and enter the amount of ETH to bridge to Gnosis chain:
-   ![](/img/bridges/omni-bridge-from-native-eth1.png)
-   Click **Write** to send the transaction
-3. When the transaction is included in the block, press the "View you transaction" button to get the transaction hash which can be used in the [AMB Live Monitoring app](https://alm-bridge-monitor.gnosischain.com/) to track the status of the transaction.
-
----
-
-## GNO: Goerli -> Chiado
-
-Bridging GNO from Goerli to Chiado requires 2 txs.
-
-#### Transaction 1
-
-Allow Foreign OmniBridge Mediator to transfer GNOs, by calling approve() on GNO contract.
-
-**[Called Function](https://goerli.etherscan.io/address/0x7f477c3F03213970d939104CC436Dc995CF615b5)**: `GNO.approve(address Foreign OmniBridge Mediator, uint256  amount)`  
-**[Transaction Parameter Example](https://docs.metamask.io/guide/sending-transactions.html)**:
-
-```
-to: 0x7f477c3F03213970d939104CC436Dc995CF615b5 (GNO on Goerli)
-value: 0
-data: 0x095ea7b300000000000000000000000000147c84f13764dcdabaf1cbae622fa6f683908500000000000000000000000000000000000000000000d3c21bcecceda1000000
-```
-
-#### Transaction 2
-
-Relay GNO tokens from Foreign Omnibridge Mediator.
-
-**[Called Function](https://goerli.etherscan.io/address/0x00147c84f13764dcdabaf1cbae622fa6f6839085)**: `Foreign_OmniBridge_Mediator.relayTokens(address _receiver, uint256 _value)`  
-**[Transaction Parameter Example](https://docs.metamask.io/guide/sending-transactions.html)**:
-
-```
-to: 0x00147c84f13764dcdabaf1cbae622fa6f6839085 (Foreign OmniBridge Mediator)
-value: 0
-data: 0x01e4f53a0000000000000000000000007f477c3f03213970d939104cc436dc995cf615b50000000000000000000000000000000000000000000000000de0b6b3a7640000
-```
-
-After a few minutes the exact amount of relayed tokens will be available on Chiado side.
-
----
-
-## GNO: Chiado -> Goerli
-
-Bridging GNO from Chiado to Goerli also requires 2 txs.
-
-#### Transaction 1
-
-Allow Home OmniBridge Mediator to transfer GNOs.
-
-**[Called Function](https://blockscout.com/gnosis/chiado/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70)**: `GNO.approve(address Home OmniBridge Mediator, uint256 amount)`  
- **[Transaction Parameter Example](https://docs.metamask.io/guide/sending-transactions.html)**:
-
-```
-to: 0x19C653Da7c37c66208fbfbE8908A5051B57b4C70 (GNO on Chiado)
-value: 0
-data: 0x095ea7b300000000000000000000000009d549a48ac52f3f9945e7de6402c609c92aa2e100000000000000000000000000000000000000000000d3c21bcecceda1000000
-```
-
-#### Transaction 2
-
-Relay GNO tokens from Home Omnibridge Mediator.
-
-**[Called Function](https://blockscout.com/gnosis/chiado/address/0x09D549a48AC52F3f9945E7de6402c609c92aa2E1)**: `Home_OmniBridge_Mediator.relayTokens(address _receiver, uint256 _value)`  
- **[Transaction Parameter Example](https://docs.metamask.io/guide/sending-transactions.html)**:
-
-```
-to: 0x09D549a48AC52F3f9945E7de6402c609c92aa2E1  (Home OmniBridge Mediator)
-value: 0
-data: 0x01e4f53a00000000000000000000000019C653Da7c37c66208fbfbE8908A5051B57b4C700000000000000000000000000000000000000000000000000de0b6b3a7640000
-```
-
-After a few minutes the exact amount of relayed tokens will be available on Goerli side.
-
----
-
-// File: bridges/Legacy Bridges UI/using-omnibridge/token-registry
-
-# Token Registry
-
-## Getting corresponding Token Address
-
-There are several approaches to discover the token contract on the Ethereum Mainnet that corresponds to the token contract on Gnosis chain.
-
-### **Approach 1: BlockScout**
-
-BlockScout allows you to see if a token was bridged using the multi-token extension. First, search the token and go it's contract page:
-![](/img/bridges/omni-bridged-tokens1.png)
-This view contains information that this token was bridged and a link to the original token.
-![](/img/bridges/omni-bridged-tokens2.png)
-If you go to the top bar, you will notice that the token dropdown allows you to filter between tokens based off where they were bridged from:
-![](/img/bridges/omni-bridged-tokens3.png)
-
-### **Approach 2: Mediator Storage**
-
-The [multi-token mediator on Gnosis chain](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) provides methods for viewing correspondence of bridgeable tokens:
-
-- `foreignTokenAddress` - returns the address of the token contract on the Ethereum Mainnet by specifying the address the token contract on Gnosis Chain.
-- `homeTokenAddress`- returns the address of the token contract on Gnosis chain by specifying the address of the token contract on Ethereum.
-  Pass in the token address to get the corresponding address on the other chain:  
-  ![](/img/bridges/omni-mediatorstorage1.png)
-
-## Verifying a Canonical Bridged Token on BlockScout
-
-New tokens deployed by the multi-token mediator are not verified automatically in BlockScout. Sometimes it is necessary to read data from the token contract directly in the block explorer or even call a method of the token contract (e.g. to transfer tokens back to the Ethereum Mainnet). Follow the instructions below to verify the contract in BlockScout. Once verified, you can read and write to the contract using the BlockScout interface.
-
-1. Find the token contract by the token symbol using the search bar. The following example follows the verification of the STAKE token, which [recently had its staking utility deprecated](https://forum.gnosis.io/t/gip-16-gnosis-chain-xdai-gnosis-merge/1904). However, these steps are still relevant. The bridgeable token name is extended by "on xDai":
-   ![](/img/bridges/omni-verify-token1.png)
-2. Verify the contract:
-   ![](/img/bridges/omni-verify-token2.png)
-   ![](/img/bridges/omni-verify-token3.png)
-   Click on the Code tab, click Verify and Publish, then fill the form following the recommendations below (see solidity contract code below this image). Press the "Verify & publish" button at the bottom of the form to finish.
-   ![](/img/bridges/omni-verify-token4.png)
-
-<details>
-
-  <summary>Click to View Solidity Contract Code used in the Example</summary>
-
-**Code**:
-
-```solidity showLineNumbers
-
-  pragma solidity 0.4.24;
-
-  /**
-  * @title Proxy
-  * @dev Gives the possibility to delegate any call to a foreign implementation.
-  */
-  contract Proxy {
-      /**
-      * @dev Tells the address of the implementation where every call will be delegated.
-      * @return address of the implementation to which it will be delegated
-      */
-      /* solcov ignore next */
-      function implementation() public view returns (address);
-
-      /**
-      * @dev Fallback function allowing to perform a delegatecall to the given implementation.
-      * This function will return whatever the implementation call returns
-      */
-      function() public payable {
-          // solhint-disable-previous-line no-complex-fallback
-          address _impl = implementation();
-          require(_impl != address(0));
-          assembly {
-              /*
-                  0x40 is the "free memory slot", meaning a pointer to next slot of empty memory. mload(0x40)
-                  loads the data in the free memory slot, so `ptr` is a pointer to the next slot of empty
-                  memory. It's needed because we're going to write the return data of delegatecall to the
-                  free memory slot.
-              */
-              let ptr := mload(0x40)
-              /*
-                  `calldatacopy` is copy calldatasize bytes from calldata
-                  First argument is the destination to which data is copied(ptr)
-                  Second argument specifies the start position of the copied data.
-                      Since calldata is sort of its own unique location in memory,
-                      0 doesn't refer to 0 in memory or 0 in storage - it just refers to the zeroth byte of calldata.
-                      That's always going to be the zeroth byte of the function selector.
-                  Third argument, calldatasize, specifies how much data will be copied.
-                      calldata is naturally calldatasize bytes long (same thing as msg.data.length)
-              */
-              calldatacopy(ptr, 0, calldatasize)
-              /*
-                  delegatecall params explained:
-                  gas: the amount of gas to provide for the call. `gas` is an Opcode that gives
-                      us the amount of gas still available to execution
-
-                  _impl: address of the contract to delegate to
-
-                  ptr: to pass copied data
-
-                  calldatasize: loads the size of `bytes memory data`, same as msg.data.length
-
-                  0, 0: These are for the `out` and `outsize` params. Because the output could be dynamic,
-                          these are set to 0, 0 so the output data will not be written to memory. The output
-                          data will be read using `returndatasize` and `returdatacopy` instead.
-
-                  result: This will be 0 if the call fails and 1 if it succeeds
-              */
-              let result := delegatecall(gas, _impl, ptr, calldatasize, 0, 0)
-              /*
-
-              */
-              /*
-                  ptr current points to the value stored at 0x40,
-                  because we assigned it like ptr := mload(0x40).
-                  Because we use 0x40 as a free memory pointer,
-                  we want to make sure that the next time we want to allocate memory,
-                  we aren't overwriting anything important.
-                  So, by adding ptr and returndatasize,
-                  we get a memory location beyond the end of the data we will be copying to ptr.
-                  We place this in at 0x40, and any reads from 0x40 will now read from free memory
-              */
-              mstore(0x40, add(ptr, returndatasize))
-              /*
-                  `returndatacopy` is an Opcode that copies the last return data to a slot. `ptr` is the
-                      slot it will copy to, 0 means copy from the beginning of the return data, and size is
-                      the amount of data to copy.
-                  `returndatasize` is an Opcode that gives us the size of the last return data. In this case, that is the size of the data returned from delegatecall
-              */
-              returndatacopy(ptr, 0, returndatasize)
-
-              /*
-                  if `result` is 0, revert.
-                  if `result` is 1, return `size` amount of data from `ptr`. This is the data that was
-                  copied to `ptr` from the delegatecall return data
-              */
-              switch result
-                  case 0 {
-                      revert(ptr, returndatasize)
-                  }
-                  default {
-                      return(ptr, returndatasize)
-                  }
-          }
-      }
-  }
-
-  interface IPermittableTokenVersion {
-      function version() external pure returns (string);
-  }
-
-  /**
-  * @title TokenProxy
-  * @dev Helps to reduces the size of the deployed bytecode for automatically created tokens, by using a proxy contract.
-  */
-  contract TokenProxy is Proxy {
-      // storage layout is copied from PermittableToken.sol
-      string internal name;
-      string internal symbol;
-      uint8 internal decimals;
-      mapping(address => uint256) internal balances;
-      uint256 internal totalSupply;
-      mapping(address => mapping(address => uint256)) internal allowed;
-      address internal owner;
-      bool internal mintingFinished;
-      address internal bridgeContractAddr;
-      // string public constant version = "1";
-      bytes32 internal DOMAIN_SEPARATOR;
-      // bytes32 public constant PERMIT_TYPEHASH = 0xea2aa0a1be11a07ed86d755c93467f4f82362b452371d1ba94d1715123511acb;
-      mapping(address => uint256) internal nonces;
-      mapping(address => mapping(address => uint256)) internal expirations;
-
-      /**
-      * @dev Creates a non-upgradeable token proxy for PermitableToken.sol, initializes its eternalStorage.
-      * @param _tokenImage address of the token image used for mirrowing all functions.
-      * @param _name token name.
-      * @param _symbol token symbol.
-      * @param _decimals token decimals.
-      * @param _chainId chain id for current network.
-      */
-      constructor(address _tokenImage, string memory _name, string memory _symbol, uint8 _decimals, uint256 _chainId)
-          public
-      {
-          string memory version = IPermittableTokenVersion(_tokenImage).version();
-
-          assembly {
-              // EIP 1967
-              // bytes32(uint256(keccak256('eip1967.proxy.implementation')) - 1)
-              sstore(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc, _tokenImage)
-          }
-          name = _name;
-          symbol = _symbol;
-          decimals = _decimals;
-          owner = msg.sender; // msg.sender == HomeMultiAMBErc20ToErc677 mediator
-          bridgeContractAddr = msg.sender;
-          DOMAIN_SEPARATOR = keccak256(
-              abi.encode(
-                  keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
-                  keccak256(bytes(_name)),
-                  keccak256(bytes(version)),
-                  _chainId,
-                  address(this)
-              )
-          );
-      }
-
-      /**
-      * @dev Retrieves the implementation contract address, mirrowed token image.
-      * @return token image address.
-      */
-      function implementation() public view returns (address impl) {
-          assembly {
-              impl := sload(0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc)
-          }
-      }
-  }
-```
-
-</details>
-After verification is successful, the number tabs in the contract window will be extended to allow users to "Read Contract", "Write Contract", "Read Proxy" and "Write Proxy".
-
-![](/img/bridges/omni-verify-token5.png)
-
-## Bridged Tokens List
-
-A dynamic list of bridged tokens is now available.
-
-- [Tokens Bridged from Ethereum](https://blockscout.com/xdai/mainnet/bridged-tokens/eth)
-- [Tokens Bridged from Binance Smart Chain](https://blockscout.com/xdai/mainnet/bridged-tokens/bsc)  
-  The OmniBridge multi-token bridge extension is now being used to bridge many tokens from Ethereum to Gnosis. A second instance bridges tokens to and from the Binance Smart Chain. When a token is bridged, the name is appended with "on xDai" or "from Ethereum/BSC". On a token page, you can also find the link to the original token on Ethereum.
-
-## Getting bridged tokens from Omnibridge Smart Contracts
-
-The Token list is queried dynamically with BlockScout. The list is compiled by following these steps:
-
-1. Find all transactions to the [AMB Contract on Gnosis](https://gnosis.blockscout.com/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59/transactions#address-tabs)
-2. Check all internal transactions for each transaction.
-3. If an internal transaction creates a contract from the AMB mediator address (0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d), and this contract exposes the `getTokenInterfacesVersion()` getter, it is safe to assume that this contract’s address is a bridged token address.
-
----
-
-// File: bridges/Legacy Bridges UI/using-xdai-bridge/README
-
-## xDai Bridge
-
-### Moving Dai from Ethereum to xDai on Gnosis
-
-:::note
-You will need some Dai to transfer AND some ETH for gas (transaction fees). [Bridge minimum/maximum amounts](../../Token%20Bridge/xdai-bridge.md#fees--daily-limits) are set by the [bridge governors](../../management/README.md). Bridge may take some time to update chain stats, try refreshing or waiting a minute if you receive any errors. You can also select a [different RPC](#custom-rpc) in the Settings dropdown.
-:::
-
-
-1. Go to the [Legacy xDai Bridge UI](https://bridge.legacy.gnosischain.com/) and connect your wallet to the Ethereum Mainnet. Once connected, you will see your address populated in the header, and your DAI and xDai balance displayed on the page. If you change the dropdown on the page (ETH Mainnet) but not in MetaMask, the interface will update but your wallet will not auto-connect to the chain. _Switching chains in MetaMask_ however will automatically update the interface.
-2. Enter the amount of Dai you would like to transfer to Gnosis, and click the Transfer button.
-3. The web3 wallet window will open with transaction details. The default gas price is fine, if you would like a faster transaction you can increase. Click Submit or Confirm (depending on wallet) to initiate the transaction.
-4. Wait for the transaction confirmation (this can take some time if the network is super congested). The transaction is considered finalized after 8 blocks. To check on a pending transaction, click on the tx in the UI.
-5. Once the initial transfer confirmation is successful, you will see consecutive 'Transfer Pending' notifications with:
-   1. 20 of 20 block confirmations
-   2. Countdown with continue until 1 block confirmation is left.
-   3. Waiting for execution on Gnosis Chain side.
-   4. Transfer Complete.
-6. Click on View on BlockScout to see details about the transaction. If you scroll down you will see the `address` (your address where the xdai was sent), `value` (amount sent in wei), and `transactionHash`, which will match the hash from the initial transaction.
-
-### Moving xDai from Gnosis back to Dai on Ethereum
-
-:::note
-It is recommended to use Google Chrome and MetaMask without Ad Blockers to complete this process.  
-You will need a **small additional amount of xDai** to process the first transaction, and an **additional amount of Eth** to process the claim transaction on Ethereum.
-:::
-
-1. Go to the [Legacy xDai Bridge UI](https://bridge.legacy.gnosischain.com/) and connect your wallet to Gnosis Chain. Once connected, you will see your address populated in the header, and your DAI and xDai balance displayed on the page. If you change the dropdown on the page but not in MetaMask, the interface will update but your wallet will not auto-connect to the chain. _Switching chains in MetaMask_ however will automatically update the interface.
-2. Enter the amount of xDai you would like to transfer to Dai, and click the Request button. Note that there exists a [minimum amount](../../Token%20Bridge/xdai-bridge.md#fees--daily-limits).
-3. Confirm that you will need to perform 2 transactions, and will need xDai and Eth to complete the transfer. Click **Confirm** to process the transaction on Gnosis Chain.
-4. Your web3 wallet window will open with transaction details.
-5. Wait for 8 block confirmations. You will see several popups with block confirmation info.
-6. You will see a modal instructing you switch networks in your MetaMask (or other web3 wallet) to the Ethereum Mainnet.
-7. After you switch networks the **Claim** button will appear. Press to proceed.
-8. **Confirm** the second claim transaction in MetaMask (you will need some Eth for gas fees). Once processed, the Dai should be available in your wallet.
-   :::info
-   If you are interested in converting Dai to xDai without the UI see [how to use xDai Bridge without UI](#using-xdai-bridge-without-the-ui)
-   :::
-
-### How To Use the xDai Bridge with Safe (formerly Gnosis Safe)
-
-The xDai Bridge is included as a native Safe application, and Multisig Wallets on both Ethereum and Gnosis can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Legacy Omnibridge + Gnosis Safe](../using-omnibridge/README.md) instructions.
-
-#### Initiating a Transaction
-
-1. Go to your [Safe](https://gnosis-safe.io/app), login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the Gnosis one). **Safe addresses are distinct for each chain**. You can toggle which network you are using in the top right corner dropdown.
-
-2. Go to **Apps** and find the [**xDai Bridge** App](https://gnosis-safe.io/app/share/safe-app?appUrl=https://bridge.xdaichain.com&chainId=1). Apps are typically displayed in alphabetical order. Click to access.
-
-3. Open the application and interact with the bridge as you normally would to begin the transfer process. \*\*\*\* In the following example we bridge xDai on Gnosis chain to Dai on Ethereum. Note that there exists a [minimum amount](../../Token%20Bridge/xdai-bridge.md#fees--daily-limits). Enter:
-
-   1. xDai Amount
-   2. Recipient Address
-   3. Click Request.
-
-The Mainnet amount will show 0 DAI, as your Safe address on the Ethereum Mainnet is different and will not correspond with any Dai amount in a mainnet safe.
-
-:::danger
-When bridging with a safe you will set a **Recipient Address**. This may be a 2nd safe contract on the receiving chain or an individual address to receive the funds. The app will not let you proceed until you set the Recipient Address.
-:::
-
-Once you request to bridge xDai, you will see this warning reminding you about the claims process. Some xDai is required on one of the owner's wallets to initiate the transfer process, and Eth on Ethereum is required to claim bridged Dai.
-
-4. On submission, the required number of safe owners each need to **submit** and **sign** to process the request. This does not require any xDai.
-
-The final signature owner (required number of signatures are set through the gnosis safe settings) then needs to confirm. Any owner can then execute the tx and pay for the initial transfer transaction with xDai once this quorum has been met. In this example, a second owner goes to the **transactions** menu in their safe to find **transaction needs your confirmation**.
-
-5. Execute the transaction on Gnosis. A warning message may appear related to the gas limit which is set too low by the application. To fix, go to **Advanced options** and raise the gas limit. You can set it to be higher if desired - the transaction will only use the amount required within the set limit.
-
-6. Once confirmed, you can close the safe application on xDai. Find the transaction details on BlockScout by clicking on the transaction in the **MetaMask Activity** tab or by following the transaction history in the safe. _Next, switch to a Safe on Ethereum to complete the claim process._
-
-#### Claiming a Bridge Transaction on Ethereum
-
-In this example, we sent xDai to a Safe address on Ethereum. To claim the transaction and receive Dai, login to [Safe on Ethereum](https://gnosis-safe.io/app/) and open the xDai Bridge Application (located in the Apps menu).
-
-1. You should see the claim screen, click the **History** button to begin the process. If you do not see this screen, click on **History** at the top of the bridge app.
-
-2. Click the **Claim** button.
-
-3. All required owners must confirm the transaction before it is processed. Once the required signatures are collected, an owner can claim the transaction. The claim will require Eth, and can be completed anytime if the current prices are too high. Once completed, you can find the Etherscan link in your MetaMask Activity tab or the pending transaction pop-up.
-
-## More guides
-
-- [Alternate Receiver](./alternate-receiver.md)
-- [Custom RPC endpoint in Bridge](./custom-rpc.md)
-- [Using Safe App](./safe.md)
-- [Without UI](./no-ui.md)
-- [Troubleshooting](./troubleshooting)
-
----
-
-// File: bridges/Legacy Bridges UI/using-xdai-bridge/alternate-receiver
-
-# Alternate Receiver
-
-:::info
-The following tutorial is referring to the legacy xDAI bridge.  
-The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).  
-Please avoid using the legacy xDAI bridge: https://bridge.legacy.gnosischain.com/
-:::
-
-The feature _Alternative Receiver_ has integrated in the contracts of the xDai bridge as part of [an upgrade](https://forum.poa.network/t/migration-of-the-xdai-tokenbridge-completed/3212). With this feature it becomes possible to transfer tokens through the bridge to any account by very simple actions. It means that Alice can send Dai to Bob’s account on Gnosis chain in one transaction, and Bob can send xDai to Clare’s account on the Ethereum Mainnet in one transaction too.
-
-Due to different nature of tokens on two sides of the xDai bridge the operations to transfer assets to an alternative receiver from one chain to another differ as well.
-
-The xDai Bridge Alternative Receiver functionality. The transfer requires 2 transactions, one to unlock the contract and a second to process the transaction. _Manual methods are described below this section._
-
-## Dai to xDai
-
-1. Go to [the bridge UI](https://bridge.gnosischain.com/) and connect your MetaMask Wallet.
-
-![](/img/bridges/xdai-alt-rec-dai-xdai1.png)
-
-2. Determine **Single Tx Unlock** or **Infinite Tx Unlock**. You may want to approve the transfer for a single transaction, or approve the contract to make unlimited transfers from this address to many other addresses. For a Single TX Unlock, proceed directly to step 3 below. For infinite TX unlock, complete the following.
-
-   1. Go to Settings
-
-   ![](/img/bridges/xdai-alt-rec-dai-xdai2.png)
-
-   2. Toggle Infinite Unlock and save. Close the modal and proceed to step 3.
-
-   ![](/img/bridges/xdai-alt-rec-dai-xdai3.png)
-
-3. Click on **Advanced** and add the Recipients Address and the amount to Dai to transfer to Gnosis. Press **Unlock.**
-
-![](/img/bridges/xdai-alt-rec-dai-xdai4.gif)
-
-4. Confirm the Unlock transaction in MetaMask.
-
-5. Click to Transfer and Confirm the transaction.
-
-6. Once the initial transaction is successful, you will see consecutive Transfer Pending notifications with:
-
-   1. 20 of 20 block confirmations.....
-   2. Countdown with continue until 1 block confirmation is left.
-   3. Waiting for execution on Gnosis side.
-   4. Transfer Complete.
-
-7. The transfer is complete. Check the balance of the new account by clicking on the BlockScout link or accessing the address on Gnosis Chain.
-
-## xDai to Dai
-
-1.  With xDai to Dai transfers you do not need to use the Unlock feature. Connect to Gnosis Chain in MetaMask.
-
-        1. Click on Advanced.
-        2. Enter the Address that will receive Dai.
-        3. Enter Amount.
-        4. Click Request.
-
-    ![](/img/bridges/xdai-alt-rec-xdai-dai1.png)
-
-2.  Click Confirm to acknowledge you will need to perform 2 transactions.
-
-3.  Confirm the first tx in MetaMask.
-
-4.  Wait for 20 Block Confirmations on xDai.
-
-5.  Switch to **Ethereum Mainnet** in MetaMask. The Claim button will appear. Click **Claim**.
-
-6.  **Confirm** the second claim transaction in MetaMask. Once processed, the Dai should be available for the alternative receiver on Ethereum.
-
-## Dai to xDai (Manual, Non-UI Method)
-
-1. Open MetaMask and choose the Ethereum Mainnet.
-
-2. Go to the Dai Token Contract -> Write Contract functionality in Etherscan.
-   [https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f#writeContract](https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f#writeContract)
-
-3. Connect to your Web3 Wallet (MetaMask).
-
-4. Approve the bridge contract to perform operations with tokens:
-
-- `usr(address)` -- the address of the xDai bridge contract in the Ethereum Mainnet: `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016`
-- `wad(uint256)` -- the amount of tokens (in Wei) approved to send through the bridge (in this case 2 Dai): `2000000000000000000`
-- Click **Write**
-
-4. Confirm the transaction in the MetaMask and wait until it is included in the chain.
-
-5. Initialize the xDai bridge contract interface in Etherscan. Here you will write to the proxy contract. [https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract)
-
-6. You will see several `relayTokens` methods. Use Method (1) to send to an alternate address. You can also use a second method (14) if the Dai deposit is performed by another contract of behalf of the user account (like a DEX). There are also 2 other `relayToken` methods (4), (22) that specify a `_token(address)`. These are not in use.
-
-**relayTokens Method (1)**
-
-- `_receiver (address)` - address of the alternate receiver, the account that will be sent native tokens on Gnosis chain
-- `_amount (uint256)` - the amount of tokens (in Wei) to transfer; must be less or equal amount of tokens approved for the bridge operations
-- Click **Write**
-
-**relayTokens Method(14)**
-
-- `_sender (address)` - optional. Use when the Dai deposit is performed by another contract on behalf of a user account (e.g. by a DEX)
-- `_receiver (address)` - address of the alternate receiver, the account that will be sent native tokens on Gnosis chain
-- `_amount (uint256)` - the amount of tokens (in Wei) to transfer; must be less or equal amount of tokens approved for the bridge operations
-- Click **Write**
-
-7. Submit the transaction in the MetaMask and wait until it is included in the chain.
-
-8. The xDai bridge will take some time to relay the deposit request to Gnosis chain. Once complete, the balance of the `_receiver`account will increase with the corresponding amount of xDai.
-
-## xDai to Dai (Non-UI Method)
-
-1. Go to the [xDai bridge proxy contract on Gnosis Chain](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6?tab=write_proxy)
-
-2. Using the `relayTokens` method under the "Write Proxy" tab, enter the receiver address in the `_receiver` box, and the amount of xDai to transfer (in xDai - no need to convert to WEI). Connect your wallet and confirm the transaction. Copy the transaction hash.
-   ![](/img/bridges/xDai-manual-xDai-Dai1.png)
-
-3. Go to the [helper contract](https://gnosis.blockscout.com/address/0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A?tab=write_proxy). In the `getMethodHash()` method, enter the transaction hash from the previous step, the recipient address, and the amount being transferred. When entering the amount, you can use that little "+" icon to add the zeroes, as the amount needs to be entered in wei. Use the 10^18 option to save yourself some typing. Do not include any fees, only the amount to send. Copy the message hash after clicking query.
-   ![](/img/bridges/xDai-manual-xDai-Dai-getMsgHash.png)
-
-4. Paste the message hash from the previous step into the `getMessage()` method. If you receive 0x0 it means either the bridge oracles did not send a confirmation for the withdrawal yet or the data entered in the step 3 is incorrect. Double check the info and if it is correct you will eventually receive the message.
-   ![](/img/bridges/xDai-manual-xDai-Dai-getMsg.png)
-5. Once you receive the message, use the message hash from step 3 and query the `getSignatures()` method with it. It should return a blob packed with the signatures provided by the validator. If enough signatures haven't been collected yet, then the query could fail. If this happens, waiting a few minutes should fix it.
-   ![](/img/bridges/xDai-manual-xDai-Dai-getSignatures.png)
-
-6. Copy and paste the signature blob and the output from step 4 into the [Ethereum proxy contract](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract)'s `executeSignatures` method (you will need some Eth for gas). Connect your wallet and click write. After the transaction processes, the funds should appear in the receiver wallet.
-   ![](/img/bridges/xDai-manual-xDai-Dai-execSignatures.png)
-
-- [How to bridge Dai to a different address on Gnosis](../../Legacy%20Bridges%20UI/using-xdai-bridge/alternate-receiver.md)
-
-- [TokenBridge Docs: Alternative Receiver for the xDai Bridge](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/using-the-xdai-bridge/alternative-receiver-for-the-xdai-bridge.md)
-
----
-
-// File: bridges/Legacy Bridges UI/using-xdai-bridge/custom-rpc
-
-# Custom JSON RPC Endpoints
-
-If you are experiencing an issue with an Ethereum or Gnosis Chain RPC endpoint when trying to bridge you can easily set your own endpoint in the interface.
-
-Note that these are **Read Only**, if you need to use the RPCs to process transactions, you can [set custom RPCs in your web3 wallet like MetaMask as well](https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-Network-RPC-and-or-Block-Explorer).
-
-**Alternative Endpoint Resources**
-
-* [Gnosis supported endpoints](/tools/rpc/)
-* [Ethereum nodes](https://ethereumnodes.com/)
-
-1) Go to [bridge.gnosischain.com](https://bridge.gnosischain.com/) and select Settings.
-
-![](/img/bridges/xdaibridge/xsetting1.png)
-
-2) Add your RPC for either or both chains and click **Save**.
-
-![](/img/bridges/xdaibridge/xsetting2.png)
-
----
-
-// File: bridges/Legacy Bridges UI/using-xdai-bridge/no-ui
-
-# Without UI
-
-It is possible to move Dai and xDai using a wallet rather than through the UI. This method is supported by all wallets that support ERC20 transfers (e.g. [MyEtherWallet.com](http://myetherwallet.com/), [TrustWallet](https://trustwallet.com/), [MetaMask](https://metamask.io/)). Here we use NiftyWallet.
-
-Token address for reference:
-
-- Dai: [0x6b175474e89094c44da98b954eedeac495271d0f](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f)
-
-TokenBridge addresses for reference (where you send the asset to transfer)
-
-- Mainnet TokenBridge (Dai -> xDai): `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016`
-- xDai TokenBridge (xDai -> Dai): `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6`
-
-## Transfer Dai from the Ethereum Mainnet to the Gnosis Chain
-
-1. Connect to the Ethereum Mainnet and locate DAI in your webwallet.
-
-2. Enter in the following:
-
-   1. TokenBridge Address as the recipient: `0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016`
-   2. Amount to Send
-   3. Submit the transaction
-
-3. Wait for the relay confirmation from the bridge validators. This may take several minutes.
-
-4. Set your wallet to the Gnosis chain and check your balance.
-
-## Transfer xDai to DAI from the Gnosis chain to the Ethereum Mainnet
-
-:::info
-The following demonstrates interaction with contract methods using BlockScout and Etherscan
-:::
-
-1. Send xDai coins to the Token Bridge address `0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6` on the Gnosis Сhain using any wallet software.
-
-2. Wait for the transaction confirmation on the Gnosis chain (5 seconds).
-
-3. Copy the transaction hash of the confirmation and connect to the Ethereum mainnet.
-
-4. Visit the helper contract: [https://gnosis.blockscout.com/address/0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosis.blockscout.com/address/0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A)
-
-5. In the `getMessageHash` method field add the following information from your originating transaction and press the Query button. The method will return a hashed message.
-
-- DAI recipient (typically the transaction sender but may differ if the ‘relayTokens’ functionality is used)
-- Value (in **Wei** - do not include fees, only amount sent (Wei converter at [http://eth-converter.com/](http://eth-converter.com/))
-- Originating transaction hash
-
-6. Copy the message hash and paste into the `getMessage` method. If you receive 0x0 it means either the bridge oracles did not send a confirmation for the withdrawal yet or the data entered in the step 3 is incorrect. Double check the info and if it is correct you will eventually receive the message.
-
-7. Once you receive the message, use the message hash again this time with the `getSignatures` method. It will return a blob with packed signatures provided by the validator. The method could fail if not enough signatures are collected.
-
-![](/img/bridges/xdaibridge/blockscout1.jpg)
-
-8. Go to Etherscan and connect a web3 wallet: [https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract](https://etherscan.io/address/0x4aa42145aa6ebf72e164c9bbc74fbd3788045016#writeProxyContract)
-
-9. Enter the message (from `getMessage` method above) and the signatures blob to the `executeSignatures` method, press the **Write** button and complete the transaction with a Web3 wallet. If the method reverts, the withdrawal was likely already executed. You can check all input for the recipient here: [https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f?a=0x](https://etherscan.io/token/0x6b175474e89094c44da98b954eedeac495271d0f?a=0x)..., where the recipient's address follows after “a=“.
-
-![](/img/bridges/xdaibridge/etherscan1.jpg)
-
-Once you have written to the contract method, a View your **transaction** button will appear. Click to view the pending transaction.
-
-![](/img/bridges/xdaibridge/etherscan3.jpg)
-
-![A completed transaction](/img/bridges/xdaibridge/etherscan2.jpg)
-
----
-
-// File: bridges/Legacy Bridges UI/using-xdai-bridge/safe
-
-# xDai Bridge with Safe App
-
-The xDai Bridge is now included as a native Gnosis Safe application, and Multisig Wallets on both Ethereum and Gnosis Chain can interact with the bridge directly from the safe. The following instructions are for bridging **xDai to Dai** and vice versa. To bridge any other ERC20s, see the [Omnibridge + Gnosis Safe](/bridges/tutorials/using-omnibridge/safe) instructions.
-
-## Initiating a Transaction
-
-1. Go to your [Gnosis Safe](https://gnosis-safe.io/app/) and login and connect. You will want to access the safe you are bridging from first (if moving xDai to Dai, start with the xDai bridge). Safe addresses are distinct for each chain.
-
-
-2. Go to **Apps** and find the **xDai Bridge** App. Apps are typically displayed in alphabetical order. Click to access.
-
-![](/img/bridges/xdaibridge/img1.png)
-
-3. Open the application and interact with the bridge as you normally would to begin the transfer process. **** In the following example we bridge xDai on the Gnosis chain to Dai on Ethereum. The minimum amount to initiate a bridge transfer is 10 xDai. Enter:
-
-    1. xDai Amount
-    2. Recipient Address
-    3. Click Request.
-
-The Mainnet amount will show 0 DAI, as your Gnosis safe address on the Ethereum Mainnet is different and will not correspond with any Dai amount in a mainnet safe.
-
-:::warning
-When bridging with a safe you will set a **Recipient Address**. This may be a 2nd safe contract on the receiving chain or an individual address to receive the funds. The app will not let you proceed until you set the Recipient Address.
-:::
-
-![](/img/bridges/xdaibridge/set-recipient-address.png)
-
-Once you request to bridge xDai, you will see this warning reminding you about the claims process. xDai funds are required on one of the owner's wallets to initiate the transfer process, and Eth on Ethereum to claim bridged Dai.
-
-![Message following initial request](/img/bridges/xdaibridge/confirm-warning.png)
-
-4. On submission, the required number of safe owners each need to **submit** and **sign** to process the request. This does not require any xDai.
-
-![](/img/bridges/xdaibridge/submit-and-sign.png)
-
-The final signature owner (required number of signatures are set through the gnosis safe settings) then needs to confirm. Any owner can then execute the tx and pay for the initial transfer transaction with xDai once this quorum has been met. In this example, a second owner goes to the **transactions** menu in their safe to find **transaction needs your confirmation**.
-
-![A second signature is required in this example ](/img/bridges/xdaibridge/2nd confirmer.png)
-
-5. Execute the transaction on the Gnosis chain. In this case, a warning message appears related to the gas limit which is set too low by the application.
-
-![](/img/bridges/xdaibridge/approve-tx-issue.png)
-
-To fix, go to **Advanced options** and raise the gas limit. In this example we raise by 100,000 (initially was set to 124197) which results in a very small increase in cost since the transaction is on Gnosis.
-
-You can set higher if desired - the transaction will only use the amount required within the set limit.
-
-![](/img/bridges/xdaibridge/edit-gas-limit.png)
-
-6. Once confirmed, you can close the safe application on xDai. Find the transaction details on BlockScout by clicking on the transaction in the **MetaMask Activity** tab or by following the transaction history in the safe. _Next, switch to a Gnosis Safe on Ethereum to complete the claims process._
-
-![A successful transfer](/img/bridges/xdaibridge/blockscout-success.png)
-
-## Bridge App on Receiving Chain: Claiming a Bridge Transaction
-
-In this example, we sent xDai to a Gnosis Safe address on Ethereum. To claim the transaction and receive Dai, login to [Gnosis Safe on Ethereum](https://gnosis-safe.io/app/) and open the xDai Bridge Application (located in the Apps menu).
-
-7. You should see the claim screen, click the **History** button to begin the process. If you do not see this screen, click on **History** at the top of the bridge app.
-
-![](/img/bridges/xdaibridge/claim-screen-1.png)
-
-8. Click the **Claim** button.
-
-![](/img/bridges/xdaibridge/claim-screen-2.png)
-
-9. All required owners must confirm the transaction before it is processed. Once the required signatures are collected, an owner can claim the transaction. The claim will require Eth, and can be completed anytime to optimize gas prices. Once completed, you can find the Etherscan link in your MetaMask Activity tab or the pending transaction pop-up.
-
-![](/img/bridges/xdaibridge/to-view-on-etherscan.png)
-
-![Tx pending in Etherscan](/img/bridges/xdaibridge/on-etherscan.png)
-
-![Go to the Transactions Menu Item -> History to see prior transaction in your Gnosis safe.](/img/bridges/xdaibridge/transaction-history.png)
-
----
-
-// File: bridges/Legacy Bridges UI/using-xdai-bridge/troubleshooting
-
-:::info
-The following tutorial is referring to the legacy xDAI bridge.
-The new Bridge UI for xDAI bridge can be used in https://bridge.gnosischain.com/, and relevant tutorials can be found in [here](../../Bridge%20Explorer.md).
-Please avoid using the legacy xDAI bridge: https://bridge.legacy.gnosischain.com/
-:::
-
-
-# Troubleshoot Bridge Issues
-
-Bridge transactions can take some time (hours in extreme cases) to complete depending on Ethereum mainnet congestion. Try these actions first if your transaction has been **pending for 10 minutes or more** (and you don't want to wait any more time). Actions differ depending on if you are transferring from xDai to Dai or [Dai to xDai](#dai-to-xdai-transaction-is-taking-a-long-time).
-
-If you are using OmniBridge for other ERC20 tokens (not xDai to Dai) please see the [OmniBridge page](/bridges/tutorials/using-omnibridge/). **This guide only addresses issues with xDai to Dai transfers.**
-
-:::info
-**Things to know**
-
-- A bridge exit (moving from xDai to Dai) requires **2 transactions**, **one to initiate the transfer** on Gnosis, and a **2nd to claim DAI on Ethereum**.
-- To process the **2nd transaction**, you will need to **switch to Ethereum Mainnet in MetaMask** and **you will need Ether to pay gas fees.**
-- The **2nd transaction may take quite a long time**, it is being processed on Ethereum. You can set a higher gas price if you want to speed it up. [**Instructions**](#dai-to-xdai-transaction-is-taking-a-long-time)**.**
-- If you closed the UI before starting the 2nd transaction, you can come back and to complete later. [**Instructions**](#i-used-the-xdai-bridge-ui)**.**
-- Additional troubleshooting items below.
-  :::
-
-## Bridge UI is Offline or in Maintenance Mode
-
-We are doing some periodic maintenance and optimization on the Bridge and are now putting the UI into maintenance mode during these times to avoid additional confusion and/or delayed transactions for users. If you started a transaction but it did not complete because of maintenance mode, be assured that funds are safe and will be available once maintenance is complete. If you have questions or concerns during maintenance, please contact us in [Discord channel](https://discord.gg/gnosis) for up-to-date information.
-
-## I Only See Bridging in 1 Direction
-
-The bridge is dynamic and supports bi-directional bridging**. It will shift automatically when you update your web3wallet (MetaMask) to the correct chain**. When you are on Ethereum Mainnet, you will see the Eth-Mainnet to Gnosis side, and when you are on Gnosis, you will see the Gnosis to Eth Mainnet side. You can adjust which side through the Bridge toggle in menu, however to initiate a transfer you will need your wallet set to the correct chain.
-
-![](/img/bridges/xdaibridge/toggle.gif)
-
-## I Transferred xDai to Dai but it's Not Working
-
-A new bridge decentralization feature means **withdrawals now require 2 steps**. You must
-
-1. initiate the bridge transaction on Gnosis
-2. Claim your Dai on Ethereum.
-
-There are currently different bridging UIs, and depending on the UI you may need to take different steps to complete the process.
-
-- [xDai bridge](#i-used-the-xdai-bridge-ui): [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
-- [Burner Wallet](#i-used-burner-wallet-at-xdai-io): [https://xdai.io](https://xdai.io)
-
-## I Used the xDai Bridge UI
-
-When using the xDai bridge, we recommend Chrome and MetaMask. It is also useful to disable ad-blockers, as there are popups which guide you through the process. [A successful transfer process is documented here](./README.md).
-
-If you submitted a tx on Gnosis, but not complete the claim process, return to the Bridge UI and connect your MetaMask wallet with the account you used previously.
-
-1\) Switch MetaMask to the ETH Mainnet. If you have unclaimed txs you should see the following popup. Click on **History**.
-
-![](/img/bridges/xdaibridge/xmodal1.png)
-
-2\) If you are in the Bridge UI, you can also click on **History to view.**
-
-![](/img/bridges/xdaibridge/history-1.png)
-
-1. **Filter by Unreceived Transactions** and click the **Claim** button to begin the process. MetaMask will ask you to confirm the transaction and pay the gas fees to complete the process.
-
-![](/img/bridges/xdaibridge/history2.png)
-
-![](/img/bridges/xdaibridge/history3.png)
-
-:::info
-You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-an-exit-claim-are-very-high-how-can-i-reduce-them).
-:::
-
-## I Used **Burner Wallet** at xDai.io
-
-If you initiated a transfer from Burner Wallet, it likely is stuck on the Waiting for Bridge message.
-
-![](/img/bridges/xdaibridge/b1.jpg)
-
-### I'm connected to the Burner Wallet with MetaMask
-
-You can retrieve the pending transaction using the MetaMask interface. [Learn more here.](#find-transaction-hash-in-metamask)
-
-1. Go to the Bridge UI at [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
-2. Switch your MetaMask wallet to the ETH Mainnet
-3. Click on **History.** You will see any unclaimed transactions*. (You can also filter unclaimed transactions)*
-4. Press the **Claim button** to process**.** _(will not appear until 6+ minutes after the transaction)_
-5. **Confirm** transaction in MetaMask and wait for tx validation.
-
-:::warning
-You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-an-exit-claim-are-very-high-how-can-i-reduce-them).
-:::
-
-### I'm using a standalone Burner Wallet
-
-In this case, you'll want to export your private key into MetaMask to finish the conversion.
-
-1\) Click the Advanced Button.
-
-![](/img/bridges/xdaibridge/a1.jpg)
-
-2\) Copy Private Key.
-
-![](/img/bridges/xdaibridge/a2.jpg)
-
-3\) Open MetaMask and import the account.
-
-![](/img/bridges/xdaibridge/a3.jpg)
-
-4\) Paste in the private key and click Import.
-
-![](/img/bridges/xdaibridge/a4.jpg)
-
-5\) Go to the Bridge UI at [https://bridge.gnosischain.com/](https://bridge.gnosischain.com/)
-
-1. Switch your MetaMask wallet to the ETH Mainnet
-2. Click on **History.** You will see any unclaimed transactions*. (You can also filter unclaimed transactions)*
-3. Press the **Claim button** to process**.** _(will not appear until 6+ minutes after the transaction)_
-4. **Confirm** transaction in MetaMask and wait for tx validation.
-
-:::warning
-You may want to [manually set gas prices for a cheaper exit](#gas-fees-for-an-exit-claim-are-very-high-how-can-i-reduce-them).
-:::
-
-:::info
-You will need some ETH in your wallet to pay gas fees and finalize the transaction. You can send from another account.
-:::
-
-6\) You will see a Success message when the transaction is complete.
-
-7\) Add DAI as a custom token in MetaMask to view your DAI balance in the wallet.
-
-![](/img/bridges/xdaibridge/a10.jpg)
-
-![](/img/bridges/xdaibridge/a11.jpg)
-
-![](/img/bridges/xdaibridge/a12.jpg)
-
-## Gas fees For an Exit Claim are Very High! How Can I Reduce Them?
-
-You can check current gas prices at [https://ethgas.watch/](https://ethgas.watch/). If they are high at the moment, you may want to wait until later to process your transaction. [https://ethereumprice.org/gas/](https://ethereumprice.org/gas/) can help you plan for the best time of day to make the claim transaction.
-
-If you want to go ahead with the claim, try setting MetaMask to SLOW. This may take longer to process but can save you on tx fees. You can also click on Advanced to see additional metrics and choose an exact gas price for your transaction. [More information available here](https://metamask.zendesk.com/hc/en-us/articles/360015488771-How-to-Adjust-Gas-Price-and-Gas-Limit-).
-
-## Dai to xDai Transaction is Taking a Long Time
-
-8 block confirmations are required to ensure a transaction is final and xDai can be minted to your account. If Ethereum is congested, it may take many more blocks for your transaction to be queued. If your transaction is stuck in pending for a long time, you can opt try to speed it up by:
-
-1. Selecting the pending transaction in MetaMask.
-2. Clicking Speed Up.
-3. Paying the additional gas to try and get it through more quickly.
-
-Otherwise, it will likely be in a pending state until the congestion breaks up. If it remains in a pending state on MetaMask for a long time, see [Resetting MetaMask](#transaction-not-showing-on-blockscout-or-etherscan---resetting-metamask) below.
-
-![](/img/bridges/xdaibridge/speedup.jpg)
-
-## Transaction Not Showing on BlockScout or Etherscan - Resetting MetaMask.
-
-If you initiated a transaction but don't see a pending transaction the Block Explorer (in either direction, if originating from Gnosis check [BlockScout](https://gnosis.blockscout.com/), if Ethereum check [Etherscan](https://etherscan.io/)) try resetting your MetaMask account to clear your transaction history.
-
-This can be useful to clear up:
-
-- A pending transaction which refuses to clear.
-- A transaction fails to show up on Etherscan but is still pending.
-
-:::warning
-Imported accounts will not repopulate win your wallet with this method, so be sure you have access to a private key or seed phrase to restore these in a [reset account](https://metamask.zendesk.com/hc/en-us/articles/360015488891-Resetting-an-Account).
-:::
-
-This [troubleshooting guide from 1Hive](https://forum.1hive.org/t/troubleshooting-problems-on-metamask/215) is also helpful for instructions on resetting and dealing with other MetaMask issues.
-
-## I'm using a Ledger to Claim tokens on an xDai to Dai Bridge Transfer
-
-To use a Ledger you need to allow contract data in order to interact with smart contracts. We assume that you have installed the [Ethereum app](https://support.ledger.com/hc/en-us/articles/115005200009-Set-up-and-use-MyEtherWallet).
-
-1. [Update the firmware](https://support.ledgerwallet.com/hc/en-us/articles/360002731113) to the latest version.
-2. Connect and unlock your Ledger device.
-3. Open the **Ethereum** application.
-4. Press the right button to navigate to **Settings**. Press both buttons to validate.
-5. In the **Contract data** settings, press both buttons to allow contract data in transactions. The device displays **Allowed**.
-6. Retry your transaction.
-
-For more help with Ledger, please see their [support docs](https://support.ledger.com/hc/en-us).
-
-## Find a Transaction Hash
-
-Completing a transfer from Gnosis to Ethereum (converting xDai to Dai) requires 2 transactions.
-
-1. Initial withdrawal on Gnosis. Signatures are collected and xDai is burned.
-2. Claim Dai on Ethereum. Submit transaction hash containing validator confirmations.
-
-When transferring with the Bridge UI, the tx from step 1 is copied behind the scenes and used with the claim functionality in step 2.
-
-In some cases, however, step 2 may not process, or a different method may be used (such as a direct transfer without the UI or with another UI like a burner wallet that does not include this claim functionality) and the claim must be processed manually.
-
-### Find Transaction Hash in BlockScout
-
-1. Go to BlockScout at https://gnosis.blockscout.com/ and enter the address that originated the transaction (typically your wallet address). If you were using a contract to interact with the bridge (in this case use the contract that called the relayToken method) enter that address.
-
-![](/img/bridges/xdaibridge/xdai-bs.jpg)
-
-2. You will see the transaction in the list (tx sent from your address to the EternalStorageProxy contract (`0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6`). Copy the tx hash.
-
-![](/img/bridges/xdaibridge/xdai-bs2.jpg)
-
-### Find Transaction Hash in MetaMask
-
-The process will be similar for other Ethereum wallets. Find your past transaction history and copy the tx hash for the Contract interaction.
-
-1. Go to MetaMask and [connect to **Gnosis**](/tools/wallets/metamask).
-
-2. Click on the Contract Interaction TX in the activity tab of your account.
-
-![](/img/bridges/xdaibridge/MM1.jpg)
-
-3. Copy the Transaction ID (hash).
-
-![Copy the tx hash for the contract interaction](/img/bridges/xdaibridge/MM2.jpg)
-
-## View Inbound (Dai to xDai) Transactions
-
-When Dai is transferred from Ethereum to xDai on Gnosis, the amount of Dai in your wallet will decrease and the corresponding amount of xDai will increase. However, the transaction will not appear on the xDai side of the wallet. The easiest way to track it is in BlockScout with the Coin Balance History view.
-
-1. Copy the account address used for the transaction.
-
-![Copy Address - you can be connected to Ethereum or Gnosis, it is the same address on both chains.](/img/bridges/xdaibridge/tut22.jpg)
-
-2. Paste the address into BlockScout at https://gnosis.blockscout.com/.
-
-![](/img/bridges/xdaibridge/tut2.jpg)
-
-3. Select Coin Balance History.
-
-![](/img/bridges/xdaibridge/tut3.jpg)
-
-4. Scroll down to see incoming and outgoing amounts. Your transaction should appear here.
-
-Red txs signify outgoing and green are incoming. You can click on the block number to find your transaction in the block if you'd like more information.
-
-![](/img/bridges/xdaibridge/tut5.jpg)
-
-![Click the block for more details](/img/bridges/xdaibridge/tut6.jpg)
-
-5. Select a tx hash to view details.
-
-![](/img/bridges/xdaibridge/tut9.jpg)
-
-6. Here you see the recipient address, the value, and the hash of the initiating tx on Ethereum.
-
-![](/img/bridges/xdaibridge/tut10.jpg)
-
-7. This tx can be copy/pasted into Etherscan to see the initiating tx information.
-
-![](/img/bridges/xdaibridge/tut11.jpg)
-
----
-
 // File: bridges/hashi/README
 
 Hashi is an EVM Hash Oracle Aggregator, designed to facilitate a
@@ -4853,7 +3587,7 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 | Governor                  | Address                                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------------------- |
 | GnosisDAO                 | 0x57B11cC8F93f2cfeC4c1C5B95213f17cAD81332B                                                           |
-| Metacartel                | 0xd945325557f1FB4374fBf10Ae86D385632Df870A                                                           |
+| Monerium                  | 0xB646B8b5Fe6cBc7770578B7679208337ef747ae4                                                           |
 | Kleros                    | 0xb2a33ae0E07fD2ca8DBdE9545F6ce0b3234dc4e8                                                           |
 | Protofire                 | 0x80BA18503a1Fa16Ea22F3ef1Af23e2994EaC1d97                                                           |
 | Nethermind                | 0x544cE64C3Fc6Da72CEB2456CC4cF19E7c7972eFA                                                           |
@@ -8678,7 +7412,7 @@ Eth-docker allows user to set up Gnosis clients by answering simple dialog-based
 
 ## References
 1. Eth-docker Docs: https://eth-docker.net/
-2. Github: https://github.com/eth-educators/eth-docker
+2. Github: https://github.com/ethstaker/eth-docker
 
 
 ## Prerequisite
@@ -8695,7 +7429,7 @@ Open a new terminal, copy and paste the command below.
 Download eth-docker
 
 ```bash
-cd ~ && git clone https://github.com/eth-educators/eth-docker.git && cd eth-docker
+cd ~ && git clone https://github.com/ethstaker/eth-docker.git && cd eth-docker
 ```
 
 Install pre-requisites such as Docker
@@ -9407,7 +8141,7 @@ To monitor the network, options include ethstats, forkmon, beacon.gnosischain, a
 
 ![Prometheus-Grafana-NodeExporter](../../../static/img/node/prometheus-grafana.png)
 
-To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/eth-educators/ethstaker-guides/blob/main/monitoring.md).
+To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/ethstaker/ethstaker-guides/blob/main/monitoring.md).
 
 You may also refer to the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)and [CoinCashew's guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-i-installation/monitoring-your-validator-with-grafana-and-prometheus) for best monitoring practices.
 
@@ -10121,15 +8855,14 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Execution client:', value: 'label'},
   {label: 'Nethermind', value: 'nethermind'},
   {label: 'Erigon', value: 'erigon'},
+  {label: 'Besu', value: 'besu'},
   {label: 'Geth', value: 'geth'},
-  {label: 'Reth', value: 'reth'},
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="nethermind"></TabItem>
   <TabItem value="erigon"></TabItem>
   <TabItem value="besu"></TabItem>
   <TabItem value="geth"></TabItem>
-  <TabItem value="reth"></TabItem>
 </Tabs>
 
 <Tabs className="tabgroup-with-label cl-tabgroup" groupId="consensus-clients" defaultValue="lighthouse" values={[
@@ -10138,12 +8871,14 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Lodestar', value: 'lodestar'},
   {label: 'Teku', value: 'teku'},
   {label: 'Nimbus', value: 'nimbus'},
+  {label: 'Prysm', value: 'prysm'}
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="lighthouse"></TabItem>
   <TabItem value="lodestar"></TabItem>
   <TabItem value="teku"></TabItem>
   <TabItem value="nimbus"></TabItem>
+  <TabItem value="prysm"></TabItem>
 </Tabs>
 
 <p className="unsupported">* disabled options: unsupported clients</p>
@@ -12118,7 +10853,8 @@ You can run the node in two ways:
 Pull the image:
 
 ```bash
-docker pull ghcr.io/gnosischain/reth_gnosis:master
+docker pull ghcr.io/gnosischain/reth_gnosis:v0.1.0
+
 ```
 
 ### Running Reth for Gnosis
@@ -12140,13 +10876,13 @@ cp /path/to/jwtsecret ./reth_data/jwtsecret
 #### Quick Chiado run
 
 ```bash
-docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:master node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
+docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
 ```
 
 #### Full Gnosis Chain example
 
 ```bash
-docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:master node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
+docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
 ```
 
 ---
@@ -12956,7 +11692,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 ]}>
 <TabItem value="others">
 
-- Copy the download link for Linux, MacOS or Arm64 package from the [ETHstaker Deposit CLI](https://github.com/eth-educators/ethstaker-deposit-cli/releases).
+- Copy the download link for Linux, MacOS or Arm64 package from the [ETHstaker Deposit CLI](https://github.com/ethstaker/ethstaker-deposit-cli/releases).
 
 - Download the Validator Data Generation tool
     ```shell
@@ -12991,7 +11727,7 @@ Learn more about [keys](https://kb.beaconcha.in/ethereum-2-keys) and [withdrawal
 </TabItem>
 <TabItem value="win">
 
-- Download the Windows version of the [ETHstaker Deposit CLI](https://github.com/eth-educators/ethstaker-deposit-cli/releases) from the releases page.
+- Download the Windows version of the [ETHstaker Deposit CLI](https://github.com/ethstaker/ethstaker-deposit-cli/releases) from the releases page.
 - Execute Validator Data Generation tool and follow the instructions.
     In case of doubts, check the [tool documentation](https://deposit-cli.ethstaker.cc/landing.html)
 
@@ -17733,110 +16469,38 @@ If the faucet is not functioning properly, feel free to seek assistance on the [
 
 // File: tools/Oracle Providers/api3
 
-# API3
-[API3](https://api3.org/) is a collaborative project to deliver traditional API services to smart contract platforms in a decentralized and trust-minimized way. It is governed by a decentralized autonomous organization (DAO), namely the [API3 DAO](https://api3.org/dao).
-:::info The API3 DAO
-Read more about how The API3 DAO works. [Click here](https://docs.api3.org/explore/dao-members/)
-:::
-## Airnode
-Developers can use [Airnode](https://docs.api3.org/explore/airnode/what-is-airnode.html) to request off-chain data inside their Smart Contracts on the Gnosis Chain. An Airnode is a first-party oracle that pushes off-chain API data to your on-chain contract. Airnode lets API providers easily run their own first-party oracle nodes. That way, they can provide data to any on-chain dApp that's interested in their services, all without an intermediary.
-An on-chain smart contract makes a request in the [RRP (Request Response Protocol)](https://docs.api3.org/reference/airnode/latest/concepts/) contract (`AirnodeRrpV0.sol`) that adds the request to the event logs. The Airnode then accesses the event logs, fetches the API data and performs a callback to the requester with the requested data.
+# Api3
+[Api3](https://api3.org/) delivers first-party oracles that pay you.
 
-<img src="/img/tools/api3/airnode1.png" width="600"/>
-## Requesting off-chain data by calling an Airnode
-Requesting off-chain data essentially involves triggering an Airnode and getting its response through your smart contract. The smart contract in this case would be the requester contract which will make a request to the desired off-chain Airnode and then capture its response.
-The requester calling an Airnode primarily focuses on two tasks:
-- Make the request
-- Accept and decode the response
-<img src="/img/tools/api3/airnode2.png" width="600"/>
-<br></br>
-**Here is an example of a basic requester contract to request data from an Airnode:**
+By connecting real-world data providers directly to smart contracts, Api3 eliminates intermediaries, ensuring unmatched transparency and security. With pioneering mechanisms to recapture Oracle Extractable Value [(OEV)](https://docs.api3.org/dapps/), Api3 empowers dApps with reliable data while minimizing and reclaiming the value they would otherwise leak to external actors. Api3 is redefining the oracle space by elevating oracles from mere data providers to entities that help builders retain the value they create.
+Explore the [Api3 Market](https://market.api3.org/gnosis) and start earning.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
-import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol";
-import "@openzeppelin/contracts@4.9.5/access/Ownable.sol";
-// A Requester that will return the requested data by calling the specified Airnode.
-contract Requester is RrpRequesterV0, Ownable {
-    mapping(bytes32 => bool) public incomingFulfillments;
-    mapping(bytes32 => int256) public fulfilledData;
-    // Make sure you specify the right _rrpAddress for your chain while deploying the contract.
-    constructor(address _rrpAddress) RrpRequesterV0(_rrpAddress) {}
-    // To receive funds from the sponsor wallet and send them to the owner.
-    receive() external payable {
-        payable(owner()).transfer(address(this).balance);
-    }
-    // The main makeRequest function that will trigger the Airnode request.
-    function makeRequest(
-        address airnode,
-        bytes32 endpointId,
-        address sponsor,
-        address sponsorWallet,
-        bytes calldata parameters
-    ) external {
-        bytes32 requestId = airnodeRrp.makeFullRequest(
-            airnode,                        // airnode address
-            endpointId,                     // endpointId
-            sponsor,                        // sponsor's address
-            sponsorWallet,                  // sponsorWallet
-            address(this),                  // fulfillAddress
-            this.fulfill.selector,          // fulfillFunctionId
-            parameters                      // encoded API parameters
-        );
-        incomingFulfillments[requestId] = true;
-    }
-    
-    function fulfill(bytes32 requestId, bytes calldata data)
-        external
-        onlyAirnodeRrp
-        contract Requester is RrpRequesterV0 {
-        int256 decodedData = abi.decode(data, (int256));
-        fulfilledData[requestId] = decodedData;
-    }
-    // To withdraw funds from the sponsor wallet to the contract.
-    function withdraw(address airnode, address sponsorWallet) external onlyOwner {
-        airnodeRrp.requestWithdrawal(
-        airnode,
-        sponsorWallet
-        );
-    }
-}
-```
-
-The `_rrpAddress` is the main `airnodeRrpAddress`. The RRP Contracts have already been deployed on-chain. You can check the address for Gnosis Chain [here](https://docs.api3.org/reference/airnode/latest/). You can also try [deploying it on Remix](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/RequesterWithWithdrawal.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
-
-|         Contract         |                     Addresses                    |
-|:------------------------:|:------------------------------------------------:|
- The callback to the Requester contains two parameters:
-Sponsors should not fund a `sponsorWallet` with more then they can trust the Airnode with, as the Airnode controls the private key to the `sponsorWallet`. The deployer of such Airnode undertakes no custody obligations, and the risk of loss or misuse of any excess funds sent to the `sponsorWallet` remains with the sponsor.
+:::note
+You can check out our docs for a quickstart that will take you from start to finish [here](https://docs.api3.org/dapps/quickstart/)
 :::
 
-[Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/RequesterWithWithdrawal.sol&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.9+commit.e5eed63a.js)
+## Using dAPIs - Api3 Datafeeds
 
-## Using dAPIs - API3 Datafeeds
+[dAPIs](https://docs.api3.org/dapps/quickstart/) are continuously updated streams of off-chain data, such as the latest cryptocurrency prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
 
-[dAPIs](https://docs.api3.org/reference/dapis/understand/) are continuously updated streams of off-chain data, such as the latest cryptocurrency, stock and commodity prices. They can power various decentralized applications such as DeFi lending, synthetic assets, stablecoins, derivatives, NFTs and more.
-
-The data feeds are continuously updated by [first-party oracles](https://docs.api3.org/explore/introduction/first-party.html) using signed data. dApp owners can read the on-chain value of any dAPI in real-time.
+The data feeds are continuously updated by first-party oracles using signed data. dApp owners can read the on-chain value of any dAPI in real-time.
 
 Due to being composed of first-party data feeds, dAPIs offer security, transparency, cost-efficiency and scalability in a turn-key package.
 
-Apart from relying on deviation threshold and heartbeat configuration updates, unlike traditional data feeds, [OEV Network](https://docs.api3.org/explore/introduction/oracle-extractable-value.html) enables dApps using dAPIs to auction off the right to update the data feeds to searcher bots. Searcher bots can bid for price updates through the OEV Network to update the data feeds. All the OEV proceeds go back to the dApp.
+Apart from relying on deviation threshold and heartbeat configuration updates, unlike traditional data feeds, OEV Network enables dApps using dAPIs to auction off the right to update the data feeds to searcher bots. Searcher bots can bid for price updates through the OEV Network to update the data feeds. All the OEV proceeds go back to the dApp.
 
-The [API3 Market](https://market.api3.org/gnosis) enables users to connect to a dAPI and access the associated data feed services.
+The [Api3 Market](https://market.api3.org/gnosis) enables users to connect to a dAPI and access the associated data feed services.
 
 ![img](/img/tools/api3/dapi-main.png)
 
-[*To learn more about how dAPIs work, click here*](https://docs.api3.org/explore/dapis/what-are-dapis.html)
 
 ### Subscribing to dAPIs
 
-The [API3 Market](https://market.api3.org/gnosis) lets users access dAPIs on both [Gnosis Mainnet](https://market.api3.org/gnosis) and [Testnet](https://market.api3.org/gnosis-testnet).
+The [Api3 Market](https://market.api3.org/gnosis) lets users access dAPIs on both [Gnosis Mainnet](https://market.api3.org/gnosis) and [Testnet](https://market.api3.org/gnosis-testnet).
 
 #### Exploring, selecting and configuring your dAPI
 
-The [API3 Market](https://market.api3.org/gnosis) provides a list of all the dAPIs available across multiple chains including testnets. You can filter the list by mainnet or testnet chains. After selecting the chain, you can now search for a specific dAPI by name. Once selected, you will land on the details page (eg ETH/USD on Gnosis Testnet) where you can find more information about the dAPI. 
+The [Api3 Market](https://market.api3.org/gnosis) provides a list of all the dAPIs available across multiple chains including testnets. You can filter the list by mainnet or testnet chains. After selecting the chain, you can now search for a specific dAPI by name. Once selected, you will land on the details page (eg ETH/USD on Gnosis Testnet) where you can find more information about the dAPI. 
 
 The current supported configurations for dAPIs are:
 
@@ -17850,7 +16514,7 @@ The current supported configurations for dAPIs are:
 
 ![img](/img/tools/api3/dapi-1.png)
 
-#### Activating your dAPI
+#### Activating your price feed
 
 :::note
 Note
@@ -17872,7 +16536,7 @@ Once you are done configuring and activating the dAPI, you can now integrate it.
 
 You can now see the deployed proxy contract address. You can now use this to read from the configured dAPI.
 
-### Reading from a dAPI
+### Reading from a dAPI (Price Feed)
 Here's an example of a basic contract that reads from a dAPI.
 ```
 // SPDX-License-Identifier: MIT
@@ -17905,147 +16569,14 @@ contract DataFeedReaderExample is Ownable {
 
 - `readDataFeed()` is a view function that returns the latest price of the set dAPI.
 
-You can read more about dAPIs [here](https://docs.api3.org/guides/dapis/subscribing-to-dapis/).
+### Try deploying it through Remix! 
+[Remix link here](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/DapiReader.sol&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js)
 
-### [Try deploying it on Remix!](https://remix.ethereum.org/#url=https://github.com/api3-ecosystem/remix-contracts/blob/master/contracts/DapiReader.sol&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js)
 
 
-## API3 QRNG
-
-[API3 QRNG](https://docs.api3.org/explore/qrng/) is a public utility we provide with the courtesy of Australian National University (ANU), Quintessence Labs and Quantum Blockchains. It is powered by an Airnode hosted by the QRNG Providers, meaning that it is a first-party service. It is served as a public good and is free of charge (apart from the gas costs), and it provides ‘true’ quantum randomness via an easy-to-use solution when requiring RNG on-chain.
-
-To request randomness on-chain, the requester submits a request for a random number to `AirnodeRrpV0`. The QRNG Airnode gathers the request from the `AirnodeRrpV0` protocol contract, retrieves the random number off-chain, and sends it back to `AirnodeRrpV0`. Once received, it performs a callback to the requester with the random number.
-
-Click here to check out the [AirnodeRrpV0](https://docs.api3.org/reference/qrng/chains.html) and available [QRNG Providers](https://docs.api3.org/reference/qrng/providers.html) on Gnosis.
-
-Here is an example of a basic `QrngRequester` that requests a random number:
-
-```solidity
-//SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
-import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol";
-import "@openzeppelin/contracts@4.9.5/access/Ownable.sol";
-/// @title Example contract that uses Airnode RRP to access QRNG services
-contract QrngExample is RrpRequesterV0, Ownable {
-    event RequestedUint256(bytes32 indexed requestId);
-    event ReceivedUint256(bytes32 indexed requestId, uint256 response);
-    event RequestedUint256Array(bytes32 indexed requestId, uint256 size);
-    event ReceivedUint256Array(bytes32 indexed requestId, uint256[] response);
-    event WithdrawalRequested(address indexed airnode, address indexed sponsorWallet);
-    address public airnode;                 /// The address of the QRNG Airnode
-    bytes32 public endpointIdUint256;       /// The endpoint ID for requesting a single random number
-    bytes32 public endpointIdUint256Array;  /// The endpoint ID for requesting an array of random numbers
-    address public sponsorWallet;           /// The wallet that will cover the gas costs of the request
-    uint256 public _qrngUint256;            /// The random number returned by the QRNG Airnode
-    uint256[] public _qrngUint256Array;     /// The array of random numbers returned by the QRNG Airnode
-    mapping(bytes32 => bool) public expectingRequestWithIdToBeFulfilled;
-    constructor(address _airnodeRrp) RrpRequesterV0(_airnodeRrp) {}
-    /// @notice Sets the parameters for making requests
-    function setRequestParameters(
-        address _airnode,
-        bytes32 _endpointIdUint256,
-        bytes32 _endpointIdUint256Array,
-        address _sponsorWallet
-    ) external {
-        airnode = _airnode;
-        endpointIdUint256 = _endpointIdUint256;
-        endpointIdUint256Array = _endpointIdUint256Array;
-        sponsorWallet = _sponsorWallet;
-    }
-    /// @notice To receive funds from the sponsor wallet and send them to the owner.
-    receive() external payable {
-        payable(owner()).transfer(msg.value);
-        emit WithdrawalRequested(airnode, sponsorWallet);
-    }
-    /// @notice Requests a `uint256`
-    /// @dev This request will be fulfilled by the contract's sponsor wallet,
-    /// which means spamming it may drain the sponsor wallet.
-    function makeRequestUint256() external {
-        bytes32 requestId = airnodeRrp.makeFullRequest(
-            airnode,
-	contract RemixQrngExample is RrpRequesterV0 {
-            this.fulfillUint256.selector,
-            ""
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = true;
-        emit RequestedUint256(requestId);
-    }
-    /// @notice Called by the Airnode through the AirnodeRrp contract to
-    /// fulfill the request
-    function fulfillUint256(bytes32 requestId, bytes calldata data)
-        external
-        onlyAirnodeRrp
-    {
-        require(
-            expectingRequestWithIdToBeFulfilled[requestId],
-            "Request ID not known"
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = false;
-        uint256 qrngUint256 = abi.decode(data, (uint256));
-        _qrngUint256 = qrngUint256;
-        // Do what you want with `qrngUint256` here...
-        emit ReceivedUint256(requestId, qrngUint256);
-    }
-    /// @notice Requests a `uint256[]`
-    /// @param size Size of the requested array
-    function makeRequestUint256Array(uint256 size) external {
-        bytes32 requestId = airnodeRrp.makeFullRequest(
-            airnode,
-            endpointIdUint256Array,
-            address(this),
-            sponsorWallet,
-            address(this),
-            this.fulfillUint256Array.selector,
-            // Using Airnode ABI to encode the parameters
-            abi.encode(bytes32("1u"), bytes32("size"), size)
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = true;
-        emit RequestedUint256Array(requestId, size);
-    }
-    /// @notice Called by the Airnode through the AirnodeRrp contract to
-    /// fulfill the request
-    function fulfillUint256Array(bytes32 requestId, bytes calldata data)
-        external
-        onlyAirnodeRrp
-    {
-        require(
-            expectingRequestWithIdToBeFulfilled[requestId],
-            "Request ID not known"
-        );
-        expectingRequestWithIdToBeFulfilled[requestId] = false;
-        uint256[] memory qrngUint256Array = abi.decode(data, (uint256[]));
-        // Do what you want with `qrngUint256Array` here...
-        _qrngUint256Array = qrngUint256Array;
-        emit ReceivedUint256Array(requestId, qrngUint256Array);
-    }
-    /// @notice Getter functions to check the returned value.
-    function getRandomNumber() public view returns (uint256) {
-        return _qrngUint256;
-    }
-    function getRandomNumberArray() public view returns(uint256[] memory) {
-        return _qrngUint256Array;
-    }
-    /// @notice To withdraw funds from the sponsor wallet to the contract.
-    function withdraw() external onlyOwner {
-        airnodeRrp.requestWithdrawal(
-        airnode,
-        sponsorWallet
-        );
-    }
-}
-```
-
-- The `setRequestParameters()` takes in `airnode` , `endpointIdUint256`, `sponsorWallet` and sets these parameters. You can get the Airnode address and the endpoint ID [here](https://docs.api3.org/reference/qrng/providers.html).
-
-- The `makeRequestUint256()` function calls the `airnodeRrp.makeFullRequest()` function of the `AirnodeRrpV0.sol` protocol contract which adds the request to its storage and returns a `requestId`.
-
-You can try QRNG on the Gnosis Chain for free. Check out the all the QRNG Provid
-Here are some additional developer resources
 
 - [API3 Docs](https://docs.api3.org/)
 - [API3 Market](https://market.api3.org/gnosis)
-- [Get started with dAPIs](https://docs.api3.org/guides/dapis/)
-- [get started with QRNG](https://docs.api3.org/guides/qrng/)
 - [Github](https://github.com/api3dao/)
 - [Medium](https://medium.com/api3)
 - [YouTube](https://www.youtube.com/API3DAO)
