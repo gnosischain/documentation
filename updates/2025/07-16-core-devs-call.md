@@ -1,5 +1,5 @@
 ---
-title: Core Devs Call - 07/23/2025
+title: Core Devs Call - 07/16/2025
 authors: [dapplion, armaganercan, filoozom]
 tags: [CoreDevsCall, Gnosis Chain]
 ---
@@ -16,7 +16,7 @@ With diverse voices present, our discussions are rich and multifaceted, aiming t
 
 Watch the call record [here](https://youtu.be/tJAp2HgxXQM).
 
-July 23, 2025
+July 16, 2025
 
 # Infrastructure
 
