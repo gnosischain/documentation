@@ -8,13 +8,13 @@ Gnosis Chain underwent Shanghai/Capella Hardfork successfully on **August 1 20
 
 # What is Validator Withdrawal?
 
-Validator withdrawal allows a validator's account balance get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator's withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
+Validator withdrawal moves a validator’s balance from the Beacon Chain to the Execution Layer, paid out **in GNO** to the validator’s *withdrawal address* (set with `--eth1_withdrawal_address` when generating validator keys).
 
 There are two kinds of withdrawals:
 
 | Type        | Trigger                                                                                 | What happens?                                                   |
 | ----------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| **Partial** | Automatic                                                                               | Any balance **above    1 GNO** is swept to the withdrawal address. |
+| **Partial** | Automatic                                                                               | Any balance **above 1 GNO** is swept to the withdrawal address. |
 | **Full**    | Validator signs and broadcasts a [`voluntary_exit`](./voluntary-exit.md) (irreversible) | The entire balance is withdrawn to the withdrawal address.      |
 
 ---
@@ -23,16 +23,9 @@ There are two kinds of withdrawals:
 
 ![GC vs ETH](../../../static/img/node/withdrawal/GCvsETH.png)
 
-**For users: it is the same!**
+* **For users:** the experience is identical – funds simply arrive at the withdrawal address.
+* **Under the hood:** Gnosis Chain uses a smart‑contract (the same address as the deposit contract) to pay out GNO. If the contract temporarily lacks GNO, queued withdrawals are retried once topped up and drained at a fixed rate (4‑16 per slot, TBD).
 
-**Technically:**
-Withdrawals are handled by a smart contract on Gnosis Chain
-
-- specifically implemented for Gnosis in execution layer clients
-- same contract as the deposit one
-- pays out in GNO
-- If there's no GNO left in the contract, withdrawals are retried whenever it's topped up
-  - The failed withdrawal queue is cleared at a constant rate per slot (4-16/slot, TBD), in addition to new withdrawals.
 **References**
 
 1. [Gnosis Chain Withdrawals spec](https://github.com/gnosischain/concepts/specs/blob/master/execution/withdrawals.md)
@@ -46,11 +39,11 @@ Withdrawals are handled by a smart contract on Gnosis Chain
 
 Gnosis Chain supports **two** execution‑address credential prefixes:
 
-| Prefix | Behaviour on Gnosis Chain                                                                                                                                                  | Best for                                                                     |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `0x02` | **Recommended.** Supports *active* partial withdrawals exactly like Ethereum.                                                                                              | All new validators and anyone who wants frequent partial withdrawals.        |
-| `0x01` | **Legacy auto‑sweep.** When the balance exceeds **33 GNO**, everything above 1 GNO is swept automatically every few days. Does **not** support active partial withdrawals. | Validators that don’t mind waiting for periodic sweeps or plan to exit soon. |
-| `0x00` | BLS‑only prefix (no execution address). **No withdrawals possible** until upgraded.                                                                                        | *Must* be converted to `0x02` (or at least `0x01`).                          |
+| Prefix | Behaviour on Gnosis Chain                                                                                                                                                                                                 | Best for                                                                      |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `0x02` | **Recommended.** Supports *active* partial withdrawals exactly like Ethereum.                                                                                                                                             | All new validators and anyone who wants frequent partial withdrawals.         |
+| `0x01` | **Legacy auto‑sweep.** Fully automatic partial withdrawals: every couple of days the contract sweeps any balance **above 1 GNO** to the withdrawal address. Does **not** support validator‑initiated partial withdrawals. | Validators that don’t mind waiting for automatic sweeps or plan to exit soon. |
+| `0x00` | BLS‑only prefix (no execution address). **No withdrawals possible** until upgraded.                                                                                                                                       | *Must* be converted to `0x02` (or at least `0x01`).                           |
 
 > If you created keys with `--eth1_withdrawal_address`, you already have `0x02` and are good to go.
 
@@ -59,7 +52,7 @@ Gnosis Chain supports **two** execution‑address credential prefixes:
 1. Look up your validator on [gnosischa.in](https://gnosischa.in) → *Withdrawal* tab, **or**
 2. Open the `deposit‑m*.json` file you saved when staking and examine `withdrawal_credentials`.
 
-![CheckWC](../../../static/img/node/withdrawal/CheckWC.png)
+![CheckWC](../../../static/img/node/withdrawal/withdrawcreds.png)
 ![deposit\_json](../../../static/img/node/withdrawal/deposit_json.png)
 
 ---
