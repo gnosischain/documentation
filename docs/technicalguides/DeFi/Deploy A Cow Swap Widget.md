@@ -9,7 +9,7 @@ This tutorial will guide you through deploying Cow Swap swap frontends using the
 First, clone the `@widget-examples` repository to your local machine. This repository contains all the necessary code examples for deploying Cow Swap swap frontends.
     
     ```bash
-git clone https://github.com/cowswap/widget-examples.git
+git clone https://github.com/cowprotocol/widget-examples.git
 cd widget-examples
 ```
 
