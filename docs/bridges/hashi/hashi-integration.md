@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 title: Hashi Integration
 description: How do the bridges work after Hashi integration
 keywords: [amb bridge, arbitrary message bridge, omnibridge, xdai bridge, hashi]
