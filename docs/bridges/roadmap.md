@@ -4,12 +4,15 @@ sidebar_position: 6
 description: Gnosis is investing significant resources into trust-minimization of its Bridges, to ensure trust and safety of users.
 keywords: [bridge roadmap, trustless bridge, light client, zksnark]
 ---
+:::info
+🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—will be formally **deprecated**.
 
-Gnosis is investing significant resources into trust-minimization of its Bridges, to ensure trust and safety of users.
+- **Active maintenance will cease by 22 August 2025**.
+- **The Hashi validator will be removed from the bridge UI by 29 August 2025**.
 
-### xDAI Bridge - replacing DAI with USDS as collateral 🚧
+Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
+:::
 
-The [proposal](https://forum.gnosis.io/t/gip-118-should-sdai-be-replaced-by-susds-in-the-bridge/9354) suggests replacing sDAI in the Gnosis Chain bridge on Ethereum’s side with sUSDS to capitalize on the higher yield from the Sky Savings Rate (SSR), which is 1% higher than the DAI Savings Rate (DSR). The native Gnosis Chain token would remain xDAI.
 
 ### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms ✅
 
