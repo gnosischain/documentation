@@ -13,7 +13,7 @@ title: Overview
         <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
     </FeatureCard>
     <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
-        <p>A <a href="/concepts/tokens/xdai">stable token for transactions</a> & gas fees</p>
+        <p>A <a href="/about/tokens/xdai">stable token for transactions</a> & gas fees</p>
     </FeatureCard>
     <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
         <p>Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.</p>
@@ -25,7 +25,7 @@ title: Overview
         <p>Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.</p>
     </FeatureCard>
      <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
-        <p>Wide-ranging [Community Support](/developers/communication).</p>
+        <p>Wide-ranging [Community Support](/about/communication).</p>
     </FeatureCard>
     <outlineCard
        subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
@@ -52,12 +52,12 @@ Welcome to the Developers section! This section gives an extensive overview on h
     <Card
         title=" 📺 Development Environments"
         subtitle="Deploy smart contracts with development environment."
-        url="/developers/category/deploy-contracts-on-gnosis"
+        url="/category/deploy-contracts-on-gnosis"
     />
     <Card
         title=" 🎮 Interact with Smart Contracts"
         subtitle="Interact with smart contracts using library of your choice!"
-        url="/developers/category/interact-with-contracts-on-gnosis"
+        url="/category/interact-with-contracts-on-gnosis"
     />
     <Card
     title=" 🧩 Verify Smart Contracts on Gnosis Chain"
