@@ -106,7 +106,7 @@ Visit our [Tools page](/tools) for other support.
 
 Verify with Truffle by using [Truffle Plugin Verify](https://trufflesuite.com/docs/truffle/reference/truffle-commands/#deploy)
 
-Visit our [Contract Verification Page](/developers/verify/) for more documentation on verification tools.
+Visit our [Contract Verification Page](/developers/Verify%20Smart%20Contracts/) for more documentation on verification tools.
 
 ## Additional Truffle Documentation
 

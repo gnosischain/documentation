@@ -11,10 +11,10 @@ keywords: [gnosis specs, gnosis specifications, gnosis block size, block speed, 
 | - | - |
 | Block Size | 30M gas units |
 | Block Speed | 5 seconds |
-| Gas price | check [gas price oracle](/tools/oracles/gas-price) |
+| Gas price | check [gas price oracle](/tools/Oracle%20Providers/gas-price) |
 | Patchset | Cancun |
-| Fee Token | [xDai](/concepts/tokens/xdai) |
-| Consensus Token | [GNO](/concepts/tokens/gno) |
+| Fee Token | [xDai](/about/tokens/xdai) |
+| Consensus Token | [GNO](/about/tokens/gno) |
 | Chain ID (Gnosis) | 100 (hexa 0x64) |
 | Chain ID (Chiado Testnet) | 10200 (hexa 0x27D8) |
 

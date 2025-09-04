@@ -5,7 +5,7 @@ keywords: [web3.js, library, web3, javascript, package]
 
 # Using Web3.js
 
-[web3.js](https://web3js.readthedocs.io/en/v1.7.5/web3.html) is a collection of libraries that allow you to interact with a local or remote Ethereum node using HTTP, IPC or WebSocket. Since Gnosis and Ethereum are very similar, web3.js can also be used in the same way. This page will go over some of the basics to get started. The web3.js docs have a lot more on the full features and functionality of the library and can be found [here](https://web3js.readthedocs.io/en/v1.7.5/). You can view RPCs to connect to [here](/tools/rpc/). 
+[web3.js](https://web3js.readthedocs.io/en/v1.7.5/web3.html) is a collection of libraries that allow you to interact with a local or remote Ethereum node using HTTP, IPC or WebSocket. Since Gnosis and Ethereum are very similar, web3.js can also be used in the same way. This page will go over some of the basics to get started. The web3.js docs have a lot more on the full features and functionality of the library and can be found [here](https://web3js.readthedocs.io/en/v1.7.5/). You can view RPCs to connect to [here](/tools/RPC%20Providers/). 
 
 ## Adding web3.js to your Project
 
