@@ -4,11 +4,9 @@ title: Hashi Integration
 description: How do the bridges work after Hashi integration
 keywords: [amb bridge, arbitrary message bridge, omnibridge, xdai bridge, hashi]
 ---
-:::info
-🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—will be formally **deprecated**.
 
-- **Active maintenance will cease by 22 August 2025**.
-- **The Hashi validator will be removed from the bridge UI by 29 August 2025**.
+:::warning
+🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
 :::

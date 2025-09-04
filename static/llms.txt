@@ -1865,7 +1865,30 @@ https://docs.gnosischain.com/img/tokens/gno.png
 </TabItem>
 <TabItem value="chiado" label="Chiado Testnet">
 
-Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more info.
+
+```jsx title="Contract Address"
+0x19C653Da7c37c66208fbfbE8908A5051B57b4C70
+```
+
+```jsx title="Etherscan"
+https://gnosis-chiado.blockscout.com/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70
+```
+
+```jsx title="Name"
+Chiado Gnosis Token
+```
+
+```jsx title="Ticker"
+GNO
+```
+
+```jsx title="Decimals"
+18
+```
+
+```jsx title="Icon"
+https://docs.gnosischain.com/img/tokens/gno.png
+```
 
 </TabItem>
 </Tabs>
@@ -2458,11 +2481,8 @@ async function fetchLimits() {
 
 // File: bridges/roadmap
 
-:::info
-🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—will be formally **deprecated**.
-
-- **Active maintenance will cease by 22 August 2025**.
-- **The Hashi validator will be removed from the bridge UI by 29 August 2025**.
+:::warning
+🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
 :::
@@ -3182,17 +3202,15 @@ function requireToPassMessage (address _contract,
 4. Anyone can execute the call by calling [`executeSignatures(bytes message, bytes signatures)`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) on Foreign AMB. To fetch the calldata for `executeSignatures` function, please follow the [guideline below](#how-to-call-executesignatures-on-foreign-amb-ethereum).
 5. Foreign AMB contract decodes the message and calls `foo()` on target contract
 
-
 ### How to call executeSignatures on Foreign AMB (Ethereum)
 
 When the transaction is initiated from Home Network (Gnosis Chain), one has to claim the transaction on Ethereum explicitly. Here is how you can fetch the calldata required to call Foreign AMB to claim the transaction.
 
-1. Find the originating transaction on Gnosis Chain that interact with the Home AMB, and look for `UserRequestForSignature(bytes32 indexed messageId, bytes encodedData)`. [Example](https://gnosisscan.io/tx/0x946d5a926b4e6c55b51eae53b6fea118d7d4fd5ebfa44d6256ef4ce7b4d927be#eventlog)
+1. Find the originating transaction on Gnosis Chain that interact with the [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract), and look for `UserRequestForSignature(bytes32 indexed messageId, bytes encodedData)`. [Example](https://gnosisscan.io/tx/0x946d5a926b4e6c55b51eae53b6fea118d7d4fd5ebfa44d6256ef4ce7b4d927be#eventlog)
    ![](../../../static/img/bridges/amb-userrequestforsignature.png)
 2. Go to [AMB Helper contract](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract) on Gnosis Chain, paste the `encodedData` from `UserReqeustForSignature` into `getSignatures(bytes _message)` (the message starts with 0x0005). Fetch the return value from `getSignatures`.
    ![](../../../static/img/bridges/amb-getsignatures.png)
-3. On Foreign AMB, call `executeSigantures(bytes _data, bytes _signatures)`, where `_data` is the `encodedData` from `UserRequestForSignature` and `_signatures` is from the return value of `getSignatures` method. Please make sure that the caller account has enough ETH for the gas fee.
-
+3. On [Foreign AMB](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), call `executeSigantures(bytes _data, bytes _signatures)`, where `_data` is the `encodedData` from `UserRequestForSignature` and `_signatures` is from the return value of `getSignatures` method. Please make sure that the caller account has enough ETH for the gas fee.
 
 ### How to check if AMB is down (not relaying message)
 
@@ -3428,11 +3446,9 @@ If you run into any issues or have any questions, please reach out to our comms 
 
 // File: bridges/hashi/hashi-integration
 
-:::info
-🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—will be formally **deprecated**.
+:::warning
+🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
 
-- **Active maintenance will cease by 22 August 2025**.
-- **The Hashi validator will be removed from the bridge UI by 29 August 2025**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
 :::
@@ -3555,14 +3571,10 @@ Hashi Manager contract is the contract that controls the Hashi oracle and releva
 
 // File: bridges/hashi/README
 
-:::info
-🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—will be formally **deprecated**.
+:::warning
+🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
-:::
-
-:::warning
-Hashi is deprecated and will be removed from the bridge UI by 29 August 2025.
 :::
 
 Hashi is an EVM Hash Oracle Aggregator, designed to facilitate a
@@ -13847,7 +13859,7 @@ This tutorial will guide you through deploying Cow Swap swap frontends using the
 First, clone the `@widget-examples` repository to your local machine. This repository contains all the necessary code examples for deploying Cow Swap swap frontends.
     
     ```bash
-git clone https://github.com/cowswap/widget-examples.git
+git clone https://github.com/cowprotocol/widget-examples.git
 cd widget-examples
 ```
 

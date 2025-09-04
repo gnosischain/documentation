@@ -67,7 +67,30 @@ https://docs.gnosischain.com/img/tokens/gno.png
 </TabItem>
 <TabItem value="chiado" label="Chiado Testnet">
 
-Check out [Chiado Testnet specs](/concepts/networks/chiado#gno-token) for more info.
+
+```jsx title="Contract Address"
+0x19C653Da7c37c66208fbfbE8908A5051B57b4C70
+```
+
+```jsx title="Etherscan"
+https://gnosis-chiado.blockscout.com/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70
+```
+
+```jsx title="Name"
+Chiado Gnosis Token
+```
+
+```jsx title="Ticker"
+GNO
+```
+
+```jsx title="Decimals"
+18
+```
+
+```jsx title="Icon"
+https://docs.gnosischain.com/img/tokens/gno.png
+```
 
 </TabItem>
 </Tabs>
