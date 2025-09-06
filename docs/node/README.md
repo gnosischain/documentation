@@ -122,7 +122,7 @@ Requirements vary client to client, for more detail see the associated system re
 | Lodestar        | [Lodestar: Specifications](https://chainsafe.github.io/lodestar/#specifications)                                                      |
 | Nimbus          | [Nimbus: Hardware](https://nimbus.guide/hardware.html)                                                                                |
 | Teku            | TBD                                                                                                                                   |
-| Prysm           | [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices) |
+| Prysm           | [Prysm: Prerequisites](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/#step-1-review-prerequisites-and-best-practices) |
 
 **Gnosis Chain doesn't support Prysm at the moment.**
 

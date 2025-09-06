@@ -105,7 +105,7 @@ You can import it as follows using any installation method for your Prysm valida
 prysm.sh validator slashing-protection-history import --datadir=/path/to/your/validator/db --slashing-protection-json-file=/path/to/desiredimportfile
 ```
 
-- For more info, see the Prysm [Import & export slashing protection history](https://docs.prylabs.network/docs/wallet/slashing-protection) doc.
+- For more info, see the Prysm [Import & export slashing protection history](https://prysm.offchainlabs.com/docs/backup-and-migration/slashing-protection/) doc.
 
 ## Teku
 

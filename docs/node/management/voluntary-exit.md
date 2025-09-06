@@ -52,13 +52,13 @@ build/nimbus_beacon_node deposits exit --data-dir=build/data/shared_gnosis_0 --v
 
 ### Prysm
 
-Use [prysmctl tool](https://docs.prylabs.network/docs/prysm-usage/prysmctl) to voluntarily exit your validator.
+Use [prysmctl tool](https://prysm.offchainlabs.com/docs/configure-prysm/prysmctl/) to voluntarily exit your validator.
 
 ```bash
 prysmctl validator exit --wallet-dir=<path/to/wallet> --beacon-rpc-provider=<127.0.0.1:4000>
 ```
 
-- For more info, see the Prysm [Exit your validator](https://docs.prylabs.network/docs/wallet/exiting-a-validator/) doc.
+- For more info, see the Prysm [Exit your validator](https://prysm.offchainlabs.com/docs/manage-validator/exiting-a-validator/) doc.
 
 ### Teku
 
