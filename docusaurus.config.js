@@ -19,6 +19,15 @@ const config = {
       href: "https://fonts.googleapis.com/css?family=Karla:regular,600,500italic,600italic|Lora:regular,500,italic,500italic,600italic",
     },
   ],
+  scripts: [
+    {
+      src: '/js/analytics-consent.js',
+      async: true,
+    },
+  ],
+  customFields: {
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7",
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -59,10 +68,10 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
-        gtag: {
-          trackingID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7", // staging by default
-          anonymizeIP: true,
-        },
+        // gtag: {
+        //   trackingID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7", // staging by default
+        //   anonymizeIP: true,
+        // },
       }),
     ],
   ],
