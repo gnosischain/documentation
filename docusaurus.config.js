@@ -19,6 +19,15 @@ const config = {
       href: "https://fonts.googleapis.com/css?family=Karla:regular,600,500italic,600italic|Lora:regular,500,italic,500italic,600italic",
     },
   ],
+  scripts: [
+    {
+      src: '/js/analytics-consent.js',
+      async: true,
+    },
+  ],
+  customFields: {
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7",
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -59,10 +68,10 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
-        gtag: {
-          trackingID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7", // staging by default
-          anonymizeIP: true,
-        },
+        // gtag: {
+        //   trackingID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7", // staging by default
+        //   anonymizeIP: true,
+        // },
       }),
     ],
   ],
@@ -72,11 +81,11 @@ const config = {
     ({
       image: "img/thumbnail.png",
       announcementBar: {
-        id: "support_us",
-        content: "Pectra Upgrade is live on Gnosis Chain.",
+        id: "usds_upgrade",
+        content: 'Update: USDS migration on xDAI bridge. <a href="https://docs.gnosischain.com/bridges/About%20Token%20Bridges/usds-xdaibridge-migration" target="_blank" rel="noopener noreferrer">Learn more</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
-        isCloseable: false,
+        isCloseable: true,
       },
       colorMode: {
         defaultMode: "dark", // Set default mode to dark

@@ -40,10 +40,10 @@ NFTs are not necessarily ERC-721 tokens, they can also be [ERC-1155](https://eip
 If you're looking for a way to create NFTs without coding, check out [Nifty.Ink](https://nifty.ink/explore)
 :::
 
-For this walk through, we're going to be using [Hardhat](https://hardhat.org/) ([configure it with Gnosis](../dev-environment/hardhat.md/#config-hardhat-for-gnosis)).
+For this walk through, we're going to be using [Hardhat](https://hardhat.org/) ([configure it with Gnosis](../dev-environment/hardhat/#config-hardhat-for-gnosis)).
 
 ## Prerequisites 
-To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/developers/building/first-contract).
+To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/category/deploy-contracts-on-gnosis).
 You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/faucets).
 
 
@@ -61,7 +61,7 @@ Now, install the `hardhat-toolbox` plugin:
 npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
 
-Configure [hardhat with Gnosis](../smart-contracts/hardhat.md).
+Configure [hardhat with Gnosis](../dev-environment/hardhat/#config-hardhat-for-gnosis).
 
 ## Step 2: Host NFT Art on IPFS
 
@@ -159,7 +159,7 @@ contract gnosisNft is Ownable, ERC721("GnosisNft", "GNOT") {
  
 }
 ```
-3. Now that you've got that all coded up, it's time to compile and deploy. You can also [see here](/developers/smart-contracts/hardhat) for more deployment info. Run from project root:
+3. Now that you've got that all coded up, it's time to compile and deploy. Run from project root:
 ```bash
 npx hardhat compile
 ```

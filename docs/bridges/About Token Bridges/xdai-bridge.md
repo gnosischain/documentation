@@ -107,7 +107,7 @@ Daily Limit is reset according to the following logic: the smart contract stores
 
 ![](/img/bridges/diagrams/dai-bridge-01.png)
 
-The [xDai token](/concepts/tokens/xdai) is minted when Dai\*\* is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
+The [xDai token](/about/tokens/xdai) is minted when Dai\*\* is transferred from Ethereum to Gnosis using the xDai Bridge. During the transfer process, a block reward contract is invoked to mint xDai to a user's account. Because contract calls are made from the consensus engine to create xDai tokens, balance updates are more difficult to trace than simple value transfers.
 
 :::danger
 

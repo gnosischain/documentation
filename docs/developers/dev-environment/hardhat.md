@@ -186,7 +186,7 @@ npx hardhat run scripts/deploy.js --network chiado
 </TabItem>
 </Tabs>
 
-View your deployed contract on any of the [explorers](/tools/explorers).
+View your deployed contract on any of the [explorers](/tools/Blockchain%20Explorers).
 
 Visit our [Tools page](/tools) for other support.
 
@@ -207,7 +207,7 @@ npx hardhat verify --network gnosis <deployed contract address>
 </TabItem>
 </Tabs>
 
-Visit our [Contract Verification Page](/developers/verify/) for more documentation on verification tools.
+Visit our [Contract Verification Page](/developers/Verify%20Smart%20Contracts/) for more documentation on verification tools.
 
 ## Additional Hardhat Documentation
 

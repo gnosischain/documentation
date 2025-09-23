@@ -27,7 +27,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 For this tutorial, we are going to be using [Hardhat](https://hardhat.org/).
 
 ## Prerequisites 
-To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/developers/building/first-contract). This will also follow a lot of the same steps as the [Launching an NFT on Gnosis tutorial](/developers/building/nft).
+To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/category/deploy-contracts-on-gnosis). This will also follow a lot of the same steps as the [Launching an NFT on Gnosis tutorial](/developers/Build%20contracts%20on%20gnosis/nft).
 You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/faucets).
 
 Also, take a look at [these important points to consider](https://forum.openzeppelin.com/t/points-to-consider-when-creating-a-fungible-token-erc20-erc777/2915) before creating your token.
@@ -44,7 +44,7 @@ Then run:
 ```bash
 npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
-Configure [hardhat with Gnosis](../dev-environment/hardhat.md#config-hardhat-for-gnosis).
+Configure [hardhat with Gnosis](../dev-environment/hardhat#config-hardhat-for-gnosis).
 
 ## Step 2: Add Contract Code
 We're going to import and use OpenZeppelin's ERC-20 contract implementation.
@@ -77,7 +77,7 @@ contract OwlToken is ERC20 {
     }
 }
 ```
-Now, you are ready to deploy your token contract. Be sure to properly store your mnemonic/private key! The deploy script will be the same [as when we deployed the NFT](/developers/building/nft#step-3-implement-the-erc-721-token-contract). Also, [see here for more info on deploying contracts with Hardhat](/developers/smart-contracts/hardhat). 
+Now, you are ready to deploy your token contract. Be sure to properly store your mnemonic/private key! The deploy script will be the same [as when we deployed the NFT](/developers/Build%20contracts%20on%20gnosis/nft). Also, [see here for more info on deploying contracts with Hardhat](/developers/dev-environment/hardhat). 
 
 ## Step 3: Add the token to your wallet to view your balance
 To view your new tokens you have just minted, you'll have to add the ERC-20 contract address of the token to the wallet that you deployed from (the `msg.sender` address). If you are using MetaMask, scroll to the bottom of the wallet window and you will see an option to "Import Tokens"
