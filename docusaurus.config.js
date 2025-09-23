@@ -81,11 +81,11 @@ const config = {
     ({
       image: "img/thumbnail.png",
       announcementBar: {
-        id: "support_us",
-        content: "Pectra Upgrade is live on Gnosis Chain.",
+        id: "usds_upgrade",
+        content: 'Update: USDS migration on xDAI bridge. <a href="https://docs.gnosischain.com/bridges/About%20Token%20Bridges/usds-xdaibridge-migration" target="_blank" rel="noopener noreferrer">Learn more</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
-        isCloseable: false,
+        isCloseable: true,
       },
       colorMode: {
         defaultMode: "dark", // Set default mode to dark
