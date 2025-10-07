@@ -114,6 +114,15 @@ high throughput for your production grade projects.
 
 Free API keys after signing up.
 
+## dRPC
+
+dRPC NodeCloud offers an AI-powered load-balancer, 180+ network endpoints, flat-rate pricing 
+(20 CUs/method), usage analytics, and team features. PAYG from $10 — full speed, no limits.
+
+- [Gnosis endpoints](https://drpc.org/chainlist/gnosis-mainnet-rpc)
+- [Docs](https://drpc.org/docs)
+- [Chainlist](https://drpc.org/chainlist)
+
 ## Quicknode
 
 - [Quicknode's Docs for Gnosis RPCs](https://www.quicknode.com/docs/gnosis)
