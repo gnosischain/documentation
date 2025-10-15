@@ -96,7 +96,7 @@ https://nimbus.guide/metrics-pretty-pictures.html#simple-metrics
 </TabItem>
 <TabItem value="Prysm" label="Prysm">
 
-https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
+https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/
 </TabItem>
 
 </Tabs>
