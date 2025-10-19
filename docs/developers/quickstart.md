@@ -1,4 +1,4 @@
---- 
+---
 sidebar_position: 2
 description: Learn how to deploy your first contract on Gnosis Chain
 keywords: [gnosis chain, quickstart]
@@ -37,7 +37,6 @@ Lastly, top up the wallet with xDAI that you'll use for contract deployments on 
 
 Testnets on any EVM-compatible chains don't require real funds to pay for transactions. Instead, they use faucets that represent free tokens. You can use the following faucets to get xDAI on the Chiado testnet:
 - [Chiado faucet](https://faucet.chiadochain.net/)
-- [Gnosis Chain Faucet](https://gnosisfaucet.com/)
 
 ![faucet](/img/developers/quickstart/faucet.png)
 
