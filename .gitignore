@@ -5,3 +5,4 @@ yarn.lock
 .obsidian
 docs/.obsidian
 build
+/static/llms.txt

@@ -7710,7 +7710,7 @@ Requirements vary client to client, for more detail see the associated system re
 | Lodestar        | [Lodestar: Specifications](https://chainsafe.github.io/lodestar/#specifications)                                                      |
 | Nimbus          | [Nimbus: Hardware](https://nimbus.guide/hardware.html)                                                                                |
 | Teku            | TBD                                                                                                                                   |
-| Prysm           | [Prysm: Prerequisites](https://docs.prylabs.network/docs/install/install-with-script/#step-1-review-prerequisites-and-best-practices) |
+| Prysm           | [Prysm: Prerequisites](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/#step-1-review-prerequisites-and-best-practices) |
 
 **Gnosis Chain doesn't support Prysm at the moment.**
 
@@ -8134,7 +8134,7 @@ You can import it as follows using any installation method for your Prysm valida
 prysm.sh validator slashing-protection-history import --datadir=/path/to/your/validator/db --slashing-protection-json-file=/path/to/desiredimportfile
 ```
 
-- For more info, see the Prysm [Import & export slashing protection history](https://docs.prylabs.network/docs/wallet/slashing-protection) doc.
+- For more info, see the Prysm [Import & export slashing protection history](https://prysm.offchainlabs.com/docs/backup-and-migration/slashing-protection/) doc.
 
 ## Teku
 
@@ -8258,7 +8258,7 @@ https://nimbus.guide/metrics-pretty-pictures.html#simple-metrics
 </TabItem>
 <TabItem value="Prysm" label="Prysm">
 
-https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/
+https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/
 </TabItem>
 
 </Tabs>
@@ -8419,13 +8419,13 @@ build/nimbus_beacon_node deposits exit --data-dir=build/data/shared_gnosis_0 --v
 
 ### Prysm
 
-Use [prysmctl tool](https://docs.prylabs.network/docs/prysm-usage/prysmctl) to voluntarily exit your validator.
+Use [prysmctl tool](https://prysm.offchainlabs.com/docs/configure-prysm/prysmctl/) to voluntarily exit your validator.
 
 ```bash
 prysmctl validator exit --wallet-dir=<path/to/wallet> --beacon-rpc-provider=<127.0.0.1:4000>
 ```
 
-- For more info, see the Prysm [Exit your validator](https://docs.prylabs.network/docs/wallet/exiting-a-validator/) doc.
+- For more info, see the Prysm [Exit your validator](https://prysm.offchainlabs.com/docs/manage-validator/exiting-a-validator/) doc.
 
 ### Teku
 
