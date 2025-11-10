@@ -83,7 +83,7 @@ const config = {
       announcementBar: {
         id: "usds_upgrade",
         content:
-          'Update: USDS migration on xDAI bridge is completed.<a href="https://docs.gnosischain.com/bridges/management/decisions/n" target="_blank" rel="noopener noreferrer">Learn more</a>',
+          'Update: USDS migration on xDAI bridge is completed.<a href="https://docs.gnosischain.com/bridges/management/decisions" target="_blank" rel="noopener noreferrer">Learn more</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: true,
