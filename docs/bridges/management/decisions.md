@@ -8,6 +8,59 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## USDS migration on xDAI Bridge: sDAI replaced by sUSDS
+
+🗳 Justification:
+
+1. This is the follow up from [GIP-118: Should sDAI be replaced by sUSDS in the bridge?](https://forum.gnosis.io/t/gip-118-should-sdai-be-replaced-by-susds-in-the-bridge/9354). xDAI bridge on both Ethereum and Gnosis Chain is upgraded to new implementation.
+
+Upgrade Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x7309151c47d50ea0bac9eac0b28a13b8c2904857d7ddd6c65653336d9b53acc0)
+Upgrade Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xb6d709f3f6fe73958bf4de18a2d8ba81b8981a18e0c17c9f608e61c03ec0e166)
+
+✅ Implemented: Nov 7, 2025
+
+## Unfreeze outflow of major tokens on canonical bridges
+
+🗳 Justification:
+
+1. The softfork is completed and the outflow of tokens on the canonical bridges are reopened.
+
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xcfa0aafdbc3406e625805148ee2d68404497f16be1bfbc78f84bdfdfc6791c7f)
+
+✅ Implemented: Nov 7, 2025
+
+## Freeze outflow of major tokens on canonical bridges
+
+🗳 Justification:
+
+1. Due to the [BalancerV2 exploit](https://x.com/Balancer/status/1986104426667401241), we decided to halt the outflow ot major tokens on Omnibridge & xDAI bridge from Gnosis Chain to Ethereum as precautionary measure.
+   |Token | Address on Gnosis Chain |
+   |------------|---------------------------------------------|
+   | GNO | 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb |
+   | wstETH | 0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6 |
+   | USDC | 0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83 |
+   | WETH | 0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1 |
+   | TRACE | 0xEddd81E0792E764501AaE206EB432399a0268DB5 |
+   | COW | 0x177127622c4A00F3d409B75571e12cB3c8973d3c |
+   | WBTC | 0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db425 |
+   | HOPR | 0xD057604A14982FE8D88c5fC25Aac3267eA142a08 |
+   | USDT | 0x4ECaBa5870353805a9F068101A40E0f32ed605C6 |
+   | BDT | 0x778aa03021B0CD2b798b0b506403e070125D81C9 |
+   | OLAS | 0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f |
+   | SAFE | 0x4d18815D14fe5c3304e87B3FA18318baa5c23820 |
+   | ROCKETPOOL | 0xc791240D1F2dEf5938E2031364Ff4ed887133C3d |
+   | GIVETH | 0x4f4F9b8D5B4d0Dc10506e5551B0513B61fD59e75 |
+   | PNK | 0x37b60f4E9A31A64cCc0024dce7D0fD07eAA0F7B3 |
+   | CLNY | 0xc9B6218AffE8Aba68a13899Cbf7cF7f14DDd304C |
+   | EURC | 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6 |
+   | LINK | 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2 |
+   | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
+   | xDAI | Native token on Gnosis Chain |
+
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x472e844f33471d49f93af3e106cea45f855e70804a239cc6959be89b721f4fd3)
+
+✅ Implemented: Nov 3, 2025
+
 ## Upgrading Deposit Contract: Introducing new batchDeposit function
 
 🗳 Justification:

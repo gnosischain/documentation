@@ -21,7 +21,7 @@ const config = {
   ],
   scripts: [
     {
-      src: '/js/analytics-consent.js',
+      src: "/js/analytics-consent.js",
       async: true,
     },
   ],
@@ -82,7 +82,8 @@ const config = {
       image: "img/thumbnail.png",
       announcementBar: {
         id: "usds_upgrade",
-        content: 'Update: USDS migration on xDAI bridge. <a href="https://docs.gnosischain.com/bridges/About%20Token%20Bridges/usds-xdaibridge-migration" target="_blank" rel="noopener noreferrer">Learn more</a>',
+        content:
+          'Update: USDS migration on xDAI bridge is completed.<a href="https://docs.gnosischain.com/bridges/management/decisions/n" target="_blank" rel="noopener noreferrer">Learn more</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: true,
