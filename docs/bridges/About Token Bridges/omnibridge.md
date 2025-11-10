@@ -54,6 +54,7 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 | AMB Proxy Contract (Home)             | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
 | Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
 | Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
+| USDS Transmuter Contract              | [0x0392a2f5ac47388945d8c84212469f545fae52b2](https://gnosisscan.io/address/0x0392a2f5ac47388945d8c84212469f545fae52b2/advanced#code)      |
 
 </TabItem>
 
@@ -131,7 +132,6 @@ The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md
 7. User calls AMB `executeSignatures()` on Ethereum. To fetch the calldata for the function, please check [guideline here](./amb-bridge.md#how-to-call-executesignatures-on-foreign-amb-ethereum)
 8. AMB calls `handleBridgedTokens()` on Foreign Omnibridge contract.
 9. Foreign Omnibridge contract unlocks the tokens.
-
 
 ## Exceptions and Special Cases
 
@@ -214,7 +214,7 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 
 :::info  
 When using [Bridge UI](https://bridge.gnosischain.com/):  
-Bridging from Ethereum, users bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) and get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0).  
+Bridging from Ethereum, users bridge [USDC on Ethereum](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) and get [USDC.e on Gnosis Chain](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0).  
 Bridging from Gnosis Chain, users bridge [USDC on xDAI](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) and get [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).  
 Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and USDC on xDAI
 :::
@@ -228,3 +228,12 @@ USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://gi
    b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.
 
 For more detail, check out [this twitter post](https://x.com/gnosischain/status/1800565095065641409).
+
+**Technical details for USDC -> USDC.e**
+
+1. From Ethereum, `Omibridge.relayTokensAndCall(token: USDC, receiver: USDC Transmuter on Gnosis, value, data: abi.encode(actual_receiver_on_Gnosis))` is called.
+2. Bridge validators sign and execute the transaction by calling `AMB.executeAffirmation(bytes message, bytes signatures)`.
+   1. `USDCTransmuterContract.onTokenBridged()` is called as a fallback and the function parse data to get the `actual_receiver_on_Gnosis` and mint USDC.e to the receiver.
+   2. USDC Transmuter contract is configured as minter in USDC.e contract, with minting allowance configured by KpK.
+
+[Example Transaction](https://bridge.gnosischain.com/bridge-explorer/transaction/0x000500004ac82b41bd819dd871590b510316f2385cb196fb000000000002cdc3)

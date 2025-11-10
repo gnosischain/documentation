@@ -7,6 +7,13 @@ keywords: [omnibridge audit, xdai bridge audit, security audit]
 
 The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments. We have engaged in the auditing process after introducing major functionality, and have acknowledged and/or fixed all issues found during these audits. Audit results are presented starting with the most recent.
 
+## USDS migration xDAI bridge by Omega, Gnosis Ltd(internal audit)
+
+**Audit Report**:
+
+1. [Omega-Gnosis-USDS Upgrade Final Audit Report](https://github.com/OmegaAudits/audits/blob/main/202510-Gnosis-Bridge-USDS-Upgrade.pdf)
+2. [Gnosis Ltd internal audit final report](https://github.com/cducrest/audit-reports/blob/main/bridge-USDS-upgrade3.pdf)
+
 ## Hashi integration by Omega, g0, Least Authority
 
 The scope for auditing includes the following repos:

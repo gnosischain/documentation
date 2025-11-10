@@ -12,7 +12,7 @@ The native Arbitrary Message Bridge (AMB) allows user to send arbitrary data bet
 
 The AMB is a key bridge primitive that is used inside higher-order bridges like the [Omnibridge native token bridge](../About%20Token%20Bridges/omnibridge.md), and is part of the [Tokenbridge Architecture](https://github.com/tokenbridge/docs).
 
-Due to the light client finality requirements (at least 23mins on Ethereum), the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Connext, Hop) without any impact.
+Due to the finality requirements on Ethereum, the transactions will take approx. 30mins to be signed by the bridge. However, users can still use 3rd party bridges (Jumper.exchange, Stargate, deBridge, etc) without any impact.
 
 ## Overview
 
@@ -104,14 +104,14 @@ function requireToPassMessage (address _contract,
 
 1. User calls `foo()` on the originating contract
 2. Originating contract calls [`requireToPassMessage()`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F10) on [Foreign AMB contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
-3. `UserRequestForAffirmation(bytes32 indexed messageId, bytes encodedData)` event is emitted from [Foreign AMB contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), and listening bridge validators relay the message to the Home side where signatures are collected by calling Home AMB `executeAffirmation(bytes message)`, where `message` parameter is the `encodedData` from `UserRequestForAffirmation` event. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `executeAffirmation` on Home AMB. For more details about how Hashi works in this case, check out [here](./hashi-integration.md)
+3. `UserRequestForAffirmation(bytes32 indexed messageId, bytes encodedData)` event is emitted from [Foreign AMB contract](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), and listening bridge validators relay the message to the Home side where signatures are collected by calling Home AMB `executeAffirmation(bytes message)`, where `message` parameter is the `encodedData` from `UserRequestForAffirmation` event.
 4. Once enough signatures has been collected by bridge valdiators, the transaction will emit `CollectedSignatures (address authorityResponsibleForRelay, bytes32 messageHash, uint256 NumberOfCollectedSignatures)` and calls `foo()` on the target contract.
 
 #### Gnosis Chain to Ethereum
 
 1. User calls `foo()` on an originating contract
 2. Originating contract calls [`requireToPassMessage()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F14) on Home Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
-3. Signatures are collected from validators by calling [`submitSignatures()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F5), and once enough are collected `CollectedSignatures()` event is emitted. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `executeAffirmation` on Home AMB. For more details about how Hashi works in this case, check out [here](./hashi-integration.md)
+3. Signatures are collected from validators by calling [`submitSignatures()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F5), and once enough are collected `CollectedSignatures()` event is emitted.
 4. Anyone can execute the call by calling [`executeSignatures(bytes message, bytes signatures)`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) on Foreign AMB. To fetch the calldata for `executeSignatures` function, please follow the [guideline below](#how-to-call-executesignatures-on-foreign-amb-ethereum).
 5. Foreign AMB contract decodes the message and calls `foo()` on target contract
 
@@ -135,6 +135,14 @@ In the current configuration, `maxGasPerTx` is set to 4000000 on [Ethereum](http
 The AMB is down when `maxGasPerTx` is set to 0, only by owner of the contract.
 
 By setting `maxGasPerTx` to 0, the [condition in `_sendMessage()`](https://github.com/gnosischain/tokenbridge-contracts/blob/master/contracts/upgradeable_contracts/arbitrary_message/MessageDelivery.sol#L40) will not pass, meaning, the bridge is down/stopped.
+
+### Legacy components on the bridge contracts
+
+1. Hashi: Hashi componetns was integrated into the bridge, but was [deprecated](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467/4). The on-chain contract still remains but don't affect the transaction verification logic. Please check [here](../hashi/hashi-integration.md) for more details.
+
+2. GSN: [OpenGSN (Ethereum Gas Stations Network)](https://github.com/opengsn) is not in used but remains in the contracts.
+
+3. AsyncInformationProcessor: Not supported by bridge validators.
 
 ### Security Considerations for Receiving a Call
 
