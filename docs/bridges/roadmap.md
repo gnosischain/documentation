@@ -4,15 +4,12 @@ sidebar_position: 6
 description: Gnosis is investing significant resources into trust-minimization of its Bridges, to ensure trust and safety of users.
 keywords: [bridge roadmap, trustless bridge, light client, zksnark]
 ---
-:::info
-🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—will be formally **deprecated**.
 
 :::warning
 🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
 :::
-
 
 ### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms ✅
 
