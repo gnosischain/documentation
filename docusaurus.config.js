@@ -90,7 +90,7 @@ const config = {
       },
       colorMode: {
         defaultMode: "dark", // Set default mode to dark
-        disableSwitch: true, // Disable the theme switch
+        disableSwitch: false, // Enable the theme switch
         respectPrefersColorScheme: false, // Do not change theme based on user preference
       },
       docs: {

@@ -21,13 +21,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #e07444;
-  --ifm-color-primary-dark: #de6b37;
-  --ifm-color-primary-darker: #dc612b;
-  --ifm-color-primary-darkest: #d75b24;
-  --ifm-color-primary-light: #e4875d;
-  --ifm-color-primary-lighter: #e6906a;
-  --ifm-color-primary-lightest: #ecac8f;
+  --ifm-color-primary: #8CE8AB;
+  --ifm-color-primary-dark: #7DD299;
+  --ifm-color-primary-darker: #6EC487;
+  --ifm-color-primary-darkest: #5FB675;
+  --ifm-color-primary-light: #9AECB8;
+  --ifm-color-primary-lighter: #A8F0C5;
+  --ifm-color-primary-lightest: #B6F4D2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -68,11 +68,12 @@ nav.navbar {
 }
 
 .navbar__link:hover {
-  color: #DD7143;
+  color: #8CE8AB;
 }
 
 .navbar__link--active {
-  background-color: #DD7143;
+  background-color: #8CE8AB;
+  color: black;
   font-weight: bold;
   border-radius: 10px;
 }
@@ -133,7 +134,7 @@ nav.navbar .searchBox {
   padding-left: 8px;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .navbar__items--right a:hover {
@@ -476,7 +477,7 @@ aside ul.menu__list {
 }
 
 @media (min-width: 997px) {
-  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module, 
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module,
   .collapseSidebarButton_PEFL {
     position: fixed !important;
     top: 120px !important;
@@ -546,7 +547,7 @@ aside ul.menu__list {
 }
 
 @media (min-width: 997px) {
-  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module, 
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module,
   .collapseSidebarButton_PEFL {
     position: fixed !important;
     top: 120px !important;
