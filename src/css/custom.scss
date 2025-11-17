@@ -16,18 +16,18 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --tab-gray: #ddd;
-  font-family: Karla,sans-serif;
+  font-family: 'Suisse Intl',sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #e07444;
-  --ifm-color-primary-dark: #de6b37;
-  --ifm-color-primary-darker: #dc612b;
-  --ifm-color-primary-darkest: #d75b24;
-  --ifm-color-primary-light: #e4875d;
-  --ifm-color-primary-lighter: #e6906a;
-  --ifm-color-primary-lightest: #ecac8f;
+  --ifm-color-primary: #8CE8AB;
+  --ifm-color-primary-dark: #7DD299;
+  --ifm-color-primary-darker: #6EC487;
+  --ifm-color-primary-darkest: #5FB675;
+  --ifm-color-primary-light: #9AECB8;
+  --ifm-color-primary-lighter: #A8F0C5;
+  --ifm-color-primary-lightest: #B6F4D2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -55,7 +55,7 @@ footer.footer--dark{
 // }
 
 nav.navbar {
-  background-color: #3E6957;
+  background-color: #3F2ACD;
   height: 80px;
   padding: 0 2rem;
   box-shadow: none;
@@ -68,11 +68,12 @@ nav.navbar {
 }
 
 .navbar__link:hover {
-  color: #DD7143;
+  color: #8CE8AB;
 }
 
 .navbar__link--active {
-  background-color: #DD7143;
+  background-color: #8CE8AB;
+  color: black;
   font-weight: bold;
   border-radius: 10px;
 }
@@ -133,7 +134,7 @@ nav.navbar .searchBox {
   padding-left: 8px;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .navbar__items--right a:hover {
@@ -169,7 +170,7 @@ nav.navbar .searchBox {
 }
 
 .navbar-sidebar__brand {
-  background-color: #325b4b;
+  background-color: #3F2ACD;
 }
 
 // .navbar-sidebar__item li .socialButton {
@@ -180,6 +181,27 @@ nav.navbar .searchBox {
 .socialButton {
   height: 38px;
   width: 38px;
+}
+
+/* Social media icons with white logos on blue background */
+.navbar__items--right a svg rect,
+.socialButton svg rect {
+  fill: #8CE8AB !important;
+}
+
+.navbar__items--right a svg path,
+.socialButton svg path {
+  fill: black !important;
+}
+
+.navbar__items--right a:hover svg rect,
+.socialButton:hover svg rect {
+  fill: #7DD299 !important;
+}
+
+.navbar__items--right a:hover svg path,
+.socialButton:hover svg path {
+  fill: black !important;
 }
 
 // @media (min-width: 1301px) {
@@ -385,7 +407,7 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'GT Planar', sans-serif;
+  font-family: 'Suisse Intl', sans-serif;
 }
 
 @media (max-width: 500px) {
@@ -405,8 +427,8 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .custom-card {
-  background: #3E695766;
-  border: 1px solid #3E6957 !important;
+  background: #3F2ACD;
+  border: 1px solid #1A1751 !important;
   border-radius: 15px;
   color: white;
   padding: 15px;
@@ -468,7 +490,7 @@ aside ul.menu__list {
 
 .breadcrumbs__item--active .breadcrumbs__link {
   color: white;
-  background-color: #3e6957;
+  background-color: #3F2ACD;
 }
 
 :root {
@@ -476,7 +498,7 @@ aside ul.menu__list {
 }
 
 @media (min-width: 997px) {
-  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module, 
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module,
   .collapseSidebarButton_PEFL {
     position: fixed !important;
     top: 120px !important;
@@ -538,7 +560,7 @@ aside ul.menu__list {
 
 .breadcrumbs__item--active .breadcrumbs__link {
   color: white;
-  background-color: #3e6957;
+  background-color: #3F2ACD;
 }
 
 :root {
@@ -546,7 +568,7 @@ aside ul.menu__list {
 }
 
 @media (min-width: 997px) {
-  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module, 
+  .collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module,
   .collapseSidebarButton_PEFL {
     position: fixed !important;
     top: 120px !important;
