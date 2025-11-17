@@ -183,6 +183,27 @@ nav.navbar .searchBox {
   width: 38px;
 }
 
+/* Social media icons with white logos on blue background */
+.navbar__items--right a svg rect,
+.socialButton svg rect {
+  fill: #8CE8AB !important;
+}
+
+.navbar__items--right a svg path,
+.socialButton svg path {
+  fill: black !important;
+}
+
+.navbar__items--right a:hover svg rect,
+.socialButton:hover svg rect {
+  fill: #7DD299 !important;
+}
+
+.navbar__items--right a:hover svg path,
+.socialButton:hover svg path {
+  fill: black !important;
+}
+
 // @media (min-width: 1301px) {
 //   .navbar__link::before {
 //     display: none;
