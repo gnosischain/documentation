@@ -101,7 +101,7 @@ const config = {
       navbar: {
         logo: {
           alt: "Gnosis Logo",
-          src: "img/gnosis-logo-name.svg",
+          src: "img/gnosis.svg",
         },
         items: [
           {
