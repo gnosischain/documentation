@@ -1,5 +1,5 @@
 ---
-description: Openfort gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
+description: Openfort is an open-source wallet infrastructure provider that gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
 keywords: [openfort, account abstraction, user onboarding, connect wallet, embedded wallet, gasless]
 ---
 
