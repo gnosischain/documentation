@@ -1,6 +1,6 @@
 ---
 description: Onboard your users to your apps on Gnosis
-keywords: [gnosis tools, dev tools, wallets, user onboarding, walletconnect, reown, wallet interactions]
+keywords: [gnosis tools, dev tools, wallets, user onboarding, walletconnect, reown, wallet interactions. openfort]
 ---
 
 # User Onboarding
