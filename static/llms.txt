@@ -3323,14 +3323,13 @@ Gnosis has three main types of bridges:
 ## Gnosis Chain Bridge
 
 Gnosis Chain bridge :
-- allows to mint the native stablecoin xDAI on gnosis chain by bridging DAI from Ethereum
-- allows to bridge ERC2O token from Ethereum to Gnosis Chain
 
+- allows to mint the native stablecoin xDAI on gnosis chain by bridging USDS from Ethereum
+- allows to bridge ERC2O token from Ethereum to Gnosis Chain
 
 ### Bridging Data
 
 See the [Arbitrary Message Passing Bridge](../About%20Token%20Bridges/amb-bridge.md) or AMB Bridge for short.
-
 
 ## Roadmap
 
@@ -3621,6 +3620,17 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
 # Governance Decisions
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
+
+## Replaced Gateway bridge validator with Hopr
+
+🗳 Justification:
+
+1. Following the conclusion of GIP-70, Gateway.fm will deprecate its services for Gnosis Chain. Tenderly is replacing Gateway.fm as the main service provider, funded by GIP-128 via Gnosis Ltd. Hopr will replace Gateway as the new bridge validator.
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C[…]1d0e1e08774c9627cc52124d91905bc5c070ff8e887e738ca13ee312347cb)  
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd1[…]cf6d57c90e88a58a22d0ffabfe2e249e6bbb1b3df9ca25984a6f46e251c82)
+
+✅ Implemented: Nov 26, 2025
 
 ## USDS migration on xDAI Bridge: sDAI replaced by sUSDS
 
@@ -4103,7 +4113,7 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 | [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde) | GnosisDAO         |
 | [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
-| [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://gnosisscan.io/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) | Gateway           |
+| [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4) | Hopr              |
 
 </TabItem>
 
@@ -4111,12 +4121,6 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 
 0x725bC6F18F8CDd7f57A9aB9A9f2Ea17A199185e5  
 0xb1562173109932146a7fBBF28d7c6652bc2DaACE
-
-</TabItem>
-
-<TabItem value="goerli-chiado" label="Goerli <-> Chiado">
-
-[0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49)
 
 </TabItem>
 
@@ -4144,7 +4148,7 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://gnosis.blockscout.com/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
 | Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://gnosis.blockscout.com/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
-| Gateway      | [gno:0x90776017057b84bc47D7e7383b65C463C80a6cdd](https://gnosis.blockscout.com/address/0x90776017057b84bc47D7e7383b65C463C80a6cdd) |
+| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4) |
 
 </TabItem>
 
@@ -4155,14 +4159,6 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 </TabItem>
 
-<TabItem value="chiado-goerli" label="Chiado<->Goerli">
-
-| Network | Address                                                                                                                                                                                                                                                              |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Goerli  | 0xef35547c29a7547df67ff573c158bf1b74381add(Gateway) <br /> 0xda286781cbbc9819c94852885a118c93ed25e064 <br /> 0x758c277ca1b04da3ba3add5d61cd26337cfafd7e <br /> 0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf (Gnosis DAO)                                               |
-| Chiado  | 0xef35547c29a7547df67ff573c158bf1b74381add(Gateway)<br /> 0xda286781cbbc9819c94852885a118c93ed25e064 <br />0x758c277ca1b04da3ba3add5d61cd26337cfafd7e <br />0x9d84152df06880cdabeb30e10c2985f40d98b901<br /> 0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf (Gnosis DAO) |
-
-</TabItem>
 
 </Tabs>
 
@@ -17357,6 +17353,33 @@ https://gnosis.api.onfinality.io/public
 # User Onboarding
 
 Web3 onboarding often faces challenges due to complex wallet setups, unfamiliarity with blockchain concepts, and intimidating security practices. To drive mainstream adoption, it’s crucial to offer intuitive solutions that reduce friction while maintaining security. Providing well thought out end-to-end wallet interaction flows is a key approach to make Web3 more accessible for everyday users.
+
+---
+
+// File: tools/User Onboarding/openfort
+
+# Openfort
+
+**[Openfort](https://www.openfort.io/?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)** is an open-source wallet infrastructure provider that gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
+
+Openfort has two major product offerings: **Embedded Wallets** and **Smart Accounts**.
+
+## Embedded Wallets
+
+Openfort's Embedded Wallets allow you to create invisible, non-custodial wallets for your users. You can onboard users with familiar methods like social logins (Google, X, etc.), email, or passkeys, removing the friction of seed phrases. This ensures a smooth onboarding experience while maintaining security and user sovereignty.
+
+## Smart Accounts
+
+Leveraging ERC-4337, Openfort's Smart Accounts unlock powerful features for your application. You can sponsor gas fees to offer a free-to-play experience, batch multiple transactions into a single click, and use session keys to avoid repeated signature requests during gameplay or extended usage.
+
+To summarize, **Openfort** provides the infrastructure for **frictionless Web3 gaming and consumer apps**.
+
+You will be able to use Openfort to power end-to-end wallet interactions on your Web3 app deployed on Gnosis.
+
+Some links to learn more about Openfort:
+- [Website](https://www.openfort.io/?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)
+- [Blog](https://www.openfort.io/blog?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)
+- [Docs](https://www.openfort.io/docs?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)
 
 ---
 
