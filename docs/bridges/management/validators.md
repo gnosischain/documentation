@@ -27,7 +27,7 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 | [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde) | GnosisDAO         |
 | [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0) | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f) | Gnosis Safe       |
-| [gno:0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6](https://gnosisscan.io/address/0x3e0A20099626F3d4d4Ea7B0cE0330e88d1Fe65D6) | Gateway           |
+| [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4) | Hopr              |
 
 </TabItem>
 
@@ -35,12 +35,6 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 
 0x725bC6F18F8CDd7f57A9aB9A9f2Ea17A199185e5  
 0xb1562173109932146a7fBBF28d7c6652bc2DaACE
-
-</TabItem>
-
-<TabItem value="goerli-chiado" label="Goerli <-> Chiado">
-
-[0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49)
 
 </TabItem>
 
@@ -68,7 +62,7 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://gnosis.blockscout.com/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506) |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca) |
 | Karpatkey    | [gno:0xfa98b60e02a61b6590f073cad56e68326652d094](https://gnosis.blockscout.com/address/0xfa98b60e02a61b6590f073cad56e68326652d094) |
-| Gateway      | [gno:0x90776017057b84bc47D7e7383b65C463C80a6cdd](https://gnosis.blockscout.com/address/0x90776017057b84bc47D7e7383b65C463C80a6cdd) |
+| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4) |
 
 </TabItem>
 
@@ -79,14 +73,6 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 </TabItem>
 
-<TabItem value="chiado-goerli" label="Chiado<->Goerli">
-
-| Network | Address                                                                                                                                                                                                                                                              |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Goerli  | 0xef35547c29a7547df67ff573c158bf1b74381add(Gateway) <br /> 0xda286781cbbc9819c94852885a118c93ed25e064 <br /> 0x758c277ca1b04da3ba3add5d61cd26337cfafd7e <br /> 0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf (Gnosis DAO)                                               |
-| Chiado  | 0xef35547c29a7547df67ff573c158bf1b74381add(Gateway)<br /> 0xda286781cbbc9819c94852885a118c93ed25e064 <br />0x758c277ca1b04da3ba3add5d61cd26337cfafd7e <br />0x9d84152df06880cdabeb30e10c2985f40d98b901<br /> 0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf (Gnosis DAO) |
-
-</TabItem>
 
 </Tabs>
 

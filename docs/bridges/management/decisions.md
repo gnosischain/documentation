@@ -8,6 +8,17 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Replaced Gateway bridge validator with Hopr
+
+🗳 Justification:
+
+1. Following the conclusion of GIP-70, Gateway.fm will deprecate its services for Gnosis Chain. Tenderly is replacing Gateway.fm as the main service provider, funded by GIP-128 via Gnosis Ltd. Hopr will replace Gateway as the new bridge validator.
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C[…]1d0e1e08774c9627cc52124d91905bc5c070ff8e887e738ca13ee312347cb)  
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd1[…]cf6d57c90e88a58a22d0ffabfe2e249e6bbb1b3df9ca25984a6f46e251c82)
+
+✅ Implemented: Nov 26, 2025
+
 ## USDS migration on xDAI Bridge: sDAI replaced by sUSDS
 
 🗳 Justification:
