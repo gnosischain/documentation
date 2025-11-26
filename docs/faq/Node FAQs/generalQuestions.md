@@ -5,7 +5,7 @@ title: General Questions
 <img width="1200" alt="Twitter Announcement@2x" src="https://github.com/gnosischain/documentation/assets/75987728/6effcd11-5f0c-4b4d-ae2f-aff99badb373" />
 
 :::info
-**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosischain) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
+**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosis) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
 :::
 
 :::info

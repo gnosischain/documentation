@@ -91,7 +91,7 @@ Go to https://uramp.gnosis.io/login and follow the steps mentioned or you can fo
 
 ## Community 
 
-- [Discord](https://discord.gg/gnosischain)
+- [Discord](https://discord.gg/gnosis)
 - [Farcaster](https://warpcast.com/gnosischain)
 - [Telegram - Unofficial](https://t.me/gnosischain)
 - [GitHub](https://github.com/gnosischain)
@@ -107,7 +107,7 @@ Go to https://uramp.gnosis.io/login and follow the steps mentioned or you can fo
 
 ## Events and Press
 
-- [Gnosis Chain Media Kit](https://github.com/gnosischain/media-kit)
+- [Gnosis Chain Media Kit](https://www.gnosis.io/press/press-kit)
 
 ## Careers
 
@@ -1193,7 +1193,7 @@ Hard forks are backward-incompatible upgrades used to introduce new functionalit
 Validators will receive instructions to update their nodes in the event of a hard fork.
 :::
 
-Information related to a hard fork will be posted. If any assistance is needed, feel free to reach out or ask questions through [Discord](https://discord.gg/gnosischain), the [forum](https://forum.gnosis.io) or other channels.
+Information related to a hard fork will be posted. If any assistance is needed, feel free to reach out or ask questions through [Discord](https://discord.gg/gnosis), the [forum](https://forum.gnosis.io) or other channels.
 
 ---
 
@@ -6446,7 +6446,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 <img width="1200" alt="Twitter Announcement@2x" src="https://github.com/gnosischain/documentation/assets/75987728/6effcd11-5f0c-4b4d-ae2f-aff99badb373" />
 
 :::info
-**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosischain) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
+**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosis) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!** 
 :::
 
 :::info
@@ -6580,7 +6580,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 // File: faq/Node FAQs/runningNode
 
 :::info
-**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosischain) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!**
+**Find this document incomplete? Visit our [Discord channel](https://discord.gg/gnosis) or contact us via [Validator Request form](https://tally.so/r/3y4V1W)!**
 :::
 
 :::info
@@ -7552,9 +7552,9 @@ Instructions for Chiado Test Network can be found [here](https://docs.sedge.neth
 
 # Run a Node
 
-<img width="1480" height="748" alt="Screenshot 2025-10-22 at 15 15 33" src="https://github.com/user-attachments/assets/3d535d6f-43ef-4282-80d9-e3fad2bb1801" />
+<img width="1480" height="520" alt="Screenshot 2025-10-22 at 15 15 33" src="https://github.com/user-attachments/assets/3d535d6f-43ef-4282-80d9-e3fad2bb1801" />
 
-**Image:** GGeographic visualization of peer-to-peer network connections October 2025
+**Image:** Geographic visualization of peer-to-peer network connections October 2025
 
 :::tip
 **Hint:** To quickly access comprehensive general information and view easy-to-digest, side-by-side comparisons, check out [validategnosis.com](https://www.validategnosis.com/)
@@ -10917,7 +10917,7 @@ If `--datadir` is omitted, Reth falls back to the OS‑specific default path:
 
 ## Next steps
 
-* Join the **Gnosis Reth Discord** → [discord.gg/gnosischain](https://discord.gg/gnosischain)  
+* Join the **Gnosis Reth Discord** → [discord.gg/gnosis](https://discord.gg/gnosis)  
 * Track upstream Reth development → [paradigmxyz/reth](https://github.com/paradigmxyz/reth)
 
 ---

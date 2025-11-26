@@ -13,7 +13,7 @@ keywords: [gnosis, gnosis twitter, gnosis telegram, gnosis discord, governance f
 
 ## Community 
 
-- [Discord](https://discord.gg/gnosischain)
+- [Discord](https://discord.gg/gnosis)
 - [Farcaster](https://warpcast.com/gnosischain)
 - [Telegram - Unofficial](https://t.me/gnosischain)
 - [GitHub](https://github.com/gnosischain)
@@ -29,7 +29,7 @@ keywords: [gnosis, gnosis twitter, gnosis telegram, gnosis discord, governance f
 
 ## Events and Press
 
-- [Gnosis Chain Media Kit](https://github.com/gnosischain/media-kit)
+- [Gnosis Chain Media Kit](https://www.gnosis.io/press/press-kit)
 
 ## Careers
 

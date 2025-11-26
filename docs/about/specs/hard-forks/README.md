@@ -9,4 +9,4 @@ Hard forks are backward-incompatible upgrades used to introduce new functionalit
 Validators will receive instructions to update their nodes in the event of a hard fork.
 :::
 
-Information related to a hard fork will be posted. If any assistance is needed, feel free to reach out or ask questions through [Discord](https://discord.gg/gnosischain), the [forum](https://forum.gnosis.io) or other channels.
+Information related to a hard fork will be posted. If any assistance is needed, feel free to reach out or ask questions through [Discord](https://discord.gg/gnosis), the [forum](https://forum.gnosis.io) or other channels.
