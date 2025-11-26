@@ -5,9 +5,9 @@ sidebar_position : 1
 
 # Run a Node
 
-<img width="1480" height="748" alt="Screenshot 2025-10-22 at 15 15 33" src="https://github.com/user-attachments/assets/3d535d6f-43ef-4282-80d9-e3fad2bb1801" />
+<img width="1480" height="520" alt="Screenshot 2025-10-22 at 15 15 33" src="https://github.com/user-attachments/assets/3d535d6f-43ef-4282-80d9-e3fad2bb1801" />
 
-**Image:** GGeographic visualization of peer-to-peer network connections October 2025
+**Image:** Geographic visualization of peer-to-peer network connections October 2025
 
 :::tip
 **Hint:** To quickly access comprehensive general information and view easy-to-digest, side-by-side comparisons, check out [validategnosis.com](https://www.validategnosis.com/)

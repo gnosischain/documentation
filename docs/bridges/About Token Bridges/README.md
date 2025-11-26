@@ -17,14 +17,13 @@ Gnosis has three main types of bridges:
 ## Gnosis Chain Bridge
 
 Gnosis Chain bridge :
-- allows to mint the native stablecoin xDAI on gnosis chain by bridging DAI from Ethereum
-- allows to bridge ERC2O token from Ethereum to Gnosis Chain
 
+- allows to mint the native stablecoin xDAI on gnosis chain by bridging USDS from Ethereum
+- allows to bridge ERC2O token from Ethereum to Gnosis Chain
 
 ### Bridging Data
 
 See the [Arbitrary Message Passing Bridge](../About%20Token%20Bridges/amb-bridge.md) or AMB Bridge for short.
-
 
 ## Roadmap
 

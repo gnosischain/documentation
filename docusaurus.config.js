@@ -64,6 +64,7 @@ const config = {
           showReadingTime: true,
           blogSidebarCount: "ALL",
           blogSidebarTitle: "Recent updates",
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -214,7 +215,7 @@ const config = {
               },
               {
                 label: "Gnosis Chain Media Kit",
-                href: "https://github.com/gnosischain/media-kit",
+                href: "https://www.gnosis.io/press/press-kit",
               },
             ],
           },

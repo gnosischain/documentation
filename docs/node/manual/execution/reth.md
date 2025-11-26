@@ -115,5 +115,5 @@ If `--datadir` is omitted, Reth falls back to the OS‑specific default path:
 
 ## Next steps
 
-* Join the **Gnosis Reth Discord** → [discord.gg/gnosischain](https://discord.gg/gnosischain)  
+* Join the **Gnosis Reth Discord** → [discord.gg/gnosis](https://discord.gg/gnosis)  
 * Track upstream Reth development → [paradigmxyz/reth](https://github.com/paradigmxyz/reth)
