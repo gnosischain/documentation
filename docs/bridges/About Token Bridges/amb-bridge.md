@@ -20,7 +20,7 @@ Due to the finality requirements on Ethereum, the transactions will take approx.
 | --------------------- | ----------------------------------------------------- |
 | Frontend URL          | N/A                                                   |
 | Trust Model           | [4-of-7 Validator Multisig](#bridge-validators)       |
-| Governance            | [8-of-16 Multisig](#bridge-governance)                |
+| Governance            | [8-of-15 Multisig](#bridge-governance)                |
 | Governance Parameters | [Validators](#bridge-validators)                      |
 | Bug Bounty            | [up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
