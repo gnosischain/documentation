@@ -8,6 +8,17 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Removed kpk from bridge governors, replaced kpk bridge validator with Kleros
+
+🗳 Justification:
+
+1. Following the [GIP143](https://snapshot.org/#/s:gnosis.eth/proposal/0xfca8ac754b03f918218d11f405073c690814701b551536956f47a4080360ad9b), GnosisDAO has approved it’s termination for kpk treasury management services. kpk is removed from bridge governors, making the threshold from 8/16 to 8/15, and kpk bridge validator is replaced with Kleros.
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xcb56484da97d742b62bdb3ecfba688fca6b481ce962e73a973855c6a891a102c)  
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xdbe94fffa1033bf85eb457a37db83c84a19df9c36034254e9a1a62ff4bae03d1)
+
+✅ Implemented: Dec 12, 2025
+
 ## Replaced Gateway bridge validator with Hopr
 
 🗳 Justification:

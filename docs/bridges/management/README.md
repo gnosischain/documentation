@@ -30,7 +30,7 @@ Operations may include:
 
 ### Current Bridge Governors
 
-There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a proposal.
+There are currently 15 Bridge Governors, of which 8-of-15 are required to pass a proposal.
 
 | Governor                  | Address                                                                                              |
 | ------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,6 @@ There are currently 16 Bridge Governors, of which 8-of-16 are required to pass a
 | Gateway                   | 0x5b10cE4DDD27F57d4D432D409A5321219cbA7893                                                           |
 | Gnosis Bridge Team        | eth:0x4b5F5231e2F08Ad49d79Ce5672A8339a63Cfbd43 <br /> gno:0xEF138856d0581641A57245Ee5CFfc9ceaA059623 |
 | Giveth                    | 0x839395e20bbB182fa440d08F850E6c7A8f6F0780                                                           |
-| KarpatkeyDAO              | 0xb8173f558f75EE263013fd6294177bf75279a21e                                                           |
 | Hopr                      | 0xA07888742c18d7e658132AE0148fF205fFF46481                                                           |
 | Aave-Chan Initiative(ACI) | 0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4                                                           |
 | Erigon                    | 0xcF9ebF877688Ed88a7479A6e63457Fd78D4275cE                                                           |

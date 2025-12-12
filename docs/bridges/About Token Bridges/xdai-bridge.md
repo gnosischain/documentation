@@ -31,7 +31,7 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 | --------------------- | ----------------------------------------------------- |
 | Frontend URL          | https://bridge.gnosischain.com                        |
 | Trust Model           | [4-of-7 Validator Multisig](#bridge-validators)       |
-| Governance            | [8-of-16 Multisig](#bridge-governance)                |
+| Governance            | [8-of-15 Multisig](#bridge-governance)                |
 | Governance Parameters | Validator Set, Daily Limits, Fees                     |
 | Bug Bounty            | [Up to $2m](https://immunefi.com/bounty/gnosischain/) |
 | Bug Reporting         | [Immunefi](https://immunefi.com/bounty/gnosischain/)  |
