@@ -31,14 +31,14 @@ jobs:
 
       - name: Extract commit
         id: commit
-        uses: prompt/actions-commit-hash@v2
+        uses: prompt/actions-commit-hash@01d19a83c242e1851c9aa6cf9625092ecd095d09 # v2
 
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
 
       - id: slack
-        uses: slackapi/slack-github-action@v1.24.0
+        uses: slackapi/slack-github-action@e28cf165c92ffef168d23c5c9000cffc8a25e117 # v1.24.0
         with:
           payload: "{\"username\":\"Releases\",\"icon_url\":\"https://avatars3.githubusercontent.com/u/134083290\",\"text\":\"${{ inputs.message }} - ${{ github.event.head_commit.message }}\",\"attachments\":[{\"text\":\"\",\"color\":\"${{ inputs.success == true && '#36a64f' || '#FF3131' }}\",\"author_name\":\"${{ inputs.service }}\",\"title\":\"\",\"fields\":[{\"title\":\"Environment\",\"short\":true,\"value\":\"`${{ inputs.environment }}`\"},{\"title\":\"Branch\",\"short\":true,\"value\":\"${{ steps.extract_branch.outputs.branch }}\"},{\"title\":\"Commit\",\"short\":true,\"value\":\"${{ steps.commit.outputs.short }}\"},{\"title\":\"Status\",\"short\":true,\"value\":\"${{ inputs.success == true && '🟢 SUCCEEDED' || '🔴 FAILED' }}\"},{\"title\":\"Time\",\"short\":true,\"value\":\"${{ steps.date.outputs.date }}\"}]}]}"
         env:
