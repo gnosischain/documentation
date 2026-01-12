@@ -23,7 +23,6 @@
     "@docusaurus/preset-classic": "3.9.2",
     "@mdx-js/react": "3.0.0",
     "clsx": "1.2.1",
-    "docusaurus": "1.14.7",
     "docusaurus-plugin-generate-llms-txt": "0.0.1",
     "docusaurus-plugin-sass": "0.2.2",
     "dotenv": "16.4.4",
@@ -33,7 +32,8 @@
     "react-hook-form": "7.47.0",
     "react-player": "2.15.1",
     "react-twitter-embed": "4.0.4",
-    "sass": "1.56.1"
+    "sass": "1.56.1",
+    "sass-loader": "^13.3.2"
   },
   "devDependencies": {
     "@babel/preset-react": "7.23.3",
