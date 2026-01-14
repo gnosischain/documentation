@@ -39,6 +39,12 @@
     "@babel/preset-react": "7.23.3",
     "@docusaurus/module-type-aliases": "3.9.2"
   },
+  "pnpm": {
+    "//": "TODO: remove once @cookbookdev/docsbot updates viem",
+    "overrides": {
+      "ws": ">=8.17.1"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.5%",
