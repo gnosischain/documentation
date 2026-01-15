@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from '@theme-original/SearchBar';
-import AskCookbook from '@cookbookdev/docsbot/react'
+// import AskCookbook from '@cookbookdev/docsbot/react'
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import CookieBanner from '@site/src/components/CookieBanner';
 
@@ -10,7 +10,7 @@ const COOKBOOK_PUBLIC_API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOi
 export default function SearchBarWrapper(props) {
   return (
     <>
-      <SearchBar {...props} />
+      {/* <SearchBar {...props} /> */}
       <BrowserOnly>{() => <AskCookbook apiKey={COOKBOOK_PUBLIC_API_KEY} /> }</BrowserOnly>
       <CookieBanner />
     </>
