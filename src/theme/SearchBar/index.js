@@ -11,7 +11,7 @@ export default function SearchBarWrapper(props) {
   return (
     <>
       {/* <SearchBar {...props} /> */}
-      <BrowserOnly>{() => <AskCookbook apiKey={COOKBOOK_PUBLIC_API_KEY} /> }</BrowserOnly>
+      {/* <BrowserOnly>{() => <AskCookbook apiKey={COOKBOOK_PUBLIC_API_KEY} /> }</BrowserOnly> */}
       <CookieBanner />
     </>
   );
