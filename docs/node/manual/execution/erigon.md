@@ -71,7 +71,7 @@ services:
       --authrpc.addr=0.0.0.0
       --authrpc.jwtsecret=/jwt
       --authrpc.vhosts=*
-      --prune=htcr
+      --prune.mode=minimal
       --torrent.download.rate=16mb
       --torrent.upload.rate=16mb
     user: 1000:1000
