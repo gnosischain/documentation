@@ -47,7 +47,7 @@ Only the following smart contract impacts are accepted within this bug bounty pr
 
 \*All Critical smart contract vulnerabilities are further capped at 10% of economic damage, primarily taking into consideration the funds at risk. However, there is a minimum reward of **USD 50 000**.
 
-Payouts are handled by the Gnosis Chain team directly and are denominated in USD. However, payouts are done in USDT for payments up to USD 100 000. All remaining rewards are paid in STAKE.
+Payouts are handled by the Gnosis Chain team directly and are denominated in USD. However, payouts are done in USDT for payments up to USD 100 000. All remaining rewards are paid in USDC or xDAI.
 
 ### Out of scope & Rules
 
