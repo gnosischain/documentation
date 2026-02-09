@@ -19,17 +19,15 @@ Each bug bounty program requires different assets in scope and both offer reward
 
 ### Asset in scope
 
-All smart contract bug from Gnosis Chain Bridges includes ETH-xDAI Omnibridge, xDAI bridge, BSC-xDAI Omnibridge.
+All smart contract bug from Gnosis Chain Bridges includes ETH-xDAI Omnibridge, xDAI bridge.
 
-| Type                                                                     | Target                                                                           |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| Smart Contract - DAI-xDAI TokenBridge contract on the Ethereum Mainnet   | https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016          |
-| Smart Contract - DAI-xDAI OmniBridge contract on the Gnosis chain        | https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6 |
-| Smart Contract - ETH-xDAI OmniBridge contract on the Ethereum Mainnet    | https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671          |
-| Smart Contract - ETH-xDAI OmniBridge contract on the Gnosis chain        | https://gnosis.blockscout.com/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
-| Smart Contract - BSC-xDAI OmniBridge contract on the Binance Smart Chain | https://bscscan.com/address/0xf0b456250dc9990662a6f25808cc74a6d1131ea9           |
-| Smart Contract - BSC-xDAI OmniBridge contract on the Gnosis chain        | https://gnosis.blockscout.com/address/0x59447362798334d3485c64D1e4870Fde2DDC0d75 |
-|                                                                          |                                                                                  |
+| Type                                                                   | Target                                                                           |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Smart Contract - DAI-xDAI TokenBridge contract on the Ethereum Mainnet | https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016          |
+| Smart Contract - DAI-xDAI OmniBridge contract on the Gnosis chain      | https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6 |
+| Smart Contract - ETH-xDAI OmniBridge contract on the Ethereum Mainnet  | https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671          |
+| Smart Contract - ETH-xDAI OmniBridge contract on the Gnosis chain      | https://gnosis.blockscout.com/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
+|                                                                        |                                                                                  |
 
 ### Reward by Thread level
 
