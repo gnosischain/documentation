@@ -202,6 +202,7 @@ Additional References:
 In a multi-chain world, some assets (e.g. USDC) can be bridged over from different chains. This is because the two bridges create different representation of the token on Gnosis, even if the underlying asset is the same.
 
 For example, there are two different representations of USDC on Gnosis(created by Omnibridge, it follows ERC677 standard):
+\*BSC-GC is deprecated, please avoid interacting with the contract.
 
 | Asset              | Token Contract                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
