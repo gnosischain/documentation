@@ -17,33 +17,10 @@ RPC Providers implement the JSON RPC API that Dapps and developers can interact 
 - [JSON RPC Postman](https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J?version=latest)
 - [Start developing in Gnosis](/developers/overview)
 
-## Gateway
-
-[Gateway](https://gateway.fm/) are one of the Core Devs and Core Contributors to Gnosis Chain. Gateway provides a high-availability public RPC as part of their Core Contributor agreement in [GIP-70](https://snapshot.org/#/gnosis.eth/proposal/0xbdc138180bec423df7b1d84c3ff4a85f3d1b62efba5db8f88a29bee2c4e515bb).
-
-Gateway also provides an Archival RPC upon request.
-
-<Tabs>
-
-<TabItem label="Mainnet" value="mainnet">
-
-```
-https://rpc.gnosis.gateway.fm
-```
-
-</TabItem>
-<TabItem label="Chiado (archival)" value="chiado">
-
-```
-https://rpc.chiado.gnosis.gateway.fm
-```
-
-</TabItem>
-</Tabs>
 
 ## Gnosis
 
-Gnosis' Core Team provides a free "starter" RPC without any SLA or availability guarantees.
+Gnosis Core Team provides a free "starter" RPC without any SLA or availability guarantees.
 
 We encourage projects and developers to work with professional RPC providers in the ecosystem, who are better equipped to serve their needs.
 
