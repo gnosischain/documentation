@@ -5,7 +5,7 @@ title: Migrating a Validator
 Migrating validators from one node to another (or from one vm instance to another) requires careful attention to avoid slashing. If you accidentally run the same validator key on 2 instances at the same time, even for a very short time period, you risk being slashed for an Attestation Violation. If this occurs, you will be removed as a validator and your GNO will be frozen and unavailable for withdrawal until after a hard-fork post GC/GBC merge.
 
 :::note
-Curious about validators who have been slashed? You can find them here: [https://gnosischa.in/validators/slashings](https://gnosischa.in//validators/slashings)
+Curious about validators who have been slashed? You can find them on the [Beacon chain explorer](https://beaconchain.gnosischain.com/validators/slashings).
 :::
 
 ## Order of Operations
@@ -24,7 +24,7 @@ Specific instructions will differ depending on the client you are running. In ge
 7. Start new validator.
 
 :::danger
-Best practice to minimize slashing risks is to wait > 1 epoch [(you can check here to see epoch)](https://gnosischa.in//epochs) following any actions taken by the original validator before starting the new (migrated) validator. This will happen naturally if you stop the original validator at the beginning of the process.
+Best practice to minimize slashing risks is to wait > 1 epoch [(you can check here to see epoch)](https://beaconchain.gnosischain.com/epochs) following any actions taken by the original validator before starting the new (migrated) validator. This will happen naturally if you stop the original validator at the beginning of the process.
 :::
 
 ## Lighthouse

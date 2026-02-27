@@ -35,7 +35,7 @@ title: Deposit, Withdrawals, and Rewards
    Yes, you can set up the same withdrawal credential for all of your validators and can also set up different withdrawal credentials for individual validators.
 
 6. **How long does it take for node status information to appear after a deposit?**
-It takes about 4 hours for a deposit to be processed, you can check how your validator is doing on gnosischa.in.
+It takes about 4 hours for a deposit to be processed, you can check how your validator is doing on [beaconchain.gnosischain.com](https://beaconchain.gnosischain.com/).
 
 7. **Where can I check my withdrawal credential?**
 
@@ -84,7 +84,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 17. **How do I voluntarily exit all my validators (using lighthouse) with DappNode?**
 
-    First of all be sure to already have a 0x01 withdrawal address or follow the step by step guide. Then go to the web3signer UI, select all keys, select the exit button, type the message ("I want to exit"), then verify on Gnosischa.in how it is going, it can take some time between the moment where you exit and the moment where it's visible on Gnosischa.in
+    First of all be sure to already have a 0x01 withdrawal address or follow the step by step guide. Then go to the web3signer UI, select all keys, select the exit button, type the message ("I want to exit"), then verify on beaconchain.gnosischain.com how it is going, it can take some time between the moment where you exit and the moment where it's visible on beaconchain.gnosischain.com
 
 18. **When you receive rewards from validation, where does the reward go? Does it stay in the node or go to the address you choose to receive rewards? Because on this address I don't notice any increase of GNO.**
 
@@ -110,7 +110,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
     For consensus layer rewards who are paid in GNO once updated to 0x01 it's not possible to change it. For execution layer rewards who are paid in xDAI you can change them as much as you want in the client or web3signer UI. More information in the [docs](https://docs.gnosischain.com/node/rewards-penalties).
 
-24. **In the explorer gnosischa.in, what is the meaning of total withdrawal?**
+24. **In the explorer beaconchain.gnosischain.com, what is the meaning of total withdrawal?**
 
     Total withdrawal means the total accrued GNO
 
@@ -174,7 +174,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 40. **Are there any news regarding an easy solution to change the recipient address in my DappNode to withdraw my mGNO?**
 
     Currently not, even if Dappnode mentioned working on it in the past. You have to follow the regular [step by step guide](https://docs.gnosischain.com/node/management/withdrawals).
-41. **I see automatic withdrawals to my wallet on gnosischa.in, but I don't seem to be receiving them. Is there anything else that I need to do?**
+41. **I see automatic withdrawals to my wallet on beaconchain.gnosischain.com, but I don't seem to be receiving them. Is there anything else that I need to do?**
 
     You have to claim withdrawals manually, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the Deposit contract. Once claimed it should be instantaneous in the same transaction.
 
@@ -224,7 +224,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
     For full withdrawals you have to wait until your validator leaves the exit queue and be ready to claim. Then both for partial and full withdrawals, once claimed on the contract or on the [Deposit page](https://deposit.gnosischain.com/) it should be instantaneous.
 
-55. **On gnosischa.in while some rewards are denominated in GNO, others are in xDai. What's the difference?**
+55. **On beaconchain.gnosischain.com while some rewards are denominated in GNO, others are in xDai. What's the difference?**
 
     You can earn two kinds of rewards : consensus layer rewards who are paid in GNO and execution layer rewards who are paid in xDAI. More information in the [docs](https://docs.gnosischain.com/node/rewards-penalties).
 
@@ -232,9 +232,9 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
     It will happen after the Stakewise v3 update which might take longer for Gnosis Chain because of the two tokens rewards system
 
-57. **I see a withdrawal on gnosischa.in, but I haven't initiated anything. Why?**
+57. **I see a withdrawal on beaconchain.gnosischain.com, but I haven't initiated anything. Why?**
 
-    The withdrawals you see on Gnosischa.in are basically just withdrawals ready to be claimed on the contract, the GNO in question have waiting on the deposit contract, you can claim a withdrawal on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    The withdrawals you see on beaconchain.gnosischain.com are basically just withdrawals ready to be claimed on the contract, the GNO in question have waiting on the deposit contract, you can claim a withdrawal on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 58. **I do not want partial withdrawals to be automatic due to tax reasons. Can I opt-out of this feature?**
 
@@ -242,11 +242,11 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 59. **I've been running my node for a week now. When/Where can I expect to start seeing my accrued rewards?**
 
-    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them manually from that contract. You can either go and call claimWithdrawals function on the GBC deposit contract or use the Withdrawal Claim tab on https://deposit.gnosischain.com/. You can check your accrued rewards on https://gnosischa.in. as well.
+    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them manually from that contract. You can either go and call claimWithdrawals function on the GBC deposit contract or use the Withdrawal Claim tab on https://deposit.gnosischain.com/. You can check your accrued rewards on https://beaconchain.gnosischain.com/ as well.
 
 60. **Can I withdraw without being online?**
 
-    It is usually pretty tricky to exit without an actively running node. If getting online is an option, we suggest you to do so. If not, you can try to create an exit message using [ethdo](https://github.com/wealdtech/ethdo/blob/master/docs/exitingvalidators.md) and by [broadcasting](https://gnosischa.in/tools/broadcast) the message using the Broadcast tool on [gnosischa.in](http://gnosischa.in/).
+    It is usually pretty tricky to exit without an actively running node. If getting online is an option, we suggest you to do so. If not, you can try to create an exit message using [ethdo](https://github.com/wealdtech/ethdo/blob/master/docs/exitingvalidators.md) and by [broadcasting](https://beaconchain.gnosischain.com/tools/broadcast) the message using the Broadcast tool on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
 61. **My wallet got hacked. Is there any way to change my withdrawal address?**
 
     If the withdrawal address you have set is already 0x01, unfortunately, there is no way to change it as it is a one time process.
@@ -263,9 +263,9 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
     You cannot use Ethereum Staking/Deposit CLI tool for BLS-to-Execution on Gnosis Chain as it is not supported. However, you can change your withdrawal credential by using ethdo following the [step by step tutorial](https://docs.gnosischain.com/node/management/withdrawals#how-to-change-the-withdrawal-credential) on our docs.
 
-65. **How long does it take for a withdrawal to be processed? The epoch for my exit (according to https://gnosischa.in/) was 5 hours ago, but if I hit the claimwithdrawal function from the withdrawal address, I don't get any GNO.**
+65. **How long does it take for a withdrawal to be processed? The epoch for my exit (according to https://beaconchain.gnosischain.com/) was 5 hours ago, but if I hit the claimwithdrawal function from the withdrawal address, I don't get any GNO.**
 
-    You can check the withdrawals tab on https://gnosischa.in to see an estimate of how long you need to actually be able to claim your exited GNO.
+    You can check the withdrawals tab on https://beaconchain.gnosischain.com/ to see an estimate of how long you need to actually be able to claim your exited GNO.
 
 66. **Anyone know how to withdraw GNO from stakewise validator?**
 

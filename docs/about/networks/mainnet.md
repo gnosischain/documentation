@@ -37,7 +37,7 @@ keywords:
 | Consensus Layer          |                                             |
 | ------------------------ | ------------------------------------------- |
 | Consensus Layer RPC      | https://rpc-gbc.gnosischain.com             |
-| Beacon Explorer          | https://gnosischa.in/                       |
+| Beacon Explorer          | https://beaconchain.gnosischain.com/                      |
 | Beacon Explorer Backup 1 | https://beacon-v1.gnosischain.com           |
 | Beacon Explorer Backup 2 | https://beacon-v2.gnosischain.com           |
 | Beacon Checkpoint Sync   | https://checkpoint.gnosis.gateway.fm        |

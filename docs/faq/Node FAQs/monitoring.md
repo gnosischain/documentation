@@ -22,11 +22,11 @@ title: Monitoring and Alerts
     
 3. **Anyone has an automated alert for their validators?**
     
-    Open an account on gnosischa.in it will send you an email when the node goes down
+    Open an account on the Beacon chain explorer (https://beaconchain.gnosischain.com/), it will send you an email when the node goes down
     
 4. **Is there a queue monitor similar to validatorqueue.com for beaconchain?**
     
-    There is an exit queue on Gnosis Chain as well but no dedicated website. Once the your voluntary exit message broadcasted, you can monitor the progress of your validator withdrawal on Gnosischa.in
+    There is an exit queue on Gnosis Chain as well but no dedicated website. Once your voluntary exit message is broadcasted, you can monitor the progress of your validator withdrawal on the Beacon chain explorer (https://beaconchain.gnosischain.com/)
     
 5. **Would anyone in this group be interested in a Gnosis Chain validators monitoring bot?**
     
@@ -36,7 +36,7 @@ title: Monitoring and Alerts
     
     Go on the [deposit contract](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#readProxyContract) and enter your withdrawal address in the field "`7.withdrawableAmount`"
     
-7. **Has anyone set up multiple validators to monitor under your account on gnosischa.in? I'm wondering if there is a way to batch add validators instead of just one-by-one. (edited)**
+7. **Has anyone set up multiple validators to monitor under your account on the Beacon chain explorer? I'm wondering if there is a way to batch add validators instead of just one-by-one. (edited)**
     
     You should be able to add them in bulk by searching for the deposit/withdrawal address in the dashboard and then clicking the button that looks like a bookmark (save all to watch list).You can then select all and manage notifications for your selection in the notification center. The dashboard only shows up to 100 in the free fier, but I think you can add up to 300 to the watch list.
     
