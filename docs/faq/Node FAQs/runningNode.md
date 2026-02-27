@@ -22,7 +22,7 @@ title: Running Nodes
 
 3. **I have deposited for two hours, why haven’t I seen my node information?**
 
-   It takes about 4 hours for a deposit to be processed, you can check how your validator is doing on gnosischa.in
+   It takes about 4 hours for a deposit to be processed, you can check how your validator is doing on the Beacon chain explorer: https://beaconchain.gnosischain.com/
 
 4. **I'm getting an alert in Lighthouse that I've got an invalid signature and/or that an endpoint has failed, how to troubleshoot?**
 
@@ -70,7 +70,7 @@ title: Running Nodes
 
 15. **Could you tell me what code I have to put in the Dappnode terminal to recover all my GNO that I have staked?**
 
-    First of all be sure to already have a 0x01 withdrawal address or follow the [step by step guide](https://docs.gnosischain.com/node/management/withdrawals). Then go in the web3signer UI, select all keys, select the exit button, type the message ("I want to exit"), then verify on Gnosischa.in how it is going, it can take some time between the moment where you exit and the moment where it's visible on Gnosischa.in
+    First of all be sure to already have a 0x01 withdrawal address or follow the [step by step guide](https://docs.gnosischain.com/node/management/withdrawals). Then go in the web3signer UI, select all keys, select the exit button, type the message ("I want to exit"), then verify on the Beacon chain explorer (https://beaconchain.gnosischain.com/) how it is going, it can take some time between the moment where you exit and the moment where it's visible there
 
 16. **How much does it cost per month to run a full node on Azure?**
 
@@ -86,7 +86,7 @@ title: Running Nodes
 
 19. **After making the 1 GNO deposit, how long it takes to the validator to be active?**
 
-    It takes about 4 hours for a deposit to be processed, you can check how your validator is doing on gnosischa.in
+    It takes about 4 hours for a deposit to be processed, you can check how your validator is doing on the Beacon chain explorer: https://beaconchain.gnosischain.com/
 
 20. **Is it worth to be a validator?**
 

@@ -109,7 +109,7 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 - Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
-- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://gnosischa.in/](https://gnosischa.in/).
+- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
 
 ### Step 7 (optional): Subscribe Autoclaim
 
@@ -181,7 +181,7 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 - Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
-- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://gnosischa.in//](https://gnosischa.in/).
+- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
 
 ## Option 3: Running Your Own Deposit UI Instance Locally
 
@@ -239,7 +239,7 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 - Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
-- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box at [https://gnosischa.in/](https://gnosischa.in/).
+- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
 
 
 

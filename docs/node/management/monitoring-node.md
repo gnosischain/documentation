@@ -163,8 +163,8 @@ The site is deprecated
 
 #### Consensus Layer
 
-- **beacon.gnosischain**
-  [beacon.gnosischain](https://gnosischa.in//) provides insight on consensus layer such as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
+- **Beacon chain explorer**
+  [Beacon chain explorer](https://beaconchain.gnosischain.com/) provides insight on consensus layer such as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
 
   To check your Consensus Layer Reward (in mGNO):
 

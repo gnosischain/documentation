@@ -27,8 +27,8 @@ November 22, 2023
   * New engineer: Marc
     * Going to explore Shutter with Ruben
   * Noticed 2 bad blocks
-    * https://gnosischa.in/slot/12320625 Graffiti: FreeAssangeNow!
-    * https://gnosischa.in/slot/12330966 Graffiti: Powered by ⚡Allnodes
+    * https://beaconchain.gnosischain.com/slot/12320625 Graffiti: FreeAssangeNow!
+    * https://beaconchain.gnosischain.com/slot/12330966 Graffiti: Powered by ⚡Allnodes
   * Had some out of memory issues in edge cases, but those were fixed
     * Not on Gnosis Chain, just Ethereum
 
@@ -60,7 +60,6 @@ November 22, 2023
 * There might be some issue with Nethermind and eth/68
   * Syncing issues
 * The chain seems to be progressing
-
 
 
 

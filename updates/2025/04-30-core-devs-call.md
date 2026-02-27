@@ -92,7 +92,7 @@ April 30, 2025
   * https://ethstats.gnosischain.com/
   * https://gnosis.blockscout.com/
   * https://gnosisscan.io/
-  * https://gnosischa.in/
+  * https://beaconchain.gnosischain.com/
   * https://www.epochconverter.com/countdown?q=1746021820
   * https://gc-nethermind.srv01.apyos.dev/
   * http://37.27.234.177:8000/

@@ -49,7 +49,7 @@ Gnosis Chain supports **two** execution‑address credential prefixes:
 
 **How to check**
 
-1. Look up your validator on [gnosischa.in](https://gnosischa.in) → *Withdrawal* tab, **or**
+1. Look up your validator on the [Beacon chain explorer](https://beaconchain.gnosischain.com/) → *Withdrawal* tab, **or**
 2. Open the `deposit‑m*.json` file you saved when staking and examine `withdrawal_credentials`.
 
 ![CheckWC](../../../static/img/node/withdrawal/withdrawcreds.png)
@@ -79,7 +79,7 @@ ethdo validator credentials set \
       --eip4844-prefix=0x02   # ensures 0x02
 ```
 
-3. **Broadcast** the resulting `change-operations.json` either via the [broadcast tool](https://gnosischa.in/tools/broadcast) or with `curl`:
+3. **Broadcast** the resulting `change-operations.json` either via the [broadcast tool](https://beaconchain.gnosischain.com/tools/broadcast) or with `curl`:
 
 ```bash
 curl -d @change-operations.json \
@@ -138,7 +138,7 @@ Because Gnosis Chain pays out **GNO** rather than the gas token (xDai), withdraw
 
    * `claimWithdrawal(address validatorRecipient)` – single validator, or
    * `claimWithdrawals(address[] validatorRecipients)` – batch.
-3. Enter the **withdrawal (recipient) address** exactly as displayed on *gnosischa.in*.
+3. Enter the **withdrawal (recipient) address** exactly as displayed on the *Beacon chain explorer*.
 4. Sign & send – on confirmation the GNO appears at the recipient address.
 
 > The `withdrawal address` and the `recipient address` are identical. Do *not* paste the long internal address you may see elsewhere.
