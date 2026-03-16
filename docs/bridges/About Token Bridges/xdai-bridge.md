@@ -165,7 +165,7 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 
 ### Savings xDAI
 
-Application: https://agave.finance/sdai/
+Application: https://app.spark.fi/savings/gnosis/sdai
 
 #### Rationale
 
