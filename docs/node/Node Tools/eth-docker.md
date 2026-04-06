@@ -54,7 +54,7 @@ Configure eth-docker - have an Gnosis address handy where you want Execution Lay
 3. Select consensus client: Lighthouse, Teku, or Nimbus.
 4. Select execution client: Nethermind, or Erigon.
 5. Select checkpoint sync: Choose Yes if you want to use CL rapid sync with remote checkpoint.
-6. Configure checkpoint consensus client: paste the checkpoint URL from https://checkpoint.gnosischain.com/.
+6. Configure checkpoint consensus client: paste the checkpoint URL from https://checkpoint.gnosischain.com.
 7. Select MEV Boost
 8. Select Grafana dashboard
 9. Configure Graffiti: Enter the graffiti for your validator.

@@ -31,8 +31,6 @@ In order to expose your node's clients data to Prometheus, please ensure the exe
 | Lodestar Validator          | 5064 |
 | Teku (Beacon & Validator)   | 8008 |
 | Nimbus (Beacon & Validator) | 8008 |
-| Prysm Beacon                | 8080 |
-| Prysm Validator             | 8081 |
 
 ### Execution client
 
@@ -73,15 +71,16 @@ https://github.com/sigp/lighthouse-metrics
 ```shell
 --metrics=true
 --metrics.port=$PORT
+```
 
-https://chainsafe.github.io/lodestar/logging-and-metrics/prometheus-grafana/
-https://chainsafe.github.io/lodestar/beacon-management/beacon-cli/#-metrics
+- https://chainsafe.github.io/lodestar/run/logging-and-metrics/prometheus-grafana/
+- https://chainsafe.github.io/lodestar/run/beacon-management/beacon-cli/#-metrics
 </TabItem>
 <TabItem value="Teku" label="Teku">
 ```
 --metrics-enabled=true
 ```
-https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/
+https://docs.teku.consensys.io/how-to/monitor/use-metrics
 
 </TabItem>
 <TabItem value="Nimbus" label="Nimbus">
@@ -93,10 +92,6 @@ https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/
 
 https://nimbus.guide/metrics-pretty-pictures.html#simple-metrics
 
-</TabItem>
-<TabItem value="Prysm" label="Prysm">
-
-https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/
 </TabItem>
 
 </Tabs>
@@ -157,7 +152,7 @@ The site is deprecated
      ![GnosisScan Block Validated by Validator](../../../static/img/node/monitor-node/gnosisscan-validated-block.png)
 
 - **Blockscout**
-  [Blockscout](https://blockscout.com/xdai/mainnet) is another block explorer similar to Gnosisscan.
+  [Blockscout](https://gnosis.blockscout.com/) is another block explorer similar to Gnosisscan.
 
   ![Blockscout Block Validator by Validator](../../../static/img/node/monitor-node/blockscout-validated-block.png)
 

@@ -37,9 +37,10 @@ Node Operators will need to run an Execution Layer client, which will interact w
 
 - [Nethermind](./manual/execution/nethermind.md)
 - [Erigon](./manual/execution/erigon.md)
-- [Geth](./manual/execution/geth.md) (in progress)
+- [Reth](./manual/execution/reth.md)
+- [Geth](./manual/execution/geth.md)
 
-Gnosis used to be supported by the [Parity OpenEthereum client](./manual/execution/openethereum.md), but it has since been deprecated.
+Gnosis used to be supported by the Parity OpenEthereum client, but that client has been deprecated.
 
 ### Consensus Layer
 
@@ -61,7 +62,6 @@ Node operators will need to run a Consensus Layer client. In most cases, these a
 - [Nimbus](./manual/beacon/nimbus.md)
 - [Teku](./manual/beacon/teku.md)
 - [Lighthouse](./manual/beacon/lighthouse.md)
-- [Prysm](./manual/beacon/prysm.md) (in progress)
 
 ### Inter-Layer Communication
 

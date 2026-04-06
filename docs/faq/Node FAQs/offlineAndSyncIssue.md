@@ -14,7 +14,7 @@ title: Offline and Sync Issue
 
 1. **Anyone seeing errors with checkpoint sync today?**
 
-    If the usual checkpoint sync https://checkpoint.gnosischain.com/ doesn't work, you can try using https://checkpoint.gnosis.gateway.fm/ if they are both down, don't hesitate to report it as the team might not be aware yet
+    If the usual checkpoint sync https://checkpoint.gnosischain.com doesn't work, report it so the team can investigate.
     
 2. **My (dapp)node have been offline for a couple of hours. After restart attestation and block proposing resumed, but duties in sync committee still shows missing even after a few hours since it's up again. Does anyone has an explanation for this?**
 
@@ -30,7 +30,7 @@ title: Offline and Sync Issue
     
 5. **Using checkpoint sync, but all my nodes are down. Why?**
 
-    If the usual checkpoint sync https://checkpoint.gnosischain.com/ doesn't work, you can try using https://checkpoint.gnosis.gateway.fm/ if they are both down, don't hesitate to report it as the team might not be aware yet
+    If the usual checkpoint sync https://checkpoint.gnosischain.com doesn't work, report it so the team can investigate.
     
 6. **Just realized my validators are off line since the beginning of the month, can someone take a peek and help?**
 
@@ -42,7 +42,7 @@ title: Offline and Sync Issue
     
 8. **Is there a new checkpoint for Gnosis?**
 
-    The two common checkpoint sync are : https://checkpoint.gnosischain.com/ and https://checkpoint.gnosis.gateway.fm/
+    The common checkpoint sync endpoint is: https://checkpoint.gnosischain.com
     
 9. **My Gnosis node is crashed a month ago, was there a breaking chain upgrade a month ago?**
 

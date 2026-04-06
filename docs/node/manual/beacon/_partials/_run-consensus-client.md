@@ -11,8 +11,7 @@ import InstallNimbusPartial from '@site/docs/node/manual/beacon/_partials/_insta
   {label: 'Lighthouse', value: 'lighthouse'},
   {label: 'Lodestar', value: 'lodestar'},
   {label: 'Teku', value: 'teku'},
-  {label: 'Nimbus', value: 'nimbus'},
-  {label: 'Prysm', value: 'prysm'}
+  {label: 'Nimbus', value: 'nimbus'}
     ]}>
   <TabItem value="lighthouse">
 
@@ -38,17 +37,5 @@ import InstallNimbusPartial from '@site/docs/node/manual/beacon/_partials/_insta
 
   </TabItem>
 
-  <TabItem value="prysm">
-```
-
-:::info
-
-Please refer to [Run a Beacon Node: Prysm](../prysm.md)
-
-:::
-
-```mdx-code-block
-  </TabItem>
-```
-
 </Tabs>
+```

@@ -8,7 +8,7 @@ keywords: [swarm, storage, decentralized, decentralised, docker, docker compose]
 The following is a guide to get you started running a Bee full node with staking on Swarm using Docker. Docker images for Bee are hosted at [Docker Hub](https://hub.docker.com/r/ethersphere/bee). 
 
 :::caution
-In the examples below we specify the exact version number of the image using the 2.2.0 tag. It's recommended to only use the exact version number tags. Make sure to check that you're on the latest version of Bee by reviewing the tags for Bee on [Docker Hub](https://hub.docker.com/r/ethersphere/bee/tags), and replace 2.2.0 in the commands below if there is a newer full release. 
+In the examples below we specify the exact version number of the image using the 2.7.1 tag. It's recommended to only use the exact version number tags. Make sure to check that you're on the latest version of Bee by reviewing the tags for Bee on [Docker Hub](https://hub.docker.com/r/ethersphere/bee/tags), and replace 2.7.1 in the commands below if there is a newer full release. 
 :::
 
 :::warning
@@ -72,13 +72,13 @@ docker run -d --name bee-1 \
   -e BEE_PASSWORD="flummoxedgranitecarrot" \
   -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" \
   -v bee-1:/home/bee/.bee \
-  ethersphere/bee:2.2.0 start
+  ethersphere/bee:2.7.1 start
 ```
 
 Here is the same command in a single line in case you run into issues with the line breaks in the command above:
 
 ```bash
-docker run -d --name bee-1 --restart always -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.2.0 start
+docker run -d --name bee-1 --restart always -p 127.0.0.1:1633:1633 -p 1634:1634 -e BEE_API_ADDR=":1633" -e BEE_FULL_NODE="true" -e BEE_SWAP_ENABLE="true" -e BEE_PASSWORD="flummoxedgranitecarrot" -e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org" -v bee-1:/home/bee/.bee ethersphere/bee:2.7.1 start
 ```
 
 #### Command explained:
@@ -94,7 +94,7 @@ docker run -d --name bee-1 --restart always -p 127.0.0.1:1633:1633 -p 1634:1634 
 - **`-e BEE_PASSWORD="flummoxedgranitecarrot"`**: Sets the keystore password, make sure to replace with your own.
 - **`-e BEE_BLOCKCHAIN_RPC_ENDPOINT="https://xdai.fairdatasociety.org"`**: Connects to the Gnosis Chain.
 - **`-v bee-1:/home/bee/.bee`**: Persists node data in the `bee-1` volume.
-- **`ethersphere/bee:2.2.0 start`**: Runs Bee version 2.2.0 and starts the node.
+- **`ethersphere/bee:2.7.1 start`**: Runs Bee version 2.7.1 and starts the node.
 
 This setup runs the Bee node in a container, with full-node functionality, SWAP enabled, and connections to the Gnosis blockchain for chequebook and postage stamp management, while persisting its data using a volume. 
 
@@ -111,7 +111,7 @@ If everything is set up correctly, you should see your Bee node listed:
 ```bash
 CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS
                                               NAMES
-37f4ad8b4060   ethersphere/bee:2.2.0   "bee start"   6 seconds ago   Up 5 seconds   127.0.0.1:1633->1633/tcp, 0.0.0.0:1634->1634/tcp, :::1634->1634/tcp   bee-1
+37f4ad8b4060   ethersphere/bee:2.7.1   "bee start"   6 seconds ago   Up 5 seconds   127.0.0.1:1633->1633/tcp, 0.0.0.0:1634->1634/tcp, :::1634->1634/tcp   bee-1
 ```
 
 And check the logs:
@@ -204,9 +204,9 @@ damage to hardware or loss of funds associated with the Ethereum account connect
 No developers or entity involved will be liable for any claims and damages associated with your use,
 inability to use, or your interaction with other nodes or the software.
 
-version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please follow https://ethswarm.org/
+version: 2.7.1
 
-"time"="2024-09-24 22:21:04.543661" "level"="info" "logger"="node" "msg"="bee version" "version"="2.2.0-06a0aca7"
+"time"="2024-09-24 22:21:04.543661" "level"="info" "logger"="node" "msg"="bee version" "version"="2.7.1"
 "time"="2024-09-24 22:21:04.590823" "level"="info" "logger"="node" "msg"="swarm public key" "public_key"="02f0e59eafa3c5c06542c0a7a7fe9579c55a163cf1d28d9f6945a34469f88d1b2a"
 "time"="2024-09-24 22:21:04.686430" "level"="info" "logger"="node" "msg"="pss public key" "public_key"="02ea739530bbf48eed49197f21660f3b6564709b95bf558dc3b472688c34096418"
 "time"="2024-09-24 22:21:04.686464" "level"="info" "logger"="node" "msg"="using ethereum address" "address"="0x8288F1c8e3dE7c3bf42Ae67fa840EC61481D085e"
@@ -238,7 +238,7 @@ version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please
 "time"="2024-09-24 22:21:19.664897" "level"="info" "logger"="node" "msg"="waiting to sync postage contract data, this may take a while... more info available in Debug loglevel"
 ```
 
-Your node will take some time to finish [syncing postage contract data](https://docs.ethswarm.org/docs/develop/access-the-swarm/buy-a-stamp-batch/) as indicated by the final line:
+Your node will take some time to finish [syncing postage contract data](https://docs.ethswarm.org/docs/develop/tools-and-features/buy-a-stamp-batch/) as indicated by the final line:
 
 ```bash
 "msg"="waiting to sync postage contract data, this may take a while... more info available in Debug loglevel"

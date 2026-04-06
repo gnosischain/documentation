@@ -37,7 +37,7 @@ Including the folders from your Execution and Consensus clients, your folder str
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the `validator` container. You will also need to add the command `--suggested-fee-recipient=$FEE_RECIPIENT` to your `consensus` container. The file should now look like:
+Modify your Compose file with your favorite text editor and add the `validator` container. You will also need to add the command `--suggested-fee-recipient=$FEE_RECIPIENT` to your `consensus` container. The file should now look like:
 
 ```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
@@ -135,7 +135,7 @@ Import your validators:
 docker run \
   --rm \
   --volume /home/$USER/gnosis/consensus/keystores:/keystores \
-  --volume /home/$USER/gnosis/consensus:/data sigp/lighthouse:latest-modern lighthouse account validator import \
+  --volume /home/$USER/gnosis/consensus:/data sigp/lighthouse:v8.1.3 lighthouse account validator import \
   --network gnosis \
   --password-file /keystores/password.txt \
   --reuse-password \
@@ -150,7 +150,7 @@ Start the validator service listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 
@@ -176,11 +176,11 @@ _See section **Fund Validator**_
 
 ### 9. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

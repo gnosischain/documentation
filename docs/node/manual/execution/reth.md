@@ -6,8 +6,6 @@ title: Reth
 
 Gnosis‑compatible **Reth** client — **not a fork**, but an **extension** built with the `NodeBuilder` API.
 
-Refer to the official Reth documentation → [reth.rs](https://reth.rs)
-
 Repository: [gnosischain/reth_gnosis](https://github.com/gnosischain/reth_gnosis)
 
 ---
@@ -30,7 +28,7 @@ You can run the node in two ways:
 Pull the image:
 
 ```bash
-docker pull ghcr.io/gnosischain/reth_gnosis:v0.1.0
+docker pull ghcr.io/gnosischain/reth_gnosis:v1.0.3
 
 ```
 
@@ -53,13 +51,34 @@ cp /path/to/jwtsecret ./reth_data/jwtsecret
 #### Quick Chiado run
 
 ```bash
-docker run   -v ./reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   --chain chiado   --datadir /data   --authrpc.jwtsecret=/data/jwtsecret
+docker run \
+  -v ./reth_data:/data \
+  ghcr.io/gnosischain/reth_gnosis:v1.0.3 node \
+  --chain chiado \
+  --datadir /data \
+  --authrpc.port=8551 \
+  --authrpc.jwtsecret=/data/jwtsecret
 ```
 
 #### Full Gnosis Chain example
 
 ```bash
-docker run --network host   -v $PWD/reth_data:/data   ghcr.io/gnosischain/reth_gnosis:v0.1.0 node   -vvvv   --chain gnosis   --datadir /data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=/data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
+docker run --network host \
+  -v $PWD/reth_data:/data \
+  ghcr.io/gnosischain/reth_gnosis:v1.0.3 node \
+  -vvvv \
+  --chain gnosis \
+  --datadir /data \
+  --http \
+  --http.port=8545 \
+  --http.addr=0.0.0.0 \
+  --http.corsdomain='*' \
+  --http.api=admin,net,eth,web3,debug,trace \
+  --authrpc.port=8551 \
+  --authrpc.addr=0.0.0.0 \
+  --authrpc.jwtsecret=/data/jwtsecret \
+  --discovery.port=30303 \
+  --discovery.addr=0.0.0.0
 ```
 
 ---
@@ -94,7 +113,20 @@ cp /path/to/jwtsecret ./reth_data/jwtsecret
 ### Quick Chiado run
 
 ```bash
-./target/release/reth node   -vvvv   --chain chiado   --datadir ./reth_data   --http   --http.port=8545   --http.addr=0.0.0.0   --http.corsdomain='*'   --http.api=admin,net,eth,web3,debug,trace   --authrpc.port=8546   --authrpc.addr=0.0.0.0   --authrpc.jwtsecret=./reth_data/jwtsecret   --discovery.port=30303   --discovery.addr=0.0.0.0
+./target/release/reth node \
+  -vvvv \
+  --chain chiado \
+  --datadir ./reth_data \
+  --http \
+  --http.port=8545 \
+  --http.addr=0.0.0.0 \
+  --http.corsdomain='*' \
+  --http.api=admin,net,eth,web3,debug,trace \
+  --authrpc.port=8551 \
+  --authrpc.addr=0.0.0.0 \
+  --authrpc.jwtsecret=./reth_data/jwtsecret \
+  --discovery.port=30303 \
+  --discovery.addr=0.0.0.0
 ```
 
 Replace `--chain chiado` with `--chain gnosis` for **Gnosis mainnet**.
@@ -110,10 +142,3 @@ If `--datadir` is omitted, Reth falls back to the OS‑specific default path:
 | Linux   | `$XDG_DATA_HOME/reth/` or `$HOME/.local/share/reth/` |
 | macOS   | `$HOME/Library/Application Support/reth/`            |
 | Windows | `%APPDATA%\reth\`                                  |
-
----
-
-## Next steps
-
-* Join the **Gnosis Reth Discord** → [discord.gg/gnosis](https://discord.gg/gnosis)  
-* Track upstream Reth development → [paradigmxyz/reth](https://github.com/paradigmxyz/reth)

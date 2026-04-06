@@ -33,7 +33,7 @@ mkdir /home/$USER/gnosis/consensus/keystores
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the `validator` container. You will also need to add the command `--suggestedFeeRecipient=$FEE_RECIPIENT` to your `consensus` container. The file should now look like:
+Modify your Compose file with your favorite text editor and add the `validator` container. You will also need to add the command `--suggestedFeeRecipient=$FEE_RECIPIENT` to your `consensus` container. The file should now look like:
 
 ```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
@@ -96,9 +96,9 @@ GRAFFITI=gnosischain/lodestar
 ```
 
 Replace `suggestedFeeRecipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
-Learn more about [suggestedFeeRecipient](https://chainsafe.github.io/lodestar/validator-management/vc-configuration/#configuring-the-fee-recipient-address) flag in Lodestar docs.
+Learn more about [suggestedFeeRecipient](https://chainsafe.github.io/lodestar/run/validator-management/vc-configuration/#configuring-the-fee-recipient-address) flag in Lodestar docs.
 
-Replace `graffiti` with your own [graffiti](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#-graffiti). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+Replace `graffiti` with your own [graffiti](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli/#-graffiti). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
 ### 4. Keystore Location
 
@@ -134,7 +134,7 @@ Start the validator service listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 
@@ -160,11 +160,11 @@ See the [Validator Deposits](../deposit.md) section.
 
 ### 9. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

@@ -48,7 +48,7 @@ mkdir /home/$USER/gnosis/jwtsecret
 
 ### 2. Docker Compose
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+Create a Compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
 ```mdx-code-block
 <details>
@@ -82,7 +82,6 @@ services:
       --config gnosis
       --datadir /data
       --log INFO
-      --Sync.SnapSync false
       --JsonRpc.Enabled true
       --JsonRpc.Host 0.0.0.0
       --JsonRpc.Port 8545
@@ -119,7 +118,7 @@ Start the Execution layer client listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 
@@ -134,13 +133,13 @@ import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/_partials
 
 ### 6. Updating your Node
 
-To update, just pull the new image, then stop and restart your docker-compose file:
+To update, just pull the new image, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```
 
 ## Option 2: Running as System Process {#as-system-process}
@@ -177,7 +176,7 @@ nethermind --config chiado --JsonRpc.JwtSecretFile path/to/jwt.hex
 An archival node executes a heavy historical sync verifying all the transactions and keeping all of the historical data. Archive sync is the 'heaviest' and slowest sync mode, and can take 2 - 6 weeks depending on the speed of your IO.
 
 :::caution
-Make sure there's enough disk space to accommodate the archive data, the minimum amount of disk required to run the archive node is +2 TB (Feb 2023).
+Make sure you have sufficient disk space and IOPS for archive mode. Requirements change frequently by release and network growth.
 :::
 
 Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from `gnosis` to `gnosis_archive`.
@@ -186,4 +185,3 @@ Edit your `/home/$USER/gnosis/docker-compose.yml` and change the `--config` from
     command: |
       --config gnosis_archive
 ```
-

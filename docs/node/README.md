@@ -21,15 +21,15 @@ Gnosis is persistently committed to building the open infrastructure for a decen
 ### Featured Headlines
 
 - Gnosis minimum stake is 1 GNO to run a validator.
-- Operating a Gnosis validator will earn you approximately 13% GNO validator rewards as well as transaction fees from the blocks you build in xDAI.
+- Validator rewards are variable and depend on network participation and validator performance. See [Rewards & Penalties](./rewards-penalties.md) for live sources.
 - Gnosis has a strong culture of homestakers running nodes from their homes, that are not reliant on cloud providers or datacenters.
-- Gnosis has a stretch goal to have a node in every country by 2025.
+- Gnosis continues to encourage broad geographic distribution of independently operated nodes.
 
 #### Gnosis vs. Ethereum
 
 - Gnosis runs the same composite client software and tooling stack as Ethereum
 - In some cases, Gnosis clients are just Ethereum clients run with a `--network` flag! (e.g. [Nethermind](https://downloads.nethermind.io/), [Lighthouse](https://lighthouse.sigmaprime.io/), etc)
-- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO (around $100 at April 2025) instead of the 32 ETH (around $47.000 at April 2025) minimum required for Ethereum
+- Gnosis aims to be a learning ground for a new generation of node runners, requiring only 1 GNO instead of the 32 ETH minimum required for Ethereum
 - Gnosis Chain runs the same client software as Ethereum, with minor parameter tweaks. As such, Gnosis is a Proof-of-Stake network that uses Ethereum's Beacon Chain consensus.
 
 ## Choosing an Approach
@@ -47,8 +47,6 @@ Once the environment is set up, install the chosen clients either with beginner-
 When the node is running and syncing, you are ready to use it. You must always keep an eye on its maintenance to avoid penalties.
 
 ## Environment and Hardware
-
-### Environment and Hardware
 
 #### **Local or Cloud**
 
@@ -94,7 +92,7 @@ Hardware requirements differ by client but generally are not that high since the
 
 Before installing any client, please ensure your computer has enough resources to run it. You can find the minimum and recommended requirements below.
 
-The bottleneck for your hardware is mostly disk space. Syncing the Gnosis blockchain is very input/output intensive and requires a lot of space. It is best to have a solid-state drive (SSD) with hundreds of GBs of free space to spare even after the synchronization. Refer to [this post](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) for good and bad SSD model.
+The bottleneck for your hardware is mostly disk space. Syncing the Gnosis blockchain is very input/output intensive and requires substantial free storage. It is best to have a solid-state drive (SSD) with significant free space to spare even after synchronization. Refer to [this post](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) for good and bad SSD models.
 
 The size of the database and speed of the initial synchronization depends on the chosen client, its configuration and sync strategy.
 
@@ -102,34 +100,33 @@ Also make sure your internet connection is not limited by a bandwidth cap. It's 
 
 **Operating System**
 
-All clients support major operating systems - Linux, MacOS, Windows. This means you can run nodes on regular desktop or server machines with the operating system (OS) that suits you the best. Make sure your OS is up to date to avoid potential issues and security vulnerabilities.
+Most clients publish binaries for Linux and macOS, and many also support Windows. Linux is the most common choice for production node operation. Always verify OS support in each client's documentation and keep systems up to date for security.
 
-**Requirements**
+**Baseline Requirements**
 
 - CPU with at least 4 threads
 - At least 16 GB of RAM
 - NVMe SSD (preferred) or SATA SSD
 
-Requirements vary client to client, for more detail see the associated system requirements below.
+Requirements vary by client and release. Use the client-specific requirement pages below as the source of truth.
 
-| Execution Layer |                                                                                                                          |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Execution Layer | Requirements |
+| --------------- | ------------ |
 | Nethermind      | [Nethermind: System Requirements](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/system-requirements) |
-| Besu            | [Besu: System Requirements](https://besu.hyperledger.org/en/stable/public-networks/get-started/system-requirements/)     |
-| Erigon          | [Erigon: System Requirements](https://github.com/ledgerwatch/erigon#system-requirements)                                 |
-| Geth            | [Geth: Hardware](https://geth.ethereum.org/docs/interface/hardware)                                                      |
+| Erigon          | [Erigon: System Requirements](https://github.com/erigontech/erigon#system-requirements)                                 |
+| Reth            | [Reth: System Requirements](https://reth.rs/run/system-requirements/)                                                    |
+| Geth            | [Geth: Hardware Requirements](https://geth.ethereum.org/docs/getting-started/hardware-requirements)                     |
 
-**Gnosis Chain only supports Nethermind and Erigon at the moment.**
+Supported execution clients on Gnosis Chain include Nethermind, Erigon, Reth, and Geth.
 
-| Consensus Layer |                                                                                                                                       |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Consensus Layer | Requirements |
+| --------------- | ------------ |
 | Lighthouse      | [Lighthouse: System Requirements](https://lighthouse-book.sigmaprime.io/installation.html#recommended-system-requirements)            |
 | Lodestar        | [Lodestar: Specifications](https://chainsafe.github.io/lodestar/#specifications)                                                      |
 | Nimbus          | [Nimbus: Hardware](https://nimbus.guide/hardware.html)                                                                                |
-| Teku            | TBD                                                                                                                                   |
-| Prysm           | [Prysm: Prerequisites](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/#step-1-review-prerequisites-and-best-practices) |
+| Teku            | [Teku: System Requirements](https://docs.teku.consensys.io/get-started/system-requirements)                                          |
 
-**Gnosis Chain doesn't support Prysm at the moment.**
+Supported consensus clients on Gnosis Chain include Lighthouse, Lodestar, Nimbus, and Teku.
 
 Check out [Rocketpool's excellent guide](https://docs.rocketpool.net/guides/node/local/hardware.html) that explains hardware requirements for running a node.
 
@@ -212,7 +209,9 @@ Here are the release pages of clients where you can find their pre-built binarie
 **Execution clients**
 
 - [Nethermind](https://downloads.nethermind.io/)
-- [Erigon](https://github.com/ledgerwatch/erigon/releases)
+- [Erigon](https://github.com/erigontech/erigon/releases)
+- [Geth](https://github.com/gnosischain/go-ethereum/releases)
+- [Reth](https://github.com/gnosischain/reth_gnosis)
 
 **Consensus clients**
 
@@ -306,9 +305,9 @@ The consensus client must be started with the right port configuration to establ
 
 The consensus client also needs the path to the execution client's `jwtsecret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
-If you plan to run a validator, make sure to add a configuration flag specifying the Gnosis address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes an Gnosis address as an argument.
+If you plan to run a validator, make sure to add a configuration flag specifying the Gnosis address of the fee recipient. This is where execution-layer rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes a Gnosis address as an argument.
 
-When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://checkpoint.gnosischain.com/).
+When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://checkpoint.gnosischain.com).
 
 #### **Running a consensus client**
 
@@ -316,8 +315,8 @@ When starting a Beacon Node on a testnet, you can save significant syncing time 
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
 
 ```bash
-    ./lighthouse \
-    --network gnosis beacon_node \
+    ./lighthouse beacon_node \
+    --network gnosis \
     --datadir=data \
     --http \
     --execution-endpoint http://localhost:8551 \
@@ -331,16 +330,16 @@ Before running Lighthouse, learn more on how to install and configure it in [Lig
 
 ```bash
 ./lodestar beacon \
---network gnosis \
---dataDir="/data"
---jwt-secret /path/to/jwtsecret \
---eth1.enabled=true \
+--network=gnosis \
+--dataDir="/data" \
+--jwtSecret=/path/to/jwtsecret \
 --execution.urls="http://127.0.0.1:8551" \
+--checkpointSyncUrl="https://checkpoint.gnosischain.com"
 ```
 
 **Running Teku**
 
-[Teku](https://docs.teku.consensys.net/)
+[Teku](https://docs.teku.consensys.io/)
 
 ```bash
 teku \
@@ -356,7 +355,7 @@ A consensus client serves as a Beacon Node for validators to connect. Each conse
 
 Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Gnosis network. This requires only 1 GNO. Check out how to [deposit validators](/node/manual/validator/deposit).
 
-If you don't want to run your own node but interested in staking your GNO to earn fee, look into [liquid staking](/tools/beacon-chain/liquid-staking) for an overview about staking options.
+If you don't want to run your own node but interested in staking your GNO to earn fee, look into [liquid staking](/node/participate-validator/liquid-staking) for an overview about staking options.
 
 ## Reference
 

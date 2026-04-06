@@ -14,66 +14,38 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-- Go to the [lighhouse releases page](https://github.com/sigp/lighthouse/releases) and copy the url of the latest release based on your OS version.
+- Go to the [Lighthouse releases page](https://github.com/sigp/lighthouse/releases) and copy the URL of the latest release for your OS/architecture.
 
-- Download the lighthouse-VERSION-ARQ.tar.gz binary.
+- Download the `lighthouse-<VERSION>-<ARCH>.tar.gz` binary.
     ```bash
     wget [URL_FROM_PREVIOUS_STEP]
     ```
 
-- Extract the downloaded file
+- Extract the downloaded file.
     ```bash
-    tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus
+    tar -xvf [FILE_NAME] --directory consensus
     ```
 
-- Get into the folder
+- Get into the folder.
     ```bash
     cd consensus
     ```
 
- - Execute Lighthouse
+- Execute Lighthouse beacon node.
     ```bash
-    ./lighthouse \
-    --network gnosis beacon_node \
-    --datadir=data \
-    --http \
-    --execution-endpoint http://localhost:8551 \
-    --execution-jwt ../jwtsecret/jwt.hex \
-    --checkpoint-sync-url "https://checkpoint.gnosischain.com"
+    ./lighthouse beacon_node \
+      --network gnosis \
+      --datadir=data \
+      --http \
+      --execution-endpoint=http://localhost:8551 \
+      --execution-jwt=../jwtsecret/jwt.hex \
+      --checkpoint-sync-url=https://checkpoint.gnosischain.com
     ```
 
 </TabItem>
 <TabItem value="win">
 
-Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
-
-- Go to the [lighhouse releases page](https://github.com/sigp/lighthouse/releases) and copy the url of the latest release based on your OS version.
-
-- Download the lighthouse-VERSION-ARQ.tar.gz binary.
-    ```bash
-    wget [URL_FROM_PREVIOUS_STEP]
-    ```
-
-- Extract the downloaded file
-    ```bash
-    tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus
-    ```
-
-- Get into the folder
-    ```bash
-    cd consensus
-    ```
-
- - Execute Lighthouse
-    ```bash
-    ./lighthouse \
-    --network gnosis beacon_node \
-    --datadir=data \
-    --http \
-    --execution-endpoint http://localhost:8551 \
-    --execution-jwt ../jwtsecret/jwt.hex \
-    --checkpoint-sync-url "https://checkpoint.gnosischain.com"
-    ```
+Lighthouse only runs on Linux. To run it on Windows, [install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the same steps in the WSL terminal.
 
 </TabItem>
 </Tabs>
@@ -87,74 +59,37 @@ Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows w
 ]}>
 <TabItem value="others">
 
-- Go to the [lighhouse releases page](https://github.com/sigp/lighthouse/releases) and copy the url of the latest release based on your OS version.
+- Go to the [Lighthouse releases page](https://github.com/sigp/lighthouse/releases) and copy the URL of the latest release for your OS/architecture.
 
-- Download the lighthouse-VERSION-ARQ.tar.gz binary.
+- Download the `lighthouse-<VERSION>-<ARCH>.tar.gz` binary.
     ```bash
     wget [URL_FROM_PREVIOUS_STEP]
     ```
 
-- Extract the downloaded file
+- Extract the downloaded file.
     ```bash
-    tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus
+    tar -xvf [FILE_NAME] --directory consensus
     ```
 
-- Get into the folder
+- Get into the folder.
     ```bash
     cd consensus
     ```
-- Clone Gonsis Chain configuration repository from github
-    ```bash
-    git clone https://github.com/gnosischain/configs.git
-    ```
 
-
-- Run Lighthouse beacon node
+- Run Lighthouse beacon node.
     ```bash
-    ./lighthouse bn \
+    ./lighthouse beacon_node \
       --network chiado \
-      --execution-endpoints=http://localhost:8551 \
+      --datadir=data \
+      --execution-endpoint=http://localhost:8551 \
       --execution-jwt=../jwtsecret/jwt.hex \
-      --checkpoint-sync-url https://checkpoint.chiadochain.net \
-      --disable-deposit-contract-sync
+      --checkpoint-sync-url=https://checkpoint.chiadochain.net
     ```
 
 </TabItem>
 <TabItem value="win">
 
-Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
-
-- Go to the [lighhouse releases page](https://github.com/sigp/lighthouse/releases) and copy the url of the latest release based on your OS version.
-
-- Download the lighthouse-VERSION-ARQ.tar.gz binary.
-    ```bash
-    wget [URL_FROM_PREVIOUS_STEP]
-    ```
-
-- Extract the downloaded file
-    ```bash
-    tar -xvf lighthouse-VERSION-ARQ.tar.gz --directory  consensus
-    ```
-
-- Get into the folder
-    ```bash
-    cd consensus
-    ```
-- Clone Gonsis Chain configuration repository from github
-    ```bash
-    git clone https://github.com/gnosischain/configs.git
-    ```
-
-
-- Run Lighthouse beacon node
-    ```bash
-    ./lighthouse bn \
-      --network chiado \
-      --execution-endpoints=http://localhost:8551 \
-      --execution-jwt=../jwtsecret/jwt.hex \
-      --checkpoint-sync-url https://checkpoint.chiadochain.net \
-      --disable-deposit-contract-sync
-    ```
+Lighthouse only runs on Linux. To run it on Windows, [install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the same steps in the WSL terminal.
 
 </TabItem>
 </Tabs>

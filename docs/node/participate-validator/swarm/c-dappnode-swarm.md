@@ -22,8 +22,8 @@ You will also need a Gnosis RPC Endpoint (such as Nethermind xDAI) for your bee 
 
 ### Tokens
 
-* A small amount of [xDAI](https://docs.ethswarm.org/docs/learn/tokens#xdai) to pay for Gnosis Chain transactions, 0.1 xDAI should be enough
-* [xBZZ](https://docs.ethswarm.org/docs/learn/tokens#xbzz) (BZZ on Gnosis Chain) is required for funding the chequebook, buying stamps for storage and staking (minimum 10 xBZZ) 
+* A small amount of [xDAI](https://docs.ethswarm.org/docs/references/tokens#xdai) to pay for Gnosis Chain transactions, 0.1 xDAI should be enough
+* [xBZZ](https://docs.ethswarm.org/docs/references/tokens#xbzz) (BZZ on Gnosis Chain) is required for funding the chequebook, buying stamps for storage and staking (minimum 10 xBZZ) 
 
 ## Full node setup process 
 

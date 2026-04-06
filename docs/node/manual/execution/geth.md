@@ -4,7 +4,7 @@ title: Geth
 
 # Geth
 
-This is the most popular and majority Ethereum Client implementation written in Go, [Geth](https://geth.ethereum.org/) fully open source and licensed under the GNU LGPL v3.
+This is the most popular and majority Ethereum Client implementation written in Go, [Geth](https://geth.ethereum.org/) fully open source and is now ported for Gnosis chain.
 
 Repository: [https://github.com/gnosischain/go-ethereum](https://github.com/gnosischain/go-ethereum) 
 

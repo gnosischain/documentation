@@ -12,11 +12,11 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-- Install and build [Erigon](https://github.com/ledgerwatch/erigon#documentation).
+- Install and build [Erigon](https://github.com/erigontech/erigon#installation).
 
 ```shell
 cd execution
-git clone --branch stable --single-branch https://github.com/ledgerwatch/erigon.git
+git clone https://github.com/erigontech/erigon.git
 cd erigon
 make erigon
 ```
@@ -27,11 +27,10 @@ make erigon
 ./build/bin/erigon \
     --chain=gnosis \
     --datadir=/data \
-    --authrpc.jwtsecret=../../jwtsecret/jwt.hex \
-    --prune=htcr
+    --authrpc.jwtsecret=../../jwtsecret/jwt.hex
 ```
 
-- Erigon run [Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) by default. To run a pruned node, add `--prune=htcr`.
+- Erigon uses `--prune.mode=full` by default. If you need archive data or minimal disk usage, set `--prune.mode=archive` or `--prune.mode=minimal` before the first start.
 
 </TabItem>
 <TabItem value="win">
@@ -40,7 +39,7 @@ make erigon
 
 ```shell
 cd execution
-git clone --branch stable --single-branch https://github.com/ledgerwatch/erigon.git
+git clone https://github.com/erigontech/erigon.git
 cd erigon
 make erigon
 ```
@@ -69,7 +68,7 @@ make erigon
 
 ```shell
 cd execution
-git clone --branch stable --single-branch https://github.com/ledgerwatch/erigon.git
+git clone https://github.com/erigontech/erigon.git
 cd erigon
 make erigon
 ```
@@ -90,7 +89,7 @@ make erigon
 
 ```shell
 cd execution
-git clone --branch stable --single-branch https://github.com/ledgerwatch/erigon.git
+git clone https://github.com/erigontech/erigon.git
 cd erigon
 make erigon
 ```

@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="win">
 
 :::info
-Lighthouse only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
+Lighthouse only runs on Linux. To run it on Windows, [install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions in the WSL terminal.
 :::
 
 </TabItem>
@@ -34,7 +34,7 @@ echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/password.txt
 * Import the validator keys using lighthouse:
 
 ```shell
-./lighthouse account_manager validator import \
+./lighthouse account validator import \
     --network gnosis \
     --password-file keystores/password.txt \
     --reuse-password \

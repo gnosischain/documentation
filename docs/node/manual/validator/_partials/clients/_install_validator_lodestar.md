@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="win">
 
 :::info
-Lodestar only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
+Lodestar supports Windows, but for consistency with the rest of this guide we recommend [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 :::
 
 </TabItem>
@@ -40,17 +40,17 @@ You can import the keys when starting the validator.
     --network=gnosis \
     --importKeystores=keystores \
     --importKeystoresPassword=keystores/password.txt \
-    --dataDir=/data/validators \ 
+    --dataDir=validators \
 # highlight-start
-    --suggestedFeeRecipient=${FEE_RECIPIENT} \ 
-    --graffiti=${GRAFFITI} 
+    --suggestedFeeRecipient=${FEE_RECIPIENT} \
+    --graffiti=${GRAFFITI}
 # highlight-end
 ```
 
 Replace `suggestedFeeRecipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
-Learn more about [suggestedFeeRecipient](https://chainsafe.github.io/lodestar/validator-management/vc-configuration/#configuring-the-fee-recipient-address) flag in Lodestar docs.
+Learn more about [suggestedFeeRecipient](https://chainsafe.github.io/lodestar/run/validator-management/vc-configuration/#configuring-the-fee-recipient-address) flag in Lodestar docs.
 
-Replace `graffiti` with your own [graffiti](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#-graffiti). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+Replace `graffiti` with your own [graffiti](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli/#-graffiti). It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
 
 

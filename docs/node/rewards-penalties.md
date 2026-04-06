@@ -18,17 +18,15 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 ### Current Yield
 
 - The current yield on GNO staking can be found in this [Dune Dashboard](https://dune.com/gnosischain_team/gnosischain). and [Gnosis Metrics](https://www.gnosismetrics.com/).
-- As of Aug 2023, GNO staking has a ~14% yield.
+- Yield changes over time with the size and performance of the active validator set. Always use the live dashboards above instead of a fixed percentage.
 
 ### Rewards Calculation:
 
-- **Block Proposals**: The reward for proposing a block consists of a base reward and an additional reward proportional to the validator's index. While the base reward remains constant, the additional reward decreases as the validator's index increases, ensuring equal block proposal opportunities for all validators.
+- **Consensus rewards** come from duties such as attestations, block proposals, and sync committee participation.
+- **Execution rewards** (priority fees and MEV where applicable) are paid to the configured fee recipient when your validator proposes a block.
+- **Penalties** are applied for missed duties and for slashable behavior.
 
-Example: A validator with index 10 proposes a block. The base reward for proposing a block is 100, and the additional reward is 10 / 100 = 0.1. The total reward for the validator is 100 + 0.1 = 100.1.
-
-- **Block Attestations**: The reward for attesting to a block features a base reward that diminishes over time. Initially set at 100%, the base reward decreases by 1% for every 1000 slots, maintaining the attractiveness of block proposal rewards even as the number of validators grows.
-
-Example: A validator with index 100 attests to a block. The base reward for attesting to a block is 100, and the additional reward is 99%. The total reward for the validator is 100 \* 0.99 = 99.
+For practical estimates, use live explorer and dashboard data rather than static examples.
 
 ### Understanding Gas Consumption and Transaction Fees
 

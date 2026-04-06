@@ -15,137 +15,66 @@ import TabItem from '@theme/TabItem';
 <TabItem value="others">
 
 ## Prerequisites
-1. Java 11+
-
+1. Java runtime compatible with the current Teku release. See [Teku system requirements](https://docs.teku.consensys.io/get-started/system-requirements).
 
 ## Install and Run
 
-- Go to the [Teku release page](https://github.com/ConsenSys/teku/releases) and copy the url of the binary distribution under **Downloads** section.
+- Go to the [Teku release page](https://github.com/ConsenSys/teku/releases) and copy the URL for your OS/architecture under **Downloads**.
 
-
-- Download the teku Source code .tar.gz binary.
+- Download the Teku archive.
     ```bash
     wget [URL_FROM_PREVIOUS_STEP]
     ```
 
-- Extract the downloaded file and move under consensus directory
+- Extract the downloaded file under the `consensus` directory.
     ```bash
-    tar -xvf VERSION.tar.gz --directory  consensus
+    tar -xvf [FILE_NAME].tar.gz --directory consensus
     ```
 
-- Get into the teku folder
+- Get into the Teku folder.
     ```bash
-    cd consensus && cd teku-${version} 
+    cd consensus && cd teku-[VERSION]
     ```
 
-Your repo will look like this
+Check that Teku is installed correctly:
 
-
-
+```bash
+./bin/teku --help
 ```
-📂gnosis
-├── 📂 jwtsecret/
-├── 📂 execution/
-└── 📂 consensus/
-    ├── 📂 teku-${version}/
-    ├── 📂 data/
-    ├── 📂 keystores/
-    └── 📂 validators/
-```
-
-If you're installing on macOS with Homebrew, check out [here](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Installation-Options/Install-Binaries/#macos-with-homebrew).
-
-Check that you are installing correctly by running `./bin/teku --help'
-
 
 :::tip
-You can run both beacon and validator with a single command. If you wish to run with a single command, skip to [step 4: Run a validator](../../README.md#step-4-run-a-validator).
+You can run both beacon and validator with a single command. If you want this mode, continue to [Step 4: Run a validator](../../README.md#step-4-run-a-validator).
 :::
 
-- Execute beacon node(Optional)
+- Execute beacon node (optional):
 
 ```shell
 ./bin/teku \
-    --network=gnosis    \
+    --network=gnosis \
     --ee-endpoint=http://localhost:8551 \
 # highlight-next-line
-    --ee-jwt-secret-file=${PATH_TO_JWT_SECRET}   \
-    --metrics-enabled=true  \
+    --ee-jwt-secret-file=../jwtsecret/jwt.hex \
+    --metrics-enabled=true \
     --rest-api-enabled=true \
 # highlight-next-line
-    --initial-state=${checkpoint url} \
+    --checkpoint-sync-url=https://checkpoint.gnosischain.com
 ```
 
-Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
+You can also use `--initial-state` if you already have a checkpoint state file.
 
 </TabItem>
 
 <TabItem value="win">
 
 ## Prerequisites
-1. Java 11+
+1. Java runtime compatible with the current Teku release. See [Teku system requirements](https://docs.teku.consensys.io/get-started/system-requirements).
 2. [Microsoft Visual C++ 2010 security update](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 
 ## Install and Run
 
-- Go to the [Teku release page](https://github.com/ConsenSys/teku/releases) and copy the url of the binary distribution under **Downloads** section.
-
-
-- Download the teku Source code .tar.gz binary.
-    ```bash
-    wget [URL_FROM_PREVIOUS_STEP]
-    ```
-
-- Extract the downloaded file and move under consensus directory
-    ```bash
-    tar -xvf VERSION.tar.gz --directory  consensus
-    ```
-
-- Get into the teku folder
-    ```bash
-    cd consensus && cd teku-${version} 
-    ```
-
-Your repo will look like this
-
-
-
-```
-📂gnosis
-├── 📂 jwtsecret/
-├── 📂 execution/
-└── 📂 consensus/
-    ├── 📂 teku-${version}/
-    ├── 📂 data/
-    ├── 📂 keystores/
-    └── 📂 validators/
-```
-
-If you're installing on macOS with Homebrew, check out [here](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Installation-Options/Install-Binaries/#macos-with-homebrew).
-
-Check that you are installing correctly by running `bin\teku --help'
-
-
-:::tip
-You can run both beacon and validator with a single command. If you wish to run with a single command, skip to [step 4: Run a validator](../../README.md#step-4-run-a-validator).
-:::
-
-- Execute beacon node(Optional)
-
-
-```shell
-./bin/teku \
-    --network=gnosis    \
-    --ee-endpoint=http://localhost:8551 \
-# highlight-next-line
-    --ee-jwt-secret-file=${PATH_TO_JWT_SECRET}   \
-    --metrics-enabled=true  \
-    --rest-api-enabled=true \
-# highlight-next-line
-    --initial-state=${checkpoint url} \
-```
-
-Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
+- Go to the [Teku release page](https://github.com/ConsenSys/teku/releases) and copy the URL for your OS/architecture under **Downloads**.
+- Download and extract Teku in your `consensus` directory.
+- Run the same beacon command shown above from your Windows shell (or from WSL).
 
 </TabItem>
 </Tabs>
@@ -159,12 +88,18 @@ Get the latest checkpoint url at https://checkpoint.gnosis.gateway.fm/.
 ]}>
 <TabItem value="others">
 
-Teku doesn't support Chiado at the moment.
+Use the same setup as Gnosis and replace:
+
+- `--network=gnosis` with `--network=chiado`
+- `--checkpoint-sync-url=https://checkpoint.gnosischain.com` with `--checkpoint-sync-url=https://checkpoint.chiadochain.net`
 
 </TabItem>
 <TabItem value="win">
 
-Teku doesn't support Chiado at the moment.
+Use the same setup as Gnosis and replace:
+
+- `--network=gnosis` with `--network=chiado`
+- `--checkpoint-sync-url=https://checkpoint.gnosischain.com` with `--checkpoint-sync-url=https://checkpoint.chiadochain.net`
 
 </TabItem>
 </Tabs>

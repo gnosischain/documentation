@@ -4,14 +4,14 @@ title: Voluntary Exit
 
 If you decide to stop validating and disable your node, you can initiate a voluntary exit. This will freeze your balance at its current value (rewards and/or penalties will no longer accrue).
 
-If you initiates a voluntary exit, your validator will receive the full staked funds to the withdrawal address, provided that the validator has [withdrawal credentials](withdrawals.md#check-withdrawal-credential) of type `0x01`.
+If you initiate a voluntary exit, your validator can fully withdraw to the configured execution withdrawal address once exit processing is complete. See [validator withdrawals](withdrawals.md) for withdrawal credential details.
 
 Voluntary exit procedures vary depending on your client.
 
 :::caution
 Exits are non-reversible; once you have exited you cannot restart your validator.
 
-It is recommended to update your withdrawal credentials to the `0x01` type before exiting your validator. Updating your withdrawal credentials later, when your node is stopped, will be more difficult. [withdrawal credentials](withdrawals.md#check-withdrawal-credential). 
+It is recommended to set execution withdrawal credentials before exiting your validator. Updating credentials later, after your node is stopped, can be more difficult. See [validator withdrawals](withdrawals.md). 
 :::
 
 ### Dappnode
@@ -38,7 +38,7 @@ Follow the syntax of the Lodestar CLI commands and their options.
 validator voluntary-exit --network gnosis --pubkeys 0xF00
 ```
 
-- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#validator-voluntary-exit).
+- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli/#validator-voluntary-exit).
 
 ### Nimbus
 
@@ -50,16 +50,6 @@ build/nimbus_beacon_node deposits exit --data-dir=build/data/shared_gnosis_0 --v
 
 - For more info, see the Nimbus [Perform a voluntary exit](https://nimbus.guide/voluntary-exit.html) docs.
 
-### Prysm
-
-Use [prysmctl tool](https://prysm.offchainlabs.com/docs/configure-prysm/prysmctl/) to voluntarily exit your validator.
-
-```bash
-prysmctl validator exit --wallet-dir=<path/to/wallet> --beacon-rpc-provider=<127.0.0.1:4000>
-```
-
-- For more info, see the Prysm [Exit your validator](https://prysm.offchainlabs.com/docs/manage-validator/exiting-a-validator/) doc.
-
 ### Teku
 
 Use the voluntary-exit subcommand to initiate a voluntary exit for specified validators.
@@ -69,4 +59,4 @@ teku voluntary-exit --beacon-node-api-endpoint=http://consensus:5051 \
 --validator-keys=validator/keys/validator_ABC.json:validator/passwords/validator_ABC.txt
 ```
 
-- For more info, see the Teku [Voluntarily exit a validator](https://docs.teku.consensys.net/how-to/voluntarily-exit#:~:text=A%20voluntary%20exit%20is%20when,successfully%20exited%20to%20avoid%20penalties.) docs.
+- For more info, see the Teku [Voluntarily exit a validator](https://docs.teku.consensys.io/how-to/voluntarily-exit) docs.
