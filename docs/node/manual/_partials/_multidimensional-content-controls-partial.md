@@ -31,13 +31,13 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Execution client:', value: 'label'},
   {label: 'Nethermind', value: 'nethermind'},
   {label: 'Erigon', value: 'erigon'},
-  {label: 'Besu', value: 'besu'},
-  {label: 'Geth', value: 'geth'},
+  {label: 'Reth', value: 'reth'},
+  {label: 'Geth', value: 'geth'}
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="nethermind"></TabItem>
   <TabItem value="erigon"></TabItem>
-  <TabItem value="besu"></TabItem>
+  <TabItem value="reth"></TabItem>
   <TabItem value="geth"></TabItem>
 </Tabs>
 
@@ -46,16 +46,13 @@ import {MultiDimensionalContentWidget} from '@site/src/components/MultiDimension
   {label: 'Lighthouse', value: 'lighthouse'},
   {label: 'Lodestar', value: 'lodestar'},
   {label: 'Teku', value: 'teku'},
-  {label: 'Nimbus', value: 'nimbus'},
-  {label: 'Prysm', value: 'prysm'}
+  {label: 'Nimbus', value: 'nimbus'}
   ]}>
   <TabItem className="unclickable-element" value="label"></TabItem>
   <TabItem value="lighthouse"></TabItem>
   <TabItem value="lodestar"></TabItem>
   <TabItem value="teku"></TabItem>
   <TabItem value="nimbus"></TabItem>
-  <TabItem value="prysm"></TabItem>
 </Tabs>
 
-<p className="unsupported">* disabled options: unsupported clients</p>
 </div>

@@ -31,8 +31,8 @@ Including the folders from your Execution and Consensus clients, your folder str
 ├── jwtsecret/
 ├── execution/
 └── consensus/
-    ├── beacon/
-    └── validators/
+    ├── data/
+    └── validator/
         ├── keys/
         ├── passwords/
         └── slashprotection/
@@ -40,7 +40,7 @@ Including the folders from your Execution and Consensus clients, your folder str
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the following commands to your `consensus` container.
+Modify your Compose file with your favorite text editor and add the following commands to your `consensus` container.
 
 ```
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
@@ -103,7 +103,7 @@ services:
       --metrics-host-allowlist=*
       --metrics-interface=0.0.0.0
       --metrics-port=8008
-      --initial-state=https://checkpoint.gnosis.gateway.fm//eth/v2/debug/beacon/states/finalized
+      --checkpoint-sync-url=https://checkpoint.gnosischain.com
 # highlight-start
       --validators-proposer-default-fee-recipient=$FEE_RECIPIENT
       --validator-keys=/data/validator/keys:/data/validator/passwords
@@ -129,14 +129,14 @@ FEE_RECIPIENT=0x0000000000000000000000000000000000000000
 GRAFFITI=gnosischain/teku
 ```
 Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
-Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-proposer-default-fee-recipient) flag in Teku docs.
+Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.io/reference/cli#validators-proposer-default-fee-recipient) flag in Teku docs.
 
-Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored.
+Replace [`validator-keys`](https://docs.teku.consensys.io/reference/cli#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored.
 
-Replace [`validators-graffiti`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+Replace [`validators-graffiti`](https://docs.teku.consensys.io/reference/cli#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
 
-Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).
+Learn more about the CLI commands and their options [here](https://docs.teku.consensys.io/reference/cli).
 
 
 
@@ -146,7 +146,7 @@ Add your keystores in `/home/$USER/gnosis/consensus/validator/keys/` and their p
 
 :::tip
 
-When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validator-keys))
+When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.io/reference/cli#validator-keys))
 
 :::
 
@@ -157,8 +157,8 @@ When specifying directories, Teku expects to find identically named keystore and
 ├── jwtsecret/
 ├── execution/
 └── consensus/
-    ├── beacon/
-    └── validators/
+    ├── data/
+    └── validator/
 # highlight-start
         ├── keys/
         │   ├── keystore-001.json
@@ -179,7 +179,7 @@ When the Teku `consensus` container starts, it will search the directories for k
 
 :::tip
 
-When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validator-keys))
+When specifying directories, Teku expects to find identically named keystore and password files. For each keystore file a corresponding password txt file is required. This is the case even if the password is the same for each validator. For example `validator_217179e.json` and `validator_217179e.txt`. ([source](https://docs.teku.consensys.io/reference/cli#validator-keys))
 
 :::
 
@@ -190,8 +190,8 @@ Restart the execution layer client and consensus layer client listed in the comp
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose down
-docker-compose up -d
+docker compose down
+docker compose up -d
 ```
 
 
@@ -217,11 +217,11 @@ _See section **Fund Validator**_
 
 ### 9. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

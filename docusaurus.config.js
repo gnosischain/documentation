@@ -130,7 +130,7 @@ const config = {
           {
             href: "https://www.notion.so/gnosischain/The-dApp-Stack-1c03b92f9cd080039675db6ec9abc9c8",
             position: "left",
-            label: "dApp Stack",
+            label: "Open Internet Kit",
           },
           {
             href: "https://twitter.com/gnosischain",

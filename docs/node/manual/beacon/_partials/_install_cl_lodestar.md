@@ -14,94 +14,26 @@ import TabItem from '@theme/TabItem';
 ]}>
 <TabItem value="others">
 
-- Clone the repo locally
+- Download Lodestar from the [official release page](https://github.com/ChainSafe/lodestar/releases) and extract it in your `consensus` directory.
 
-```shell
-git clone https://github.com/chainsafe/lodestar.git
-```
-
-- Install and build all the packages 
-```shell
-cd lodestar
-yarn install
-yarn build
-```
-
-Your repo will look like this
-```
-📂gnosis
-├── 📂 jwtsecret/
-├── 📂 execution/
-└── 📂 consensus/
-    ├── 📂 lodestar/
-    ├── 📂 data/
-    ├── 📂 keystores/
-    └── 📂 validators/
-```
-
-:::tip
-Check that you are install correctly by running `./lodestar --help'
-:::
-
- - Execute Lodestar Beacon Chain
-    ```bash 
-    ./lodestar beacon   \
-      --network=gnosis  \
-      --execution.urls=http://localhost:8551    \
-      --jwt-secret=../../jwtsecret/jwt.hex \
-      --metrics=true    \
-      --metrics.port=8008   \
-      --checkpointSyncUrl=https://checkpoint.gnosischain.com/ 
+- Run Lodestar beacon node.
+    ```bash
+    ./lodestar beacon \
+      --network=gnosis \
+      --dataDir=./data \
+      --execution.urls=http://localhost:8551 \
+      --jwtSecret=../jwtsecret/jwt.hex \
+      --metrics=true \
+      --metrics.port=8008 \
+      --checkpointSyncUrl=https://checkpoint.gnosischain.com
     ```
-
-
 
 </TabItem>
 <TabItem value="win">
 
-Lodestar only runs on Linux. To run it on Windows, [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and follow the instructions on the WSL terminal.
+Lodestar supports Windows, but for consistency with the rest of this guide we recommend [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-- Clone the repo locally
-
-```shell
-git clone https://github.com/chainsafe/lodestar.git
-```
-
-- Install and build all the packages 
-```shell
-cd lodestar
-yarn install
-yarn build
-```
-
-Your repo will look like this
-```
-📂gnosis
-├── 📂 jwtsecret/
-├── 📂 execution/
-└── 📂 consensus/
-    ├── 📂 lodestar/
-    ├── 📂 data/
-    ├── 📂 keystores/
-    └── 📂 validators/
-```
-
-:::tip
-Check that you are install correctly by running `./lodestar --help'
-:::
-
- - Execute Lodestar Beacon Chain
-    ```bash 
-    ./lodestar beacon   \
-      --network=gnosis  \
-      --execution.urls=http://localhost:8551    \
-      --jwt-secret=../../jwtsecret/jwt.hex \
-      --metrics=true    \
-      --metrics.port=8008   \
-      --checkpointSyncUrl=https://checkpoint.gnosischain.com/ 
-    ```
-
-
+Run the same command from the WSL terminal.
 
 </TabItem>
 </Tabs>
@@ -115,12 +47,18 @@ Check that you are install correctly by running `./lodestar --help'
 ]}>
 <TabItem value="others">
 
-Lodestar doesn't support Chiado at the moment.
+Use the same setup as Gnosis and replace:
+
+- `--network=gnosis` with `--network=chiado`
+- `--checkpointSyncUrl=https://checkpoint.gnosischain.com` with `--checkpointSyncUrl=https://checkpoint.chiadochain.net`
 
 </TabItem>
 <TabItem value="win">
 
-Lodestar doesn't support Chiado at the moment.
+Use the same setup as Gnosis and replace:
+
+- `--network=gnosis` with `--network=chiado`
+- `--checkpointSyncUrl=https://checkpoint.gnosischain.com` with `--checkpointSyncUrl=https://checkpoint.chiadochain.net`
 
 </TabItem>
 </Tabs>

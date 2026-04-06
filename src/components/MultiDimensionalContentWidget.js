@@ -73,10 +73,10 @@ export const MultiDimensionalContentWidget = () => {
 
 		if (isSelectedByText('Nethermind'))
 			selectedEL = "Nethermind";
-		else if (isSelectedByText('Besu'))
-			selectedEL = "Besu";
 		else if (isSelectedByText('Erigon'))
 			selectedEL = "Erigon";
+		else if (isSelectedByText('Reth'))
+			selectedEL = "Reth";
 		else if (isSelectedByText('Geth'))
 			selectedEL = "Geth";
 
@@ -86,8 +86,6 @@ export const MultiDimensionalContentWidget = () => {
 			selectedCL = "Lodestar";
 		else if (isSelectedByText('Nimbus'))
 			selectedCL = "Nimbus";
-		else if (isSelectedByText('Prysm'))
-			selectedCL = "Prysm";
 		else if (isSelectedByText('Teku'))
 			selectedCL = "Teku";
 
@@ -120,11 +118,6 @@ export const MultiDimensionalContentWidget = () => {
 				}
 			});
 
-			//Disable unsupported clients
-			disableByText("Besu")
-			disableByText("Geth")
-			disableByText("Prysm")
-			
 			stashConfig();
 		}, 100)
 	}

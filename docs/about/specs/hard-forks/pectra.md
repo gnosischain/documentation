@@ -23,7 +23,7 @@ The table below lists differences if any.
 | [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840): Add blob schedule to EL config files      | EL      | Not modified
 | [EIP-4844-pectra](https://eips.ethereum.org/EIPS/eip-4844): Collect Blob Gas Fee               | EL      | Added
 
-* See [Differences with Ethereum mainnet](#differences-with-ethereum-mainnet)
+* Differences with Ethereum mainnet are shown in the table above.
 
 
 

@@ -121,7 +121,7 @@ Historically, deposits on the Beacon Chain were made with a token called `mGNO` 
 
 :::
 
-For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about sGNO and rGNO tokens, please consult the [Stakewise](/tools/beacon-chain/liquid-staking#tokens-sgno--rgno) page.
+For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about sGNO and rGNO tokens, please consult the [Stakewise](/node/participate-validator/liquid-staking) page.
 
 ### GnosisDAO Governance
 
@@ -132,4 +132,3 @@ For those who prefer not to manage the infrastructure themselves, liquid staking
 ## GNO Token Audit
 
 - [GNO Token v2.0.0 Audit](https://hackmd.io/@verilog/gno-token-v2-audit) by Verilog Solutions
-

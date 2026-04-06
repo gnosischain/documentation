@@ -32,7 +32,7 @@ chown -R 1000:1000 /home/$USER/gnosis/execution
 
 ### 2. Docker Compose
 
-Create a docker-compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
+Create a Compose file with your favorite text editor in `/home/$USER/gnosis/docker-compose.yml`:
 
 ```shell title="/home/$USER/gnosis/docker-compose.yml"
 version: "3"
@@ -82,7 +82,7 @@ networks:
 ```
 
 :::tip Note
-[By default](https://github.com/ledgerwatch/erigon#other-ports), `metrics` and `pprof` use the same port, 6060. Therefore, it is required to configure the port correctly if both options are enabled.
+[By default](https://github.com/erigontech/erigon#other-ports), `metrics` and `pprof` use the same port, `6060`. If both are enabled, configure separate ports.
 :::
 
 ### 3. JWT Secret
@@ -97,7 +97,7 @@ Start the Execution layer client listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 5. Monitor Logs
@@ -110,13 +110,13 @@ import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/\_partial
 
 ### 6. Updating your Node
 
-To update, just pull the new image, then stop and restart your docker-compose file:
+To update, just pull the new image, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```
 
 ## Option 2: Using system process {#as-system-process}
@@ -125,6 +125,8 @@ Refer to [Erigon Guide](../README.md#step-2-run-an-execution-client).
 
 ## Erigon Archive Node
 
-[Archive node](https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/#what-is-an-archive-node) is the default option by Erigon. It takes about 640GB (May 2025) to run a Gnosis Chain Archive node. Please check the [system requirements](https://github.com/ledgerwatch/erigon#system-requirements) of your server before running an archive node.
+Erigon uses `--prune.mode=full` by default. If you need an archive node, set `--prune.mode=archive` before first start.
 
-To run an Erigon pruned node, `--prune=htcr` command need to be added.
+If you want lower disk usage for a validator setup, use `--prune.mode=minimal`.
+
+Always check the latest [system requirements](https://github.com/erigontech/erigon#system-requirements) before choosing a pruning mode.

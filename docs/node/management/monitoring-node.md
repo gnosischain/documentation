@@ -25,31 +25,59 @@ In order to expose your node's clients data to Prometheus, please ensure the exe
 | Client                      | Port |
 | --------------------------- | ---- |
 | Nethermind                  | 6060 |
+| Reth                        | 9001 |
+| Geth                        | 6060 |
+| Erigon                      | 6060 |
 | Lighthouse Beacon           | 5054 |
 | Lighthouse Validator        | 5064 |
 | Lodestar Beacon             | 8008 |
 | Lodestar Validator          | 5064 |
 | Teku (Beacon & Validator)   | 8008 |
 | Nimbus (Beacon & Validator) | 8008 |
-| Prysm Beacon                | 8080 |
-| Prysm Validator             | 8081 |
 
 ### Execution client
 
 <Tabs>
 <TabItem value="Nethermind" label="Nethermind">
- ```
+```shell
 --Metrics.Enabled true
 --Metrics.ExposePort $PORT
 --Metrics.PushGatewayUrl
-
-Refer to https://docs.nethermind.io/nethermind/ethereum-client/metrics/setting-up-local-metrics-infrastracture
 ```
-   
+
+- https://docs.nethermind.io/monitoring/metrics/
+</TabItem>
+
+<TabItem value="Reth" label="Reth">
+```shell
+--metrics 127.0.0.1:$PORT
+```
+
+- Prometheus metrics are served on `/metrics`.
+- https://reth.rs/cli/cli/
+- https://reth.rs/run/faq/ports/
+</TabItem>
+
+<TabItem value="Geth" label="Geth">
+```shell
+--metrics
+--metrics.addr 127.0.0.1
+--metrics.port $PORT
+```
+
+- Prometheus-formatted metrics are served on `/debug/metrics/prometheus`.
+- https://geth.ethereum.org/docs/monitoring/metrics
 </TabItem>
 
 <TabItem value="Erigon" label="Erigon">
-WIP
+```shell
+--metrics
+--metrics.addr=0.0.0.0
+```
+
+- By default, `metrics` uses port `6060`.
+- If `--pprof` is also enabled, configure a separate `--pprof.port`.
+- https://github.com/erigontech/erigon#other-ports
 </TabItem>
 </Tabs>
 
@@ -73,15 +101,16 @@ https://github.com/sigp/lighthouse-metrics
 ```shell
 --metrics=true
 --metrics.port=$PORT
+```
 
-https://chainsafe.github.io/lodestar/logging-and-metrics/prometheus-grafana/
-https://chainsafe.github.io/lodestar/beacon-management/beacon-cli/#-metrics
+- https://chainsafe.github.io/lodestar/run/logging-and-metrics/prometheus-grafana/
+- https://chainsafe.github.io/lodestar/run/beacon-management/beacon-cli/#-metrics
 </TabItem>
 <TabItem value="Teku" label="Teku">
 ```
 --metrics-enabled=true
 ```
-https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/
+https://docs.teku.consensys.io/how-to/monitor/use-metrics
 
 </TabItem>
 <TabItem value="Nimbus" label="Nimbus">
@@ -93,10 +122,6 @@ https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/
 
 https://nimbus.guide/metrics-pretty-pictures.html#simple-metrics
 
-</TabItem>
-<TabItem value="Prysm" label="Prysm">
-
-https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/
 </TabItem>
 
 </Tabs>
@@ -147,8 +172,7 @@ The site is deprecated
 
 #### Execution Layer
 
-- **Gnosisscan**
-  [Gnosisscan](https://gnosisscan.io/) provides data about blocks, transactions, validator's reward on Execution Layer, etc.
+- [Gnosisscan](https://gnosisscan.io/) provides data about blocks, transactions, validator's reward on Execution Layer, etc.
 
   To check your Execution Layer Reward (in xDAI):
 
@@ -156,15 +180,13 @@ The site is deprecated
   2. Click **Validated Blocks**
      ![GnosisScan Block Validated by Validator](../../../static/img/node/monitor-node/gnosisscan-validated-block.png)
 
-- **Blockscout**
-  [Blockscout](https://blockscout.com/xdai/mainnet) is another block explorer similar to Gnosisscan.
+- [Blockscout](https://gnosis.blockscout.com/) is another block explorer similar to Gnosisscan.
 
   ![Blockscout Block Validator by Validator](../../../static/img/node/monitor-node/blockscout-validated-block.png)
 
 #### Consensus Layer
 
-- **Beacon chain explorer**
-  [Beacon chain explorer](https://beaconchain.gnosischain.com/) provides insight on consensus layer such as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
+- [Beacon chain explorer](https://beaconchain.gnosischain.com/) provides insight on consensus layer such as most recent epochs, most recent blocks, and validator's reward on Consensus layer. You can view your validator's info by using its public key or index.
 
   To check your Consensus Layer Reward (in mGNO):
 

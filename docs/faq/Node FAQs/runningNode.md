@@ -90,7 +90,7 @@ title: Running Nodes
 
 20. **Is it worth to be a validator?**
 
-    Regardless of your number of validators by becoming one you're helping to secure and decentralize the network and you can earn a decent APY (who was ~14% as of October 2023 but who depends of the number of validators)
+    Regardless of your number of validators, by becoming one you're helping to secure and decentralize the network. Validator APY changes over time based on validator count and network conditions, so use the live dashboards in the docs for current estimates.
 
 21. **How many deposits per epoch are allowed on GBC? How long would it take to deposit and start validating?**
 

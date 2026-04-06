@@ -6,7 +6,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 # Run Beacon Node: Lodestar
 
 :::caution Version check
-This page's content is up-to-date for [Lodestar v25.5.0](https://github.com/Consensys/teku/releases/tag/25.5.0).
+This page's content is up-to-date for [Lodestar v1.41.1](https://github.com/ChainSafe/lodestar/releases/tag/v1.41.1).
 :::
 
 :::caution Prerequisites
@@ -45,18 +45,18 @@ Gnosis' maintains a repo with sample Lodestar Dockerfiles and configs
 
 We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and avoid long range attacks.
 
-Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/.
+Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com.
 
 ```shell
 # Usage
 $ lodestar beacon
-  --checkpointSyncUrl https://checkpoint.gnosischain.com/
+  --checkpointSyncUrl https://checkpoint.gnosischain.com
 ```
 
 :::info More about Checkpoint Sync
 
-- Lodestar's [Checkpoint Sync docs](https://chainsafe.github.io/lodestar/getting-started/starting-a-node/#checkpoint-sync)
-- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
+- Lodestar's [Checkpoint Sync docs](https://chainsafe.github.io/lodestar/run/beacon-management/starting-a-node#checkpoint-sync)
+- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com)
 
 :::
 
@@ -74,7 +74,7 @@ Images are referenced under the following pattern `chainsafe/lodestar:{image-tag
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
+Modify your Compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
 ```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
@@ -110,11 +110,8 @@ services:
 // highlight-next-line
       --network=gnosis
       --dataDir=/data
-// highlight-next-line
-      --preset=gnosis
-      --eth1=true
       --execution.urls=http://execution:8551
-      --jwt-secret=/jwt.hex
+      --jwtSecret=/jwt.hex
       --logFile=/data/logs/beacon.log
       --logFileLevel=info
       --port=9000
@@ -127,7 +124,7 @@ services:
       --metrics=true
       --metrics.port=5054
 // highlight-next-line
-      --checkpointSyncUrl=https://checkpoint.gnosischain.com/
+      --checkpointSyncUrl=https://checkpoint.gnosischain.com
     logging:
       driver: "local"
 networks:
@@ -141,7 +138,7 @@ Start the consensus layer client listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 4. Monitor Logs
@@ -154,11 +151,11 @@ import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/_partials
 
 ### 5. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

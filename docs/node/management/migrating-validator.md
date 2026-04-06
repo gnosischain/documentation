@@ -19,7 +19,7 @@ Specific instructions will differ depending on the client you are running. In ge
 5. Import initial state and slashing protection history from original validator to the new validator.
 6. Remove account data from original validator, make sure it is not running! This is critical to avoid slashing! Some recommendations:
    - Rename or move keys folder in the original validator to another location.
-   - Stop and remove containers (`docker-compose down`) if you are using Docker.
+   - Stop and remove containers (`docker compose down`) if you are using Docker.
    - Remove old images (`docker rmi $(docker images | grep 'gbc-')` if you used the Launchpad).
 7. Start new validator.
 
@@ -65,7 +65,7 @@ Import an interchange file to the slashing protection DB:
 validator slashing-protection import --network gnosis --file interchange.json
 ```
 
-- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/validator-management/validator-cli/#validator-slashing-protection-import).
+- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli/#validator-slashing-protection-import).
 
 ## Nimbus
 
@@ -87,26 +87,6 @@ build/nimbus_beacon_node slashingdb import path/to/export_dir/slashing-protectio
 
 - For more info, see the Nimbus [Migration](https://nimbus.guide/migration.html) docs.
 
-## Prysm
-
-### Export {#prysm-export}
-
-Run the following to export your Prysm validator's slashing protection history:
-
-```bash
-prysm.sh validator slashing-protection-history export --datadir=/your/prysm/wallet --slashing-protection-export-dir=/path/to/export_dir
-```
-
-### Import {#prysm-import}
-
-You can import it as follows using any installation method for your Prysm validator.
-
-```bash
-prysm.sh validator slashing-protection-history import --datadir=/path/to/your/validator/db --slashing-protection-json-file=/path/to/desiredimportfile
-```
-
-- For more info, see the Prysm [Import & export slashing protection history](https://prysm.offchainlabs.com/docs/backup-and-migration/slashing-protection/) doc.
-
 ## Teku
 
 ### Export {#teku-export}
@@ -125,8 +105,8 @@ When importing the slashing-protection file, Teku imports the file to the `<data
 teku slashing-protection import --data-path=/home/me/me_node --from=/home/slash/slashing-interchange-format.json
 ```
 
-- For more info, see the Teku [Slashing protection](https://docs.teku.consensys.net/en/latest/HowTo/Prevent-Slashing/) docs.
+- For more info, see the Teku [Slashing protection](https://docs.teku.consensys.io/how-to/prevent-slashing) docs.
 
 ## More Resources
 
-- [Lighthouse, Prysm and other client implementations)](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-iii-tips/switching-migrating-consensus-client) from Coin Cashew
+- [Lighthouse and other client implementations](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-iii-tips/switching-migrating-consensus-client) from Coin Cashew

@@ -33,14 +33,14 @@ To run a validator, we need to first import the keys generated in the previous s
 echo 'PLACE_HERE_YOUR_PASSWORD' > keystores/keystore-${m_...}.json.txt
 ```
 
-If the Launchpad creates a key named keystore-m_12381_3600_0_0_0-1596485378.json, then the password file must be named keystore-m_12381_3600_0_0_0-1596485378.txt to comply with [EIP-2335](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Connect/Connect-To-Mainnet/#create-a-password-file-for-each-validator-key)
+If the Launchpad creates a key named keystore-m_12381_3600_0_0_0-1596485378.json, then the password file must be named keystore-m_12381_3600_0_0_0-1596485378.txt to comply with [EIP-2335](https://docs.teku.consensys.io/get-started/connect/mainnet#create-a-password-file-for-each-validator-key)
 
 You can import the keys when starting the validator.
 
-* navigate to teku folder
+* Navigate to the Teku folder.
 
 ```shell
-cd teku-${version}
+cd teku-[VERSION]
 ```
 
 * Execute Teku Beacon Chain and Validator(s):
@@ -54,9 +54,9 @@ cd teku-${version}
   --metrics-enabled=true    \
   --rest-api-enabled=true   \
 # highlight-start
-  --initial-state=https://checkpoint.gnosis.gateway.fm//eth/v2/debug/beacon/states/finalized \
-  --validators-proposer-default-fee-recipient=${Fee Recipient Address}  \
-  --validator-keys=${path to key file}:${path to password file}
+  --checkpoint-sync-url=https://checkpoint.gnosischain.com \
+  --validators-proposer-default-fee-recipient=${FEE_RECIPIENT}  \
+  --validator-keys=${KEYS_DIR}:${PASSWORDS_DIR} \
   --validators-graffiti=${GRAFFITI}
 # highlight-end
 ```
@@ -67,20 +67,20 @@ If you wish to run validator only, run the following command:
 ./bin/teku validator-client \
   --network=gnosis \
 # highlight-start
-  --beacon-node-api-endpoint=${endpoint} \
-  --validator-keys=${path to key file}:${path to password file}
+  --beacon-node-api-endpoint=${BEACON_NODE_API_ENDPOINT} \
+  --validator-keys=${KEYS_DIR}:${PASSWORDS_DIR}
 # highlight-end
 ```
 
 Replace `validators-proposer-default-fee-recipient` with your Gnosis address. This fee recipient address will receive tips from user transactions from the block the validator proposed. If not set, the tips will be sent to zero address, that is burnt completely. It is strongly recommended that you configure this value in your setup.
-Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-proposer-default-fee-recipient) flag in Teku docs.
+Learn more about [validators-proposer-default-fee-recipient](https://docs.teku.consensys.io/reference/cli#validators-proposer-default-fee-recipient) flag in Teku docs.
 
-Replace [`validator-keys`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored, and [`beacon-node-api-endpoint`](https://docs.teku.consensys.net/Reference/CLI/Subcommands/Validator-Client#beacon-node-api-endpoint-beacon-node-api-endpoints) with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051).
+Replace [`validator-keys`](https://docs.teku.consensys.io/reference/cli#validator-keys) with the location where `keystores- *.json` and `keystore- *.txt` are stored, and [`beacon-node-api-endpoint`](https://docs.teku.consensys.io/reference/cli/subcommands/validator-client#beacon-node-api-endpoint-beacon-node-api-endpoints) with the endpoint of the beacon node’s REST API (default is http://127.0.0.1:5051).
 
-Replace [`validators-graffiti`](https://docs.teku.consensys.net/Reference/CLI/CLI-Syntax#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
+Replace [`validators-graffiti`](https://docs.teku.consensys.io/reference/cli#validators-graffiti) with your own graffiti.  It is an optional field that can be used to add a message to the [block](https://ethereum.org/en/developers/docs/blocks/) by the proposer.
 
 
-Learn more about the CLI commands and their options [here](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/).
+Learn more about the CLI commands and their options [here](https://docs.teku.consensys.io/reference/cli).
 
 
 

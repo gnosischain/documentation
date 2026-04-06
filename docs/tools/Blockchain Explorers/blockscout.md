@@ -5,7 +5,7 @@ keywords: [explorer, block explorer, blockscout]
 
 # BlockScout
 
-BlockScout is a full-featured, open-source explorer for Gnosis Mainnet, Chiado Testnet and many other chains. [The Gnosis explorer is available here](https://blockscout.com/xdai/mainnet).
+BlockScout is a full-featured, open-source explorer for Gnosis Mainnet, Chiado Testnet and many other chains. [The Gnosis explorer is available here](https://gnosis.blockscout.com/).
 
 With BlockScout you can:
 
@@ -16,8 +16,16 @@ With BlockScout you can:
 
 ![](/img/tools/blockscout.png)
 
+## Blockscout Pro API
+
+Blockscout Pro API is a new service providing fast, reliable blockchain data access for 100+ chains, including Gnosis. It offers higher rate limits, custom endpoints, improved performance, and multichain support.
+
+You can check it out here: [https://dev.blockscout.com/](https://dev.blockscout.com/)
+
+Full docs: [https://docs.blockscout.com/devs/pro-api#pro-api-overview](https://docs.blockscout.com/devs/pro-api#pro-api-overview)
+
 ## More links
 
 - GraphQL: [https://blockscout.com/poa/xdai/graphiql](https://blockscout.com/poa/xdai/graphiql)
 - RPC: [https://blockscout.com/xdai/mainnet/api-docs](https://blockscout.com/xdai/mainnet/api-docs)
-- Eth RPC: [https://blockscout.com/xdai/mainnet/eth-rpc-api-docs](https://blockscout.com/xdai/mainnet/eth-rpc-api-docs)
+- Eth RPC: [https://gnosis.blockscout.com/api-docs?tab=eth_rpc_api](https://gnosis.blockscout.com/api-docs?tab=eth_rpc_api)

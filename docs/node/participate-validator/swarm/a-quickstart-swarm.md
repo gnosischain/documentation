@@ -60,7 +60,7 @@ The [`jq` utility](https://jqlang.github.io/jq/) is used in this guide to automa
 Run the install shell script using either `curl` or `wget`:
 
 :::caution
-In the example below, the version is specified using `TAG=v2.2.0`, make sure that you [check if there is a newer tagged version of Bee](https://github.com/ethersphere/bee/tags) and if so, modify the commands below to use the most recent tag number so that you have the latest version of Bee.
+In the example below, the version is specified using `TAG=v2.7.1`, make sure that you [check if there is a newer tagged version of Bee](https://github.com/ethersphere/bee/tags) and if so, modify the commands below to use the most recent tag number so that you have the latest version of Bee.
 :::
 
 
@@ -74,7 +74,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl -s https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.2.0 bash
+curl -s https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.7.1 bash
 ```
 </TabItem>
 <TabItem value="wget">
@@ -82,7 +82,7 @@ curl -s https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TA
 **wget**
 
 ```bash
-wget -q -O - https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.2.0 bash
+wget -q -O - https://raw.githubusercontent.com/ethersphere/bee/master/install.sh | TAG=v2.7.1 bash
 ```
 </TabItem>
 
@@ -177,9 +177,9 @@ damage to hardware or loss of funds associated with the Ethereum account connect
 No developers or entity involved will be liable for any claims and damages associated with your use,
 inability to use, or your interaction with other nodes or the software.
 
-version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please follow https://ethswarm.org/
+version: 2.7.1
 
-"time"="2024-09-24 18:15:34.383102" "level"="info" "logger"="node" "msg"="bee version" "version"="2.2.0-06a0aca7"
+"time"="2024-09-24 18:15:34.383102" "level"="info" "logger"="node" "msg"="bee version" "version"="2.7.1"
 "time"="2024-09-24 18:15:34.428546" "level"="info" "logger"="node" "msg"="swarm public key" "public_key"="0373fe2ab33ab836635fc35864cf708fa0f4a775c0cf76ca851551e7787b58d040"
 "time"="2024-09-24 18:15:34.520686" "level"="info" "logger"="node" "msg"="pss public key" "public_key"="03a341032724f1f9bb04f1d9b22607db485cccd74174331c701f3a6957d94d95c1"
 "time"="2024-09-24 18:15:34.520716" "level"="info" "logger"="node" "msg"="using ethereum address" "address"="0x1A801dd3ec955E905ca424a85C3423599bfb0E66"
@@ -254,9 +254,9 @@ damage to hardware or loss of funds associated with the Ethereum account connect
 No developers or entity involved will be liable for any claims and damages associated with your use,
 inability to use, or your interaction with other nodes or the software.
 
-version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please follow https://ethswarm.org/
+version: 2.7.1
 
-"time"="2024-09-24 18:57:16.710417" "level"="info" "logger"="node" "msg"="bee version" "version"="2.2.0-06a0aca7"
+"time"="2024-09-24 18:57:16.710417" "level"="info" "logger"="node" "msg"="bee version" "version"="2.7.1"
 "time"="2024-09-24 18:57:16.760154" "level"="info" "logger"="node" "msg"="swarm public key" "public_key"="0373fe2ab33ab836635fc35864cf708fa0f4a775c0cf76ca851551e7787b58d040"
 "time"="2024-09-24 18:57:16.854594" "level"="info" "logger"="node" "msg"="pss public key" "public_key"="03a341032724f1f9bb04f1d9b22607db485cccd74174331c701f3a6957d94d95c1"
 "time"="2024-09-24 18:57:16.854651" "level"="info" "logger"="node" "msg"="using ethereum address" "address"="0x1A801dd3ec955E905ca424a85C3423599bfb0E66"
@@ -274,7 +274,7 @@ version: 2.2.0-06a0aca7 - planned to be supported until 11 December 2024, please
 
 Here we can see that after our node has been funded, it was able to issue the transactions for deploying the chequebook contract, which is a prerequisite for running a staking node.
 
-Next your node will begin to sync [postage stamp data](https://docs.ethswarm.org/docs/develop/access-the-swarm/buy-a-stamp-batch), which can take ~5 to 10 minutes. You will see this log message while your node is syncing postage stamp data:
+Next your node will begin to sync [postage stamp data](https://docs.ethswarm.org/docs/develop/tools-and-features/buy-a-stamp-batch), which can take ~5 to 10 minutes. You will see this log message while your node is syncing postage stamp data:
 
 ```bash
 "time"="2024-09-24 22:21:19.664897" "level"="info" "logger"="node" "msg"="waiting to sync postage contract data, this may take a while... more info available in Debug loglevel"

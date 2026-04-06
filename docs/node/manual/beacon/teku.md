@@ -7,7 +7,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 
 :::caution Version check
 
-This page's content is up-to-date for [Teku v25.4.1](https://github.com/Consensys/teku/releases/tag/25.4.1).
+This page's content is up-to-date for [Teku v26.4.0](https://github.com/ConsenSys/teku/releases/tag/26.4.0).
 
 :::
 
@@ -40,25 +40,25 @@ Gnosis' maintains a repo with sample Teku Dockerfiles and configs
 | ------------------ | ------------------------------------------------------------------- |
 | Release Page       | https://github.com/ConsenSys/teku/releases                          |
 | Docker Images      | https://hub.docker.com/r/consensys/teku                             |
-| Teku Docs          | https://docs.teku.consensys.net/en/latest/                          |
-| Teku CLI Reference | https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/ |
+| Teku Docs          | https://docs.teku.consensys.io/                |
+| Teku CLI Reference | https://docs.teku.consensys.io/reference/cli |
 
 ### Checkpoint Sync
 
 We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and avoid long range attacks.
 
-Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/.
+Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com.
 
 ```shell
 # Usage
 $ teku
-  --initial-state https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
+  --checkpoint-sync-url https://checkpoint.gnosischain.com
 ```
 
 :::info More about Checkpoint Sync
 
-- Teku's [Checkpoint Sync docs](https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Checkpoint-Start/)
-- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
+- Teku's [Checkpoint Sync docs](https://docs.teku.consensys.io/get-started/checkpoint-start)
+- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com)
 
 :::
 
@@ -77,7 +77,7 @@ Images are referenced under the following pattern `consensys/teku:{image-tag}` w
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
+Modify your Compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
 ```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
@@ -135,7 +135,7 @@ services:
       --metrics-interface=0.0.0.0
       --metrics-port=8008
 // highlight-next-line
-      --initial-state=https://checkpoint.gnosischain.com/eth/v2/debug/beacon/states/finalized
+      --checkpoint-sync-url=https://checkpoint.gnosischain.com
     logging:
       driver: "local"
 
@@ -148,7 +148,7 @@ networks:
 
 Add an `.env` file with your user id (`id --user`) in `/home/$USER/gnosis/.env`.
 
-``` title="/home/$USER/gnosis/.env
+``` title="/home/$USER/gnosis/.env"
 PUID=1000
 ```
 
@@ -158,7 +158,7 @@ Start the consensus layer client listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 
@@ -173,11 +173,11 @@ import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/_partials
 
 ### 6. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

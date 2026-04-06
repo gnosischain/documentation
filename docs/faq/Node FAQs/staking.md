@@ -18,7 +18,7 @@ title: Staking and Liquid Staking
 
 3. **What’s the best place to stake my GNO bag?**
 
-    You can stake your GNO on liquid staking platforms like Stakewise or you could get/buy your own node and stake those GNO to validate the chain (~14% APY as October 2023) more information in the docs
+    You can stake your GNO on liquid staking platforms like StakeWise, or run your own node and stake directly as a validator. APY is variable, so check the live metrics linked in the docs for current values.
 
 4. **Is there any official staking platform for GNO?**
 
@@ -30,7 +30,7 @@ title: Staking and Liquid Staking
 
 6. **Can you currently unstake sGNO or is that not ready yet?**
 
-    To withdraw directly you need to wait for Stakewise v3 that isn't out yet or if you really want to withdraw immediately, you can find some liquidity on Curve for sGNO and rGNO
+    StakeWise V3 is live on Gnosis Chain and StakeWise V2 is deprecated. If you still hold V2 assets (sGNO/rGNO), use the migration flow to move to V3.
 
 7. **How can I convert rGNO?**
 

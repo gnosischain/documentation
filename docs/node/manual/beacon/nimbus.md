@@ -1,7 +1,6 @@
 ---
 title: Nimbus
 ---
-import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 
 # Run Beacon Node + Validator: Nimbus
 
@@ -10,7 +9,7 @@ Nimbus is a client implementation that strives to be as lightweight as possible 
 :::tip Learn More about Nimbus
 
 - Nimbus Repo: [https://github.com/status-im/nimbus-eth2](https://github.com/status-im/nimbus-eth2)
-- Nimbus Docs: [https://nimbus.team/docs/](https://nimbus.team/docs/)
+- Nimbus Docs: [https://nimbus.guide](https://nimbus.guide/)
 
 :::
 
@@ -21,9 +20,16 @@ Nimbus is a client implementation that strives to be as lightweight as possible 
 
 :::
 
+:::caution Prerequisites
+
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
+
+:::
+
 ## Option 1: Run as System Process
 
-We currently do not release Gnosis compatible binaries for Nimbus, nor do we intend to for the time being.
+Nimbus publishes binaries for Linux, Windows, and macOS.  
+For Gnosis/Chiado, the recommended path is the Gnosis-maintained Nimbus Docker image below, which already includes network-specific configuration.
 
 ## Option 2: Run using Docker
 
@@ -38,54 +44,54 @@ Folder structure
 ├── jwtsecret/
 ├── execution/
 └── consensus/
-    └── data/
-    └── validator_key/
+    ├── data/
+    └── validators/
 ```
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
+Modify your Compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
 Create `docker-compose.yml` and insert the configuration below.
 
 ```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
 services:
-    execution:
-        # From Step 2
-        # ...
-    consensus:
-        container_name: consensus
-        image: ghcr.io/gnosischain/gnosis-nimbus-eth2:latest
-        restart: unless-stopped
-        networks:
-          - gnosis_net
-        volumes:
-        - ./consensus/data:/data
+  execution:
+    # From Step 2
+    # ...
+  consensus:
+    container_name: consensus
+    image: ghcr.io/gnosischain/gnosis-nimbus-eth2:latest
+    restart: unless-stopped
+    networks:
+      - gnosis_net
+    volumes:
+      - /home/$USER/gnosis/consensus/data:/data
 // highlight-start
-        - ${Path_to_jwtsecret}:/jwt:ro
-        - ${Path_to_keystore}:/validators
+      - /home/$USER/gnosis/jwtsecret/jwt.hex:/jwt:ro
+      - /home/$USER/gnosis/consensus/validators:/validators
 // highlight-end
-        ports:
-        - 9100:9100
-        - 9100:9100/udp
-        command: |
-        --data-dir=/data
-        --web3-url=http://localhost:8551
-        --jwt-secret=/jwt
-        --light-client-data-serve=true
-        --light-client-data-import-mode=full
-        --tcp-port:9100
-        --udp-port:9100
-        --validators-dir=/validators
+    ports:
+      - 9100:9100/tcp
+      - 9100:9100/udp
+    command: |
+      --data-dir=/data
+      --web3-url=http://execution:8551
+      --jwt-secret=/jwt
+      --light-client-data-serve=true
+      --light-client-data-import-mode=full
+      --tcp-port=9100
+      --udp-port=9100
+      --validators-dir=/validators
 // highlight-start
-        --suggested-fee-recipient=${Fee address}
-        --graffiti=${Graffiti}
+      --suggested-fee-recipient=${FEE_RECIPIENT}
+      --graffiti=${GRAFFITI}
 // highlight-end
-        --rest
-        --rest-address=0.0.0.0
-        --network=gnosis
-        --history=prune
+      --rest
+      --rest-address=0.0.0.0
+      --network=gnosis
+      --history=prune
     logging:
       driver: "local"
 
@@ -104,7 +110,7 @@ Start the consensus layer client listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 4. Monitor Logs
@@ -133,11 +139,11 @@ docker logs -f --tail 500 consensus
 
 ### 5. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

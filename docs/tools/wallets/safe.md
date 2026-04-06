@@ -32,7 +32,7 @@ Select the MetaMask option in the connect wallet menu. Check that the correct Me
 
 ### Connecting with WalletConnect
 
-Current WalletConnect functionality is limited to wallets that support Gnosis Chain. You can use MetaMask Mobile with WalletConnect if you have set up the [Gnosis custom RPC](/tools/wallets/metamask/#manual-configuration).
+Current WalletConnect functionality is limited to wallets that support Gnosis Chain. You can use MetaMask Mobile with WalletConnect if you have set up the [Gnosis custom RPC](/tools/wallets/metamask#b-manual-configuration).
 
 If you choose to use WalletConnect, select the WalletConnect option in the connect wallet menu. Scan the QR code with your application and accept the message to connect in your mobile wallet.
 

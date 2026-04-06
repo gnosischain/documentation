@@ -56,7 +56,7 @@
 
 9. Which clients are supported by GBC?
 
-   Lighthouse, Prysm, Nimbus, and Teku clients. [Read more here](../node/architecture.md#consensus-layer).
+   Lighthouse, Lodestar, Nimbus, and Teku clients. [Read more here](../node/architecture.md#consensus-layer).
 
 10. How long does it take to sync the node?
 
@@ -117,16 +117,22 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 3. What are two types of withdrawals?
 
    There are 2 types of withdrawals: Partial Withdrawal and Full Withdrawal.
-   Partial Withdrawal: Any balance in excess of 1 GNO from the account balance gets withdrawn back to withdrawal address.
-   Full Withdrawal: All the balance from validator’s account gets withdrawn back to withdrawal address. This has to be initiated by validator, signing `voluntary_exit` message and broadcasting it to the network. It is irreversible.
+   Partial Withdrawal: Any eligible balance in excess of 1 GNO is processed for withdrawal.
+   Full Withdrawal: The validator exits and its full balance becomes withdrawable to the configured execution withdrawal address. This has to be initiated by the validator by signing a `voluntary_exit` message and broadcasting it to the network. It is irreversible.
 
-4. What are 0x00 and 0x01 withdrawal credentials prefixes?
+4. What are 0x00, 0x01, and 0x02 withdrawal credentials prefixes?
 
-   The beacon chain validators have a field called withdrawal credentials, where the first byte is referred to as the withdrawal prefix. Currently, this value can be either 0x00 or 0x01, depending on how it is set during the deposit process using a deposit tool. Validators with 0x00 withdrawal credentials won’t have immediate withdrawal capabilities. To enable partial and full withdrawals and unlock their funds, these validators must undergo a one-time migration to 0x01. As this is a one time process, it is essential to be careful performing it.
+   The beacon chain validators have a field called withdrawal credentials, where the first byte is referred to as the withdrawal prefix.
+
+   `0x02` is the recommended execution-address prefix on Gnosis Chain. It supports the current withdrawal flow and is what new validators should use.
+
+   `0x01` is a legacy execution-address prefix. It still works, but follows the older auto-sweep behavior and is no longer the recommended option for new validators.
+
+   `0x00` is the old BLS-only prefix and does not support withdrawals until you perform a one-time BLS-to-execution credential change.
 
 5. How do I change my withdrawal credential?
 
-   You can find a full tutorial on how to change your withdrawal credential [here](https://docs.gnosischain.com/node/management/withdrawals#how-to-change-the-withdrawal-credential).
+   You can find the current step-by-step guide here: [Validator Withdrawals](../node/management/withdrawals.md).
 
 6. I have been running multiple validators. Can I set up the same withdrawal credential for all of them?
 
@@ -134,42 +140,42 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 7. Where can I check my withdrawal credential?
 
-   https://docs.gnosischain.com/node/management/withdrawals#check-withdrawal-credential
+   Check the Withdrawal tab for your validator on the [Beacon chain explorer](https://beaconchain.gnosischain.com/), or inspect the `withdrawal_credentials` field in your saved `deposit-data*.json` file. See [Validator Withdrawals](../node/management/withdrawals.md) for the current walkthrough.
 
 8. Do partial withdrawals happen automatically?
 
-As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F3) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract). However, it is in our plans to automate and subsidize partial withdrawals in the future.
+   The withdrawal processing itself is automatic once your validator is eligible. What is not automatic today is claiming the resulting GNO to the recipient address. After the withdrawal has been processed, you must claim it either on the [Deposit website](https://deposit.gnosischain.com/) or by calling [`claimWithdrawal`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract) or `claimWithdrawals(...)` on the deposit contract.
 
 9. Do full withdrawals happen automatically?
 
-   No. If your validator is currently active and participating in the beacon chain, then the full withdrawal will not happen automatically. You will have to manually initiate an exit to cause this.
+   No. If your validator is currently active and participating in the beacon chain, the full withdrawal will not happen unless you first manually initiate a voluntary exit.
 
-   Additionally, if you initiate an exit but still have a 0x00 withdrawal credential, your funds will not be withdrawn until a `BLSToExecutionChange` message is included on chain.
+   Additionally, if you initiate an exit while still using `0x00` withdrawal credentials, your funds will remain locked until a `BLSToExecutionChange` is included on chain.
 
 10. Is there a UI that I can use for withdrawals?
 
-    No, as you will have to interact with the beacon chain, it is not feasible to provide a UI that encompasses all the clients.
+    Yes. You can claim withdrawals on the [Deposit website](https://deposit.gnosischain.com/). Advanced users can also claim directly through the deposit contract on Gnosis Chain.
 
 11. Where does the automatic balance withdraw to?
 
-    In case you are using a legacy withdrawal credential 0x00, it will not be withdrawn and you will have to perform a migration to 0x01 credentials to complete the withdrawal. If you have already configured your withdrawal address and have a withdrawal credential of 0x01, then rewards in excess of 1 GNO will be transferred to your withdrawal address.
+    Withdrawals are associated with the validator's configured execution withdrawal address, also referred to as the recipient address in the current docs. If you are still on `0x00`, withdrawals cannot complete until you convert to an execution-address credential.
 
-12. Once I have changed my credential to 0x01, can I change it to an alternative withdrawal address?
+12. Once I have changed my credential to an execution address, can I change it to an alternative withdrawal address?
 
-    No, the migration from 0x00 to 0x01 is a one time process and once you set the address, it cannot be changed. Please make this migration with the utmost care. Note, the withdrawal credential can either be an externally-owned account (EOA) or a smart contract such as a SAFE.
+    No. The BLS-to-execution change is a one-time operation. Once you set the execution withdrawal address, it cannot be changed later. Please perform this step carefully. The withdrawal address can be either an externally owned account (EOA) or a smart contract wallet such as a Safe.
 
 13. I have lost the private key to my withdrawal address, what can I do?
 
     Unfortunately, there is nothing that can be done if the withdrawal address is lost. Please ensure this address is properly backed up and securely stored.
 
-14. What happens to my GNO if I make a full withdrawal but I forget to set the withdrawal credential to 0x01?
+14. What happens to my GNO if I make a full withdrawal but I forget to set the withdrawal credential to an execution address?
 
-    Nothing. Your validator will exit, and will no longer be assigned duties, neither able to earn nor lose any more additional GNO. You may still migrate your withdrawal credentials from 0x00 to 0x01. Once this is done, the validator’s balance will be withdrawn to the address you specify.
+    Your validator will exit and stop performing duties, but the funds will not be withdrawable until you complete the BLS-to-execution credential change. Once you do that, the validator balance can be withdrawn and claimed to the configured recipient address.
 
 15. Can I cancel a withdrawal request that is in the queue?
 
-    No you cannot, this is a one time, irreversible process. Once you submit your withdrawal request (BLSToExecutionChange and/or exit) you can’t go back. Please only exit or change credentials when you are fully aware of what the specific operation will do and with utmost caution.
+    No. These are one-way operations. Once you submit a `BLSToExecutionChange` and/or a voluntary exit, you cannot reverse it. Make sure you understand the effect of each action before proceeding.
 
 16. Where can I find the client updates for Shapella?
 
-    You can find all client updates in this [blog post](https://www.gnosis.io/blog/shapella-client-updates) or [validator withdrawal section](https://docs.gnosischain.com/node/management/withdrawals). Make sure you update your clients before the upgrade.
+    Refer to the current [Validator Withdrawals](../node/management/withdrawals.md) guide and each client's official release notes. The original Shapella client-update post is useful historical context, but the withdrawals guide should be treated as the current operator-facing source of truth.

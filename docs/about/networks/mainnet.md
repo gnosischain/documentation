@@ -26,10 +26,10 @@ keywords:
 | Execution Layer RPC      | https://rpc.gnosischain.com                 |
 | More RPC endpoints       | [RPC Providers](../../tools/RPC%20Providers/README.md) |
 | Execution Layer Explorer | https://gnosisscan.io                       |
-| Execution Layer Explorer | https://blockscout.com/xdai/mainnet         |
+| Execution Layer Explorer | https://gnosis.blockscout.com/              |
 | Fork monitor             | https://forkmon.gnosischain.com             |
 | EthStats                 | https://ethstats.gnosischain.com            |
-| Forked Blocks            | https://blockscout.com/xdai/mainnet/reorgs  |
+| Forked Blocks            | https://gnosis.blockscout.com/reorgs        |
 | Faucet                   | https://gnosisfaucet.com                    |
 
 ### Consensus Layer
@@ -40,7 +40,6 @@ keywords:
 | Beacon Explorer          | https://beaconchain.gnosischain.com/                      |
 | Beacon Explorer Backup 1 | https://beacon-v1.gnosischain.com           |
 | Beacon Explorer Backup 2 | https://beacon-v2.gnosischain.com           |
-| Beacon Checkpoint Sync   | https://checkpoint.gnosis.gateway.fm        |
 | Beacon Checkpoint Sync   | https://checkpoint.gnosischain.com          |
 | Beacon Checkpoint Sync   | https://checkpoint-sync-gnosis.dappnode.io/ |
 
@@ -85,6 +84,6 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 ## Key Contracts
 
 - [xDai Bridge](../../bridges/About%20Token%20Bridges/xdai-bridge#key-contracts)
-- [AMB Bridge](../../bridges/About%20Token%20Bridges/amb-bridge#key-contracts)
+- [AMB Bridge](../../bridges/About%20Token%20Bridges/amb-bridge)
 - [OmniBridge](../../bridges/About%20Token%20Bridges/omnibridge#key-contracts)
 - [Beacon Chain](/about/specs/gbc/README.md)

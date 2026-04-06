@@ -25,13 +25,13 @@ Make sure to select the Gnosis chain tab,
 
 The next step is to select the combination of client you want to use in your dappnode. For this process you need to select:
 
-- 1. Select the execution client: Nethermind-xdai. Click on the package
-- 2. Select the consensus client, here you can install one of the following options: Teku-gnosis, Lighthouse-gnosis and Prysm-gnosis
+- 1. Select the execution client package available in your Stakers UI (for example Nethermind or Erigon, package names may vary by version).
+- 2. Select the consensus client package (for example Teku or Lighthouse, package names may vary by version).
 - 3. Install the web3signer. This is required because this is the package that will contain the keystores.
 
 ![Select the execution and consensus clients](/img/node/dappnode-stakers-ui-2.png)
 
-1. Select the Execution client. For now, or in the moment this guide was created, nethermind is the only execution client that supports gnosis chain.
+1. Select the Execution client. In DAppNode's Gnosis Stakers UI, available execution client packages vary by version.
    ![Execution client ](/img/node/dappnode-execution-client.png)
 
 2. Select the consensus client. You will see the next fields when you click in the package chart.
@@ -95,7 +95,7 @@ Be patient, the installation process can take several minutes. You can check all
           <ul>
             <li><code>NUM</code> The number of signing keys (validators) to generate.</li>
             <li><code>START_NUM</code> Index for the first validator key. If this is the first time generating keys with this mnemonic, use 0. If keys were previously generated with this mnemonic, use the subsequent index number (e.g., if 4 keys have been generated before (keys #0, #1, #2, #3, then enter 4 here).</li>
-            <li><code>WITHDRAWAL_ADDRESS</code> Use this parameter to provide a regular Gnosis Chain <code>0x</code> address for mGNO withdrawal. This parameter can also be omitted to generate withdrawal credentials with the mnemonic-derived withdrawal public key in the <a href="https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters">EIP-2334 format</a> (ETH2 address format). <strong>Withdrawals will not be available until after the Shanghai upgrade.</strong></li>
+            <li><code>WITHDRAWAL_ADDRESS</code> Use this parameter to provide a regular Gnosis Chain <code>0x</code> address for GNO withdrawals. This parameter can also be omitted to generate withdrawal credentials with the mnemonic-derived withdrawal public key in the <a href="https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters">EIP-2334 format</a>.</li>
             <li><code>/path/to/</code> should be replaced with a valid and existing path where you want to create the validator_keys folder. Or, to create the validator_keys folder in your current working directory, use <code>$(PWD)/validator_keys:/app/validator_keys</code></li>
             <li>More details about command line arguments can be found <a href="https://github.com/gnosischain/validator-data-generator">here</a></li>
           </ul>
@@ -151,4 +151,3 @@ In case you need some xDai for transaction fees you can get some from the [Offic
 5. Check that you understand the risks and ensure you are interacting with the correct contract before proceeding.
 6. Click `Ok` and confirm the transaction in your wallet to complete the deposit.
 7. Our proxy smart contract will deposit the GNO(s) to your validators! YOU control the private keys, YOU control the withdrawal key(s)... these validators are now **yours**. Take good care of them!
-

@@ -7,7 +7,7 @@ import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partia
 
 :::caution Version check
 
-This page's content is up-to-date for [Lighthouse v7.0.1](https://github.com/sigp/lighthouse/releases/tag/v7.0.1).
+This page's content is up-to-date for [Lighthouse v8.1.3](https://github.com/sigp/lighthouse/releases/tag/v8.1.3).
 
 :::
 
@@ -56,18 +56,18 @@ Gnosis maintains a repo with sample Lighthouse Dockerfiles and configs
 
 We recommend the use of Checkpoint sync to sync your Beacon Node quickly, and avoid long range attacks.
 
-Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com/.
+Gnosis provides a checkpoint sync server at https://checkpoint.gnosischain.com.
 
 ```shell
 # Usage
 $ lighthouse bn
-  --checkpoint-sync-url https://checkpoint.gnosischain.com/
+  --checkpoint-sync-url https://checkpoint.gnosischain.com
 ```
 
 :::info More about Checkpoint Sync
 
 - Lighthouse's [Checkpoint Sync docs](https://lighthouse-book.sigmaprime.io/checkpoint-sync.html)
-- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com/)
+- Gnosis' [Checkpoint Sync server Status](https://checkpoint.gnosischain.com)
 
 :::
 
@@ -93,7 +93,7 @@ The Beacon Node requires an Execution client in order to operate. See [Step 2: R
 
 ### 2. Docker Compose
 
-Modify your docker-compose file with your favorite text editor and add the `consensus` container. The file should now look like:
+Modify your Compose file with your favorite text editor and add the `consensus` container. The file should now look like:
 
 ```yaml title="/home/$USER/gnosis/docker-compose.yml" showLineNumbers
 version: "3"
@@ -137,7 +137,7 @@ services:
       --execution-endpoint=http://execution:8551
       --execution-jwt=/jwt.hex
 // highlight-next-line
-      --checkpoint-sync-url=https://checkpoint.gnosischain.com/
+      --checkpoint-sync-url=https://checkpoint.gnosischain.com
     logging:
       driver: "local"
 
@@ -152,7 +152,7 @@ Start the consensus layer client listed in the compose file:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 4. Monitor Logs
@@ -165,11 +165,11 @@ import MonitorLogsDockerPartial from '@site/docs/node/manual/validator/\_partial
 
 ### 5. Updating your Node
 
-To update, just pull the new images, then stop and restart your docker-compose file:
+To update, just pull the new images, then stop and restart your services:
 
 ```shell
 cd /home/$USER/gnosis
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```

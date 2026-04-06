@@ -27,7 +27,7 @@ Check out [validator withdrawal](/node/management/withdrawals) for more details.
 
    For any type of withdrawals, a validator need to have `0x01` withdrawal credential. You’re fine if you used `--eth1_withdrawal_address` to create your validator keys. If not, tooling will be made available.
 
-   Refer to [validator withdrawal](/node/management/withdrawals#check-withdrawal-credential) for more details.
+   Refer to [validator withdrawal](/node/management/withdrawals) for more details.
 
 2. Update your clients
 
