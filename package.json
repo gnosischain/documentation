@@ -39,7 +39,8 @@
     "@docusaurus/module-type-aliases": "3.9.2"
   },
   "resolutions": {
-    "webpack": "~5.98.0"
+    "webpack": "~5.98.0",
+    "serialize-javascript": ">=7.0.3"
   },
   "browserslist": {
     "production": [
