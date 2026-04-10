@@ -25,7 +25,7 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 | [gno:0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d)  | Giveth            |
 | [gno:0x7117F73aFBDec3221bDD50DdCbf73204b3998302 ](https://gnosisscan.io/address/0x7117F73aFBDec3221bDD50DdCbf73204b3998302) | Kleros            |
 | [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde)  | GnosisDAO         |
-| [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0)  | Cow Protocol      |
+| [gno:0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd](https://gnosisscan.io/address/0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd)  | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f)  | Gnosis Safe       |
 | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  | Hopr              |
 
@@ -58,7 +58,7 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 | GnosisDao    | [gno:0x97630e2ae609d4104abda91f3066c556403182dd](https://gnosis.blockscout.com/address/0x97630e2ae609d4104abda91f3066c556403182dd)  |
 | Protofire    | [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://gnosis.blockscout.com/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051)  |
-| CowProtocol  | [gno:0x587c0d02b40822f15f05301d87c16f6a08aaddde](https://gnosis.blockscout.com/address/0x587c0d02b40822f15f05301d87c16f6a08aaddde)  |
+| CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosis.blockscout.com/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://gnosis.blockscout.com/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506)  |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
 | Kleros       | [gno:0x7117F73aFBDec3221bDD50DdCbf73204b3998302 ](https://gnosis.blockscout.com/address/0x7117F73aFBDec3221bDD50DdCbf73204b3998302) |
