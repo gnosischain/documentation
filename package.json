@@ -50,6 +50,9 @@
       "sharp"
     ]
   },
+  "resolutions": {
+    "webpack": "~5.98.0"
+  },
   "browserslist": {
     "production": [
       ">0.5%",
