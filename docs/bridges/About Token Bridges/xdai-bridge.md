@@ -165,7 +165,7 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 
 ### Savings xDAI
 
-Application: https://agave.finance/sdai/
+Application: https://app.spark.fi/savings/gnosis/sdai
 
 #### Rationale
 
@@ -212,7 +212,7 @@ The second contract is the Interest Receiver. This will be the address provided 
 **xDAI/wxDAI holder**
 
 1. Deposit xDAI/wxDAI and get sDAI shares:
-   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in https://agave.finance/sdai/, in return for sDAI, and their corresponding shares in the vault are recorded.
+   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in https://app.spark.fi/savings/gnosis/sdai, in return for sDAI, and their corresponding shares in the vault are recorded.
    2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
    3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2
 

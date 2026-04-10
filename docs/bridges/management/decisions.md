@@ -8,6 +8,21 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Replace CoW brodge validator address
+
+🗳 Justification:
+
+One of CoW's developer's laptop is compromised and it has access to bridge validator instance. As a security hardening process, we're replacing the CoW's bridge validator address on AMB and xDAI bridge validator contract.
+Old CoW bridge validator address on AMB: `0x674c97db4ce6cac04a124d745979f3e4cba0e9f0`
+Old CoW bridge alidator address on xDAI bridge: `0x587c0d02b40822f15f05301d87c16f6a08aaddde`
+New CoW bridge validator address on AMB: `0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd`  
+New CoW bridge alidator address on xDAI bridge: `0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656`
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xdde0b589cb6654688b614f3c8d0e248fb9c4e4267785b1dddd9205feff33431c)
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xd7de756475bfc6a46b0673bcd9777038378b5e7dc3b40090ab21d00b2710dbef)
+
+✅ Implemented: Apr 10, 2026
+
 ## Removed kpk from bridge governors, replaced kpk bridge validator with Kleros
 
 🗳 Justification:
