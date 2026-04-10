@@ -38,18 +38,6 @@
     "@babel/preset-react": "7.23.3",
     "@docusaurus/module-type-aliases": "3.9.2"
   },
-  "pnpm": {
-    "overrides": {
-      "copy-webpack-plugin": "14.0.0",
-      "css-minimizer-webpack-plugin": "8.0.0"
-    },
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "core-js",
-      "core-js-pure",
-      "sharp"
-    ]
-  },
   "resolutions": {
     "webpack": "~5.98.0"
   },
