@@ -2998,7 +2998,7 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 
 ### Savings xDAI
 
-Application: https://agave.finance/sdai/
+Application: https://app.spark.fi/savings/gnosis/sdai
 
 #### Rationale
 
@@ -3045,7 +3045,7 @@ The second contract is the Interest Receiver. This will be the address provided 
 **xDAI/wxDAI holder**
 
 1. Deposit xDAI/wxDAI and get sDAI shares:
-   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in https://agave.finance/sdai/, in return for sDAI, and their corresponding shares in the vault are recorded.
+   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in https://app.spark.fi/savings/gnosis/sdai, in return for sDAI, and their corresponding shares in the vault are recorded.
    2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
    3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2
 
@@ -3618,6 +3618,21 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Replace CoW brodge validator address
+
+🗳 Justification:
+
+One of CoW's developer's laptop is compromised and it has access to bridge validator instance. As a security hardening process, we're replacing the CoW's bridge validator address on AMB and xDAI bridge validator contract.
+Old CoW bridge validator address on AMB: `0x674c97db4ce6cac04a124d745979f3e4cba0e9f0`
+Old CoW bridge alidator address on xDAI bridge: `0x587c0d02b40822f15f05301d87c16f6a08aaddde`
+New CoW bridge validator address on AMB: `0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd`  
+New CoW bridge alidator address on xDAI bridge: `0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656`
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xdde0b589cb6654688b614f3c8d0e248fb9c4e4267785b1dddd9205feff33431c)
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xd7de756475bfc6a46b0673bcd9777038378b5e7dc3b40090ab21d00b2710dbef)
+
+✅ Implemented: Apr 10, 2026
+
 ## Removed kpk from bridge governors, replaced kpk bridge validator with Kleros
 
 🗳 Justification:
@@ -4119,7 +4134,7 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 | [gno:0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d)  | Giveth            |
 | [gno:0x7117F73aFBDec3221bDD50DdCbf73204b3998302 ](https://gnosisscan.io/address/0x7117F73aFBDec3221bDD50DdCbf73204b3998302) | Kleros            |
 | [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde)  | GnosisDAO         |
-| [gno:0x674c97db4ce6cac04a124d745979f3e4cba0e9f0](https://gnosisscan.io/address/0x674c97db4ce6cac04a124d745979f3e4cba0e9f0)  | Cow Protocol      |
+| [gno:0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd](https://gnosisscan.io/address/0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd)  | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f)  | Gnosis Safe       |
 | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  | Hopr              |
 
@@ -4152,7 +4167,7 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 | GnosisDao    | [gno:0x97630e2ae609d4104abda91f3066c556403182dd](https://gnosis.blockscout.com/address/0x97630e2ae609d4104abda91f3066c556403182dd)  |
 | Protofire    | [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://gnosis.blockscout.com/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051)  |
-| CowProtocol  | [gno:0x587c0d02b40822f15f05301d87c16f6a08aaddde](https://gnosis.blockscout.com/address/0x587c0d02b40822f15f05301d87c16f6a08aaddde)  |
+| CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosis.blockscout.com/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
 | Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://gnosis.blockscout.com/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506)  |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
 | Kleros       | [gno:0x7117F73aFBDec3221bDD50DdCbf73204b3998302 ](https://gnosis.blockscout.com/address/0x7117F73aFBDec3221bDD50DdCbf73204b3998302) |
@@ -15563,7 +15578,30 @@ With Tenderly Developer Explorer you can:
 
 ---
 
-// File: tools/Data Indexing/covalent
+// File: tools/Faucets
+
+# Faucets
+
+A faucet is a service that provides small amounts of [xDai tokens](/about/tokens/xdai) to users who are experimenting with Gnosis. Here is a list of the available faucets.
+
+:::note
+If the faucet is not functioning properly, feel free to seek assistance on the [Gnosis Chain Discord channel](https://discord.gg/gnosis).
+:::
+
+## Official Faucet
+
+- [Gnosis Chain Faucet](https://faucet.gnosischain.com/)
+- [Chiado Testnet Faucet](https://faucet.chiadochain.net/)
+
+## Community Faucets
+
+- [Stakely](https://stakely.io/en/faucet/gnosis-chain-xdai)
+- [dRPC](https://drpc.org/faucet/gnosis)
+- [Tenderly](https://docs.tenderly.co/virtual-testnets/unlimited-faucet?mtm_campaign=ext-docs&mtm_kwd=gnosis)
+
+---
+
+// File: tools/Indexer & Analytics/covalent
 
 # GoldRush - powered by Covalent
 
@@ -15586,7 +15624,40 @@ Learn more about GoldRush's integration with Gnosis chain [here](https://goldrus
 
 ---
 
-// File: tools/Data Indexing/envio
+// File: tools/Indexer & Analytics/dune
+
+# Dune
+
+Dune is the on-chain data platform powering critical business decisions for institutions and enterprises across 100+ blockchains.
+
+## Data Hub
+
+Dune is your onchain data warehouse. Whether you're building dashboards, powering applications, streaming data to your existing warehouse, or running transformation pipelines, any time you need to read aggregated data from the blockchain, Dune can serve it.
+
+## Dune SIM
+
+Sim is a real-time blockchain data API by Dune. It gives developers instant access to wallet balances, token metadata, transaction history, and onchain activity across 60+ EVM chains and Solana — all through a single API key, with no indexer setup required. With webhook subscriptions, you can also push data directly to your app in real time.
+
+## Dune MCP
+
+Dune MCP is Dune's official remote MCP server. It gives your agent direct, structured access to Dune workflows: discover relevant datasets, create and run SQL queries, inspect execution results, manage visualizations, and build dashboards — all in the same conversation.
+
+## Getting Started with Dune
+
+Getting started on Dune is as simple as signing up for an account!
+
+1. Navigate to [dune.xyz](https://dune.xyz) or [sim.dune.com](https://sim.dune.com)
+2. Create an account
+3. Begin querying
+
+For more information regarding Dune's data capabilities, including educational resources and integration discussions, please use the corresponding documentation:
+
+- **Data Hub**: https://docs.dune.com/
+- **SIM**: https://docs.sim.dune.com/
+
+---
+
+// File: tools/Indexer & Analytics/envio
 
 [Envio](https://envio.dev/) is a feature-rich indexing solution that provides developers with a seamless and efficient way to index and aggregate blockchain data for any EVM. The indexed data is easily accessible through custom GraphQL queries, providing developers with the flexibility and power to retrieve specific information.
 
@@ -15673,7 +15744,7 @@ Join our growing community of elite builders, and find peace of mind with Envio.
 
 ---
 
-// File: tools/Data Indexing/moralis
+// File: tools/Indexer & Analytics/moralis
 
 [Moralis](https://moralis.io/?utm_source=gnosis-docs&utm_medium=partner-docs) is a blockchain data platform that provides developers with all the data they need to build better blockchain applications. From NFT data and token data, through to raw blockchain data, Moralis offers a wide range of products that cover all major crypto and blockchain use cases, and it supports [Gnosis](https://moralis.io/chains/gnosis/?utm_source=gnosis-docs&utm_medium=partner-docs) together with all other major EVM chains.
 
@@ -15797,7 +15868,7 @@ You can also set up Streams programmatically, check out the [Moralis Streams doc
 
 ---
 
-// File: tools/Data Indexing/subquery
+// File: tools/Indexer & Analytics/subquery
 
 # SubQuery Data Indexing
 
@@ -16266,7 +16337,7 @@ The fastest way to get support is by [searching our documentation](https://acade
 
 ---
 
-// File: tools/Data Indexing/the-graph
+// File: tools/Indexer & Analytics/the-graph
 
 # The Graph 
 
@@ -16458,29 +16529,6 @@ axios(graphQLRequest)
 
 - To explore all the ways you can optimize & customize your subgraph for a better performance, read more about [creating a subgraph here](https://thegraph.com/docs/en/developing/creating-a-subgraph/).
 - For more information about querying data from your subgraph, read more [here](https://thegraph.com/docs/en/querying/querying-the-graph/).
-
----
-
-// File: tools/Faucets
-
-# Faucets
-
-A faucet is a service that provides small amounts of [xDai tokens](/about/tokens/xdai) to users who are experimenting with Gnosis. Here is a list of the available faucets.
-
-:::note
-If the faucet is not functioning properly, feel free to seek assistance on the [Gnosis Chain Discord channel](https://discord.gg/gnosis).
-:::
-
-## Official Faucet
-
-- [Gnosis Chain Faucet](https://faucet.gnosischain.com/)
-- [Chiado Testnet Faucet](https://faucet.chiadochain.net/)
-
-## Community Faucets
-
-- [Stakely](https://stakely.io/en/faucet/gnosis-chain-xdai)
-- [dRPC](https://drpc.org/faucet/gnosis)
-- [Tenderly](https://docs.tenderly.co/virtual-testnets/unlimited-faucet?mtm_campaign=ext-docs&mtm_kwd=gnosis)
 
 ---
 
@@ -16835,6 +16883,34 @@ For more examples on integrating Chronicle Oracles, please check the [documentat
 ### Get in touch
 
 If you have any questions or need support, drop us a message on [Discord](https://discord.com/invite/CjgvJ9EspJ).
+
+---
+
+// File: tools/Oracle Providers/dia
+
+# DIA
+
+[DIA](https://www.diadata.org) is a cross-chain, trustless oracle network delivering verifiable price feeds for Gnosis Chain. DIA sources raw trade data directly from primary markets and computes it on-chain, ensuring complete transparency and data integrity.
+
+## Key Features
+
+- Complete verifiability from source to destination smart contract.
+- Direct data sourcing from 100+ primary markets eliminating intermediary risk.
+- Support for 20,000+ assets across all major asset classes.
+- Custom oracle configuration with tailored sources and methodologies.
+
+## Data products
+
+- **Token Price Feeds**: Real-time market prices for assets across CEXs and DEXs.
+- **Fundamental Feeds**: Fair value pricing and backing data (NAV, Proof of Reserve, and more).
+- **Real-World Asset (RWA) Feeds**: Traditional financial data including Equities, FX rates,
+  commodities, and ETFs.
+- **Randomness**: Verifiable random number generation for gaming, lotteries, and more.
+
+## Get Started
+
+- [How DIA oracles work on Gnosis Chain](https://www.diadata.org/docs/guides/chain-specific-guide/gnosis-chain)
+- [Request a custom oracle](https://www.diadata.org/docs/guides/how-to-guides/request-a-custom-oracle)
 
 ---
 
