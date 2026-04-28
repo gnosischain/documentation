@@ -37,3 +37,4 @@ Do you own research while selecting your wallet, keep your seed and funds safely
 - [D'CENT](/tools/wallets/dcent)
 - [Ledger](/tools/wallets/ledger)
 - [Trezor](/tools/wallets/trezor)
+- [Cypherock](/tools/wallets/Cypherock)
