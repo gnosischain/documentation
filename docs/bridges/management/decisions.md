@@ -8,6 +8,36 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Freeze outflow of major tokens on canonical bridges
+🗳 Justification:
+1. Due to the [hack](https://x.com/gnosispay/status/2061372038628196356?s=20) related to Gnosis Pay's Delay Module, we decided to halt the outflow ot major tokens on Omnibridge & xDAI bridge from Gnosis Chain to Ethereum as precautionary measure.
+   |Token | Address on Gnosis Chain |
+   |------------|---------------------------------------------|
+   | GNO | 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb |
+   | wstETH | 0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6 |
+   | USDC | 0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83 |
+   | WETH | 0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1 |
+   | TRACE | 0xEddd81E0792E764501AaE206EB432399a0268DB5 |
+   | COW | 0x177127622c4A00F3d409B75571e12cB3c8973d3c |
+   | WBTC | 0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db425 |
+   | HOPR | 0xD057604A14982FE8D88c5fC25Aac3267eA142a08 |
+   | USDT | 0x4ECaBa5870353805a9F068101A40E0f32ed605C6 |
+   | BDT | 0x778aa03021B0CD2b798b0b506403e070125D81C9 |
+   | OLAS | 0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f |
+   | SAFE | 0x4d18815D14fe5c3304e87B3FA18318baa5c23820 |
+   | ROCKETPOOL | 0xc791240D1F2dEf5938E2031364Ff4ed887133C3d |
+   | GIVETH | 0x4f4F9b8D5B4d0Dc10506e5551B0513B61fD59e75 |
+   | PNK | 0x37b60f4E9A31A64cCc0024dce7D0fD07eAA0F7B3 |
+   | CLNY | 0xc9B6218AffE8Aba68a13899Cbf7cF7f14DDd304C |
+   | EURC | 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6 |
+   | LINK | 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2 |
+   | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
+   | xDAI | Native token on Gnosis Chain |
+
+Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2/)
+
+✅ Implemented: Jun 01, 2026.
+
 ## Replace CoW brodge validator address
 
 🗳 Justification:
