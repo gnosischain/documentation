@@ -8,8 +8,19 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
-## Freeze outflow of major tokens on canonical bridges
+## Unfreeze outflow of major tokens on canonical bridges
+
 🗳 Justification:
+
+1. We unfreeze the outflow of major tokens from the previous transaction.
+
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x99ab38b77dc90c7e40e5a07b84dbb623ee3990b25c75d9ccf628e10a0a2472ab)  
+✅ Implemented: Jun 03, 2026.
+
+## Freeze outflow of major tokens on canonical bridges
+
+🗳 Justification:
+
 1. Due to the [hack](https://x.com/gnosispay/status/2061372038628196356?s=20) related to Gnosis Pay's Delay Module, we decided to halt the outflow ot major tokens on Omnibridge & xDAI bridge from Gnosis Chain to Ethereum as precautionary measure.
    |Token | Address on Gnosis Chain |
    |------------|---------------------------------------------|
