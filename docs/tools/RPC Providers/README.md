@@ -100,6 +100,11 @@ dRPC NodeCloud offers an AI-powered load-balancer, 180+ network endpoints, flat-
 - [Docs](https://drpc.org/docs)
 - [Chainlist](https://drpc.org/chainlist)
 
+## Fastnode
+
+- [Gnosis public endpoints](https://public-gno-mainnet.fastnode.io/)
+- [Chainlist](https://fastnode.io/nodes)
+
 ## Quicknode
 
 - [Quicknode's Docs for Gnosis RPCs](https://www.quicknode.com/docs/gnosis)
