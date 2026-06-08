@@ -75,6 +75,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [Blast](https://blastapi.io/public-api/gnosis)
 - [GetBlock](https://getblock.io/nodes/gno/)
 - [BlockPI](https://docs.blockpi.io/documentations/api-reference/gnosis)
+- [Fastnode.io](https://fastnode.io/nodes)
 
 Check out also [rpc providers](../tools/RPC%20Providers/README.md) for more options on hosted nodes.
 
