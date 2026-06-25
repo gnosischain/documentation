@@ -8,6 +8,19 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Rotating Hopr bridge validator address
+
+🗳 Justification:
+
+1. Due to the compromised github bot, attacker was able to access the private key of Hopr's bridge validator. As a security hardening process, we're replacing the Hopr's bridge validator address on AMB and xDAI bridge validator contract.
+
+Old address: `0x6236925FF8Aa09f29f1609a9BcD54Af20e4be6B4`  
+New address: `0xb54B5572F3C4f70fF3cc8F67C19C8cddb838FBaA`
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x222cf2ae709f9e1b1de6c7eeaad51d7a3af6851486d619eeb7b6463a603d468a)  
+Tx on GC: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x0c31399b655a37ef62b5b971fa9629404e5cec5122ed8b9117f0c901b1cbe7fe)  
+✅ Implemented: Jun 25, 2026.
+
 ## Unfreeze outflow of major tokens on canonical bridges
 
 🗳 Justification:
