@@ -14,7 +14,7 @@ If the faucet is not functioning properly, feel free to seek assistance on the [
 ## Official Faucet
 
 - [Gnosis Chain Faucet](https://faucet.gnosischain.com/)
-- [Chiado Testnet Faucet](https://faucet.chiadochain.net/)
+- [Chiado Testnet Faucet](https://faucet.gnosischain.com/?chain=chiado)
 
 ## Community Faucets
 
