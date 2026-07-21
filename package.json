@@ -44,7 +44,15 @@
     "@babel/plugin-transform-modules-systemjs": ">=7.29.4",
     "fast-uri": ">=3.1.1",
     "ws": ">=8.21.0",
-    "shell-quote": ">=1.8.4"
+    "shell-quote": ">=1.8.4",
+    "gray-matter/js-yaml": ">=3.15.0 <4",
+    "@docusaurus/plugin-content-docs/js-yaml": ">=4.3.0 <5",
+    "@docusaurus/utils/js-yaml": ">=4.3.0 <5",
+    "@docusaurus/utils-validation/js-yaml": ">=4.3.0 <5",
+    "cosmiconfig/js-yaml": ">=4.3.0 <5",
+    "docusaurus-plugin-generate-llms-txt/js-yaml": ">=4.3.0 <5",
+    "websocket-driver": ">=0.7.5",
+    "brace-expansion": ">=1.1.16 <2"
   },
   "browserslist": {
     "production": [
