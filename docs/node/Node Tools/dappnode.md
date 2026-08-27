@@ -144,7 +144,7 @@ In case you need some xDai for transaction fees you can get some from the [Offic
 
 :::
 
-1. Navigate to: [https://deposit.gnosischain.com/](https://deposit.gnosischain.com/)
+1. Navigate to: [https://validators.gnosischain.com/](https://validators.gnosischain.com/)
 2. Connect your wallet.
 3. Upload the `deposit_data*.json` you generated with the key generator tool in Step 3.
 4. Your deposit file will be validated and list the number of validator deposits you are making and the required GNO to deposit. Click `Deposit` to continue.

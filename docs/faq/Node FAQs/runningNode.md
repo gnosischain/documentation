@@ -122,7 +122,7 @@ title: Running Nodes
 
 28. **If I have, say 100 GNO, can I put them all in a single validator to earn rewards on all 100, or must I run 100 separate validators of 1 each?**
 
-    The effective balance of a single validator is 1 GNO. All other GNO rewards accrued on your validator are ready to be claimed by calling the `claimWithdrawals function` on the GBC deposit contract or using the Withdrawal Claim tab on https://deposit.gnosischain.com/. If you have more than 1 GNO, you can set up multiple validators using the same machine.
+    The effective balance of a single validator is 1 GNO. All other GNO rewards accrued on your validator are ready to be claimed by calling the `claimWithdrawals function` on the GBC deposit contract or using the Withdrawal Claim tab on https://validators.gnosischain.com/. If you have more than 1 GNO, you can set up multiple validators using the same machine.
 
 29. **Can I participate in gnosis governance with GNO staked in validators? I would not think so, but if yes, how?**
 

@@ -5,7 +5,7 @@ After [depositing](../deposit.md) and starting your validator, your validator wi
 
 You can verify the status of your validators following these steps:
 
-1. Navigate to the [deposit tool](https://deposit.gnosischain.com) and click on the `Validator Status` tab.
+1. Navigate to the [deposit tool](https://validators.gnosischain.com) and click on the `Validator Status` tab.
 
 <img src="/img/node/verify/verify-1.jpg" width="500" />
 <br />
