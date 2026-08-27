@@ -59,7 +59,7 @@ Gnosis' rewards curve was [proposed in Nov 2021](https://forum.gnosis.io/t/launc
 
 ## Claiming Rewards
 
-You can claim your Gnosis Chain rewards on the [Deposit website](https://deposit.gnosischain.com/) or by manually calling the `claimWithdrawal(address)` or `claimWithdrawals(addresses)` method in the [Deposit contract](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
+You can claim your Gnosis Chain rewards on the [Deposit website](https://validators.gnosischain.com/) or by manually calling the `claimWithdrawal(address)` or `claimWithdrawals(addresses)` method in the [Deposit contract](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
 
 ![faucet](/img/node/withdrawal/claim-withdrawal.png)
 

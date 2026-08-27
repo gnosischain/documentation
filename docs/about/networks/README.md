@@ -26,4 +26,4 @@ keywords:
 | CL Explorer        | https://beaconchain.gnosischain.com/           | https://beacon.chiadochain.net       |
 | Fork monitor       | https://forkmon.gnosischain.com  | https://forkmon.chiadochain.net      |
 | EthStats           | https://ethstats.gnosischain.com | https://ethstats.chiadochain.net     |
-| Faucet             | https://faucet.gnosischain.com/  | https://faucet.chiadochain.net/      |
+| Faucet             | https://faucet.gnosischain.com/  | https://faucet.gnosischain.com/?chain=chiado      |

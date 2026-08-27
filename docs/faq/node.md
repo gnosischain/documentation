@@ -144,7 +144,7 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 8. Do partial withdrawals happen automatically?
 
-   The withdrawal processing itself is automatic once your validator is eligible. What is not automatic today is claiming the resulting GNO to the recipient address. After the withdrawal has been processed, you must claim it either on the [Deposit website](https://deposit.gnosischain.com/) or by calling [`claimWithdrawal`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract) or `claimWithdrawals(...)` on the deposit contract.
+   The withdrawal processing itself is automatic once your validator is eligible. What is not automatic today is claiming the resulting GNO to the recipient address. After the withdrawal has been processed, you must claim it either on the [Deposit website](https://validators.gnosischain.com/) or by calling [`claimWithdrawal`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract) or `claimWithdrawals(...)` on the deposit contract.
 
 9. Do full withdrawals happen automatically?
 
@@ -154,7 +154,7 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 10. Is there a UI that I can use for withdrawals?
 
-    Yes. You can claim withdrawals on the [Deposit website](https://deposit.gnosischain.com/). Advanced users can also claim directly through the deposit contract on Gnosis Chain.
+    Yes. You can claim withdrawals on the [Deposit website](https://validators.gnosischain.com/). Advanced users can also claim directly through the deposit contract on Gnosis Chain.
 
 11. Where does the automatic balance withdraw to?
 

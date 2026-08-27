@@ -45,7 +45,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ### How to Participate
 
 - [Running a Chiado node](https://docs.sedge.nethermind.io/docs/networks/chiado) with [Nethermind Sedge](https://docs.sedge.nethermind.io/)
-- (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.com/gnosis/chiado/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or deploy your own [Deposit UI](/node/manual/validator/deposit#depositing-for-chiado-testnet) with the updated config files
+- (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.com/gnosis/chiado/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or follow the [Chiado deposit instructions](/node/manual/validator/deposit#depositing-for-chiado-testnet)
 
 ## Summary
 

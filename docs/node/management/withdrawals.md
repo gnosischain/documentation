@@ -35,7 +35,7 @@ There are two kinds of withdrawals:
 
 ## What action should a validator take?
 
-### 1 · Check your withdrawal credential prefix
+### 1 · Check your withdrawal credential prefix {#check-withdrawal-credential}
 
 Gnosis Chain supports **two** execution‑address credential prefixes:
 
@@ -57,7 +57,7 @@ Gnosis Chain supports **two** execution‑address credential prefixes:
 
 ---
 
-### 2 · Change your credential (BLS‑to‑Execution)
+### 2 · Change your credential (BLS‑to‑Execution) {#how-to-change-the-withdrawal-credential}
 
 If you are on `0x00` *or* want to switch from `0x01` to `0x02`, perform a BLS‑to‑Execution change.
 
@@ -129,7 +129,7 @@ tar -xvf ethdo-<version>-linux-amd64.tar.gz
 
 ---
 
-## 3 · Claiming your GNO (partial **and** full withdrawals)
+## 3 · Claiming your GNO (partial **and** full withdrawals) {#how-to-receive-my-withdrawal-full-or-partial}
 
 Because Gnosis Chain pays out **GNO** rather than the gas token (xDai), withdrawals are **not sent automatically** to your address. After the Beacon‑chain message has executed you must *claim* the GNO from the withdrawal contract: [`0x0B98057eA310F4d31F2a452B414647007d1645d9`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
 

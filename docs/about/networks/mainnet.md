@@ -30,7 +30,7 @@ keywords:
 | Fork monitor             | https://forkmon.gnosischain.com             |
 | EthStats                 | https://ethstats.gnosischain.com            |
 | Forked Blocks            | https://gnosis.blockscout.com/reorgs        |
-| Faucet                   | https://gnosisfaucet.com                    |
+| Faucet                   | https://faucet.gnosischain.com/             |
 
 ### Consensus Layer
 
