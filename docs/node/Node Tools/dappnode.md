@@ -140,7 +140,7 @@ You are now ready to fund these validators and start validating.
 ### Step 4: Fund Your Validators
 
 :::tip
-In case you need some xDai for transaction fees you can get some from the [Official xDai faucet for Gnosis](https://gnosisfaucet.com/).
+In case you need some xDai for transaction fees you can get some from the [Official xDai faucet for Gnosis](https://faucet.gnosischain.com/).
 
 :::
 

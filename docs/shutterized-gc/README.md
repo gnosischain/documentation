@@ -39,7 +39,7 @@ With the contribution from teams of [Shutter Network](https://shutter.network/),
 | Chain ID           | 100                              | 10200                                |
 | New RPC URL        | https://erpc.gnosis.shutter.network   | https://erpc.chiado.staging.shutter.network       |
 | Block Explorer     | https://gnosis.blockscout.com/        | https://blockscout.com/gnosis/chiado |
-| Faucet             | https://faucet.gnosischain.com/       | https://faucet.chiadochain.net/      |
+| Faucet             | https://faucet.gnosischain.com/       | https://faucet.gnosischain.com/?chain=chiado      |
 
 
 ### Shutterized Chiado Test dApp

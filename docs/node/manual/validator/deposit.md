@@ -249,7 +249,7 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 Required:
 
-1. Chiado Testnet xDai and GNO: https://faucet.chiadochain.net/
+1. Chiado Testnet xDai and GNO: https://faucet.gnosischain.com/?chain=chiado
 2. Connect to Deposit UI [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) using Gnosis Chiado Testnet and follow the Option 1: Deposit UI.
 
 <!-- You can run the [deposit UI](https://deposit.gnosischain.com) locally following its repository `README` instructions:
