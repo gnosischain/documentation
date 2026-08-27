@@ -130,7 +130,7 @@ Go to https://uramp.gnosis.io/login and follow the steps mentioned or you can fo
 | CL Explorer        | https://beaconchain.gnosischain.com/           | https://beacon.chiadochain.net       |
 | Fork monitor       | https://forkmon.gnosischain.com  | https://forkmon.chiadochain.net      |
 | EthStats           | https://ethstats.gnosischain.com | https://ethstats.chiadochain.net     |
-| Faucet             | https://faucet.gnosischain.com/  | https://faucet.chiadochain.net/      |
+| Faucet             | https://faucet.gnosischain.com/  | https://faucet.gnosischain.com/?chain=chiado      |
 
 ---
 
@@ -170,7 +170,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ### How to Participate
 
 - [Running a Chiado node](https://docs.sedge.nethermind.io/docs/networks/chiado) with [Nethermind Sedge](https://docs.sedge.nethermind.io/)
-- (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.com/gnosis/chiado/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or deploy your own [Deposit UI](/node/manual/validator/deposit#depositing-for-chiado-testnet) with the updated config files
+- (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.com/gnosis/chiado/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or follow the [Chiado deposit instructions](/node/manual/validator/deposit#depositing-for-chiado-testnet)
 
 ## Summary
 
@@ -189,7 +189,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 | Beacon Checkpoint Sync        | https://checkpoint.chiadochain.net    |
 | Fork monitor                  | https://forkmon.chiadochain.net       |
 | EthStats                      | https://ethstats.chiadochain.net      |
-| Faucet                        | https://faucet.chiadochain.net/       |
+| Faucet                        | https://faucet.gnosischain.com/?chain=chiado       |
 
 ### Key Parameters
 
@@ -281,7 +281,7 @@ TODO -->
 | Fork monitor             | https://forkmon.gnosischain.com             |
 | EthStats                 | https://ethstats.gnosischain.com            |
 | Forked Blocks            | https://gnosis.blockscout.com/reorgs        |
-| Faucet                   | https://gnosisfaucet.com                    |
+| Faucet                   | https://faucet.gnosischain.com/             |
 
 ### Consensus Layer
 
@@ -2478,13 +2478,17 @@ async function fetchLimits() {
 
 // File: bridges/roadmap
 
+### Fast Confirmation Rule(FCR) integration
+
+Fast Confirmation Rule is a new Ethereum feature that provides a very strong assurance a block will not be reorged within 1 slot(13 seconds), a 98% reduction from the approximately 13-minute time to finality. Integrating FCR into bridges improves the bridging time down to seconds without sacrificing the security. Check [here](./fast-confirmation-rule.md) for more details.
+
+### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms ✅
+
 :::warning
 🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
 :::
-
-### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms ✅
 
 Hashi, a cross chain protocol based on distributed trust of the underlying security mechanisms
 Hashi is an EVM Hash Oracle Aggregator designed to enhance cross-chain bridge security by aggregating block headers from various sources. By requiring validation from multiple independent mechanisms, Hashi ensures greater resilience against security incidents. It supports 15+ General Message Passing bridges and ZK light clients, promoting redundancy and reducing reliance on single mechanisms. Integrating Hashi into Gnosis Chain's bridges strengthens security, decentralization, and interoperability. This initiative aims to set a new standard for cross-chain transactions, enhancing user confidence and bolstering the Gnosis ecosystem's security posture. [Check out the proposal](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) .
@@ -2595,6 +2599,54 @@ The scope for auditing includes the following repos:
 **Conclusion**: Rated the overall security level of the system as “High”.  
 **Contracts**: Updated to version 2.0.0 to address audit. https://github.com/poanetwork/tokenbridge-contracts/releases/tag/2.0.0  
 **Audit Report**: [Peppersec Initial TokenBridge Audit](https://github.com/omni/tokenbridge/blob/73d500210546e2959536dc569f1aec5752077225/audit/peppersec/POA-Network-Token-bridge-security-assessment-report.pdf)
+
+---
+
+// File: bridges/fast-confirmation-rule
+
+# What is FCR?
+
+The Fast Confirmation Rule (FCR) is a new Ethereum feature that provides a very strong assurance a block will not be reorged within 1 slot(13 seconds), a 98% reduction from the approximately 13-minute time to finality.
+
+FCR works by counting attestations in real-time. If there is overwhelming support for a block and robustness checks are passed, the block is fast-confirmed.
+
+FCR comes with two core assumptions. First, it assumes the network is synchronous, meaning attestations are delivered within about 8 seconds. Second, it assumes there is no adversary with more than 25% stake, slightly less than the 33% maximum adversarial stake that finality can withstand. If these assumptions hold, any fast-confirmed block will, with certainty, be finalized.
+These assumptions are reasonable and usually hold. In the rare case that they do not, it can cause either a liveness or a safety failure. A liveness failure means it may take longer than 13 seconds to fast-confirm a block. Eventually, the rule automatically falls back to finality. This is a feature, not a bug: FCR falls back to a more secure confirmation rule when needed. A safety failure means that a fast-confirmed block is reorged. With FCR, reorg risk is extremely small. ethPandaOps has conducted experiment by replaying historical Ethereum beacon chain data(a year) through FCR from consensus clients, the result shows that there is [zero false confirmation](https://ethpandaops.io/posts/fcr-simulator/).
+
+# Why Gnosis bridges integrate FCR?
+
+By integrating FCR, it can drastically decrease the current bridging time from Ethereum.
+
+# How would it work in Gnosis bridges?
+
+By default, the processing rules are the following:
+
+| Source Chain | Destination Chain | Processing rule          |
+| ------------ | ----------------- | ------------------------ |
+| Ethereum     | Gnosis Chain      | FCR (~12s)               |
+| Gnosis Chain | Ethereum          | Block finality (~5 mins) |
+
+1. Bridges smart contracts: No modification.
+2. Bridge validators logic:
+   1. Based on the bridging directions, process the bridging tx accordingly.
+
+   2. The bridge validators run their own nodes, which ensure that the network synchrony of the FCR assumption is satisfied. We require bridge validator to run different clients to ensure client diversity.
+
+   3. In case of hardfork or instability of the network, bridge validator will default to block finality. An alert is raised when a FCR-confirmed processed tx is not later included in the finalized block.
+
+3. Monitoring: Monitoring system will be built to track the following metrics:
+   1. Fast confirmed block by each clients
+   2. Reorgs event
+
+# Q&A
+
+1. Can user choose FCR or block finality when they initiate the bridging?
+
+No, by default, all bridging txs from Ethereum use FCR, while all bridging txs from Gnosis Chain use block finality. Except in the case where network is unstable or during hardfork period, block finality is the default.
+
+# Reference
+
+1. https://fastconfirm.it/
 
 ---
 
@@ -3618,6 +3670,92 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Rotating bridge validator addresses in batch(1/2)
+🗳 Justification:
+
+1. As a security hardening process, we're replacing the bridge validator addresses on AMB and xDAI bridge validator contract.    
+   1. Gnosis:    
+        1. Old address for AMB: 0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde    
+        2. New address for AMB: 0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2    
+        3. Old address for xDAI bridge: 0x97630e2ae609d4104abda91f3066c556403182dd    
+        4. New address for xDAI bridge: 0x82b00cA9D162859f645B51967746E55bb6498DfC    
+   2. Protofire:    
+        1. Old address for AMB: 0x459a3bd49f1ff109bc90b76125533699aaaaf9a6    
+        2. New address for AMB: 0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55    
+        3. Old address for xDAI bridge: 0x4d1c96b9a49c4469a0b720a22b74b034eddfe051    
+        4. New address for xDAI bridge: 0x2245bFAD58a6cD50e9e413084d4091C497281911    
+   3. Giveth:    
+        1. Old address for AMB: 0x105cd22ed3d089bf5589c59b452f9de0796ca52d    
+        2. New address for AMB: 0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE    
+        3. Old address for xDAI bridge: 0xc073c8e5ed9aa11cf6776c69b3e13b259ba9f506    
+        4. New address for xDAI bridge: 0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13    
+   4. Kleros:    
+        1. Old address for AMB: 0x7117f73afbdec3221bdd50ddcbf73204b3998302    
+        2. New address for AMB: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade    
+        3. Old address for xDAI bridge: 0x7117f73afbdec3221bdd50ddcbf73204b3998302    
+        4. New address for xDAI bridge: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade    
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x32c52cf71d61d8134b5bdbc7e96dd2ed8cbe618a2fbd8d4bcaab91e3595bbf17
+)
+
+Tx on GC: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x71e27be50fc8a0140f8b5908493dbf4f923c99a5889aa71c455fff334118778d
+) 
+
+✅ Implemented: Jul 21, 2026.
+## Rotating Hopr bridge validator address
+
+🗳 Justification:
+
+1. Due to the compromised github bot, attacker was able to access the private key of Hopr's bridge validator. As a security hardening process, we're replacing the Hopr's bridge validator address on AMB and xDAI bridge validator contract.
+
+Old address: `0x6236925FF8Aa09f29f1609a9BcD54Af20e4be6B4`  
+New address: `0xb54B5572F3C4f70fF3cc8F67C19C8cddb838FBaA`
+
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x222cf2ae709f9e1b1de6c7eeaad51d7a3af6851486d619eeb7b6463a603d468a)  
+Tx on GC: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x0c31399b655a37ef62b5b971fa9629404e5cec5122ed8b9117f0c901b1cbe7fe)  
+✅ Implemented: Jun 25, 2026.
+
+## Unfreeze outflow of major tokens on canonical bridges
+
+🗳 Justification:
+
+1. We unfreeze the outflow of major tokens from the previous transaction.
+
+Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x99ab38b77dc90c7e40e5a07b84dbb623ee3990b25c75d9ccf628e10a0a2472ab)  
+✅ Implemented: Jun 03, 2026.
+
+## Freeze outflow of major tokens on canonical bridges
+
+🗳 Justification:
+
+1. Due to the [hack](https://x.com/gnosispay/status/2061372038628196356?s=20) related to Gnosis Pay's Delay Module, we decided to halt the outflow ot major tokens on Omnibridge & xDAI bridge from Gnosis Chain to Ethereum as precautionary measure.
+   |Token | Address on Gnosis Chain |
+   |------------|---------------------------------------------|
+   | GNO | 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb |
+   | wstETH | 0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6 |
+   | USDC | 0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83 |
+   | WETH | 0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1 |
+   | TRACE | 0xEddd81E0792E764501AaE206EB432399a0268DB5 |
+   | COW | 0x177127622c4A00F3d409B75571e12cB3c8973d3c |
+   | WBTC | 0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db425 |
+   | HOPR | 0xD057604A14982FE8D88c5fC25Aac3267eA142a08 |
+   | USDT | 0x4ECaBa5870353805a9F068101A40E0f32ed605C6 |
+   | BDT | 0x778aa03021B0CD2b798b0b506403e070125D81C9 |
+   | OLAS | 0xcE11e14225575945b8E6Dc0D4F2dD4C570f79d9f |
+   | SAFE | 0x4d18815D14fe5c3304e87B3FA18318baa5c23820 |
+   | ROCKETPOOL | 0xc791240D1F2dEf5938E2031364Ff4ed887133C3d |
+   | GIVETH | 0x4f4F9b8D5B4d0Dc10506e5551B0513B61fD59e75 |
+   | PNK | 0x37b60f4E9A31A64cCc0024dce7D0fD07eAA0F7B3 |
+   | CLNY | 0xc9B6218AffE8Aba68a13899Cbf7cF7f14DDd304C |
+   | EURC | 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6 |
+   | LINK | 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2 |
+   | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
+   | xDAI | Native token on Gnosis Chain |
+
+Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2/)
+
+✅ Implemented: Jun 01, 2026.
+
 ## Replace CoW brodge validator address
 
 🗳 Justification:
@@ -4130,10 +4268,10 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 
 | GC Address                                                                                                                  | Organization Name |
 | --------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| [gno:0x459a3bd49f1ff109bc90b76125533699aaaaf9a6](https://gnosisscan.io/address/0x459a3bd49f1ff109bc90b76125533699aaaaf9a6)  | Protofire         |
-| [gno:0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d](https://gnosisscan.io/address/0x105CD22eD3D089Bf5589C59b452f9dE0796Ca52d)  | Giveth            |
-| [gno:0x7117F73aFBDec3221bDD50DdCbf73204b3998302 ](https://gnosisscan.io/address/0x7117F73aFBDec3221bDD50DdCbf73204b3998302) | Kleros            |
-| [gno:0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde](https://gnosisscan.io/address/0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde)  | GnosisDAO         |
+| [gno:0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55](https://gnosisscan.io/address/0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55)  | Protofire         |
+| [gno:0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE](https://gnosisscan.io/address/0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE)  | Giveth            |
+| [gno:0x156c0DAAb0cD73c224a424a781866d35f0F8Fade ](https://gnosisscan.io/address/0x156c0DAAb0cD73c224a424a781866d35f0F8Fade) | Kleros            |
+| [gno:0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2](https://gnosisscan.io/address/0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2)  | GnosisDAO         |
 | [gno:0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd](https://gnosisscan.io/address/0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd)  | Cow Protocol      |
 | [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f)  | Gnosis Safe       |
 | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  | Hopr              |
@@ -4165,12 +4303,12 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 | Organization | Gnosis Address                                                                                                                      |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| GnosisDao    | [gno:0x97630e2ae609d4104abda91f3066c556403182dd](https://gnosis.blockscout.com/address/0x97630e2ae609d4104abda91f3066c556403182dd)  |
-| Protofire    | [gno:0x4d1c96b9a49c4469a0b720a22b74b034eddfe051](https://gnosis.blockscout.com/address/0x4D1c96B9A49C4469A0b720a22b74b034EDdFe051)  |
+| GnosisDao    | [gno:0x82b00cA9D162859f645B51967746E55bb6498DfC](https://gnosis.blockscout.com/address/0x82b00cA9D162859f645B51967746E55bb6498DfC)  |
+| Protofire    | [gno:0x2245bFAD58a6cD50e9e413084d4091C497281911](https://gnosis.blockscout.com/address/0x2245bFAD58a6cD50e9e413084d4091C497281911)  |
 | CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosis.blockscout.com/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
-| Giveth       | [gno:0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506](https://gnosis.blockscout.com/address/0xc073C8E5ED9Aa11CF6776C69b3e13b259Ba9F506)  |
+| Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosis.blockscout.com/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
-| Kleros       | [gno:0x7117F73aFBDec3221bDD50DdCbf73204b3998302 ](https://gnosis.blockscout.com/address/0x7117F73aFBDec3221bDD50DdCbf73204b3998302) |
+| Kleros       | [gno:0x156c0DAAb0cD73c224a424a781866d35f0F8Fade ](https://gnosis.blockscout.com/address/0x156c0DAAb0cD73c224a424a781866d35f0F8Fade) |
 | Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
 
 </TabItem>
@@ -4496,8 +4634,7 @@ After you create a wallet, add the Chiado network to the list of available netwo
 Lastly, top up the wallet with xDAI that you'll use for contract deployments on one of the environments: Chiado Testnet or Gnosis Mainnet. It's recommended to deploy contracts on the testnet first and use the mainnet only after you've done proper security audits.
 
 Testnets on any EVM-compatible chains don't require real funds to pay for transactions. Instead, they use faucets that represent free tokens. You can use the following faucets to get xDAI on the Chiado testnet:
-- [Chiado faucet](https://faucet.chiadochain.net/)
-- [Gnosis Chain Faucet](https://faucet.gnosischain.com/)
+- [Gnosis Chain Faucet (Chiado)](https://faucet.gnosischain.com/?chain=chiado)
 
 ![faucet](/img/developers/quickstart/faucet.png)
 
@@ -6217,7 +6354,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 7. **Where can I check my withdrawal credential?**
 
-    You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4). You can also visit [official docs](https://docs.gnosischain.com/node/management/withdrawals#check-withdrawal-credential) for more detail.
+    You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial). You can also visit [official docs](https://docs.gnosischain.com/node/management/withdrawals#check-withdrawal-credential) for more detail.
 
 8. **Do partial withdrawals happen automatically?**
 
@@ -6266,7 +6403,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 18. **When you receive rewards from validation, where does the reward go? Does it stay in the node or go to the address you choose to receive rewards? Because on this address I don't notice any increase of GNO.**
 
-    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4) by calling the claimWithdrawals function and entering your withdrawal address
+    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) by calling the claimWithdrawals function and entering your withdrawal address
 
 19. **I use Lighthouse and I wanted to know if it was possible to separate the rewards of each validator from the address provided when creating the keystore.json files? I also wanted to know if it was possible to add validators later**.
 
@@ -6278,7 +6415,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 21. **Can I withdraw my GNO which is currently used in validator?**
 
-    Yes, you have to do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) (either from the client itself or if you are on Dappnode from the Web3signer UI) then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4) by calling the claimWithdrawals function and entering your withdrawal address
+    Yes, you have to do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) (either from the client itself or if you are on Dappnode from the Web3signer UI) then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) by calling the claimWithdrawals function and entering your withdrawal address
 
 22. **What is the easiest way to set withdrawal address without setting up locally beacon node, cli and etc.?**
 
@@ -6312,11 +6449,11 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
     You don't need to claim execution layer rewards who are paid in xDAI, when you propose a block, the reward will go to your address. You can see you rewards on [Gnosisscan](https://gnosisscan.io/) on your validator address, in the Validated Blocks tab.
 31. **Could anyone please explain to me how withdrawals and validator rewards work on Gnosis Chain?**
 
-    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) ; Execution layer rewards are paid in xDAI to your recipient address. 
+    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) ; Execution layer rewards are paid in xDAI to your recipient address. 
 
 31. **How to withdraw the staked validator amount though?**
 
-    You can do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    You can do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 32. Is there a guide on how to withdraw when you only have the keystore?
 
@@ -6324,7 +6461,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 33. **I had partial withdrawals going to an address in August. Are the future withdrawals will go to the same address?**
 
-    If back then when a bot was claiming them automatically, your withdrawals were going to a specific address, it means that your withdrawal address is correctly setup and new withdrawals will go there as well. Now you have to claim withdrawals manually, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
+    If back then when a bot was claiming them automatically, your withdrawals were going to a specific address, it means that your withdrawal address is correctly setup and new withdrawals will go there as well. Now you have to claim withdrawals manually, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
 
 34. **My wallet got hacked. Is there any way to change my withdrawal address?**
 
@@ -6354,7 +6491,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
     Currently not, even if Dappnode mentioned working on it in the past. You have to follow the regular [step by step guide](https://docs.gnosischain.com/node/management/withdrawals).
 41. **I see automatic withdrawals to my wallet on beaconchain.gnosischain.com, but I don't seem to be receiving them. Is there anything else that I need to do?**
 
-    You have to claim withdrawals manually, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the Deposit contract. Once claimed it should be instantaneous in the same transaction.
+    You have to claim withdrawals manually, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the Deposit contract. Once claimed it should be instantaneous in the same transaction.
 
 42. **Should the automatic withdrawals that started after Shapella go to the default fee recipient address or some other address?**
 
@@ -6362,7 +6499,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 43. **What happened to automatic withdrawals after Shapella? How do I claim rewards manually?**
 
-    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 44. **Is there an easy way to transfer the ownership of my validators to a different address?**
 
@@ -6382,7 +6519,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 49. **I've got some validators, do I need to do something to receive the rewards from these validators to my wallet?**
 
-    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://deposit.gnosischain.com/) ; Execution layer rewards are paid in xDAI to your recipient address.
+    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) ; Execution layer rewards are paid in xDAI to your recipient address.
 
 50. **What kind of penalties will I face if I am offline for 1 day?**
 
@@ -6394,13 +6531,13 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 52. **After withdrawals went live, I got some GNO in my wallet, but now there are no more coming in**
 
-    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/).
+    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/).
 53. **My validator node is slashed, how to withdraw GNO?**
     You can do a voluntary exit either through the client like described in the docs or if you are using Dappnode you can exit through the Web3signer UI.
 
 54. **How long until withdrawals arrive in wallet?**
 
-    For full withdrawals you have to wait until your validator leaves the exit queue and be ready to claim. Then both for partial and full withdrawals, once claimed on the contract or on the [Deposit page](https://deposit.gnosischain.com/) it should be instantaneous.
+    For full withdrawals you have to wait until your validator leaves the exit queue and be ready to claim. Then both for partial and full withdrawals, once claimed on the contract or on the [Deposit page](https://validators.gnosischain.com/) it should be instantaneous.
 
 55. **On beaconchain.gnosischain.com while some rewards are denominated in GNO, others are in xDai. What's the difference?**
 
@@ -6412,7 +6549,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 57. **I see a withdrawal on beaconchain.gnosischain.com, but I haven't initiated anything. Why?**
 
-    The withdrawals you see on beaconchain.gnosischain.com are basically just withdrawals ready to be claimed on the contract, the GNO in question have waiting on the deposit contract, you can claim a withdrawal on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    The withdrawals you see on beaconchain.gnosischain.com are basically just withdrawals ready to be claimed on the contract, the GNO in question have waiting on the deposit contract, you can claim a withdrawal on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 58. **I do not want partial withdrawals to be automatic due to tax reasons. Can I opt-out of this feature?**
 
@@ -6420,7 +6557,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 59. **I've been running my node for a week now. When/Where can I expect to start seeing my accrued rewards?**
 
-    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them manually from that contract. You can either go and call claimWithdrawals function on the GBC deposit contract or use the Withdrawal Claim tab on https://deposit.gnosischain.com/. You can check your accrued rewards on https://beaconchain.gnosischain.com/ as well.
+    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them manually from that contract. You can either go and call claimWithdrawals function on the GBC deposit contract or use the Withdrawal Claim tab on https://validators.gnosischain.com/. You can check your accrued rewards on https://beaconchain.gnosischain.com/ as well.
 
 60. **Can I withdraw without being online?**
 
@@ -6451,15 +6588,15 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 67. **I set a withdrawal address to a Safe on Gnosis Chain, I see the partial withdrawals, but the balance in GNO don’t go up. What should I do?**
 
-    Unlike Ethereum, on Gnosis Chain, you will have to claim them on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://deposit.gnosischain.com/) by calling the claimWithdrawals function and entering your withdrawal address
+    Unlike Ethereum, on Gnosis Chain, you will have to claim them on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) by calling the claimWithdrawals function and entering your withdrawal address
 
 68. **Where do Withdrawals from Validators go to? After Update I received GNO once but now it says it's sending Amounts of GNO but they never arrive in my wallet.**
 
-    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
+    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
 
 69. Is there a guide on how to unstake my Gnosis validators?
 
-    Do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    Do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 ---
 
@@ -6721,7 +6858,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 28. **If I have, say 100 GNO, can I put them all in a single validator to earn rewards on all 100, or must I run 100 separate validators of 1 each?**
 
-    The effective balance of a single validator is 1 GNO. All other GNO rewards accrued on your validator are ready to be claimed by calling the `claimWithdrawals function` on the GBC deposit contract or using the Withdrawal Claim tab on https://deposit.gnosischain.com/. If you have more than 1 GNO, you can set up multiple validators using the same machine.
+    The effective balance of a single validator is 1 GNO. All other GNO rewards accrued on your validator are ready to be claimed by calling the `claimWithdrawals function` on the GBC deposit contract or using the Withdrawal Claim tab on https://validators.gnosischain.com/. If you have more than 1 GNO, you can set up multiple validators using the same machine.
 
 29. **Can I participate in gnosis governance with GNO staked in validators? I would not think so, but if yes, how?**
 
@@ -7096,7 +7233,7 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 8. Do partial withdrawals happen automatically?
 
-   The withdrawal processing itself is automatic once your validator is eligible. What is not automatic today is claiming the resulting GNO to the recipient address. After the withdrawal has been processed, you must claim it either on the [Deposit website](https://deposit.gnosischain.com/) or by calling [`claimWithdrawal`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract) or `claimWithdrawals(...)` on the deposit contract.
+   The withdrawal processing itself is automatic once your validator is eligible. What is not automatic today is claiming the resulting GNO to the recipient address. After the withdrawal has been processed, you must claim it either on the [Deposit website](https://validators.gnosischain.com/) or by calling [`claimWithdrawal`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract) or `claimWithdrawals(...)` on the deposit contract.
 
 9. Do full withdrawals happen automatically?
 
@@ -7106,7 +7243,7 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 10. Is there a UI that I can use for withdrawals?
 
-    Yes. You can claim withdrawals on the [Deposit website](https://deposit.gnosischain.com/). Advanced users can also claim directly through the deposit contract on Gnosis Chain.
+    Yes. You can claim withdrawals on the [Deposit website](https://validators.gnosischain.com/). Advanced users can also claim directly through the deposit contract on Gnosis Chain.
 
 11. Where does the automatic balance withdraw to?
 
@@ -7147,7 +7284,7 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 2. What is Gnosis Faucet?
 
-   The Gnosis Chain xDAI faucet distributes xDAI to new users so that they may have enough gas to complete a few transactions and interact with applications on Gnosis Chain : https://www.gnosisfaucet.com/
+   The Gnosis Chain xDAI faucet distributes xDAI to new users so that they may have enough gas to complete a few transactions and interact with applications on Gnosis Chain : https://faucet.gnosischain.com/
 
 3. Where can I stake my GNO?
 
@@ -7157,13 +7294,11 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
    When you stake your GNO on Stakewise you receive sGNO.
 
-https://docs.gnosischain.com/faq/others
-
-6. What is LGNO?
+5. What is LGNO?
 
    This stands for locked GNO. The LGNO contact was an incentive program for the Gnosis community to lock their GNO in return for vCOW. To learn more, please visit this thread by Stefan George -https://twitter.com/StefanDGeorge/status/1488924732191907849
 
-7. What is d14n.info?
+6. What is d14n.info?
 
    :::note
    The site is deprecated.
@@ -7171,24 +7306,20 @@ https://docs.gnosischain.com/faq/others
    [d14n.info](https://www.d14n.info/) is a real-time dashboard that measures decentralization of the Gnosis Chain and Ethereum networks. We use the Nakamoto Coefficient as the primary quantitative measure across multiple dimensions of the network.
    You may also check out [Gnosis Metrics](https://www.gnosismetrics.com/#overview)
 
-8. What native bridges does Gnosis have?
+7. What native bridges does Gnosis have?
 
    [xDAI & OmniBridge](https://docs.gnosischain.com/bridges/)
 
-9. What are the DAOs running on the Gnosis Chain?
+8. Which wallets can I use on the Gnosis Chain?
 
-    https://www.daosongnosis.com/
+    See [Wallets](../tools/wallets/README.md).
 
-10. Which wallets can I use on the Gnosis Chain?
-
-    https://www.gnosiswallets.com/
-
-11. How do I connect my wallet to Gnosis Chain?
+9. How do I connect my wallet to Gnosis Chain?
 
     Click 'Add to Metamask' in [here](https://docs.gnosischain.com/concepts/networks/mainnet) or view other options from
     https://docs.gnosischain.com/tools/wallets/
 
-12. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
+10. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
 
     This has been down for some time now due to the old team that was running xdai not maintain it anymore. You will need to use the block explorer to interact with the contracts without the UI in order for it to be withdrawn.
 
@@ -7197,7 +7328,7 @@ https://docs.gnosischain.com/faq/others
     https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad#readProxyContract 11. lastDepositIds Type your address which gives you a number. 3. balances Find your deposits. They are numbered from 0 up to the number you got previously. Check all of them.
     https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad#writeProxyContract 7. makeForcedWithdrawal Withdraw. Please note this instant-withdrawal has a 2% fee
 
-13. I recently transferred an ERC-1155 into a safe. I realized after the fact that gnosis does not support 1155s. Is there a way that I’m able to transfer it back out?
+11. I recently transferred an ERC-1155 into a safe. I realized after the fact that gnosis does not support 1155s. Is there a way that I’m able to transfer it back out?
 
     You have to use “contract interaction” on the safe when you click on “New Transaction”
     On the pop up, you will put in the contract address of the ERC-1155 token - (It may or may not automatically pull in the ABI so you may have to copy that from the contract details via gnosis scan)
@@ -7214,54 +7345,54 @@ https://docs.gnosischain.com/faq/others
     Add that transaction - then sign it off and that should work
     if you are still having issues i would suggest to hop into the Safe discord and ask for further assistance there.
 
-14. When SAFE airdrop?
+12. When SAFE airdrop?
 
     https://forum.gnosis.io/t/gip-64-should-gnosisdao-distribute-safe-tokens-to-incentivize-decentralizing-gnosis-chain/5896
     https://forum.gnosis.io/t/gip-64-should-gnosisdao-distribute-safe-tokens-to-incentivize-decentralizing-gnosis-chain/5896/54
 
-15. Where is the simplest way to stake GNO on gnosis chain?
+13. Where is the simplest way to stake GNO on gnosis chain?
 
     https://www.validategnosis.com/
 
-16. I’ve been experiencing this error withMetamask on Gnosis Chain. It doesn’t generate fees whenever I send tokens. ‘Transaction error - Internal JASON-RPC error.’
+14. I’ve been experiencing this error withMetamask on Gnosis Chain. It doesn’t generate fees whenever I send tokens. ‘Transaction error - Internal JASON-RPC error.’
 
     https://metamask.zendesk.com/hc/en-us/articles/360059289871-Error-Internal-JSON-RPC-error-when-trying-to-interact-with-other-network and please update your RPC on MetaMask to https://rpc.gnosis.gateway.fm/
 
-17. What is WXDAI for?
+15. What is WXDAI for?
 
     As xDai on Gnosis Chain acts similar to ETH on Ethereum Network, you would need a wrapped version of xDai to be used as an ERC-20. Basically, WXDAI is the equivalent of WETH on Gnosis Chain.
 
-18. What is Gnosis chain?
+16. What is Gnosis chain?
 
     Gnosis Chain is an EVM-based Layer 1 utilizing PoS consensus. Gnosis Chain utilizes a dual token model unlike similar EVM chains. On Gnosis Chain GNO token is used to secure the consensus layer while xDai is used as the gas token.
 
-19. How can I add Gnosis Chain to Metamask?
+17. How can I add Gnosis Chain to Metamask?
 
     You can follow the instructions on this page: https://docs.gnosischain.com/tools/wallets/metamask/
 
     Or alternatively, you can go to https://chainlist.org/ search for Gnosis Chain to get Gnosis Chain added automatically to your Metamask.
 
-20. What DApps can we use on Gnosis?
+18. What DApps can we use on Gnosis?
     All dApps on Gnosis Ecosystem can be found here:
     https://ecosystem.gnosischain.com/
 
-21. Is it possible run a Node and qualify for future rewards?
+19. Is it possible run a Node and qualify for future rewards?
 
     Yes, you can run a Node and qualify for rewards. For all the information you need in terms of running a node, please visit https://docs.gnosischain.com/node/.
 
-22. I’m totally new to this project and I’m trying to feel myself around. Where should I start learning?
+20. I’m totally new to this project and I’m trying to feel myself around. Where should I start learning?
 
     You can jump to all relevant links on our landing page at https://www.gnosis.io/. Alternatively, you can check our documentation https://docs.gnosischain.com/. Also, feel free to take a look at the governance forum to see what is being discussed around the community regarding improvement proposals https://forum.gnosis.io/.
 
-23. Is Gnosis Chain a Testnet or Mainnet released?
+21. Is Gnosis Chain a Testnet or Mainnet released?
 
     Gnosis Chain is not a testnet. It is a fully operational Layer 1 utilizing Proof of Stake. But if you are wondering, Gnosis Chain has its testnet called Chiado, the details of which can be found here: https://docs.gnosischain.com/concepts/networks/chiado.
 
-24. Is the grants program still running?
+22. Is the grants program still running?
 
     ‼️UPDATE: The Gnosis Ecosystem Fund was discontinued. Projects can now directly apply for funding through the GnosisDAO. For non commercial/public goods : https://bit.ly/gnosis-grants
 
-25. What are the NFT marketplaces on Gnosis Chain?
+23. What are the NFT marketplaces on Gnosis Chain?
 
     https://niftyfair.io/
 
@@ -7407,11 +7538,11 @@ You are now ready to fund these validators and start validating.
 ### Step 4: Fund Your Validators
 
 :::tip
-In case you need some xDai for transaction fees you can get some from the [Official xDai faucet for Gnosis](https://gnosisfaucet.com/).
+In case you need some xDai for transaction fees you can get some from the [Official xDai faucet for Gnosis](https://faucet.gnosischain.com/).
 
 :::
 
-1. Navigate to: [https://deposit.gnosischain.com/](https://deposit.gnosischain.com/)
+1. Navigate to: [https://validators.gnosischain.com/](https://validators.gnosischain.com/)
 2. Connect your wallet.
 3. Upload the `deposit_data*.json` you generated with the key generator tool in Step 3.
 4. Your deposit file will be validated and list the number of validator deposits you are making and the required GNO to deposit. Click `Deposit` to continue.
@@ -8461,7 +8592,7 @@ There are two kinds of withdrawals:
 
 ## What action should a validator take?
 
-### 1 · Check your withdrawal credential prefix
+### 1 · Check your withdrawal credential prefix {#check-withdrawal-credential}
 
 Gnosis Chain supports **two** execution‑address credential prefixes:
 
@@ -8483,7 +8614,7 @@ Gnosis Chain supports **two** execution‑address credential prefixes:
 
 ---
 
-### 2 · Change your credential (BLS‑to‑Execution)
+### 2 · Change your credential (BLS‑to‑Execution) {#how-to-change-the-withdrawal-credential}
 
 If you are on `0x00` *or* want to switch from `0x01` to `0x02`, perform a BLS‑to‑Execution change.
 
@@ -8555,7 +8686,7 @@ tar -xvf ethdo-<version>-linux-amd64.tar.gz
 
 ---
 
-## 3 · Claiming your GNO (partial **and** full withdrawals)
+## 3 · Claiming your GNO (partial **and** full withdrawals) {#how-to-receive-my-withdrawal-full-or-partial}
 
 Because Gnosis Chain pays out **GNO** rather than the gas token (xDai), withdrawals are **not sent automatically** to your address. After the Beacon‑chain message has executed you must *claim* the GNO from the withdrawal contract: [`0x0B98057eA310F4d31F2a452B414647007d1645d9`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
 
@@ -11180,10 +11311,9 @@ openssl rand -hex 32 | tr -d "\n" > "./jwtsecret/jwt.hex"
     <summary>Other ways to generate the <code>jwt.hex</code> file</summary>
     
 
-2. Use an execution or consensus client to generate the `./jwtsecret/jwt.hex` file (check their documentation).
-3. Use an online generator like [this](https://seanwasere.com/generate-random-hex/). Copy and paste this value into a `./jwtsecret/jwt.hex` file.
+1. Use an execution or consensus client to generate the `./jwtsecret/jwt.hex` file (check their documentation).
 
-For options (1) and (3), create the file by running:
+If your client prints the token instead of writing the file, create the file by running:
 
 ```shell
 
@@ -12042,7 +12172,7 @@ After [depositing](../deposit.md) and starting your validator, your validator wi
 
 You can verify the status of your validators following these steps:
 
-1. Navigate to the [deposit tool](https://deposit.gnosischain.com) and click on the `Validator Status` tab.
+1. Navigate to the [deposit tool](https://validators.gnosischain.com) and click on the `Validator Status` tab.
 
 <img src="/img/node/verify/verify-1.jpg" width="500" />
 <br />
@@ -12409,7 +12539,7 @@ You can use [Transferto.xyz](https://transferto.xyz/) or the [Omnibridge](https:
 
 ### Step 1: Connect your Wallet
 
-1. Go to [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) and connect your web3 wallet on the Gnosis Chain to the application.
+1. Go to [https://validators.gnosischain.com/](https://validators.gnosischain.com) and connect your web3 wallet on the Gnosis Chain to the application.
 
 In this example we use MetaMask.
 
@@ -12564,64 +12694,11 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
 - Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
 
-## Option 3: Running Your Own Deposit UI Instance Locally
+:::note Running your own instance
 
-### Step 1: Dependencies
-
-Ensure that you have [NodeJS](https://nodejs.org/en) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed. 
-You can check the installation by running ```node -v``` and ```npm -v``` in your terminal.
-
-Additionally, install [Next.js](https://nextjs.org/) by running the command ```npm install next```.
-
-
-### Step 2: Download the Deposit UI from GitHub
-
-Download the Deposit UI files from the corresponding Gnosis Chain [GitHub Repo](https://github.com/gnosischain/gbc-deposit-ui/). Extract the ZIP file to wherever you want to.
-
-
-### Step 3: Edit Configuration Files
-
-1. Edit the file ```wagmi.ts``` in the ```main project folder```: change the **Mainnet RPC** to ```https://gnosis-rpc.publicnode.com``` on ```line 11``` (you may also choose another RPC, not all work)
-2. Edit the file ```fetchEvents.ts``` in the ```utils folder```: change the ```BLOCK_RANGE_SIZE``` to **```10000```** on ```line 6``` (previous value was ```1000000```)
-
-
-### Step 4: Run the UI
-
-1. Run the UI using the command ```npm run dev``` (in the main folder of the UI); if this doesn't work, it might need to be built or dependencies are missing try something like ```npm install typescript```.
-2. Open [http://localhost:3000/](http://localhost:3000/) in your browser, the UI should appear now if it all works correctly.
-
-
-### Step 5: Use the UI
-1. Connect your wallet and ensure you are connected on the right network (Gnosis Chain).
-2. Ensure that you have an adequate amount of GNO in your wallet to deposit to all pending validators listed in your ```deposit_data.json```.
-3. Add your ```deposit_data.json``` file to the UI once you're asked for it.
-4. Wait for the UI to load the completed deposits from the external RPC. Please have some patience as the RPC is rate limited.
-
-
-:::tip
-
-This process will take about 20 minutes. The UI will not show any progress for getting the blocks from the RPC once you've submitted your JSON file. If you use the browser console window (using right-click "Inspect"), you can see the block number going up though.
+Setup instructions live in the [consolidate-ui repository README](https://github.com/gnosischain/consolidate-ui#readme).
 
 :::
-
-
-### Step 6: Send Deposit Transactions
-
-For each validator in the file, a deposit transaction will be generated and sent to your wallet. Verify the transaction details (closer described in Option 1 above). Once verified, send out the transactions and wait for validator activation.
-
-
-### Step 7: Validator Activation
-
-:::tip
-
-It will take about 1.5 hours for your validators to start proposing and attesting to blocks.
-
-:::
-
-- Following a successful deposit, the Gnosis Beacon Chain will wait for 1024 Gnosis Chain blocks plus up to 64 Gnosis Beacon Chain epochs before adding validators to the pool.
-- This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
-- Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
-
 
 
 ## Appendix
@@ -12630,11 +12707,8 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 
 Required:
 
-1. Chiado Testnet xDai and GNO: https://faucet.chiadochain.net/
-2. Connect to Deposit UI [https://deposit.gnosischain.com/](https://deposit.gnosischain.com) using Gnosis Chiado Testnet and follow the Option 1: Deposit UI.
-
-<!-- You can run the [deposit UI](https://deposit.gnosischain.com) locally following its repository `README` instructions:
-[https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui](https://github.com/gnosischain/gbc-deposit-ui#gnosis-beacon-chain-deposit-ui) -->
+1. Chiado Testnet xDai and GNO: https://faucet.gnosischain.com/?chain=chiado
+2. Connect to Deposit UI [https://validators.gnosischain.com/](https://validators.gnosischain.com) using Gnosis Chiado Testnet and follow the Option 1: Deposit UI.
 
 ---
 
@@ -13730,7 +13804,7 @@ Gnosis' rewards curve was [proposed in Nov 2021](https://forum.gnosis.io/t/launc
 
 ## Claiming Rewards
 
-You can claim your Gnosis Chain rewards on the [Deposit website](https://deposit.gnosischain.com/) or by manually calling the `claimWithdrawal(address)` or `claimWithdrawals(addresses)` method in the [Deposit contract](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
+You can claim your Gnosis Chain rewards on the [Deposit website](https://validators.gnosischain.com/) or by manually calling the `claimWithdrawal(address)` or `claimWithdrawals(addresses)` method in the [Deposit contract](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
 
 ![faucet](/img/node/withdrawal/claim-withdrawal.png)
 
@@ -13827,7 +13901,7 @@ With the contribution from teams of [Shutter Network](https://shutter.network/),
 | Chain ID           | 100                              | 10200                                |
 | New RPC URL        | https://erpc.gnosis.shutter.network   | https://erpc.chiado.staging.shutter.network       |
 | Block Explorer     | https://gnosis.blockscout.com/        | https://blockscout.com/gnosis/chiado |
-| Faucet             | https://faucet.gnosischain.com/       | https://faucet.chiadochain.net/      |
+| Faucet             | https://faucet.gnosischain.com/       | https://faucet.gnosischain.com/?chain=chiado      |
 
 
 ### Shutterized Chiado Test dApp
@@ -15591,7 +15665,7 @@ If the faucet is not functioning properly, feel free to seek assistance on the [
 ## Official Faucet
 
 - [Gnosis Chain Faucet](https://faucet.gnosischain.com/)
-- [Chiado Testnet Faucet](https://faucet.chiadochain.net/)
+- [Chiado Testnet Faucet](https://faucet.gnosischain.com/?chain=chiado)
 
 ## Community Faucets
 

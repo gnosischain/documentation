@@ -14,10 +14,9 @@ openssl rand -hex 32 | tr -d "\n" > "./jwtsecret/jwt.hex"
     <summary>Other ways to generate the <code>jwt.hex</code> file</summary>
     
 
-2. Use an execution or consensus client to generate the `./jwtsecret/jwt.hex` file (check their documentation).
-3. Use an online generator like [this](https://seanwasere.com/generate-random-hex/). Copy and paste this value into a `./jwtsecret/jwt.hex` file.
+1. Use an execution or consensus client to generate the `./jwtsecret/jwt.hex` file (check their documentation).
 
-For options (1) and (3), create the file by running:
+If your client prints the token instead of writing the file, create the file by running:
 
 ```shell
 

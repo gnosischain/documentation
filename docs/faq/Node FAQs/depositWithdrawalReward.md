@@ -39,7 +39,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 7. **Where can I check my withdrawal credential?**
 
-    You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4). You can also visit [official docs](https://docs.gnosischain.com/node/management/withdrawals#check-withdrawal-credential) for more detail.
+    You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial). You can also visit [official docs](https://docs.gnosischain.com/node/management/withdrawals#check-withdrawal-credential) for more detail.
 
 8. **Do partial withdrawals happen automatically?**
 
@@ -88,7 +88,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 18. **When you receive rewards from validation, where does the reward go? Does it stay in the node or go to the address you choose to receive rewards? Because on this address I don't notice any increase of GNO.**
 
-    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4) by calling the claimWithdrawals function and entering your withdrawal address
+    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) by calling the claimWithdrawals function and entering your withdrawal address
 
 19. **I use Lighthouse and I wanted to know if it was possible to separate the rewards of each validator from the address provided when creating the keystore.json files? I also wanted to know if it was possible to add validators later**.
 
@@ -100,7 +100,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 21. **Can I withdraw my GNO which is currently used in validator?**
 
-    Yes, you have to do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) (either from the client itself or if you are on Dappnode from the Web3signer UI) then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9#writeProxyContract#F4) by calling the claimWithdrawals function and entering your withdrawal address
+    Yes, you have to do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) (either from the client itself or if you are on Dappnode from the Web3signer UI) then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) by calling the claimWithdrawals function and entering your withdrawal address
 
 22. **What is the easiest way to set withdrawal address without setting up locally beacon node, cli and etc.?**
 
@@ -134,11 +134,11 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
     You don't need to claim execution layer rewards who are paid in xDAI, when you propose a block, the reward will go to your address. You can see you rewards on [Gnosisscan](https://gnosisscan.io/) on your validator address, in the Validated Blocks tab.
 31. **Could anyone please explain to me how withdrawals and validator rewards work on Gnosis Chain?**
 
-    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) ; Execution layer rewards are paid in xDAI to your recipient address. 
+    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) ; Execution layer rewards are paid in xDAI to your recipient address. 
 
 31. **How to withdraw the staked validator amount though?**
 
-    You can do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    You can do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 32. Is there a guide on how to withdraw when you only have the keystore?
 
@@ -146,7 +146,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 33. **I had partial withdrawals going to an address in August. Are the future withdrawals will go to the same address?**
 
-    If back then when a bot was claiming them automatically, your withdrawals were going to a specific address, it means that your withdrawal address is correctly setup and new withdrawals will go there as well. Now you have to claim withdrawals manually, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
+    If back then when a bot was claiming them automatically, your withdrawals were going to a specific address, it means that your withdrawal address is correctly setup and new withdrawals will go there as well. Now you have to claim withdrawals manually, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
 
 34. **My wallet got hacked. Is there any way to change my withdrawal address?**
 
@@ -176,7 +176,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
     Currently not, even if Dappnode mentioned working on it in the past. You have to follow the regular [step by step guide](https://docs.gnosischain.com/node/management/withdrawals).
 41. **I see automatic withdrawals to my wallet on beaconchain.gnosischain.com, but I don't seem to be receiving them. Is there anything else that I need to do?**
 
-    You have to claim withdrawals manually, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the Deposit contract. Once claimed it should be instantaneous in the same transaction.
+    You have to claim withdrawals manually, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the Deposit contract. Once claimed it should be instantaneous in the same transaction.
 
 42. **Should the automatic withdrawals that started after Shapella go to the default fee recipient address or some other address?**
 
@@ -184,7 +184,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 43. **What happened to automatic withdrawals after Shapella? How do I claim rewards manually?**
 
-    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 44. **Is there an easy way to transfer the ownership of my validators to a different address?**
 
@@ -204,7 +204,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 49. **I've got some validators, do I need to do something to receive the rewards from these validators to my wallet?**
 
-    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://deposit.gnosischain.com/) ; Execution layer rewards are paid in xDAI to your recipient address.
+    Consensus layer rewards are paid in GNO to your withdrawal address and have to be claimed on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) ; Execution layer rewards are paid in xDAI to your recipient address.
 
 50. **What kind of penalties will I face if I am offline for 1 day?**
 
@@ -216,13 +216,13 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 52. **After withdrawals went live, I got some GNO in my wallet, but now there are no more coming in**
 
-    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/).
+    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/).
 53. **My validator node is slashed, how to withdraw GNO?**
     You can do a voluntary exit either through the client like described in the docs or if you are using Dappnode you can exit through the Web3signer UI.
 
 54. **How long until withdrawals arrive in wallet?**
 
-    For full withdrawals you have to wait until your validator leaves the exit queue and be ready to claim. Then both for partial and full withdrawals, once claimed on the contract or on the [Deposit page](https://deposit.gnosischain.com/) it should be instantaneous.
+    For full withdrawals you have to wait until your validator leaves the exit queue and be ready to claim. Then both for partial and full withdrawals, once claimed on the contract or on the [Deposit page](https://validators.gnosischain.com/) it should be instantaneous.
 
 55. **On beaconchain.gnosischain.com while some rewards are denominated in GNO, others are in xDai. What's the difference?**
 
@@ -234,7 +234,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 57. **I see a withdrawal on beaconchain.gnosischain.com, but I haven't initiated anything. Why?**
 
-    The withdrawals you see on beaconchain.gnosischain.com are basically just withdrawals ready to be claimed on the contract, the GNO in question have waiting on the deposit contract, you can claim a withdrawal on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    The withdrawals you see on beaconchain.gnosischain.com are basically just withdrawals ready to be claimed on the contract, the GNO in question have waiting on the deposit contract, you can claim a withdrawal on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
 
 58. **I do not want partial withdrawals to be automatic due to tax reasons. Can I opt-out of this feature?**
 
@@ -242,7 +242,7 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 59. **I've been running my node for a week now. When/Where can I expect to start seeing my accrued rewards?**
 
-    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them manually from that contract. You can either go and call claimWithdrawals function on the GBC deposit contract or use the Withdrawal Claim tab on https://deposit.gnosischain.com/. You can check your accrued rewards on https://beaconchain.gnosischain.com/ as well.
+    If you have set a withdrawal address, your rewards will accrue in the deposit contract. At the moment you will have to claim them manually from that contract. You can either go and call claimWithdrawals function on the GBC deposit contract or use the Withdrawal Claim tab on https://validators.gnosischain.com/. You can check your accrued rewards on https://beaconchain.gnosischain.com/ as well.
 
 60. **Can I withdraw without being online?**
 
@@ -273,12 +273,12 @@ It takes about 4 hours for a deposit to be processed, you can check how your val
 
 67. **I set a withdrawal address to a Safe on Gnosis Chain, I see the partial withdrawals, but the balance in GNO don’t go up. What should I do?**
 
-    Unlike Ethereum, on Gnosis Chain, you will have to claim them on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://deposit.gnosischain.com/) by calling the claimWithdrawals function and entering your withdrawal address
+    Unlike Ethereum, on Gnosis Chain, you will have to claim them on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial) by calling the claimWithdrawals function and entering your withdrawal address
 
 68. **Where do Withdrawals from Validators go to? After Update I received GNO once but now it says it's sending Amounts of GNO but they never arrive in my wallet.**
 
-    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://deposit.gnosischain.com/) or on the [Deposit contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
+    After the Shapella upgrade a bot was claiming withdrawals for everyone automatically but who was since then stopped after concerns about generating a lot of unsolicited small transactions who are complex to report for tax. You have to claim withdrawals manually now, you can do so on the [Deposit page](https://validators.gnosischain.com/) or on the [Deposit contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial)
 
 69. Is there a guide on how to unstake my Gnosis validators?
 
-    Do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://deposit.gnosischain.com/) or manually from the [contract](https://docs.gnosischain.com/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
+    Do a [voluntary exit](https://docs.gnosischain.com/node/management/voluntary-exit) either from the client itself or if you are on Dappnode from the Web3signer UI then wait for your validator to leave the exit queue and once the withdrawal is ready claim on the [Deposit page](https://validators.gnosischain.com/) or manually from the [contract](/node/management/withdrawals#how-to-receive-my-withdrawal-full-or-partial).
