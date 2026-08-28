@@ -183,12 +183,6 @@ It will take about 1.5 hours for your validators to start proposing and attestin
 - This is roughly 1 hour and 25 minutes before the validators start proposing and attesting blocks on the Gnosis Chain.
 - Once live, you can view your validator(s) on the explorer. Copy the pubkey(s) listed in the deposit_data.json file (a key will be generated for each validator as "pubkey": "&lt;your-public-key&gt;") and paste into the search box on the [Beacon chain explorer](https://beaconchain.gnosischain.com/).
 
-:::note Running your own instance
-
-Setup instructions live in the [consolidate-ui repository README](https://github.com/gnosischain/consolidate-ui#readme).
-
-:::
-
 
 ## Appendix
 
