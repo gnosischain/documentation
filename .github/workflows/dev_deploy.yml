@@ -34,22 +34,20 @@ jobs:
 
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
       - name: Install
         run: |
           rm -rf .cache
           rm -rf build
-          yarn config set cache-folder .yarn
-          yarn install
+          pnpm install --frozen-lockfile
           pip install awscli --upgrade --user
 
       - name: Build App
@@ -58,7 +56,7 @@ jobs:
           ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
           ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
           GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
-        run: yarn build
+        run: pnpm build
 
       - name: Configure AWS Development credentials
         uses: aws-actions/configure-aws-credentials@e6de054238d6b7531b4efff3b6587d9aade6a06c # v6

@@ -1,0 +1,37 @@
+savePrefix: ''
+minimumReleaseAge: 4320
+trustPolicy: no-downgrade
+
+trustPolicyExclude:
+  - 'semver@6.3.1'
+
+overrides:
+  serialize-javascript: '7.1.1'
+  uuid: '11.1.1'
+
+audit:
+  level: high
+
+  # Two unpatchable image-size DoS advisories, in different parsers:
+  # GHSA-w3rx-r6r6-pgpr is an infinite loop in the ICNS parser (CVE-2025-71330),
+  # GHSA-5p2g-fcmc-qvqq the same in the JXL and HEIF parsers (CVE-2025-71329).
+  # Both are high severity, affect every published version, and record
+  # first_patched_version: null -- there is genuinely nothing to move to. 2.0.2
+  # (2025-04-02) is the newest version ever published and the upstream repo is now
+  # archived: the maintainer closed it in response to these very reports, so
+  # expect no fix on npm. @docusaurus/mdx-loader requires ^2.0.2 in any case.
+  #
+  # Impact is confined to the build. image-size is reached only through
+  # mdx-loader's transformImage remark plugin, which measures local images
+  # referenced from Markdown at compile time; it never reaches the browser. The
+  # one real vector is a fork PR -- dev_deploy.yml builds PR head commits, so a
+  # contributor could hang a build by committing a malformed ICNS/JXL/HEIF image,
+  # and the try/catch around the call does not help (an infinite loop throws
+  # nothing). That costs a runner, not a secret: fork PRs receive no secrets, and
+  # no image in this repo is currently in any of the three affected formats.
+  ignore:
+    - GHSA-w3rx-r6r6-pgpr
+    - GHSA-5p2g-fcmc-qvqq
+
+allowBuilds:
+  core-js: false
