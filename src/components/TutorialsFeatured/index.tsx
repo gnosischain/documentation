@@ -2,12 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
-import Image from '@theme/IdealImage';
 
 const Tutorials = [
       {
         name: '📦 Launch an ERC-20 token',
-        image: require('@site/static/img/developers/metamask-tokens.png'),
+        image: require('@site/static/img/developers/metamask-tokens.png').default,
         url: '/developers/building/token',
         description: (
           <Translate id="tutorials.token.description">
@@ -17,7 +16,7 @@ const Tutorials = [
         },
         {
             name: 'Contract verification in Gnosisscan',
-            image: require('@site/static/img/developers/verify/gnosisscan.png'),
+            image: require('@site/static/img/developers/verify/gnosisscan.png').default,
             url: '/developers/verify/gnosisscan',
             description: (
             <Translate
@@ -50,7 +49,7 @@ function TutorialCard({name, image, url, description}: Props) {
       <div className={clsx('card')}>
         <div className={clsx('card__image')}>
           <Link to={url}>
-            <Image img={image} alt={`${name}'s image`} />
+            <img src={image} alt={`${name}'s image`} />
           </Link>
         </div>
         <div className="card__body">
