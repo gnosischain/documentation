@@ -17,8 +17,18 @@ You are responsible for your node, including ensuring uptime, correct behavior, 
 
 ### Current Yield
 
-- The current yield on GNO staking can be found in this [Dune Dashboard](https://dune.com/gnosischain_team/gnosischain). and [Gnosis Metrics](https://www.gnosismetrics.com/).
-- Yield changes over time with the size and performance of the active validator set. Always use the live dashboards above instead of a fixed percentage.
+- The current yield on GNO staking is published on [Gnosis Metrics](https://metrics.gnosischain.com/), and can also be queried from the public [Gnosis Analytics API](https://api.analytics.gnosis.io/docs).
+- Yield changes over time with the size and performance of the active validator set. Always use the live sources above instead of a fixed percentage.
+
+To fetch the latest network-wide validator APY:
+
+```bash
+curl https://api.analytics.gnosis.io/v1/consensus/validators_apy/latest
+```
+
+```json
+[{ "value": 8.55, "change_pct": 11.3, "as_of_date": "2026-09-02" }]
+```
 
 ### Rewards Calculation:
 
