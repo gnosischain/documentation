@@ -8,7 +8,7 @@ keywords: [bridge validator]
 
 Unlike bridge governance, a bridge validator in Gnosis Chain is an entity responsible for monitoring event emissions from one blockchain, validating the associated logic, signing the validated events, and subsequently invoking the relevant functions on the destination chain to confirm the validation.
 
-Bridge validators are formed by different trusted entities such as Gnosis DAO, Safe, etc, and trustless entity such as Hashi for AMB.
+Bridge validators are formed by different trusted entities such as Gnosis DAO, Safe, etc.
 
 ## AMB & Omnibridge
 

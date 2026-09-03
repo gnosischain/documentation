@@ -131,7 +131,7 @@ For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-o
 1. Users initiate the relay transaction on Ethereum by approving the bridge contract and calling the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) `relayTokens(address recipient, uint256 value)`.
 2. `UserRequestForAffirmation(address recipient, uint256 value, bytes32 nonce)` event is emitted from the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016).
 3. Bridge validators observe the event and call `executeAffirmation(address recipient, uint256 value, bytes32 nonce)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
-4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDAI to mint. Hashi acts as an additional bridge valdiator who validates transactions but no actually calling `executeAffirmation` on Home xDAI Bridge. For more details about how Hashi works in this case, check out [here](./hashi-integration.md)
+4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDAI to mint.
 5. The [block reward contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)` event is emitted within the same transaction and receiver address will be credited for the equivalent xDAI amount.
 
 User may check the balance change visually using Blockscout's [coin balance history](https://gnosis.blockscout.com/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C?tab=coin_balance_history) or programmatically using [eth_getBalance](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_getbalance) API by querying the balance on block number where `AddedReceiver` event is emitted.
@@ -161,7 +161,7 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
 4. After enough signatures are collected, `CollectedSignatures` event is emitted/
 5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-usds-on-ethereum). **USDS** is unlocked to the receiver or swap to **DAI** to the receive.
-6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDAI Bridge. Please be aware that after Hashi upgrade, `transactionHash` has been replaced with the value of `nonce`. Please check [here](../hashi/hashi-integration.md) for more information on how it works.
+6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDAI Bridge. Please be aware that `transactionHash` carries the value of `nonce`.
 
 ### Savings xDAI
 
@@ -281,7 +281,7 @@ The second contract is the Interest Receiver. This will be the address provided 
 
 ### Legacy components on the bridge contracts
 
-1. Hashi: Hashi componetns was integrated into the bridge, but was [deprecated](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467/4). The on-chain contract still remains but don't affect the transaction verification logic. Please check [here](../hashi/hashi-integration.md) for more details.
+1. Hashi: Hashi components was integrated into the bridge, but was [deprecated](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467/4). The on-chain contract still remains but don't affect the transaction verification logic. Please check the [archived Hashi integration doc](https://github.com/gnosischain/documentation/blob/main/archives/Hashi/hashi-integration.md) for more details.
 
 2. GSN: [OpenGSN (Ethereum Gas Stations Network)](https://github.com/opengsn) is not in used but remains in the contracts.
 
