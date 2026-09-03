@@ -1,3 +1,13 @@
+---
+title: Using Hashi
+description: Developer guide for sending crosschain messages with Hashi's Yaho and Yaru contracts. Archived - Hashi is no longer part of Gnosis Chain.
+keywords: [hashi, yaho, yaru, crosschain, archived]
+---
+
+:::danger Archived
+Hashi is **no longer part of Gnosis Chain**. It was [formally deprecated](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467) and removed from the bridge UI on 29 August 2025. This guide also targets the Goerli and Chiado testnets, and Goerli has since been sunset. It is kept for historical reference only.
+:::
+
 # Using Hashi 🌉
 
 - [Beginners Guide to Hashi 🌉](https://mirror.xyz/0x0e729b11661B3f1C1E829AAdF764D5C3295e1256/V2FdJn7LkBiTH55e51aTXb4PZa20oT1C_WJj8nIMFhw)
