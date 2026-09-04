@@ -263,6 +263,15 @@ const config = {
             to: "/about/communication",
             from: "/developers/communication",
           },
+          // Truffle was sunset by Consensys in 2023; pages archived to /archives/Truffle
+          {
+            to: "/developers/dev-environment/hardhat",
+            from: "/developers/dev-environment/truffle",
+          },
+          {
+            to: "/developers/Verify Smart Contracts/",
+            from: "/developers/Verify Smart Contracts/truffle",
+          },
         ],
       },
     ],
