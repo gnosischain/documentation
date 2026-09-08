@@ -16,6 +16,7 @@ RPC Providers implement the JSON RPC API that Dapps and developers can interact 
 - [JSON RPC API reference](https://ethereum.org/en/developers/docs/apis/json-rpc/)
 - [JSON RPC Postman](https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J?version=latest)
 - [Start developing in Gnosis](/developers/overview)
+- [OpenChainBench Gnosis RPC benchmark](https://openchainbench.com/benchmarks/gnosis-rpc): live latency comparison of the public no-key Gnosis endpoints, probed from three regions every minute.
 
 
 ## Gnosis
