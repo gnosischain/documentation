@@ -8,7 +8,7 @@ keywords: [gnosis beacon chain, gnosis upgradeability, gbc, gbc contracts]
 ### **Contracts & Token Addresses**
 
 :::caution DO NOT send funds directly to the GBC Deposit Contract.
-To stake on GBC, follow the validator instructions at [validategnosis.com](https://www.validategnosis.com/).
+To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/node/manual).
 :::
 
 | Contract             | Address                                                                                                                                            |

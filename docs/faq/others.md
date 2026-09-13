@@ -68,7 +68,7 @@
 
 16. Is it possible run a Node and qualify for future rewards?
 
-    Yes, you can run a Node and qualify for rewards. For current guidance on running a node and validating, see [validategnosis.com](https://www.validategnosis.com/) or ask in [Discord](https://discord.gg/gnosis).
+    Yes, you can run a Node and qualify for rewards. For all the information you need in terms of running a node, please visit the [Run a node](/node/) section.
 
 17. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
 

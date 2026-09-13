@@ -758,7 +758,7 @@ You can find a full list of contract differences on Github:
 ### **Contracts & Token Addresses**
 
 :::caution DO NOT send funds directly to the GBC Deposit Contract.
-To stake on GBC, follow the validator instructions at [validategnosis.com](https://www.validategnosis.com/).
+To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/node/manual).
 :::
 
 | Contract             | Address                                                                                                                                            |
@@ -893,7 +893,7 @@ If your node works on an old version of Parity, you need to convert node's DB to
 
 ### Nethermind
 
-Please update to  `v1.10.67` which contains Berlin hard fork transition.
+Please update to  `v1.10.67` which contains Berlin hard fork transition. [More on Nethermind](/node/manual).
 
 ## Description: Berlin HF
 
@@ -1500,7 +1500,7 @@ Shanghai/Capella hardfork enables validator withdrawal and several execution lay
 
 Validator withdrawal allows a validator's account balance get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator's withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
 
-For current validator withdrawal guidance, see [validategnosis.com](https://www.validategnosis.com/).
+Check out [validator withdrawal](/node/management/withdrawals) for more details.
 
 ## Upgrade Schedule
 
@@ -1517,7 +1517,7 @@ For current validator withdrawal guidance, see [validategnosis.com](https://www.
 
    For any type of withdrawals, a validator need to have `0x01` withdrawal credential. You’re fine if you used `--eth1_withdrawal_address` to create your validator keys. If not, tooling will be made available.
 
-   Refer to [validategnosis.com](https://www.validategnosis.com/) for more details.
+   Refer to [validator withdrawal](/node/management/withdrawals) for more details.
 
 2. Update your clients
 
@@ -1549,7 +1549,7 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 ### Full Withdrawal
 
-For voluntary exit guidance, see [validategnosis.com](https://www.validategnosis.com/).
+Please check guide on [voluntary exit](/node/management/voluntary-exit).
 
 ---
 
@@ -1917,7 +1917,7 @@ https://docs.gnosischain.com/img/tokens/gno.png
 
 ### Staking
 
-By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking rewards. For a more comprehensive understanding of the validator deposit process, see [validategnosis.com](https://www.validategnosis.com/).
+By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](/node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
 
 
 :::note Historical use of `mGNO`
@@ -1927,7 +1927,7 @@ Historically, deposits on the Beacon Chain were made with a token called `mGNO` 
 
 :::
 
-For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about osGNO (StakeWise V3), please consult [StakeWise](https://stakewise.io/).
+For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about osGNO (StakeWise V3), please consult the [liquid staking](/node/participate-validator/liquid-staking) page.
 
 ### GnosisDAO Governance
 
@@ -6832,7 +6832,7 @@ It depends on the mode and hardware specifications. Typically 24 hours should be
 
 16. Is it possible run a Node and qualify for future rewards?
 
-    Yes, you can run a Node and qualify for rewards. For current guidance on running a node and validating, see [validategnosis.com](https://www.validategnosis.com/) or ask in [Discord](https://discord.gg/gnosis).
+    Yes, you can run a Node and qualify for rewards. For all the information you need in terms of running a node, please visit the [Run a node](/node/) section.
 
 17. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
 
