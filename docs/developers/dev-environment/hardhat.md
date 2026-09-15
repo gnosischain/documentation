@@ -178,6 +178,8 @@ npx hardhat run scripts/deploy.js --network chiado
 
 View your deployed contract on any of the [explorers](/tools/Blockchain%20Explorers).
 
+To verify the contract source, run `npx hardhat verify --network gnosis <CONTRACT_ADDRESS>`. See the [Blockscout Hardhat verification guide](https://docs.blockscout.com/devs/verification/hardhat-verification-plugin) for options and troubleshooting.
+
 Visit our [Tools page](/tools) for other support.
 
 ## Verify Contract
