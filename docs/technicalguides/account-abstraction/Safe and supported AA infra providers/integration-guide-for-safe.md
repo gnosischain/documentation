@@ -42,7 +42,7 @@ import
             chainId: "0x64",
             displayName: "Gnosis",
             rpcTarget: 'https://gnosis.drpc.org',
-            blockExplorerURL: 'https://gnosis.blockscout.com/',
+            blockExplorerURL: 'https://gnosisscan.io/',
             ticker: "xDAI",
             tickerName: "Gnosis Chain",
           },

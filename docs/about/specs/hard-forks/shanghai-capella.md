@@ -55,7 +55,7 @@ Check out [validator withdrawal](/node/management/withdrawals) for more details.
 
 ### Partial Withdrawal
 
-As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosis.blockscout.com/address/0x0b98057ea310f4d31f2a452b414647007d1645d9) function on the [contract](https://gnosis.blockscout.com/address/0x0b98057ea310f4d31f2a452b414647007d1645d9). However, it is in our plans to automate and subsidize partial withdrawals in the future.
+As we have modified some specs regarding the withdrawals to enable withdrawing GNO instead of the native gas token xDai, unlike Ethereum, partial withdrawals currently do not happen automatically. So, for now, you will need to call [`claimWithdrawal`](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9) function on the [contract](https://gnosisscan.io/address/0x0b98057ea310f4d31f2a452b414647007d1645d9). However, it is in our plans to automate and subsidize partial withdrawals in the future.
 
 ### Full Withdrawal
 

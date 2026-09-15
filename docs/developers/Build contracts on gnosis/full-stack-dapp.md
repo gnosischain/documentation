@@ -247,7 +247,7 @@ WavePortal address:  0x343610D353a0B2Ba86dDAAa348BF62B732107284
 
 The ```WavePortal address``` variable, is your **contract address**.
 
-You can verify the deployment on https://gnosis.blockscout.com/, by putting your contract address in.
+You can verify the deployment on https://gnosisscan.io/, by putting your contract address in.
 
 
 ## Adding your Front End

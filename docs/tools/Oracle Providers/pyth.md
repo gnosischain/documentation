@@ -60,7 +60,7 @@ For more information, check out the official [Pyth documentation](https://docs.p
 
 The Pyth Network smart contract is available at the following address: 
 
-- Mainnet: [0x2880aB155794e7179c9eE2e38200202908C17B43](https://gnosis.blockscout.com/address/0x2880ab155794e7179c9ee2e38200202908c17b43).
+- Mainnet: [0x2880aB155794e7179c9eE2e38200202908C17B43](https://gnosisscan.io/address/0x2880ab155794e7179c9ee2e38200202908c17b43).
 - Chiado: [0x98046Bd286715D3B0BC227Dd7a956b83D8978603](https://gnosis-chiado.blockscout.com/address/0x98046Bd286715D3B0BC227Dd7a956b83D8978603)
 
 Additionally, click to access the [Pyth price-feed IDs](https://pyth.network/developers/price-feed-ids).

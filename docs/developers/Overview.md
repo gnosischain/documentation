@@ -19,7 +19,7 @@ title: Overview
         <p>Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.</p>
     </FeatureCard>
      <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p>Fully-featured explorer [Blockscout](https://gnosis.blockscout.com).</p>
+        <p>Fully-featured explorers [Gnosisscan](https://gnosisscan.io) and [Blockscout](https://gnosis.blockscout.com).</p>
     </FeatureCard>
      <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
         <p>Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.</p>

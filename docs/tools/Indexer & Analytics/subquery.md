@@ -36,7 +36,7 @@ The Project Manifest (`project.yaml`) file works as an entry point to your Gnosi
 
 Note that the manifest file has already been set up correctly and doesn’t require significant changes, but you need to import the correct contract definitions and update the datasource handlers.
 
-As we are indexing all transfers and mints for the POAP ERC721 contract, the first step is to import the contract abi definition which can be obtained from [here](https://gnosis.blockscout.com/token/0x22c1f6050e56d2876009903609a2cc3fef83b415). Copy the entire contract ABI and save it as a file called `poap.abi.json` in the `/abis` directory.
+As we are indexing all transfers and mints for the POAP ERC721 contract, the first step is to import the contract abi definition which can be obtained from [here](https://gnosisscan.io/token/0x22c1f6050e56d2876009903609a2cc3fef83b415). Copy the entire contract ABI and save it as a file called `poap.abi.json` in the `/abis` directory.
 
 This section in the Project Manifest now imports all the correct definitions and lists the triggers that we look for on the blockchain when indexing.
 
@@ -45,11 +45,11 @@ This section in the Project Manifest now imports all the correct definitions and
 ```yaml
 dataSources:
   - kind: ethereum/Runtime # We use ethereum runtime since Gnosis is a layer-2 that is compatible
-    startBlock: 12188423 # When the POAP contract was deployed https://gnosis.blockscout.com/tx/0x2e4873cb1390f5328d389276624d1ffa833e3934657d5a791ee145defff663a2
+    startBlock: 12188423 # When the POAP contract was deployed https://gnosisscan.io/tx/0x2e4873cb1390f5328d389276624d1ffa833e3934657d5a791ee145defff663a2
     options:
       # Must be a key of assets
       abi: poap
-      address: "0x22c1f6050e56d2876009903609a2cc3fef83b415" # this is the contract address for POAPs on Gnosis https://gnosis.blockscout.com/token/0x22c1f6050e56d2876009903609a2cc3fef83b415
+      address: "0x22c1f6050e56d2876009903609a2cc3fef83b415" # this is the contract address for POAPs on Gnosis https://gnosisscan.io/token/0x22c1f6050e56d2876009903609a2cc3fef83b415
     assets:
       poap:
         file: "./abis/poap.abi.json"
@@ -70,7 +70,7 @@ dataSources:
               - Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
 ```
 
-The above code indicates that you will be running `handleTokenMint` and `handleTokenTransfer` mapping functions whenever there is a transaction with the function `mintToken` or a log with the signature `Transfer` on any transaction from the [POAP smart contract](https://gnosis.blockscout.com/token/0x22c1f6050e56d2876009903609a2cc3fef83b415).
+The above code indicates that you will be running `handleTokenMint` and `handleTokenTransfer` mapping functions whenever there is a transaction with the function `mintToken` or a log with the signature `Transfer` on any transaction from the [POAP smart contract](https://gnosisscan.io/token/0x22c1f6050e56d2876009903609a2cc3fef83b415).
 
 Check out our [Manifest File](https://academy.subquery.network/build/manifest/gnosis.html) documentation to get more information about the Project Manifest (`project.yaml`) file.
 

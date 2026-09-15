@@ -21,13 +21,13 @@ Due to the fact that Omnibridge is built on top of AMB, these two bridges share 
 
 | GC Address                                                                                                                  | Organization Name |
 | --------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| [gno:0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55](https://gnosis.blockscout.com/address/0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55)  | Protofire         |
-| [gno:0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE](https://gnosis.blockscout.com/address/0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE)  | Giveth            |
-| [gno:0x59D3C2829900Ae20D02Ca547082b09FD27380eA6 ](https://gnosis.blockscout.com/address/0x59D3C2829900Ae20D02Ca547082b09FD27380eA6) | Kleros            |
-| [gno:0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2](https://gnosis.blockscout.com/address/0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2)  | GnosisDAO         |
-| [gno:0x5524b7a3e2Dc024f4C9c2Ecd7FE003ee316ac624](https://gnosis.blockscout.com/address/0x5524b7a3e2Dc024f4C9c2Ecd7FE003ee316ac624)  | Cow Protocol      |
-| [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosis.blockscout.com/address/0x258667E543C913264388B33328337257aF208a8f)  | Gnosis Safe       |
-| [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  | Hopr              |
+| [gno:0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55](https://gnosisscan.io/address/0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55)  | Protofire         |
+| [gno:0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE](https://gnosisscan.io/address/0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE)  | Giveth            |
+| [gno:0x59D3C2829900Ae20D02Ca547082b09FD27380eA6 ](https://gnosisscan.io/address/0x59D3C2829900Ae20D02Ca547082b09FD27380eA6) | Kleros            |
+| [gno:0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2](https://gnosisscan.io/address/0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2)  | GnosisDAO         |
+| [gno:0x5524b7a3e2Dc024f4C9c2Ecd7FE003ee316ac624](https://gnosisscan.io/address/0x5524b7a3e2Dc024f4C9c2Ecd7FE003ee316ac624)  | Cow Protocol      |
+| [gno:0x258667E543C913264388B33328337257aF208a8f](https://gnosisscan.io/address/0x258667E543C913264388B33328337257aF208a8f)  | Gnosis Safe       |
+| [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  | Hopr              |
 
 </TabItem>
 
@@ -61,8 +61,8 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | CowProtocol  | [gno:0xA2746D5eE860a6A9cbb79C34533313144d467CA8](https://gnosis.blockscout.com/address/0xA2746D5eE860a6A9cbb79C34533313144d467CA8)  |
 | Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosis.blockscout.com/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
-| Kleros       | [gno:0x59D3C2829900Ae20D02Ca547082b09FD27380eA6 ](https://gnosis.blockscout.com/address/0x59D3C2829900Ae20D02Ca547082b09FD27380eA6) |
-| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
+| Kleros       | [gno:0x59D3C2829900Ae20D02Ca547082b09FD27380eA6 ](https://gnosisscan.io/address/0x59D3C2829900Ae20D02Ca547082b09FD27380eA6) |
+| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
 
 </TabItem>
 

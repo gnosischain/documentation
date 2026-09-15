@@ -43,8 +43,8 @@ https://docs.gnosischain.com/img/tokens/gno.png
 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb
 ```
 
-```jsx title="Blockscout"
-https://gnosis.blockscout.com/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb
+```jsx title="Gnosisscan"
+https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb
 ```
 
 ```jsx title="Name"
@@ -117,7 +117,7 @@ By staking your GNO tokens, you play a vital role in securing the Gnosis chain t
 :::note Historical use of `mGNO`
 
 
-Historically, deposits on the Beacon Chain were made with a token called `mGNO` ([0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosis.blockscout.com/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)), with a conversion rate of `1 GNO = 32 mGNO`. This was done to mimic Ethereum's `32 ETH` staking requirement, but is now deprecated and no longer serves any purpose.
+Historically, deposits on the Beacon Chain were made with a token called `mGNO` ([0x722fc4DAABFEaff81b97894fC623f91814a1BF68](https://gnosisscan.io/address/0x722fc4DAABFEaff81b97894fC623f91814a1BF68)), with a conversion rate of `1 GNO = 32 mGNO`. This was done to mimic Ethereum's `32 ETH` staking requirement, but is now deprecated and no longer serves any purpose.
 
 :::
 

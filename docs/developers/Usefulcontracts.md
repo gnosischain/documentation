@@ -38,8 +38,8 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 ### Gnosis Chain contract addresses
 | Contract                            | Address                                                                                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| GNO | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosis.blockscout.com/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb) |
-| wxDAI | [0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d](https://gnosis.blockscout.com/token/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d)   |
+| GNO | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb) |
+| wxDAI | [0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d](https://gnosisscan.io/token/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d)   |
 | sDAI (Savings xDAI) | [0xaf204776c7245bF4147c2612BF6e5972Ee483701](https://gnosis.blockscout.com/token/0xaf204776c7245bF4147c2612BF6e5972Ee483701) |
 | EURe (Monerium) | [0xcB444e90D8198415266c6a2724b7900fb12FC56E](https://gnosis.blockscout.com/token/0xcB444e90D8198415266c6a2724b7900fb12FC56E) |
 | USDC.e (bridged) | [0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0](https://gnosis.blockscout.com/token/0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0) |
@@ -48,17 +48,17 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 | wstETH (bridged) | [0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6](https://gnosis.blockscout.com/token/0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6) |
 | osGNO (StakeWise V3) | [0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0](https://gnosis.blockscout.com/token/0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0) |
 | sGNO (StakeWise V2, deprecated) | [0xA4eF9Da5BA71Cc0D2e5E877a910A37eC43420445](https://gnosis.blockscout.com/token/0xA4eF9Da5BA71Cc0D2e5E877a910A37eC43420445) |
-| Deposit contract    | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9) |
+| Deposit contract    | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9) |
 
 ### Gnosis Chain bridge contract addresses
 
 | Contract                            | Address                                                                                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| AMB Proxy Contract                    | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosis.blockscout.com/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
-| AMB Contract Proxy (Home)           | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosis.blockscout.com/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
-| AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosis.blockscout.com/address/0x7d94ece17e81355326e3359115D4B02411825EdD)       |
-| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosis.blockscout.com/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d) |
-| Omnibridge Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosis.blockscout.com/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008)      |
+| AMB Proxy Contract                    | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
+| AMB Contract Proxy (Home)           | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
+| AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD)       |
+| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d) |
+| Omnibridge Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008)      |
 | xDAI Bridge Proxy Contract                | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs)              |
 | xDAI Bridge Block Reward Contract         | [0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
 | xDAI Bridge Validator Management Contract | [0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
@@ -69,7 +69,7 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 
 | Name                            | Address                                                                                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Validator (Gnosis DAO)                 | [0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosis.blockscout.com/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49) [0x1abbf5ec09763afc398551e555967931d64e1508](https://gnosis.blockscout.com/address/0x1abbf5ec09763afc398551e555967931d64e1508) |
+| xDAI Bridge Validator (Gnosis DAO)                 | [0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49) [0x1abbf5ec09763afc398551e555967931d64e1508](https://gnosisscan.io/address/0x1abbf5ec09763afc398551e555967931d64e1508) |
 
 ## Chiado
 

@@ -36,7 +36,7 @@ var GNOSIS_MAINNET_PARAMS = {
         decimals: 18,
     },
     rpcUrls: ["https://rpc.gnosischain.com/"],
-    blockExplorerUrls: ["https://gnosis.blockscout.com/"],
+    blockExplorerUrls: ["https://gnosisscan.io/"],
 }
 
 var addGnosisToMetaMask = function() {

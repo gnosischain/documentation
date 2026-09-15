@@ -110,7 +110,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
    | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
    | xDAI | Native token on Gnosis Chain |
 
-Tx on Gnosis Chain: [url](https://gnosis.blockscout.com/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2)
+Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2)
 
 ✅ Implemented: Jun 01, 2026.
 
@@ -210,8 +210,8 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 1. Upgrade the deposit contract proxy to new implementation contract, which introduced a new `batchDeposit` function that allows specifying a different deposit amount for each validator. This is required for batching for 0x02-type withdrawal credentials which have variable amounts instead the previous default of 1 GNO.
    1. Deposit contract proxy contract: 0x0B98057eA310F4d31F2a452B414647007d1645d9
-   2. Old implementation contract: [\*0x4feF25519256e24A1FC536F7677152dA742Fe3Ef](https://gnosis.blockscout.com/address/0x4feF25519256e24A1FC536F7677152dA742Fe3Ef)\*
-   3. New implementation contract: [0x49de1aced385334f1a66d86db363264eb5b6a708](https://gnosis.blockscout.com/address/0x49de1aced385334f1a66d86db363264eb5b6a708)
+   2. Old implementation contract: [\*0x4feF25519256e24A1FC536F7677152dA742Fe3Ef](https://gnosisscan.io/address/0x4feF25519256e24A1FC536F7677152dA742Fe3Ef)\*
+   3. New implementation contract: [0x49de1aced385334f1a66d86db363264eb5b6a708](https://gnosisscan.io/address/0x49de1aced385334f1a66d86db363264eb5b6a708)
 
 ✅ Implemented: May 2, 2025
 
@@ -221,10 +221,10 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 1. Upgrade xDAI proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
    1. Foreign xDAI implementation contract: [0xb54042F5bA4B048fEa54aaE70abbbe41AC716299](https://etherscan.io/address/0xb54042F5bA4B048fEa54aaE70abbbe41AC716299#readContract), version: 9
-   2. Home xDAI Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosis.blockscout.com/address/0xb740472c650fe949931b9df0cb253b48c80c82de), version: 6
+   2. Home xDAI Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosisscan.io/address/0xb740472c650fe949931b9df0cb253b48c80c82de), version: 6
 2. set Hashi Manager for xDAI Bridge
    1. Hashi Manager on ETH: [0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD](https://etherscan.io/address/0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD)
-   2. Hashi Manager on Gnosis Chain: [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosis.blockscout.com/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49)
+   2. Hashi Manager on Gnosis Chain: [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosisscan.io/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49)
 3. Replace MetaCartel in Bridge governors with Monerium
    1. MetaCartel: 0xd945325557f1FB4374fBf10Ae86D385632Df870A
    2. Monerium: 0xB646B8b5Fe6cBc7770578B7679208337ef747ae4
@@ -268,7 +268,7 @@ Remove Signers:
    1. Foreign AMB implementation contract: [0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316](https://etherscan.io/address/0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316#readContract), version: 6
    2. Home AMB Implementation contract: [0xA033535983d1aBcc2648af730EDCb198909903D7](https://gnosis.blockscout.com/address/0xA033535983d1aBcc2648af730EDCb198909903D7#code), version: 6
 2. Remove Telepathy from AMB’s validator list
-   1. Succinct Labs is deprecating the Telepathy platform; thus, we are removing Telepathy [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosis.blockscout.com/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) from validator list. We will add the new SP1 based implementation when ready.
+   1. Succinct Labs is deprecating the Telepathy platform; thus, we are removing Telepathy [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) from validator list. We will add the new SP1 based implementation when ready.
 3. Unlock TRAC token to users
    1. Users transferred TRAC token directly into Omnibridge instead of calling relayTokens, resulting in TRAC token locked in Omnibridge: https://etherscan.io/tx/0xf1192bff538080c848ecbf9385a63656ddc5312e51e97d09debf7b06a25316e9. We will bridge the locked TRAC token to Gnosis Chain so that users can receive the token.
 
@@ -308,7 +308,7 @@ Besides, as requested from Autonolas team, we [remove the Autonolas LP token fee
 
 🗳 Justification: As requested from Autonolas team, we [removed OLAS token fee](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x4efc19db4b29b2812b17e74cf4f8c91eef02a68a966a64617810c74589f5ab8b) on ETH↔GC Omnibridge, from previously 0.01% to 0.  
 OLAS on Ethereum: https://etherscan.io/address/0x0001a500a6b18995b03f44bb040a5ffc28e45cb0  
-Bridged OLAS token on Gnosis: https://gnosis.blockscout.com/address/0xce11e14225575945b8e6dc0d4f2dd4c570f79d9f
+Bridged OLAS token on Gnosis: https://gnosisscan.io/address/0xce11e14225575945b8e6dc0d4f2dd4c570f79d9f
 
 ✅ Implemented: Nov 9, 2023
 
