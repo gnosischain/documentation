@@ -26,7 +26,7 @@ https://gnosis-chiado.blockscout.com/api/v1/gas-price-oracle
 ```
 
 * Response calculated for **previous 200 blocks** and **updated every 30 seconds**.
-* See the [Blockscout API documentation](https://docs.blockscout.com/devs/apis) for the REST and RPC endpoints.
+* See the [Blockscout API documentation](https://docs.blockscout.com/devs/apis) for the REST and RPC endpoints, or the [Blockscout DevPortal](https://dev.blockscout.com/) for the PRO API with an API key and Etherscan-compatible interface.
 * Response criteria for average, fast and slow gas estimates follow [EthGasStation recommendations](https://github.com/ethgasstation/gasstation-express-oracle/blob/master/gasExpress.py#L16-L18).
 
 ### Example response

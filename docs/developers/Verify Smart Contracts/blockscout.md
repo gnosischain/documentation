@@ -11,5 +11,6 @@ Follow the [verifying a smart contract](https://docs.blockscout.com/for-users/ve
 - [Blockscout Explorer](https://gnosis.blockscout.com/)
 - [Blockscout verification docs](https://docs.blockscout.com/devs/verification) (UI, Hardhat, Foundry, Sourcify)
 - [Blockscout API documentation](https://docs.blockscout.com/devs/apis)
+- [Blockscout DevPortal](https://dev.blockscout.com/) (PRO API, API keys, Etherscan-compatible interface)
 
 ![](/img/developers/verify/blockscout.png)
