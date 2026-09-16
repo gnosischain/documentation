@@ -24,7 +24,7 @@
 
   ![DAppNode Step 3j](/img/node/dappnode-step3j.png)
 
-:::caution Be sure to enter a withdrawal address at this step. This address will be used to receive partial or full withdrawals. You can also choose not to enter an address at this step, but please note that updating it later can be difficult. [Withdrawals](../node/management/withdrawals.md)
+:::caution Be sure to enter a withdrawal address at this step. This address will be used to receive partial or full withdrawals. You can also choose not to enter an address at this step, but please note that updating it later can be difficult. [Withdrawals](/node/management/withdrawals)
 
 Please note that once you have chosen a withdrawal address (either at this step or later), it will not be possible to update it to another address. Therefore, make sure to choose an address that you control and that is secure. :::
 

@@ -46,9 +46,9 @@ Due to the finality requirements on Ethereum, the transactions will take approx.
 
 | Contract                            | Address                                                                                                                                   |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| AMB/Omnibridge Multi-Token Mediator | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
-| AMB (Home)                          | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
-| AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract)       |
+| AMB/Omnibridge Multi-Token Mediator | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d) |
+| AMB (Home)                          | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
+| AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD)       |
 
 </TabItem>
 
@@ -110,8 +110,8 @@ function requireToPassMessage (address _contract,
 #### Gnosis Chain to Ethereum
 
 1. User calls `foo()` on an originating contract
-2. Originating contract calls [`requireToPassMessage()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F14) on Home Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
-3. Signatures are collected from validators by calling [`submitSignatures()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract#F5), and once enough are collected `CollectedSignatures()` event is emitted.
+2. Originating contract calls [`requireToPassMessage()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) on Home Bridge contract, and encodes `foo()`, target address, and gas limit used on the other chain for executing a message.
+3. Signatures are collected from validators by calling [`submitSignatures()`](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59), and once enough are collected `CollectedSignatures()` event is emitted.
 4. Anyone can execute the call by calling [`executeSignatures(bytes message, bytes signatures)`](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract#F3) on Foreign AMB. To fetch the calldata for `executeSignatures` function, please follow the [guideline below](#how-to-call-executesignatures-on-foreign-amb-ethereum).
 5. Foreign AMB contract decodes the message and calls `foo()` on target contract
 
@@ -119,9 +119,9 @@ function requireToPassMessage (address _contract,
 
 When the transaction is initiated from Home Network (Gnosis Chain), one has to claim the transaction on Ethereum explicitly. Here is how you can fetch the calldata required to call Foreign AMB to claim the transaction.
 
-1. Find the originating transaction on Gnosis Chain that interact with the [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract), and look for `UserRequestForSignature(bytes32 indexed messageId, bytes encodedData)`. [Example](https://gnosisscan.io/tx/0x946d5a926b4e6c55b51eae53b6fea118d7d4fd5ebfa44d6256ef4ce7b4d927be#eventlog)
+1. Find the originating transaction on Gnosis Chain that interact with the [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59), and look for `UserRequestForSignature(bytes32 indexed messageId, bytes encodedData)`. [Example](https://gnosisscan.io/tx/0x946d5a926b4e6c55b51eae53b6fea118d7d4fd5ebfa44d6256ef4ce7b4d927be)
    ![](../../../static/img/bridges/amb-userrequestforsignature.png)
-2. Go to [AMB Helper contract](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract) on Gnosis Chain, paste the `encodedData` from `UserReqeustForSignature` into `getSignatures(bytes _message)` (the message starts with 0x0005). Fetch the return value from `getSignatures`.
+2. Go to [AMB Helper contract](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD) on Gnosis Chain, paste the `encodedData` from `UserReqeustForSignature` into `getSignatures(bytes _message)` (the message starts with 0x0005). Fetch the return value from `getSignatures`.
    ![](../../../static/img/bridges/amb-getsignatures.png)
 3. On [Foreign AMB](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#writeProxyContract), call `executeSigantures(bytes _data, bytes _signatures)`, where `_data` is the `encodedData` from `UserRequestForSignature` and `_signatures` is from the return value of `getSignatures` method. Please make sure that the caller account has enough ETH for the gas fee.
 
@@ -130,7 +130,7 @@ When the transaction is initiated from Home Network (Gnosis Chain), one has to c
 In certain circumstances, i.e. hardfork, AMB will be planned for downtime (not relaying message) to ensure security of the bridge. Planned downtime will be announced in public channel like Discord and Twitter, prior to the event.  
 There is also another way to check whether the AMB is down or not by reading `maxGasPerTx` value on AMB contract.
 
-In the current configuration, `maxGasPerTx` is set to 4000000 on [Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract) and 2000000 on [Gnosis Chain](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#readProxyContract).
+In the current configuration, `maxGasPerTx` is set to 4000000 on [Ethereum](https://etherscan.io/address/0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e#readProxyContract) and 2000000 on [Gnosis Chain](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59).
 
 The AMB is down when `maxGasPerTx` is set to 0, only by owner of the contract.
 

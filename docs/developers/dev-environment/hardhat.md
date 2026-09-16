@@ -54,29 +54,24 @@ const config: HardhatUserConfig = {
         chainId: 10200,
         urls: {
           //Blockscout
-          apiURL: "https://blockscout.com/gnosis/chiado/api",
-          browserURL: "https://blockscout.com/gnosis/chiado",
+          apiURL: "https://gnosis-chiado.blockscout.com/api",
+          browserURL: "https://gnosis-chiado.blockscout.com",
         },
       },
       {
         network: "gnosis",
         chainId: 100,
         urls: {
-          // 3) Select to what explorer verify the contracts
-          // Gnosisscan
-          apiURL: "https://api.gnosisscan.io/api",
-          browserURL: "https://gnosisscan.io/",
-          // Blockscout
-          //apiURL: "https://blockscout.com/xdai/mainnet/api",
-          //browserURL: "https://blockscout.com/xdai/mainnet",
+          // 3) Explorer used for contract verification (Blockscout)
+          apiURL: "https://gnosis.blockscout.com/api",
+          browserURL: "https://gnosis.blockscout.com",
         },
       },
     ],
     apiKey: {
-      //4) Insert your Gnosisscan API key
-      //blockscout explorer verification does not require keys
-      chiado: "your key",
-      gnosis: "your key",
+      //4) Blockscout verification does not require an API key; any non-empty string works
+      chiado: "blockscout",
+      gnosis: "blockscout",
     },
   }
 };
@@ -124,29 +119,24 @@ module.exports = {
         chainId: 10200,
         urls: {
           //Blockscout
-          apiURL: "https://blockscout.com/gnosis/chiado/api",
-          browserURL: "https://blockscout.com/gnosis/chiado",
+          apiURL: "https://gnosis-chiado.blockscout.com/api",
+          browserURL: "https://gnosis-chiado.blockscout.com",
         },
       },
       {
         network: "gnosis",
         chainId: 100,
         urls: {
-          // 3) Select to what explorer verify the contracts
-          // Gnosisscan
-          apiURL: "https://api.gnosisscan.io/api",
-          browserURL: "https://gnosisscan.io/",
-          // Blockscout
-          //apiURL: "https://blockscout.com/xdai/mainnet/api",
-          //browserURL: "https://blockscout.com/xdai/mainnet",
+          // 3) Explorer used for contract verification (Blockscout)
+          apiURL: "https://gnosis.blockscout.com/api",
+          browserURL: "https://gnosis.blockscout.com",
         },
       },
     ],
     apiKey: {
-      //4) Insert your Gnosisscan API key
-      //blockscout explorer verification does not require keys
-      chiado: "your key",
-      gnosis: "your key",
+      //4) Blockscout verification does not require an API key; any non-empty string works
+      chiado: "blockscout",
+      gnosis: "blockscout",
     },
   }
 };
@@ -187,6 +177,8 @@ npx hardhat run scripts/deploy.js --network chiado
 </Tabs>
 
 View your deployed contract on any of the [explorers](/tools/Blockchain%20Explorers).
+
+To verify the contract source, run `npx hardhat verify --network gnosis <CONTRACT_ADDRESS>`. See the [Blockscout Hardhat verification guide](https://docs.blockscout.com/devs/verification/hardhat-verification-plugin) for options and troubleshooting.
 
 Visit our [Tools page](/tools) for other support.
 

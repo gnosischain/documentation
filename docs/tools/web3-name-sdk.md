@@ -106,3 +106,21 @@ Domain metadata can be fetched by SDK directly.
 // requesting
 const metadata = await web3Name.getMetadata({ name: "public.gno" });
 ```
+
+## Resolving `.gno` names with the Blockscout BENS API
+
+Blockscout's name service API ([BENS](https://github.com/blockscout/blockscout-ens)) resolves Genome (`.gno`) names on Gnosis Chain without any SDK. Chain ID `100` is Gnosis mainnet.
+
+Forward resolution (name to address):
+
+```bash
+curl "https://bens.services.blockscout.com/api/v1/100/domains:lookup?name=gnosis.gno"
+```
+
+Reverse resolution (address to names):
+
+```bash
+curl "https://bens.services.blockscout.com/api/v1/100/addresses:lookup?address=0x22D26d8bC069825613E84D3664F0a5e4556BC73d&resolved_to=true&owned_by=true"
+```
+
+Both return JSON with the matching `name`, `resolved_address`, `owner` and expiry. This is the same service that powers name display on [gnosis.blockscout.com](https://gnosis.blockscout.com/).

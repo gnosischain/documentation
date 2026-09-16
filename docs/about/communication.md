@@ -29,7 +29,7 @@ keywords: [gnosis, gnosis twitter, gnosis telegram, gnosis discord, governance f
 
 ## Events and Press
 
-- [Gnosis Chain Media Kit](https://www.gnosis.io/press/press-kit)
+- [Gnosis Chain Media Kit](https://www.gnosis.io/press)
 
 ## Careers
 

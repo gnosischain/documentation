@@ -61,8 +61,8 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 | CowProtocol  | [gno:0xA2746D5eE860a6A9cbb79C34533313144d467CA8](https://gnosis.blockscout.com/address/0xA2746D5eE860a6A9cbb79C34533313144d467CA8)  |
 | Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosis.blockscout.com/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
 | GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
-| Kleros       | [gno:0x59D3C2829900Ae20D02Ca547082b09FD27380eA6 ](https://gnosis.blockscout.com/address/0x59D3C2829900Ae20D02Ca547082b09FD27380eA6) |
-| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
+| Kleros       | [gno:0x59D3C2829900Ae20D02Ca547082b09FD27380eA6 ](https://gnosisscan.io/address/0x59D3C2829900Ae20D02Ca547082b09FD27380eA6) |
+| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
 
 </TabItem>
 

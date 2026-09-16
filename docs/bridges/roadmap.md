@@ -7,9 +7,9 @@ keywords: [bridge roadmap, trustless bridge, light client, zksnark]
 
 ### Fast Confirmation Rule(FCR) integration
 
-Fast Confirmation Rule is a new Ethereum feature that provides a very strong assurance a block will not be reorged within 1 slot(13 seconds), a 98% reduction from the approximately 13-minute time to finality. Integrating FCR into bridges improves the bridging time down to seconds without sacrificing the security. Check [here](./fast-confirmation-rule.md) for more details.
+Fast Confirmation Rule is a new Ethereum feature that provides a very strong assurance a block will not be reorged within 1 slot (12 seconds), a 98% reduction from the approximately 13-minute time to finality. Integrating FCR into bridges improves the bridging time down to seconds without sacrificing the security. Check [here](./fast-confirmation-rule.md) for more details.
 
-### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms ✅
+### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms (shipped, later deprecated)
 
 :::warning
 🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.

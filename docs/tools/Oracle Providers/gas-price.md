@@ -1,43 +1,32 @@
 ---
 title: Gas Price
-description: The BlockScout and Gnosisscan gas price api endpoints show a recommended gas price
-keywords: [gar price, oracle, recommended gas price, gnosisscan api, blockscout api]
+description: The Blockscout gas tracker and gas price api endpoint show a recommended gas price
+keywords: [gas price, gas tracker, oracle, recommended gas price, blockscout api]
 ---
 
 # Gas Price Oracle
 
-## Gnosisscan Endpoint
+## Blockscout Gas Tracker
 
-Gnosisscan has a [gas tracker page](https://gnosisscan.io/gastracker) and an API endpoint to query the value.
+Blockscout has a gas tracker page that shows the current recommended gas price for slow, average and fast transactions, together with recent gas usage.
 
-```bash title="Gnosisscan endpoint - Gnosis Mainnet"
-https://api.gnosisscan.io/api?module=proxy&action=eth_gasPrice
-```
-
-Check the [Gnosisscan APIs documentation](https://docs.gnosisscan.io/) for more endpoints.
-
-### Example response
-
-```json
-{"jsonrpc":"2.0","result":"0xa83efbe0","id":73}
-```
-
-![Gas price display on Gnosisscan](</img/tools/gasprice-gs.png>)
-
+- Gnosis Mainnet: [gnosis.blockscout.com/gas-tracker](https://gnosis.blockscout.com/gas-tracker)
+- Chiado Testnet: [gnosis-chiado.blockscout.com/gas-tracker](https://gnosis-chiado.blockscout.com/gas-tracker)
 
 ## Blockscout Endpoint
 
 The BlockScout gas price api endpoint shows a recommended gas price for average, fast and slow transactions based on recently accepted transactions. Users can decide whether to increase the gas price to speed up a transaction or input a lower gas price which may take longer but is still likely to be successful.
 
 ```bash title="Blockscout endpoint - Gnosis Mainnet"
-https://blockscout.com/xdai/mainnet/api/v1/gas-price-oracle
+https://gnosis.blockscout.com/api/v1/gas-price-oracle
 ```
 
 ```bash title="Blockscout endpoint - Chiado Testnet"
-https://blockscout.chiadochain.net/api/v1/gas-price-oracle
+https://gnosis-chiado.blockscout.com/api/v1/gas-price-oracle
 ```
 
 * Response calculated for **previous 200 blocks** and **updated every 30 seconds**.
+* See the [Blockscout API documentation](https://docs.blockscout.com/devs/apis) for the REST and RPC endpoints, or the [Blockscout DevPortal](https://dev.blockscout.com/) for the PRO API with an API key and Etherscan-compatible interface.
 * Response criteria for average, fast and slow gas estimates follow [EthGasStation recommendations](https://github.com/ethgasstation/gasstation-express-oracle/blob/master/gasExpress.py#L16-L18).
 
 ### Example response

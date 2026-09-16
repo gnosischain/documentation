@@ -88,11 +88,11 @@ There are two possible scenarios for how the bridge or validators contracts can 
 
 ### Governor: Setting bridge limits
 
-Different limits are set for the [xDai Bridge](../Token%20Bridge/xdai-bridge.md#fees--daily-limits) and the [OmniBridge](../Token%20Bridge/omnibridge.md#fees--daily-limits) by the bridge governors. Please see their respective documentation pages for more information.
+Different limits are set for the [xDai Bridge](../About%20Token%20Bridges/xdai-bridge.md) and the [OmniBridge](../About%20Token%20Bridges/omnibridge.md) by the bridge governors. Please see their respective documentation pages for more information.
 
 ## Bridge Validators
 
-Bridge Validators monitor events on both sides of the chains to ensure that the user's bridging requests are validated promptly. In the Gnosis Chain, there are both trusted and trustless validators. [Telepathy](/bridges/Token%20Bridge/amb-bridge#how-it-works-with-telepathy-validator), a trustless ZK-based validator on AMB, secures transactions using zero-knowledge proofs, while the rest of the validators sign the message to validate the message. The threshold of signatures from validators has to be reached in order to execute the message on the destination chain.
+Bridge Validators monitor events on both sides of the chains to ensure that the user's bridging requests are validated promptly. In the Gnosis Chain, there are both trusted and trustless validators. [Telepathy](/bridges/About%20Token%20Bridges/amb-bridge#how-it-works), a trustless ZK-based validator on AMB, secures transactions using zero-knowledge proofs, while the rest of the validators sign the message to validate the message. The threshold of signatures from validators has to be reached in order to execute the message on the destination chain.
 
 - [xDai Bridge Validators](/bridges/management/validators#xdai-bridge)
 - [AMB & OmniBridge Validators](/bridges/management/validators#amb--omnibridge)

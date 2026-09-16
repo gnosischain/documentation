@@ -104,14 +104,14 @@ https://docs.gnosischain.com/img/tokens/gno.png
 
 ### Bridge
 
-- Ethereum to Gnosis token bridge: [OmniBridge](https://omni.gnosischain.com/)
+- Ethereum to Gnosis token bridge: [Gnosis Bridge](https://bridge.gnosischain.com/)
 <!-- non native bridges  -->
 
 ## Use GNO Tokens
 
 ### Staking
 
-By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
+By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](/node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
 
 
 :::note Historical use of `mGNO`
@@ -121,13 +121,13 @@ Historically, deposits on the Beacon Chain were made with a token called `mGNO` 
 
 :::
 
-For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about sGNO and rGNO tokens, please consult the [Stakewise](/node/participate-validator/liquid-staking) page.
+For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about osGNO (StakeWise V3), please consult the [liquid staking](/node/participate-validator/liquid-staking) page.
 
 ### GnosisDAO Governance
 
 - [GnosisDAO Governance Forum](https://forum.gnosis.io/)
 - [GNO Utility and Value Proposition](https://forum.gnosis.io/t/gno-utility-and-value-proposition/2344)
-- [Community](/developers/communication)
+- [Community](/about/communication)
 
 ## GNO Token Audit
 

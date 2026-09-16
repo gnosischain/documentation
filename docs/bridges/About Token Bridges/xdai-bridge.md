@@ -60,7 +60,7 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 | Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)              |
 | Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)   |
 | ERC20ToNative Helper Contract | [gno:0xe30269bc61E677cD60aD163a221e464B7022fbf5](https://gnosis.blockscout.com/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) |
-| USDSDepositContract           | [gno:0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosis.blockscout.com/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9)              |
+| USDSDepositContract           | [gno:0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9)              |
 
 </TabItem>
 
@@ -156,8 +156,8 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 
 1. Based on the received token on Ethereum
    1. To receive DAI on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. The equivalent amount of xDAI is burned.
-   1. To receive USDS on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [USDS Deposit Contract](https://gnosis.blockscout.com/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9) on Gnosis Chain. The equivalent amount of xDAI is burned.
-2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` event is emitted from [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosisscan.io/tx/0xca6fa9395f734501a9497f409db12699782b0a068dc4463d736561572eda8441#eventlog)
+   1. To receive USDS on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [USDS Deposit Contract](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9) on Gnosis Chain. The equivalent amount of xDAI is burned.
+2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` event is emitted from [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosisscan.io/tx/0xca6fa9395f734501a9497f409db12699782b0a068dc4463d736561572eda8441)
 3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
 4. After enough signatures are collected, `CollectedSignatures` event is emitted/
 5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-usds-on-ethereum). **USDS** is unlocked to the receiver or swap to **DAI** to the receive.
@@ -297,7 +297,7 @@ The second contract is the Interest Receiver. This will be the address provided 
    1. address: [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs)
    2. contract: [HomeBridgeErcToNative.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/upgradeable_contracts/erc20_to_native/HomeBridgeErcToNative.sol)
 4. USDS deposit contract: Deposit contract on Gnosis Chain that acts as an entry point contract if user wants to receive USDS on Ethereum.
-   1. address: [0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9#code)
+   1. address: [0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9)
    2. contract: [USDSDepositContract.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/USDSDepositContract.sol)
 5. Foreign Chain : Ethereum
 6. Home Chain: Gnosis Chain

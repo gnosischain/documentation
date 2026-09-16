@@ -11,8 +11,8 @@ const config = {
     "Gnosis Chain is one of the first Ethereum sidechains and has stayed true to its values.",
   url: "https://docs.gnosischain.com",
   baseUrl: "/",
-  onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "ignore",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.ico",
   stylesheets: [
     {
@@ -161,7 +161,7 @@ const config = {
             items: [
               {
                 label: "Developers",
-                to: "/developers/overview",
+                to: "/developers/Overview",
               },
               {
                 label: "Node operators",
@@ -215,7 +215,7 @@ const config = {
               },
               {
                 label: "Gnosis Chain Media Kit",
-                href: "https://www.gnosis.io/press/press-kit",
+                href: "https://www.gnosis.io/press",
               },
             ],
           },
@@ -246,7 +246,24 @@ const config = {
     [
       "@docusaurus/plugin-client-redirects",
       {
+        // The /concepts section moved to /about; external sites still link the old paths
+        createRedirects(existingPath) {
+          if (existingPath.startsWith("/about/")) {
+            return [existingPath.replace("/about/", "/concepts/")];
+          }
+          return undefined;
+        },
         redirects: [
+          // Slug typo fixed (brige -> bridge)
+          {
+            to: "/bridges/bridge-limits",
+            from: "/bridges/brige-limits",
+          },
+          // Bridges FAQs merged into the master FAQ as its Bridging subsection
+          {
+            to: "/faq/others",
+            from: "/faq/bridges",
+          },
           {
             to: "/updates/2022/12/10/merge",
             from: "/updates/20221210-merge",

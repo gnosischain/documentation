@@ -1,0 +1,9 @@
+{
+    "label": "Indexer & Analytics",
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "slug": "/tools/Indexer & Analytics"
+    }
+}

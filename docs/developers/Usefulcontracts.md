@@ -40,17 +40,25 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | GNO | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb) |
 | wxDAI | [0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d](https://gnosisscan.io/token/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d)   |
+| sDAI (Savings xDAI) | [0xaf204776c7245bF4147c2612BF6e5972Ee483701](https://gnosis.blockscout.com/token/0xaf204776c7245bF4147c2612BF6e5972Ee483701) |
+| EURe (Monerium) | [0xcB444e90D8198415266c6a2724b7900fb12FC56E](https://gnosis.blockscout.com/token/0xcB444e90D8198415266c6a2724b7900fb12FC56E) |
+| USDC.e (bridged) | [0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0](https://gnosis.blockscout.com/token/0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0) |
+| WETH (bridged) | [0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1](https://gnosis.blockscout.com/token/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1) |
+| WBTC (bridged) | [0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252](https://gnosis.blockscout.com/token/0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252) |
+| wstETH (bridged) | [0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6](https://gnosis.blockscout.com/token/0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6) |
+| osGNO (StakeWise V3) | [0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0](https://gnosis.blockscout.com/token/0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0) |
+| sGNO (StakeWise V2, deprecated) | [0xA4eF9Da5BA71Cc0D2e5E877a910A37eC43420445](https://gnosis.blockscout.com/token/0xA4eF9Da5BA71Cc0D2e5E877a910A37eC43420445) |
 | Deposit contract    | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9) |
 
 ### Gnosis Chain bridge contract addresses
 
 | Contract                            | Address                                                                                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| AMB Proxy Contract                    | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
-| AMB Contract Proxy (Home)           | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
-| AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract)       |
-| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
-| Omnibridge Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
+| AMB Proxy Contract                    | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
+| AMB Contract Proxy (Home)           | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
+| AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD)       |
+| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d) |
+| Omnibridge Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008)      |
 | xDAI Bridge Proxy Contract                | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs)              |
 | xDAI Bridge Block Reward Contract         | [0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
 | xDAI Bridge Validator Management Contract | [0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
@@ -63,38 +71,15 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | xDAI Bridge Validator (Gnosis DAO)                 | [0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49](https://gnosisscan.io/address/0xc9ADb79B8A6e7C6e90c765A3B4d16d81213c9D49) [0x1abbf5ec09763afc398551e555967931d64e1508](https://gnosisscan.io/address/0x1abbf5ec09763afc398551e555967931d64e1508) |
 
-## Goerli
-
-### Goerli contract addresses
-| Contract                            | Address                                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| GNO                 | [0x7f477c3f03213970d939104cc436dc995cf615b5](https://goerli.etherscan.io/address/0x7f477c3f03213970d939104cc436dc995cf615b5) |
-| Governance Safe                     | [0xf02796C7B84F10Fa866DAa7d5701A95f3131A727](https://gnosis-safe.io/app/gor:0xf02796C7B84F10Fa866DAa7d5701A95f3131A727home)                                                                                                                 |
-
-### Goerli bridge contract addresses
-| Contract                            | Address                                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| OmniBridge Mediator (Foreign) | [0x00147c84f13764dCDAbAF1cbAe622fa6f6839085](https://goerli.etherscan.io/address/0x00147c84f13764dCDAbAF1cbAe622fa6f6839085) |
-| AMB Contract Proxy (Foreign)  | [0x87A19d769D875964E9Cd41dDBfc397B2543764E6](https://goerli.etherscan.io/address/0x87A19d769D875964E9Cd41dDBfc397B2543764E6) |
-| xDAI Bridge Proxy Contract     | [0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24](https://goerli.etherscan.io/address/0x8659Cf2273438f9b5C1Eb367Def45007a7A16a24) |
-| xDAI Bridge Validator Contract | [0x1F35121d14ABC91689a7903bf911dce83B0c6EF6](https://goerli.etherscan.io/address/0x1F35121d14ABC91689a7903bf911dce83B0c6EF6) |
-
-### Goerli validator addresses
-
-| Name                            | Address                                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Validator (Gateway)                 | [0xef35547c29a7547df67ff573c158bf1b74381add](https://goerli.etherscan.io/address/0xef35547c29a7547df67ff573c158bf1b74381add) |
-| xDAI Bridge Validator (Gnosis DAO)                 | [0xda286781cbbc9819c94852885a118c93ed25e064](https://goerli.etherscan.io/address/0xda286781cbbc9819c94852885a118c93ed25e064) [0x758c277ca1b04da3ba3add5d61cd26337cfafd7e](https://goerli.etherscan.io/address/0x758c277ca1b04da3ba3add5d61cd26337cfafd7e) [0x9d84152df06880cdabeb30e10c2985f40d98b901](https://goerli.etherscan.io/address/0x9d84152df06880cdabeb30e10c2985f40d98b901) [0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf](https://goerli.etherscan.io/address/0xdc3a6044440b75c5cefb023ae2d0e5b9069230cf) |
-
 ## Chiado
 
 ### Chiado contract addresses
 | Contract                            | Address                                                                                                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| GnosisBridge(GNO) | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://blockscout.com/gnosis/chiado/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
+| GnosisBridge(GNO) | [0x19C653Da7c37c66208fbfbE8908A5051B57b4C70](https://gnosis-chiado.blockscout.com/address/0x19C653Da7c37c66208fbfbE8908A5051B57b4C70) |
 | wxDAI | [0x18c8a7ec7897177E4529065a7E7B0878358B3BfF](https://gnosis-chiado.blockscout.com/address/0x18c8a7ec7897177E4529065a7E7B0878358B3BfF)   |
-| Deposit Contract       | [0xb97036A26259B7147018913bD58a774cf91acf25](https://blockscout.com/gnosis/chiado/address/0xb97036A26259B7147018913bD58a774cf91acf25) |
-| Governance Safe                     | [0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2](https://blockscout.com/gnosis/chiado/address/0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2)    
+| Deposit Contract       | [0xb97036A26259B7147018913bD58a774cf91acf25](https://gnosis-chiado.blockscout.com/address/0xb97036A26259B7147018913bD58a774cf91acf25) |
+| Governance Safe                     | [0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2](https://gnosis-chiado.blockscout.com/address/0x0Ad7de9064BAA98892a244e1415Ca8a2766096D2)    
 
 ### Chiado bridge contract addresses
 | Contract                            | Address                                                                                                                                  |

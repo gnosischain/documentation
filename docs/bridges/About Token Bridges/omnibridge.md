@@ -51,10 +51,10 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 
 | Contract                              | Gnosis Address                                                                                                                            |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| AMB Proxy Contract (Home)             | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
-| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
-| Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
-| USDS Transmuter Contract              | [0x0392a2f5ac47388945d8c84212469f545fae52b2](https://gnosisscan.io/address/0x0392a2f5ac47388945d8c84212469f545fae52b2/advanced#code)      |
+| AMB Proxy Contract (Home)             | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59) |
+| Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d) |
+| Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008)      |
+| USDS Transmuter Contract              | [0x0392a2f5ac47388945d8c84212469f545fae52b2](https://gnosisscan.io/address/0x0392a2f5ac47388945d8c84212469f545fae52b2)      |
 
 </TabItem>
 
@@ -111,8 +111,8 @@ The Omnibridge is built on top of the [Arbitrary Message Bridge](./amb-bridge.md
 2. User call `relayTokens()` on [Foreign Omnibridge contract](https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671#writeProxyContract).
 3. Omnibridge contract calls Foreign AMB `requireToPassMessage()`.
 4. `UserRequestForAffirmation` event is emitted from Foreign AMB and `TokensBridgingInitiated(address indexed token, address indexed sender, uint256 value, bytes32 indexed messageId)` event is emitted from Foreign Omnibridge.
-5. Message is relayed to the Omnibridge contract when bridge validator threshold is met by calling [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract)`executeAffirmation()` on Gnosis Chain.
-6. AMB calls [Omnibridge on Gnosis chain](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract):
+5. Message is relayed to the Omnibridge contract when bridge validator threshold is met by calling [Home AMB](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59)`executeAffirmation()` on Gnosis Chain.
+6. AMB calls [Omnibridge on Gnosis chain](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d):
    - token does not exist: the Omnibridge deploys a new token registry and mints the relayed amount.
    - token exists: the relayed Omnibridge is minted in the token address.
 
@@ -206,7 +206,7 @@ For example, there are two different representations of USDC on Gnosis(created b
 
 | Asset              | Token Contract                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
+| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
 | USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://gnosis.blockscout.com/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
@@ -223,7 +223,7 @@ Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and 
 USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://github.com/circlefin/stablecoin-evm/blob/master/doc/bridged_USDC_standard.md). To ensure smooth bridging operations, when using [Bridge UI](https://bridge.gnosischain.com/) to bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) from Ethereum, user will get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0) by default.
 
 1. Bridging from ETH:  
-   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
+   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
 2. Bridging from GC:  
    a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).  
    b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.

@@ -36,7 +36,7 @@ The Project Manifest (`project.yaml`) file works as an entry point to your Gnosi
 
 Note that the manifest file has already been set up correctly and doesn’t require significant changes, but you need to import the correct contract definitions and update the datasource handlers.
 
-As we are indexing all transfers and mints for the POAP ERC721 contract, the first step is to import the contract abi definition which can be obtained from [here](https://gnosisscan.io/token/0x22c1f6050e56d2876009903609a2cc3fef83b415#code). Copy the entire contract ABI and save it as a file called `poap.abi.json` in the `/abis` directory.
+As we are indexing all transfers and mints for the POAP ERC721 contract, the first step is to import the contract abi definition which can be obtained from [here](https://gnosisscan.io/token/0x22c1f6050e56d2876009903609a2cc3fef83b415). Copy the entire contract ABI and save it as a file called `poap.abi.json` in the `/abis` directory.
 
 This section in the Project Manifest now imports all the correct definitions and lists the triggers that we look for on the blockchain when indexing.
 

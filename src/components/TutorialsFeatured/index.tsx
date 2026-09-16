@@ -15,16 +15,16 @@ const Tutorials = [
         ),
         },
         {
-            name: 'Contract verification in Gnosisscan',
-            image: require('@site/static/img/developers/verify/gnosisscan.png').default,
-            url: '/developers/verify/gnosisscan',
+            name: 'Contract verification in Blockscout',
+            image: require('@site/static/img/developers/verify/blockscout.png').default,
+            url: '/developers/Verify%20Smart%20Contracts/blockscout',
             description: (
             <Translate
-                id="tutorials.gnosisscanverification.description"
+                id="tutorials.blockscoutverification.description"
                 values={{
                 webContainersLink: (
-                    <Link href="https://gnosisscan.io/">
-                    Gnosisscan
+                    <Link href="https://gnosis.blockscout.com/">
+                    Blockscout
                     </Link>
                 ),
                 }}>

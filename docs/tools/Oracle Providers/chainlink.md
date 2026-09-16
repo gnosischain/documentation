@@ -27,7 +27,7 @@ See [MetaMask setup page](/tools/wallets/metamask) and follow the setup and conf
 
 ### 2) Get xDai with Faucet
 
-You can get enough xDai to deploy your contracts and more with the a [Faucet](/tools/faucets). You should see it added to your address in a few seconds.
+You can get enough xDai to deploy your contracts and more with the a [Faucet](/tools/Faucets). You should see it added to your address in a few seconds.
 
 ### 3) Open Remix and Create File
 
@@ -119,10 +119,10 @@ Once deployed, click to expand the contract. Click `getLatestPrice` to check the
 
 ### 1) Find Deployed Contract
 
-For transparency and interaction purposes, you can verify your contract on [BlockScout](https://blockscout.com/xdai/mainnet/). _Note, if a contract with the same bytecode has already been deployed and verified, your contract code may be viewable._ [_See this example_](https://gnosis.blockscout.com/address/0x681ef0446AA72723256f1De4d1BE7Dd9bb7F84Cf/contracts)_._
+For transparency and interaction purposes, you can verify your contract on [BlockScout](https://gnosis.blockscout.com/). _Note, if a contract with the same bytecode has already been deployed and verified, your contract code may be viewable._ [_See this example_](https://gnosis.blockscout.com/address/0x681ef0446AA72723256f1De4d1BE7Dd9bb7F84Cf/contracts)_._
 
 1. Copy the deployed contract address in Remix.
-2. Go to [BlockScout](https://blockscout.com/xdai/mainnet/) and paste into the search field.
+2. Go to [BlockScout](https://gnosis.blockscout.com/) and paste into the search field.
 3. Click the Code tab for verification methods.
 4. Click the **Verify and Publish** Button.
 

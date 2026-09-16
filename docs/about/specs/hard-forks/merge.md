@@ -11,7 +11,6 @@ Hard forks are backward-incompatible upgrades used to introduce new functionalit
 - **Network**: Gnosis
 - **Beacon block number**: `6,306,357`
 - **Completed:** 8 December 2022
-- [Merged successful announcement](/updates/2022/12/10/merge)
 
 # The Merge
 
@@ -72,12 +71,16 @@ Latest announcements will be made in the #validators channel in Gnosis Discord a
 
 :::
 
+:::note Historical snapshot (November 2022)
+This table records client readiness at the time of the Merge. Every client listed has long since shipped Merge-ready releases; check each client's release page for current versions.
+:::
+
 **EL client**
 
 | Client     | Merge ready release | Status                                                             |
 | ---------- | ------------------- | ------------------------------------------------------------------ |
 | Nethermind | v1.14.6             | ✅ https://github.com/NethermindEth/nethermind/releases/tag/1.14.6 |
-| Erigon     | TBA                 | ⌛ Coming soon                                                     |
+| Erigon     | TBA                 | Released after this snapshot                                       |
 
 **CL client**
 
@@ -86,7 +89,7 @@ Latest announcements will be made in the #validators channel in Gnosis Discord a
 | Teku       | v22.11.0            | ✅ Available https://github.com/ConsenSys/teku/releases/tag/22.11.0    |
 | Lodestar   | v1.2.2              | ✅ Available https://github.com/ChainSafe/lodestar/releases/tag/v1.2.2 |
 | Lighthouse | v3.3.0              | ✅ Available (https://github.com/sigp/lighthouse/releases/tag/v3.3.0)  |
-| Nimbus     | TBA                 | ⌛ Coming soon                                                         |
+| Nimbus     | TBA                 | Released after this snapshot                                           |
 | Prysm      | N/A                 | ❌ Advised to switch to other clients.                                 |
 
 **DAppNode Packages**

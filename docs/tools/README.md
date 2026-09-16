@@ -9,8 +9,10 @@ keywords: [gnosis tools, dev tools, wallets, faucet, gnosis explorer, rpc provid
 A home to all developer tools that would be helpful when you would be building dApps on Gnosis Chain. Find the support to following in this section :
 - Blockchain explorers
 - Faucets
+- Indexers & Analytics
 - Oracles
 - RPC Providers
+- Token Distribution
 - User Onboarding
 - Wallets
 

@@ -25,7 +25,7 @@ Gateways and Exchanges allow users to get xDai using FIAT or swap other crypto i
 
 ### Faucets
 
-Gnosis offers [free mainnet faucets](/tools/faucets/).
+Gnosis offers [free mainnet faucets](/tools/Faucets).
 
 ## Specifications
 

@@ -19,7 +19,7 @@ title: Overview
         <p>Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.</p>
     </FeatureCard>
      <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p>Fully-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).</p>
+        <p>Fully-featured explorers [Gnosisscan](https://gnosisscan.io) and [Blockscout](https://gnosis.blockscout.com).</p>
     </FeatureCard>
      <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
         <p>Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.</p>
@@ -70,12 +70,12 @@ Welcome to the Developers section! This section gives an extensive overview on h
 
 ## Resources
 - [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
-- [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
+- [Faucets](/tools/Faucets): A list of faucets you can use for testing purposes.
 - [RPC Providers](/tools/RPC%20Providers/): A list of RPC providers that provide access to the network.
 
-### Coming Soon: Building on Top of Gnosis Pay
+### Building on Top of Gnosis Pay
 
-We're excited to announce a groundbreaking development in the Gnosis ecosystem: a self-custodial Visa card, powered by Gnosis Pay. This innovative product leverages the robust and decentralized Gnosis Chain, offering users a seamless bridge between the traditional financial system and the decentralized finance (DeFi) world. We will soon be opening our SDK for Developers in our ecosystem to build financial products on Gnosis Pay cards.
+Gnosis Pay is a self-custodial Visa card powered by Gnosis Chain, bridging the traditional financial system and DeFi. Developers can build on Gnosis Pay today: see the [Gnosis Pay developer docs](https://docs.gnosispay.com/).
 
 ### Gnosis Pay: A Gateway to DeFi
 

@@ -63,10 +63,10 @@ You must **run an execution client** alongside your existing consensus client. N
 ## More info
 
 - [Testnet Deployments](https://github.com/gnosischain/consensus-deployment-ansible#readme)
-- [Chiado Testnet](/concepts/networks/chiado)
+- [Chiado Testnet](/about/networks/chiado)
 
 
 ## Pre-merge consensus articles
 
-- [POSDAO](/concepts/specs/consensus/posdao)
-- [AURA](/concepts/specs/consensus/aura)
+- [POSDAO](/about/specs/consensus/posdao)
+- [AURA](/about/specs/consensus/aura)

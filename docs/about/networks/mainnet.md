@@ -1,5 +1,5 @@
 ---
-description: Gnosis mainnet infrstructure details.
+description: Gnosis mainnet infrastructure details.
 keywords:
   [gnosis mainnet, mainnet, gnosis infrastructure, gnosis faucet, gno, xdai]
 ---
@@ -38,17 +38,14 @@ keywords:
 | ------------------------ | ------------------------------------------- |
 | Consensus Layer RPC      | https://rpc-gbc.gnosischain.com             |
 | Beacon Explorer          | https://beaconchain.gnosischain.com/                      |
-| Beacon Explorer Backup 1 | https://beacon-v1.gnosischain.com           |
-| Beacon Explorer Backup 2 | https://beacon-v2.gnosischain.com           |
 | Beacon Checkpoint Sync   | https://checkpoint.gnosischain.com          |
-| Beacon Checkpoint Sync   | https://checkpoint-sync-gnosis.dappnode.io/ |
+| Beacon Checkpoint Sync   | https://checkpoint-sync-gnosis.dappnode.net/ |
 
 ### Other Tools
 
 | Other Tools      |                                |
 | ---------------- | ------------------------------ |
-| GnosisPools.info | https://gnosispools.info       |
-| D14N Info        | https://d14n.info/             |
+| Gnosis Metrics           | https://metrics.gnosischain.com/            |
 | Bordel           | https://bordel.wtf/            |
 | More tools       | [Tools](../../tools/README.md) |
 

@@ -13,6 +13,5 @@ Once connected to [Gnosis in MetaMask](/tools/wallets/metamask) and your Trezor 
 
 ## More Guides
 
-- [Apps compatible with Trezor](https://wiki.trezor.io/User_manual:Trezor_Apps)
-- [Developers guide](https://wiki.trezor.io/Developers_guide)
+- [Trezor Learn & Support](https://trezor.io/learn)
 - [Supported coins & tokens](https://trezor.io/coins/)

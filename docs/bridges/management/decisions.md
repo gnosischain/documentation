@@ -110,7 +110,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
    | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
    | xDAI | Native token on Gnosis Chain |
 
-Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2/)
+Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2)
 
 ✅ Implemented: Jun 01, 2026.
 
@@ -211,7 +211,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 1. Upgrade the deposit contract proxy to new implementation contract, which introduced a new `batchDeposit` function that allows specifying a different deposit amount for each validator. This is required for batching for 0x02-type withdrawal credentials which have variable amounts instead the previous default of 1 GNO.
    1. Deposit contract proxy contract: 0x0B98057eA310F4d31F2a452B414647007d1645d9
    2. Old implementation contract: [\*0x4feF25519256e24A1FC536F7677152dA742Fe3Ef](https://gnosisscan.io/address/0x4feF25519256e24A1FC536F7677152dA742Fe3Ef)\*
-   3. New implementation contract: [0x49de1aced385334f1a66d86db363264eb5b6a708](https://gnosisscan.io/address/0x49de1aced385334f1a66d86db363264eb5b6a708#code)
+   3. New implementation contract: [0x49de1aced385334f1a66d86db363264eb5b6a708](https://gnosisscan.io/address/0x49de1aced385334f1a66d86db363264eb5b6a708)
 
 ✅ Implemented: May 2, 2025
 
@@ -221,7 +221,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 1. Upgrade xDAI proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
    1. Foreign xDAI implementation contract: [0xb54042F5bA4B048fEa54aaE70abbbe41AC716299](https://etherscan.io/address/0xb54042F5bA4B048fEa54aaE70abbbe41AC716299#readContract), version: 9
-   2. Home xDAI Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosisscan.io/address/0xb740472c650fe949931b9df0cb253b48c80c82de#readContract), version: 6
+   2. Home xDAI Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosisscan.io/address/0xb740472c650fe949931b9df0cb253b48c80c82de), version: 6
 2. set Hashi Manager for xDAI Bridge
    1. Hashi Manager on ETH: [0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD](https://etherscan.io/address/0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD)
    2. Hashi Manager on Gnosis Chain: [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosisscan.io/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49)
@@ -322,7 +322,7 @@ We [increased the limits](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 ## Upgrade xDAI bridge to support investing in sDAI vault.
 
-🗳 Justification: We [upgrade](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xd8683bccfe39ace95a1da5f58a5c9a83dc324de39ce07f11fcffb5c2397ca96c) [xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) to new implementation version in order to support investing DAI from the bridge contract into sDAI vault from Spark Protocol. This upgrade only implements changes on Ethereum, and the next phase will be on Gnosis Chain. The implementation contract is [audited by Omega and ChainSafe](../audits.md#xdai-bridge-upgrade-audit-by-omega-and-chainsafe). For more details, please refer to [docs](../tokenbridge/xdai-bridge.md#savings-xdai)
+🗳 Justification: We [upgrade](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xd8683bccfe39ace95a1da5f58a5c9a83dc324de39ce07f11fcffb5c2397ca96c) [xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) to new implementation version in order to support investing DAI from the bridge contract into sDAI vault from Spark Protocol. This upgrade only implements changes on Ethereum, and the next phase will be on Gnosis Chain. The implementation contract is [audited by Omega and ChainSafe](../audits.md#xdai-bridge-upgrade-audit-by-omega-and-chainsafe). For more details, please refer to [docs](../About%20Token%20Bridges/xdai-bridge.md#savings-xdai)
 
 We call the method `upgradeTo()` on the xDAI bridge proxy contract (0x4aa42145aa6ebf72e164c9bbc74fbd3788045016) with parameters: version 8 and impl. 0x166124b75c798cedf1b43655e9b5284ebd5203db.
 
@@ -588,7 +588,7 @@ Increase the amount of blocks required for confirmation on the Ethereum Mainnet 
 
 ## Return user funds
 
-🗳 Justification: A user accidentally [sent over 2000 USDC](https://blockscout.com/xdai/mainnet/tx/0x2837cd89972f2e37a1cb631e60dbb761213010fe526a089c99f48ed483f63956) to the USDC token contract on Gnosis. After confirming the users identity, the board agreed to call the `claimTokensFromTokenContract` method and return the amount to the user.
+🗳 Justification: A user accidentally [sent over 2000 USDC](https://gnosis.blockscout.com/tx/0x2837cd89972f2e37a1cb631e60dbb761213010fe526a089c99f48ed483f63956) to the USDC token contract on Gnosis. After confirming the users identity, the board agreed to call the `claimTokensFromTokenContract` method and return the amount to the user.
 
 ✅ Implemented: April 15, 2021
 

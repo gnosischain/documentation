@@ -44,7 +44,7 @@ For this walk through, we're going to be using [Hardhat](https://hardhat.org/) (
 
 ## Prerequisites 
 To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/category/deploy-contracts-on-gnosis).
-You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/faucets).
+You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/Faucets).
 
 
 ## Step 1: Set up your environment
@@ -223,4 +223,4 @@ To deploy, run:
 ```bash
 npx hardhat run scripts/deploy.js --network gnosis
 ```
-Congrats, you have deployed a basic ERC-721 contract to Gnosis! If you like, you can build out a front end to view your NFT. For now, you can view your token in [Blockscout](https://blockscout.com/xdai/mainnet/). 
+Congrats, you have deployed a basic ERC-721 contract to Gnosis! If you like, you can build out a front end to view your NFT. For now, you can view your token in [Blockscout](https://gnosis.blockscout.com/). 

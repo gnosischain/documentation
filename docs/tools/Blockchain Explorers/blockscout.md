@@ -26,6 +26,6 @@ Full docs: [https://docs.blockscout.com/devs/pro-api#pro-api-overview](https://d
 
 ## More links
 
-- GraphQL: [https://blockscout.com/poa/xdai/graphiql](https://blockscout.com/poa/xdai/graphiql)
-- RPC: [https://blockscout.com/xdai/mainnet/api-docs](https://blockscout.com/xdai/mainnet/api-docs)
+- GraphQL: [https://gnosis.blockscout.com/graphiql](https://gnosis.blockscout.com/graphiql)
+- RPC: [https://gnosis.blockscout.com/api-docs](https://gnosis.blockscout.com/api-docs)
 - Eth RPC: [https://gnosis.blockscout.com/api-docs?tab=eth_rpc_api](https://gnosis.blockscout.com/api-docs?tab=eth_rpc_api)

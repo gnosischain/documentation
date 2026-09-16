@@ -101,5 +101,5 @@ import VerifyValidatorPartial from '@site/docs/node/manual/validator/\_partials/
 ## More Resources
 
 - [Frequently Asked Questions](../../faq/node.md)
-- [1-click tools](../tools/)
-- [Managing your Node](../management/)
+- [1-click tools](/category/node-tools)
+- [Managing your Node](/category/management)

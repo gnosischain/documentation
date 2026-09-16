@@ -11,7 +11,7 @@ sidebar_label: Account Abstraction
 
 <CardContainer>
     <Card
-    title="Programmable wallets more advance than EOA "
+    title="Programmable wallets more advanced than EOA"
     url=""
     />
     <Card

@@ -13,7 +13,7 @@ keywords:
 
 # Chiado (Testnet)
 
-[Add to MetaMask](https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x27D8&params[0][chainName]=Chiado&params[0][rpcUrls][0]=https://rpc.chiadochain.net&params[0][nativeCurrency][name]=Chiado%20xDAI&params[0][nativeCurrency][symbol]=XDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://blockscout.com/gnosis/chiado)
+[Add to MetaMask](https://shanejonas.github.io/metamask-link/deep?method=wallet_addEthereumChain&params[0][chainId]=0x27D8&params[0][chainName]=Chiado&params[0][rpcUrls][0]=https://rpc.chiadochain.net&params[0][nativeCurrency][name]=Chiado%20xDAI&params[0][nativeCurrency][symbol]=XDAI&params[0][nativeCurrency][decimals]=18&params[0][blockExplorerUrls][0]=https://gnosis-chiado.blockscout.com)
 
 ![Chiado Train Station](../../../static/img/about/chiado.jpg)
 Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/people-at-city-1534560/))
@@ -45,7 +45,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 ### How to Participate
 
 - [Running a Chiado node](https://docs.sedge.nethermind.io/docs/networks/chiado) with [Nethermind Sedge](https://docs.sedge.nethermind.io/)
-- (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://blockscout.com/gnosis/chiado/address/0xc5be8bf53755a41c2385e7aa86f6a9e28746f466) programmatically, or follow the [Chiado deposit instructions](/node/manual/validator/deposit#depositing-for-chiado-testnet)
+- (Here by Dragons): If you can get your hands on Testnet GNO on Chiado, you will need to interact with the [deposit contract](https://gnosis-chiado.blockscout.com/address/0xb97036A26259B7147018913bD58a774cf91acf25) programmatically, or follow the [Chiado deposit instructions](/node/manual/validator/deposit#depositing-for-chiado-testnet)
 
 ## Summary
 
@@ -82,7 +82,7 @@ Image: Trams in Lisbon (credit: [Lisa Fotios](https://www.pexels.com/photo/peopl
 - Name: Testnet xDai on Chiado
 - Type: Native Asset
 
-You can find a list of contract addresses for Chiado tokens in the [Useful Addresses](/developers/UsefulContracts) page.
+You can find a list of contract addresses for Chiado tokens in the [Useful Addresses](/developers/Usefulcontracts) page.
 
 ## Network Config
 
@@ -102,13 +102,6 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 - [nethermind.cfg](https://github.com/gnosischain/configs/blob/main/chiado/nethermind.cfg)
 - [GnosisDAO's Recommended Bootnodes](https://github.com/gnosischain/configs/blob/main/chiado/bootnodes_execution.yaml)
 - [Nethermind's Recommended Bootnodes](https://github.com/NethermindEth/nethermind/blob/master/src/Nethermind/Chains/chiado.json#L85)
-
-### DApps
-
-| DApp      |     |
-| --------- | --- |
-| Uniswap   | TBD |
-| Chainlink | TBD |
 
 ## Previous Iterations
 

@@ -83,7 +83,7 @@ Most users should use the `latest-modern` tag, which corresponds to the latest s
 
 :::caution
 
-The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](../execution/) for more information.
+The Beacon Node requires an Execution client in order to operate. See [Step 2: Run Execution Client](/category/step--2---run-execution-client) for more information.
 
 :::
 
