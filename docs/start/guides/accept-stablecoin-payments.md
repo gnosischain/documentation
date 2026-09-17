@@ -303,7 +303,7 @@ On Gnosis you use a real stablecoin, and you must not guess its address. Ask the
 { "app_slug": "monerium", "chain_id": 100 }
 ```
 
-That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://ecosystem.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
+That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://build.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
 
 Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain-id 100`.
 

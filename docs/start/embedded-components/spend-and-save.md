@@ -41,4 +41,4 @@ Card settlement is configured with Gnosis engineers rather than self-served, so 
 
 ## Talk to the engineers
 
-Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://ecosystem.gnosischain.com/) lists who is already live on each component.
+Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://build.gnosischain.com/) lists who is already live on each component.

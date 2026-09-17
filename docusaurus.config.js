@@ -128,7 +128,7 @@ const config = {
             label: "FAQ",
           },
           {
-            href: "https://ecosystem.gnosischain.com/",
+            href: "https://build.gnosischain.com/",
             position: "right",
             label: "Ecosystem",
           },
@@ -187,7 +187,7 @@ const config = {
               { label: "Telegram", href: "https://t.me/gnosischain" },
               { label: "X", href: "https://twitter.com/gnosischain" },
               { label: "GitHub", href: "https://github.com/gnosischain" },
-              { label: "Ecosystem", href: "https://ecosystem.gnosischain.com/" },
+              { label: "Ecosystem", href: "https://build.gnosischain.com/" },
             ],
           },
           {
