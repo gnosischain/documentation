@@ -99,7 +99,7 @@
 
 18. What DApps can we use on Gnosis?
     All dApps on Gnosis Ecosystem can be found here:
-    https://ecosystem.gnosischain.com/
+    https://build.gnosischain.com/
 
 19. Is it possible run a Node and qualify for future rewards?
 

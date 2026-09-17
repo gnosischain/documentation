@@ -123,7 +123,7 @@ const config = {
             label: "FAQ",
           },
           {
-            href: "https://ecosystem.gnosischain.com/",
+            href: "https://build.gnosischain.com/",
             position: "left",
             label: "Ecosystem",
           },
