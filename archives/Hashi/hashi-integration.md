@@ -1,14 +1,13 @@
 ---
-sidebar_position: 1
 title: Hashi Integration
-description: How do the bridges work after Hashi integration
-keywords: [amb bridge, arbitrary message bridge, omnibridge, xdai bridge, hashi]
+description: How the Gnosis Chain bridges worked after the Hashi integration. Archived - Hashi is no longer part of Gnosis Chain.
+keywords: [amb bridge, arbitrary message bridge, omnibridge, xdai bridge, hashi, archived]
 ---
 
-:::warning
-🚨 The Hashi integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges—is formally **deprecated**.
+:::danger Archived
+Hashi is **no longer part of Gnosis Chain**. The integration initiative — originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB & xDAI bridges — was formally deprecated, and Hashi was removed from the bridge UI on 29 August 2025. The on-chain components remain deployed but no longer take part in transaction verification.
 
-Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
+Read the full deprecation notice [on the Gnosis forum](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467). This page is kept for historical reference only.
 :::
 
 # Hashi integration
@@ -17,8 +16,8 @@ The proposal of Hashi integration on Gnosis Chain's bridges (AMB & Omnibridge, x
 
 Both the AMB and xDAI bridge have been upgraded to Hashi integration.
 
-1. AMB: [Governance Decision](../management/decisions.md#upgrade-amb-implementation-contract-for-hashi-integraion-remove-telepathy-validator-refund-trac-token-due-to-accidental-transfer)
-2. xDAI: [Governance Decision](../management/decisions.md#upgrade-xdai-implementation-contract-for-hashi-integraion-replacing-metacartel-with-monerium)
+1. AMB: [Governance Decision](../../docs/bridges/management/decisions.md#upgrade-amb-implementation-contract-for-hashi-integraion-remove-telepathy-validator-refund-trac-token-due-to-accidental-transfer)
+2. xDAI: [Governance Decision](../../docs/bridges/management/decisions.md#upgrade-xdai-implementation-contract-for-hashi-integraion-replacing-metacartel-with-monerium)
 
 ## What’s new?
 
@@ -35,7 +34,7 @@ Both the AMB and xDAI bridge have been upgraded to Hashi integration.
 
 ## AMB & Omnibridge
 
-![](../../../static/img/bridges/hashi/Hashi-Gnosis-AMB.png)
+![](./img/Hashi-Gnosis-AMB.png)
 
 For Omnibridge / AMB:
 
@@ -65,7 +64,7 @@ For Omnibridge / AMB:
 
 ## xDAI briddge
 
-![](../../../static/img/bridges/hashi/Hashi-Gnosis-xDAI.png)
+![](./img/Hashi-Gnosis-xDAI.png)
 
 **Ethereum → Gnosis Chain**
 

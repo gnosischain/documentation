@@ -42,14 +42,6 @@ const FeatureList = [
     link: '/technicalguides',
     Svg: require('@site/static/img/features/guide.svg').default,
   },
-  {
-    id: 5,
-    title: 'Shutter Embedded Encryption on Gnosis Chain',
-    subtitle:
-      'Learn about Shutterized access on Gnosis Chain, RPC details and more.',
-    link: '/shutterized-gc',
-    Svg: require('@site/static/img/features/shutter.svg').default,
-  },
 ];
 
 function Feature({Svg, title, subtitle, link}) {

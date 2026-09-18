@@ -138,7 +138,7 @@ By setting `maxGasPerTx` to 0, the [condition in `_sendMessage()`](https://githu
 
 ### Legacy components on the bridge contracts
 
-1. Hashi: Hashi componetns was integrated into the bridge, but was [deprecated](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467/4). The on-chain contract still remains but don't affect the transaction verification logic. Please check [here](../hashi/hashi-integration.md) for more details.
+1. Hashi: Hashi components was integrated into the bridge, but was [deprecated](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467/4). The on-chain contract still remains but don't affect the transaction verification logic. Please check the [archived Hashi integration doc](https://github.com/gnosischain/documentation/blob/main/archives/Hashi/hashi-integration.md) for more details.
 
 2. GSN: [OpenGSN (Ethereum Gas Stations Network)](https://github.com/opengsn) is not in used but remains in the contracts.
 

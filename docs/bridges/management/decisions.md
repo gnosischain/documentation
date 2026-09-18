@@ -8,38 +8,58 @@ keywords: [governance board, bridge governance]
 
 The [Bridge Governance Board](./#current-bridge-governors) is responsible for enacting updates related to bridge functionality, contract upgrades, and other parameters impacting bridge operations. The following items have been implemented by the board.
 
+## Rotating bridge validator addresses in batch(2/2)
+
+🗳 Justification:
+Rotating the following bridge validator addresses as security hardening practice:
+
+1.  CoW
+    1.  New address for AMB: 0x5524b7a3e2Dc024f4C9c2Ecd7FE003ee316ac624
+    1.  New address for xDAI bridge: 0xA2746D5eE860a6A9cbb79C34533313144d467CA8
+    1.  Old address for AMB: 0xcc46a3873bfcaa08a6a946a308bb621535d6e6dd
+    1.  Old address for xDAI bridge: 0xaee7c90ef0fc461ec63c4d451b12c340642bc656
+1.  Kleros:
+    1.  New address for AMB & xDAI bridge: 0x59D3C2829900Ae20D02Ca547082b09FD27380eA6
+    1.  Old address for AMB & xDAI bridge: 0x156c0daab0cd73c224a424a781866d35f0f8fade
+
+Tx on Ethereum [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x935ca4b76ccfa5f573e2a5631de8e687760cffc41ce83c63d48f6fc0b6decffd)
+
+Tx on Gnosis Chain [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xdd6baaa55bb64699f2b7a70e772f320bfbff1daf22292eff7c7021fcaba1a3d0)
+
+✅ Implemented: Sept 8, 2026
+
 ## Rotating bridge validator addresses in batch(1/2)
+
 🗳 Justification:
 
-1. As a security hardening process, we're replacing the bridge validator addresses on AMB and xDAI bridge validator contract.    
-   1. Gnosis:    
-        1. Old address for AMB: 0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde    
-        2. New address for AMB: 0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2    
-        3. Old address for xDAI bridge: 0x97630e2ae609d4104abda91f3066c556403182dd    
-        4. New address for xDAI bridge: 0x82b00cA9D162859f645B51967746E55bb6498DfC    
-   2. Protofire:    
-        1. Old address for AMB: 0x459a3bd49f1ff109bc90b76125533699aaaaf9a6    
-        2. New address for AMB: 0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55    
-        3. Old address for xDAI bridge: 0x4d1c96b9a49c4469a0b720a22b74b034eddfe051    
-        4. New address for xDAI bridge: 0x2245bFAD58a6cD50e9e413084d4091C497281911    
-   3. Giveth:    
-        1. Old address for AMB: 0x105cd22ed3d089bf5589c59b452f9de0796ca52d    
-        2. New address for AMB: 0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE    
-        3. Old address for xDAI bridge: 0xc073c8e5ed9aa11cf6776c69b3e13b259ba9f506    
-        4. New address for xDAI bridge: 0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13    
-   4. Kleros:    
-        1. Old address for AMB: 0x7117f73afbdec3221bdd50ddcbf73204b3998302    
-        2. New address for AMB: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade    
-        3. Old address for xDAI bridge: 0x7117f73afbdec3221bdd50ddcbf73204b3998302    
-        4. New address for xDAI bridge: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade    
+1. As a security hardening process, we're replacing the bridge validator addresses on AMB and xDAI bridge validator contract.
+   1. Gnosis:
+      1. Old address for AMB: 0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde
+      2. New address for AMB: 0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2
+      3. Old address for xDAI bridge: 0x97630e2ae609d4104abda91f3066c556403182dd
+      4. New address for xDAI bridge: 0x82b00cA9D162859f645B51967746E55bb6498DfC
+   2. Protofire:
+      1. Old address for AMB: 0x459a3bd49f1ff109bc90b76125533699aaaaf9a6
+      2. New address for AMB: 0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55
+      3. Old address for xDAI bridge: 0x4d1c96b9a49c4469a0b720a22b74b034eddfe051
+      4. New address for xDAI bridge: 0x2245bFAD58a6cD50e9e413084d4091C497281911
+   3. Giveth:
+      1. Old address for AMB: 0x105cd22ed3d089bf5589c59b452f9de0796ca52d
+      2. New address for AMB: 0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE
+      3. Old address for xDAI bridge: 0xc073c8e5ed9aa11cf6776c69b3e13b259ba9f506
+      4. New address for xDAI bridge: 0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13
+   4. Kleros:
+      1. Old address for AMB: 0x7117f73afbdec3221bdd50ddcbf73204b3998302
+      2. New address for AMB: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade
+      3. Old address for xDAI bridge: 0x7117f73afbdec3221bdd50ddcbf73204b3998302
+      4. New address for xDAI bridge: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade
 
-Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x32c52cf71d61d8134b5bdbc7e96dd2ed8cbe618a2fbd8d4bcaab91e3595bbf17
-)
+Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x32c52cf71d61d8134b5bdbc7e96dd2ed8cbe618a2fbd8d4bcaab91e3595bbf17)
 
-Tx on GC: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x71e27be50fc8a0140f8b5908493dbf4f923c99a5889aa71c455fff334118778d
-) 
+Tx on GC: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x71e27be50fc8a0140f8b5908493dbf4f923c99a5889aa71c455fff334118778d)
 
 ✅ Implemented: Jul 21, 2026.
+
 ## Rotating Hopr bridge validator address
 
 🗳 Justification:
