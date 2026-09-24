@@ -64,7 +64,7 @@ const config = {
           showReadingTime: true,
           blogSidebarCount: "ALL",
           blogSidebarTitle: "Recent updates",
-          onUntruncatedBlogPosts: 'ignore',
+          onUntruncatedBlogPosts: "ignore",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -84,7 +84,7 @@ const config = {
       announcementBar: {
         id: "usds_upgrade",
         content:
-          'Update: USDS migration on xDAI bridge is completed.<a href="https://docs.gnosischain.com/bridges/management/decisions" target="_blank" rel="noopener noreferrer">Learn more</a>',
+          'Gnosis bridges are going to integrate Fast Confirmation Rule, <a href="https://docs.gnosischain.com/bridges/fast-confirmation-rule" target="_blank" rel="noopener noreferrer">Learn more</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: true,
