@@ -144,6 +144,8 @@ During Ethereum hardforks or periods of network instability, the bridge falls ba
 No. FCR is an Ethereum consensus client feature, and integrating it improves the existing Gnosis bridges today. It is independent of the Ethereum Economic Zone (EEZ), a separate initiative that aims to bring synchronous composability with Ethereum using real-time ZK proofs.
 
 </details>
+
+<details>
 <summary>Why is my bridge tx from Ethereum takes more than 12 seconds?</summary>
 
 Although an Ethereum block is considered safe usually within 1-2 slots, it can take longer than 12 seconds for the bridging tx to complete due to several reasons:
@@ -157,4 +159,4 @@ The internal process time taken by individual bridge validator, the time taken f
 - [ethPandaOps: FCR simulator results](https://ethpandaops.io/posts/fcr-simulator/)
 - [Technical report (arXiv 2405.00549)](https://arxiv.org/abs/2405.00549)
 - [Ethereum consensus-specs PR #4747](https://github.com/ethereum/consensus-specs/pull/4747)
-- [Bridge validator implementation](https://github.com/gnosischain/tokenbridge/blob/master/oracle/FCR_integration.md)s
+- [Bridge validator implementation](https://github.com/gnosischain/tokenbridge/blob/master/oracle/FCR_integration.md)
