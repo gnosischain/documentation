@@ -5,7 +5,7 @@ description: Gnosis is investing significant resources into trust-minimization o
 keywords: [bridge roadmap, trustless bridge, light client, zksnark]
 ---
 
-### Fast Confirmation Rule(FCR) integration (WIP)
+### Fast Confirmation Rule(FCR) integration
 
 Fast Confirmation Rule is a new Ethereum feature that provides a very strong assurance a block will not be reorged within 1 slot(12 seconds), a 98% reduction from the approximately 13-minute time to finality. Integrating FCR into bridges improves the bridging time down to seconds without sacrificing the security. Check [here](./fast-confirmation-rule.md) for more details.
 
