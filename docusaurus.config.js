@@ -84,7 +84,7 @@ const config = {
       announcementBar: {
         id: "usds_upgrade",
         content:
-          'Gnosis bridges are going to integrate Fast Confirmation Rule, <a href="https://docs.gnosischain.com/bridges/fast-confirmation-rule" target="_blank" rel="noopener noreferrer">Learn more</a>',
+          'Bridging to Gnosis Chain can now take only a minimum of 12 seconds, <a href="https://docs.gnosischain.com/bridges/fast-confirmation-rule" target="_blank" rel="noopener noreferrer">Learn more</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: true,

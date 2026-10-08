@@ -11,7 +11,7 @@ Gnosis Bridges use the Fast Confirmation Rule (FCR) to process transfers that or
 
 ## What is FCR?
 
-The Fast Confirmation Rule is a new Ethereum feature, implemented in consensus clients, that tells a node when a recent block can be considered confirmed, that is, when it will not be reorged. FCR usually confirms a block within one slot, about 13 seconds after it is proposed. Waiting for finality takes at least about 13 minutes, so this is a reduction of roughly 98%.
+The Fast Confirmation Rule is a new Ethereum feature, implemented in consensus clients, that tells a node when a recent block can be considered confirmed, that is, when it will not be reorged. FCR usually confirms a block within one slot, about 12 seconds after it is proposed. Waiting for finality takes at least about 13 minutes, so this is a reduction of roughly 98%.
 
 ### Background: confirmation and finality
 
@@ -38,14 +38,14 @@ If both assumptions hold, a fast-confirmed block is guaranteed to be finalized. 
 
 If the assumptions break down, for example during severe network disruption, one of two things can happen:
 
-- **Liveness failure (most likely):** blocks are not fast-confirmed within 13 seconds. Confirmation takes longer, or falls back to regular finality. Nothing is lost; confirmation is just slower.
+- **Liveness failure (most likely):** blocks are not fast-confirmed within 12 seconds. Confirmation takes longer, or falls back to regular finality. Nothing is lost; confirmation is just slower.
 - **Safety failure (rare):** a fast-confirmed block is reorged. This requires extreme conditions. When ethPandaOps replayed one year of historical Ethereum beacon chain data, FCR produced [zero false confirmations](https://ethpandaops.io/posts/fcr-simulator/).
 
 ### FCR compared to finality
 
 |                               | Fast confirmation (FCR)                                            | Finality                                                                        |
 | ----------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| Typical time                  | ~13 seconds                                                        | ~13 minutes                                                                     |
+| Typical time                  | ~12 seconds                                                        | ~13 minutes                                                                     |
 | Guarantee                     | Block will be finalized, as long as the two assumptions above hold | Reverting the block would require at least one third of all stake to be slashed |
 | Under poor network conditions | Slows down or falls back to finality                               | May be delayed                                                                  |
 
@@ -57,7 +57,7 @@ Gnosis Bridge validators wait until a transfer's block is confirmed on the sourc
 
 | Source chain | Destination chain | Processing rule | Typical wait on source chain |
 | ------------ | ----------------- | --------------- | ---------------------------- |
-| Ethereum     | Gnosis Chain      | FCR             | ~13 seconds                  |
+| Ethereum     | Gnosis Chain      | FCR             | ~12 seconds                  |
 | Gnosis Chain | Ethereum          | Block finality  | ~5 minutes                   |
 
 FCR only applies to blocks on Ethereum. Transfers from Gnosis Chain to Ethereum continue to wait for block finality on Gnosis Chain.
@@ -144,6 +144,12 @@ During Ethereum hardforks or periods of network instability, the bridge falls ba
 No. FCR is an Ethereum consensus client feature, and integrating it improves the existing Gnosis bridges today. It is independent of the Ethereum Economic Zone (EEZ), a separate initiative that aims to bring synchronous composability with Ethereum using real-time ZK proofs.
 
 </details>
+<summary>Why is my bridge tx from Ethereum takes more than 12 seconds?</summary>
+
+Although an Ethereum block is considered safe usually within 1-2 slots, it can take longer than 12 seconds for the bridging tx to complete due to several reasons:
+The internal process time taken by individual bridge validator, the time taken for the signature threshold to reach, the safe confirming logic from individual consensus clients.
+
+</details>
 
 ## Further reading
 
@@ -151,4 +157,4 @@ No. FCR is an Ethereum consensus client feature, and integrating it improves the
 - [ethPandaOps: FCR simulator results](https://ethpandaops.io/posts/fcr-simulator/)
 - [Technical report (arXiv 2405.00549)](https://arxiv.org/abs/2405.00549)
 - [Ethereum consensus-specs PR #4747](https://github.com/ethereum/consensus-specs/pull/4747)
-- [Bridge validator implementation](https://github.com/gnosischain/tokenbridge/blob/master/oracle/FCR_integration.md)
+- [Bridge validator implementation](https://github.com/gnosischain/tokenbridge/blob/master/oracle/FCR_integration.md)s
