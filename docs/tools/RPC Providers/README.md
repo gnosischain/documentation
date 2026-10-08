@@ -173,3 +173,13 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## Compare provider plans
+
+When choosing an RPC plan, check the network, JSON-RPC methods, historical data, request limits, and support your application needs.
+
+[Chain.Love](https://www.chain.love/) provides a Gnosis-specific directory for discovering and comparing available API providers and plans.
+
+Confirm current Gnosis support, required methods, archive access, prices, and limits in the provider's own documentation before choosing a plan.
+
+A Gnosis Mainnet listing does not establish Chiado support; check testnet availability separately with the provider.
