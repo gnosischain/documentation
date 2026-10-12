@@ -92,7 +92,7 @@ The monitor also records, without alerting:
 <details>
 <summary>When?</summary>
 
-We are targeting the production rollout by the end of October 2026.
+FCR is live as of October 8th 2026, and was the first to implement FCR. 
 
 </details>
 
