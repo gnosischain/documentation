@@ -92,7 +92,7 @@ The monitor also records, without alerting:
 <details>
 <summary>When?</summary>
 
-FCR is live as of October 8th 2026, and was the first to implement FCR. 
+FCR is live as of October 8th 2026, and is the first production system to implement FCR in Ethereum ecosystem. 
 
 </details>
 
