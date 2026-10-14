@@ -67,9 +67,9 @@ const config = {
     ({
       image: "img/thumbnail.png",
       announcementBar: {
-        id: "eez_validator_retirement",
+        id: "eez_launch_partner_q1_2027",
         content:
-          "Update: Gnosis Chain will be retiring the validator set upon the formal migration to the Ethereum Economic Zone",
+          'Gnosis EEZ launches in Q1 2027. Deploy on Gnosis Chain now, no redeployment at the fork. <a href="/eez/launch-partner">Become a launch partner</a>',
         isCloseable: true,
       },
       colorMode: {
@@ -91,6 +91,18 @@ const config = {
           height: 26,
         },
         items: [
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "eez",
+            label: "Gnosis EEZ",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "useCases",
+            label: "Use cases",
+          },
           {
             type: "docSidebar",
             position: "left",
@@ -160,6 +172,16 @@ const config = {
       footer: {
         style: "dark",
         links: [
+          {
+            title: "Gnosis EEZ",
+            items: [
+              { label: "What is EEZ", to: "/eez" },
+              { label: "Become a launch partner", to: "/eez/launch-partner" },
+              { label: "Use cases", to: "/use-cases" },
+              { label: "How it works", to: "/eez/how-it-works" },
+              { label: "Timeline", to: "/eez/timeline" },
+            ],
+          },
           {
             title: "Build",
             items: [

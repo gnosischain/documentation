@@ -194,32 +194,126 @@ const TASKS = [
   },
 ];
 
+const WHY_NOW = [
+  ['Q1 2027', 'Gnosis EEZ activates. The chain hard-forks its state onto a ZK-proven instance that settles to Ethereum.'],
+  ['No redeployment', 'Contracts, balances and addresses carry over. Teams live before the fork are live after it.'],
+  ['Same block', 'Ethereum assets, liquidity and prices in one transaction, with no bridge in the middle.'],
+  ['Gnosis and Zisk', 'Built by Gnosis and Zisk, co-funded by the Ethereum Foundation, with launch partners first in production.'],
+];
+
+const EEZ_USE_CASES = [
+  {
+    icon: Icon.Wallet,
+    title: 'Wallets and payment apps',
+    body: 'A balance that earns, a card that spends from it, and mainnet assets from the same account.',
+    to: '/use-cases/wallets-and-payment-apps',
+  },
+  {
+    icon: Icon.Pay,
+    title: 'Neobanks and challengers',
+    body: 'Account, savings, card and investing without a balance sheet, a processor or a custodian.',
+    to: '/use-cases/neobanks-and-challengers',
+  },
+  {
+    icon: Icon.Trending,
+    title: 'Brokers and investing apps',
+    body: 'Tokenised securities and yield, filled from Ethereum liquidity in the same block.',
+    to: '/use-cases/brokers-and-investing-apps',
+  },
+  {
+    icon: Icon.Build,
+    title: 'Asset issuers',
+    body: 'One instrument, two venues, no wrapping. Transfer restrictions that hold across the boundary.',
+    to: '/use-cases/asset-issuers',
+  },
+  {
+    icon: Icon.Terminal,
+    title: 'DeFi protocols',
+    body: 'Mainnet liquidity and prices in the same transaction. No leg risk between a Gnosis fill and a mainnet hedge.',
+    to: '/use-cases/defi-protocols',
+  },
+  {
+    icon: Icon.Server,
+    title: 'Exchanges and market infrastructure',
+    body: 'Gnosis EEZ as a ready-made venue today. An instance of your own, with restrictions, next.',
+    to: '/use-cases/exchanges-and-market-infrastructure',
+  },
+];
+
 /* ------------------------------------------------------------------ */
 /* Sections                                                            */
 /* ------------------------------------------------------------------ */
 function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={styles.eyebrow}>Pre-launch documentation</div>
       <h1 className={styles.heroTitle}>
-        <span className={styles.heroLine}>Get started with the leading</span>{' '}
-        <span className={styles.heroLine}>open finance ecosystem.</span>
+        <span className={styles.heroLine}>Deploy now on Gnosis Chain.</span>{' '}
+        <span className={styles.heroLine}>Launch on Gnosis EEZ in Q1 2027.</span>
       </h1>
       <p className={styles.heroLede}>
-        Gnosis EEZ is the Ethereum Economic Zone: open finance components with consumer-grade
-        guardrails, running on Gnosis Chain with five-second blocks, fees below a tenth of a cent,
-        and a stablecoin as gas. Embed euro money, yield, cards and tokenised assets, deploy a
-        protocol, or run a validator. Every guide here ends in a result you can verify on-chain.
+        Gnosis Chain is becoming the first instance of the Ethereum Economic Zone: a ZK-proven
+        chain that settles to Ethereum and reaches mainnet assets, liquidity and prices in the same
+        block. The fork carries every contract and balance across, so what you deploy today is in
+        production on Gnosis EEZ at launch. Built by Gnosis and Zisk, co-funded by the Ethereum
+        Foundation.
       </p>
       <div className={styles.heroActions}>
-        <Link className={styles.btnPrimary} to="/developers/quickstart">
+        <Link className={styles.btnPrimary} to="/eez/launch-partner">
+          <Icon.Arrow width="16" height="16" />
+          Become a launch partner
+        </Link>
+        <Link className={styles.btnSecondary} to="/developers/quickstart">
           <Icon.Terminal width="16" height="16" />
           Start building
         </Link>
-        <Link className={styles.btnSecondary} to="/technicalguides">
-          <Icon.Tools width="16" height="16" />
-          Knowledge hub
+        <Link className={styles.btnSecondary} to="/eez">
+          What is EEZ
         </Link>
       </div>
+    </section>
+  );
+}
+
+function WhyNow() {
+  return (
+    <section className={styles.facts} aria-label="Why deploy now">
+      {WHY_NOW.map(([label, body]) => (
+        <div key={label} className={styles.fact}>
+          <span className={styles.factLabel}>{label}</span>
+          <span className={styles.factBody}>{body}</span>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+function EezUseCases() {
+  return (
+    <section className={styles.section}>
+      <div className={styles.sectionHead}>
+        <h2 className={styles.sectionTitle}>What Gnosis EEZ means for your application</h2>
+        <p className={styles.sectionSub}>
+          What you can ship on Gnosis Chain today, what changes at launch, and the guides to start
+          with, for each kind of application.
+        </p>
+      </div>
+      <div className={styles.useCaseCardGrid}>
+        {EEZ_USE_CASES.map(({icon: I, title, body, to}) => (
+          <Link key={title} className={styles.featureCard} to={to}>
+            <span className={styles.featureIcon}>
+              <I width="22" height="22" />
+            </span>
+            <span className={styles.featureText}>
+              <span className={styles.featureTitle}>{title}</span>
+              <span className={styles.featureBody}>{body}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
+      <Link className={styles.moreLink} to="/use-cases">
+        All use cases <Icon.Arrow width="14" height="14" />
+      </Link>
     </section>
   );
 }
@@ -228,7 +322,7 @@ function Pathways() {
   return (
     <section className={styles.section}>
       <div className={styles.sectionHead}>
-        <h2 className={styles.sectionTitle}>Open finance for your app</h2>
+        <h2 className={styles.sectionTitle}>Live on Gnosis Chain today: open finance for your app</h2>
         <p className={styles.sectionSub}>
           Three bundles of open finance components, each with 0-1 guides that end in a result you
           can verify on-chain.
@@ -340,6 +434,8 @@ export default function Home() {
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <main className={styles.page}>
         <Hero />
+        <WhyNow />
+        <EezUseCases />
         <Pathways />
         <Features />
         <UseCases />
