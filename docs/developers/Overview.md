@@ -7,9 +7,9 @@ title: Overview
 
 # Build on the Ethereum Economic Zone
 
-Gnosis, a European leader in open finance, built Safe, CoW Swap, Gnosis Pay and Gnosis Chain. It is now developing the Ethereum Economic Zone (EEZ) with Zisk and co-funding from the Ethereum Foundation.
+Gnosis Chain becomes the first instance of the Ethereum Economic Zone (EEZ) in Q1 2027.
 
-Gnosis Chain becomes the first instance of EEZ in Q1 2027, with its state carried over in a hard fork so nothing deployed today is redeployed. What is already here is the set of open finance components live on Gnosis Chain, together with the properties that let you treat them as one system rather than a list of separate integrations. The [Gnosis EEZ](/eez) section covers the transition; this page covers building on the chain as it runs today. Regulated euro e-money, yield, smart accounts, intent-based settlement and tokenised assets are all deployed on the same chain. A single transaction can touch several of them without a bridge or a third-party dependency in the middle.
+EEZ is being built by Gnosis, the team behind Safe, CoW Swap and Gnosis Pay, with Zisk and co-funding from the Ethereum Foundation. The chain's state carries over in a hard fork, so nothing deployed today needs redeploying. This page covers building on Gnosis Chain as it runs today. The [Gnosis EEZ](/eez) section covers the transition.
 
 ## What the EEZ brings
 
