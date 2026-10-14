@@ -35,3 +35,4 @@ Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economi
 - **[Bridges](/bridges):** move assets between Ethereum and Gnosis Chain.
 - **[Tools](/tools):** oracles, indexers, wallets and other infrastructure.
 - **[Knowledge hub](/technicalguides):** deeper technical guides.
+- **[Validators and node operators](/validators/eez-transition):** what the move to Gnosis EEZ means if you run a validator or a node.

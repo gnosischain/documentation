@@ -31,11 +31,11 @@ GNO continues as the governance token. Under the transition approved by GnosisDA
 
 ### I run a validator. What should I do?
 
-Keep running. The validator set retires when the fork activates, and staked GNO is unlocked when it does. GnosisDAO has approved the transition. There is no action to take before the activation block is announced.
+Keep running. The validator set retires when the fork activates, and staked GNO is unlocked when it does. GnosisDAO has approved the transition. There is no action to take before the activation block is announced. The [validator and node operator runbook](/validators/eez-transition) sets out each step.
 
 ### I run an RPC or archive node. What changes?
 
-You keep an execution client. The consensus-layer client is no longer needed after the fork.
+You keep an execution client. The consensus-layer client is no longer needed after the fork. See the [validator and node operator runbook](/validators/eez-transition).
 
 ### Will the bridges keep working?
 

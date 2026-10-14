@@ -94,12 +94,6 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "launchPartner",
-            label: "Become a launch partner",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
             sidebarId: "eez",
             label: "Gnosis EEZ",
           },
@@ -110,13 +104,22 @@ const config = {
             label: "Build",
           },
           {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "launchPartner",
+            label: "Become a launch partner",
+          },
+          {
             type: "dropdown",
             position: "left",
             label: "Gnosis Chain",
             items: [
+              { type: "docSidebar", sidebarId: "gnosisChain", label: "Overview" },
+              { type: "docSidebar", sidebarId: "developerGuides", label: "Developer guides" },
               { type: "docSidebar", sidebarId: "bridges", label: "Bridges" },
               { type: "docSidebar", sidebarId: "tools", label: "Tools" },
               { type: "docSidebar", sidebarId: "technicalGuides", label: "Knowledge hub" },
+              { type: "docSidebar", sidebarId: "validators", label: "Validators and node operators" },
               { type: "docSidebar", sidebarId: "faq", label: "FAQ" },
             ],
           },
@@ -159,7 +162,7 @@ const config = {
               { label: "What is EEZ", to: "/eez" },
               { label: "Become a launch partner", to: "/launch-partner" },
               { label: "Deploy now", to: "/launch-partner/deploy-now" },
-              { label: "What is possible on EEZ", to: "/eez/what-is-possible" },
+              { label: "What is possible on Gnosis EEZ", to: "/eez/what-is-possible" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },
             ],
@@ -169,6 +172,7 @@ const config = {
             items: [
               { label: "Quickstart", to: "/developers/quickstart" },
               { label: "Developer overview", to: "/developers/overview" },
+              { label: "Request for builders", to: "/developers/what-is-possible" },
               { label: "Bridges", to: "/bridges" },
               { label: "Tools", to: "/tools" },
             ],
@@ -179,7 +183,7 @@ const config = {
               { label: "Network details", to: "/about/networks/" },
               { label: "Chiado testnet", to: "/about/networks/chiado" },
               { label: "Faucets", to: "/tools/Faucets" },
-              { label: "Blockscout", href: "https://gnosis.blockscout.com" },
+              { label: "Gnosisscan", href: "https://gnosisscan.io" },
               { label: "Gnosis Bridge", href: "https://bridge.gnosischain.com" },
             ],
           },
@@ -237,9 +241,22 @@ const config = {
           },
           // Request for builders split into one page per request
           {
-            to: "/eez/what-is-possible",
+            to: "/developers/what-is-possible",
             from: "/eez/what-is-possible/request-for-builders-defi",
           },
+          // The detailed requests moved into the Build section; /eez/what-is-possible
+          // is now the high-level overview that links to them
+          ...[
+            "lending-market-rwa-collateral",
+            "options-venue",
+            "perps-venue",
+            "prediction-market",
+            "native-infrastructure",
+            "hybrid-apps",
+          ].map((page) => ({
+            to: `/developers/what-is-possible/${page}`,
+            from: `/eez/what-is-possible/${page}`,
+          })),
           // Updates blog archived to /archives/Updates; nothing under /updates is published
           {
             to: "/",
@@ -250,11 +267,10 @@ const config = {
               "/updates/202212-bridges-pause",
             ],
           },
-          // "About Gnosis Chain" merged into the Embed page; the rest of /about
-          // now sits under the Knowledge hub sidebar and keeps its URLs
+          // "About Gnosis Chain" is the Overview page of the Gnosis Chain section
           {
-            to: "/start",
-            from: ["/about", "/start/about-gnosis-chain"],
+            to: "/about",
+            from: "/start/about-gnosis-chain",
           },
           // Run a node archived to /archives/Node; the section is no longer published
           {

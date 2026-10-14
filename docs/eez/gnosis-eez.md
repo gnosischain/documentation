@@ -44,6 +44,8 @@ The Gnosis Chain validator set is retired when the fork activates. GnosisDAO has
 
 Node operators who run RPC or archive nodes keep running an execution client. The consensus-layer client is no longer needed after the fork.
 
+The [validator and node operator runbook](/validators/eez-transition) has a checklist for each role.
+
 ## What is not in the first release
 
 The brand rule for EEZ is to name limits before anyone else does, so here they are.
