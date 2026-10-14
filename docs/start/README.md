@@ -7,15 +7,13 @@ keywords: [getting started, fintech, embedded finance, gnosis eez, stablecoin pa
 
 # Embed Ethereum's economy in your product.
 
-Gnosis EEZ gives fintechs open finance components with consumer-grade guardrails: yield, savings, investing and payments that reach mainnet assets and liquidity in the same transaction. The guides here take you from nothing to a result you can verify on-chain.
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no token of its own. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027.
+
+Gnosis Chain gives fintechs open finance components with consumer-grade guardrails today: yield, savings, investing and payments. On Gnosis EEZ they will reach mainnet assets and liquidity in the same transaction. The guides here take you from nothing to a result you can verify on-chain.
 
 ## About Gnosis Chain
 
-Gnosis Chain is a community-owned EVM-based network operated by a diverse set of validators around the world. It is one of Ethereum's first sidechains focused on resilience and credible neutrality as its core values. Currently, there are over 200,000 validators who secure the network.
-
-Gnosis Chain uses a DAO governance mechanism to ensure anyone can participate in the decision-making processes regarding the development and future of the network. Creating dApps and integrating with Gnosis Chain products is similar to any other EVM-based blockchain. You can find more details in the [protocol specification](/about/specs).
-
-**Fees.** Each transaction on Gnosis Chain (sending tokens, interacting with smart contracts, etc.) is associated with a fee in the xDai stablecoin. This is one of the main differences from other EVM chains, where users pay in a native token of that network — it reduces volatility risk and simplifies the development experience. Transaction fees are not split among pool participants of the validation process; they are received only by the validator who sealed the block. Note this is subject to change — as the network grows, fees may be redirected to support additional aspects of the protocol.
+Gnosis Chain is a community-owned EVM L1 with 5-second blocks, secured by over 200,000 validators, with fees paid in the xDai stablecoin. Read the [Gnosis Chain overview](/about) for networks, tokens and chain specifications.
 
 ## Embedded components
 

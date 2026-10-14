@@ -9,6 +9,8 @@ keywords: [request for builders, what is possible on eez, synchronous composabil
 
 # What is possible on EEZ: a request for builders
 
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework whose instances can call Ethereum mainnet in the same transaction. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027.
+
 Synchronous composability changes what can be built on an L2. This section sets out four DeFi venues, and the infrastructure under them, that become possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
 
 ## Why now
@@ -75,7 +77,7 @@ Gnosis EEZ genesis is targeted for December 2026 to January 2027. At launch, com
 
 ## Apply
 
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
 
 <div className="eez-cta-row">
   <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>

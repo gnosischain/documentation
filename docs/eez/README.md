@@ -8,7 +8,7 @@ keywords: [ethereum economic zone, eez, gnosis eez, zk rollup, synchronous compo
 
 # What is the Ethereum Economic Zone
 
-Gnosis Chain is becoming the first instance of the Ethereum Economic Zone. In Q1 2027 the chain's state will be hard-forked onto a rollup that settles to Ethereum, proven first by an interim setup and then by real-time ZK proofs ([how it works](/eez/how-it-works)), built by Gnosis and Zisk with co-funding from the Ethereum Foundation. Nothing deployed on Gnosis Chain today needs to be redeployed. Teams that are live before the fork will be the first to run on the new system in production.
+The Ethereum Economic Zone (EEZ) is a neutral rollup framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. It has no token and is not a Gnosis product. Gnosis EEZ is its first instance, operated by Gnosis. In Q1 2027 the state of Gnosis Chain will be hard-forked onto Gnosis EEZ, a rollup that settles to Ethereum, proven first by an interim setup and then by real-time ZK proofs ([how it works](/eez/how-it-works)). Nothing deployed on Gnosis Chain today needs to be redeployed. Teams that are live before the fork will be the first to run on the new system in production.
 
 This section explains what EEZ is, what the first instance changes, and how to be part of the launch. The rest of the documentation covers Gnosis Chain as it operates today and stays current throughout the transition.
 
@@ -58,13 +58,13 @@ EEZ was announced in March 2026. The core contracts are an early-stage implement
         url="/eez/how-it-works"
     />
     <Card
-        title="What is possible on EEZ"
+        title="What is possible on Gnosis EEZ"
         subtitle="What changes when an L2 and Ethereum mainnet share one transaction, and the products that unlocks."
         url="/eez/what-is-possible"
     />
     <Card
         title="Use cases"
-        subtitle="What EEZ means for wallets, neobanks, brokers, issuers, protocols and venues."
+        subtitle="What Gnosis EEZ means for wallets, neobanks, brokers, issuers, protocols and venues."
         url="/use-cases"
     />
     <Card

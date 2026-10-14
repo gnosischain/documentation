@@ -1,19 +1,21 @@
 ---
 sidebar_position: 1
-description: Gnosis EEZ is the Ethereum Economic Zone, a set of live open finance components on Gnosis Chain that compose in a single transaction and reach Ethereum mainnet liquidity.
+description: The Ethereum Economic Zone (EEZ) is a neutral rollup framework. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027. Build on Gnosis Chain now with the open finance components that carry over.
 keywords: [gnosis eez, ethereum economic zone, open finance, embedded finance, eure, safe, cow protocol, tokenised assets, gnosis chain developers]
 title: Overview
 ---
 
-# Build on the Ethereum Economic Zone
+# Build on Gnosis EEZ
 
-Gnosis Chain becomes the first instance of the Ethereum Economic Zone (EEZ) in Q1 2027.
+The Ethereum Economic Zone (EEZ) is a neutral rollup framework. Rollups built on it settle to Ethereum and can call Ethereum mainnet contracts in the same transaction. The framework has no token and is not a Gnosis product. [What is the Ethereum Economic Zone](/eez) has the detail.
 
-EEZ lets a contract on Gnosis call Ethereum mainnet apps and infrastructure and use the result in the same transaction. You keep 2-second blocks and sub-cent fees, and reach mainnet DEXs, money markets, oracles and stablecoins when you need depth. If any step fails, the whole transaction reverts. State is proven and settles to L1, starting with an interim proving setup before real-time ZK proofs ([how it works](/eez/how-it-works)).
+Gnosis EEZ is its first instance, operated by Gnosis. In Q1 2027 the state of Gnosis Chain is hard-forked onto it, so contracts you deploy on Gnosis Chain today carry over to Gnosis EEZ unchanged, at the same addresses.
 
-Contracts you deploy on Gnosis Chain today carry over to EEZ unchanged, at the same addresses.
+Once Gnosis EEZ is live, a contract on it will be able to call Ethereum mainnet apps and infrastructure and use the result in the same transaction. If any step fails, the whole transaction reverts. State will be proven and settled to L1, starting with an interim proving setup before real-time ZK proofs ([how it works](/eez/how-it-works)).
 
-## What the EEZ brings
+## What Gnosis Chain brings to Gnosis EEZ
+
+These are properties of Gnosis Chain today. Each one carries over to Gnosis EEZ at the fork.
 
 <FeatureGrid>
     <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg" title="Components, not integrations">
@@ -109,7 +111,7 @@ Work through these in order if you are new to the chain. Each one ends in someth
     />
     <Card
         title="Demo projects"
-        subtitle="End-to-end builds that compose EEZ components, starting from an empty directory."
+        subtitle="End-to-end builds that compose Gnosis Chain components, starting from an empty directory."
         url="/category/demo-projects"
     />
 </CardContainer>

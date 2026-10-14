@@ -205,10 +205,11 @@ function Hero() {
         <span className={styles.heroLine}>Launch on Gnosis EEZ in Q1 2027.</span>
       </h1>
       <p className={styles.heroLede}>
-        Gnosis Chain becomes the first instance of the Ethereum Economic Zone, built by Gnosis and
-        Zisk and co-funded by the Ethereum Foundation. The chain's state is hard-forked across, so
-        nothing is redeployed. Teams live on Gnosis Chain today are the first in production on
-        Gnosis EEZ, with Ethereum mainnet in the same transaction.
+        The Ethereum Economic Zone is a neutral rollup framework, co-led by Gnosis and Zisk and
+        co-funded by the Ethereum Foundation. Gnosis EEZ is its first instance, operated by Gnosis.
+        The state of Gnosis Chain is hard-forked across, so nothing is redeployed. Teams live on
+        Gnosis Chain today will be the first in production on Gnosis EEZ, with Ethereum mainnet in
+        the same transaction.
       </p>
       <div className={styles.heroActions}>
         <Link className={styles.btnPrimary} to="/launch-partner">

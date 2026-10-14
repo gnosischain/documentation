@@ -9,6 +9,8 @@ keywords: [launch partner, design partner, deploy on gnosis chain, gnosis eez la
 
 # What it means to be a launch partner
 
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no token of its own, and it is not a Gnosis product. Gnosis EEZ is its first instance, operated by Gnosis.
+
 Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after, so there is nothing to migrate.
 
 Launch partners deploy on Gnosis Chain now and are in production on Gnosis EEZ the moment it activates in Q1 2027. They are the first teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, with real users.

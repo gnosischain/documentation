@@ -293,4 +293,4 @@ You now have a verified contract on the chain that becomes Gnosis EEZ. Two steps
 - Replace `Counter` with your own contracts. The loop is the same: test, rehearse on Chiado, deploy and verify on mainnet.
 - [Accept stablecoin payments](/start/guides/accept-stablecoin-payments) puts an EURe or USDC transfer through a contract you control.
 - [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow) calls a protocol that lives at the same address on Gnosis Chain and Ethereum.
-- [What is possible on EEZ](/eez/what-is-possible) sets out what we want built once mainnet is a same-transaction call away.
+- [What is possible on Gnosis EEZ](/eez/what-is-possible) sets out what we want built once mainnet is a same-transaction call away.
