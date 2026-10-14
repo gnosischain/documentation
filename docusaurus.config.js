@@ -231,6 +231,14 @@ const config = {
 
   plugins: [
     [require.resolve("docusaurus-plugin-sass"), {}],
+    // The developer overview moved under Use cases as Building on Gnosis EEZ. Both casings
+    // were linked (the file was Overview.md, links used /developers/overview). They differ
+    // only by case, so they are written here rather than by plugin-client-redirects: on a
+    // case-insensitive disk (macOS) both resolve to one file, and that plugin fails on the clash.
+    require("./redirects/case-insensitive-redirects")({
+      "/developers/Overview": "/use-cases/build",
+      "/developers/overview": "/use-cases/build",
+    }),
     [
       "@docusaurus/plugin-client-redirects",
       {
@@ -266,16 +274,24 @@ const config = {
               "/updates/20221210-merge",
               "/updates/20221208-temporary-bootnodes",
               "/updates/202212-bridges-pause",
+              // Every post, tag, page and archive URL the blog published on dev
+              ...require("./redirects/archived-updates.json"),
             ],
+          },
+          // The Gnosisscan verification page was removed; the section index covers verification
+          {
+            to: "/developers/Verify Smart Contracts/",
+            from: "/developers/Verify Smart Contracts/gnosisscan",
           },
           // "About Gnosis Chain" is the Overview page of the Gnosis Chain section
           {
             to: "/about",
             from: "/start/about-gnosis-chain",
           },
-          // Run a node archived to /archives/Node; the section is no longer published
+          // Run a node archived to /archives/Node; the section is no longer published.
+          // Node and validator readers land on the runbook for the move to Gnosis EEZ.
           {
-            to: "/",
+            to: "/validators/eez-transition",
             from: [
               "/node",
               "/node/architecture",
@@ -289,6 +305,9 @@ const config = {
               "/node/management/monitoring-validators",
               "/node/management/voluntary-exit",
               "/node/management/withdrawals",
+              "/node/management/withdrawals/bls-to-execution-change",
+              "/node/management/withdrawals/claiming-your-gno",
+              "/node/management/withdrawals/switch-to-compounding",
               "/node/manual",
               "/node/manual/configure-server",
               "/node/manual/beacon/lighthouse",
@@ -313,6 +332,13 @@ const config = {
               "/node/participate-validator/swarm/a-quickstart-swarm",
               "/node/participate-validator/swarm/b-docker-swarm",
               "/node/participate-validator/swarm/c-dappnode-swarm",
+              // Generated category pages for the archived node sections
+              "/category/management",
+              "/category/node-tools",
+              "/category/participate-as-a-validator",
+              "/category/step--2---run-execution-client",
+              "/category/step--3---run-consensus-client",
+              "/category/step--4---run-validator",
             ],
           },
           // Bridges FAQs merged into the master FAQ as its Bridging subsection
