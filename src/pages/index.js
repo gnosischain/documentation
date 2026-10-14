@@ -94,7 +94,7 @@ const FEATURES = [
     icon: Icon.Build,
     title: 'Build on Gnosis',
     body: 'Deploy EVM contracts with Foundry or Hardhat and verify them on Gnosisscan.',
-    to: '/developers/overview',
+    to: '/use-cases/build',
   },
   {
     icon: Icon.Bridge,
@@ -216,7 +216,7 @@ function Hero() {
           <Icon.Arrow width="16" height="16" />
           Become a launch partner
         </Link>
-        <Link className={styles.btnSecondary} to="/developers/quickstart">
+        <Link className={styles.btnSecondary} to="/use-cases/build">
           <Icon.Terminal width="16" height="16" />
           Start building
         </Link>

@@ -10,9 +10,9 @@ keywords: [options venue, onchain options, portfolio margin, covered call vault,
 
 Onchain options are finally scaling. Notional volume hit $7.52B in Q3 2026, a two-year high, and one venue did most of it by running its own L2 with an order book and portfolio margin. That works, but it trades shared liquidity for speed: market makers hedge against spot that lives elsewhere, and collateral has to be bridged in.
 
-Gnosis EEZ removes that gap. A venue can quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot liquidity atomically. Writers and market makers keep one pool of capital instead of splitting inventory across chains.
+Gnosis EEZ will remove that gap. A venue will be able to quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot liquidity atomically. Writers and market makers will keep one pool of capital instead of splitting inventory across chains.
 
-The set of underlyings widens too. A venue can list options on any asset with mainnet liquidity, including tokenised equities and RWAs, and hedge against L1 venues atomically rather than maintaining its own spot market.
+The set of underlyings widens too. A venue will be able to list options on any asset with mainnet liquidity, including tokenised equities and RWAs, and hedge against L1 venues atomically rather than maintaining its own spot market.
 
 ## What we want
 
@@ -27,11 +27,11 @@ Source: [On-Chain Options Volume Hits a Two-Year High (Cryptorank)](https://cryp
 
 ## Apply
 
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
 
 <div className="eez-cta-row">
   <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
   <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
 </div>
 
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.

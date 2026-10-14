@@ -37,4 +37,4 @@ Tell us what you are building, which request it answers, and which Gnosis EEZ at
   <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
 </div>
 
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/developers/what-is-possible) overview.
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.

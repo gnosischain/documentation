@@ -57,4 +57,4 @@ Every route is a bundle of the same eight components. You switch on the ones you
 
 ## If you are not a fintech
 
-The routes above are built around embedding finance components. If you are deploying a contract, running infrastructure, or bridging assets, start from the [developer overview](/developers/overview) instead.
+The routes above are built around embedding finance components. If you are deploying a contract, running infrastructure, or bridging assets, start from [Building on Gnosis EEZ](/use-cases/build) instead.

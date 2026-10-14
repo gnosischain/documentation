@@ -1,11 +1,13 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+sidebar_label: Building on Gnosis EEZ
+slug: /use-cases/build
 description: The Ethereum Economic Zone (EEZ) is a neutral rollup framework. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027. Build on Gnosis Chain now with the open finance components that carry over.
 keywords: [gnosis eez, ethereum economic zone, open finance, embedded finance, eure, safe, cow protocol, tokenised assets, gnosis chain developers]
-title: Overview
+title: Building on Gnosis EEZ
 ---
 
-# Build on Gnosis EEZ
+# Building on Gnosis EEZ
 
 The Ethereum Economic Zone (EEZ) is a neutral rollup framework. Rollups built on it settle to Ethereum and can call Ethereum mainnet contracts in the same transaction. The framework has no token and is not a Gnosis product. [What is the Ethereum Economic Zone](/eez) has the detail.
 
@@ -40,13 +42,13 @@ These are properties of Gnosis Chain today. Each one carries over to Gnosis EEZ 
 
 ## What is possible on EEZ
 
-Once Gnosis Chain becomes Gnosis EEZ, a contract here will be able to call Ethereum mainnet and use the result in the same transaction. The [request for builders](/developers/what-is-possible) sets out six builds that this makes possible or much better, from an RWA lending market to hybrid mainnet apps, with what we want built and how to apply as a design partner.
+Once Gnosis Chain becomes Gnosis EEZ, a contract here will be able to call Ethereum mainnet and use the result in the same transaction. The [request for builders](/use-cases/what-is-possible) sets out six builds that this makes possible or much better, from an RWA lending market to hybrid mainnet apps, with what we want built and how to apply as a design partner.
 
 <CardContainer>
     <Card
         title="Request for builders"
         subtitle="Lending, options, perps, prediction markets, native infrastructure and hybrid apps, in detail."
-        url="/developers/what-is-possible"
+        url="/use-cases/what-is-possible"
     />
 </CardContainer>
 

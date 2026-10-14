@@ -33,7 +33,7 @@ Permissioned instances, transfer restriction modules and private transactions ar
 
 ## Build path
 
-1. Evaluate Gnosis Chain as a public venue with the [developer overview](/developers/overview) and the [component catalogue](/start#the-component-catalogue).
+1. Evaluate Gnosis Chain as a public venue with [Building on Gnosis EEZ](/use-cases/build) and the [component catalogue](/start#the-component-catalogue).
 2. Read [how it works](/eez/how-it-works) and the [timeline](/eez/timeline).
 3. [Book a call with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to discuss an instance of your own.
 

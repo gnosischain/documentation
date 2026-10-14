@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Request for builders
-slug: /developers/what-is-possible
+slug: /use-cases/what-is-possible
 title: "What is possible on EEZ: a request for builders"
 description: Four DeFi venues and the infrastructure under them that become possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
 keywords: [request for builders, what is possible on eez, synchronous composability, defi, lending, options, perps, prediction markets, oracles, solvers, custodians, hybrid apps, gnosis eez]
@@ -34,32 +34,32 @@ For each build below the question is the same: what becomes possible when the L2
     <Card
         title="1. The lead lending market for RWA collateral"
         subtitle="Hold the canonical asset, liquidate atomically against mainnet liquidity, and lend euro e-money and dollar stablecoins sourced from L1."
-        url="/developers/what-is-possible/lending-market-rwa-collateral"
+        url="/use-cases/what-is-possible/lending-market-rwa-collateral"
     />
     <Card
         title="2. An options venue"
         subtitle="Quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot atomically. RWA underlyings as a first-class market."
-        url="/developers/what-is-possible/options-venue"
+        url="/use-cases/what-is-possible/options-venue"
     />
     <Card
         title="3. A perps venue"
         subtitle="App-chain performance without the app-chain trade-off. Collateral straight from mainnet, liquidations routed to whichever L1 venue has depth."
-        url="/developers/what-is-possible/perps-venue"
+        url="/use-cases/what-is-possible/perps-venue"
     />
     <Card
         title="4. A prediction market"
         subtitle="Conditional Tokens with mainnet collateral, idle capital earning on L1, and resolution that reads Ethereum state directly."
-        url="/developers/what-is-possible/prediction-market"
+        url="/use-cases/what-is-possible/prediction-market"
     />
     <Card
         title="5. Native infrastructure"
         subtitle="Oracles, indexers, solvers and custodians designed for a transaction that touches two chains."
-        url="/developers/what-is-possible/native-infrastructure"
+        url="/use-cases/what-is-possible/native-infrastructure"
     />
     <Card
         title="6. Hybrid apps"
         subtitle="Keep liquidity and settlement on L1. Run matching, risk and high-churn state on Gnosis EEZ. Both halves in one atomic transaction."
-        url="/developers/what-is-possible/hybrid-apps"
+        url="/use-cases/what-is-possible/hybrid-apps"
     />
 </CardContainer>
 

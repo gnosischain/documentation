@@ -1,5 +1,6 @@
 .inner {
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: stretch;
   gap: 0;
   padding: 0;
@@ -12,6 +13,7 @@
   justify-content: space-between;
   gap: 1.5rem;
   height: 60px;
+  flex: none;
 }
 
 .brand {
@@ -53,15 +55,11 @@
 }
 
 .sections {
+  flex: none;
   height: 44px;
   gap: 0.25rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.sections::-webkit-scrollbar {
-  display: none;
+  /* No overflow here: overflow-x forces overflow-y to clip too, which hides
+     dropdown menus (e.g. Gnosis Chain) that open below the row. */
 }
 
 .colorModeToggle {

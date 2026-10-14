@@ -100,8 +100,8 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "developers",
-            label: "Build",
+            sidebarId: "useCases",
+            label: "Use cases",
           },
           {
             type: "docSidebar",
@@ -168,11 +168,12 @@ const config = {
             ],
           },
           {
-            title: "Build",
+            title: "Use cases",
             items: [
+              { label: "Use cases", to: "/use-cases" },
+              { label: "Building on Gnosis EEZ", to: "/use-cases/build" },
+              { label: "Request for builders", to: "/use-cases/what-is-possible" },
               { label: "Quickstart", to: "/developers/quickstart" },
-              { label: "Developer overview", to: "/developers/overview" },
-              { label: "Request for builders", to: "/developers/what-is-possible" },
               { label: "Bridges", to: "/bridges" },
               { label: "Tools", to: "/tools" },
             ],
@@ -241,10 +242,10 @@ const config = {
           },
           // Request for builders split into one page per request
           {
-            to: "/developers/what-is-possible",
+            to: "/use-cases/what-is-possible",
             from: "/eez/what-is-possible/request-for-builders-defi",
           },
-          // The detailed requests moved into the Build section; /eez/what-is-possible
+          // The detailed requests moved under Use cases; /eez/what-is-possible
           // is now the high-level overview that links to them
           ...[
             "lending-market-rwa-collateral",
@@ -254,7 +255,7 @@ const config = {
             "native-infrastructure",
             "hybrid-apps",
           ].map((page) => ({
-            to: `/developers/what-is-possible/${page}`,
+            to: `/use-cases/what-is-possible/${page}`,
             from: `/eez/what-is-possible/${page}`,
           })),
           // Updates blog archived to /archives/Updates; nothing under /updates is published

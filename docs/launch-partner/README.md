@@ -46,7 +46,7 @@ There is no fee and no token allocation. The programme is about being first, not
 
 ## How to join
 
-1. **Deploy on Gnosis Chain.** [Deploy now](/launch-partner/deploy-now) takes you from an empty directory to a verified contract on Gnosis Chain mainnet in about 45 minutes. That deployment is what carries over at the fork. If you already have a protocol on Ethereum, the [developer overview](/developers/overview) covers the network details and the components you can call.
+1. **Deploy on Gnosis Chain.** [Deploy now](/launch-partner/deploy-now) takes you from an empty directory to a verified contract on Gnosis Chain mainnet in about 45 minutes. That deployment is what carries over at the fork. If you already have a protocol on Ethereum, [Building on Gnosis EEZ](/use-cases/build) covers the network details and the components you can call.
 2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked on-chain before they are listed.
 3. **Book a call.** [Book time with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership, agree what you need from the first release and get access to the testnet fork. You can also reach the team on [Discord](https://discord.gg/gnosis).
 
