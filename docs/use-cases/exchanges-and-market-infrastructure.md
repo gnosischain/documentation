@@ -15,7 +15,7 @@ Venues building digital asset infrastructure tend to end up with a permissioned 
 
 ## What you can ship today on Gnosis Chain
 
-- **A ready-made public venue.** Gnosis Chain carries regulated euro e-money, intent-based settlement, smart-account custody and tokenised securities today, with chain-level fraud protection and a stable gas token.
+- **A ready-made public venue.** Gnosis Chain carries regulated euro e-money, intent-based settlement, smart-account custody and tokenised securities today, with a stable gas token.
 - **Institutional custody patterns.** Safe is the custody layer for most treasuries on the chain: multi-signature, modules for policy and batching for operations.
 - **Settlement in regulated e-money.** Monerium EURe gives a euro settlement leg that is redeemable over IBAN.
 - **Precedent for restricted instruments.** Backed's bTokens show how a regulated instrument with transfer restrictions operates on the chain.
