@@ -9,7 +9,9 @@ title: Overview
 
 Gnosis Chain becomes the first instance of the Ethereum Economic Zone (EEZ) in Q1 2027.
 
-EEZ is being built by Gnosis, the team behind Safe, CoW Swap and Gnosis Pay, with Zisk and co-funding from the Ethereum Foundation. The chain's state carries over in a hard fork, so nothing deployed today needs redeploying. This page covers building on Gnosis Chain as it runs today. The [Gnosis EEZ](/eez) section covers the transition.
+EEZ lets a contract on Gnosis call Ethereum mainnet apps and infrastructure and use the result in the same transaction. You keep 2-second blocks and sub-cent fees, and reach mainnet DEXs, money markets, oracles and stablecoins when you need depth. If any step fails, the whole transaction reverts. State is proven every Ethereum block and settles to L1.
+
+Contracts you deploy on Gnosis Chain today carry over to EEZ unchanged, at the same addresses.
 
 ## What the EEZ brings
 
