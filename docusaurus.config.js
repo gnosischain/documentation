@@ -92,10 +92,10 @@ const config = {
         },
         items: [
           {
-            to: "/launch-partner",
+            type: "docSidebar",
             position: "left",
+            sidebarId: "launchPartner",
             label: "Become a launch partner",
-            activeBaseRegex: "^/launch-partner",
           },
           {
             type: "docSidebar",
@@ -158,6 +158,7 @@ const config = {
             items: [
               { label: "What is EEZ", to: "/eez" },
               { label: "Become a launch partner", to: "/launch-partner" },
+              { label: "Deploy now", to: "/launch-partner/deploy-now" },
               { label: "What is possible on EEZ", to: "/eez/what-is-possible" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },

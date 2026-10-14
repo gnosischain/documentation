@@ -1,12 +1,13 @@
 ---
-title: Become a launch partner
+sidebar_position: 1
+sidebar_label: What it means
+title: What it means to be a launch partner
 slug: /launch-partner
-hide_table_of_contents: true
 description: Deploy on Gnosis Chain now and be a launch partner for Gnosis EEZ in Q1 2027. State is hard-forked, so nothing is redeployed, and launch partners are the first teams in production on the new system.
 keywords: [launch partner, design partner, deploy on gnosis chain, gnosis eez launch, q1 2027, early access, ethereum economic zone]
 ---
 
-# Become a launch partner
+# What it means to be a launch partner
 
 **Deploy on Gnosis Chain now. Launch on Gnosis EEZ in Q1 2027.**
 
@@ -16,7 +17,7 @@ Launch partners are the first project teams to run on technology built by Gnosis
 
 <div className="eez-cta-row">
   <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="/developers/quickstart">Deploy your first contract</a>
+  <a className="button button--secondary button--lg" href="/launch-partner/deploy-now">Deploy now</a>
 </div>
 
 ## Why deploy before the fork
@@ -48,8 +49,8 @@ There is no fee and no token allocation. The programme is about being first, not
 
 ## How to join
 
-1. **Deploy on Gnosis Chain.** If you are starting from nothing, [deploy your first contract](/start/guides/deploy-your-first-contract) takes about 30 minutes and ends with a verified contract. If you have a protocol on Ethereum, the [developer overview](/developers/overview) covers the network details and the components you can call.
-2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked against Blockscout before they are listed.
+1. **Deploy on Gnosis Chain.** [Deploy now](/launch-partner/deploy-now) takes you from an empty directory to a verified contract on Gnosis Chain mainnet in about 45 minutes. That deployment is what carries over at the fork. If you already have a protocol on Ethereum, the [developer overview](/developers/overview) covers the network details and the components you can call.
+2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked on-chain before they are listed.
 3. **Book a call.** [Book time with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership, agree what you need from the first release and get access to the testnet fork. You can also reach the team on [Discord](https://discord.gg/gnosis).
 
 ## Timeline

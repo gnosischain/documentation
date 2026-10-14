@@ -28,7 +28,7 @@ The framework is published by the EEZ Association. The pieces an integrator will
 | `IProofSystem` | The interface a proof system implements. Zisk is one implementation. |
 | `CrossChainProxy` | Executes a call on the other side of the Ethereum and instance boundary |
 
-The implementation is early-stage, not audited and has no mainnet deployment yet. Addresses are published here when they exist, and only after they have been checked against Blockscout.
+The implementation is early-stage, not audited and has no mainnet deployment yet. Addresses are published here when they exist, and only after they have been checked on-chain.
 
 ## Execution and the EVM
 

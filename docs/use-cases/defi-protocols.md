@@ -33,7 +33,7 @@ A protocol that serves retail users deploys on a cheaper chain and then has to s
 
 1. [Deploy your first contract](/start/guides/deploy-your-first-contract), 30 minutes, or point an existing Foundry or Hardhat project at chain ID 100 with the [development environment](/category/deploy-contracts-on-gnosis) guides.
 2. [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow) to see intent-based settlement from the integrator's side.
-3. [Verify your contracts](/developers/Verify%20Smart%20Contracts/) on Blockscout and register them in the [ecosystem directory](https://build.gnosischain.com/).
+3. [Verify your contracts](/developers/Verify%20Smart%20Contracts/) on Gnosisscan and register them in the [ecosystem directory](https://build.gnosischain.com/).
 
 ## Launch with Gnosis EEZ
 
