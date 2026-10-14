@@ -92,6 +92,12 @@ const config = {
         },
         items: [
           {
+            to: "/eez/launch-partner",
+            position: "left",
+            label: "Become a launch partner",
+            activeBaseRegex: "^/eez/launch-partner",
+          },
+          {
             type: "docSidebar",
             position: "left",
             sidebarId: "eez",
@@ -100,44 +106,19 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "useCases",
-            label: "Use cases",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "start",
-            label: "Embed",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
             sidebarId: "developers",
             label: "Build",
           },
           {
-            type: "docSidebar",
+            type: "dropdown",
             position: "left",
-            sidebarId: "bridges",
-            label: "Bridges",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "tools",
-            label: "Tools",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "technicalGuides",
-            label: "Knowledge hub",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "faq",
-            label: "FAQ",
+            label: "Gnosis Chain",
+            items: [
+              { type: "docSidebar", sidebarId: "bridges", label: "Bridges" },
+              { type: "docSidebar", sidebarId: "tools", label: "Tools" },
+              { type: "docSidebar", sidebarId: "technicalGuides", label: "Knowledge hub" },
+              { type: "docSidebar", sidebarId: "faq", label: "FAQ" },
+            ],
           },
           {
             href: "https://build.gnosischain.com/",
@@ -178,7 +159,6 @@ const config = {
               { label: "What is EEZ", to: "/eez" },
               { label: "Become a launch partner", to: "/eez/launch-partner" },
               { label: "What is possible on EEZ", to: "/eez/what-is-possible" },
-              { label: "Use cases", to: "/use-cases" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },
             ],
@@ -186,7 +166,6 @@ const config = {
           {
             title: "Build",
             items: [
-              { label: "Embed", to: "/start" },
               { label: "Quickstart", to: "/developers/quickstart" },
               { label: "Developer overview", to: "/developers/overview" },
               { label: "Bridges", to: "/bridges" },
