@@ -47,7 +47,7 @@ No. Only the validator set retires. The chain, its state, its contracts and its 
 
 ### Is Gnosis EEZ an L2?
 
-It is an instance of the Ethereum Economic Zone: a chain whose blocks are ZK-proven and settled on Ethereum, and which can be called from Ethereum in the same block. Most people will call that an L2. The difference from a typical L2 is that there is no bridge between it and Ethereum.
+It is an instance of the Ethereum Economic Zone: a chain whose blocks are proven and settled on Ethereum, starting with an interim proving setup and moving to real-time ZK proofs, and which can be called from Ethereum in the same block. Most people will call that an L2. The difference from a typical L2 is that there is no bridge between it and Ethereum.
 
 ### When exactly is the fork?
 

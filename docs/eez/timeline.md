@@ -28,7 +28,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 
 | | Before the fork | After the fork |
 | --- | --- | --- |
-| What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, a ZK-proven instance settling to Ethereum |
+| What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, an instance proven and settled on Ethereum (interim proving at genesis, then real-time ZK proofs) |
 | Your contracts | Deployed on Gnosis Chain | Unchanged, same addresses |
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
 | Reaching Ethereum | Through a bridge | In the same block |

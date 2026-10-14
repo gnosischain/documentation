@@ -22,7 +22,7 @@ A challenger has five jobs to do with a customer's money: hold it, make the idle
 
 ## What changes with Gnosis EEZ
 
-- **Ethereum under the account.** The customer's balance sits on an instance whose blocks are ZK-proven and settled to Ethereum. That is the settlement assurance a risk committee can approve once, for every product on the platform.
+- **Ethereum under the account.** The customer's balance will sit on an instance whose blocks are proven and settled to Ethereum. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works). A risk committee assesses one settlement model, once, for every product on the platform.
 - **Investing filled from mainnet.** A customer buying a tokenised asset gets the fill from Ethereum liquidity in the same block, with no bridge and no inventory held on two chains.
 - **Compliance built with design partners.** Freeze controls, transfer restrictions and private transactions are being built with the first cohort of fintechs. Launch partners shape them.
 - **One integration, every product.** Integrate once and each component becomes a toggle for every customer on the platform. The fork carries all of it across.

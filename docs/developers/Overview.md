@@ -9,7 +9,7 @@ title: Overview
 
 Gnosis Chain becomes the first instance of the Ethereum Economic Zone (EEZ) in Q1 2027.
 
-EEZ lets a contract on Gnosis call Ethereum mainnet apps and infrastructure and use the result in the same transaction. You keep 2-second blocks and sub-cent fees, and reach mainnet DEXs, money markets, oracles and stablecoins when you need depth. If any step fails, the whole transaction reverts. State is proven every Ethereum block and settles to L1.
+EEZ lets a contract on Gnosis call Ethereum mainnet apps and infrastructure and use the result in the same transaction. You keep 2-second blocks and sub-cent fees, and reach mainnet DEXs, money markets, oracles and stablecoins when you need depth. If any step fails, the whole transaction reverts. State is proven and settles to L1, starting with an interim proving setup before real-time ZK proofs ([how it works](/eez/how-it-works)).
 
 Contracts you deploy on Gnosis Chain today carry over to EEZ unchanged, at the same addresses.
 
@@ -35,6 +35,18 @@ Contracts you deploy on Gnosis Chain today carry over to EEZ unchanged, at the s
         <p>The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
     </FeatureCard>
 </FeatureGrid>
+
+## What is possible on EEZ
+
+Once Gnosis Chain becomes Gnosis EEZ, a contract here will be able to call Ethereum mainnet and use the result in the same transaction. The [request for builders](/developers/what-is-possible) sets out six builds that this makes possible or much better, from an RWA lending market to hybrid mainnet apps, with what we want built and how to apply as a design partner.
+
+<CardContainer>
+    <Card
+        title="Request for builders"
+        subtitle="Lending, options, perps, prediction markets, native infrastructure and hybrid apps, in detail."
+        url="/developers/what-is-possible"
+    />
+</CardContainer>
 
 ## The component layer
 

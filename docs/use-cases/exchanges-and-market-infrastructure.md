@@ -22,10 +22,10 @@ Venues building digital asset infrastructure tend to end up with a permissioned 
 
 ## What changes with Gnosis EEZ
 
-- **Gnosis EEZ as the public instance.** The first instance is Gnosis-operated and focused on distribution. A venue can use it as the public leg with ZK-proven blocks settled to Ethereum, and reach public DeFi in the same block.
+- **Gnosis EEZ as the public instance.** The first instance is Gnosis-operated and focused on distribution. A venue can use it as the public leg, with blocks proven and settled to Ethereum, and reach public DeFi in the same block. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs.
 - **An instance of your own.** EEZ will let a venue run its own instance with whitelisted wallets and on-chain transfer restrictions, settle to Ethereum, and compose atomically with public DeFi. No bridges or third-party dependencies, but full access to Ethereum. Gnosis EEZ is the first instance; the wider EEZ stack is available to operators who need their own.
 - **One compliance perimeter.** Restrictions enforced on your instance apply to the whole transaction, including the leg that reaches Ethereum, because every step lands or none does.
-- **Finality you can define.** Sequenced in seconds, proven in seconds, settled on Ethereum within its finality, fully settled within days. [How it works](/eez/how-it-works) sets out each stage.
+- **Finality you can define.** Sequenced in seconds, proven within a target of seconds, settled on Ethereum within its finality, fully settled within days. [How it works](/eez/how-it-works) sets out each stage.
 
 ## What is still being built
 

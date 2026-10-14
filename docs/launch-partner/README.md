@@ -18,7 +18,7 @@ To start, [deploy now](/launch-partner/deploy-now) or [book a call with the ecos
 ## Why deploy before the fork
 
 - **No second deployment.** The fork carries state across. Teams that are live before it are live after it, at the same addresses.
-- **First in production.** Launch partners run on ZK-proven blocks that settle to Ethereum from the first day, before the programme opens to everyone.
+- **First in production.** Launch partners are the first teams running on Gnosis EEZ, before the programme opens to everyone. Blocks settle to Ethereum from activation. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works).
 - **Ethereum in the same block.** Mainnet assets, liquidity and prices become reachable from a Gnosis EEZ transaction without a bridge. Launch partners are the first applications to use that in production.
 - **Users and liquidity are already here.** Gnosis Chain has regulated euro e-money, a self-custodial card, intent-based trading and tokenised assets live today. Deploying now puts you next to them.
 - **A say in what ships.** The compliance, privacy and freeze-control components are built with design partners. Launch partners are the first in the room.

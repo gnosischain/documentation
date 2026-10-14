@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: "Gnosis EEZ: the first instance"
 sidebar_label: Gnosis EEZ
-description: Gnosis EEZ is Gnosis Chain re-based onto Ethereum. State, contracts and addresses carry over in a hard fork. The validator set retires and blocks are ZK-proven and settled on Ethereum.
+description: Gnosis EEZ is Gnosis Chain re-based onto Ethereum. State, contracts and addresses carry over in a hard fork. The validator set retires and blocks are proven and settled on Ethereum, starting with an interim proving setup before real-time ZK proofs.
 keywords: [gnosis eez, hard fork, validator set, xdai, gno, zk proofs, zisk, ethereum settlement, no redeploy]
 ---
 
@@ -55,4 +55,4 @@ Progress against each of these is tracked on the [timeline](/eez/timeline).
 
 ## What this means if you build on Gnosis Chain
 
-Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on ZK-proven blocks that settle to Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/launch-partner) sets out what that includes.
+Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on blocks that are proven and settled on Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/launch-partner) sets out what that includes.

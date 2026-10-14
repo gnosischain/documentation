@@ -26,7 +26,7 @@ A protocol that serves retail users deploys on a cheaper chain and then has to s
 - **Leg risk goes away.** A fill on Gnosis EEZ and a hedge on Ethereum mainnet execute in the same block. There is no bridge window and no price gap.
 - **Mainnet prices and liquidity in the same transaction.** A solver on the instance can route part of an order through mainnet liquidity and settle both legs atomically. A money market can liquidate against mainnet depth. A vault can rebalance into a mainnet position without leaving the user's transaction.
 - **No redeployment.** Protocol contracts, pools and positions carry over in the fork at the same addresses.
-- **Ethereum security.** Blocks are ZK-proven and settled to Ethereum. Protocol risk assessments that discount sidechain security can be revisited.
+- **Ethereum settlement.** Blocks will be proven and settled to Ethereum. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works). Protocol risk assessments that discount sidechain security can be revisited as each stage lands.
 - **What is not in the first release.** Synchronous calls run from Gnosis EEZ into Ethereum at launch. Ethereum calling into Gnosis EEZ, and nested calls, follow in 2027. Build for the first and design for the second. [How it works](/eez/how-it-works) has the detail, and the [request for builders](/eez/what-is-possible) sets out the venues we want to see built.
 
 ## Build path

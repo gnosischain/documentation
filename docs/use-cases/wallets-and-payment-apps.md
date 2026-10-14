@@ -24,7 +24,7 @@ A wallet that wants to offer yield needs a money market fund partner and a recon
 
 - **Mainnet assets from the same account.** A user's Gnosis EEZ account can hold a position on Ethereum mainnet and a card balance on the instance, and act on both in one transaction. No bridge step in the user flow.
 - **Mainnet prices and liquidity for in-wallet swaps.** A swap inside the wallet can be filled from Ethereum liquidity in the same block, so the quote the user sees is the fill they get.
-- **Ethereum's security under the balance.** Blocks are ZK-proven and settled to Ethereum. For a risk committee, that is a different conversation from a sidechain with its own validator set.
+- **Ethereum settlement under the balance.** Blocks will be proven and settled to Ethereum. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works). For a risk committee, that is a different conversation from a sidechain with its own validator set.
 - **Nothing to migrate.** The accounts, the EURe, the card integration and the yield positions carry over in the fork.
 
 ## Build path
