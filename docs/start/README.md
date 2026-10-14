@@ -1,11 +1,13 @@
 ---
 sidebar_position: 1
-title: Start here
+title: Embed
 description: Gnosis Chain is a community-owned EVM-based network, and three getting-started routes into it for fintechs embedding open finance components, each with 0-1 guides that end in a verified on-chain result.
 keywords: [getting started, fintech, embedded finance, gnosis eez, stablecoin payments, tokenised assets, about gnosis chain, fees, xdai]
 ---
 
-# Start here
+# Embed Ethereum's economy in your product.
+
+Gnosis EEZ gives fintechs open finance components with consumer-grade guardrails: yield, savings, investing and payments that reach mainnet assets and liquidity in the same transaction. The guides here take you from nothing to a result you can verify on-chain.
 
 ## About Gnosis Chain
 

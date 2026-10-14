@@ -1,0 +1,14 @@
+{
+  "position": 6,
+  "label": "Demo Projects",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Demo Projects",
+    "description": "End-to-end builds that compose EEZ components. Each one starts from an empty directory and ends in a result you can verify on-chain."
+  },
+  "customProps": {
+    "description": "End-to-end builds that compose live EEZ components"
+  }
+}

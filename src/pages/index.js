@@ -201,13 +201,14 @@ function Hero() {
   return (
     <section className={styles.hero}>
       <h1 className={styles.heroTitle}>
-        <span className={styles.heroLine}>Embed Ethereum's economy</span>{' '}
-        <span className={styles.heroLine}>in your product.</span>
+        <span className={styles.heroLine}>Get started with the leading</span>{' '}
+        <span className={styles.heroLine}>open finance ecosystem.</span>
       </h1>
       <p className={styles.heroLede}>
-        Gnosis EEZ gives fintechs open finance components with consumer-grade guardrails: yield,
-        savings, investing and payments that reach mainnet assets and liquidity in the same
-        transaction. The guides here take you from nothing to a result you can verify on-chain.
+        Gnosis EEZ is the Ethereum Economic Zone: open finance components with consumer-grade
+        guardrails, running on Gnosis Chain with five-second blocks, fees below a tenth of a cent,
+        and a stablecoin as gas. Embed euro money, yield, cards and tokenised assets, deploy a
+        protocol, or run a validator. Every guide here ends in a result you can verify on-chain.
       </p>
       <div className={styles.heroActions}>
         <Link className={styles.btnPrimary} to="/developers/quickstart">
@@ -261,7 +262,7 @@ function Features() {
   return (
     <section className={styles.section}>
       <div className={styles.sectionHead}>
-        <h2 className={styles.sectionTitle}>Deploy a protocol</h2>
+        <h2 className={styles.sectionTitle}>Build with Gnosis</h2>
         <p className={styles.sectionSub}>
           Core building blocks for shipping directly on Gnosis Chain.
         </p>
@@ -286,7 +287,7 @@ function Features() {
 function UseCases() {
   return (
     <section className={styles.section}>
-      <h2 className={styles.sectionTitle}>Other</h2>
+      <h2 className={styles.sectionTitle}>Common Workflows</h2>
       <div className={styles.useCaseGrid}>
         {USE_CASES.map(({icon: I, title, links}) => (
           <div key={title} className={styles.useCase}>

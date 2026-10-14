@@ -4200,90 +4200,108 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 // File: developers/Overview
 
-# Why Build on Gnosis Chain?
+# Build on the Ethereum Economic Zone
 
+Gnosis, a European leader in open finance, built Safe, CoW Swap, Gnosis Pay and Gnosis Chain. It is now developing the Ethereum Economic Zone (EEZ) with Zisk and co-funding from the Ethereum Foundation.
 
+The EEZ is the set of open finance components already live on Gnosis Chain, together with the properties that let you treat them as one system rather than a list of separate integrations. Regulated euro e-money, yield, smart accounts, intent-based settlement and tokenised assets are all deployed on the same chain. A single transaction can touch several of them without a bridge or a third-party dependency in the middle.
+
+## What the EEZ brings
 
 <CardContainer>
-    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
-        <p>Fast transaction times (5 seconds) & low transaction fees (500 tx for $0.01)</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
+        <p><strong>Components, not integrations.</strong> Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
     </FeatureCard>
     <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
-        <p>A <a href="/about/tokens/xdai">stable token for transactions</a> & gas fees</p>
+        <p><strong>Atomic composition.</strong> Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
+        <p><strong>Costs that suit consumer flows.</strong> Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
+        <p><strong>Ethereum reach.</strong> Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
     </FeatureCard>
     <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
-        <p>Smart Contract, DApp & [toolset](/tools) compatibility with other Ethereum-based chains like Ethereum, Ethereum Classic, BSC and others.</p>
+        <p><strong>A stable unit of account.</strong> Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
     </FeatureCard>
-     <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p>Fully-featured explorers [Gnosisscan](https://gnosisscan.io) and [BlockScout](https://blockscout.com/xdai/mainnet).</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
+        <p><strong>Canonical addresses.</strong> The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
     </FeatureCard>
-     <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p>Growing ecosystem designed to support stable person-to-person transactions, micro transactions, conference currencies, community currencies, DeFi, NFTs, DAOs, games and more.</p>
-    </FeatureCard>
-     <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
-        <p>Wide-ranging [Community Support](/about/communication).</p>
-    </FeatureCard>
-    <outlineCard
-       subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
-/>
-
 </CardContainer>
 
-## Getting Started
+## The component layer
 
-Welcome to the Developers section! This section gives an extensive overview on how to get started with the Gnosis Chain development process. Below you can see a list of resources that will help with your learning journey.
+These are the pieces you compose. Every project below is live on Gnosis Chain today, and the ones marked as Alliance members are part of the EEZ Alliance.
 
+| Component | Provided by | What it gives you |
+| --- | --- | --- |
+| Euro and sterling e-money | Monerium (Alliance) | EURe and GBPe, regulated e-money redeemable one-for-one at a bank account over IBAN |
+| Smart accounts | Safe (Alliance) | Multi-signature accounts, programmable modules and transaction batching, the usual custody layer for treasuries |
+| Trading and settlement | CoW Protocol (Alliance) | Intent-based orders signed off-chain and settled in batches by competing solvers, with MEV protection |
+| Card settlement | Gnosis Pay (Alliance) | A Safe holds the balance in EURe and settles Visa payments directly from it |
+| Savings and yield | Spark, Aave | sDAI as a yield-bearing wrapper around xDai savings, plus lending markets for stablecoins |
+| Stable liquidity routing | Curve, Balancer | Low-slippage pools for like-priced assets, and a shared vault that keeps multi-hop swaps cheap |
+| Tokenised securities | Backed | bTokens tracking listed instruments such as short-term treasury ETFs, each backed one-for-one with a custodian |
+| Trust and identity | Circles | Personal currencies issued on a web of trust between people |
+
+Ask the MCP server for `eez_list_apps` to get the current registry, or `eez_get_contract_addresses` for canonical addresses that have been checked against Blockscout. Never copy an address from memory.
+
+## Network details
+
+| | Gnosis | Chiado testnet |
+| --- | --- | --- |
+| Chain ID | 100 | 10200 |
+| RPC | `https://rpc.gnosischain.com` | `https://rpc.chiadochain.net` |
+| Explorer | [Blockscout](https://gnosis.blockscout.com) | [Blockscout](https://gnosis-chiado.blockscout.com) |
+| Gas token | xDai | xDai (test) |
+| Block time | 5 seconds | 5 seconds |
+
+Full details are in [network overview](/about/networks/) and [useful contracts](/developers/Usefulcontracts).
+
+## Getting started
+
+Work through these in order if you are new to the chain. Each one ends in something you can check on an explorer.
 
 <CardContainer>
     <Card
-        title=" 🛠️ Quickstart"
-        subtitle="Deploy your first ever contract on Gnosis Chain using a simple HelloWorld.sol on Remix IDE."
+        title="Quickstart"
+        subtitle="Deploy your first contract to Gnosis Chain with Remix, in about 15 minutes."
         url="/developers/quickstart"
     />
     <Card
-        title=" 🧱 Build contracts on Gnosis "
-        subtitle="Template contracts that you can deploy on Gnosis Chain."
-        url="/category/build-contracts-on-gnosis"
-    />
-    <Card
-        title=" 📺 Development Environments"
-        subtitle="Deploy smart contracts with development environment."
+        title="Development environments"
+        subtitle="Set up Foundry or Hardhat and point it at Gnosis or Chiado."
         url="/category/deploy-contracts-on-gnosis"
     />
     <Card
-        title=" 🎮 Interact with Smart Contracts"
-        subtitle="Interact with smart contracts using library of your choice!"
+        title="Template contracts"
+        subtitle="Reference implementations for tokens, NFTs and a full-stack dApp."
+        url="/category/build-contracts-on-gnosis"
+    />
+    <Card
+        title="Interact with contracts"
+        subtitle="Read and write contract state from viem, ethers.js, web3.js or MetaMask."
         url="/category/interact-with-contracts-on-gnosis"
     />
     <Card
-    title=" 🧩 Verify Smart Contracts on Gnosis Chain"
-    subtitle="Verify your smart contracts! "
-    url="/developers/Verify%20Smart%20Contracts/"
+        title="Verify contracts"
+        subtitle="Publish your source to Blockscout or Sourcify so others can read it."
+        url="/developers/Verify Smart Contracts/"
+    />
+    <Card
+        title="Demo projects"
+        subtitle="End-to-end builds that compose EEZ components, starting from an empty directory."
+        url="/category/demo-projects"
     />
 </CardContainer>
 
-
-
 ## Resources
-- [Wallets](/tools/wallets): A list of wallets that support Gnosis Chain.
-- [Faucets](/tools/faucets/): A list of faucets you can use for testing purposes.
-- [RPC Providers](/tools/RPC%20Providers/): A list of RPC providers that provide access to the network.
 
-### Coming Soon: Building on Top of Gnosis Pay
-
-We're excited to announce a groundbreaking development in the Gnosis ecosystem: a self-custodial Visa card, powered by Gnosis Pay. This innovative product leverages the robust and decentralized Gnosis Chain, offering users a seamless bridge between the traditional financial system and the decentralized finance (DeFi) world. We will soon be opening our SDK for Developers in our ecosystem to build financial products on Gnosis Pay cards.
-
-### Gnosis Pay: A Gateway to DeFi
-
-Gnosis Pay stands at the forefront of decentralized payment networks, removing barriers and creating a fluid, integrated financial experience. By utilizing Gnosis Chain's infrastructure, Gnosis Pay ensures secure, fast, and reliable transactions.
-
-### Key Features:
-
-- **Self-Custodial Visa Card:** Take control of your finances with a Visa card that puts you in charge of your assets.
-- **Decentralized and Secure:** Built on Gnosis Chain, Gnosis Pay offers a decentralized solution that doesn't compromise on security.
-- **Accepted Everywhere:** With the backing of Visa, your Gnosis Pay card is welcome at over 80 million merchants worldwide.
-
-For more information, visit [Gnosis Pay](https://gnosispay.com/).
+- [Wallets](/tools/wallets): wallets that support Gnosis Chain.
+- [Faucets](/tools/Faucets): testnet funds for Chiado.
+- [RPC providers](/tools/RPC%20Providers/): public and hosted endpoints.
+- [Bridges](/bridges): move tokens and messages between Ethereum and Gnosis.
+- [Embed](/start): the component bundles for fintechs, with 0-1 guides for each.
 
 ---
 
@@ -5398,6 +5416,407 @@ Follow the [verifying a smart contract](https://docs.sourcify.dev/docs/how-to-ve
 
 ---
 
+// File: developers/demo-projects/buy-a-tokenised-asset-with-cow
+
+# Buy a tokenised asset with CoW Swap
+
+**Job:** buy a tokenised asset from your own app, and reach Ethereum mainnet with the same code. **Time:** about 40 minutes. **Chain:** Gnosis mainnet.
+
+**Prerequisites:** Node.js 20 or later, and an account on Gnosis holding a small amount of xDai for gas plus at least 1 WXDAI to spend.
+
+This is the shortest honest demonstration of what the Ethereum Economic Zone gives you. You will write about eighty lines that buy a yield-bearing tokenised asset, without running a solver, quoting engine or price oracle of your own. Then you will change three constants and the same script trades on Ethereum mainnet, because the protocol you are calling lives at the same address on both chains.
+
+## Read this before you start
+
+**This guide spends real money.** CoW Protocol is not deployed on the Chiado testnet, so there is no free rehearsal. The amounts here are around one euro, and the network fee is roughly $0.0001, but the funds are real. Do not scale the numbers up until you have read the code.
+
+**What you are buying.** The example buys sDAI, the savings wrapper around xDai from Spark. It is an [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626) vault whose share price rises against its underlying, so it is a tokenised yield position rather than a tokenised security.
+
+For tokenised securities specifically, [Backed](https://backed.fi) issues bTokens that track listed instruments such as short-term treasury ETFs against a custodian. The mechanics below are identical, but the token addresses are not in the ecosystem registry, so take them from Backed rather than from this page. Regulated instruments also carry transfer restrictions that a plain swap will not satisfy.
+
+## How CoW Protocol works
+
+Most exchanges take a transaction that says "perform this swap". CoW takes a signed message that says "I will give up at most this much of X for at least this much of Y, before this time". That message is an intent, and it costs nothing to create because it never touches the chain.
+
+Competing solvers collect these intents into batches and bid to settle them. The winner submits one transaction settling many orders at once. Three consequences matter for your app:
+
+- **You do not pay gas for a failed trade.** An order that no solver can fill simply expires.
+- **Your users get MEV protection.** Orders settle at a uniform clearing price inside a batch, so there is no ordering advantage to sell them.
+- **Your app never holds the trade.** You sign and post. Settlement is someone else's execution problem.
+
+## Set up the project
+
+```bash
+mkdir cow-tokenised-asset && cd cow-tokenised-asset
+npm init -y
+npm pkg set type=module
+npm install viem
+```
+
+Put your key in the environment rather than in the file. Use a throwaway account funded with only what this guide spends:
+
+```bash
+export PRIVATE_KEY=0xyour_private_key_here
+```
+
+## The addresses
+
+Create `config.js`:
+
+```js
+export const config = {
+  chainId: 100,
+  rpc: 'https://rpc.gnosischain.com',
+  api: 'https://api.cow.fi/xdai/api/v1',
+
+  // Same address on Gnosis and Ethereum. This is the point of the guide.
+  settlement: '0x9008D19f58AAbD9eD0D60971565AA8510560ab41',
+  relayer: '0xC92E8bdf79f0507f65a392b0ab4667716BFE0110',
+
+  sell: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d', // WXDAI, 18 decimals
+  buy: '0xaf204776c7245bF4147c2612BF6e5972Ee483701',  // sDAI, 18 decimals
+};
+```
+
+Two addresses deserve an explanation.
+
+`settlement` is the GPv2Settlement contract. It holds the EIP-712 domain your order is signed against, so signing against the wrong one produces a valid signature for a different protocol and the API rejects it.
+
+`relayer` is the GPv2VaultRelayer, and it is the contract you approve rather than the settlement contract. You do not have to take that from documentation. Ask the settlement contract itself:
+
+```bash
+cast call 0x9008D19f58AAbD9eD0D60971565AA8510560ab41 "vaultRelayer()(address)" \
+  --rpc-url https://rpc.gnosischain.com
+```
+
+It returns `0xC92E8bdf79f0507f65a392b0ab4667716BFE0110`. Approving anything else means your order can never be filled.
+
+## Approve the relayer
+
+Create `approve.js`:
+
+```js
+import { createWalletClient, createPublicClient, http, erc20Abi, maxUint256 } from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+import { gnosis } from 'viem/chains';
+import { config } from './config.js';
+
+const account = privateKeyToAccount(process.env.PRIVATE_KEY);
+const publicClient = createPublicClient({ chain: gnosis, transport: http(config.rpc) });
+const wallet = createWalletClient({ account, chain: gnosis, transport: http(config.rpc) });
+
+const allowance = await publicClient.readContract({
+  address: config.sell,
+  abi: erc20Abi,
+  functionName: 'allowance',
+  args: [account.address, config.relayer],
+});
+
+if (allowance > 0n) {
+  console.log('Already approved:', allowance.toString());
+} else {
+  const hash = await wallet.writeContract({
+    address: config.sell,
+    abi: erc20Abi,
+    functionName: 'approve',
+    args: [config.relayer, maxUint256],
+  });
+  console.log('Approval sent:', hash);
+  const receipt = await publicClient.waitForTransactionReceipt({ hash });
+  console.log('Status:', receipt.status);
+}
+```
+
+Run it:
+
+```bash
+node approve.js
+```
+
+You get `Status: success` and a transaction hash. This is the only on-chain transaction you send in the whole guide. Everything after this is signed messages.
+
+## Get a quote
+
+The quote tells you what solvers currently think your trade is worth, and gives you the exact numbers to sign. Create `buy.js`:
+
+```js
+import { createWalletClient, createPublicClient, http, erc20Abi, parseUnits, formatUnits } from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+import { gnosis } from 'viem/chains';
+import { config } from './config.js';
+
+const account = privateKeyToAccount(process.env.PRIVATE_KEY);
+const publicClient = createPublicClient({ chain: gnosis, transport: http(config.rpc) });
+const wallet = createWalletClient({ account, chain: gnosis, transport: http(config.rpc) });
+
+const sellAmount = parseUnits('1', 18); // 1 WXDAI
+
+const quoteRes = await fetch(`${config.api}/quote`, {
+  method: 'POST',
+  headers: { 'content-type': 'application/json' },
+  body: JSON.stringify({
+    sellToken: config.sell,
+    buyToken: config.buy,
+    from: account.address,
+    receiver: account.address,
+    sellAmountBeforeFee: sellAmount.toString(),
+    kind: 'sell',
+    partiallyFillable: false,
+    signingScheme: 'eip712',
+    onchainOrder: false,
+    priceQuality: 'optimal',
+  }),
+});
+
+if (!quoteRes.ok) throw new Error(`Quote failed: ${await quoteRes.text()}`);
+const { quote, id: quoteId } = await quoteRes.json();
+
+console.log('Selling', formatUnits(BigInt(quote.sellAmount), 18), 'WXDAI');
+console.log('Buying at least', formatUnits(BigInt(quote.buyAmount), 18), 'sDAI');
+console.log('Estimated network fee', formatUnits(BigInt(quote.feeAmount), 18), 'WXDAI');
+```
+
+Run it. You will see something close to this, with sDAI costing more than one xDai because the vault has been accruing:
+
+```text
+Selling 0.999999948 WXDAI
+Buying at least 0.796149 sDAI
+Estimated network fee 0.0000000518 WXDAI
+```
+
+## Build the order
+
+Three details here cause almost every failed first integration.
+
+**The fee is signed as zero.** The quote reports an estimated network fee for information, but solvers compute the real fee at execution time. The API rejects a non-zero `feeAmount` on a new order, so you sign `feeAmount: '0'` and fold the quoted fee into the amount you are prepared to sell.
+
+**Slippage is your decision.** The quote's `buyAmount` is a current estimate. Sign that exact number and your order fails the moment the price moves against you. Signing a floor slightly below it is what makes the order fillable.
+
+**`appData` is a hash, not an object.** You post the string `{}` but you sign its keccak256 hash. They must correspond or the signature verifies against a different order.
+
+Append to `buy.js`:
+
+```js
+// Fold the quoted fee into what you are willing to sell, and sign a zero fee.
+const signedSellAmount = BigInt(quote.sellAmount) + BigInt(quote.feeAmount);
+
+// Accept up to 0.5% worse than quoted.
+const minBuyAmount = (BigInt(quote.buyAmount) * 995n) / 1000n;
+
+// keccak256("{}"), the hash matching the appData string posted below.
+const APP_DATA = '{}';
+const APP_DATA_HASH = '0xb48d38f93eaa084033fc5970bf96e559c33c4cdc07d889ab00b4d63f9590739d';
+
+const order = {
+  sellToken: config.sell,
+  buyToken: config.buy,
+  receiver: account.address,
+  sellAmount: signedSellAmount.toString(),
+  buyAmount: minBuyAmount.toString(),
+  validTo: Math.floor(Date.now() / 1000) + 20 * 60, // 20 minutes
+  appData: APP_DATA_HASH,
+  feeAmount: '0',
+  kind: 'sell',
+  partiallyFillable: false,
+  sellTokenBalance: 'erc20',
+  buyTokenBalance: 'erc20',
+};
+```
+
+## Sign it
+
+The EIP-712 domain is what binds your signature to this protocol on this chain. Note that `kind`, `sellTokenBalance` and `buyTokenBalance` are typed as `string`, not as enums or bytes:
+
+```js
+const domain = {
+  name: 'Gnosis Protocol',
+  version: 'v2',
+  chainId: config.chainId,
+  verifyingContract: config.settlement,
+};
+
+const types = {
+  Order: [
+    { name: 'sellToken', type: 'address' },
+    { name: 'buyToken', type: 'address' },
+    { name: 'receiver', type: 'address' },
+    { name: 'sellAmount', type: 'uint256' },
+    { name: 'buyAmount', type: 'uint256' },
+    { name: 'validTo', type: 'uint32' },
+    { name: 'appData', type: 'bytes32' },
+    { name: 'feeAmount', type: 'uint256' },
+    { name: 'kind', type: 'string' },
+    { name: 'partiallyFillable', type: 'bool' },
+    { name: 'sellTokenBalance', type: 'string' },
+    { name: 'buyTokenBalance', type: 'string' },
+  ],
+};
+
+const signature = await wallet.signTypedData({
+  account,
+  domain,
+  types,
+  primaryType: 'Order',
+  message: {
+    ...order,
+    sellAmount: BigInt(order.sellAmount),
+    buyAmount: BigInt(order.buyAmount),
+    feeAmount: BigInt(order.feeAmount),
+  },
+});
+```
+
+You can prove the domain is right rather than trusting it. The settlement contract exposes the separator it will verify against:
+
+```bash
+cast call 0x9008D19f58AAbD9eD0D60971565AA8510560ab41 "domainSeparator()(bytes32)" \
+  --rpc-url https://rpc.gnosischain.com
+```
+
+On Gnosis that returns `0x8f05589c4b810bc2f706854508d66d447cd971f8354a4bb0b3471ceb0a466bc7`, which is exactly the hash of the domain above. Run the same call against an Ethereum RPC and you get `0xc078f884a2676e1345748b1feace7b0abee5d00ecadb6e574dcdd109a63e8943`. Same contract, same fields, different chain ID. Hold on to that difference, because the last section rests on it.
+
+## Post the order
+
+```js
+const orderRes = await fetch(`${config.api}/orders`, {
+  method: 'POST',
+  headers: { 'content-type': 'application/json' },
+  body: JSON.stringify({
+    ...order,
+    appData: APP_DATA,       // the string; the hash is what you signed
+    from: account.address,
+    signingScheme: 'eip712',
+    signature,
+    quoteId,
+  }),
+});
+
+if (!orderRes.ok) throw new Error(`Order rejected: ${await orderRes.text()}`);
+const uid = await orderRes.json();
+console.log('Order posted:', uid);
+console.log(`https://explorer.cow.fi/gc/orders/${uid}`);
+```
+
+A `201` gives you the order UID. Notice what did not happen: you sent no transaction and paid no gas to place this order.
+
+## Wait for settlement
+
+```js
+const deadline = Date.now() + 10 * 60 * 1000;
+
+while (Date.now() < deadline) {
+  const res = await fetch(`${config.api}/orders/${uid}`);
+  const { status, executedBuyAmount } = await res.json();
+  console.log('Status:', status);
+
+  if (status === 'fulfilled') {
+    console.log('Bought', formatUnits(BigInt(executedBuyAmount), 18), 'sDAI');
+    break;
+  }
+  if (status === 'cancelled' || status === 'expired') {
+    console.log('Order did not fill:', status);
+    break;
+  }
+  await new Promise((r) => setTimeout(r, 5000));
+}
+
+const balance = await publicClient.readContract({
+  address: config.buy,
+  abi: erc20Abi,
+  functionName: 'balanceOf',
+  args: [account.address],
+});
+console.log('sDAI balance:', formatUnits(balance, 18));
+```
+
+Run the finished script:
+
+```bash
+node buy.js
+```
+
+Status moves from `open` to `fulfilled`, usually within a minute or two.
+
+## Verify it on-chain
+
+The script's own output is not proof. Check the chain directly:
+
+```bash
+cast call 0xaf204776c7245bF4147c2612BF6e5972Ee483701 \
+  "balanceOf(address)(uint256)" <YOUR_ADDRESS> \
+  --rpc-url https://rpc.gnosischain.com
+```
+
+Then confirm the asset is what you think it is. sDAI is an ERC-4626 vault, so ask it what it holds and what your shares redeem for:
+
+```bash
+cast call 0xaf204776c7245bF4147c2612BF6e5972Ee483701 "asset()(address)" \
+  --rpc-url https://rpc.gnosischain.com
+
+cast call 0xaf204776c7245bF4147c2612BF6e5972Ee483701 \
+  "convertToAssets(uint256)(uint256)" 1000000000000000000 \
+  --rpc-url https://rpc.gnosischain.com
+```
+
+The first returns the WXDAI address, confirming the vault is denominated in the token you sold. The second returns more than `1e18`, which is the accrued yield: your one share is now worth more than one xDai. Leave it alone for a week and that number rises without you sending another transaction.
+
+Your address and the settlement transaction are also on [Blockscout](https://gnosis.blockscout.com).
+
+## Point the same code at Ethereum mainnet
+
+Here is the part worth internalising. Your app is not tied to Gnosis. CoW Protocol is deployed at the **same addresses** on Ethereum mainnet, and the code above is unchanged apart from configuration.
+
+Create `config.mainnet.js`:
+
+```js
+export const config = {
+  chainId: 1,
+  rpc: 'https://eth.drpc.org',
+  api: 'https://api.cow.fi/mainnet/api/v1',
+
+  // Identical to Gnosis. Nothing to look up, nothing to redeploy.
+  settlement: '0x9008D19f58AAbD9eD0D60971565AA8510560ab41',
+  relayer: '0xC92E8bdf79f0507f65a392b0ab4667716BFE0110',
+
+  sell: '0x6B175474E89094C44Da98b954EedeAC495271d0F', // DAI on Ethereum
+  buy: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',  // sDAI on Ethereum
+};
+```
+
+Swap the import in `buy.js` and change `gnosis` to `mainnet` from `viem/chains`. Everything else, the EIP-712 types, the fee handling, the appData hash, the polling loop, stays as it is. The only thing your signature notices is the chain ID inside the domain.
+
+That is what "tap into Ethereum mainnet" means concretely. You develop against Gnosis, then run the identical integration against mainnet liquidity when you need it. Assets move between the two over the [Gnosis Bridge](/bridges), so a position opened on one side is not stranded there.
+
+### One thing does change: the minimum viable trade
+
+Run the mainnet version with the same 1 unit and the API refuses it outright:
+
+```json
+{
+  "errorType": "SellAmountDoesNotCoverFee",
+  "description": "The sell amount for the sell order is lower than the fee."
+}
+```
+
+The quoted fee on that attempt was about **3.86 DAI**, against a 1 DAI order. The identical trade on Gnosis quoted a fee of **0.0000000518 WXDAI**. Both figures come from the live API and both move with gas prices, but the gap is structural rather than incidental.
+
+The consequence is a product decision, not a technical one. On mainnet you need a trade in the thousands before the fee stops dominating, so per-user rebalancing only works for large balances. On Gnosis the fee is small enough that rebalancing every user every day is affordable. Build the flow on Gnosis, and reach for mainnet on the trades that are large enough to justify it.
+
+## What you have
+
+An app that buys a yield-bearing tokenised asset with one on-chain approval and a signed message, gets MEV protection and solver competition without operating either, and runs against Ethereum mainnet by changing three constants.
+
+None of the moving parts belong to you. Spark issues the asset, CoW's solvers find the price, Gnosis Chain settles it. That is the EEZ working as intended: components you compose rather than infrastructure you run.
+
+Extend it in whichever direction your product needs:
+
+- Swap the buy token for a [Backed](https://backed.fi) bToken to hold tokenised treasuries instead of savings, once you have handled the transfer restrictions.
+- Sell EURe (`0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430`) instead of WXDAI to start from regulated euro e-money rather than a dollar-denominated position.
+- Place the order from a [Safe](https://safe.global) using the `presign` signing scheme, so a treasury with multiple signers can use the same flow.
+- Read [Embed](/start) for the component bundles these pieces belong to.
+
+---
+
 // File: developers/dev-environment/hardhat
 
 # Using Hardhat
@@ -5804,7 +6223,7 @@ Once the smart contract is deployed, you may check the address on Dashboard. You
 10. What DApps can we use on Gnosis?
 
     All dApps on Gnosis Ecosystem can be found here:
-    https://ecosystem.gnosischain.com/
+    https://build.gnosischain.com/
 
 11. What are the NFT marketplaces on Gnosis Chain?
 
@@ -5996,7 +6415,9 @@ main();
 
 // File: start/README
 
-# Start here
+# Embed Ethereum's economy in your product.
+
+Gnosis EEZ gives fintechs open finance components with consumer-grade guardrails: yield, savings, investing and payments that reach mainnet assets and liquidity in the same transaction. The guides here take you from nothing to a result you can verify on-chain.
 
 ## About Gnosis Chain
 
@@ -6088,7 +6509,7 @@ A yield-specific walkthrough (sDAI wrapping and accrual accounting) is being wri
 
 ## Talk to the engineers
 
-Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://ecosystem.gnosischain.com/) lists who is already live on each component.
+Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://build.gnosischain.com/) lists who is already live on each component.
 
 ---
 
@@ -6130,7 +6551,7 @@ Card settlement is configured with Gnosis engineers rather than self-served, so 
 
 ## Talk to the engineers
 
-Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://ecosystem.gnosischain.com/) lists who is already live on each component.
+Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://build.gnosischain.com/) lists who is already live on each component.
 
 ---
 
@@ -6179,7 +6600,7 @@ Secured credit and FX are configured with Gnosis engineers. Read the scope note 
 
 ## Talk to the engineers
 
-Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://ecosystem.gnosischain.com/) lists who is already live on each component.
+Bundles are configured with the Gnosis team rather than self-served end to end. The [ecosystem directory](https://build.gnosischain.com/) lists who is already live on each component.
 
 ---
 
@@ -6702,7 +7123,7 @@ On Gnosis you use a real stablecoin, and you must not guess its address. Ask the
 { "app_slug": "monerium", "chain_id": 100 }
 ```
 
-That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://ecosystem.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
+That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://build.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
 
 Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain-id 100`.
 
@@ -6736,7 +7157,7 @@ The contract below is the ledger. It is not the product.
 
 A real tokenised asset needs a legal structure that makes the token a claim on the asset: a special purpose vehicle, a custodian, a prospectus or an exemption from one, and a transfer agent. Without that, holders own a token that references an asset they have no enforceable right to. Which structure applies depends on the asset, the jurisdiction, and who you sell to, and getting it wrong is a securities matter rather than an engineering one.
 
-The RWA projects in the [ecosystem directory](https://ecosystem.gnosischain.com/) have done this work. Backed issues tokens tracking listed securities against a custodian; that arrangement, not its Solidity, is what makes the token meaningful.
+The RWA projects in the [ecosystem directory](https://build.gnosischain.com/) have done this work. Backed issues tokens tracking listed securities against a custodian; that arrangement, not its Solidity, is what makes the token meaningful.
 
 Build the contract to understand the mechanics. Get advice before you issue anything to anyone.
 
@@ -6999,7 +7420,7 @@ What changes is everything around it. Before issuing on mainnet you need the leg
 
 A capped, verified token on Chiado with an immutable supply limit, an on-chain reference to its documentation, and issuance controls you have tested against the owner. That is a sound ledger.
 
-The claim it represents is a legal artefact, not a Solidity one. Look at how the RWA projects in the [ecosystem directory](https://ecosystem.gnosischain.com/) have structured theirs before going further.
+The claim it represents is a legal artefact, not a Solidity one. Look at how the RWA projects in the [ecosystem directory](https://build.gnosischain.com/) have structured theirs before going further.
 
 ---
 

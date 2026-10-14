@@ -95,7 +95,7 @@ const config = {
             type: "docSidebar",
             position: "left",
             sidebarId: "start",
-            label: "Start here",
+            label: "Embed",
           },
           {
             type: "docSidebar",
@@ -163,7 +163,7 @@ const config = {
           {
             title: "Build",
             items: [
-              { label: "Start here", to: "/start" },
+              { label: "Embed", to: "/start" },
               { label: "Quickstart", to: "/developers/quickstart" },
               { label: "Developer overview", to: "/developers/overview" },
               { label: "Bridges", to: "/bridges" },
@@ -237,7 +237,7 @@ const config = {
               "/updates/202212-bridges-pause",
             ],
           },
-          // "About Gnosis Chain" merged into the Start here page; the rest of /about
+          // "About Gnosis Chain" merged into the Embed page; the rest of /about
           // now sits under the Knowledge hub sidebar and keeps its URLs
           {
             to: "/start",
