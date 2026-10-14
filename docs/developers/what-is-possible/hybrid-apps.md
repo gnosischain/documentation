@@ -8,9 +8,9 @@ keywords: [hybrid apps, mainnet protocols, sync calls, matching engine, risk eng
 
 # Hybrid apps
 
-Not every app needs to leave Ethereum. A mainnet protocol can keep its contracts, liquidity and settlement on L1, and run its heavy or high-churn logic, such as matching or a risk engine, on Gnosis EEZ with 2-second blocks and sub-cent fees. Both halves share one atomic transaction: both land or neither does.
+Not every app needs to leave Ethereum. A mainnet protocol will be able to keep its contracts, liquidity and settlement on L1, and run its heavy or high-churn logic, such as matching or a risk engine, on Gnosis EEZ with 2-second blocks and sub-cent fees. Both halves will share one atomic transaction: both land or neither does.
 
-Sync calls carry a per-block verification cost on L1, so they suit high-value moments: deposit-and-use, liquidations against L1 prices and settlement. Everything else runs as ordinary Gnosis EEZ traffic. At launch, calls run from Gnosis EEZ into L1. L1 contracts calling into Gnosis EEZ follow with bidirectional composability in 2027.
+Sync calls will carry a per-block verification cost on L1, so they suit high-value moments: deposit-and-use, liquidations against L1 prices and settlement. Everything else will run as ordinary Gnosis EEZ traffic. At launch, calls will run from Gnosis EEZ into L1. L1 contracts calling into Gnosis EEZ follow with bidirectional composability in 2027.
 
 ## What we want
 

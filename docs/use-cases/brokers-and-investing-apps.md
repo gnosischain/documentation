@@ -23,10 +23,10 @@ Adding a tokenised instrument means a broker, a custodian and a CSD for the trad
 
 ## What changes with Gnosis EEZ
 
-- **Fills from Ethereum liquidity in the same block.** A retail order on Gnosis EEZ can be settled against mainnet liquidity inside one transaction. No inventory on two chains, no bridge, and no price gap between the quote and the fill.
-- **Retail fees, mainnet depth.** The order executes on the instance at instance fees and reaches the depth of Ethereum's markets.
-- **Secured credit against mainnet collateral.** A Lombard-style loan on the instance can take a mainnet position as collateral, in the same transaction that opens it.
-- **Settlement to Ethereum.** Blocks proven and settled to Ethereum, starting with an interim proving setup, likely TEE-based, before real-time ZK proofs ([how it works](/eez/how-it-works)). Transfer restrictions for regulated instruments are being built with design partners.
+- **Fills from Ethereum liquidity in the same block.** A retail order on Gnosis EEZ will settle against mainnet liquidity inside one transaction. No inventory on two chains, no bridge, and no price gap between the quote and the fill.
+- **Retail fees, mainnet depth.** The order will execute on the instance at instance fees and reach the depth of Ethereum's markets.
+- **Secured credit against mainnet collateral.** A Lombard-style loan on the instance will be able to take a mainnet position as collateral, in the same transaction that opens it.
+- **Settlement to Ethereum.** Blocks will be proven and settled to Ethereum, starting with an interim proving setup, likely TEE-based, before real-time ZK proofs ([how it works](/eez/how-it-works)). Transfer restrictions for regulated instruments are being built with design partners.
 
 ## Build path
 

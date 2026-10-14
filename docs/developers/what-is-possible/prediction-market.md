@@ -10,9 +10,9 @@ keywords: [prediction market, conditional tokens, subjective oracles, resolution
 
 Gnosis built the Conditional Tokens framework that today's largest prediction markets run on. The next design step is markets whose collateral and resolution touch L1 directly.
 
-Prediction markets are high-frequency and small-ticket. They need fast blocks and fees that disappear into the trade, which Gnosis EEZ delivers with 2-second blocks and sub-cent costs. What current markets have lacked is access: users bridge stablecoins in, and capital sits idle until resolution.
+Prediction markets are high-frequency and small-ticket. They need fast blocks and fees that disappear into the trade, which Gnosis EEZ will deliver with 2-second blocks and sub-cent costs. What current markets have lacked is access: users bridge stablecoins in, and capital sits idle until resolution.
 
-On Gnosis EEZ, markets can settle in mainnet stablecoins without a bridge, and idle collateral can sit in an L1 money market and be pulled back atomically when a trader exits. Markets can also read Ethereum state directly, resolving on onchain events such as a governance vote or a protocol parameter without an oracle hop.
+On Gnosis EEZ, markets will be able to settle in mainnet stablecoins without a bridge, and idle collateral will be able to sit in an L1 money market and be pulled back atomically when a trader exits. Markets will also be able to read Ethereum state directly, resolving on onchain events such as a governance vote or a protocol parameter without an oracle hop.
 
 ## What we want
 

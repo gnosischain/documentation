@@ -10,9 +10,9 @@ keywords: [lending market, rwa collateral, tokenised treasuries, private credit,
 
 Tokenised treasuries, credit and equities are live onchain. Using them as collateral is still hard. Each chain holds a bridged wrapper of the asset, and liquidity for liquidations sits elsewhere.
 
-On Gnosis EEZ a lending market can hold the canonical asset rather than a wrapper, because issuers can deploy one asset zone-wide. When a position needs liquidating, the market can sell collateral into mainnet liquidity in the same transaction it detects the shortfall. No bridge leg, no stranded bad debt waiting on a cross-chain message.
+On Gnosis EEZ a lending market will be able to hold the canonical asset rather than a wrapper, because issuers will be able to deploy one asset zone-wide. When a position needs liquidating, the market will be able to sell collateral into mainnet liquidity in the same transaction it detects the shortfall. No bridge leg, no stranded bad debt waiting on a cross-chain message.
 
-The market also doesn't have to start empty. It can source liquidity from mainnet money markets atomically, route a borrow to wherever rates are best, or refinance a position from L1 in a single transaction, while users get L2 speed and fees.
+The market also doesn't have to start empty. It will be able to source liquidity from mainnet money markets atomically, route a borrow to wherever rates are best, or refinance a position from L1 in a single transaction, while users get L2 speed and fees.
 
 ## What we want
 

@@ -69,7 +69,9 @@ Ask the MCP server for `eez_list_apps` to get the current registry, or `eez_get_
 
 ## Network details
 
-| | Gnosis | Chiado testnet |
+These are the networks you deploy to today. When Gnosis EEZ activates, block time will drop to 2 seconds. Any other network parameter that changes will be published in the [network details](/about/networks/) before activation.
+
+| | Gnosis Chain | Chiado testnet |
 | --- | --- | --- |
 | Chain ID | 100 | 10200 |
 | RPC | `https://rpc.gnosischain.com` | `https://rpc.chiadochain.net` |

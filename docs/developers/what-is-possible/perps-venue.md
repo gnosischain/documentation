@@ -10,9 +10,9 @@ keywords: [perps venue, perpetuals, order book, insurance fund, mainnet collater
 
 The best-performing perps venues today run on their own chains. They got speed, and paid for it with isolation: users bridge collateral in, liquidity bootstraps from zero, and the venue sits outside Ethereum's capital base.
 
-Gnosis EEZ gives you app-chain performance without the app-chain trade-off. Match on 2-second blocks with sub-cent fees. Accept mainnet stablecoins and yield-bearing collateral without a bridge. Rebalance the insurance fund, hedge LP exposure or unwind a liquidation against mainnet liquidity in one atomic transaction.
+Gnosis EEZ will give you app-chain performance without the app-chain trade-off. Match on 2-second blocks with sub-cent fees. Accept mainnet stablecoins and yield-bearing collateral without a bridge. Rebalance the insurance fund, hedge LP exposure or unwind a liquidation against mainnet liquidity in one atomic transaction.
 
-Composability also opens designs a standalone chain can't support: margin that stays productive in mainnet protocols until it is called, and liquidations that route to whichever L1 venue has depth at that moment.
+Composability will also open designs a standalone chain can't support: margin that stays productive in mainnet protocols until it is called, and liquidations that route to whichever L1 venue has depth at that moment.
 
 ## What we want
 

@@ -10,9 +10,9 @@ keywords: [options venue, onchain options, portfolio margin, covered call vault,
 
 Onchain options are finally scaling. Notional volume hit $7.52B in Q3 2026, a two-year high, and one venue did most of it by running its own L2 with an order book and portfolio margin. That works, but it trades shared liquidity for speed: market makers hedge against spot that lives elsewhere, and collateral has to be bridged in.
 
-Gnosis EEZ removes that gap. A venue can quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot liquidity atomically. Writers and market makers keep one pool of capital instead of splitting inventory across chains.
+Gnosis EEZ will remove that gap. A venue will be able to quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot liquidity atomically. Writers and market makers will keep one pool of capital instead of splitting inventory across chains.
 
-The set of underlyings widens too. A venue can list options on any asset with mainnet liquidity, including tokenised equities and RWAs, and hedge against L1 venues atomically rather than maintaining its own spot market.
+The set of underlyings widens too. A venue will be able to list options on any asset with mainnet liquidity, including tokenised equities and RWAs, and hedge against L1 venues atomically rather than maintaining its own spot market.
 
 ## What we want
 

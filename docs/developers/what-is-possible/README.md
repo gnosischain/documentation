@@ -17,14 +17,14 @@ Synchronous composability changes what can be built on an L2. This section sets 
 
 Building DeFi on an L2 has always meant a trade. You get fast blocks and cheap transactions, and you give up mainnet: its liquidity, its money markets, its price feeds. So native venues start isolated: thin books, bridged collateral, and liquidations that depend on liquidity sitting on another chain.
 
-Synchronous composability changes that. Apps and infrastructure built natively on Gnosis EEZ keep L2 speed and cost, and can still call mainnet DEXs, money markets, oracles and stablecoins in the same transaction when they need depth. If any step fails, the whole thing reverts. Native liquidity on Gnosis EEZ and mainnet liquidity reinforce each other instead of competing. No existing L2 offers this today.
+Synchronous composability changes that. Apps and infrastructure built natively on Gnosis EEZ will keep L2 speed and cost, and will still be able to call mainnet DEXs, money markets, oracles and stablecoins in the same transaction when they need depth. If any step fails, the whole thing reverts. Native liquidity on Gnosis EEZ and mainnet liquidity will reinforce each other instead of competing. No existing L2 offers this today.
 
 ## What you build on
 
-- **Synchronous composability with mainnet.** A contract on Gnosis EEZ can call L1 apps and infrastructure and use the result in the same transaction, so you use mainnet depth without fragmenting it.
-- **2-second blocks, sub-cent fees.** Fast enough for order books and high-frequency markets, with a composing block every Ethereum slot.
+- **Synchronous composability with mainnet.** A contract on Gnosis EEZ will be able to call L1 apps and infrastructure and use the result in the same transaction, so you use mainnet depth without fragmenting it.
+- **2-second blocks, sub-cent fees.** Gnosis EEZ will produce a block every 2 seconds, fast enough for order books and high-frequency markets, with a composing block every Ethereum slot. Gnosis Chain runs 5-second blocks today.
 - **Ethereum settlement.** State will be proven and settled to L1, starting with an interim proving setup, likely TEE-based, before real-time ZK proofs. See [how it works](/eez/how-it-works).
-- **L1 as a building block.** Mainnet money markets, DEXs, oracles and stablecoins are usable from the L2 as they stand. Native Gnosis EEZ apps compose with them directly.
+- **L1 as a building block.** Mainnet money markets, DEXs, oracles and stablecoins will be usable from the L2 as they stand. Native Gnosis EEZ apps will compose with them directly.
 
 For each build below the question is the same: what becomes possible when the L2 and L1 parts of a product share one atomic transaction?
 

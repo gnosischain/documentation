@@ -23,10 +23,10 @@ An issuer deploys on Ethereum mainnet for credibility and liquidity, then finds 
 
 ## What changes with Gnosis EEZ
 
-- **One asset, two venues, no wrapping.** An instrument on Gnosis EEZ can reach Ethereum liquidity and counterparties in the same transaction. The retail venue and the institutional venue stop being two deployments with a bridge between them.
-- **Transfer restrictions that hold across the boundary.** Whitelists and restrictions enforced on the instance apply to every leg of a transaction that starts there, including the leg that touches Ethereum, because the whole transaction reverts if any step fails.
+- **One asset, two venues, no wrapping.** An instrument on Gnosis EEZ will be able to reach Ethereum liquidity and counterparties in the same transaction. The retail venue and the institutional venue will stop being two deployments with a bridge between them.
+- **Transfer restrictions that hold across the boundary.** Whitelists and restrictions enforced on the instance will apply to every leg of a transaction that starts there, including the leg that touches Ethereum, because the whole transaction reverts if any step fails.
 - **Settlement to Ethereum.** The issuer's record of ownership will be proven and settled on Ethereum, which is the kind of assurance an institutional counterparty asks for. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works).
-- **A permissioned instance if you need one.** The same framework lets an issuer or its venue run a private instance with on-chain restrictions and still compose with public DeFi. See [exchanges and market infrastructure](/use-cases/exchanges-and-market-infrastructure).
+- **A permissioned instance if you need one.** The same framework will let an issuer or its venue run a private instance with on-chain restrictions and still compose with public DeFi. See [exchanges and market infrastructure](/use-cases/exchanges-and-market-infrastructure).
 
 ## Build path
 
