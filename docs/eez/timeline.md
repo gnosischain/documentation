@@ -13,15 +13,15 @@ Dates below the current quarter are indicative. They move when engineering or go
 | --- | --- | --- |
 | March 2026 | EEZ announced at EthCC. Gnosis and Zisk named as co-leads, Ethereum Foundation co-funding confirmed. | Done |
 | Mid 2026 | First EEZ rollup running in test. Core contracts published by the EEZ Association. | Done |
-| July 2026 | [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) passed: GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
+| July 2026 | GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
 | H2 2026 | EEZ devnet running end-to-end cross-chain execution. Fork on the Chiado testnet. Launch partners test their deployments. | In progress |
-| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. GIP-153 targets genesis for December 2026 to January 2027. | Planned |
+| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
 | 2027 | Calls from Ethereum into Gnosis EEZ, nested calls and full bidirectional composability. Real-time ZK proving. Instance-to-instance calls. | Planned |
 
 ## What to watch
 
 - **The Chiado fork.** The testnet fork is the first thing a launch partner can test against. The [announcement bar](/) links to it when it is live.
-- **The activation block.** GnosisDAO approved the transition in [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397). The activation block for the mainnet fork is announced closer to genesis and published here.
+- **The activation block.** GnosisDAO has approved the transition. The activation block for the mainnet fork is announced closer to genesis and published here.
 - **Audit results.** Published before mainnet activation.
 
 ## Before and after, in one table

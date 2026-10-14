@@ -73,7 +73,7 @@ We are looking for design partners, not just deployments. Teams we work with wil
 
 ## What to know
 
-Gnosis EEZ genesis is targeted for December 2026 to January 2027. At launch, composability runs from Gnosis EEZ into Ethereum: your contracts can call mainnet atomically. Full bidirectional composability, nested calls and real-time ZK proving follow in 2027. Build for the first and design for the second.
+Gnosis EEZ genesis is targeted for Q1 2027. At launch, composability will run from Gnosis EEZ into Ethereum: your contracts will be able to call mainnet atomically. Full bidirectional composability, nested calls and real-time ZK proving will follow in 2027. Build for the first and design for the second.
 
 ## Apply
 
@@ -88,5 +88,4 @@ The route in is the same as for every [launch partner](/launch-partner): deploy 
 
 ## Sources
 
-- [GIP-153: Should Gnosis Chain transition into the Ethereum Economic Zone?](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397)
 - [On-Chain Options Volume Hits a Two-Year High (Cryptorank)](https://cryptorank.io/insights/analytics/on-chain-options-volume-hits-a-two-year-high)

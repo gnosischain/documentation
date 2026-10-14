@@ -20,7 +20,7 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 | --- | --- | --- |
 | Contracts and state | Deployed and verified on Gnosisscan | Carried over unchanged, same addresses, same storage |
 | Gas token | xDai | xDai, with no change at launch |
-| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Under [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems. |
+| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Under the transition approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems. |
 | EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes. |
 | Tooling | Gnosisscan, RPC providers, indexers | The same tooling, pointed at the same chain |
 | Components | Monerium EURe, Safe, CoW Protocol, Gnosis Pay, Spark, Aave, Balancer, Curve, Backed, Circles | All carried over with their contracts and liquidity |
@@ -40,7 +40,7 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 
 ## For validators and node operators
 
-The Gnosis Chain validator set is retired when the fork activates. GnosisDAO approved this in [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), which sets out the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
+The Gnosis Chain validator set is retired when the fork activates. GnosisDAO has approved the transition, including the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
 
 Node operators who run RPC or archive nodes keep running an execution client. The consensus-layer client is no longer needed after the fork.
 

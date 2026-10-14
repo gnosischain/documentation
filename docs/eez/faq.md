@@ -27,11 +27,11 @@ Nothing at launch. xDai stays the gas token and the unit of account.
 
 ### What happens to GNO?
 
-GNO continues as the governance token. Under [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems.
+GNO continues as the governance token. Under the transition approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems.
 
 ### I run a validator. What should I do?
 
-Keep running. The validator set retires when the fork activates. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, sets out the sunset and the unlocking of staked GNO. There is no action to take before the activation block is announced.
+Keep running. The validator set retires when the fork activates, and staked GNO is unlocked when it does. GnosisDAO has approved the transition. There is no action to take before the activation block is announced.
 
 ### I run an RPC or archive node. What changes?
 
@@ -51,7 +51,7 @@ It is an instance of the Ethereum Economic Zone: a chain whose blocks are proven
 
 ### When exactly is the fork?
 
-[GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, targets genesis for December 2026 to January 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
+Gnosis EEZ genesis is targeted for Q1 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
 ### What is not ready at launch?
 
