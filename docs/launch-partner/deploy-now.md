@@ -288,11 +288,6 @@ You now have a verified contract on the chain that becomes Gnosis EEZ. Two steps
 1. **Register the deployment** in the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked before they are listed, and the listing is what developers and agents see through the Gnosis EEZ MCP server.
 2. **Book a call** with the [ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership and get access to the Chiado fork when it opens.
 
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="/launch-partner">What it means to be a launch partner</a>
-</div>
-
 ## Next steps
 
 - Replace `Counter` with your own contracts. The loop is the same: test, rehearse on Chiado, deploy and verify on mainnet.

@@ -9,16 +9,11 @@ keywords: [launch partner, design partner, deploy on gnosis chain, gnosis eez la
 
 # What it means to be a launch partner
 
-**Deploy on Gnosis Chain now. Launch on Gnosis EEZ in Q1 2027.**
+Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after, so there is nothing to migrate.
 
-Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after. That is what makes a launch partner programme possible without a migration: you deploy on a Layer 1 that is live and used today, and you are in production on the first EEZ instance the moment it activates.
+Launch partners deploy on Gnosis Chain now and are in production on Gnosis EEZ the moment it activates in Q1 2027. They are the first teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, with real users.
 
-Launch partners are the first project teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, in production, with real users.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="/launch-partner/deploy-now">Deploy now</a>
-</div>
+To start, [deploy now](/launch-partner/deploy-now) or [book a call with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9).
 
 ## Why deploy before the fork
 
