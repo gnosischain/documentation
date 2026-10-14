@@ -36,4 +36,4 @@ An issuer deploys on Ethereum mainnet for credibility and liquidity, then finds 
 
 ## Launch with Gnosis EEZ
 
-Issue on Gnosis Chain now and the instrument is on Gnosis EEZ at launch, with its holders and restrictions carried over and Ethereum a same-block call away. [Become a launch partner](/eez/launch-partner).
+Issue on Gnosis Chain now and the instrument is on Gnosis EEZ at launch, with its holders and restrictions carried over and Ethereum a same-block call away. [Become a launch partner](/launch-partner).

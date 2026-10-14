@@ -4208,26 +4208,26 @@ Gnosis Chain becomes the first instance of EEZ in Q1 2027, with its state carrie
 
 ## What the EEZ brings
 
-<CardContainer>
-    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
-        <p><strong>Components, not integrations.</strong> Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
+<FeatureGrid>
+    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg" title="Components, not integrations">
+        <p>Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
-        <p><strong>Atomic composition.</strong> Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg" title="Atomic composition">
+        <p>Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
-        <p><strong>Costs that suit consumer flows.</strong> Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg" title="Costs that suit consumer flows">
+        <p>Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p><strong>Ethereum reach.</strong> Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg" title="Ethereum reach">
+        <p>Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
-        <p><strong>A stable unit of account.</strong> Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/euro.svg" title="A stable unit of account">
+        <p>Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
-        <p><strong>Canonical addresses.</strong> The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/badge-check.svg" title="Canonical addresses">
+        <p>The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
     </FeatureCard>
-</CardContainer>
+</FeatureGrid>
 
 ## The component layer
 
@@ -6241,7 +6241,7 @@ EEZ was announced in March 2026. The core contracts are an early-stage implement
     <Card
         title="Become a launch partner"
         subtitle="Deploy on Gnosis Chain now and be first in production on Gnosis EEZ in Q1 2027."
-        url="/eez/launch-partner"
+        url="/launch-partner"
     />
 </CardContainer>
 
@@ -6261,7 +6261,7 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 | --- | --- | --- |
 | Contracts and state | Deployed and verified on Blockscout | Carried over unchanged, same addresses, same storage |
 | Gas token | xDai | xDai, with no change at launch |
-| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) proposes that staked GNO is unlocked when the validator set sunsets, and that former validators may operate proof systems. |
+| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Under [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems. |
 | EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes. |
 | Tooling | Blockscout, RPC providers, indexers | The same tooling, pointed at the same chain |
 | Components | Monerium EURe, Safe, CoW Protocol, Gnosis Pay, Spark, Aave, Balancer, Curve, Backed, Circles | All carried over with their contracts and liquidity |
@@ -6281,7 +6281,7 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 
 ## For validators and node operators
 
-The Gnosis Chain validator set is retired when the fork activates. The proposal to do so is [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) on the Gnosis forum, which sets out the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
+The Gnosis Chain validator set is retired when the fork activates. GnosisDAO approved this in [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), which sets out the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
 
 Node operators who run RPC or archive nodes keep running an execution client. The consensus-layer client is no longer needed after the fork.
 
@@ -6298,7 +6298,7 @@ Progress against each of these is tracked on the [timeline](/eez/timeline).
 
 ## What this means if you build on Gnosis Chain
 
-Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on ZK-proven blocks that settle to Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/eez/launch-partner) sets out what that includes.
+Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on ZK-proven blocks that settle to Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/launch-partner) sets out what that includes.
 
 ---
 
@@ -6364,71 +6364,6 @@ The [timeline](/eez/timeline) shows when each of these is expected to close.
 
 ---
 
-// File: eez/launch-partner
-
-# Become a launch partner
-
-**Deploy on Gnosis Chain now. Launch on Gnosis EEZ in Q1 2027.**
-
-Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after. That is what makes a launch partner programme possible without a migration: you deploy on a Layer 1 that is live and used today, and you are in production on the first EEZ instance the moment it activates.
-
-Launch partners are the first project teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, in production, with real users.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="/developers/quickstart">Deploy your first contract</a>
-</div>
-
-## Why deploy before the fork
-
-- **No second deployment.** The fork carries state across. Teams that are live before it are live after it, at the same addresses.
-- **First in production.** Launch partners run on ZK-proven blocks that settle to Ethereum from the first day, before the programme opens to everyone.
-- **Ethereum in the same block.** Mainnet assets, liquidity and prices become reachable from a Gnosis EEZ transaction without a bridge. Launch partners are the first applications to use that in production.
-- **Users and liquidity are already here.** Gnosis Chain has regulated euro e-money, a self-custodial card, intent-based trading and tokenised assets live today. Deploying now puts you next to them.
-- **A say in what ships.** The compliance, privacy and freeze-control components are built with design partners. Launch partners are the first in the room.
-
-## What launch partners get
-
-| | |
-| --- | --- |
-| Early access | First production access to Gnosis EEZ features as they activate, starting with the Chiado testnet fork |
-| Engineering contact | A direct line to the Gnosis engineers working on the fork, the composer and the prover integration |
-| Listing | A verified entry in the [ecosystem directory](https://build.gnosischain.com/), with canonical contract addresses served to developers through the Gnosis EEZ MCP server |
-| Launch presence | Named as a launch partner in Gnosis EEZ launch communications, with the option to co-publish a build story |
-| Design partnership | Input into the components still being built: compliance modules, private transactions and transfer restrictions |
-
-## What we ask
-
-- Deploy and verify on Gnosis Chain before the mainnet fork, or commit to a date for doing so.
-- Test against the Chiado testnet fork when it is available and report what breaks.
-- Register in the ecosystem directory so your addresses are checked and published.
-- Tell us what your users need from the first release, in enough detail that we can act on it.
-
-There is no fee and no token allocation. The programme is about being first, not about paying for access.
-
-## How to join
-
-1. **Deploy on Gnosis Chain.** If you are starting from nothing, [deploy your first contract](/start/guides/deploy-your-first-contract) takes about 30 minutes and ends with a verified contract. If you have a protocol on Ethereum, the [developer overview](/developers/overview) covers the network details and the components you can call.
-2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked against Blockscout before they are listed.
-3. **Book a call.** [Book time with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership, agree what you need from the first release and get access to the testnet fork. You can also reach the team on [Discord](https://discord.gg/gnosis).
-
-## Timeline
-
-| When | What |
-| --- | --- |
-| Now | Deploy and verify on Gnosis Chain. Register in the ecosystem directory. |
-| Before the mainnet fork | Chiado testnet fork. Launch partners test their deployments against it. |
-| Q1 2027 | Mainnet fork. Gnosis EEZ activates with launch partners in production. The validator set retires. |
-| 2027 | Full real-time proving and synchronous calls in both directions. |
-
-The full [timeline](/eez/timeline) has the detail and the caveats.
-
-## Who this is for
-
-The [use cases](/use-cases) section sets out what the launch means for each kind of application: wallets and payment apps, neobanks, brokers and investing apps, asset issuers, DeFi protocols, and exchanges or market infrastructure that may want an instance of their own.
-
----
-
 // File: eez/timeline
 
 # Timeline
@@ -6439,7 +6374,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 | --- | --- | --- |
 | March 2026 | EEZ announced at EthCC. Gnosis and Zisk named as co-leads, Ethereum Foundation co-funding confirmed. | Done |
 | Mid 2026 | First EEZ rollup running in test. Core contracts published by the EEZ Association. | Done |
-| July 2026 | [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) posted to the Gnosis forum: should Gnosis Chain transition into the Ethereum Economic Zone. | On the forum |
+| July 2026 | [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) passed: GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
 | H2 2026 | EEZ devnet running end-to-end cross-chain execution. Fork on the Chiado testnet. Launch partners test their deployments. | In progress |
 | Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. GIP-153 targets genesis for December 2026 to January 2027. | Planned |
 | 2027 | Calls from Ethereum into Gnosis EEZ, nested calls and full bidirectional composability. Real-time ZK proving. Instance-to-instance calls. | Planned |
@@ -6447,7 +6382,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 ## What to watch
 
 - **The Chiado fork.** The testnet fork is the first thing a launch partner can test against. The [announcement bar](/) links to it when it is live.
-- **GIP-153.** The transition and the validator set retirement are a governance decision. [The proposal](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) is on the forum, and the activation block follows it.
+- **The activation block.** GnosisDAO approved the transition in [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397). The activation block for the mainnet fork is announced closer to genesis and published here.
 - **Audit results.** Published before mainnet activation.
 
 ## Before and after, in one table
@@ -6459,7 +6394,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
 | Reaching Ethereum | Through a bridge | In the same block |
 
-Not sure where you fit? Start with [use cases](/use-cases), or go straight to [become a launch partner](/eez/launch-partner).
+Not sure where you fit? Start with [use cases](/use-cases), or go straight to [become a launch partner](/launch-partner).
 
 ---
 
@@ -6487,11 +6422,11 @@ Nothing at launch. xDai stays the gas token and the unit of account.
 
 ### What happens to GNO?
 
-GNO continues as the governance token. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) proposes that staked GNO is unlocked when the validator set sunsets, and that former validators may operate proof systems.
+GNO continues as the governance token. Under [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems.
 
 ### I run a validator. What should I do?
 
-Keep running. The validator set retires when the fork activates. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) sets out the sunset and the unlocking of staked GNO. There is no action to take before the activation block is announced.
+Keep running. The validator set retires when the fork activates. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, sets out the sunset and the unlocking of staked GNO. There is no action to take before the activation block is announced.
 
 ### I run an RPC or archive node. What changes?
 
@@ -6511,7 +6446,7 @@ It is an instance of the Ethereum Economic Zone: a chain whose blocks are ZK-pro
 
 ### When exactly is the fork?
 
-[GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) targets genesis for December 2026 to January 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
+[GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, targets genesis for December 2026 to January 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
 ### What is not ready at launch?
 
@@ -6519,7 +6454,7 @@ Calls from Ethereum into Gnosis EEZ, nested calls, instance-to-instance calls, a
 
 ### How do I get involved before launch?
 
-[Become a launch partner](/eez/launch-partner).
+[Become a launch partner](/launch-partner).
 
 ---
 
@@ -6600,7 +6535,7 @@ Tell us what you are building, which request it answers, and which EEZ attribute
   <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
 </div>
 
-The route in is the same as for every [launch partner](/eez/launch-partner): deploy on Gnosis Chain now, and you are in production on Gnosis EEZ at genesis.
+The route in is the same as for every [launch partner](/launch-partner): deploy on Gnosis Chain now, and you are in production on Gnosis EEZ at genesis.
 
 ## Sources
 
@@ -7042,6 +6977,71 @@ main();
 </div>
 </details>
 ```
+
+---
+
+// File: launch-partner/README
+
+# Become a launch partner
+
+**Deploy on Gnosis Chain now. Launch on Gnosis EEZ in Q1 2027.**
+
+Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after. That is what makes a launch partner programme possible without a migration: you deploy on a Layer 1 that is live and used today, and you are in production on the first EEZ instance the moment it activates.
+
+Launch partners are the first project teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, in production, with real users.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="/developers/quickstart">Deploy your first contract</a>
+</div>
+
+## Why deploy before the fork
+
+- **No second deployment.** The fork carries state across. Teams that are live before it are live after it, at the same addresses.
+- **First in production.** Launch partners run on ZK-proven blocks that settle to Ethereum from the first day, before the programme opens to everyone.
+- **Ethereum in the same block.** Mainnet assets, liquidity and prices become reachable from a Gnosis EEZ transaction without a bridge. Launch partners are the first applications to use that in production.
+- **Users and liquidity are already here.** Gnosis Chain has regulated euro e-money, a self-custodial card, intent-based trading and tokenised assets live today. Deploying now puts you next to them.
+- **A say in what ships.** The compliance, privacy and freeze-control components are built with design partners. Launch partners are the first in the room.
+
+## What launch partners get
+
+| | |
+| --- | --- |
+| Early access | First production access to Gnosis EEZ features as they activate, starting with the Chiado testnet fork |
+| Engineering contact | A direct line to the Gnosis engineers working on the fork, the composer and the prover integration |
+| Listing | A verified entry in the [ecosystem directory](https://build.gnosischain.com/), with canonical contract addresses served to developers through the Gnosis EEZ MCP server |
+| Launch presence | Named as a launch partner in Gnosis EEZ launch communications, with the option to co-publish a build story |
+| Design partnership | Input into the components still being built: compliance modules, private transactions and transfer restrictions |
+
+## What we ask
+
+- Deploy and verify on Gnosis Chain before the mainnet fork, or commit to a date for doing so.
+- Test against the Chiado testnet fork when it is available and report what breaks.
+- Register in the ecosystem directory so your addresses are checked and published.
+- Tell us what your users need from the first release, in enough detail that we can act on it.
+
+There is no fee and no token allocation. The programme is about being first, not about paying for access.
+
+## How to join
+
+1. **Deploy on Gnosis Chain.** If you are starting from nothing, [deploy your first contract](/start/guides/deploy-your-first-contract) takes about 30 minutes and ends with a verified contract. If you have a protocol on Ethereum, the [developer overview](/developers/overview) covers the network details and the components you can call.
+2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked against Blockscout before they are listed.
+3. **Book a call.** [Book time with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership, agree what you need from the first release and get access to the testnet fork. You can also reach the team on [Discord](https://discord.gg/gnosis).
+
+## Timeline
+
+| When | What |
+| --- | --- |
+| Now | Deploy and verify on Gnosis Chain. Register in the ecosystem directory. |
+| Before the mainnet fork | Chiado testnet fork. Launch partners test their deployments against it. |
+| Q1 2027 | Mainnet fork. Gnosis EEZ activates with launch partners in production. The validator set retires. |
+| 2027 | Full real-time proving and synchronous calls in both directions. |
+
+The full [timeline](/eez/timeline) has the detail and the caveats.
+
+## Who this is for
+
+The [use cases](/use-cases) section sets out what the launch means for each kind of application: wallets and payment apps, neobanks, brokers and investing apps, asset issuers, DeFi protocols, and exchanges or market infrastructure that may want an instance of their own.
 
 ---
 
@@ -12226,7 +12226,7 @@ const metadata = await web3Name.getMetadata({ name: "public.gno" });
 
 # Use cases
 
-Every page in this section follows the same shape: who it is for, the problem today, what you can ship on Gnosis Chain now, what changes when Gnosis EEZ activates, and the guides to start with. Each one ends with the same call to action, because the route is the same for everyone: deploy now, and [launch with Gnosis EEZ in Q1 2027](/eez/launch-partner).
+Every page in this section follows the same shape: who it is for, the problem today, what you can ship on Gnosis Chain now, what changes when Gnosis EEZ activates, and the guides to start with. Each one ends with the same call to action, because the route is the same for everyone: deploy now, and [launch with Gnosis EEZ in Q1 2027](/launch-partner).
 
 <CardContainer>
     <Card
@@ -12317,7 +12317,7 @@ A wallet that wants to offer yield needs a money market fund partner and a recon
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your wallet is on Gnosis EEZ at launch, with no redeployment and no user migration. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your wallet is on Gnosis EEZ at launch, with no redeployment and no user migration. [Become a launch partner](/launch-partner).
 
 ---
 
@@ -12354,7 +12354,7 @@ A challenger has five jobs to do with a customer's money: hold it, make the idle
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your account product is on Gnosis EEZ at launch, with the customer's balance, card and savings carried over. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your account product is on Gnosis EEZ at launch, with the customer's balance, card and savings carried over. [Become a launch partner](/launch-partner).
 
 ---
 
@@ -12392,7 +12392,7 @@ Adding a tokenised instrument means a broker, a custodian and a CSD for the trad
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your execution, custody and asset contracts are on Gnosis EEZ at launch, where mainnet liquidity is a same-block call away. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your execution, custody and asset contracts are on Gnosis EEZ at launch, where mainnet liquidity is a same-block call away. [Become a launch partner](/launch-partner).
 
 ---
 
@@ -12429,7 +12429,7 @@ An issuer deploys on Ethereum mainnet for credibility and liquidity, then finds 
 
 ## Launch with Gnosis EEZ
 
-Issue on Gnosis Chain now and the instrument is on Gnosis EEZ at launch, with its holders and restrictions carried over and Ethereum a same-block call away. [Become a launch partner](/eez/launch-partner).
+Issue on Gnosis Chain now and the instrument is on Gnosis EEZ at launch, with its holders and restrictions carried over and Ethereum a same-block call away. [Become a launch partner](/launch-partner).
 
 ---
 
@@ -12467,7 +12467,7 @@ A protocol that serves retail users deploys on a cheaper chain and then has to s
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your protocol is on Gnosis EEZ at launch, at the same addresses, with mainnet liquidity a same-block call away. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your protocol is on Gnosis EEZ at launch, at the same addresses, with mainnet liquidity a same-block call away. [Become a launch partner](/launch-partner).
 
 ---
 
@@ -12507,4 +12507,4 @@ Permissioned instances, transfer restriction modules and private transactions ar
 
 ## Launch with Gnosis EEZ
 
-Settle on Gnosis Chain now and your venue is on Gnosis EEZ at launch, with Ethereum a same-block call away. An instance of your own follows the same framework. [Become a launch partner](/eez/launch-partner).
+Settle on Gnosis Chain now and your venue is on Gnosis EEZ at launch, with Ethereum a same-block call away. An instance of your own follows the same framework. [Become a launch partner](/launch-partner).

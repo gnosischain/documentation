@@ -8,7 +8,7 @@ keywords: [use cases, gnosis eez, wallets, neobanks, brokers, asset issuers, def
 
 # Use cases
 
-Every page in this section follows the same shape: who it is for, the problem today, what you can ship on Gnosis Chain now, what changes when Gnosis EEZ activates, and the guides to start with. Each one ends with the same call to action, because the route is the same for everyone: deploy now, and [launch with Gnosis EEZ in Q1 2027](/eez/launch-partner).
+Every page in this section follows the same shape: who it is for, the problem today, what you can ship on Gnosis Chain now, what changes when Gnosis EEZ activates, and the guides to start with. Each one ends with the same call to action, because the route is the same for everyone: deploy now, and [launch with Gnosis EEZ in Q1 2027](/launch-partner).
 
 <CardContainer>
     <Card

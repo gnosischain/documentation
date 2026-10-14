@@ -55,4 +55,4 @@ Progress against each of these is tracked on the [timeline](/eez/timeline).
 
 ## What this means if you build on Gnosis Chain
 
-Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on ZK-proven blocks that settle to Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/eez/launch-partner) sets out what that includes.
+Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on ZK-proven blocks that settle to Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/launch-partner) sets out what that includes.

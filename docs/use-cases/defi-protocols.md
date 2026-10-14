@@ -37,4 +37,4 @@ A protocol that serves retail users deploys on a cheaper chain and then has to s
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your protocol is on Gnosis EEZ at launch, at the same addresses, with mainnet liquidity a same-block call away. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your protocol is on Gnosis EEZ at launch, at the same addresses, with mainnet liquidity a same-block call away. [Become a launch partner](/launch-partner).

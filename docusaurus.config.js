@@ -69,7 +69,7 @@ const config = {
       announcementBar: {
         id: "eez_launch_partner_q1_2027",
         content:
-          'Gnosis EEZ launches in Q1 2027. Deploy on Gnosis Chain now, no redeployment at the fork. <a href="/eez/launch-partner">Become a launch partner</a>',
+          'Gnosis EEZ launches in Q1 2027. Deploy on Gnosis Chain now, no redeployment at the fork. <a href="/launch-partner">Become a launch partner</a>',
         isCloseable: true,
       },
       colorMode: {
@@ -92,10 +92,10 @@ const config = {
         },
         items: [
           {
-            to: "/eez/launch-partner",
+            to: "/launch-partner",
             position: "left",
             label: "Become a launch partner",
-            activeBaseRegex: "^/eez/launch-partner",
+            activeBaseRegex: "^/launch-partner",
           },
           {
             type: "docSidebar",
@@ -157,7 +157,7 @@ const config = {
             title: "Gnosis EEZ",
             items: [
               { label: "What is EEZ", to: "/eez" },
-              { label: "Become a launch partner", to: "/eez/launch-partner" },
+              { label: "Become a launch partner", to: "/launch-partner" },
               { label: "What is possible on EEZ", to: "/eez/what-is-possible" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },
@@ -229,6 +229,11 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Launch partner moved out of the Gnosis EEZ section to its own page
+          {
+            to: "/launch-partner",
+            from: "/eez/launch-partner",
+          },
           // Request for builders split into one page per request
           {
             to: "/eez/what-is-possible",

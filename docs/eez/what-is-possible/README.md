@@ -82,7 +82,7 @@ Tell us what you are building, which request it answers, and which EEZ attribute
   <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
 </div>
 
-The route in is the same as for every [launch partner](/eez/launch-partner): deploy on Gnosis Chain now, and you are in production on Gnosis EEZ at genesis.
+The route in is the same as for every [launch partner](/launch-partner): deploy on Gnosis Chain now, and you are in production on Gnosis EEZ at genesis.
 
 ## Sources
 

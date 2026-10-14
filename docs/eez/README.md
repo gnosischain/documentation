@@ -70,6 +70,6 @@ EEZ was announced in March 2026. The core contracts are an early-stage implement
     <Card
         title="Become a launch partner"
         subtitle="Deploy on Gnosis Chain now and be first in production on Gnosis EEZ in Q1 2027."
-        url="/eez/launch-partner"
+        url="/launch-partner"
     />
 </CardContainer>

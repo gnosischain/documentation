@@ -37,4 +37,4 @@ Adding a tokenised instrument means a broker, a custodian and a CSD for the trad
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your execution, custody and asset contracts are on Gnosis EEZ at launch, where mainnet liquidity is a same-block call away. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your execution, custody and asset contracts are on Gnosis EEZ at launch, where mainnet liquidity is a same-block call away. [Become a launch partner](/launch-partner).

@@ -36,4 +36,4 @@ A challenger has five jobs to do with a customer's money: hold it, make the idle
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your account product is on Gnosis EEZ at launch, with the customer's balance, card and savings carried over. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your account product is on Gnosis EEZ at launch, with the customer's balance, card and savings carried over. [Become a launch partner](/launch-partner).

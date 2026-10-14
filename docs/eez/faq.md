@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 title: Transition FAQ
 description: Short answers on what the Gnosis EEZ fork means for contracts, users, validators, xDai, GNO, bridges and tooling.
 keywords: [gnosis eez faq, hard fork, redeploy, chain id, xdai, gno, validators, bridges]
@@ -59,4 +59,4 @@ Calls from Ethereum into Gnosis EEZ, nested calls, instance-to-instance calls, a
 
 ### How do I get involved before launch?
 
-[Become a launch partner](/eez/launch-partner).
+[Become a launch partner](/launch-partner).

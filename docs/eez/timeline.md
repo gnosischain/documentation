@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 title: Timeline
 description: Milestones from the EEZ announcement in March 2026 to the Gnosis EEZ launch in Q1 2027 and the full composability release that follows.
 keywords: [eez timeline, roadmap, gnosis eez launch, q1 2027, chiado fork, mainnet fork, validator sunset]
@@ -33,4 +33,4 @@ Dates below the current quarter are indicative. They move when engineering or go
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
 | Reaching Ethereum | Through a bridge | In the same block |
 
-Not sure where you fit? Start with [use cases](/use-cases), or go straight to [become a launch partner](/eez/launch-partner).
+Not sure where you fit? Start with [use cases](/use-cases), or go straight to [become a launch partner](/launch-partner).

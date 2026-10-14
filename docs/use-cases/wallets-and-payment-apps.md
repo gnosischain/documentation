@@ -36,4 +36,4 @@ A wallet that wants to offer yield needs a money market fund partner and a recon
 
 ## Launch with Gnosis EEZ
 
-Deploy on Gnosis Chain now and your wallet is on Gnosis EEZ at launch, with no redeployment and no user migration. [Become a launch partner](/eez/launch-partner).
+Deploy on Gnosis Chain now and your wallet is on Gnosis EEZ at launch, with no redeployment and no user migration. [Become a launch partner](/launch-partner).

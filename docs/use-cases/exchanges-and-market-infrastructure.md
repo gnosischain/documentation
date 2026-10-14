@@ -39,4 +39,4 @@ Permissioned instances, transfer restriction modules and private transactions ar
 
 ## Launch with Gnosis EEZ
 
-Settle on Gnosis Chain now and your venue is on Gnosis EEZ at launch, with Ethereum a same-block call away. An instance of your own follows the same framework. [Become a launch partner](/eez/launch-partner).
+Settle on Gnosis Chain now and your venue is on Gnosis EEZ at launch, with Ethereum a same-block call away. An instance of your own follows the same framework. [Become a launch partner](/launch-partner).

@@ -13,26 +13,26 @@ Gnosis Chain becomes the first instance of EEZ in Q1 2027, with its state carrie
 
 ## What the EEZ brings
 
-<CardContainer>
-    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
-        <p><strong>Components, not integrations.</strong> Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
+<FeatureGrid>
+    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg" title="Components, not integrations">
+        <p>Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg">
-        <p><strong>Atomic composition.</strong> Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg" title="Atomic composition">
+        <p>Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg">
-        <p><strong>Costs that suit consumer flows.</strong> Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg" title="Costs that suit consumer flows">
+        <p>Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg">
-        <p><strong>Ethereum reach.</strong> Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg" title="Ethereum reach">
+        <p>Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg">
-        <p><strong>A stable unit of account.</strong> Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/euro.svg" title="A stable unit of account">
+        <p>Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
     </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/comments-question.svg">
-        <p><strong>Canonical addresses.</strong> The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
+    <FeatureCard imgUrl="/img/feature-card-icons/badge-check.svg" title="Canonical addresses">
+        <p>The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
     </FeatureCard>
-</CardContainer>
+</FeatureGrid>
 
 ## The component layer
 

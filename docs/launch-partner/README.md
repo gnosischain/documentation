@@ -1,6 +1,7 @@
 ---
-sidebar_position: 5
 title: Become a launch partner
+slug: /launch-partner
+hide_table_of_contents: true
 description: Deploy on Gnosis Chain now and be a launch partner for Gnosis EEZ in Q1 2027. State is hard-forked, so nothing is redeployed, and launch partners are the first teams in production on the new system.
 keywords: [launch partner, design partner, deploy on gnosis chain, gnosis eez launch, q1 2027, early access, ethereum economic zone]
 ---
