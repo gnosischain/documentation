@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: Transition FAQ
 description: Short answers on what the Gnosis EEZ fork means for contracts, users, validators, xDai, GNO, bridges and tooling.
 keywords: [gnosis eez faq, hard fork, redeploy, chain id, xdai, gno, validators, bridges]
@@ -27,11 +27,11 @@ Nothing at launch. xDai stays the gas token and the unit of account.
 
 ### What happens to GNO?
 
-GNO continues as the governance and economic token of Gnosis EEZ. Its role in block production after the validator set retires is decided through a Gnosis Improvement Proposal. This page will link to that proposal when it is published.
+GNO continues as the governance token. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) proposes that staked GNO is unlocked when the validator set sunsets, and that former validators may operate proof systems.
 
 ### I run a validator. What should I do?
 
-Keep running. The validator set retires when the fork activates, and the GIP sets the activation block and the withdrawal process. There is no action to take before the proposal is published.
+Keep running. The validator set retires when the fork activates. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) sets out the sunset and the unlocking of staked GNO. There is no action to take before the activation block is announced.
 
 ### I run an RPC or archive node. What changes?
 
@@ -51,11 +51,11 @@ It is an instance of the Ethereum Economic Zone: a chain whose blocks are ZK-pro
 
 ### When exactly is the fork?
 
-Q1 2027. The activation block is set by the GIP and published on the [timeline](/eez/timeline).
+[GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) targets genesis for December 2026 to January 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
 ### What is not ready at launch?
 
-Synchronous calls from Gnosis EEZ into Ethereum, instance-to-instance calls, and the last part of the real-time proving design. [How it works](/eez/how-it-works) lists each one.
+Calls from Ethereum into Gnosis EEZ, nested calls, instance-to-instance calls, and real-time ZK proving, which starts with an interim setup. [How it works](/eez/how-it-works) lists each one.
 
 ### How do I get involved before launch?
 

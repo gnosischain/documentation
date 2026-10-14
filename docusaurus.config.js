@@ -177,6 +177,7 @@ const config = {
             items: [
               { label: "What is EEZ", to: "/eez" },
               { label: "Become a launch partner", to: "/eez/launch-partner" },
+              { label: "What is possible on EEZ", to: "/eez/what-is-possible" },
               { label: "Use cases", to: "/use-cases" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },

@@ -11,10 +11,10 @@ This page is for engineers who want the mechanism rather than the pitch. It desc
 
 ## The pipeline
 
-1. **Sequence.** A composer orders transactions into blocks. For Gnosis EEZ the composer is operated by Gnosis and runs several blocks inside each 12-second Ethereum slot.
-2. **Prove.** Each block is executed inside a zkVM and a validity proof is produced. The prover is the real-time zkVM developed by Zisk, a 64-bit RISC-V machine with a proof latency target under three seconds. More than one proof system can be appointed, and the instance accepts a block when an M-of-N threshold of them agree.
+1. **Sequence.** A composer orders transactions into blocks. For Gnosis EEZ the composer is operated by Gnosis and produces a block every 2 seconds, six to each 12-second Ethereum slot.
+2. **Prove.** Each block is executed inside a zkVM and a validity proof is produced. The prover is the real-time zkVM developed by Zisk, a 64-bit RISC-V machine with a proof latency target under three seconds. More than one proof system can be appointed, and the instance accepts a block when an M-of-N threshold of them agree. At genesis an interim proving setup, likely TEE-based, stands in while the real-time prover reaches its latency target.
 3. **Settle.** The proof and the block's data go to Ethereum. The settlement contracts verify the proof and the data is published to blobs. From that point the block is final with Ethereum's security.
-4. **Compose.** A cross-chain proxy lets a contract on Ethereum call a contract on Gnosis EEZ as part of the same transaction. The call is proven with the block that contains it. At launch this runs from Ethereum into the instance. Calls in the other direction use an intent-based path until the synchronous version ships.
+4. **Compose.** A cross-chain proxy lets a contract on Gnosis EEZ call a contract on Ethereum and use the result in the same transaction. If any step fails, the whole transaction reverts. The call is proven with the block that contains it. At launch this runs from the instance into Ethereum. Ethereum calling into the instance, and nested calls, follow in 2027.
 
 ## What the contracts are
 
@@ -39,8 +39,8 @@ Gnosis EEZ runs the standard EVM. Contracts that work on Gnosis Chain work uncha
 Fees are priced by route and paid in xDai:
 
 - **Instance only.** A transaction that stays on Gnosis EEZ. This is the common case and is priced to stay in the range users see today.
-- **Ethereum to instance.** A call that starts on Ethereum and executes on Gnosis EEZ. It carries an Ethereum gas component.
-- **Instance to Ethereum.** The intent-based path at launch, priced by the solver that fills it.
+- **Instance to Ethereum.** A synchronous call from Gnosis EEZ into a mainnet contract. It carries a per-block verification cost on Ethereum, so it suits high-value moments such as deposit-and-use, liquidations against mainnet prices and settlement.
+- **Ethereum to instance.** Follows in 2027 with bidirectional composability.
 
 Proving and Ethereum settlement are paid in ETH by the operator. How that cost is recovered is a design decision that goes through governance and is open at the time of writing.
 
@@ -57,9 +57,8 @@ For an application, "sequenced" is what a user sees as confirmed. "Settled" is w
 
 ## Where the first release stops
 
-- Synchronous calls run from Ethereum into Gnosis EEZ. The reverse path is intent-based.
-- The trust model starts with a signer threshold alongside proofs, then moves to proofs alone.
-- Around four fifths of the real-time proving design ships first. The rest follows in 2027.
-- Instance-to-instance calls come after Ethereum-to-instance calls.
+- Synchronous calls run from Gnosis EEZ into Ethereum. Calls from Ethereum into Gnosis EEZ, and nested calls, follow in 2027.
+- Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proving.
+- Instance-to-instance calls come after bidirectional calls with Ethereum.
 
 The [timeline](/eez/timeline) shows when each of these is expected to close.

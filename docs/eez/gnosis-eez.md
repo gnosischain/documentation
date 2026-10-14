@@ -18,7 +18,7 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 | --- | --- | --- |
 | Contracts and state | Deployed and verified on Blockscout | Carried over unchanged, same addresses, same storage |
 | Gas token | xDai | xDai, with no change at launch |
-| GNO | Secures consensus and governs through GnosisDAO | Continues as the instance's governance and economic token. Its role in block production is set through a GIP. |
+| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) proposes that staked GNO is unlocked when the validator set sunsets, and that former validators may operate proof systems. |
 | EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes. |
 | Tooling | Blockscout, RPC providers, indexers | The same tooling, pointed at the same chain |
 | Components | Monerium EURe, Safe, CoW Protocol, Gnosis Pay, Spark, Aave, Balancer, Curve, Backed, Circles | All carried over with their contracts and liquidity |
@@ -29,16 +29,16 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 | --- | --- | --- |
 | Block production | A proof-of-stake validator set of over 200,000 validators | A composer operated by Gnosis, using sequencing and prover technology from Zisk |
 | Consensus | Beacon chain, GBC | The validator set retires. Node operators drop their consensus-layer client. |
-| Security | Validator economic security | ZK proofs verified on Ethereum, with a multi-prover threshold across more than one proof system |
+| Security | Validator economic security | Proofs verified on Ethereum. An interim proving setup, likely TEE-based, at genesis, moving to real-time ZK proofs across more than one proof system. |
 | Settlement | Gnosis Chain is its own settlement layer | Blocks settle to Ethereum. Data is published to Ethereum blobs. |
-| Block time | 5 seconds | Several blocks per 12-second Ethereum slot. The exact figure will be fixed in the published specification. |
+| Block time | 5 seconds | 2 seconds, with a composing block every 12-second Ethereum slot |
 | Finality | Around 2.5 minutes to hard finality | Soft confirmation in seconds. Hard finality when the proof lands on Ethereum. |
-| Reaching Ethereum | Native bridge, or a third-party bridge | A call from Ethereum into Gnosis EEZ in the same block, with no bridge or wrapped asset |
+| Reaching Ethereum | Native bridge, or a third-party bridge | A call from Gnosis EEZ into Ethereum in the same transaction, with no bridge or wrapped asset |
 | Fees | One fee, paid in xDai | Priced by route (instance only, instance to Ethereum, Ethereum to instance), still paid in xDai |
 
 ## For validators and node operators
 
-The Gnosis Chain validator set is retired when the fork activates. The timing and the withdrawal process go through GnosisDAO governance as a Gnosis Improvement Proposal, and the [announcement bar](/) on this site links to the live proposal once it is published. Until then, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
+The Gnosis Chain validator set is retired when the fork activates. The proposal to do so is [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) on the Gnosis forum, which sets out the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
 
 Node operators who run RPC or archive nodes keep running an execution client. The consensus-layer client is no longer needed after the fork.
 
@@ -46,10 +46,10 @@ Node operators who run RPC or archive nodes keep running an execution client. Th
 
 The brand rule for EEZ is to name limits before anyone else does, so here they are.
 
-- **One direction of synchronous calls.** At launch, Ethereum can call into Gnosis EEZ synchronously. The reverse direction, Gnosis EEZ calling Ethereum in the same block, uses an intent-based path first and becomes synchronous in a later release.
-- **Most, not all, of real-time proving.** The first release carries around four fifths of the real-time proving design. The trust model starts with a signer threshold alongside proofs and moves to proofs alone as prover latency comes down.
+- **One direction of synchronous calls.** At launch, a contract on Gnosis EEZ can call a contract on Ethereum and use the result in the same transaction. The reverse direction, Ethereum calling into Gnosis EEZ, and full nested calls follow in 2027.
+- **Interim proving at genesis.** The first release uses an interim proving setup, likely TEE-based, and moves to real-time ZK proving as the Zisk prover reaches its latency target.
 - **Audits.** The core contracts are an early-stage implementation and have not been audited. Audit results are published before mainnet activation.
-- **Instance-to-instance composability.** Calls between EEZ instances come after Ethereum-to-instance calls.
+- **Instance-to-instance composability.** Calls between EEZ instances come after bidirectional calls with Ethereum.
 
 Progress against each of these is tracked on the [timeline](/eez/timeline).
 

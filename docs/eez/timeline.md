@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: Timeline
 description: Milestones from the EEZ announcement in March 2026 to the Gnosis EEZ launch in Q1 2027 and the full composability release that follows.
 keywords: [eez timeline, roadmap, gnosis eez launch, q1 2027, chiado fork, mainnet fork, validator sunset]
@@ -13,15 +13,15 @@ Dates below the current quarter are indicative. They move when engineering or go
 | --- | --- | --- |
 | March 2026 | EEZ announced at EthCC. Gnosis and Zisk named as co-leads, Ethereum Foundation co-funding confirmed. | Done |
 | Mid 2026 | First EEZ rollup running in test. Core contracts published by the EEZ Association. | Done |
-| H2 2026 | Fork activated on the Chiado testnet. Launch partners test their deployments. | In progress |
-| H2 2026 | Gnosis Improvement Proposal for the validator set retirement goes to GnosisDAO. | Pending |
-| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
-| 2027 | Synchronous calls from Gnosis EEZ into Ethereum. Full real-time proving. Instance-to-instance calls. | Planned |
+| July 2026 | [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) posted to the Gnosis forum: should Gnosis Chain transition into the Ethereum Economic Zone. | On the forum |
+| H2 2026 | EEZ devnet running end-to-end cross-chain execution. Fork on the Chiado testnet. Launch partners test their deployments. | In progress |
+| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. GIP-153 targets genesis for December 2026 to January 2027. | Planned |
+| 2027 | Calls from Ethereum into Gnosis EEZ, nested calls and full bidirectional composability. Real-time ZK proving. Instance-to-instance calls. | Planned |
 
 ## What to watch
 
 - **The Chiado fork.** The testnet fork is the first thing a launch partner can test against. The [announcement bar](/) links to it when it is live.
-- **The GIP.** The validator set retirement is a governance decision. The proposal sets the activation block and the withdrawal process.
+- **GIP-153.** The transition and the validator set retirement are a governance decision. [The proposal](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) is on the forum, and the activation block follows it.
 - **Audit results.** Published before mainnet activation.
 
 ## Before and after, in one table

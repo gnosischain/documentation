@@ -42,7 +42,7 @@ Gnosis EEZ is not a new chain. It is Gnosis Chain, re-based onto Ethereum. The c
 
 ## Where this stands
 
-EEZ was announced in March 2026. The core contracts are an early-stage implementation that has not been audited and has no mainnet deployment yet. The first release of Gnosis EEZ will carry most, but not all, of the real-time proving design, and synchronous calls will run from Ethereum into the instance before the reverse path is live. These limits are set out on [how it works](/eez/how-it-works) and on the [timeline](/eez/timeline), and they will be updated as each milestone lands.
+EEZ was announced in March 2026. The core contracts are an early-stage implementation that has not been audited and has no mainnet deployment yet. The first release of Gnosis EEZ will start with an interim proving setup before real-time ZK proving, and synchronous calls will run from the instance into Ethereum before the reverse path is live. These limits are set out on [how it works](/eez/how-it-works) and on the [timeline](/eez/timeline), and they will be updated as each milestone lands.
 
 ## Where to go next
 
@@ -56,6 +56,11 @@ EEZ was announced in March 2026. The core contracts are an early-stage implement
         title="How it works"
         subtitle="Sequencing, proving with the Zisk zkVM, settlement on Ethereum and cross-chain calls."
         url="/eez/how-it-works"
+    />
+    <Card
+        title="What is possible on EEZ"
+        subtitle="A request for builders: the DeFi venues and infrastructure that synchronous composability makes possible."
+        url="/eez/what-is-possible"
     />
     <Card
         title="Use cases"
