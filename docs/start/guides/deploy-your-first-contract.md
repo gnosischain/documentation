@@ -150,7 +150,7 @@ Verification publishes your source code and links it to the deployed bytecode, s
 
 ```bash
 forge verify-contract <CONTRACT> src/Counter.sol:Counter \
-  --chain-id 10200 \
+  --chain 10200 \
   --verifier blockscout \
   --verifier-url https://gnosis-chiado.blockscout.com/api/
 ```

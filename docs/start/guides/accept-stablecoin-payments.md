@@ -227,7 +227,7 @@ Note the address as `<RECEIVER>`. Verify the source so the explorer shows it:
 
 ```bash
 forge verify-contract <RECEIVER> src/PaymentReceiver.sol:PaymentReceiver \
-  --chain-id 10200 \
+  --chain 10200 \
   --verifier blockscout \
   --verifier-url https://gnosis-chiado.blockscout.com/api/ \
   --constructor-args $(cast abi-encode "constructor(address)" <TOKEN>)
@@ -305,7 +305,7 @@ On Gnosis you use a real stablecoin, and you must not guess its address. Ask the
 
 That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://build.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
 
-Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain-id 100`.
+Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain 100`.
 
 :::warning
 Check the decimals of whichever stablecoin you use. EURe and WXDAI have 18 decimals; USDC on Gnosis has 6. An amount computed for 18 decimals sent to a 6-decimal token is a payment a million million times too large. Read `decimals()` rather than assuming.
