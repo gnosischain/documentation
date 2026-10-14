@@ -250,6 +250,11 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Request for builders split into one page per request
+          {
+            to: "/eez/what-is-possible",
+            from: "/eez/what-is-possible/request-for-builders-defi",
+          },
           // Updates blog archived to /archives/Updates; nothing under /updates is published
           {
             to: "/",

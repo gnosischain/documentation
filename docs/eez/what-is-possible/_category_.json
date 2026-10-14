@@ -1,11 +1,5 @@
 {
   "label": "What is possible on EEZ",
   "position": 4,
-  "collapsed": false,
-  "link": {
-    "type": "generated-index",
-    "slug": "/eez/what-is-possible",
-    "title": "What is possible on EEZ",
-    "description": "Requests for builders. Each one sets out the products that synchronous composability with Ethereum makes possible or much better, and what we want to see built. If you are building one of these, we want to hear from you."
-  }
+  "collapsed": false
 }
