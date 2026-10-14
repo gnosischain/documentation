@@ -262,7 +262,7 @@ function Features() {
   return (
     <section className={styles.section}>
       <div className={styles.sectionHead}>
-        <h2 className={styles.sectionTitle}>Build with Gnosis</h2>
+        <h2 className={styles.sectionTitle}>Build</h2>
         <p className={styles.sectionSub}>
           Core building blocks for shipping directly on Gnosis Chain.
         </p>
@@ -287,7 +287,7 @@ function Features() {
 function UseCases() {
   return (
     <section className={styles.section}>
-      <h2 className={styles.sectionTitle}>Common Workflows</h2>
+      <h2 className={styles.sectionTitle}>Common workflows</h2>
       <div className={styles.useCaseGrid}>
         {USE_CASES.map(({icon: I, title, links}) => (
           <div key={title} className={styles.useCase}>
@@ -314,8 +314,8 @@ function UseCases() {
 
 function Tasks() {
   return (
-    <section className={styles.section}>
-      <h2 className={styles.sectionTitle}>Common tasks</h2>
+    <section className={styles.other}>
+      <h2 className={styles.otherTitle}>Other</h2>
       <div className={styles.taskGrid}>
         {TASKS.map(({heading, links}) => (
           <div key={heading}>
@@ -340,8 +340,8 @@ export default function Home() {
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <main className={styles.page}>
         <Hero />
-        <Pathways />
         <Features />
+        <Pathways />
         <UseCases />
         <Tasks />
       </main>

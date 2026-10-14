@@ -1,7 +1,7 @@
 .page {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 4.5rem 2rem 5rem;
+  padding: 4.5rem 2rem 0;
   background: var(--gc-bg);
 }
 
@@ -280,7 +280,27 @@
   color: var(--gc-text);
 }
 
-/* ---------- common tasks ---------- */
+/* ---------- other: sits flush on the footer and reads as its top row ---------- */
+.other {
+  border-top: 1px solid var(--gc-border);
+  padding-top: 3.5rem;
+}
+.otherTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  color: var(--gc-text);
+}
+/* the Other row takes over the footer's top rule, so the two read as one block */
+:global(body):has(.other) :global(footer.footer) {
+  border-top: none;
+  padding: 2.5rem 0 2.5rem;
+}
+/* line the footer columns up with the page's content edge */
+:global(body):has(.other) :global(footer.footer .container) {
+  max-width: 1280px;
+  padding: 0 2rem;
+}
 .taskGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -295,7 +315,7 @@
   gap: 0.6rem;
 }
 .taskLink {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--gc-text-muted);
   text-decoration: none;
 }
@@ -354,6 +374,12 @@
   .featureCard {
     min-height: 0;
     gap: 1.5rem;
+  }
+  .other {
+    padding-top: 2.5rem;
+  }
+  :global(body):has(.other) :global(footer.footer .container) {
+    padding: 0 1rem;
   }
   .facts {
     margin-bottom: 3rem;
