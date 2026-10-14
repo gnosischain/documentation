@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Request for builders
 slug: /use-cases/what-is-possible
 title: "What is possible on EEZ: a request for builders"
-description: Four DeFi venues and the infrastructure under them that become possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
+description: Six builds that become possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. Four DeFi venues, the native infrastructure under them, and hybrid mainnet apps. If you are building one of these, we want to hear from you.
 keywords: [request for builders, what is possible on eez, synchronous composability, defi, lending, options, perps, prediction markets, oracles, solvers, custodians, hybrid apps, gnosis eez]
 ---
 
@@ -11,7 +11,7 @@ keywords: [request for builders, what is possible on eez, synchronous composabil
 
 The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework whose instances can call Ethereum mainnet in the same transaction. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027.
 
-Synchronous composability changes what can be built on an L2. This section sets out four DeFi venues, and the infrastructure under them, that become possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
+Synchronous composability changes what can be built on an L2. This section sets out six builds: four DeFi venues, the native infrastructure under them, and hybrid apps that keep their mainnet core. Each becomes possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
 
 ## Why now
 
