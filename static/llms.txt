@@ -1,3 +1,59 @@
+// File: _partials/_components-table
+
+{/* Single source for the components table. Used on /use-cases/build, /use-cases and /start. */}
+
+{/* TODO(ben): confirm the EEZ Alliance list. This table marks Monerium, Safe, CoW Protocol and Gnosis Pay. The request for builders names Aave, Safe, CoW Swap, Centrifuge, Monerium and xStocks. */}
+
+| Component | Provided by | What it gives you |
+| --- | --- | --- |
+| Euro and sterling e-money | Monerium (Alliance) | EURe and GBPe, regulated e-money redeemable one-for-one at a bank account over IBAN |
+| Smart accounts | Safe (Alliance) | Multi-signature accounts, programmable modules and transaction batching, the usual custody layer for treasuries |
+| Trading and settlement | CoW Protocol (Alliance) | Intent-based orders signed off-chain and settled in batches by competing solvers, with MEV protection |
+| Card settlement | Gnosis Pay (Alliance) | A Safe holds the balance in EURe and settles Visa payments directly from it |
+| Savings and yield | Spark, Aave | sDAI as a yield-bearing wrapper around xDai savings, plus lending markets for stablecoins |
+| Stable liquidity routing | Curve, Balancer | Low-slippage pools for like-priced assets, and a shared vault that keeps multi-hop swaps cheap |
+| Tokenised securities | Backed | bTokens tracking listed instruments such as short-term treasury ETFs, each backed one-for-one with a custodian |
+| Trust and identity | Circles | Personal currencies issued on a web of trust between people |
+
+Every project in the table is live on Gnosis Chain today and carries over to Gnosis EEZ unchanged. Providers marked (Alliance) are members of the EEZ Alliance.
+
+---
+
+// File: about/README
+
+# Gnosis Chain
+
+Gnosis Chain is a community-owned EVM L1, live since 2018 and secured by over 200,000 validators around the world. Resilience and credible neutrality are its core values, and anyone can take part in governance through the GnosisDAO.
+
+Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez) (EEZ), a neutral rollup framework that settles to Ethereum. Gnosis operates the instance. Everything you build on Gnosis Chain today carries over: contracts, addresses and state are hard-forked across, so nothing is redeployed.
+
+## At a glance
+
+| Property | Value |
+| --- | --- |
+| Block time | 5 seconds |
+| Fee token | [xDai](/about/tokens/xdai), a stablecoin |
+| Consensus token | [GNO](/about/tokens/gno), staked by validators |
+| Chain ID | 100 (mainnet), 10200 (Chiado testnet) |
+| Execution | EVM, Osaka patchset |
+
+**Fees are paid in a stablecoin.** Most EVM chains charge gas in a volatile native token. On Gnosis Chain every transaction is paid in xDai, so costs are predictable for you and your users. Fees go to the validator who sealed the block.
+
+**Building is the same as on Ethereum.** The same tooling, wallets and contracts work unchanged. Point them at the [network RPC](/about/networks) and deploy.
+
+## Find your way around
+
+- **[Networks](/about/networks):** RPC endpoints, explorers and faucets for mainnet and Chiado.
+- **[Tokens](/about/tokens):** the dual-token model of xDai for fees and GNO for consensus.
+- **[Chain specifications](/about/specs):** consensus, hard forks, deposit contracts and audits.
+- **[Developer guides](/developers/quickstart):** build, deploy, interact with and verify contracts.
+- **[Bridges](/bridges):** move assets between Ethereum and Gnosis Chain.
+- **[Tools](/tools):** oracles, indexers, wallets and other infrastructure.
+- **[Knowledge hub](/technicalguides):** deeper technical guides.
+- **[Validators and node operators](/validators/eez-transition):** what the move to Gnosis EEZ means if you run a validator or a node.
+
+---
+
 // File: about/third-parties
 
 ### On-ramps
@@ -107,7 +163,7 @@ Go to https://uramp.gnosis.io/login and follow the steps mentioned or you can fo
 | Native (fee) token | xDAI                             | Chiado xDAI                          |
 | Chain ID           | 100                              | 10200                                |
 | EL RPC             | https://rpc.gnosischain.com      | https://rpc.chiadochain.net          |
-| EL Explorer        | https://gnosisscan.io            | https://blockscout.com/gnosis/chiado |
+| EL Explorer        | https://gnosisscan.io            | https://gnosis-chiado.blockscout.com |
 | CL Explorer        | https://beaconchain.gnosischain.com/           | https://beacon.chiadochain.net       |
 | Fork monitor       | https://forkmon.gnosischain.com  | https://forkmon.chiadochain.net      |
 | EthStats           | https://ethstats.gnosischain.com | https://ethstats.chiadochain.net     |
@@ -258,7 +314,6 @@ TODO -->
 | Execution Layer RPC      | https://rpc.gnosischain.com                 |
 | More RPC endpoints       | [RPC Providers](../../tools/RPC%20Providers/README.md) |
 | Execution Layer Explorer | https://gnosisscan.io                       |
-| Execution Layer Explorer | https://gnosis.blockscout.com/              |
 | Fork monitor             | https://forkmon.gnosischain.com             |
 | EthStats                 | https://ethstats.gnosischain.com            |
 | Forked Blocks            | https://gnosis.blockscout.com/reorgs        |
@@ -367,9 +422,9 @@ All smart contract bug from Gnosis Chain Bridges includes ETH-xDAI Omnibridge, x
 | Type                                                                   | Target                                                                           |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Smart Contract - DAI-xDAI TokenBridge contract on the Ethereum Mainnet | https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016          |
-| Smart Contract - DAI-xDAI OmniBridge contract on the Gnosis chain      | https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6 |
+| Smart Contract - DAI-xDAI OmniBridge contract on the Gnosis chain      | https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6 |
 | Smart Contract - ETH-xDAI OmniBridge contract on the Ethereum Mainnet  | https://etherscan.io/address/0x88ad09518695c6c3712AC10a214bE5109a655671          |
-| Smart Contract - ETH-xDAI OmniBridge contract on the Gnosis chain      | https://gnosis.blockscout.com/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
+| Smart Contract - ETH-xDAI OmniBridge contract on the Gnosis chain      | https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d |
 |                                                                        |                                                                                  |
 
 ### Reward by Thread level
@@ -646,9 +701,9 @@ To stake on GBC, follow the validator instructions at [validategnosis.com](https
 
 | Contract             | Address                                                                                                                                            |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GBC Deposit Contract | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)                     |
-| GNO-> mGNO contract  | [0x647507A70Ff598F386CB96ae5046486389368C66](https://gnosis.blockscout.com/address/0x647507A70Ff598F386CB96ae5046486389368C66)                     |
-| GNO token on Gnosis  | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://blockscout.com/xdai/mainnet/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb/token-transfers) |
+| GBC Deposit Contract | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)                     |
+| GNO-> mGNO contract  | [0x647507A70Ff598F386CB96ae5046486389368C66](https://gnosisscan.io/address/0x647507A70Ff598F386CB96ae5046486389368C66)                     |
+| GNO token on Gnosis  | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb) |
 
 
 ### **Initial Parameters (subject to change)**
@@ -686,7 +741,7 @@ c
 
 ### Contracts managed by the Governance Board
 
-- Deposit Contract: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9/read-contract)
+- Deposit Contract: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#readContract)
 
 ---
 
@@ -2682,7 +2737,7 @@ Additional References:
 
 ### Canonical Token Registries
 
-- [Canonical Bridged Tokens](https://gnosis.blockscout.com/tokens?tab=bridged)
+- [Canonical Bridged Tokens](https://gnosisscan.io/tokens)
 - Select the origin chain by using **Filter** option.
 
 ### Multiple Representations
@@ -2694,8 +2749,8 @@ For example, there are two different representations of USDC on Gnosis(created b
 
 | Asset              | Token Contract                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
-| USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://gnosis.blockscout.com/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
+| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
+| USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://gnosisscan.io/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
 
@@ -2711,7 +2766,7 @@ Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and 
 USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://github.com/circlefin/stablecoin-evm/blob/master/doc/bridged_USDC_standard.md). To ensure smooth bridging operations, when using [Bridge UI](https://bridge.gnosischain.com/) to bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) from Ethereum, user will get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0) by default.
 
 1. Bridging from ETH:  
-   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
+   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
 2. Bridging from GC:  
    a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).  
    b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.
@@ -2747,7 +2802,7 @@ DAI is replaced with USDS as the default accepted token on Ethereum, while xDAI 
 
 The [xDai bridge](https://bridge.gnosischain.com) is a native bridge from Ethereum that is used to mint and burn [xDai](/about/tokens/xdai), the native asset used for gas and transaction fees on Gnosis.
 
-Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis notifies the [block rewards contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA). The consensus algorithm then mints xDai to the user's corresponding address on Gnosis in the next block.
+Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis notifies the [block rewards contract](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA). The consensus algorithm then mints xDai to the user's corresponding address on Gnosis in the next block.
 
 ## Key Information
 
@@ -2782,11 +2837,11 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 
 | Contract                      | Gnosis Address                                                                                                                                  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract          | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs) |
-| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)              |
-| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)   |
-| ERC20ToNative Helper Contract | [gno:0xe30269bc61E677cD60aD163a221e464B7022fbf5](https://gnosis.blockscout.com/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) |
-| USDSDepositContract           | [gno:0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosis.blockscout.com/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9)              |
+| xDAI Bridge Contract          | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) |
+| Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)              |
+| Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosisscan.io/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D#readProxyContract)   |
+| ERC20ToNative Helper Contract | [gno:0xe30269bc61E677cD60aD163a221e464B7022fbf5](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) |
+| USDSDepositContract           | [gno:0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9)              |
 
 </TabItem>
 
@@ -2856,13 +2911,13 @@ For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-o
 
 1. Users initiate the relay transaction on Ethereum by approving the bridge contract and calling the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) `relayTokens(address recipient, uint256 value)`.
 2. `UserRequestForAffirmation(address recipient, uint256 value, bytes32 nonce)` event is emitted from the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016).
-3. Bridge validators observe the event and call `executeAffirmation(address recipient, uint256 value, bytes32 nonce)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
+3. Bridge validators observe the event and call `executeAffirmation(address recipient, uint256 value, bytes32 nonce)` function on [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
 4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDAI to mint.
-5. The [block reward contract](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)` event is emitted within the same transaction and receiver address will be credited for the equivalent xDAI amount.
+5. The [block reward contract](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)` event is emitted within the same transaction and receiver address will be credited for the equivalent xDAI amount.
 
-User may check the balance change visually using Blockscout's [coin balance history](https://gnosis.blockscout.com/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C?tab=coin_balance_history) or programmatically using [eth_getBalance](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_getbalance) API by querying the balance on block number where `AddedReceiver` event is emitted.
+User may check the balance change visually on [Gnosisscan](https://gnosisscan.io/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C) or programmatically using [eth_getBalance](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_getbalance) API by querying the balance on block number where `AddedReceiver` event is emitted.
 
-You can also view a receiver's address and amount of xDai received in the [block reward contract's](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called and enough signatures has been collected from bridge valdiators, it emits the `AddedReceiver` event:
+You can also view a receiver's address and amount of xDai received in the [block reward contract's](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called and enough signatures has been collected from bridge valdiators, it emits the `AddedReceiver` event:
 
 ```
 AddedReceiver(
@@ -2872,7 +2927,7 @@ AddedReceiver(
 )
 ```
 
-Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142ff77fd7128e39dbc03128d5797ac4?tab=logs
+Example: https://gnosisscan.io/tx/0x5892a695860f6087a2d93140f05e6365142ff77fd7128e39dbc03128d5797ac4#eventlog
 
 ---
 
@@ -2881,10 +2936,10 @@ Example: https://gnosis.blockscout.com/tx/0x5892a695860f6087a2d93140f05e6365142f
 ![](/img/bridges/diagrams/dai-bridge-02.png)
 
 1. Based on the received token on Ethereum
-   1. To receive DAI on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. The equivalent amount of xDAI is burned.
-   1. To receive USDS on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [USDS Deposit Contract](https://gnosis.blockscout.com/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9) on Gnosis Chain. The equivalent amount of xDAI is burned.
-2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` event is emitted from [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosisscan.io/tx/0xca6fa9395f734501a9497f409db12699782b0a068dc4463d736561572eda8441#eventlog)
-3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
+   1. To receive DAI on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. The equivalent amount of xDAI is burned.
+   1. To receive USDS on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [USDS Deposit Contract](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9) on Gnosis Chain. The equivalent amount of xDAI is burned.
+2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` event is emitted from [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosisscan.io/tx/0xca6fa9395f734501a9497f409db12699782b0a068dc4463d736561572eda8441#eventlog)
+3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
 4. After enough signatures are collected, `CollectedSignatures` event is emitted/
 5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-usds-on-ethereum). **USDS** is unlocked to the receiver or swap to **DAI** to the receive.
 6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDAI Bridge. Please be aware that `transactionHash` carries the value of `nonce`.
@@ -2992,12 +3047,12 @@ The second contract is the Interest Receiver. This will be the address provided 
 
 ### How to claim USDS on Ethereum
 
-1. Fetch the value of `recipient`, `value`, `nonce` and `token` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` from the transction emitted by [Home xDAI Bridge](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) Gnosis Chain.
+1. Fetch the value of `recipient`, `value`, `nonce` and `token` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` from the transction emitted by [Home xDAI Bridge](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) Gnosis Chain.
    ![](../../../static/img/bridges/xdaibridge/gc-xdai-tx-post-usds.png)
-2. Go to the [xDAI bridge helper contract on Gnosis Chain](https://gnosis.blockscout.com/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract).
+2. Go to the [xDAI bridge helper contract on Gnosis Chain](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract).
 
-   1. Call [`getMessageHash(address _recipient,  uint256 _value, _origTxHash, address _token)`](https://gnosis.blockscout.com/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5?tab=read_contract#0xe4a02bdd) : with `recipient`, `value` and `token` from the `UserRequestForSignature` and `_origTxHash` as `nonce` from `UserRequestForSignature` (not the transaction hash!). Fetch the returned message hash.
-   2. Call [`getMessage(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a?tab=read_write_contract#0x0139a221) & [`getSignatures(bytes32 _msgHash)`](https://gnosis.blockscout.com/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5?tab=read_contract#0x0139a221) with the message hash from the previous step.
+   1. Call [`getMessageHash(address _recipient,  uint256 _value, _origTxHash, address _token)`](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) : with `recipient`, `value` and `token` from the `UserRequestForSignature` and `_origTxHash` as `nonce` from `UserRequestForSignature` (not the transaction hash!). Fetch the returned message hash.
+   2. Call [`getMessage(bytes32 _msgHash)`](https://gnosisscan.io/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract) & [`getSignatures(bytes32 _msgHash)`](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) with the message hash from the previous step.
       ![](../../../static/img/bridges/xdaibridge/xdai-helper-post-usds.png)
 
 3. Use the value returned from the previous step to call `executeSignatures(bytes message, bytes signatures)` on [Bridge Router contract on Ethereum](https://etherscan.io/address/0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0#writeProxyContract#F1).
@@ -3020,7 +3075,7 @@ The second contract is the Interest Receiver. This will be the address provided 
    1. address: [0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract)
    2. contract: [XDaiForeignBridge.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/upgradeable_contracts/erc20_to_native/XDaiForeignBridge.sol)
 3. HomeBridgeErcToNative / Home xDAI Bridge : xDAI bridge on Gnosis Chain.
-   1. address: [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs)
+   1. address: [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6)
    2. contract: [HomeBridgeErcToNative.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/upgradeable_contracts/erc20_to_native/HomeBridgeErcToNative.sol)
 4. USDS deposit contract: Deposit contract on Gnosis Chain that acts as an entry point contract if user wants to receive USDS on Ethereum.
    1. address: [0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9#code)
@@ -3594,7 +3649,7 @@ Remove Signers:
 
 1. Upgrade AMB proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
    1. Foreign AMB implementation contract: [0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316](https://etherscan.io/address/0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316#readContract), version: 6
-   2. Home AMB Implementation contract: [0xA033535983d1aBcc2648af730EDCb198909903D7](https://gnosis.blockscout.com/address/0xA033535983d1aBcc2648af730EDCb198909903D7#code), version: 6
+   2. Home AMB Implementation contract: [0xA033535983d1aBcc2648af730EDCb198909903D7](https://gnosisscan.io/address/0xA033535983d1aBcc2648af730EDCb198909903D7#code), version: 6
 2. Remove Telepathy from AMB’s validator list
    1. Succinct Labs is deprecating the Telepathy platform; thus, we are removing Telepathy [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) from validator list. We will add the new SP1 based implementation when ready.
 3. Unlock TRAC token to users
@@ -3916,7 +3971,7 @@ Increase the amount of blocks required for confirmation on the Ethereum Mainnet 
 
 ## Return user funds
 
-🗳 Justification: A user accidentally [sent over 2000 USDC](https://blockscout.com/xdai/mainnet/tx/0x2837cd89972f2e37a1cb631e60dbb761213010fe526a089c99f48ed483f63956) to the USDC token contract on Gnosis. After confirming the users identity, the board agreed to call the `claimTokensFromTokenContract` method and return the amount to the user.
+🗳 Justification: A user accidentally [sent over 2000 USDC](https://gnosisscan.io/tx/0x2837cd89972f2e37a1cb631e60dbb761213010fe526a089c99f48ed483f63956) to the USDC token contract on Gnosis. After confirming the users identity, the board agreed to call the `claimTokensFromTokenContract` method and return the amount to the user.
 
 ✅ Implemented: April 15, 2021
 
@@ -3989,13 +4044,13 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 | Organization | Gnosis Address                                                                                                                      |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| GnosisDao    | [gno:0x82b00cA9D162859f645B51967746E55bb6498DfC](https://gnosis.blockscout.com/address/0x82b00cA9D162859f645B51967746E55bb6498DfC)  |
-| Protofire    | [gno:0x2245bFAD58a6cD50e9e413084d4091C497281911](https://gnosis.blockscout.com/address/0x2245bFAD58a6cD50e9e413084d4091C497281911)  |
-| CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosis.blockscout.com/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
-| Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosis.blockscout.com/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
-| GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
-| Kleros       | [gno:0x156c0DAAb0cD73c224a424a781866d35f0F8Fade ](https://gnosis.blockscout.com/address/0x156c0DAAb0cD73c224a424a781866d35f0F8Fade) |
-| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
+| GnosisDao    | [gno:0x82b00cA9D162859f645B51967746E55bb6498DfC](https://gnosisscan.io/address/0x82b00cA9D162859f645B51967746E55bb6498DfC)  |
+| Protofire    | [gno:0x2245bFAD58a6cD50e9e413084d4091C497281911](https://gnosisscan.io/address/0x2245bFAD58a6cD50e9e413084d4091C497281911)  |
+| CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosisscan.io/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
+| Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosisscan.io/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
+| GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosisscan.io/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
+| Kleros       | [gno:0x156c0DAAb0cD73c224a424a781866d35f0F8Fade ](https://gnosisscan.io/address/0x156c0DAAb0cD73c224a424a781866d35f0F8Fade) |
+| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
 
 </TabItem>
 
@@ -4198,113 +4253,6 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 ---
 
-// File: developers/Overview
-
-# Build on the Ethereum Economic Zone
-
-Gnosis, a European leader in open finance, built Safe, CoW Swap, Gnosis Pay and Gnosis Chain. It is now developing the Ethereum Economic Zone (EEZ) with Zisk and co-funding from the Ethereum Foundation.
-
-Gnosis Chain becomes the first instance of EEZ in Q1 2027, with its state carried over in a hard fork so nothing deployed today is redeployed. What is already here is the set of open finance components live on Gnosis Chain, together with the properties that let you treat them as one system rather than a list of separate integrations. The [Gnosis EEZ](/eez) section covers the transition; this page covers building on the chain as it runs today. Regulated euro e-money, yield, smart accounts, intent-based settlement and tokenised assets are all deployed on the same chain. A single transaction can touch several of them without a bridge or a third-party dependency in the middle.
-
-## What the EEZ brings
-
-<FeatureGrid>
-    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg" title="Components, not integrations">
-        <p>Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg" title="Atomic composition">
-        <p>Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg" title="Costs that suit consumer flows">
-        <p>Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg" title="Ethereum reach">
-        <p>Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/euro.svg" title="A stable unit of account">
-        <p>Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
-    </FeatureCard>
-    <FeatureCard imgUrl="/img/feature-card-icons/badge-check.svg" title="Canonical addresses">
-        <p>The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
-    </FeatureCard>
-</FeatureGrid>
-
-## The component layer
-
-These are the pieces you compose. Every project below is live on Gnosis Chain today, and the ones marked as Alliance members are part of the EEZ Alliance.
-
-| Component | Provided by | What it gives you |
-| --- | --- | --- |
-| Euro and sterling e-money | Monerium (Alliance) | EURe and GBPe, regulated e-money redeemable one-for-one at a bank account over IBAN |
-| Smart accounts | Safe (Alliance) | Multi-signature accounts, programmable modules and transaction batching, the usual custody layer for treasuries |
-| Trading and settlement | CoW Protocol (Alliance) | Intent-based orders signed off-chain and settled in batches by competing solvers, with MEV protection |
-| Card settlement | Gnosis Pay (Alliance) | A Safe holds the balance in EURe and settles Visa payments directly from it |
-| Savings and yield | Spark, Aave | sDAI as a yield-bearing wrapper around xDai savings, plus lending markets for stablecoins |
-| Stable liquidity routing | Curve, Balancer | Low-slippage pools for like-priced assets, and a shared vault that keeps multi-hop swaps cheap |
-| Tokenised securities | Backed | bTokens tracking listed instruments such as short-term treasury ETFs, each backed one-for-one with a custodian |
-| Trust and identity | Circles | Personal currencies issued on a web of trust between people |
-
-Ask the MCP server for `eez_list_apps` to get the current registry, or `eez_get_contract_addresses` for canonical addresses that have been checked against Blockscout. Never copy an address from memory.
-
-## Network details
-
-| | Gnosis | Chiado testnet |
-| --- | --- | --- |
-| Chain ID | 100 | 10200 |
-| RPC | `https://rpc.gnosischain.com` | `https://rpc.chiadochain.net` |
-| Explorer | [Blockscout](https://gnosis.blockscout.com) | [Blockscout](https://gnosis-chiado.blockscout.com) |
-| Gas token | xDai | xDai (test) |
-| Block time | 5 seconds | 5 seconds |
-
-Full details are in [network overview](/about/networks/) and [useful contracts](/developers/Usefulcontracts).
-
-## Getting started
-
-Work through these in order if you are new to the chain. Each one ends in something you can check on an explorer.
-
-<CardContainer>
-    <Card
-        title="Quickstart"
-        subtitle="Deploy your first contract to Gnosis Chain with Remix, in about 15 minutes."
-        url="/developers/quickstart"
-    />
-    <Card
-        title="Development environments"
-        subtitle="Set up Foundry or Hardhat and point it at Gnosis or Chiado."
-        url="/category/deploy-contracts-on-gnosis"
-    />
-    <Card
-        title="Template contracts"
-        subtitle="Reference implementations for tokens, NFTs and a full-stack dApp."
-        url="/category/build-contracts-on-gnosis"
-    />
-    <Card
-        title="Interact with contracts"
-        subtitle="Read and write contract state from viem, ethers.js, web3.js or MetaMask."
-        url="/category/interact-with-contracts-on-gnosis"
-    />
-    <Card
-        title="Verify contracts"
-        subtitle="Publish your source to Blockscout or Sourcify so others can read it."
-        url="/developers/Verify Smart Contracts/"
-    />
-    <Card
-        title="Demo projects"
-        subtitle="End-to-end builds that compose EEZ components, starting from an empty directory."
-        url="/category/demo-projects"
-    />
-</CardContainer>
-
-## Resources
-
-- [Wallets](/tools/wallets): wallets that support Gnosis Chain.
-- [Faucets](/tools/Faucets): testnet funds for Chiado.
-- [RPC providers](/tools/RPC%20Providers/): public and hosted endpoints.
-- [Bridges](/bridges): move tokens and messages between Ethereum and Gnosis.
-- [Embed](/start): the component bundles for fintechs, with 0-1 guides for each.
-
----
-
 // File: developers/quickstart
 
 # Gnosis Chain Quickstart
@@ -4455,11 +4403,11 @@ The current deployment of xDAI bridge contract is from [tokenbridge-contracts/xd
 | AMB Helper Contract                 | [0x7d94ece17e81355326e3359115D4B02411825EdD](https://gnosisscan.io/address/0x7d94ece17e81355326e3359115D4B02411825EdD#readContract)       |
 | Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
 | Omnibridge Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
-| xDAI Bridge Proxy Contract                | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosis.blockscout.com/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6#address-tabs)              |
-| xDAI Bridge Block Reward Contract         | [0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosis.blockscout.com/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
-| xDAI Bridge Validator Management Contract | [0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosis.blockscout.com/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D/read-proxy)                |
-| xDAI Bridge Admin Multisignature Wallet   | [0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://gnosis.blockscout.com/address/0x0D3726e5a9f37234D6B55216fC971D30F150a60F/transactions#address-tabs) |
-| xDAI Bridge ERC20ToNative Helper Contract | [0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosis.blockscout.com/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract)              |
+| xDAI Bridge Proxy Contract                | [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6)              |
+| xDAI Bridge Block Reward Contract         | [0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)                           |
+| xDAI Bridge Validator Management Contract | [0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosisscan.io/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D#readProxyContract)                |
+| xDAI Bridge Admin Multisignature Wallet   | [0x0d3726e5a9f37234d6b55216fc971d30f150a60f](https://gnosisscan.io/address/0x0D3726e5a9f37234D6B55216fC971D30F150a60F) |
+| xDAI Bridge ERC20ToNative Helper Contract | [0x2D51EAa266eafcb59bB36dD3c7E99C515e58113A](https://gnosisscan.io/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract)              |
 
 ### Gnosis Chain validator addresses
 
@@ -5026,7 +4974,7 @@ To deploy, run:
 ```bash
 npx hardhat run scripts/deploy.js --network gnosis
 ```
-Congrats, you have deployed a basic ERC-721 contract to Gnosis! If you like, you can build out a front end to view your NFT. For now, you can view your token in [Blockscout](https://blockscout.com/xdai/mainnet/).
+Congrats, you have deployed a basic ERC-721 contract to Gnosis! If you like, you can build out a front end to view your NFT. For now, you can view your token on [Gnosisscan](https://gnosisscan.io).
 
 ---
 
@@ -6179,7 +6127,7 @@ Once the smart contract is deployed, you may check the address on Dashboard. You
 
 # What is the Ethereum Economic Zone
 
-Gnosis Chain is becoming the first instance of the Ethereum Economic Zone. In Q1 2027 the chain's state will be hard-forked onto a ZK-proven rollup that settles to Ethereum, built by Gnosis and Zisk with co-funding from the Ethereum Foundation. Nothing deployed on Gnosis Chain today needs to be redeployed. Teams that are live before the fork will be the first to run on the new system in production.
+The Ethereum Economic Zone (EEZ) is a neutral rollup framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. It has no token and is not a Gnosis product. Gnosis EEZ is its first instance, operated by Gnosis. In Q1 2027 the state of Gnosis Chain will be hard-forked onto Gnosis EEZ, a rollup that settles to Ethereum, proven first by an interim setup and then by real-time ZK proofs ([how it works](/eez/how-it-works)). Nothing deployed on Gnosis Chain today needs to be redeployed. Teams that are live before the fork will be the first to run on the new system in production.
 
 This section explains what EEZ is, what the first instance changes, and how to be part of the launch. The rest of the documentation covers Gnosis Chain as it operates today and stays current throughout the transition.
 
@@ -6229,13 +6177,13 @@ EEZ was announced in March 2026. The core contracts are an early-stage implement
         url="/eez/how-it-works"
     />
     <Card
-        title="What is possible on EEZ"
-        subtitle="A request for builders: the DeFi venues and infrastructure that synchronous composability makes possible."
+        title="What is possible on Gnosis EEZ"
+        subtitle="What changes when an L2 and Ethereum mainnet share one transaction, and the products that unlocks."
         url="/eez/what-is-possible"
     />
     <Card
         title="Use cases"
-        subtitle="What EEZ means for wallets, neobanks, brokers, issuers, protocols and venues."
+        subtitle="What Gnosis EEZ means for wallets, neobanks, brokers, issuers, protocols and venues."
         url="/use-cases"
     />
     <Card
@@ -6251,6 +6199,8 @@ EEZ was announced in March 2026. The core contracts are an early-stage implement
 
 # Gnosis EEZ: the first instance
 
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no token of its own. Gnosis EEZ is its first instance, operated by Gnosis.
+
 Gnosis EEZ is not a new chain. It is Gnosis Chain, re-based onto Ethereum through a hard fork of the existing state. If you have a contract on Gnosis Chain today, it will be on Gnosis EEZ at the same address with the same storage the moment the fork activates. You do not redeploy, migrate liquidity or ask users to switch networks.
 
 The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 1 until then, and the rest of this documentation stays accurate for building on it.
@@ -6259,11 +6209,11 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 
 | | On Gnosis Chain today | After the fork |
 | --- | --- | --- |
-| Contracts and state | Deployed and verified on Blockscout | Carried over unchanged, same addresses, same storage |
+| Contracts and state | Deployed and verified on Gnosisscan | Carried over unchanged, same addresses, same storage |
 | Gas token | xDai | xDai, with no change at launch |
-| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Under [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems. |
+| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Under the transition approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems. |
 | EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes. |
-| Tooling | Blockscout, RPC providers, indexers | The same tooling, pointed at the same chain |
+| Tooling | Gnosisscan, RPC providers, indexers | The same tooling, pointed at the same chain |
 | Components | Monerium EURe, Safe, CoW Protocol, Gnosis Pay, Spark, Aave, Balancer, Curve, Backed, Circles | All carried over with their contracts and liquidity |
 
 ## What changes
@@ -6281,13 +6231,15 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 
 ## For validators and node operators
 
-The Gnosis Chain validator set is retired when the fork activates. GnosisDAO approved this in [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), which sets out the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
+The Gnosis Chain validator set is retired when the fork activates. GnosisDAO has approved the transition, including the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
 
 Node operators who run RPC or archive nodes keep running an execution client. The consensus-layer client is no longer needed after the fork.
 
+The [validator and node operator runbook](/validators/eez-transition) has a checklist for each role.
+
 ## What is not in the first release
 
-The brand rule for EEZ is to name limits before anyone else does, so here they are.
+Here are the limits of the first release.
 
 - **One direction of synchronous calls.** At launch, a contract on Gnosis EEZ can call a contract on Ethereum and use the result in the same transaction. The reverse direction, Ethereum calling into Gnosis EEZ, and full nested calls follow in 2027.
 - **Interim proving at genesis.** The first release uses an interim proving setup, likely TEE-based, and moves to real-time ZK proving as the Zisk prover reaches its latency target.
@@ -6298,7 +6250,7 @@ Progress against each of these is tracked on the [timeline](/eez/timeline).
 
 ## What this means if you build on Gnosis Chain
 
-Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on ZK-proven blocks that settle to Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/launch-partner) sets out what that includes.
+Deploy now and your application is on Gnosis EEZ at launch without a second deployment. The teams live before the fork are the first to run on blocks that are proven and settled on Ethereum, with mainnet assets, liquidity and prices in reach from the same transaction. [Become a launch partner](/launch-partner) sets out what that includes.
 
 ---
 
@@ -6327,7 +6279,7 @@ The framework is published by the EEZ Association. The pieces an integrator will
 | `IProofSystem` | The interface a proof system implements. Zisk is one implementation. |
 | `CrossChainProxy` | Executes a call on the other side of the Ethereum and instance boundary |
 
-The implementation is early-stage, not audited and has no mainnet deployment yet. Addresses are published here when they exist, and only after they have been checked against Blockscout.
+The implementation is early-stage, not audited and has no mainnet deployment yet. Addresses are published here when they exist, and only after they have been checked on-chain.
 
 ## Execution and the EVM
 
@@ -6364,6 +6316,23 @@ The [timeline](/eez/timeline) shows when each of these is expected to close.
 
 ---
 
+// File: eez/what-is-possible
+
+# What is possible on Gnosis EEZ
+
+Every L2 so far has been a bridge away from the assets, liquidity and price feeds on Ethereum mainnet. Gnosis EEZ will close that gap with synchronous composability: a contract on Gnosis EEZ will be able to call a contract on Ethereum mainnet and use the result in the same transaction, and if any step fails, the whole transaction reverts. Apps will keep fast blocks and low fees, and reach mainnet depth when they need it. At launch, calls will run from Gnosis EEZ into Ethereum, with the reverse direction and nested calls following in 2027, as set out in [how it works](/eez/how-it-works).
+
+The [request for builders](/use-cases/what-is-possible) sets out what that makes possible, with what we want built and how to apply as a design partner:
+
+1. [The lead lending market for RWA collateral](/use-cases/what-is-possible/lending-market-rwa-collateral)
+2. [An options venue](/use-cases/what-is-possible/options-venue)
+3. [A perps venue](/use-cases/what-is-possible/perps-venue)
+4. [A prediction market](/use-cases/what-is-possible/prediction-market)
+5. [Native infrastructure](/use-cases/what-is-possible/native-infrastructure)
+6. [Hybrid apps](/use-cases/what-is-possible/hybrid-apps)
+
+---
+
 // File: eez/timeline
 
 # Timeline
@@ -6374,22 +6343,22 @@ Dates below the current quarter are indicative. They move when engineering or go
 | --- | --- | --- |
 | March 2026 | EEZ announced at EthCC. Gnosis and Zisk named as co-leads, Ethereum Foundation co-funding confirmed. | Done |
 | Mid 2026 | First EEZ rollup running in test. Core contracts published by the EEZ Association. | Done |
-| July 2026 | [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397) passed: GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
+| July 2026 | GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
 | H2 2026 | EEZ devnet running end-to-end cross-chain execution. Fork on the Chiado testnet. Launch partners test their deployments. | In progress |
-| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. GIP-153 targets genesis for December 2026 to January 2027. | Planned |
+| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
 | 2027 | Calls from Ethereum into Gnosis EEZ, nested calls and full bidirectional composability. Real-time ZK proving. Instance-to-instance calls. | Planned |
 
 ## What to watch
 
 - **The Chiado fork.** The testnet fork is the first thing a launch partner can test against. The [announcement bar](/) links to it when it is live.
-- **The activation block.** GnosisDAO approved the transition in [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397). The activation block for the mainnet fork is announced closer to genesis and published here.
+- **The activation block.** GnosisDAO has approved the transition. The activation block for the mainnet fork is announced closer to genesis and published here.
 - **Audit results.** Published before mainnet activation.
 
 ## Before and after, in one table
 
 | | Before the fork | After the fork |
 | --- | --- | --- |
-| What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, a ZK-proven instance settling to Ethereum |
+| What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, an instance proven and settled on Ethereum (interim proving at genesis, then real-time ZK proofs) |
 | Your contracts | Deployed on Gnosis Chain | Unchanged, same addresses |
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
 | Reaching Ethereum | Through a bridge | In the same block |
@@ -6422,15 +6391,15 @@ Nothing at launch. xDai stays the gas token and the unit of account.
 
 ### What happens to GNO?
 
-GNO continues as the governance token. Under [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems.
+GNO continues as the governance token. Under the transition approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems.
 
 ### I run a validator. What should I do?
 
-Keep running. The validator set retires when the fork activates. [GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, sets out the sunset and the unlocking of staked GNO. There is no action to take before the activation block is announced.
+Keep running. The validator set retires when the fork activates, and staked GNO is unlocked when it does. GnosisDAO has approved the transition. There is no action to take before the activation block is announced. The [validator and node operator runbook](/validators/eez-transition) sets out each step.
 
 ### I run an RPC or archive node. What changes?
 
-You keep an execution client. The consensus-layer client is no longer needed after the fork.
+You keep an execution client. The consensus-layer client is no longer needed after the fork. See the [validator and node operator runbook](/validators/eez-transition).
 
 ### Will the bridges keep working?
 
@@ -6442,11 +6411,11 @@ No. Only the validator set retires. The chain, its state, its contracts and its 
 
 ### Is Gnosis EEZ an L2?
 
-It is an instance of the Ethereum Economic Zone: a chain whose blocks are ZK-proven and settled on Ethereum, and which can be called from Ethereum in the same block. Most people will call that an L2. The difference from a typical L2 is that there is no bridge between it and Ethereum.
+It is an instance of the Ethereum Economic Zone: a chain whose blocks are proven and settled on Ethereum, starting with an interim proving setup and moving to real-time ZK proofs, and which can be called from Ethereum in the same block. Most people will call that an L2. The difference from a typical L2 is that there is no bridge between it and Ethereum.
 
 ### When exactly is the fork?
 
-[GIP-153](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397), approved by GnosisDAO, targets genesis for December 2026 to January 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
+Gnosis EEZ genesis is targeted for Q1 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
 ### What is not ready at launch?
 
@@ -6455,290 +6424,6 @@ Calls from Ethereum into Gnosis EEZ, nested calls, instance-to-instance calls, a
 ### How do I get involved before launch?
 
 [Become a launch partner](/launch-partner).
-
----
-
-// File: eez/what-is-possible/README
-
-# What is possible on EEZ: a request for builders
-
-Synchronous composability changes what can be built on an L2. This section sets out four DeFi venues, and the infrastructure under them, that become possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
-
-## Why now
-
-Building DeFi on an L2 has always meant a trade. You get fast blocks and cheap transactions, and you give up mainnet: its liquidity, its money markets, its price feeds. So native venues start isolated: thin books, bridged collateral, and liquidations that depend on liquidity sitting on another chain.
-
-Synchronous composability changes that. Apps and infrastructure built natively on Gnosis EEZ keep L2 speed and cost, and can still call mainnet DEXs, money markets, oracles and stablecoins in the same transaction when they need depth. If any step fails, the whole thing reverts. Native liquidity on Gnosis EEZ and mainnet liquidity reinforce each other instead of competing. No existing L2 offers this today.
-
-## What you build on
-
-- **Synchronous composability with mainnet.** A contract on Gnosis EEZ can call L1 apps and infrastructure and use the result in the same transaction, so you use mainnet depth without fragmenting it.
-- **2-second blocks, sub-cent fees.** Fast enough for order books and high-frequency markets, with a composing block every Ethereum slot.
-- **Ethereum settlement.** State is proven every Ethereum block and settles to L1.
-- **L1 as a building block.** Mainnet money markets, DEXs, oracles and stablecoins are usable from the L2 as they stand. Native Gnosis EEZ apps compose with them directly.
-
-For each build below the question is the same: what becomes possible when the L2 and L1 parts of a product share one atomic transaction?
-
-## The requests
-
-<CardContainer>
-    <Card
-        title="1. The lead lending market for RWA collateral"
-        subtitle="Hold the canonical asset, liquidate atomically against mainnet liquidity, and lend euro e-money and dollar stablecoins sourced from L1."
-        url="/eez/what-is-possible/lending-market-rwa-collateral"
-    />
-    <Card
-        title="2. An options venue"
-        subtitle="Quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot atomically. RWA underlyings as a first-class market."
-        url="/eez/what-is-possible/options-venue"
-    />
-    <Card
-        title="3. A perps venue"
-        subtitle="App-chain performance without the app-chain trade-off. Collateral straight from mainnet, liquidations routed to whichever L1 venue has depth."
-        url="/eez/what-is-possible/perps-venue"
-    />
-    <Card
-        title="4. A prediction market"
-        subtitle="Conditional Tokens with mainnet collateral, idle capital earning on L1, and resolution that reads Ethereum state directly."
-        url="/eez/what-is-possible/prediction-market"
-    />
-    <Card
-        title="5. Native infrastructure"
-        subtitle="Oracles, indexers, solvers and custodians designed for a transaction that touches two chains."
-        url="/eez/what-is-possible/native-infrastructure"
-    />
-    <Card
-        title="6. Hybrid apps"
-        subtitle="Keep liquidity and settlement on L1. Run matching, risk and high-churn state on Gnosis EEZ. Both halves in one atomic transaction."
-        url="/eez/what-is-possible/hybrid-apps"
-    />
-</CardContainer>
-
-## What you get
-
-We are looking for design partners, not just deployments. Teams we work with will get:
-
-- Early access to the EEZ devnet, which already runs end-to-end cross-chain execution.
-- Direct work with the Gnosis engineering team on integration, from devnet to genesis.
-- Introductions across the EEZ Alliance, including Aave, Safe, CoW Swap, Centrifuge, Monerium and xStocks.
-
-## What to know
-
-Gnosis EEZ genesis is targeted for December 2026 to January 2027. At launch, composability runs from Gnosis EEZ into Ethereum: your contracts can call mainnet atomically. Full bidirectional composability, nested calls and real-time ZK proving follow in 2027. Build for the first and design for the second.
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-The route in is the same as for every [launch partner](/launch-partner): deploy on Gnosis Chain now, and you are in production on Gnosis EEZ at genesis.
-
-## Sources
-
-- [GIP-153: Should Gnosis Chain transition into the Ethereum Economic Zone?](https://forum.gnosis.io/t/gip-153-should-gnosis-chain-transition-into-the-ethereum-economic-zone/12397)
-- [On-Chain Options Volume Hits a Two-Year High (Cryptorank)](https://cryptorank.io/insights/analytics/on-chain-options-volume-hits-a-two-year-high)
-
----
-
-// File: eez/what-is-possible/lending-market-rwa-collateral
-
-# The lead lending market for RWA collateral
-
-Tokenised treasuries, credit and equities are live onchain. Using them as collateral is still hard. Each chain holds a bridged wrapper of the asset, and liquidity for liquidations sits elsewhere.
-
-On Gnosis EEZ a lending market can hold the canonical asset rather than a wrapper, because issuers can deploy one asset zone-wide. When a position needs liquidating, the market can sell collateral into mainnet liquidity in the same transaction it detects the shortfall. No bridge leg, no stranded bad debt waiting on a cross-chain message.
-
-The market also doesn't have to start empty. It can source liquidity from mainnet money markets atomically, route a borrow to wherever rates are best, or refinance a position from L1 in a single transaction, while users get L2 speed and fees.
-
-## What we want
-
-We want one team to be the anchor lending market for Gnosis EEZ. The ideal build:
-
-- Accepts tokenised treasuries, private credit and tokenised equities as collateral.
-- Liquidates atomically against mainnet liquidity.
-- Lends regulated euro e-money and dollar stablecoins sourced from mainnet.
-- Composes with L1 money markets for liquidity, refinancing and rate discovery in the same transaction.
-
-EEZ Alliance members already include Centrifuge, xStocks and Monerium on the asset side. We are working with capital markets and institutional asset issuers to bring new tokenised products. You would be the venue that makes those assets productive.
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
-
----
-
-// File: eez/what-is-possible/options-venue
-
-# An options venue
-
-Onchain options are finally scaling. Notional volume hit $7.52B in Q3 2026, a two-year high, and one venue did most of it by running its own L2 with an order book and portfolio margin. That works, but it trades shared liquidity for speed: market makers hedge against spot that lives elsewhere, and collateral has to be bridged in.
-
-Gnosis EEZ removes that gap. A venue can quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot liquidity atomically. Writers and market makers keep one pool of capital instead of splitting inventory across chains.
-
-The set of underlyings widens too. A venue can list options on any asset with mainnet liquidity, including tokenised equities and RWAs, and hedge against L1 venues atomically rather than maintaining its own spot market.
-
-## What we want
-
-We want a venue that:
-
-- Lists options on ETH, majors and tokenised equities, with RWA underlyings as a first-class market.
-- Hedges and settles atomically against mainnet liquidity.
-- Offers structured products that compose with L1, such as a covered call vault that keeps its collateral in a mainnet money market until it is needed.
-- Reads mainnet price feeds atomically at exercise and settlement.
-
-Source: [On-Chain Options Volume Hits a Two-Year High (Cryptorank)](https://cryptorank.io/insights/analytics/on-chain-options-volume-hits-a-two-year-high).
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
-
----
-
-// File: eez/what-is-possible/perps-venue
-
-# A perps venue
-
-The best-performing perps venues today run on their own chains. They got speed, and paid for it with isolation: users bridge collateral in, liquidity bootstraps from zero, and the venue sits outside Ethereum's capital base.
-
-Gnosis EEZ gives you app-chain performance without the app-chain trade-off. Match on 2-second blocks with sub-cent fees. Accept mainnet stablecoins and yield-bearing collateral without a bridge. Rebalance the insurance fund, hedge LP exposure or unwind a liquidation against mainnet liquidity in one atomic transaction.
-
-Composability also opens designs a standalone chain can't support: margin that stays productive in mainnet protocols until it is called, and liquidations that route to whichever L1 venue has depth at that moment.
-
-## What we want
-
-We want a venue that:
-
-- Runs a performant order book or hybrid design on 2-second blocks.
-- Takes collateral straight from mainnet, with no bridge step for the user.
-- Lists RWA and tokenised equity perps alongside crypto majors.
-- Hedges and liquidates against mainnet spot and lending markets atomically.
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
-
----
-
-// File: eez/what-is-possible/prediction-market
-
-# A prediction market
-
-Gnosis built the Conditional Tokens framework that today's largest prediction markets run on. The next design step is markets whose collateral and resolution touch L1 directly.
-
-Prediction markets are high-frequency and small-ticket. They need fast blocks and fees that disappear into the trade, which Gnosis EEZ delivers with 2-second blocks and sub-cent costs. What current markets have lacked is access: users bridge stablecoins in, and capital sits idle until resolution.
-
-On Gnosis EEZ, markets can settle in mainnet stablecoins without a bridge, and idle collateral can sit in an L1 money market and be pulled back atomically when a trader exits. Markets can also read Ethereum state directly, resolving on onchain events such as a governance vote or a protocol parameter without an oracle hop.
-
-## What we want
-
-We want a market that:
-
-- Uses Conditional Tokens or a successor design, with deep liquidity on short-dated markets.
-- Settles in dollars and euros, sourcing collateral from mainnet atomically.
-- Resolves through credible subjective oracles, with disputes handled transparently.
-- Keeps idle collateral earning on L1, withdrawn atomically when positions close.
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
-
----
-
-// File: eez/what-is-possible/native-infrastructure
-
-# Native infrastructure
-
-The four venues in this section need components designed for a chain that composes with Ethereum every slot. Existing tooling assumes a transaction lives on one chain. On Gnosis EEZ it may touch two.
-
-## Oracles
-
-**Price feeds.** Mainnet feeds are readable atomically, so the gap is speed and coverage: low-latency feeds that update on 2-second blocks for perps and options, and NAV and reference-rate feeds for RWA collateral.
-
-**Subjective oracles.** Prediction markets, RWA attestations and insurance all need answers no price feed can give. We want resolution layers with clear dispute processes, that can read L1 state where an answer already lives onchain.
-
-## Indexers
-
-A single atomic transaction can now update state on Gnosis EEZ and on Ethereum. We want indexers and data APIs that follow those calls end to end, so a lending market can show one position across both, and a wallet can show a user's activity in one view.
-
-## Solvers
-
-On a standalone L2, a solver fills orders from local liquidity or holds inventory on both sides of a bridge. On Gnosis EEZ, a solver can fill an L2 order against mainnet DEXs and money markets in the same transaction, with no inventory to pre-position and no settlement risk between legs. We want solvers for swaps, liquidations and intent-based orders that treat L1 and L2 liquidity as one book, including CoW Swap solvers extending batch auctions across the zone.
-
-## Custodians
-
-Institutions need custody that treats Gnosis EEZ and mainnet as one account, with policy engines that understand atomic cross-chain calls. We want custodians and wallet infrastructure, including Safe modules, that let a regulated business hold, move and use assets across the zone under one set of controls.
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
-
----
-
-// File: eez/what-is-possible/hybrid-apps
-
-# Hybrid apps
-
-Not every app needs to leave Ethereum. A mainnet protocol can keep its contracts, liquidity and settlement on L1, and run its heavy or high-churn logic, such as matching or a risk engine, on Gnosis EEZ with 2-second blocks and sub-cent fees. Both halves share one atomic transaction: both land or neither does.
-
-Sync calls carry a per-block verification cost on L1, so they suit high-value moments: deposit-and-use, liquidations against L1 prices and settlement. Everything else runs as ordinary Gnosis EEZ traffic. At launch, calls run from Gnosis EEZ into L1. L1 contracts calling into Gnosis EEZ follow with bidirectional composability in 2027.
-
-## What we want
-
-We want mainnet teams that:
-
-- Keep liquidity and settlement on L1 and move matching, risk or high-churn state to Gnosis EEZ.
-- Reserve sync calls for high-value flows.
-- Would rather build on Gnosis EEZ than operate their own sequencer, composer and prover.
-
-## Apply
-
-Tell us what you are building, which request it answers, and which EEZ attribute your product can't work without. We read everything.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
-</div>
-
-What design partners get, what to know about the first release, and the other requests are on the [request for builders](/eez/what-is-possible) overview.
 
 ---
 
@@ -6982,23 +6667,20 @@ main();
 
 // File: launch-partner/README
 
-# Become a launch partner
+# What it means to be a launch partner
 
-**Deploy on Gnosis Chain now. Launch on Gnosis EEZ in Q1 2027.**
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no token of its own, and it is not a Gnosis product. Gnosis EEZ is its first instance, operated by Gnosis.
 
-Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after. That is what makes a launch partner programme possible without a migration: you deploy on a Layer 1 that is live and used today, and you are in production on the first EEZ instance the moment it activates.
+Gnosis EEZ goes live by hard-forking the state of Gnosis Chain. Every contract, balance and address on the chain the day before the fork is on Gnosis EEZ the day after, so there is nothing to migrate.
 
-Launch partners are the first project teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, in production, with real users.
+Launch partners deploy on Gnosis Chain now and are in production on Gnosis EEZ the moment it activates in Q1 2027. They are the first teams to run on technology built by Gnosis and Zisk and co-funded by the Ethereum Foundation, with real users.
 
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
-  <a className="button button--secondary button--lg" href="/developers/quickstart">Deploy your first contract</a>
-</div>
+To start, [deploy now](/launch-partner/deploy-now) or [book a call with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9).
 
 ## Why deploy before the fork
 
 - **No second deployment.** The fork carries state across. Teams that are live before it are live after it, at the same addresses.
-- **First in production.** Launch partners run on ZK-proven blocks that settle to Ethereum from the first day, before the programme opens to everyone.
+- **First in production.** Launch partners are the first teams running on Gnosis EEZ, before the programme opens to everyone. Blocks settle to Ethereum from activation. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works).
 - **Ethereum in the same block.** Mainnet assets, liquidity and prices become reachable from a Gnosis EEZ transaction without a bridge. Launch partners are the first applications to use that in production.
 - **Users and liquidity are already here.** Gnosis Chain has regulated euro e-money, a self-custodial card, intent-based trading and tokenised assets live today. Deploying now puts you next to them.
 - **A say in what ships.** The compliance, privacy and freeze-control components are built with design partners. Launch partners are the first in the room.
@@ -7024,8 +6706,8 @@ There is no fee and no token allocation. The programme is about being first, not
 
 ## How to join
 
-1. **Deploy on Gnosis Chain.** If you are starting from nothing, [deploy your first contract](/start/guides/deploy-your-first-contract) takes about 30 minutes and ends with a verified contract. If you have a protocol on Ethereum, the [developer overview](/developers/overview) covers the network details and the components you can call.
-2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked against Blockscout before they are listed.
+1. **Deploy on Gnosis Chain.** [Deploy now](/launch-partner/deploy-now) takes you from an empty directory to a verified contract on Gnosis Chain mainnet in about 45 minutes. That deployment is what carries over at the fork. If you already have a protocol on Ethereum, [Building on Gnosis EEZ](/use-cases/build) covers the network details and the components you can call.
+2. **Register your deployment.** Submit your contracts to the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked on-chain before they are listed.
 3. **Book a call.** [Book time with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership, agree what you need from the first release and get access to the testnet fork. You can also reach the team on [Discord](https://discord.gg/gnosis).
 
 ## Timeline
@@ -7045,19 +6727,312 @@ The [use cases](/use-cases) section sets out what the launch means for each kind
 
 ---
 
+// File: launch-partner/deploy-now
+
+# Deploy now: from nothing to a verified contract on Gnosis Chain
+
+**Job:** deploy and verify a contract on Gnosis Chain mainnet. **Time:** about 45 minutes. **Chains:** Chiado testnet, then Gnosis mainnet.
+
+**Prerequisites:** a terminal on macOS or Linux, Git, a free [Etherscan API key](https://etherscan.io/myapikey) for verifying on mainnet, and a small amount of xDai on Gnosis Chain for the mainnet step. Around one xDai is far more than you need.
+
+This guide takes you from an empty directory to a contract on Gnosis Chain mainnet whose source anyone can read on the block explorer. You rehearse every step on Chiado first, where nothing costs real money, then repeat it on mainnet.
+
+**Why mainnet matters here.** Gnosis EEZ goes live by hard-forking the state of Gnosis Chain mainnet. A contract you deploy on mainnet today is on Gnosis EEZ at the same address the moment the fork activates. A contract on Chiado is not. Chiado is for rehearsal, and it gets its own fork for testing before mainnet.
+
+Every step ends in something you can see. If a step does not produce the result described, stop there. The next step will not work.
+
+## Install Foundry
+
+Foundry is the toolchain you will use to compile, test, deploy and verify. Install it, or run `foundryup` to update an existing install:
+
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+```
+
+Open a new terminal and run the installer it placed on your path:
+
+```bash
+foundryup
+```
+
+Check it worked:
+
+```bash
+forge --version
+```
+
+You should see a version string. You now have three commands: `forge` builds, tests and deploys, `cast` reads and writes single calls, and `anvil` runs a local node.
+
+## Create the project
+
+Make a new Foundry project and move into it:
+
+```bash
+forge init gnosis-launch
+cd gnosis-launch
+```
+
+Confirm it compiles:
+
+```bash
+forge build
+```
+
+You should see `Compiler run successful`.
+
+## Write the contract
+
+Replace `src/Counter.sol` with a contract that records who deployed it and counts how many times it has been incremented. It is small on purpose: the point of this guide is the deployment loop, not the contract.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Counter {
+    address public immutable deployer;
+    uint256 public count;
+
+    event Incremented(address indexed by, uint256 newCount);
+
+    constructor() {
+        deployer = msg.sender;
+    }
+
+    function increment() external {
+        count += 1;
+        emit Incremented(msg.sender, count);
+    }
+}
+```
+
+## Test it locally
+
+Replace `test/Counter.t.sol` with a test that checks both pieces of state:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import {Test} from "forge-std/Test.sol";
+import {Counter} from "../src/Counter.sol";
+
+contract CounterTest is Test {
+    Counter counter;
+
+    function setUp() public {
+        counter = new Counter();
+    }
+
+    function test_RecordsDeployer() public view {
+        assertEq(counter.deployer(), address(this));
+    }
+
+    function test_Increments() public {
+        counter.increment();
+        counter.increment();
+        assertEq(counter.count(), 2);
+    }
+}
+```
+
+Delete `script/Counter.s.sol`, which the template created for the old contract, then run the tests:
+
+```bash
+rm script/Counter.s.sol
+forge test
+```
+
+You should see two tests passing. Nothing has touched a network yet.
+
+## Rehearse on Chiado
+
+### Create a testnet account
+
+Generate an account and store it encrypted in Foundry's keystore, so no private key ends up in your shell history:
+
+```bash
+cast wallet new
+```
+
+Copy the private key it prints, then import it under the name `chiado-dev`:
+
+```bash
+cast wallet import chiado-dev --interactive
+```
+
+Paste the key, choose a password, and confirm it is stored:
+
+```bash
+cast wallet list
+```
+
+### Fund it from the faucet
+
+Request test xDai for the address at the [Chiado faucet](https://faucet.gnosischain.com/?chain=chiado), then check it arrived:
+
+```bash
+cast balance <TESTNET_ADDRESS> --rpc-url https://rpc.chiadochain.net
+```
+
+Anything above zero is enough. If it prints `0`, wait a few seconds and try again.
+
+### Deploy and verify
+
+Deploy:
+
+```bash
+forge create src/Counter.sol:Counter \
+  --rpc-url https://rpc.chiadochain.net \
+  --account chiado-dev \
+  --broadcast
+```
+
+Enter your keystore password. Foundry prints the deployer, the new contract address and the transaction hash. Then verify the source on Blockscout, replacing `<CONTRACT>` with the address it printed:
+
+```bash
+forge verify-contract <CONTRACT> src/Counter.sol:Counter \
+  --chain 10200 \
+  --verifier blockscout \
+  --verifier-url https://gnosis-chiado.blockscout.com/api/
+```
+
+On success it prints `Contract successfully verified`. Open `https://gnosis-chiado.blockscout.com/address/<CONTRACT>` and check the code tab shows your Solidity source.
+
+If both commands worked, the mainnet steps below will work the same way. The differences are the account, the RPC URL, the chain ID, and the explorer: Chiado uses Blockscout, and mainnet uses [Gnosisscan](https://gnosisscan.io).
+
+## Deploy to Gnosis Chain mainnet
+
+### Create a separate mainnet account
+
+Do not reuse the testnet key. Generate a fresh one and import it under a different name:
+
+```bash
+cast wallet new
+cast wallet import gnosis-deployer --interactive
+```
+
+:::warning
+This account will hold real funds. Keep the private key out of chat windows, files you might commit, and shared machines. For a production deployment, Foundry also accepts `--ledger` or `--trezor` in place of `--account`, so the key never leaves a hardware wallet.
+:::
+
+### Fund it with xDai
+
+xDai is the gas token on Gnosis Chain. A deployment like this one costs a fraction of a cent. Get xDai to your new address in either of two ways:
+
+- **Bridge from Ethereum** at [bridge.gnosischain.com](https://bridge.gnosischain.com). [Use Gnosis Bridge](/bridges/usebridges) walks through it.
+- **Withdraw directly to Gnosis Chain** from an exchange or wallet that supports it.
+
+Check it arrived:
+
+```bash
+cast balance <MAINNET_ADDRESS> --ether --rpc-url https://rpc.gnosischain.com
+```
+
+### Deploy
+
+```bash
+forge create src/Counter.sol:Counter \
+  --rpc-url https://rpc.gnosischain.com \
+  --account gnosis-deployer \
+  --broadcast
+```
+
+Copy the contract address it prints. From here `<CONTRACT>` means the mainnet address.
+
+### Verify
+
+Mainnet verification goes to Gnosisscan through Etherscan's multichain API, so one Etherscan key covers Gnosis Chain. Put the key in your environment rather than on the command line:
+
+```bash
+export ETHERSCAN_API_KEY=<YOUR_KEY>
+```
+
+Then verify:
+
+```bash
+forge verify-contract <CONTRACT> src/Counter.sol:Counter \
+  --chain 100 \
+  --verifier etherscan \
+  --etherscan-api-key $ETHERSCAN_API_KEY
+```
+
+On success it prints `Contract successfully verified`. Open `https://gnosisscan.io/address/<CONTRACT>`. The **Contract** tab shows your source with a verified tick, and **Read Contract** and **Write Contract** are available.
+
+If you would rather not create an Etherscan account, Sourcify verifies Gnosis Chain contracts with no key. Swap the last two flags for `--verifier sourcify`. The source is then published on [Sourcify](https://sourcify.dev) rather than shown on Gnosisscan.
+
+## Read it back
+
+Change the state once:
+
+```bash
+cast send <CONTRACT> "increment()" \
+  --rpc-url https://rpc.gnosischain.com \
+  --account gnosis-deployer
+```
+
+The receipt shows a `status` of `1 (success)`. Read the count and the deployer:
+
+```bash
+cast call <CONTRACT> "count()(uint256)" --rpc-url https://rpc.gnosischain.com
+cast call <CONTRACT> "deployer()(address)" --rpc-url https://rpc.gnosischain.com
+```
+
+The first prints `1`. The second prints your mainnet deployer address.
+
+If you use the Gnosis EEZ MCP server, your agent can make the same read with the `chain_read_contract` tool:
+
+```json
+{
+  "address": "<CONTRACT>",
+  "abi_fragment": "function count() view returns (uint256)",
+  "function": "count",
+  "chain_id": 100
+}
+```
+
+## What happens at the fork
+
+Nothing you need to do. When Gnosis EEZ activates, this contract keeps:
+
+| | Today | After the fork |
+| --- | --- | --- |
+| Address | `<CONTRACT>` | `<CONTRACT>` |
+| Storage | `count` is `1` | `count` is `1` |
+| Verified source | On Gnosisscan | On Gnosisscan |
+| Gas token | xDai | xDai |
+| Your keys and tooling | `gnosis-deployer`, Foundry | Unchanged |
+
+What changes is around it: blocks every 2 seconds, proven and settled on Ethereum (an interim proving setup at genesis, then real-time ZK proofs), and the ability to call Ethereum mainnet contracts in the same transaction. [Gnosis EEZ: the first instance](/eez/gnosis-eez) has the full comparison.
+
+## Register as a launch partner
+
+You now have a verified contract on the chain that becomes Gnosis EEZ. Two steps make it count:
+
+1. **Register the deployment** in the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked before they are listed, and the listing is what developers and agents see through the Gnosis EEZ MCP server.
+2. **Book a call** with the [ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership and get access to the Chiado fork when it opens.
+
+## Next steps
+
+- Replace `Counter` with your own contracts. The loop is the same: test, rehearse on Chiado, deploy and verify on mainnet.
+- [Accept stablecoin payments](/start/guides/accept-stablecoin-payments) puts an EURe or USDC transfer through a contract you control.
+- [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow) calls a protocol that lives at the same address on Gnosis Chain and Ethereum.
+- [What is possible on Gnosis EEZ](/eez/what-is-possible) sets out what we want built once mainnet is a same-transaction call away.
+
+---
+
 // File: start/README
+
+import ComponentsTable from '@site/docs/_partials/_components-table.mdx';
 
 # Embed Ethereum's economy in your product.
 
-Gnosis EEZ gives fintechs open finance components with consumer-grade guardrails: yield, savings, investing and payments that reach mainnet assets and liquidity in the same transaction. The guides here take you from nothing to a result you can verify on-chain.
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no token of its own. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027.
+
+Gnosis Chain gives fintechs open finance components with consumer-grade guardrails today: yield, savings, investing and payments. On Gnosis EEZ they will reach mainnet assets and liquidity in the same transaction. The guides here take you from nothing to a result you can verify on-chain.
 
 ## About Gnosis Chain
 
-Gnosis Chain is a community-owned EVM-based network operated by a diverse set of validators around the world. It is one of Ethereum's first sidechains focused on resilience and credible neutrality as its core values. Currently, there are over 200,000 validators who secure the network.
-
-Gnosis Chain uses a DAO governance mechanism to ensure anyone can participate in the decision-making processes regarding the development and future of the network. Creating dApps and integrating with Gnosis Chain products is similar to any other EVM-based blockchain. You can find more details in the [protocol specification](/about/specs).
-
-**Fees.** Each transaction on Gnosis Chain (sending tokens, interacting with smart contracts, etc.) is associated with a fee in the xDai stablecoin. This is one of the main differences from other EVM chains, where users pay in a native token of that network — it reduces volatility risk and simplifies the development experience. Transaction fees are not split among pool participants of the validation process; they are received only by the validator who sealed the block. Note this is subject to change — as the network grows, fees may be redirected to support additional aspects of the protocol.
+Gnosis Chain is a community-owned EVM L1 with 5-second blocks, secured by over 200,000 validators, with fees paid in the xDai stablecoin. Read the [Gnosis Chain overview](/about) for networks, tokens and chain specifications.
 
 ## Embedded components
 
@@ -7099,9 +7074,15 @@ Every route is a bundle of the same eight components. You switch on the ones you
 | Secured Credit | Lombard lending |
 | Identity and Rewards | batch AML and a loyalty ledger |
 
+### Who provides them
+
+The components are built from projects live on Gnosis Chain today.
+
+<ComponentsTable />
+
 ## If you are not a fintech
 
-The routes above are built around embedding finance components. If you are deploying a contract, running infrastructure, or bridging assets, start from the [developer overview](/developers/overview) instead.
+The routes above are built around embedding finance components. If you are deploying a contract, running infrastructure, or bridging assets, start from [Building on Gnosis EEZ](/use-cases/build) instead.
 
 ---
 
@@ -7383,7 +7364,7 @@ Verification publishes your source code and links it to the deployed bytecode, s
 
 ```bash
 forge verify-contract <CONTRACT> src/Counter.sol:Counter \
-  --chain-id 10200 \
+  --chain 10200 \
   --verifier blockscout \
   --verifier-url https://gnosis-chiado.blockscout.com/api/
 ```
@@ -7439,7 +7420,7 @@ Everything above works identically on Gnosis mainnet. Three things change:
 | --- | --- | --- |
 | Chain ID | 10200 | 100 |
 | RPC URL | `https://rpc.chiadochain.net` | `https://rpc.gnosischain.com` |
-| Explorer | `https://gnosis-chiado.blockscout.com` | `https://gnosis.blockscout.com` |
+| Explorer | `https://gnosis-chiado.blockscout.com` | `https://gnosisscan.io` |
 
 The gas token on mainnet is xDai, and it is worth real money, though a deployment like this one costs a fraction of a cent. Fund the account by bridging at [bridge.gnosischain.com](https://bridge.gnosischain.com) rather than from a faucet.
 
@@ -7679,7 +7660,7 @@ Note the address as `<RECEIVER>`. Verify the source so the explorer shows it:
 
 ```bash
 forge verify-contract <RECEIVER> src/PaymentReceiver.sol:PaymentReceiver \
-  --chain-id 10200 \
+  --chain 10200 \
   --verifier blockscout \
   --verifier-url https://gnosis-chiado.blockscout.com/api/ \
   --constructor-args $(cast abi-encode "constructor(address)" <TOKEN>)
@@ -7757,7 +7738,7 @@ On Gnosis you use a real stablecoin, and you must not guess its address. Ask the
 
 That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://build.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
 
-Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain-id 100`.
+Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain 100`.
 
 :::warning
 Check the decimals of whichever stablecoin you use. EURe and WXDAI have 18 decimals; USDC on Gnosis has 6. An amount computed for 18 decimals sent to a 6-decimal token is a payment a million million times too large. Read `decimals()` rather than assuming.
@@ -7978,7 +7959,7 @@ Note the address as `<ASSET>`. Verify it:
 
 ```bash
 forge verify-contract <ASSET> src/TokenisedAsset.sol:TokenisedAsset \
-  --chain-id 10200 \
+  --chain 10200 \
   --verifier blockscout \
   --verifier-url https://gnosis-chiado.blockscout.com/api/ \
   --constructor-args $(cast abi-encode \
@@ -8044,7 +8025,7 @@ And `chain_get_token_info` returns the name, symbol, decimals and holder count a
 
 ## Switch to mainnet
 
-The contract deploys unchanged against `https://rpc.gnosischain.com` with `--chain-id 100`.
+The contract deploys unchanged against `https://rpc.gnosischain.com` with `--chain 100`.
 
 What changes is everything around it. Before issuing on mainnet you need the legal structure from the scope note, a real document at a durable URI whose hash you have committed, and a decision about transfer restrictions. Most regulated instruments cannot trade freely to any address, which means an allowlist or a permissioned transfer hook this contract does not have.
 
@@ -10781,7 +10762,7 @@ Chainlink offers a tutorial on using secure data feeds with Gnosis. [See it in a
 
 ## Addresses
 
-- **LINK Token on Gnosis**: [`0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2`](https://gnosis.blockscout.com/address/0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2)
+- **LINK Token on Gnosis**: [`0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2`](https://gnosisscan.io/address/0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2)
 - **Price Feeds on Gnosis:** [Latest list is available in the Chainlink Documentation](https://docs.chain.link/docs/data-feeds-gnosis-chain/#Gnosis%20Chain%20Mainnet)
 
 ## Basic Tutorial: Price Feeds
@@ -10884,12 +10865,14 @@ Once deployed, click to expand the contract. Click `getLatestPrice` to check the
 
 ## Verify Contract in BlockScout Block Explorer
 
+{/* TODO(ben): this walkthrough and its screenshots are specific to the Blockscout UI, so its links stay on Blockscout. Confirm whether to rewrite it for Gnosisscan, the mainnet explorer used elsewhere in the docs. */}
+
 ### 1) Find Deployed Contract
 
-For transparency and interaction purposes, you can verify your contract on [BlockScout](https://blockscout.com/xdai/mainnet/). _Note, if a contract with the same bytecode has already been deployed and verified, your contract code may be viewable._ [_See this example_](https://gnosis.blockscout.com/address/0x681ef0446AA72723256f1De4d1BE7Dd9bb7F84Cf/contracts)_._
+For transparency and interaction purposes, you can verify your contract on [BlockScout](https://gnosis.blockscout.com). _Note, if a contract with the same bytecode has already been deployed and verified, your contract code may be viewable._ [_See this example_](https://gnosis.blockscout.com/address/0x681ef0446AA72723256f1De4d1BE7Dd9bb7F84Cf?tab=contract)_._
 
 1. Copy the deployed contract address in Remix.
-2. Go to [BlockScout](https://blockscout.com/xdai/mainnet/) and paste into the search field.
+2. Go to [BlockScout](https://gnosis.blockscout.com) and paste into the search field.
 3. Click the Code tab for verification methods.
 4. Click the **Verify and Publish** Button.
 
@@ -11551,7 +11534,7 @@ RPC Providers implement the JSON RPC API that Dapps and developers can interact 
 
 - [JSON RPC API reference](https://ethereum.org/en/developers/docs/apis/json-rpc/)
 - [JSON RPC Postman](https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J?version=latest)
-- [Start developing in Gnosis](/developers/overview)
+- [Start developing in Gnosis](/use-cases/build)
 
 
 ## Gnosis
@@ -12224,9 +12207,34 @@ const metadata = await web3Name.getMetadata({ name: "public.gno" });
 
 // File: use-cases/README
 
+import ComponentsTable from '@site/docs/_partials/_components-table.mdx';
+
 # Use cases
 
-Every page in this section follows the same shape: who it is for, the problem today, what you can ship on Gnosis Chain now, what changes when Gnosis EEZ activates, and the guides to start with. Each one ends with the same call to action, because the route is the same for everyone: deploy now, and [launch with Gnosis EEZ in Q1 2027](/launch-partner).
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework. Rollups built on it are designed to settle to Ethereum and to call Ethereum mainnet contracts in the same transaction. The framework has no token and is not a Gnosis product.
+
+Gnosis EEZ is its first instance, operated by Gnosis. In Q1 2027 the state of Gnosis Chain will be hard-forked onto it, so everything live on Gnosis Chain today carries over without redeployment.
+
+This section shows what that means in practice. Start from what you are doing.
+
+## If you are building
+
+<CardContainer>
+    <Card
+        title="Building on Gnosis EEZ"
+        subtitle="The components live on Gnosis Chain today, the network details and where to start as a developer."
+        url="/use-cases/build"
+    />
+    <Card
+        title="What is possible: request for builders"
+        subtitle="Six builds that a same-transaction call to mainnet makes possible, and how to apply as a design partner."
+        url="/use-cases/what-is-possible"
+    />
+</CardContainer>
+
+## If you are choosing by audience
+
+Every audience page follows the same shape: who it is for, the problem today, what you can ship on Gnosis Chain now, what changes when Gnosis EEZ activates, and the guides to start with. Each one ends with the same call to action, because the route is the same for everyone: deploy now, and [launch with Gnosis EEZ in Q1 2027](/launch-partner).
 
 <CardContainer>
     <Card
@@ -12263,24 +12271,133 @@ Every page in this section follows the same shape: who it is for, the problem to
 
 ## The components every use case draws on
 
-The use cases are different arrangements of the same live components. Each one is deployed and verified on Gnosis Chain today and carries over to Gnosis EEZ unchanged.
+The use cases are different arrangements of the same live components.
 
-| Component | Provided by | What it gives you |
-| --- | --- | --- |
-| Euro and sterling e-money | Monerium | EURe and GBPe, regulated e-money redeemable one-for-one over IBAN |
-| Smart accounts | Safe | Multi-signature accounts, modules and batching |
-| Trading and settlement | CoW Protocol | Intent-based orders settled in batches by competing solvers |
-| Card settlement | Gnosis Pay | A Safe that holds EURe and settles Visa payments from it |
-| Savings and yield | Spark, Aave | sDAI as yield-bearing savings, plus lending markets |
-| Stable liquidity | Curve, Balancer | Low-slippage pools for like-priced assets |
-| Tokenised securities | Backed | bTokens tracking listed instruments, backed one-for-one with a custodian |
-| Identity and trust | Circles | Personal currencies on a web of trust |
+<ComponentsTable />
 
 Addresses come from the [ecosystem directory](https://build.gnosischain.com/) or the Gnosis EEZ MCP server. Never copy one from memory.
 
 ## A note on agents
 
 Agent-driven payments and trading are not a separate use case here. They cut across every page: an agent paying a merchant is a payments flow, an agent rebalancing a portfolio is a brokerage flow. The MCP server that serves this documentation and the ecosystem registry is the first piece of agent tooling, and more follows as the use cases above go live on Gnosis EEZ.
+
+---
+
+// File: use-cases/build
+
+import ComponentsTable from '@site/docs/_partials/_components-table.mdx';
+
+# Building on Gnosis EEZ
+
+The Ethereum Economic Zone (EEZ) is a neutral rollup framework. Rollups built on it settle to Ethereum and can call Ethereum mainnet contracts in the same transaction. The framework has no token and is not a Gnosis product. [What is the Ethereum Economic Zone](/eez) has the detail.
+
+Gnosis EEZ is its first instance, operated by Gnosis. In Q1 2027 the state of Gnosis Chain is hard-forked onto it, so contracts you deploy on Gnosis Chain today carry over to Gnosis EEZ unchanged, at the same addresses.
+
+Once Gnosis EEZ is live, a contract on it will be able to call Ethereum mainnet apps and infrastructure and use the result in the same transaction. If any step fails, the whole transaction reverts. State will be proven and settled to L1, starting with an interim proving setup before real-time ZK proofs ([how it works](/eez/how-it-works)).
+
+## What Gnosis Chain brings to Gnosis EEZ
+
+These are properties of Gnosis Chain today. Each one carries over to Gnosis EEZ at the fork.
+
+<FeatureGrid>
+    <FeatureCard imgUrl="/img/feature-card-icons/file-contract.svg" title="Components, not integrations">
+        <p>Euro e-money, savings, lending, trading and card settlement are already deployed and verified. You call contracts rather than onboarding a vendor for each capability.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/right-left-large.svg" title="Atomic composition">
+        <p>Because every component settles on one chain, a swap into a yield-bearing position or a payment funded from savings happens in the same transaction, with no bridge in the middle.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/rabbit-running.svg" title="Costs that suit consumer flows">
+        <p>Blocks settle every 5 seconds and the average transaction costs around $0.0001, so per-user actions such as rebalancing or streaming payments stay economic.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/arrow-circle.svg" title="Ethereum reach">
+        <p>Gnosis Chain is an EVM network with a <a href="/bridges">native bridge</a> to Ethereum. Protocols such as CoW deploy at the same addresses on both, so the same code reaches mainnet assets and liquidity.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/euro.svg" title="A stable unit of account">
+        <p>Gas is paid in <a href="/about/tokens/xdai">xDai</a>, and the euro leg is <a href="https://monerium.com">Monerium</a> EURe, regulated e-money redeemable one-for-one over IBAN. Neither leg exposes users to gas-token volatility.</p>
+    </FeatureCard>
+    <FeatureCard imgUrl="/img/feature-card-icons/badge-check.svg" title="Canonical addresses">
+        <p>The ecosystem registry publishes verified contract addresses for every listed project, reachable from your editor through the <a href="https://github.com/gnosischain/gnosis-ecosystem-mcp">Gnosis EEZ MCP server</a>.</p>
+    </FeatureCard>
+</FeatureGrid>
+
+## What is possible on EEZ
+
+Once Gnosis Chain becomes Gnosis EEZ, a contract here will be able to call Ethereum mainnet and use the result in the same transaction. The [request for builders](/use-cases/what-is-possible) sets out six builds that this makes possible or much better, from an RWA lending market to hybrid mainnet apps, with what we want built and how to apply as a design partner.
+
+<CardContainer>
+    <Card
+        title="Request for builders"
+        subtitle="Lending, options, perps, prediction markets, native infrastructure and hybrid apps, in detail."
+        url="/use-cases/what-is-possible"
+    />
+</CardContainer>
+
+## The component layer
+
+These are the pieces you compose.
+
+<ComponentsTable />
+
+Ask the MCP server for `eez_list_apps` to get the current registry, or `eez_get_contract_addresses` for canonical addresses that have been checked against Blockscout. Never copy an address from memory.
+
+## Network details
+
+These are the networks you deploy to today. When Gnosis EEZ activates, block time will drop to 2 seconds. Any other network parameter that changes will be published in the [network details](/about/networks/) before activation.
+
+| | Gnosis Chain | Chiado testnet |
+| --- | --- | --- |
+| Chain ID | 100 | 10200 |
+| RPC | `https://rpc.gnosischain.com` | `https://rpc.chiadochain.net` |
+| Explorer | [Gnosisscan](https://gnosisscan.io) | [Blockscout](https://gnosis-chiado.blockscout.com) |
+| Gas token | xDai | xDai (test) |
+| Block time | 5 seconds | 5 seconds |
+
+Full details are in [network overview](/about/networks/) and [useful contracts](/developers/Usefulcontracts).
+
+## Getting started
+
+Work through these in order if you are new to the chain. Each one ends in something you can check on an explorer.
+
+<CardContainer>
+    <Card
+        title="Quickstart"
+        subtitle="Deploy your first contract to Gnosis Chain with Remix, in about 15 minutes."
+        url="/developers/quickstart"
+    />
+    <Card
+        title="Development environments"
+        subtitle="Set up Foundry or Hardhat and point it at Gnosis or Chiado."
+        url="/category/deploy-contracts-on-gnosis"
+    />
+    <Card
+        title="Template contracts"
+        subtitle="Reference implementations for tokens, NFTs and a full-stack dApp."
+        url="/category/build-contracts-on-gnosis"
+    />
+    <Card
+        title="Interact with contracts"
+        subtitle="Read and write contract state from viem, ethers.js, web3.js or MetaMask."
+        url="/category/interact-with-contracts-on-gnosis"
+    />
+    <Card
+        title="Verify contracts"
+        subtitle="Publish your source to a block explorer or Sourcify so others can read it."
+        url="/developers/Verify Smart Contracts/"
+    />
+    <Card
+        title="Demo projects"
+        subtitle="End-to-end builds that compose Gnosis Chain components, starting from an empty directory."
+        url="/category/demo-projects"
+    />
+</CardContainer>
+
+## Resources
+
+- [Wallets](/tools/wallets): wallets that support Gnosis Chain.
+- [Faucets](/tools/Faucets): testnet funds for Chiado.
+- [RPC providers](/tools/RPC%20Providers/): public and hosted endpoints.
+- [Bridges](/bridges): move tokens and messages between Ethereum and Gnosis.
+- [Embed](/start): the component bundles for fintechs, with 0-1 guides for each.
 
 ---
 
@@ -12303,9 +12420,9 @@ A wallet that wants to offer yield needs a money market fund partner and a recon
 
 ## What changes with Gnosis EEZ
 
-- **Mainnet assets from the same account.** A user's Gnosis EEZ account can hold a position on Ethereum mainnet and a card balance on the instance, and act on both in one transaction. No bridge step in the user flow.
-- **Mainnet prices and liquidity for in-wallet swaps.** A swap inside the wallet can be filled from Ethereum liquidity in the same block, so the quote the user sees is the fill they get.
-- **Ethereum's security under the balance.** Blocks are ZK-proven and settled to Ethereum. For a risk committee, that is a different conversation from a sidechain with its own validator set.
+- **Mainnet assets from the same account.** A user's Gnosis EEZ account will be able to hold a position on Ethereum mainnet and a card balance on the instance, and act on both in one transaction. No bridge step in the user flow.
+- **Mainnet prices and liquidity for in-wallet swaps.** A swap inside the wallet will be filled from Ethereum liquidity in the same block, so the quote the user sees is the fill they get.
+- **Ethereum settlement under the balance.** Blocks will be proven and settled to Ethereum. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works). For a risk committee, that is a different conversation from a sidechain with its own validator set.
 - **Nothing to migrate.** The accounts, the EURe, the card integration and the yield positions carry over in the fork.
 
 ## Build path
@@ -12340,8 +12457,8 @@ A challenger has five jobs to do with a customer's money: hold it, make the idle
 
 ## What changes with Gnosis EEZ
 
-- **Ethereum under the account.** The customer's balance sits on an instance whose blocks are ZK-proven and settled to Ethereum. That is the settlement assurance a risk committee can approve once, for every product on the platform.
-- **Investing filled from mainnet.** A customer buying a tokenised asset gets the fill from Ethereum liquidity in the same block, with no bridge and no inventory held on two chains.
+- **Ethereum under the account.** The customer's balance will sit on an instance whose blocks are proven and settled to Ethereum. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works). A risk committee assesses one settlement model, once, for every product on the platform.
+- **Investing filled from mainnet.** A customer buying a tokenised asset will get the fill from Ethereum liquidity in the same block, with no bridge and no inventory held on two chains.
 - **Compliance built with design partners.** Freeze controls, transfer restrictions and private transactions are being built with the first cohort of fintechs. Launch partners shape them.
 - **One integration, every product.** Integrate once and each component becomes a toggle for every customer on the platform. The fork carries all of it across.
 
@@ -12378,10 +12495,10 @@ Adding a tokenised instrument means a broker, a custodian and a CSD for the trad
 
 ## What changes with Gnosis EEZ
 
-- **Fills from Ethereum liquidity in the same block.** A retail order on Gnosis EEZ can be settled against mainnet liquidity inside one transaction. No inventory on two chains, no bridge, and no price gap between the quote and the fill.
-- **Retail fees, mainnet depth.** The order executes on the instance at instance fees and reaches the depth of Ethereum's markets.
-- **Secured credit against mainnet collateral.** A Lombard-style loan on the instance can take a mainnet position as collateral, in the same transaction that opens it.
-- **Settlement assurance.** ZK-proven blocks settled to Ethereum, with transfer restrictions for regulated instruments being built with design partners.
+- **Fills from Ethereum liquidity in the same block.** A retail order on Gnosis EEZ will settle against mainnet liquidity inside one transaction. No inventory on two chains, no bridge, and no price gap between the quote and the fill.
+- **Retail fees, mainnet depth.** The order will execute on the instance at instance fees and reach the depth of Ethereum's markets.
+- **Secured credit against mainnet collateral.** A Lombard-style loan on the instance will be able to take a mainnet position as collateral, in the same transaction that opens it.
+- **Settlement to Ethereum.** Blocks will be proven and settled to Ethereum, starting with an interim proving setup, likely TEE-based, before real-time ZK proofs ([how it works](/eez/how-it-works)). Transfer restrictions for regulated instruments are being built with design partners.
 
 ## Build path
 
@@ -12416,10 +12533,10 @@ An issuer deploys on Ethereum mainnet for credibility and liquidity, then finds 
 
 ## What changes with Gnosis EEZ
 
-- **One asset, two venues, no wrapping.** An instrument on Gnosis EEZ can reach Ethereum liquidity and counterparties in the same transaction. The retail venue and the institutional venue stop being two deployments with a bridge between them.
-- **Transfer restrictions that hold across the boundary.** Whitelists and restrictions enforced on the instance apply to every leg of a transaction that starts there, including the leg that touches Ethereum, because the whole transaction reverts if any step fails.
-- **Settlement to Ethereum.** The issuer's record of ownership is ZK-proven and settled on Ethereum, which is the assurance an institutional counterparty asks for.
-- **A permissioned instance if you need one.** The same framework lets an issuer or its venue run a private instance with on-chain restrictions and still compose with public DeFi. See [exchanges and market infrastructure](/use-cases/exchanges-and-market-infrastructure).
+- **One asset, two venues, no wrapping.** An instrument on Gnosis EEZ will be able to reach Ethereum liquidity and counterparties in the same transaction. The retail venue and the institutional venue will stop being two deployments with a bridge between them.
+- **Transfer restrictions that hold across the boundary.** Whitelists and restrictions enforced on the instance will apply to every leg of a transaction that starts there, including the leg that touches Ethereum, because the whole transaction reverts if any step fails.
+- **Settlement to Ethereum.** The issuer's record of ownership will be proven and settled on Ethereum, which is the kind of assurance an institutional counterparty asks for. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works).
+- **A permissioned instance if you need one.** The same framework will let an issuer or its venue run a private instance with on-chain restrictions and still compose with public DeFi. See [exchanges and market infrastructure](/use-cases/exchanges-and-market-infrastructure).
 
 ## Build path
 
@@ -12453,17 +12570,17 @@ A protocol that serves retail users deploys on a cheaper chain and then has to s
 
 ## What changes with Gnosis EEZ
 
-- **Leg risk goes away.** A fill on Gnosis EEZ and a hedge on Ethereum mainnet execute in the same block. There is no bridge window and no price gap.
-- **Mainnet prices and liquidity in the same transaction.** A solver on the instance can route part of an order through mainnet liquidity and settle both legs atomically. A money market can liquidate against mainnet depth. A vault can rebalance into a mainnet position without leaving the user's transaction.
+- **Leg risk goes away.** A fill on Gnosis EEZ and a hedge on Ethereum mainnet will execute in the same block. There is no bridge window and no price gap.
+- **Mainnet prices and liquidity in the same transaction.** A solver on the instance will be able to route part of an order through mainnet liquidity and settle both legs atomically. A money market will be able to liquidate against mainnet depth. A vault will be able to rebalance into a mainnet position without leaving the user's transaction.
 - **No redeployment.** Protocol contracts, pools and positions carry over in the fork at the same addresses.
-- **Ethereum security.** Blocks are ZK-proven and settled to Ethereum. Protocol risk assessments that discount sidechain security can be revisited.
-- **What is not in the first release.** Synchronous calls run from Gnosis EEZ into Ethereum at launch. Ethereum calling into Gnosis EEZ, and nested calls, follow in 2027. Build for the first and design for the second. [How it works](/eez/how-it-works) has the detail, and the [request for builders](/eez/what-is-possible) sets out the venues we want to see built.
+- **Ethereum settlement.** Blocks will be proven and settled to Ethereum. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs, as set out in [how it works](/eez/how-it-works). Protocol risk assessments that discount sidechain security can be revisited as each stage lands.
+- **What is not in the first release.** Synchronous calls will run from Gnosis EEZ into Ethereum at launch. Ethereum calling into Gnosis EEZ, and nested calls, will follow in 2027. Build for the first and design for the second. [How it works](/eez/how-it-works) has the detail, and the [request for builders](/eez/what-is-possible) sets out the venues we want to see built.
 
 ## Build path
 
 1. [Deploy your first contract](/start/guides/deploy-your-first-contract), 30 minutes, or point an existing Foundry or Hardhat project at chain ID 100 with the [development environment](/category/deploy-contracts-on-gnosis) guides.
 2. [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow) to see intent-based settlement from the integrator's side.
-3. [Verify your contracts](/developers/Verify%20Smart%20Contracts/) on Blockscout and register them in the [ecosystem directory](https://build.gnosischain.com/).
+3. [Verify your contracts](/developers/Verify%20Smart%20Contracts/) on Gnosisscan and register them in the [ecosystem directory](https://build.gnosischain.com/).
 
 ## Launch with Gnosis EEZ
 
@@ -12483,17 +12600,17 @@ Venues building digital asset infrastructure tend to end up with a permissioned 
 
 ## What you can ship today on Gnosis Chain
 
-- **A ready-made public venue.** Gnosis Chain carries regulated euro e-money, intent-based settlement, smart-account custody and tokenised securities today, with chain-level fraud protection and a stable gas token.
+- **A ready-made public venue.** Gnosis Chain carries regulated euro e-money, intent-based settlement, smart-account custody and tokenised securities today, with a stable gas token.
 - **Institutional custody patterns.** Safe is the custody layer for most treasuries on the chain: multi-signature, modules for policy and batching for operations.
 - **Settlement in regulated e-money.** Monerium EURe gives a euro settlement leg that is redeemable over IBAN.
 - **Precedent for restricted instruments.** Backed's bTokens show how a regulated instrument with transfer restrictions operates on the chain.
 
 ## What changes with Gnosis EEZ
 
-- **Gnosis EEZ as the public instance.** The first instance is Gnosis-operated and focused on distribution. A venue can use it as the public leg with ZK-proven blocks settled to Ethereum, and reach public DeFi in the same block.
-- **An instance of your own.** EEZ will let a venue run its own instance with whitelisted wallets and on-chain transfer restrictions, settle to Ethereum, and compose atomically with public DeFi. No bridges or third-party dependencies, but full access to Ethereum. Gnosis EEZ is the first instance; the wider EEZ stack is available to operators who need their own.
-- **One compliance perimeter.** Restrictions enforced on your instance apply to the whole transaction, including the leg that reaches Ethereum, because every step lands or none does.
-- **Finality you can define.** Sequenced in seconds, proven in seconds, settled on Ethereum within its finality, fully settled within days. [How it works](/eez/how-it-works) sets out each stage.
+- **Gnosis EEZ as the public instance.** The first instance is Gnosis-operated and focused on distribution. A venue will be able to use it as the public leg, with blocks proven and settled to Ethereum, and reach public DeFi in the same block. Proving starts with an interim setup, likely TEE-based, and moves to real-time ZK proofs.
+- **An instance of your own.** EEZ will let a venue run its own instance with whitelisted wallets and on-chain transfer restrictions, settle to Ethereum, and compose atomically with public DeFi. No bridges or third-party dependencies, but full access to Ethereum. Gnosis EEZ will be the first instance, and the wider EEZ stack will be available to operators who need their own.
+- **One compliance perimeter.** Restrictions enforced on your instance will apply to the whole transaction, including the leg that reaches Ethereum, because every step lands or none does.
+- **Finality you can define.** Sequenced in seconds, proven within a target of seconds, settled on Ethereum within its finality, fully settled within days. [How it works](/eez/how-it-works) sets out each stage.
 
 ## What is still being built
 
@@ -12501,10 +12618,366 @@ Permissioned instances, transfer restriction modules and private transactions ar
 
 ## Build path
 
-1. Evaluate Gnosis Chain as a public venue with the [developer overview](/developers/overview) and the [component catalogue](/start#the-component-catalogue).
+1. Evaluate Gnosis Chain as a public venue with [Building on Gnosis EEZ](/use-cases/build) and the [component catalogue](/start#the-component-catalogue).
 2. Read [how it works](/eez/how-it-works) and the [timeline](/eez/timeline).
 3. [Book a call with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to discuss an instance of your own.
 
 ## Launch with Gnosis EEZ
 
 Settle on Gnosis Chain now and your venue is on Gnosis EEZ at launch, with Ethereum a same-block call away. An instance of your own follows the same framework. [Become a launch partner](/launch-partner).
+
+---
+
+// File: use-cases/what-is-possible/README
+
+# What is possible on EEZ: a request for builders
+
+The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework whose instances can call Ethereum mainnet in the same transaction. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027.
+
+Synchronous composability changes what can be built on an L2. This section sets out six builds: four DeFi venues, the native infrastructure under them, and hybrid apps that keep their mainnet core. Each becomes possible or much better when an L2 can call Ethereum mainnet apps and infrastructure in the same transaction. If you are building one of these, we want to hear from you.
+
+## Why now
+
+Building DeFi on an L2 has always meant a trade. You get fast blocks and cheap transactions, and you give up mainnet: its liquidity, its money markets, its price feeds. So native venues start isolated: thin books, bridged collateral, and liquidations that depend on liquidity sitting on another chain.
+
+Synchronous composability changes that. Apps and infrastructure built natively on Gnosis EEZ will keep L2 speed and cost, and will still be able to call mainnet DEXs, money markets, oracles and stablecoins in the same transaction when they need depth. If any step fails, the whole thing reverts. Native liquidity on Gnosis EEZ and mainnet liquidity will reinforce each other instead of competing. No existing L2 offers this today.
+
+## What you build on
+
+- **Synchronous composability with mainnet.** A contract on Gnosis EEZ will be able to call L1 apps and infrastructure and use the result in the same transaction, so you use mainnet depth without fragmenting it.
+- **2-second blocks, sub-cent fees.** Gnosis EEZ will produce a block every 2 seconds, fast enough for order books and high-frequency markets, with a composing block every Ethereum slot. Gnosis Chain runs 5-second blocks today.
+- **Ethereum settlement.** State will be proven and settled to L1, starting with an interim proving setup, likely TEE-based, before real-time ZK proofs. See [how it works](/eez/how-it-works).
+- **L1 as a building block.** Mainnet money markets, DEXs, oracles and stablecoins will be usable from the L2 as they stand. Native Gnosis EEZ apps will compose with them directly.
+
+For each build below the question is the same: what becomes possible when the L2 and L1 parts of a product share one atomic transaction?
+
+## The requests
+
+<CardContainer>
+    <Card
+        title="1. The lead lending market for RWA collateral"
+        subtitle="Hold the canonical asset, liquidate atomically against mainnet liquidity, and lend euro e-money and dollar stablecoins sourced from L1."
+        url="/use-cases/what-is-possible/lending-market-rwa-collateral"
+    />
+    <Card
+        title="2. An options venue"
+        subtitle="Quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot atomically. RWA underlyings as a first-class market."
+        url="/use-cases/what-is-possible/options-venue"
+    />
+    <Card
+        title="3. A perps venue"
+        subtitle="App-chain performance without the app-chain trade-off. Collateral straight from mainnet, liquidations routed to whichever L1 venue has depth."
+        url="/use-cases/what-is-possible/perps-venue"
+    />
+    <Card
+        title="4. A prediction market"
+        subtitle="Conditional Tokens with mainnet collateral, idle capital earning on L1, and resolution that reads Ethereum state directly."
+        url="/use-cases/what-is-possible/prediction-market"
+    />
+    <Card
+        title="5. Native infrastructure"
+        subtitle="Oracles, indexers, solvers and custodians designed for a transaction that touches two chains."
+        url="/use-cases/what-is-possible/native-infrastructure"
+    />
+    <Card
+        title="6. Hybrid apps"
+        subtitle="Keep liquidity and settlement on L1. Run matching, risk and high-churn state on Gnosis EEZ. Both halves in one atomic transaction."
+        url="/use-cases/what-is-possible/hybrid-apps"
+    />
+</CardContainer>
+
+## What you get
+
+We are looking for design partners, not just deployments. Teams we work with will get:
+
+- Early access to the EEZ devnet, which already runs end-to-end cross-chain execution.
+- Direct work with the Gnosis engineering team on integration, from devnet to genesis.
+- Introductions across the EEZ Alliance, including Aave, Safe, CoW Swap, Centrifuge, Monerium and xStocks.
+
+## What to know
+
+Gnosis EEZ genesis is targeted for Q1 2027. At launch, composability will run from Gnosis EEZ into Ethereum: your contracts will be able to call mainnet atomically. Full bidirectional composability, nested calls and real-time ZK proving will follow in 2027. Build for the first and design for the second.
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+The route in is the same as for every [launch partner](/launch-partner): deploy on Gnosis Chain now, and you are in production on Gnosis EEZ at genesis.
+
+## Sources
+
+- [On-Chain Options Volume Hits a Two-Year High (Cryptorank)](https://cryptorank.io/insights/analytics/on-chain-options-volume-hits-a-two-year-high)
+
+---
+
+// File: use-cases/what-is-possible/lending-market-rwa-collateral
+
+# The lead lending market for RWA collateral
+
+Tokenised treasuries, credit and equities are live onchain. Using them as collateral is still hard. Each chain holds a bridged wrapper of the asset, and liquidity for liquidations sits elsewhere.
+
+On Gnosis EEZ a lending market will be able to hold the canonical asset rather than a wrapper, because issuers will be able to deploy one asset zone-wide. When a position needs liquidating, the market will be able to sell collateral into mainnet liquidity in the same transaction it detects the shortfall. No bridge leg, no stranded bad debt waiting on a cross-chain message.
+
+The market also doesn't have to start empty. It will be able to source liquidity from mainnet money markets atomically, route a borrow to wherever rates are best, or refinance a position from L1 in a single transaction, while users get L2 speed and fees.
+
+## What we want
+
+We want one team to be the anchor lending market for Gnosis EEZ. The ideal build:
+
+- Accepts tokenised treasuries, private credit and tokenised equities as collateral.
+- Liquidates atomically against mainnet liquidity.
+- Lends regulated euro e-money and dollar stablecoins sourced from mainnet.
+- Composes with L1 money markets for liquidity, refinancing and rate discovery in the same transaction.
+
+EEZ Alliance members already include Centrifuge, xStocks and Monerium on the asset side. We are working with capital markets and institutional asset issuers to bring new tokenised products. You would be the venue that makes those assets productive.
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.
+
+---
+
+// File: use-cases/what-is-possible/options-venue
+
+# An options venue
+
+Onchain options are finally scaling. Notional volume hit $7.52B in Q3 2026, a two-year high, and one venue did most of it by running its own L2 with an order book and portfolio margin. That works, but it trades shared liquidity for speed: market makers hedge against spot that lives elsewhere, and collateral has to be bridged in.
+
+Gnosis EEZ will remove that gap. A venue will be able to quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot liquidity atomically. Writers and market makers will keep one pool of capital instead of splitting inventory across chains.
+
+The set of underlyings widens too. A venue will be able to list options on any asset with mainnet liquidity, including tokenised equities and RWAs, and hedge against L1 venues atomically rather than maintaining its own spot market.
+
+## What we want
+
+We want a venue that:
+
+- Lists options on ETH, majors and tokenised equities, with RWA underlyings as a first-class market.
+- Hedges and settles atomically against mainnet liquidity.
+- Offers structured products that compose with L1, such as a covered call vault that keeps its collateral in a mainnet money market until it is needed.
+- Reads mainnet price feeds atomically at exercise and settlement.
+
+Source: [On-Chain Options Volume Hits a Two-Year High (Cryptorank)](https://cryptorank.io/insights/analytics/on-chain-options-volume-hits-a-two-year-high).
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.
+
+---
+
+// File: use-cases/what-is-possible/perps-venue
+
+# A perps venue
+
+The best-performing perps venues today run on their own chains. They got speed, and paid for it with isolation: users bridge collateral in, liquidity bootstraps from zero, and the venue sits outside Ethereum's capital base.
+
+Gnosis EEZ will give you app-chain performance without the app-chain trade-off. Match on 2-second blocks with sub-cent fees. Accept mainnet stablecoins and yield-bearing collateral without a bridge. Rebalance the insurance fund, hedge LP exposure or unwind a liquidation against mainnet liquidity in one atomic transaction.
+
+Composability will also open designs a standalone chain can't support: margin that stays productive in mainnet protocols until it is called, and liquidations that route to whichever L1 venue has depth at that moment.
+
+## What we want
+
+We want a venue that:
+
+- Runs a performant order book or hybrid design on 2-second blocks.
+- Takes collateral straight from mainnet, with no bridge step for the user.
+- Lists RWA and tokenised equity perps alongside crypto majors.
+- Hedges and liquidates against mainnet spot and lending markets atomically.
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.
+
+---
+
+// File: use-cases/what-is-possible/prediction-market
+
+# A prediction market
+
+Gnosis built the Conditional Tokens framework that today's largest prediction markets run on. The next design step is markets whose collateral and resolution touch L1 directly.
+
+Prediction markets are high-frequency and small-ticket. They need fast blocks and fees that disappear into the trade, which Gnosis EEZ will deliver with 2-second blocks and sub-cent costs. What current markets have lacked is access: users bridge stablecoins in, and capital sits idle until resolution.
+
+On Gnosis EEZ, markets will be able to settle in mainnet stablecoins without a bridge, and idle collateral will be able to sit in an L1 money market and be pulled back atomically when a trader exits. Markets will also be able to read Ethereum state directly, resolving on onchain events such as a governance vote or a protocol parameter without an oracle hop.
+
+## What we want
+
+We want a market that:
+
+- Uses Conditional Tokens or a successor design, with deep liquidity on short-dated markets.
+- Settles in dollars and euros, sourcing collateral from mainnet atomically.
+- Resolves through credible subjective oracles, with disputes handled transparently.
+- Keeps idle collateral earning on L1, withdrawn atomically when positions close.
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.
+
+---
+
+// File: use-cases/what-is-possible/native-infrastructure
+
+# Native infrastructure
+
+The four venues in this section need components designed for a chain that composes with Ethereum every slot. Existing tooling assumes a transaction lives on one chain. On Gnosis EEZ it will be able to touch two.
+
+## Oracles
+
+**Price feeds.** Mainnet feeds will be readable atomically, so the gap is speed and coverage: low-latency feeds that update on 2-second blocks for perps and options, and NAV and reference-rate feeds for RWA collateral.
+
+**Subjective oracles.** Prediction markets, RWA attestations and insurance all need answers no price feed can give. We want resolution layers with clear dispute processes, that can read L1 state where an answer already lives onchain.
+
+## Indexers
+
+On Gnosis EEZ a single atomic transaction will be able to update state on Gnosis EEZ and on Ethereum. We want indexers and data APIs that follow those calls end to end, so a lending market can show one position across both, and a wallet can show a user's activity in one view.
+
+## Solvers
+
+On a standalone L2, a solver fills orders from local liquidity or holds inventory on both sides of a bridge. On Gnosis EEZ, a solver will be able to fill an L2 order against mainnet DEXs and money markets in the same transaction, with no inventory to pre-position and no settlement risk between legs. We want solvers for swaps, liquidations and intent-based orders that treat L1 and L2 liquidity as one book, including CoW Swap solvers extending batch auctions across the zone.
+
+## Custodians
+
+Institutions need custody that treats Gnosis EEZ and mainnet as one account, with policy engines that understand atomic cross-chain calls. We want custodians and wallet infrastructure, including Safe modules, that let a regulated business hold, move and use assets across the zone under one set of controls.
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.
+
+---
+
+// File: use-cases/what-is-possible/hybrid-apps
+
+# Hybrid apps
+
+Not every app needs to leave Ethereum. A mainnet protocol will be able to keep its contracts, liquidity and settlement on L1, and run its heavy or high-churn logic, such as matching or a risk engine, on Gnosis EEZ with 2-second blocks and sub-cent fees. Both halves will share one atomic transaction: both land or neither does.
+
+Sync calls will carry a per-block verification cost on L1, so they suit high-value moments: deposit-and-use, liquidations against L1 prices and settlement. Everything else will run as ordinary Gnosis EEZ traffic. At launch, calls will run from Gnosis EEZ into L1. L1 contracts calling into Gnosis EEZ follow with bidirectional composability in 2027.
+
+## What we want
+
+We want mainnet teams that:
+
+- Keep liquidity and settlement on L1 and move matching, risk or high-churn state to Gnosis EEZ.
+- Reserve sync calls for high-value flows.
+- Would rather build on Gnosis EEZ than operate their own sequencer, composer and prover.
+
+## Apply
+
+Tell us what you are building, which request it answers, and which Gnosis EEZ attribute your product can't work without. We read everything.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call with the ecosystem team</a>
+  <a className="button button--secondary button--lg" href="https://discord.gg/gnosis">Reach us on Discord</a>
+</div>
+
+What design partners get, what to know about the first release, and the other requests are on the [request for builders](/use-cases/what-is-possible) overview.
+
+---
+
+// File: validators/eez-transition
+
+# Validators and node operators: the move to Gnosis EEZ
+
+Gnosis Chain becomes Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez), in Q1 2027. GnosisDAO has approved the transition. This page sets out what it means for the people who run the chain today: validators, and operators of RPC and archive nodes.
+
+The short version: keep running until activation. Nothing changes before then.
+
+## The end of Gnosis Chain as a Layer 1
+
+Gnosis Chain continues to run as a proof-of-stake Layer 1 until the fork. At activation, its state is hard-forked onto Gnosis EEZ. Contracts, balances and addresses carry over unchanged, so the chain and its users continue. What ends is the way blocks are produced and secured.
+
+| | Gnosis Chain today | Gnosis EEZ, after activation |
+| --- | --- | --- |
+| Block production | A proof-of-stake validator set | A composer operated by Gnosis |
+| Consensus | Beacon chain, GBC | The validator set retires |
+| Security | Validator economic security | Proofs verified on Ethereum |
+| Node software | Execution client and consensus-layer client | Execution client only |
+
+[Gnosis EEZ: the first instance](/eez/gnosis-eez) has the full comparison.
+
+## Between now and activation
+
+- **Validators keep running and keep earning.** Nothing about deposits or withdrawals changes before the fork.
+- **There is no action to take** before the activation block is announced.
+- **RPC and archive nodes run as they do today**, with both an execution client and a consensus-layer client.
+
+## At activation
+
+- **The validator set retires.** Block production moves to the composer, and blocks are proven and settled on Ethereum.
+- **Staked GNO is unlocked** when the validator set sunsets.
+- **GNO continues as the governance token** through GnosisDAO.
+
+{/* TODO(ben): add the unlock mechanics for staked GNO (what validators do, if anything, to receive it, and whether it is automatic) and the timings between activation and unlock. */}
+
+## Operating proof systems
+
+Former validators may operate proof systems for Gnosis EEZ. Blocks on Gnosis EEZ will be accepted when a threshold of appointed proof systems agree, and proving will start with an interim setup before real-time ZK proofs. [How it works](/eez/how-it-works) describes the proving pipeline.
+
+{/* TODO(ben): add how a former validator applies to operate a proof system, and the requirements. */}
+
+## RPC and archive node operators
+
+Keep your execution client. After activation, the consensus-layer client is no longer needed and can be shut down. The chain ID is not planned to change. If any network parameter changes, it will be published in the [network details](/about/networks/) before activation.
+
+## When it happens
+
+The launch window is Q1 2027. The activation block for the mainnet fork will be published on the [timeline](/eez/timeline) when it is set.
+
+{/* TODO(ben): confirm where else the activation block will be announced (for example Discord, the forum or a client release), and the timings for client releases ahead of the fork. */}
+
+## Checklist
+
+**Validators**
+
+- [ ] Keep your validator running until activation. Nothing changes for deposits or withdrawals.
+- [ ] Watch the [timeline](/eez/timeline) for the activation block.
+- [ ] At activation, expect the validator set to retire and your staked GNO to be unlocked.
+- [ ] If you want to keep contributing, look at operating a proof system.
+
+**RPC and archive node operators**
+
+- [ ] Keep running both clients until activation.
+- [ ] Watch the [timeline](/eez/timeline) for the activation block.
+- [ ] After activation, keep the execution client and shut down the consensus-layer client.
+- [ ] Check the [network details](/about/networks/) for any parameter changes before activation.
+
+Other questions are answered in the [transition FAQ](/eez/faq).
