@@ -48,7 +48,7 @@ The [validator and node operator runbook](/validators/eez-transition) has a chec
 
 ## What is not in the first release
 
-The brand rule for EEZ is to name limits before anyone else does, so here they are.
+Here are the limits of the first release.
 
 - **One direction of synchronous calls.** At launch, a contract on Gnosis EEZ can call a contract on Ethereum and use the result in the same transaction. The reverse direction, Ethereum calling into Gnosis EEZ, and full nested calls follow in 2027.
 - **Interim proving at genesis.** The first release uses an interim proving setup, likely TEE-based, and moves to real-time ZK proving as the Zisk prover reaches its latency target.
