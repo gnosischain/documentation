@@ -7,6 +7,8 @@ keywords: [gnosis eez, ethereum economic zone, open finance, embedded finance, e
 title: Building on Gnosis EEZ
 ---
 
+import ComponentsTable from '@site/docs/_partials/_components-table.mdx';
+
 # Building on Gnosis EEZ
 
 The Ethereum Economic Zone (EEZ) is a neutral rollup framework. Rollups built on it settle to Ethereum and can call Ethereum mainnet contracts in the same transaction. The framework has no token and is not a Gnosis product. [What is the Ethereum Economic Zone](/eez) has the detail.
@@ -54,18 +56,9 @@ Once Gnosis Chain becomes Gnosis EEZ, a contract here will be able to call Ether
 
 ## The component layer
 
-These are the pieces you compose. Every project below is live on Gnosis Chain today, and the ones marked as Alliance members are part of the EEZ Alliance.
+These are the pieces you compose.
 
-| Component | Provided by | What it gives you |
-| --- | --- | --- |
-| Euro and sterling e-money | Monerium (Alliance) | EURe and GBPe, regulated e-money redeemable one-for-one at a bank account over IBAN |
-| Smart accounts | Safe (Alliance) | Multi-signature accounts, programmable modules and transaction batching, the usual custody layer for treasuries |
-| Trading and settlement | CoW Protocol (Alliance) | Intent-based orders signed off-chain and settled in batches by competing solvers, with MEV protection |
-| Card settlement | Gnosis Pay (Alliance) | A Safe holds the balance in EURe and settles Visa payments directly from it |
-| Savings and yield | Spark, Aave | sDAI as a yield-bearing wrapper around xDai savings, plus lending markets for stablecoins |
-| Stable liquidity routing | Curve, Balancer | Low-slippage pools for like-priced assets, and a shared vault that keeps multi-hop swaps cheap |
-| Tokenised securities | Backed | bTokens tracking listed instruments such as short-term treasury ETFs, each backed one-for-one with a custodian |
-| Trust and identity | Circles | Personal currencies issued on a web of trust between people |
+<ComponentsTable />
 
 Ask the MCP server for `eez_list_apps` to get the current registry, or `eez_get_contract_addresses` for canonical addresses that have been checked against Blockscout. Never copy an address from memory.
 

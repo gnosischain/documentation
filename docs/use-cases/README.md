@@ -6,6 +6,8 @@ description: The Ethereum Economic Zone is a neutral rollup framework and Gnosis
 keywords: [use cases, gnosis eez, wallets, neobanks, brokers, asset issuers, defi protocols, exchanges, market infrastructure]
 ---
 
+import ComponentsTable from '@site/docs/_partials/_components-table.mdx';
+
 # Use cases
 
 The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework. Rollups built on it are designed to settle to Ethereum and to call Ethereum mainnet contracts in the same transaction. The framework has no token and is not a Gnosis product.
@@ -68,18 +70,9 @@ Every audience page follows the same shape: who it is for, the problem today, wh
 
 ## The components every use case draws on
 
-The use cases are different arrangements of the same live components. Each one is deployed and verified on Gnosis Chain today and carries over to Gnosis EEZ unchanged.
+The use cases are different arrangements of the same live components.
 
-| Component | Provided by | What it gives you |
-| --- | --- | --- |
-| Euro and sterling e-money | Monerium | EURe and GBPe, regulated e-money redeemable one-for-one over IBAN |
-| Smart accounts | Safe | Multi-signature accounts, modules and batching |
-| Trading and settlement | CoW Protocol | Intent-based orders settled in batches by competing solvers |
-| Card settlement | Gnosis Pay | A Safe that holds EURe and settles Visa payments from it |
-| Savings and yield | Spark, Aave | sDAI as yield-bearing savings, plus lending markets |
-| Stable liquidity | Curve, Balancer | Low-slippage pools for like-priced assets |
-| Tokenised securities | Backed | bTokens tracking listed instruments, backed one-for-one with a custodian |
-| Identity and trust | Circles | Personal currencies on a web of trust |
+<ComponentsTable />
 
 Addresses come from the [ecosystem directory](https://build.gnosischain.com/) or the Gnosis EEZ MCP server. Never copy one from memory.
 

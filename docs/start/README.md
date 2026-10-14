@@ -5,6 +5,8 @@ description: Gnosis Chain is a community-owned EVM-based network, and three gett
 keywords: [getting started, fintech, embedded finance, gnosis eez, stablecoin payments, tokenised assets, about gnosis chain, fees, xdai]
 ---
 
+import ComponentsTable from '@site/docs/_partials/_components-table.mdx';
+
 # Embed Ethereum's economy in your product.
 
 The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no token of its own. Gnosis EEZ is its first instance, operated by Gnosis, and Gnosis Chain becomes it in Q1 2027.
@@ -54,6 +56,12 @@ Every route is a bundle of the same eight components. You switch on the ones you
 | Fx & Transfers | a treasury desk and correspondents |
 | Secured Credit | Lombard lending |
 | Identity and Rewards | batch AML and a loyalty ledger |
+
+### Who provides them
+
+The components are built from projects live on Gnosis Chain today.
+
+<ComponentsTable />
 
 ## If you are not a fintech
 
