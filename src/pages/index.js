@@ -93,7 +93,7 @@ const FEATURES = [
   {
     icon: Icon.Build,
     title: 'Build on Gnosis',
-    body: 'Deploy EVM contracts with Foundry or Hardhat and verify them on Blockscout.',
+    body: 'Deploy EVM contracts with Foundry or Hardhat and verify them on Gnosisscan.',
     to: '/developers/overview',
   },
   {

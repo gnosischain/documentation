@@ -56,13 +56,13 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 
 | Organization | Gnosis Address                                                                                                                      |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| GnosisDao    | [gno:0x82b00cA9D162859f645B51967746E55bb6498DfC](https://gnosis.blockscout.com/address/0x82b00cA9D162859f645B51967746E55bb6498DfC)  |
-| Protofire    | [gno:0x2245bFAD58a6cD50e9e413084d4091C497281911](https://gnosis.blockscout.com/address/0x2245bFAD58a6cD50e9e413084d4091C497281911)  |
-| CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosis.blockscout.com/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
-| Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosis.blockscout.com/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
-| GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosis.blockscout.com/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
-| Kleros       | [gno:0x156c0DAAb0cD73c224a424a781866d35f0F8Fade ](https://gnosis.blockscout.com/address/0x156c0DAAb0cD73c224a424a781866d35f0F8Fade) |
-| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosis.blockscout.com/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
+| GnosisDao    | [gno:0x82b00cA9D162859f645B51967746E55bb6498DfC](https://gnosisscan.io/address/0x82b00cA9D162859f645B51967746E55bb6498DfC)  |
+| Protofire    | [gno:0x2245bFAD58a6cD50e9e413084d4091C497281911](https://gnosisscan.io/address/0x2245bFAD58a6cD50e9e413084d4091C497281911)  |
+| CowProtocol  | [gno:0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656](https://gnosisscan.io/address/0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656)  |
+| Giveth       | [gno:0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13](https://gnosisscan.io/address/0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13)  |
+| GnosisSafe   | [gno:0x1312e98995bbcc30fc63db3cef807e20cdd33dca](https://gnosisscan.io/address/0x1312e98995bbcc30fc63db3cef807e20cdd33dca)  |
+| Kleros       | [gno:0x156c0DAAb0cD73c224a424a781866d35f0F8Fade ](https://gnosisscan.io/address/0x156c0DAAb0cD73c224a424a781866d35f0F8Fade) |
+| Hopr         | [gno:0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4](https://gnosisscan.io/address/0x6236925ff8aa09f29f1609a9bcd54af20e4be6b4)  |
 
 </TabItem>
 

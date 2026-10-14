@@ -75,7 +75,7 @@ These are the networks you deploy to today. When Gnosis EEZ activates, block tim
 | --- | --- | --- |
 | Chain ID | 100 | 10200 |
 | RPC | `https://rpc.gnosischain.com` | `https://rpc.chiadochain.net` |
-| Explorer | [Blockscout](https://gnosis.blockscout.com) | [Blockscout](https://gnosis-chiado.blockscout.com) |
+| Explorer | [Gnosisscan](https://gnosisscan.io) | [Blockscout](https://gnosis-chiado.blockscout.com) |
 | Gas token | xDai | xDai (test) |
 | Block time | 5 seconds | 5 seconds |
 
@@ -108,7 +108,7 @@ Work through these in order if you are new to the chain. Each one ends in someth
     />
     <Card
         title="Verify contracts"
-        subtitle="Publish your source to Blockscout or Sourcify so others can read it."
+        subtitle="Publish your source to a block explorer or Sourcify so others can read it."
         url="/developers/Verify Smart Contracts/"
     />
     <Card

@@ -206,7 +206,7 @@ Everything above works identically on Gnosis mainnet. Three things change:
 | --- | --- | --- |
 | Chain ID | 10200 | 100 |
 | RPC URL | `https://rpc.chiadochain.net` | `https://rpc.gnosischain.com` |
-| Explorer | `https://gnosis-chiado.blockscout.com` | `https://gnosis.blockscout.com` |
+| Explorer | `https://gnosis-chiado.blockscout.com` | `https://gnosisscan.io` |
 
 The gas token on mainnet is xDai, and it is worth real money, though a deployment like this one costs a fraction of a cent. Fund the account by bridging at [bridge.gnosischain.com](https://bridge.gnosischain.com) rather than from a faucet.
 
