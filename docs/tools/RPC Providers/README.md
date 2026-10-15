@@ -178,7 +178,7 @@ https://gnosis.api.onfinality.io/public
 
 When choosing an RPC plan, check the network, JSON-RPC methods, historical data, request limits, and support your application needs.
 
-[Chain.Love](https://www.chain.love/) provides a Gnosis-specific directory for discovering and comparing available API providers and plans.
+[Chain.Love](https://www.chain.love/gnosis) provides a Gnosis-specific directory for discovering and comparing available API providers and plans.
 
 Confirm current Gnosis support, required methods, archive access, prices, and limits in the provider's own documentation before choosing a plan.
 
