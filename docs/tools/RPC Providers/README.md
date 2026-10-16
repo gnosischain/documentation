@@ -173,3 +173,18 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## SwiftNodes
+
+Gnosis RPC over HTTP and WebSocket. Free tier; flat-rate paid plans.
+
+- [SwiftNodes](https://swiftnodes.io)
+- [SwiftNodes' page for Gnosis RPCs](https://swiftnodes.io/gnosis-rpc)
+
+```shell
+# HTTP RPC
+https://rpc.swiftnodes.io/rpc/gnosis?key=<API_KEY>
+
+# WSS RPC
+wss://rpc.swiftnodes.io/ws/gnosis?key=<API_KEY>
+```
