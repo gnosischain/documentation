@@ -1,8 +1,12 @@
+/* Full-bleed fresh-product-hero wash (canon gradient) behind the hero, ending on the page ground. */
+.home {
+  background: var(--gc-gradient-hero) top / 100% 820px no-repeat, var(--gc-bg);
+}
+
 .page {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 4.5rem 2rem 0;
-  background: var(--gc-bg);
+  padding: 5.5rem 2rem 0;
 }
 
 /* line the footer columns up with the page's content edge on the home page */
@@ -22,71 +26,79 @@
 
 /* ---------- hero ---------- */
 .hero {
-  max-width: 860px;
-  margin-bottom: 4rem;
+  max-width: 1040px;
+  margin-bottom: 6rem;
 }
 
 .heroTitle {
   font-family: var(--gc-font-display);
   font-weight: 700;
-  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
-  margin: 0 0 1.5rem;
-  color: var(--gc-text);
+  font-variant-numeric: lining-nums;
+  margin: 0 0 1.75rem;
+  color: var(--gc-heading);
 }
 
-/* Two deliberate lines on desktop; one flowing sentence when space is tight. */
+/* Two deliberate, non-wrapping lines on desktop (the size scales down instead of
+   breaking into a third line); one flowing sentence when space is tight. */
 .heroLine {
   display: block;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .heroLine {
+    white-space: normal;
+  }
 }
 
 .heroLede {
   font-size: 1.125rem;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--gc-text-muted);
-  margin: 0 0 2rem;
-  max-width: 620px;
+  margin: 0 0 2.25rem;
+  max-width: 600px;
 }
 
 .heroActions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.btnPrimary,
+/* Primary: ink pill, paper label, hover to Purple-800. Colour change only, no movement. */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 1.6rem;
+  border-radius: 999px;
+  background: var(--gc-cta);
+  color: var(--gc-cta-ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btnPrimary:hover {
+  background: var(--gc-cta-hover);
+  color: var(--gc-cta-ink);
+  text-decoration: none;
+}
+/* Secondary: a text link in Purple-800 with an arrow */
 .btnSecondary {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  height: 44px;
-  padding: 0 1.4rem;
-  border-radius: 100px;
-  font-size: 0.925rem;
+  gap: 0.4rem;
+  font-size: 0.95rem;
   font-weight: 600;
+  color: var(--gc-accent);
   text-decoration: none;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-.btnPrimary {
-  background: var(--gc-cta);
-  color: var(--gc-cta-ink);
-}
-.btnPrimary:hover {
-  background: var(--gc-cta);
-  color: var(--gc-cta-ink);
-  filter: brightness(1.04);
-  transform: translateY(-1px);
-  text-decoration: none;
-}
-.btnSecondary {
-  background: var(--gc-surface);
-  color: var(--gc-text);
-  border: 1px solid var(--gc-border);
 }
 .btnSecondary:hover {
-  border-color: var(--gc-border-strong);
-  color: var(--gc-text);
+  color: var(--gc-accent-hover);
   text-decoration: none;
 }
 
@@ -113,19 +125,19 @@
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid var(--gc-border);
   border-radius: var(--gc-radius);
   background: var(--gc-surface);
   color: var(--gc-text);
   text-decoration: none;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .pathway:hover {
-  border-color: var(--gc-accent);
+  border-color: var(--gc-border-strong);
+  box-shadow: var(--gc-shadow);
   color: var(--gc-text);
   text-decoration: none;
-  transform: translateY(-2px);
 }
 
 .pathwayTop {
@@ -146,9 +158,10 @@
 .pathwayTitle {
   font-family: var(--gc-font-display);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  color: var(--gc-heading);
 }
 .pathwayAudience {
   font-size: 0.875rem;
@@ -183,19 +196,19 @@
   justify-content: space-between;
   gap: 3.5rem;
   min-height: 210px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid var(--gc-border);
   border-radius: var(--gc-radius);
   background: var(--gc-surface);
   color: var(--gc-text);
   text-decoration: none;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .featureCard:hover {
   border-color: var(--gc-border-strong);
+  box-shadow: var(--gc-shadow);
   color: var(--gc-text);
   text-decoration: none;
-  transform: translateY(-1px);
 }
 
 .featureIcon {
@@ -209,9 +222,9 @@
   gap: 0.4rem;
 }
 .featureTitle {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  color: var(--gc-heading);
 }
 .featureBody {
   font-size: 0.875rem;
@@ -221,13 +234,19 @@
 
 /* ---------- sections ---------- */
 .section {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 .sectionTitle {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 0 0 1.25rem;
+  font-family: var(--gc-font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--gc-heading);
+  margin: 0 0 1.5rem;
+}
+.sectionHead .sectionTitle {
+  margin-bottom: 0.75rem;
 }
 /* ---------- use cases ---------- */
 .useCaseGrid {

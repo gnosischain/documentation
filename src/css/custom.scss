@@ -1,8 +1,17 @@
 /**
  * Gnosis Chain documentation — global theme.
  *
+ * Colours, logo, buttons and light-by-default follow the Gnosis visual identity
+ * (iterated 2026, the v4 gnosis.io/chain site): Purple-75 ground, Purple-1000 ink,
+ * Purple-800 links, ink pill buttons.
+ * Type is kept as the docs' own: Suisse Intl for body and UI, Unica 77 for display
+ * headings, a system monospace for code. Sizes, weights, line lengths and code
+ * styles are tuned for developers reading long pages and code samples.
+ * Source of truth: gnosis-marketing/_brand/visual-identity (palette.json,
+ * typography.json, gradients.json) and the gnosis-visual-identity skill.
+ * Never #FFFFFF (use Purple-50) and never #000 (use Purple-1000).
+ *
  * Design tokens live on :root / [data-theme]. Everything else reads from them.
- * Type: GT Planar for display headings, Suisse Intl for UI and body copy.
  */
 
 /* ---------- fonts ---------- */
@@ -46,53 +55,70 @@
 html:root {
   --gc-font-body: 'Suisse Intl', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --gc-font-display: 'Unica 77', var(--gc-font-body);
+  --gc-font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+  --gc-display-line-height: 1.15;
 
-  /* Brand palette (shared with the Gnosis Chain marketing site) */
-  --gc-cream: #faf5f1;
-  --gc-paper: #fffafb;
-  --gc-navy: #07052c;
-  --gc-navy-2: #0f0c4a;
-  --gc-indigo: #1a1751;
-  --gc-purple: #3f2acd;
-  --gc-purple-300: #9994ed;
-  --gc-mint: #8de9aa;
-  --gc-line: #e1e4ea;
+  /* Canon palette (palette.json) */
+  --purple-1000: #07052c;
+  --purple-950: #1a1751;
+  --purple-800: #3f2acd;
+  --purple-600: #766de5;
+  --purple-500: #9994ed;
+  --purple-300: #b4affd;
+  --purple-75: #f6f1fa;
+  --purple-50: #fffafb;
+  --fresh-green-500: #8ce8ab;
+  /* Chain accent on light grounds (live-site value, see brands.md) */
+  --emerald-700: #047857;
 
-  --gc-bg: var(--gc-cream);
-  --gc-surface: var(--gc-paper);
-  --gc-surface-2: #f2ede9;
-  --gc-border: var(--gc-line);
-  --gc-border-strong: #c9cede;
-  --gc-text: var(--gc-indigo);
-  --gc-text-muted: #6e6c7d;
-  --gc-text-faint: #918fa3;
-  --gc-accent: var(--gc-purple);
-  --gc-accent-hover: #3423ad;
-  --gc-accent-ink: #ffffff;
+  /* Canon fresh gradients (gradients.json, fresh family) */
+  --gc-gradient-hero: linear-gradient(180deg, #d6e2f4 0%, #dbeeea 42%, #ddf2e6 62%, var(--purple-75) 96%);
+  --gc-gradient-wash: linear-gradient(180deg, var(--purple-75) 0%, #e7eff7 14%, #ecf7ef 34%, var(--purple-75) 66%);
+
+  /* Roles */
+  --gc-bg: var(--purple-75);
+  --gc-surface: var(--purple-50);
+  --gc-surface-2: #efe9f6;
+  --gc-border: rgba(7, 5, 44, 0.08);
+  --gc-border-strong: rgba(7, 5, 44, 0.18);
+  --gc-text: var(--purple-1000);
+  --gc-text-muted: rgba(7, 5, 44, 0.72);
+  --gc-text-faint: rgba(7, 5, 44, 0.52);
+  --gc-heading: var(--purple-1000);
+  --gc-accent: var(--purple-800);
+  --gc-accent-hover: var(--purple-1000);
+  --gc-accent-ink: var(--purple-50);
   --gc-accent-soft: rgba(63, 42, 205, 0.08);
-  --gc-cta: var(--gc-mint);
-  --gc-cta-ink: var(--gc-navy);
-  --gc-radius: 20px;
-  --gc-radius-sm: 14px;
+  --gc-brand-accent: var(--emerald-700);
+  --gc-cta: var(--purple-1000);
+  --gc-cta-hover: var(--purple-800);
+  --gc-cta-ink: var(--purple-50);
+  --gc-shadow: 0 16px 36px rgba(7, 5, 44, 0.1);
+  --gc-radius: 24px;
+  --gc-radius-sm: 16px;
 
   --ifm-color-primary: #3f2acd;
-  --ifm-color-primary-dark: #3423ad;
-  --ifm-color-primary-darker: #2f1f9c;
-  --ifm-color-primary-darkest: #241778;
-  --ifm-color-primary-light: #5340d6;
-  --ifm-color-primary-lighter: #6553da;
-  --ifm-color-primary-lightest: #9994ed;
+  --ifm-color-primary-dark: #3926b9;
+  --ifm-color-primary-darker: #3624ae;
+  --ifm-color-primary-darkest: #2c1d8f;
+  --ifm-color-primary-light: #5440d6;
+  --ifm-color-primary-lighter: #5f4dd8;
+  --ifm-color-primary-lightest: #766de5;
 
   --ifm-background-color: var(--gc-bg);
   --ifm-background-surface-color: var(--gc-surface);
   --ifm-font-color-base: var(--gc-text);
+  --ifm-heading-color: var(--gc-heading);
+  --ifm-link-color: var(--gc-accent);
+  --ifm-link-hover-color: var(--gc-accent-hover);
   --ifm-color-content-secondary: var(--gc-text-muted);
   --ifm-font-family-base: var(--gc-font-body);
   --ifm-heading-font-family: var(--gc-font-body);
-  --ifm-font-size-base: 15px;
-  --ifm-line-height-base: 1.6;
-  --ifm-code-font-size: 90%;
-  --ifm-global-radius: 14px;
+  --ifm-font-family-monospace: var(--gc-font-mono);
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.65;
+  --ifm-code-font-size: 88%;
+  --ifm-global-radius: 16px;
   --ifm-navbar-height: 104px;
   --ifm-navbar-background-color: var(--gc-bg);
   --ifm-navbar-shadow: none;
@@ -109,43 +135,56 @@ html:root {
   --ifm-footer-link-color: var(--gc-text-muted);
   --ifm-footer-link-hover-color: var(--gc-text);
   --ifm-footer-title-color: var(--gc-text);
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+  --ifm-code-background: var(--gc-surface-2);
+  --docusaurus-highlighted-code-line-bg: rgba(7, 5, 44, 0.06);
   --doc-sidebar-width: 280px;
-  --tab-gray: #ddd;
+  --tab-gray: var(--gc-border-strong);
 }
 
+/* Dark mode stays available from the toggle; light is the default. Ink ground,
+   paper text, Fresh-Green brand accent, links in paper with an underline. */
 html[data-theme='dark'] {
-  --gc-bg: var(--gc-navy);
-  --gc-surface: #0d0a3d;
-  --gc-surface-2: #15114f;
-  --gc-border: rgba(255, 250, 251, 0.11);
-  --gc-border-strong: rgba(255, 250, 251, 0.24);
-  --gc-text: var(--gc-paper);
-  --gc-text-muted: #a9a6c4;
-  --gc-text-faint: #7d7a9e;
-  --gc-accent: var(--gc-mint);
-  --gc-accent-hover: #a5f0be;
-  --gc-accent-ink: var(--gc-navy);
-  --gc-accent-soft: rgba(141, 233, 170, 0.11);
-  --gc-cta: var(--gc-mint);
-  --gc-cta-ink: var(--gc-navy);
+  --gc-gradient-hero: linear-gradient(180deg, var(--purple-950) 0%, var(--purple-1000) 96%);
+  --gc-gradient-wash: none;
 
-  --ifm-color-primary: #8de9aa;
-  --ifm-color-primary-dark: #6fe094;
-  --ifm-color-primary-darker: #5cd886;
-  --ifm-color-primary-darkest: #43c470;
-  --ifm-color-primary-light: #a5f0be;
-  --ifm-color-primary-lighter: #b8f4cc;
-  --ifm-color-primary-lightest: #cdf8db;
+  --gc-bg: var(--purple-1000);
+  --gc-surface: #0e0b3a;
+  --gc-surface-2: #15114f;
+  --gc-border: rgba(255, 250, 251, 0.1);
+  --gc-border-strong: rgba(255, 250, 251, 0.22);
+  --gc-text: var(--purple-50);
+  --gc-text-muted: rgba(255, 250, 251, 0.72);
+  --gc-text-faint: rgba(255, 250, 251, 0.52);
+  --gc-heading: var(--purple-50);
+  --gc-accent: var(--purple-300);
+  --gc-accent-hover: var(--purple-50);
+  --gc-accent-ink: var(--purple-1000);
+  --gc-accent-soft: rgba(180, 175, 253, 0.12);
+  --gc-brand-accent: var(--fresh-green-500);
+  --gc-cta: var(--purple-50);
+  --gc-cta-hover: var(--fresh-green-500);
+  --gc-cta-ink: var(--purple-1000);
+  --gc-shadow: none;
+
+  --ifm-color-primary: #b4affd;
+  --ifm-color-primary-dark: #9994ed;
+  --ifm-color-primary-darker: #8a84ea;
+  --ifm-color-primary-darkest: #766de5;
+  --ifm-color-primary-light: #c4c0fd;
+  --ifm-color-primary-lighter: #d2cffe;
+  --ifm-color-primary-lightest: #e6e4fe;
 
   --ifm-background-color: var(--gc-bg);
   --ifm-background-surface-color: var(--gc-surface);
   --ifm-font-color-base: var(--gc-text);
+  --ifm-heading-color: var(--gc-heading);
+  --ifm-link-color: var(--gc-accent);
+  --ifm-link-hover-color: var(--gc-accent-hover);
   --ifm-navbar-background-color: var(--gc-bg);
   --ifm-footer-background-color: var(--gc-bg);
   --ifm-code-background: var(--gc-surface-2);
   --ifm-pre-background: var(--gc-surface);
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 250, 251, 0.06);
 }
 
 /* ---------- base ---------- */
@@ -157,33 +196,90 @@ html {
 
 body {
   font-family: var(--gc-font-body);
-  font-weight: 500;
-  letter-spacing: -0.005em;
+  font-weight: 400;
+  color: var(--gc-text);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--gc-font-body);
-  letter-spacing: -0.02em;
+  color: var(--gc-heading);
+  letter-spacing: -0.015em;
+  font-variant-numeric: lining-nums;
 }
-h1 { font-weight: 600; }
-h2 { font-weight: 600; }
-h3, h4 { font-weight: 500; }
-h5, h6 { font-weight: 500; }
 
+/* Heading scale for scanning long reference pages: one display h1, then clear
+   steps in size and weight so h2 and h3 never look alike. */
+h1,
 .markdown h1:first-child {
   font-family: var(--gc-font-display);
   font-weight: 700;
-  font-size: 2.35rem;
+  font-size: 2.4rem;
+  line-height: var(--gc-display-line-height);
   letter-spacing: -0.025em;
 }
 .markdown > h2 {
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 3rem;
   padding-top: 0;
 }
 .markdown > h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: 2rem;
 }
+.markdown > h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Body copy: regular weight (the 500 default read heavy at length), a comfortable
+   line length, and room between paragraphs and list items. */
+.theme-doc-markdown.markdown {
+  font-weight: 400;
+}
+.theme-doc-markdown.markdown > p,
+.theme-doc-markdown.markdown > ul,
+.theme-doc-markdown.markdown > ol,
+.theme-doc-markdown.markdown > blockquote {
+  max-width: 72ch;
+}
+.theme-doc-markdown.markdown li + li {
+  margin-top: 0.35rem;
+}
+.theme-doc-markdown.markdown strong {
+  font-weight: 600;
+}
+
+/* Code: system monospace, generous line height, and inline code that stands out
+   from prose without shouting. */
+code,
+kbd,
+pre {
+  font-family: var(--gc-font-mono);
+  font-variant-ligatures: none;
+}
+.markdown :not(pre) > code {
+  padding: 0.12em 0.4em;
+  border-radius: 6px;
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+  font-size: 0.88em;
+  word-break: break-word;
+}
+.theme-code-block pre,
+.theme-code-block code {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* Tables: aligned figures for addresses, chain IDs and numbers */
+.markdown table {
+  font-variant-numeric: tabular-nums;
+}
+
 
 a {
   text-decoration-thickness: 1px;
@@ -192,6 +288,9 @@ a {
 
 .theme-doc-markdown.markdown a {
   font-weight: 500;
+}
+[data-theme='dark'] .theme-doc-markdown.markdown a {
+  text-decoration: underline;
 }
 
 .theme-doc-markdown.markdown img,
@@ -224,10 +323,8 @@ nav.navbar {
   height: 26px;
 }
 
-/* The source mark is white; on the cream navbar it is darkened to brand ink. */
-[data-theme='light'] .navbar__logo img {
-  filter: brightness(0) saturate(100%);
-}
+/* The Gnosis Chain lockup ships as two baked files (static/img/brand): ink + Emerald 700
+   on light, paper + Fresh Green on dark. Configured as logo.src / logo.srcDark. */
 
 .navbar__link {
   color: var(--gc-text-muted);
@@ -248,7 +345,7 @@ nav.navbar {
 .navbar__link--active {
   color: var(--gc-text);
   background: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .navbar__link--active::after {
@@ -258,7 +355,7 @@ nav.navbar {
   right: 0.75rem;
   bottom: -1px;
   height: 2px;
-  background: var(--gc-accent);
+  background: var(--gc-text);
   border-radius: 2px 2px 0 0;
 }
 
@@ -444,16 +541,21 @@ a:hover .socialButton path {
 
 /* announcement bar */
 div[class*='announcementBar'] {
-  --site-announcement-bar-stripe-color-1: var(--gc-surface-2);
-  --site-announcement-bar-stripe-color-2: var(--gc-surface-2);
-  background: var(--gc-surface-2);
-  color: var(--gc-text);
-  border-bottom: 1px solid var(--gc-border);
+  --site-announcement-bar-stripe-color-1: var(--purple-1000);
+  --site-announcement-bar-stripe-color-2: var(--purple-1000);
+  background: var(--purple-1000);
+  color: var(--purple-50);
+  border-bottom: none;
   font-size: 0.85rem;
   font-weight: 500;
 }
+div[class*='announcementBar'] button {
+  color: var(--purple-50);
+}
 [class*='announcementBar'] a {
   margin-left: 0.35rem;
+  color: var(--fresh-green-500);
+  font-weight: 600;
   text-decoration: underline;
 }
 
@@ -543,7 +645,7 @@ aside[class*='docSidebarContainer'] {
 /* pagination */
 .pagination-nav__link {
   border: 1px solid var(--gc-border);
-  border-radius: 10px;
+  border-radius: var(--gc-radius-sm);
   background: var(--gc-surface);
 }
 .pagination-nav__link:hover {
@@ -552,7 +654,7 @@ aside[class*='docSidebarContainer'] {
 
 /* admonitions, tabs, code */
 .theme-admonition {
-  border-radius: 10px;
+  border-radius: var(--gc-radius-sm);
   border-left-width: 3px;
 }
 .tabs__item {
@@ -648,12 +750,13 @@ footer.footer--dark .footer__title {
   border: 1px solid var(--gc-border) !important;
   border-radius: var(--gc-radius);
   color: var(--gc-text);
-  padding: 15px;
+  padding: 24px;
   font-weight: normal;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .custom-card:hover {
   border-color: var(--gc-border-strong) !important;
+  box-shadow: var(--gc-shadow);
 }
 .custom-card h2 {
   font-weight: 600;
@@ -696,7 +799,7 @@ footer.footer--dark .footer__title {
 }
 
 html[data-theme='dark'] .install-tabs .tabs__item:first-child {
-  color: #eee;
+  color: var(--gc-text);
 }
 html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   background-color: transparent !important;
@@ -725,7 +828,7 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
 }
 .install-tabs .tabgroup-with-label .tabs__item:first-child {
   cursor: default !important;
-  color: black;
+  color: var(--gc-text);
   width: 150px;
   border: 1px solid transparent !important;
   border-right: 0 !important;
@@ -755,7 +858,7 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   color: var(--gc-accent-ink) !important;
 }
 .install-tabs .tabgroup-with-label .tabs__item.disabled-tab {
-  color: #999 !important;
+  color: var(--gc-text-faint) !important;
   cursor: default;
 }
 .install-tabs .tabgroup-with-label:after {
@@ -781,7 +884,31 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   display: none;
 }
 
-/* Launch partner CTA row (docs/launch-partner/README.md) */
+/* Buttons: ink pill with a paper label, hover to Purple-800 */
+.button {
+  font-family: var(--gc-font-body);
+  font-weight: 600;
+  border-radius: 999px;
+}
+.button--primary {
+  --ifm-button-background-color: var(--gc-cta);
+  --ifm-button-border-color: var(--gc-cta);
+  --ifm-button-color: var(--gc-cta-ink);
+  color: var(--gc-cta-ink);
+}
+.button--primary:hover {
+  --ifm-button-background-color: var(--gc-cta-hover);
+  --ifm-button-border-color: var(--gc-cta-hover);
+  color: var(--gc-cta-ink);
+}
+.button--secondary {
+  --ifm-button-background-color: transparent;
+  --ifm-button-border-color: transparent;
+  --ifm-button-color: var(--gc-accent);
+  color: var(--gc-accent);
+}
+
+/* Launch partner CTA row */
 .eez-cta-row {
   display: flex;
   flex-wrap: wrap;

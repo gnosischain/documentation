@@ -73,7 +73,7 @@ const config = {
         isCloseable: true,
       },
       colorMode: {
-        defaultMode: "dark", // Set default mode to dark
+        defaultMode: "light", // Light by default, per the Gnosis visual identity
         disableSwitch: false, // Enable the theme switch
         respectPrefersColorScheme: false, // Do not change theme based on user preference
       },
@@ -85,9 +85,10 @@ const config = {
       navbar: {
         logo: {
           alt: "Gnosis Chain",
-          src: "img/gnosis.svg",
-          srcDark: "img/gnosis.svg",
-          width: 118,
+          // Canonical Gnosis Chain lockup: ink + Emerald 700 on light, paper + Fresh Green on dark
+          src: "img/brand/gnosis-chain-on-light.svg",
+          srcDark: "img/brand/gnosis-chain-on-dark.svg",
+          width: 176,
           height: 26,
         },
         items: [

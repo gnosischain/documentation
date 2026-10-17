@@ -169,20 +169,16 @@ function Hero() {
         <span className={styles.heroLine}>Launch on Gnosis EEZ in Q1 2027.</span>
       </h1>
       <p className={styles.heroLede}>
-        The Ethereum Economic Zone is a neutral rollup framework, co-led by Gnosis and Zisk and
-        co-funded by the Ethereum Foundation. Gnosis EEZ is its first instance, operated by Gnosis.
-        The state of Gnosis Chain is hard-forked across, so nothing is redeployed. Teams live on
-        Gnosis Chain today will be the first in production on Gnosis EEZ, with Ethereum mainnet in
-        the same transaction.
+        Gnosis EEZ is the first instance of the Ethereum Economic Zone, a neutral rollup framework
+        co-funded by the Ethereum Foundation. Gnosis Chain becomes Gnosis EEZ in Q1 2027. Same
+        contracts, same addresses, nothing to migrate.
       </p>
       <div className={styles.heroActions}>
         <Link className={styles.btnPrimary} to="/launch-partner">
-          <Icon.Arrow width="16" height="16" />
           Become a launch partner
         </Link>
         <Link className={styles.btnSecondary} to="/developers/quickstart">
-          <Icon.Terminal width="16" height="16" />
-          Start building
+          Start building <Icon.Arrow width="16" height="16" />
         </Link>
       </div>
     </section>
@@ -287,11 +283,13 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <main className={styles.page}>
-        <Hero />
-        <Eez />
-        <Features />
-        <UseCases />
+      <main className={styles.home}>
+        <div className={styles.page}>
+          <Hero />
+          <Eez />
+          <Features />
+          <UseCases />
+        </div>
       </main>
     </Layout>
   );

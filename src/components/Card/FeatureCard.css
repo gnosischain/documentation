@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
-  border-left: 3px solid #3E6957;
+  border-left: 3px solid var(--gc-brand-accent);
   margin-right: 1rem;
   margin-bottom: 1rem;
   min-width: 220px;
@@ -19,7 +19,7 @@
 }
 
 .custom-feature-card a {
-  color: white;
+  color: var(--gc-accent);
   text-decoration: underline;
   font-weight: normal !important;
 }
