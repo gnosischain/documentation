@@ -279,7 +279,7 @@ Nothing you need to do. When Gnosis EEZ activates, this contract keeps:
 | Gas token | xDai | xDai |
 | Your keys and tooling | `gnosis-deployer`, Foundry | Unchanged |
 
-What changes is around it: blocks every 2 seconds, proven and settled on Ethereum (an interim proving setup at genesis, then real-time ZK proofs), and the ability to call Ethereum mainnet contracts in the same transaction. [Gnosis EEZ: the first instance](/eez/gnosis-eez) has the full comparison.
+What changes is around it: blocks every 2 seconds, proven and settled on Ethereum (an interim proving setup at genesis, then real-time ZK proofs), and the ability to call Ethereum mainnet contracts in the same transaction. [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez) has the full comparison.
 
 ## Register as a launch partner
 
@@ -291,6 +291,6 @@ You now have a verified contract on the chain that becomes Gnosis EEZ. Two steps
 ## Next steps
 
 - Replace `Counter` with your own contracts. The loop is the same: test, rehearse on Chiado, deploy and verify on mainnet.
-- [Accept stablecoin payments](/start/guides/accept-stablecoin-payments) puts an EURe or USDC transfer through a contract you control.
+- [Accept stablecoin payments](/developers/guides/accept-stablecoin-payments) puts an EURe or USDC transfer through a contract you control.
 - [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow) calls a protocol that lives at the same address on Gnosis Chain and Ethereum.
-- [What is possible on Gnosis EEZ](/eez/what-is-possible) sets out what we want built once mainnet is a same-transaction call away.
+- [What is Gnosis EEZ](/eez) explains what changes at the fork.

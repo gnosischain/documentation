@@ -33,4 +33,4 @@ Dates below the current quarter are indicative. They move when engineering or go
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
 | Reaching Ethereum | Through a bridge | In the same block |
 
-Not sure where you fit? Start with [use cases](/use-cases), or go straight to [become a launch partner](/launch-partner).
+Building on Gnosis Chain now? [Become a launch partner](/launch-partner).

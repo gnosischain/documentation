@@ -9,7 +9,7 @@ keywords: [stablecoin, payments, eure, usdc, erc20, foundry, payment receiver, m
 
 **Job:** accept stablecoin payments in your app. **Time:** about 40 minutes. **Chain:** Chiado testnet.
 
-**Prerequisites:** [deploy your first contract](/start/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
+**Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 
 A payment receiver is the smallest useful piece of on-chain payment infrastructure: a contract that accepts a stablecoin, records who paid and what for, and lets you withdraw. Everything else, invoicing, reconciliation, refunds, builds on this shape.
 
@@ -315,4 +315,4 @@ Check the decimals of whichever stablecoin you use. EURe and WXDAI have 18 decim
 
 A verified payment receiver holding real token balances, emitting an indexed event per payment, with an owner-only withdrawal. The pattern scales: add per-order amounts, expiry, or multiple accepted tokens without changing the shape.
 
-Next, [launch a tokenised asset](/start/guides/launch-a-tokenised-asset) issues a token of your own rather than accepting someone else's.
+Next, [launch a tokenised asset](/developers/guides/launch-a-tokenised-asset) issues a token of your own rather than accepting someone else's.

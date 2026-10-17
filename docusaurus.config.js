@@ -100,29 +100,17 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "useCases",
-            label: "Use cases",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
             sidebarId: "launchPartner",
             label: "Become a launch partner",
           },
-          {
-            type: "dropdown",
-            position: "left",
-            label: "Gnosis Chain",
-            items: [
-              { type: "docSidebar", sidebarId: "gnosisChain", label: "Overview" },
-              { type: "docSidebar", sidebarId: "developerGuides", label: "Developer guides" },
-              { type: "docSidebar", sidebarId: "bridges", label: "Bridges" },
-              { type: "docSidebar", sidebarId: "tools", label: "Tools" },
-              { type: "docSidebar", sidebarId: "technicalGuides", label: "Knowledge hub" },
-              { type: "docSidebar", sidebarId: "validators", label: "Validators and node operators" },
-              { type: "docSidebar", sidebarId: "faq", label: "FAQ" },
-            ],
-          },
+          // The Gnosis Chain doc set, one tab per section
+          { type: "docSidebar", position: "left", sidebarId: "gnosisChain", label: "Gnosis Chain" },
+          { type: "docSidebar", position: "left", sidebarId: "developerGuides", label: "Developers" },
+          { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
+          { type: "docSidebar", position: "left", sidebarId: "tools", label: "Tools" },
+          { type: "docSidebar", position: "left", sidebarId: "technicalGuides", label: "Knowledge hub" },
+          { type: "docSidebar", position: "left", sidebarId: "validators", label: "Validators" },
+          { type: "docSidebar", position: "left", sidebarId: "faq", label: "FAQ" },
           {
             href: "https://build.gnosischain.com/",
             position: "right",
@@ -159,21 +147,19 @@ const config = {
           {
             title: "Gnosis EEZ",
             items: [
-              { label: "What is EEZ", to: "/eez" },
-              { label: "Become a launch partner", to: "/launch-partner" },
-              { label: "Deploy now", to: "/launch-partner/deploy-now" },
-              { label: "What is possible on Gnosis EEZ", to: "/eez/what-is-possible" },
+              { label: "What is Gnosis EEZ", to: "/eez" },
+              { label: "Now vs Gnosis EEZ", to: "/eez/gnosis-eez" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },
+              { label: "Become a launch partner", to: "/launch-partner" },
             ],
           },
           {
-            title: "Use cases",
+            title: "Build",
             items: [
-              { label: "Use cases", to: "/use-cases" },
-              { label: "Building on Gnosis EEZ", to: "/use-cases/build" },
-              { label: "Request for builders", to: "/use-cases/what-is-possible" },
               { label: "Quickstart", to: "/developers/quickstart" },
+              { label: "0-1 guides", to: "/developers/guides" },
+              { label: "Deploy now", to: "/launch-partner/deploy-now" },
               { label: "Bridges", to: "/bridges" },
               { label: "Tools", to: "/tools" },
             ],
@@ -231,13 +217,13 @@ const config = {
 
   plugins: [
     [require.resolve("docusaurus-plugin-sass"), {}],
-    // The developer overview moved under Use cases as Building on Gnosis EEZ. Both casings
+    // The developer overview was archived; the quickstart is the developer entry point. Both casings
     // were linked (the file was Overview.md, links used /developers/overview). They differ
     // only by case, so they are written here rather than by plugin-client-redirects: on a
     // case-insensitive disk (macOS) both resolve to one file, and that plugin fails on the clash.
     require("./redirects/case-insensitive-redirects")({
-      "/developers/Overview": "/use-cases/build",
-      "/developers/overview": "/use-cases/build",
+      "/developers/Overview": "/developers/quickstart",
+      "/developers/overview": "/developers/quickstart",
     }),
     [
       "@docusaurus/plugin-client-redirects",
@@ -248,24 +234,6 @@ const config = {
             to: "/launch-partner",
             from: "/eez/launch-partner",
           },
-          // Request for builders split into one page per request
-          {
-            to: "/use-cases/what-is-possible",
-            from: "/eez/what-is-possible/request-for-builders-defi",
-          },
-          // The detailed requests moved under Use cases; /eez/what-is-possible
-          // is now the high-level overview that links to them
-          ...[
-            "lending-market-rwa-collateral",
-            "options-venue",
-            "perps-venue",
-            "prediction-market",
-            "native-infrastructure",
-            "hybrid-apps",
-          ].map((page) => ({
-            to: `/use-cases/what-is-possible/${page}`,
-            from: `/eez/what-is-possible/${page}`,
-          })),
           // Updates blog archived to /archives/Updates; nothing under /updates is published
           {
             to: "/",

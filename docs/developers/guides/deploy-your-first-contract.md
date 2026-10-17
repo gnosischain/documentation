@@ -218,4 +218,4 @@ Use a different account for mainnet than the one you generated here. A testnet k
 
 A deployed contract, verified source on Blockscout, and one state change you read back two ways. That is the full loop: write, deploy, verify, read.
 
-Next, [accept stablecoin payments](/start/guides/accept-stablecoin-payments) puts a token transfer through a contract you control.
+Next, [accept stablecoin payments](/developers/guides/accept-stablecoin-payments) puts a token transfer through a contract you control.

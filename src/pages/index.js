@@ -64,28 +64,59 @@ const Icon = {
 /* Content                                                             */
 /* ------------------------------------------------------------------ */
 
-/* The three component bundles from the Gnosis Chain site, as routes into the docs. */
-const PATHWAYS = [
+/* Gnosis EEZ: what changes at the fork, how it works, and how to be live at launch. */
+const EEZ_ROUTES = [
   {
-    icon: Icon.Wallet,
-    title: 'Yield inside your wallet',
+    icon: Icon.Trending,
+    title: 'Now vs Gnosis EEZ',
     audience:
-      'For trading and payment apps already selling a money market fund. A rail swap on the same fee model.',
-    to: '/start/embedded-components/yield-in-your-wallet',
+      'What stays the same and what changes at the fork: blocks, security, settlement and reaching Ethereum.',
+    cta: 'Compare',
+    to: '/eez/gnosis-eez',
   },
   {
-    icon: Icon.Pay,
-    title: 'Spend and Save',
+    icon: Icon.Server,
+    title: 'How it works',
     audience:
-      'For wallets and challengers that want a card without carrying a balance sheet.',
-    to: '/start/embedded-components/spend-and-save',
+      'Sequence, prove, settle, compose: the four steps behind every Gnosis EEZ block.',
+    cta: 'Read',
+    to: '/eez/how-it-works',
+  },
+  {
+    icon: Icon.Arrow,
+    title: 'Become a launch partner',
+    audience:
+      'Deploy on Gnosis Chain now and be live on Gnosis EEZ at launch, with nothing to redeploy.',
+    cta: 'Deploy',
+    to: '/launch-partner',
+  },
+];
+
+/* 0-1 guides that put open finance components to work, each ending in an on-chain result. */
+const PATHWAYS = [
+  {
+    icon: Icon.Pay,
+    title: 'Accept stablecoin payments',
+    audience:
+      'Put an EURe or USDC transfer through a contract you control, with a reference your backend can watch.',
+    cta: 'Start',
+    to: '/developers/guides/accept-stablecoin-payments',
+  },
+  {
+    icon: Icon.Build,
+    title: 'Launch a tokenised asset',
+    audience:
+      'Issue a token of your own on Chiado, verify it, and read it back the way an integrator would.',
+    cta: 'Start',
+    to: '/developers/guides/launch-a-tokenised-asset',
   },
   {
     icon: Icon.Trending,
-    title: 'Full Investing Suite',
+    title: 'Buy a tokenised asset with CoW',
     audience:
-      'For brokers and neobanks adding tokenised assets and self-custodial crypto.',
-    to: '/start/embedded-components/full-investing-suite',
+      'Buy a yield-bearing asset through CoW Protocol, then point the same code at Ethereum mainnet.',
+    cta: 'Start',
+    to: '/developers/demo-projects/buy-a-tokenised-asset-with-cow',
   },
 ];
 
@@ -94,7 +125,7 @@ const FEATURES = [
     icon: Icon.Build,
     title: 'Build on Gnosis',
     body: 'Deploy EVM contracts with Foundry or Hardhat and verify them on Gnosisscan.',
-    to: '/use-cases/build',
+    to: '/developers/quickstart',
   },
   {
     icon: Icon.Bridge,
@@ -172,6 +203,7 @@ const TASKS = [
       ['Chiado testnet', '/about/networks/chiado'],
       ['Faucets', '/tools/Faucets'],
       ['RPC providers', '/tools/RPC Providers/'],
+      ['Validators and node operators', '/validators/eez-transition'],
     ],
   },
   {
@@ -216,11 +248,51 @@ function Hero() {
           <Icon.Arrow width="16" height="16" />
           Become a launch partner
         </Link>
-        <Link className={styles.btnSecondary} to="/use-cases/build">
+        <Link className={styles.btnSecondary} to="/developers/quickstart">
           <Icon.Terminal width="16" height="16" />
           Start building
         </Link>
       </div>
+    </section>
+  );
+}
+
+function RouteCards({routes}) {
+  return (
+    <div className={styles.pathwayGrid}>
+      {routes.map(({icon: I, title, audience, cta, to}) => (
+        <Link key={title} className={styles.pathway} to={to}>
+          <span className={styles.pathwayTop}>
+            <span className={styles.pathwayIcon}>
+              <I width="22" height="22" />
+            </span>
+          </span>
+          <span className={styles.pathwayBody}>
+            <span className={styles.pathwayTitle}>{title}</span>
+            <span className={styles.pathwayAudience}>{audience}</span>
+          </span>
+          <span className={styles.pathwayFoot}>
+            <span className={styles.pathwayCta}>
+              {cta} <Icon.Arrow width="14" height="14" />
+            </span>
+          </span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+function Eez() {
+  return (
+    <section className={styles.section}>
+      <div className={styles.sectionHead}>
+        <h2 className={styles.sectionTitle}>Gnosis Chain now, Gnosis EEZ in Q1 2027</h2>
+        <p className={styles.sectionSub}>
+          Gnosis Chain becomes Gnosis EEZ through a hard fork of its state. Here is what changes, how
+          it works, and how to be live on day one.
+        </p>
+      </div>
+      <RouteCards routes={EEZ_ROUTES} />
     </section>
   );
 }
@@ -231,30 +303,11 @@ function Pathways() {
       <div className={styles.sectionHead}>
         <h2 className={styles.sectionTitle}>Open finance for your app</h2>
         <p className={styles.sectionSub}>
-          Three bundles of open finance components, each with 0-1 guides that end in a result you
-          can verify on-chain.
+          0-1 guides that put the components live on Gnosis Chain to work, each ending in a result
+          you can verify on-chain.
         </p>
       </div>
-      <div className={styles.pathwayGrid}>
-        {PATHWAYS.map(({icon: I, title, audience, to}) => (
-          <Link key={title} className={styles.pathway} to={to}>
-            <span className={styles.pathwayTop}>
-              <span className={styles.pathwayIcon}>
-                <I width="22" height="22" />
-              </span>
-            </span>
-            <span className={styles.pathwayBody}>
-              <span className={styles.pathwayTitle}>{title}</span>
-              <span className={styles.pathwayAudience}>{audience}</span>
-            </span>
-            <span className={styles.pathwayFoot}>
-              <span className={styles.pathwayCta}>
-                Start <Icon.Arrow width="14" height="14" />
-              </span>
-            </span>
-          </Link>
-        ))}
-      </div>
+      <RouteCards routes={PATHWAYS} />
     </section>
   );
 }
@@ -341,6 +394,7 @@ export default function Home() {
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <main className={styles.page}>
         <Hero />
+        <Eez />
         <Features />
         <Pathways />
         <UseCases />

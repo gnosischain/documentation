@@ -12,6 +12,8 @@ bridge instructions in archived pages have not been maintained and should not be
 
 | Area | Why | Archived |
 | --- | --- | --- |
+| [Use Cases](./Use%20Cases/) | The use cases section, the developer overview (Building on Gnosis EEZ), the request for builders and the shared components table. The docs now cover Gnosis Chain plus a short Gnosis EEZ section | October 2026 |
+| [Embed](./Embed/) | The Embed landing page and the three fintech component bundles. The 0-1 guides moved to Developer guides | October 2026 |
 | [Updates](./Updates/) | The updates blog (announcements, core devs call notes, weekly recaps) is no longer published | September 2026 |
 | [FAQ](./FAQ/) | Node FAQs and the Validators FAQ; the remaining FAQs live at `/faq` | September 2026 |
 | [Node](./Node/) | The whole "Run a node" section — manual client setup, validator keys, deposits, withdrawals, monitoring, node tooling | September 2026 |

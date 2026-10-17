@@ -9,7 +9,7 @@ keywords: [tokenisation, rwa, tokenised asset, erc20, cap, foundry, backed, secu
 
 **Job:** tokenise an asset. **Time:** about 45 minutes. **Chain:** Chiado testnet.
 
-**Prerequisites:** [deploy your first contract](/start/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
+**Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 
 Tokenising an asset means issuing a token whose supply is bound to something that exists off-chain: a property, a bond, a warehouse of coffee. The on-chain part is the easy half, and this guide covers it honestly: a capped-supply ERC-20, a documented reference to the asset, and controls over who can hold it.
 

@@ -400,4 +400,3 @@ Extend it in whichever direction your product needs:
 - Swap the buy token for a [Backed](https://backed.fi) bToken to hold tokenised treasuries instead of savings, once you have handled the transfer restrictions.
 - Sell EURe (`0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430`) instead of WXDAI to start from regulated euro e-money rather than a dollar-denominated position.
 - Place the order from a [Safe](https://safe.global) using the `presign` signing scheme, so a treasury with multiple signers can use the same flow.
-- Read [Embed](/start) for the component bundles these pieces belong to.
