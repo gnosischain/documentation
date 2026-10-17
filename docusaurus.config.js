@@ -151,16 +151,17 @@ const config = {
               { label: "Now vs Gnosis EEZ", to: "/eez/gnosis-eez" },
               { label: "How it works", to: "/eez/how-it-works" },
               { label: "Timeline", to: "/eez/timeline" },
+              { label: "Transition FAQ", to: "/eez/faq" },
               { label: "Become a launch partner", to: "/launch-partner" },
             ],
           },
           {
             title: "Build",
             items: [
-              { label: "Quickstart", to: "/developers/quickstart" },
-              { label: "0-1 guides", to: "/developers/guides" },
               { label: "Deploy now", to: "/launch-partner/deploy-now" },
-              { label: "Bridges", to: "/bridges" },
+              { label: "0-1 guides", to: "/developers/guides" },
+              { label: "Demo projects", to: "/category/demo-projects" },
+              { label: "Useful contracts", to: "/developers/Usefulcontracts" },
               { label: "Tools", to: "/tools" },
             ],
           },
@@ -169,9 +170,9 @@ const config = {
             items: [
               { label: "Network details", to: "/about/networks/" },
               { label: "Chiado testnet", to: "/about/networks/chiado" },
-              { label: "Faucets", to: "/tools/Faucets" },
-              { label: "Gnosisscan", href: "https://gnosisscan.io" },
-              { label: "Gnosis Bridge", href: "https://bridge.gnosischain.com" },
+              { label: "GNO and xDai", to: "/about/tokens" },
+              { label: "Chain specs", to: "/about/specs" },
+              { label: "Validators and node operators", to: "/validators/eez-transition" },
             ],
           },
           {
@@ -188,6 +189,8 @@ const config = {
             title: "More",
             items: [
               { label: "FAQ", to: "/faq/others" },
+              { label: "Gnosisscan", href: "https://gnosisscan.io" },
+              { label: "Gnosis Bridge app", href: "https://bridge.gnosischain.com" },
               { label: "Careers", href: "https://gnosis.io/careers/" },
               { label: "Media kit", href: "https://www.gnosis.io/press" },
               { label: "Terms of use", to: "/terms-conditions" },

@@ -5,6 +5,21 @@
   background: var(--gc-bg);
 }
 
+/* line the footer columns up with the page's content edge on the home page */
+:global(body):has(.page) :global(footer.footer) {
+  padding-left: 0;
+  padding-right: 0;
+}
+:global(body):has(.page) :global(footer.footer .container) {
+  max-width: 1280px;
+  padding: 0 2rem;
+}
+@media (max-width: 640px) {
+  :global(body):has(.page) :global(footer.footer .container) {
+    padding: 0 1rem;
+  }
+}
+
 /* ---------- hero ---------- */
 .hero {
   max-width: 860px;
@@ -214,15 +229,6 @@
   letter-spacing: -0.01em;
   margin: 0 0 1.25rem;
 }
-.eyebrow {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gc-text-faint);
-  margin-bottom: 1rem;
-}
-
 /* ---------- use cases ---------- */
 .useCaseGrid {
   display: grid;
@@ -280,50 +286,6 @@
   color: var(--gc-text);
 }
 
-/* ---------- other: sits flush on the footer and reads as its top row ---------- */
-.other {
-  border-top: 1px solid var(--gc-border);
-  padding-top: 3.5rem;
-}
-.otherTitle {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin: 0 0 1.5rem;
-  color: var(--gc-text);
-}
-/* the Other row takes over the footer's top rule, so the two read as one block */
-:global(body):has(.other) :global(footer.footer) {
-  border-top: none;
-  padding: 2.5rem 0 2.5rem;
-}
-/* line the footer columns up with the page's content edge */
-:global(body):has(.other) :global(footer.footer .container) {
-  max-width: 1280px;
-  padding: 0 2rem;
-}
-.taskGrid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2rem 1rem;
-}
-.taskList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.taskLink {
-  font-size: 0.875rem;
-  color: var(--gc-text-muted);
-  text-decoration: none;
-}
-.taskLink:hover {
-  color: var(--gc-text);
-  text-decoration: none;
-}
-
 .moreLink {
   display: inline-flex;
   align-items: center;
@@ -342,8 +304,7 @@
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
   .featureGrid,
-  .useCaseGrid,
-  .taskGrid {
+  .useCaseGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .pathwayGrid {
@@ -367,19 +328,12 @@
   }
   .featureGrid,
   .useCaseGrid,
-  .taskGrid,
   .pathwayGrid {
     grid-template-columns: 1fr;
   }
   .featureCard {
     min-height: 0;
     gap: 1.5rem;
-  }
-  .other {
-    padding-top: 2.5rem;
-  }
-  :global(body):has(.other) :global(footer.footer .container) {
-    padding: 0 1rem;
   }
   .facts {
     margin-bottom: 3rem;

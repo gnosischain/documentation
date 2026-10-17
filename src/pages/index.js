@@ -92,34 +92,6 @@ const EEZ_ROUTES = [
   },
 ];
 
-/* 0-1 guides that put open finance components to work, each ending in an on-chain result. */
-const PATHWAYS = [
-  {
-    icon: Icon.Pay,
-    title: 'Accept stablecoin payments',
-    audience:
-      'Put an EURe or USDC transfer through a contract you control, with a reference your backend can watch.',
-    cta: 'Start',
-    to: '/developers/guides/accept-stablecoin-payments',
-  },
-  {
-    icon: Icon.Build,
-    title: 'Launch a tokenised asset',
-    audience:
-      'Issue a token of your own on Chiado, verify it, and read it back the way an integrator would.',
-    cta: 'Start',
-    to: '/developers/guides/launch-a-tokenised-asset',
-  },
-  {
-    icon: Icon.Trending,
-    title: 'Buy a tokenised asset with CoW',
-    audience:
-      'Buy a yield-bearing asset through CoW Protocol, then point the same code at Ethereum mainnet.',
-    cta: 'Start',
-    to: '/developers/demo-projects/buy-a-tokenised-asset-with-cow',
-  },
-];
-
 const FEATURES = [
   {
     icon: Icon.Build,
@@ -182,46 +154,6 @@ const USE_CASES = [
       ['Account abstraction', '/technicalguides/account-abstraction/'],
       ['Custom signers', '/technicalguides/custom-signers/'],
       ['EIP-7702 on Gnosis', '/technicalguides/Pectra/eip-7702'],
-    ],
-  },
-];
-
-const TASKS = [
-  {
-    heading: 'Core',
-    links: [
-      ['Connect a wallet', '/developers/Interact on Gnosis/metamask'],
-      ['Deploy a token', '/developers/Build contracts on gnosis/token'],
-      ['Deploy an NFT', '/developers/Build contracts on gnosis/nft'],
-      ['Build a full-stack dapp', '/developers/Build contracts on gnosis/full-stack-dapp'],
-    ],
-  },
-  {
-    heading: 'Network',
-    links: [
-      ['Network details', '/about/networks/'],
-      ['Chiado testnet', '/about/networks/chiado'],
-      ['Faucets', '/tools/Faucets'],
-      ['RPC providers', '/tools/RPC Providers/'],
-      ['Validators and node operators', '/validators/eez-transition'],
-    ],
-  },
-  {
-    heading: 'Tools',
-    links: [
-      ['Block explorers', '/tools/Blockchain Explorers/'],
-      ['Indexers and analytics', '/tools/Indexer & Analytics/'],
-      ['Oracles', '/tools/Oracle Providers/'],
-      ['Wallets', '/tools/wallets/'],
-    ],
-  },
-  {
-    heading: 'Reference',
-    links: [
-      ['Useful contracts', '/developers/Usefulcontracts'],
-      ['Chain specs', '/about/specs/'],
-      ['GNO and xDai', '/about/tokens/'],
-      ['llms.txt', '/llms.txt'],
     ],
   },
 ];
@@ -297,21 +229,6 @@ function Eez() {
   );
 }
 
-function Pathways() {
-  return (
-    <section className={styles.section}>
-      <div className={styles.sectionHead}>
-        <h2 className={styles.sectionTitle}>Open finance for your app</h2>
-        <p className={styles.sectionSub}>
-          0-1 guides that put the components live on Gnosis Chain to work, each ending in a result
-          you can verify on-chain.
-        </p>
-      </div>
-      <RouteCards routes={PATHWAYS} />
-    </section>
-  );
-}
-
 function Features() {
   return (
     <section className={styles.section}>
@@ -366,28 +283,6 @@ function UseCases() {
   );
 }
 
-function Tasks() {
-  return (
-    <section className={styles.other}>
-      <h2 className={styles.otherTitle}>Other</h2>
-      <div className={styles.taskGrid}>
-        {TASKS.map(({heading, links}) => (
-          <div key={heading}>
-            <div className={styles.eyebrow}>{heading}</div>
-            <ul className={styles.taskList}>
-              {links.map(([label, to]) => (
-                <li key={to}>
-                  <Link to={to} className={styles.taskLink}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -396,9 +291,7 @@ export default function Home() {
         <Hero />
         <Eez />
         <Features />
-        <Pathways />
         <UseCases />
-        <Tasks />
       </main>
     </Layout>
   );
