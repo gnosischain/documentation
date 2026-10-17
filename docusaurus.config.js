@@ -97,12 +97,6 @@ const config = {
             sidebarId: "eez",
             label: "Gnosis EEZ",
           },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "launchPartner",
-            label: "Become a launch partner",
-          },
           // The Gnosis Chain doc set, one tab per section
           { type: "docSidebar", position: "left", sidebarId: "gnosisChain", label: "Gnosis Chain" },
           { type: "docSidebar", position: "left", sidebarId: "developerGuides", label: "Developers" },

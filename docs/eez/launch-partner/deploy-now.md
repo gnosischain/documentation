@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 sidebar_label: Deploy now
+slug: /launch-partner/deploy-now
 title: "Deploy now: from nothing to a verified contract on Gnosis Chain"
 description: A 0-1 guide for launch partners. Rehearse on the Chiado testnet, then deploy and verify a contract on Gnosis Chain mainnet. The mainnet deployment carries over to Gnosis EEZ at the fork with the same address. About 45 minutes.
 keywords: [deploy, gnosis chain, mainnet, chiado, foundry, forge, verify, gnosisscan, blockscout, launch partner, gnosis eez]
