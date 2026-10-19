@@ -13,12 +13,21 @@ Gnosis Chain is EVM-equivalent: the contracts, tools and libraries you use on Et
 
 ## Start here
 
-New to Gnosis Chain? Pick one of these. Both end with a contract you can see on a block explorer.
+New to Gnosis Chain? Pick one of these. Each ends in a result you can check on-chain.
 
 | If you want to | Start with | Time |
 | --- | --- | --- |
 | Deploy from the browser, with nothing to install | [Quickstart](/developers/quickstart), using Remix and MetaMask | About 15 minutes |
 | Work from the terminal, with tests and verification | [Deploy your first contract](/developers/guides/deploy-your-first-contract), using Foundry | About 30 minutes |
+| Call live protocols instead of deploying your own | [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow), using viem | About 40 minutes |
+
+### Quickstart: buy a tokenised asset with CoW Swap
+
+Write about eighty lines of JavaScript that buy a yield-bearing tokenised asset through CoW Protocol, with no solver, quoting engine or price oracle of your own. Then change three constants and the same script trades on Ethereum mainnet, because CoW Protocol lives at the same address on both chains.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="/developers/demo-projects/buy-a-tokenised-asset-with-cow">Start the CoW Swap quickstart</a>
+</div>
 
 ## Network details
 
@@ -76,7 +85,6 @@ Publish your source code so anyone can read the contract they are calling.
 
 ### Go further
 
-- [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow): an end-to-end demo that buys a yield-bearing asset through CoW Protocol, then runs the same code against Ethereum mainnet.
 - [Useful contracts](/developers/Usefulcontracts): contract, bridge and validator addresses for Gnosis Chain, Chiado and Ethereum.
 - [Developer tutorials](/technicalguides): smart accounts, custom signers, EIP-7702 and EIP-5792.
 
