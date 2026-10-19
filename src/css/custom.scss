@@ -289,7 +289,9 @@ a {
 .theme-doc-markdown.markdown a {
   font-weight: 500;
 }
-[data-theme='dark'] .theme-doc-markdown.markdown a {
+/* In dark mode links in running text are paler purple, so underline them to tell
+   them apart from body copy. Only prose links: cards and buttons stay clean. */
+[data-theme='dark'] .theme-doc-markdown.markdown :is(p, li, td, th) > a {
   text-decoration: underline;
 }
 
@@ -901,11 +903,17 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   --ifm-button-border-color: var(--gc-cta-hover);
   color: var(--gc-cta-ink);
 }
-.button--secondary {
+/* Secondary: a text link in the link colour. Matches Infima's own
+   `.button--secondary:not(.button--outline)` specificity so its grey text does not win. */
+.button.button--secondary:not(.button--outline) {
   --ifm-button-background-color: transparent;
   --ifm-button-border-color: transparent;
   --ifm-button-color: var(--gc-accent);
   color: var(--gc-accent);
+}
+.button.button--secondary:not(.button--outline):hover {
+  --ifm-button-background-color: var(--gc-accent-soft);
+  color: var(--gc-accent-hover);
 }
 
 /* Launch partner CTA row */
