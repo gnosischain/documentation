@@ -215,13 +215,13 @@ const config = {
 
   plugins: [
     [require.resolve("docusaurus-plugin-sass"), {}],
-    // The developer overview was archived; the quickstart is the developer entry point. Both casings
+    // The old developer overview now lands on the Developer guides overview. Both casings
     // were linked (the file was Overview.md, links used /developers/overview). They differ
     // only by case, so they are written here rather than by plugin-client-redirects: on a
     // case-insensitive disk (macOS) both resolve to one file, and that plugin fails on the clash.
     require("./redirects/case-insensitive-redirects")({
-      "/developers/Overview": "/developers/quickstart",
-      "/developers/overview": "/developers/quickstart",
+      "/developers/Overview": "/developers",
+      "/developers/overview": "/developers",
     }),
     [
       "@docusaurus/plugin-client-redirects",
