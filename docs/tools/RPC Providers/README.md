@@ -173,3 +173,29 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## Dwellir
+
+Dwellir provides RPC endpoints for Gnosis Mainnet and Chiado.
+Free API keys after signing up. Paid plans are listed on the [Dwellir pricing page](https://www.dwellir.com/pricing).
+Each response counts as one API credit, with no compute units.
+
+- [Dwellir](https://www.dwellir.com/networks/gnosis)
+- [Docs](https://www.dwellir.com/docs)
+
+<Tabs>
+<TabItem label="Mainnet" value="Mainnet">
+
+```
+https://api-gnosis-mainnet.n.dwellir.com/<API_KEY>
+```
+
+</TabItem>
+<TabItem label="Chiado" value="Chiado">
+
+```
+https://api-chiado.n.dwellir.com/<API_KEY>
+```
+
+</TabItem>
+</Tabs>
