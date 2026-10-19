@@ -254,6 +254,13 @@ const config = {
             to: "/about",
             from: "/start/about-gnosis-chain",
           },
+          // Validator withdrawals and voluntary exit moved to the Validators section
+          { to: "/validators/withdrawals", from: "/node/management/withdrawals" },
+          ...["bls-to-execution-change", "claiming-your-gno", "switch-to-compounding"].map((page) => ({
+            to: `/validators/withdrawals/${page}`,
+            from: `/node/management/withdrawals/${page}`,
+          })),
+          { to: "/validators/voluntary-exit", from: "/node/management/voluntary-exit" },
           // Run a node archived to /archives/Node; the section is no longer published.
           // Node and validator readers land on the runbook for the move to Gnosis EEZ.
           {
@@ -269,11 +276,6 @@ const config = {
               "/node/management/migrating-validator",
               "/node/management/monitoring-node",
               "/node/management/monitoring-validators",
-              "/node/management/voluntary-exit",
-              "/node/management/withdrawals",
-              "/node/management/withdrawals/bls-to-execution-change",
-              "/node/management/withdrawals/claiming-your-gno",
-              "/node/management/withdrawals/switch-to-compounding",
               "/node/manual",
               "/node/manual/configure-server",
               "/node/manual/beacon/lighthouse",

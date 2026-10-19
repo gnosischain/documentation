@@ -32,6 +32,11 @@ Gnosis Chain continues to run as a proof-of-stake Layer 1 until the fork. At act
 - **There is no action to take** before the activation block is announced.
 - **RPC and archive nodes run as they do today**, with both an execution client and a consensus-layer client.
 
+Managing a validator before activation works as it always has:
+
+- [Validator withdrawals](/validators/withdrawals): withdrawal credentials, enabling withdrawals (`0x00` to `0x01`), switching to compounding (`0x01` to `0x02`) and claiming your GNO.
+- [Voluntary exit](/validators/voluntary-exit): stop validating and withdraw your full balance.
+
 ## At activation
 
 - **The validator set retires.** Block production moves to the composer, and blocks are proven and settled on Ethereum.
