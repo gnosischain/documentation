@@ -263,6 +263,11 @@ const config = {
             to: "/developers/Verify Smart Contracts/",
             from: "/developers/Verify Smart Contracts/truffle",
           },
+          // cookbook.dev is offline; page archived to /archives/Cookbook
+          {
+            to: "/developers/dev-environment/hardhat",
+            from: "/developers/dev-environment/cookbook",
+          },
         ],
       },
     ],
