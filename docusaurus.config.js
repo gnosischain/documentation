@@ -353,6 +353,17 @@ const config = {
         outputFile: "llms.txt", // defaults to llms.txt if not specified
       },
     ],
+    [
+      // A .md copy of every page, used by the "Copy page" menu next to each doc title.
+      require.resolve("./src/plugins/page-markdown.mjs"),
+      {
+        content: {
+          includePages: true,
+          relativePaths: false,
+          excludeRoutes: ["/search", "/live-samples/**"],
+        },
+      },
+    ],
   ],
 };
 
