@@ -21,7 +21,7 @@ If you want to be a Gnosis EEZ launch partner, deploy on Gnosis Chain now. A liv
 | | On Gnosis Chain today | After the fork |
 | --- | --- | --- |
 | Contracts and state | Deployed and verified on Gnosisscan | Carried over unchanged, same addresses, same storage |
-| Gas token | xDai | xDai, with no change at launch |
+| Gas token | xDai | xDai |
 | GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Under the transition approved by GnosisDAO, staked GNO is unlocked when the validator set sunsets, and former validators may operate proof systems. |
 | EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes. |
 | Tooling | Gnosisscan, RPC providers, indexers | The same tooling, pointed at the same chain |
