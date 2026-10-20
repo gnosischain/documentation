@@ -18,28 +18,36 @@ If you want to be a Gnosis EEZ launch partner, deploy on Gnosis Chain now. A liv
 
 ## What stays the same
 
+<div className="compare-table">
+
 | | On Gnosis Chain today | After the fork |
 | --- | --- | --- |
 | Contracts and state | Deployed and verified on Gnosisscan | Carried over unchanged, same addresses, same storage |
 | Gas token | xDai | xDai |
-| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Staked GNO unlocks when the validator set retires. |
-| EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes. |
+| GNO | Secures consensus and governs through GnosisDAO | Continues as the governance token. Staked GNO unlocks when the validator set retires |
+| EVM | Standard EVM, Foundry, Hardhat, viem, ethers | Standard EVM. No new opcodes, no new SDK, no Solidity changes |
 | Tooling | Gnosisscan, RPC providers, indexers | The same tooling, pointed at the same chain |
 | Components | Monerium EURe, Safe, CoW Protocol, Gnosis Pay, Spark, Aave, Balancer, Curve, Backed, Circles | All carried over with their contracts and liquidity |
 
+</div>
+
 ## What changes
+
+<div className="compare-table">
 
 | | On Gnosis Chain today | After the fork |
 | --- | --- | --- |
 | Block production | A proof-of-stake validator set of over 200,000 validators | A composer, using sequencing and prover technology |
-| Consensus | Beacon chain, GBC | The validator set retires. Node operators drop their consensus-layer client. |
-| Security | Validator economic security | Proofs verified on Ethereum. An interim proving setup, likely TEE-based, at genesis, moving to real-time ZK proofs across more than one proof system. |
-| Settlement | Gnosis Chain is its own settlement layer | Blocks settle to Ethereum. Data is published to Ethereum blobs. |
+| Consensus | Beacon chain, GBC | The validator set retires. Node operators drop their consensus-layer client |
+| Security | Validator economic security | Proofs verified on Ethereum. An interim proving setup, likely TEE-based, at genesis, moving to real-time ZK proofs across more than one proof system |
+| Settlement | Gnosis Chain is its own settlement layer | Blocks settle to Ethereum. Data is published to Ethereum blobs |
 | Block time | 5 seconds | 2 seconds, with a composing block every 12-second Ethereum slot |
-| Finality | Around 2.5 minutes to hard finality | Soft confirmation in seconds. Hard finality when the proof lands on Ethereum. |
+| Finality | Around 2.5 minutes to hard finality | Soft confirmation in seconds. Hard finality when the proof lands on Ethereum |
 | Reaching Ethereum mainnet | Native bridge, or a third-party bridge | A synchronous call from Gnosis EEZ into Ethereum mainnet in the same transaction, with no bridge or wrapped asset |
 | Reaching other rollups | A bridge | Still a bridge, unless the rollup is part of the EEZ |
 | Fees | One fee, paid in xDai | Priced by route (instance only, instance to Ethereum, Ethereum to instance), still paid in xDai |
+
+</div>
 
 ## For validators and node operators
 

@@ -275,6 +275,23 @@ pre {
   line-height: 1.7;
 }
 
+/* Comparison tables (Gnosis Chain today vs Gnosis EEZ): full width with fixed
+   column widths, so consecutive tables line up column for column. */
+.compare-table table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.compare-table th:first-child,
+.compare-table td:first-child {
+  width: 22%;
+  font-weight: 600;
+}
+.compare-table th:not(:first-child),
+.compare-table td:not(:first-child) {
+  width: 39%;
+}
+
 /* Tables: aligned figures for addresses, chain IDs and numbers */
 .markdown table {
   font-variant-numeric: tabular-nums;
