@@ -31,7 +31,7 @@ If you want to be a Gnosis EEZ launch partner, deploy on Gnosis Chain now. A liv
 
 | | On Gnosis Chain today | After the fork |
 | --- | --- | --- |
-| Block production | A proof-of-stake validator set of over 200,000 validators | A composer operated by Gnosis, using sequencing and prover technology from Zisk |
+| Block production | A proof-of-stake validator set of over 200,000 validators | A composer, using sequencing and prover technology |
 | Consensus | Beacon chain, GBC | The validator set retires. Node operators drop their consensus-layer client. |
 | Security | Validator economic security | Proofs verified on Ethereum. An interim proving setup, likely TEE-based, at genesis, moving to real-time ZK proofs across more than one proof system. |
 | Settlement | Gnosis Chain is its own settlement layer | Blocks settle to Ethereum. Data is published to Ethereum blobs. |
