@@ -173,3 +173,15 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## Taifoon
+
+A keyed gateway over a measured rotation of Gnosis endpoints with per-request failover, plus proved reads: a read can carry its inclusion proof under the Taifoon superroot. A free key (60 requests/min) comes from one API call; after the free allowance reads cost $0.50 per 1M and proved reads $5 per 1M.
+
+- [Taifoon Gnosis RPC](https://www.taifoon.io/rpc/gnosis)
+- [Get a free key](https://coord.taifoon.dev/v1/openapi.json) (`POST https://coord.taifoon.dev/v1/register`)
+
+```shell
+# Gnosis Mainnet RPC (send the key as the x-api-key header)
+https://coord.taifoon.dev/gw/rpc/100
+```
