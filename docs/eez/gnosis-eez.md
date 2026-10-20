@@ -51,11 +51,9 @@ If you want to be a Gnosis EEZ launch partner, deploy on Gnosis Chain now. A liv
 
 ## For validators and node operators
 
-The Gnosis Chain validator set is retired when the fork activates. GnosisDAO has approved the transition, including the sunset, the unlocking of staked GNO and the option for former validators to operate proof systems. Until the fork, validators keep running, keep earning, and nothing about deposits or withdrawals changes.
+Validators keep running until the fork. At activation the validator set retires and staked GNO unlocks. RPC and archive node operators keep their execution client and drop the consensus-layer client.
 
-Node operators who run RPC or archive nodes keep running an execution client. The consensus-layer client is no longer needed after the fork.
-
-The [validator and node operator runbook](/validators/eez-transition) has a checklist for each role.
+The [Validators section](/validators/eez-transition) has the full guide, a checklist for each role, and how to manage withdrawals and exits until then.
 
 ## What is not in the first release
 
