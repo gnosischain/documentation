@@ -39,7 +39,7 @@ You keep an execution client. The consensus-layer client is no longer needed aft
 
 ### Will the bridges keep working?
 
-The existing bridges keep operating. Over time, calls between Ethereum and Gnosis EEZ in the same block reduce the need to bridge for most flows. The [bridges](/bridges) section stays current for as long as the bridges are in use.
+The existing bridges keep operating. Once Gnosis EEZ is live, synchronous calls to Ethereum mainnet in the same transaction will reduce the need to bridge to mainnet for most flows. Reaching rollups that are not part of the EEZ will still need a bridge. The [bridges](/bridges) section stays current for as long as the bridges are in use.
 
 ### Is Gnosis Chain shutting down?
 
@@ -51,7 +51,7 @@ It is an instance of the Ethereum Economic Zone: a chain whose blocks are proven
 
 ### When exactly is the fork?
 
-Gnosis EEZ genesis is targeted for Q1 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
+No date is set yet. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
 ### What is not ready at launch?
 

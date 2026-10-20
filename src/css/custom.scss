@@ -739,15 +739,26 @@ footer.footer--dark .footer__title {
 }
 
 /* ---------- content components used in docs (Card, Box, etc.) ---------- */
+/* Card grids: equal-width columns that wrap cleanly, and every card in a row
+   the same height, so titles and text line up whatever their length. */
+.custom-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 1.25rem 0 2rem;
+}
 .custom-card-link {
-  flex: 4;
-  margin: 5px;
-  min-width: 220px;
+  display: flex;
+  min-width: 0;
 }
 .custom-card-link:hover {
   text-decoration: none;
 }
 .custom-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
   background: var(--gc-surface);
   border: 1px solid var(--gc-border) !important;
   border-radius: var(--gc-radius);
@@ -756,17 +767,21 @@ footer.footer--dark .footer__title {
   font-weight: normal;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
+.custom-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.custom-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--gc-text-muted);
+}
 .custom-card:hover {
   border-color: var(--gc-border-strong) !important;
   box-shadow: var(--gc-shadow);
-}
-.custom-card h2 {
-  font-weight: 600;
-}
-.custom-card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 .custom-small-card {
   border: 1px solid var(--gc-border) !important;

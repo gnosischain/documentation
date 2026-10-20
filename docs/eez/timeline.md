@@ -1,13 +1,13 @@
 ---
 sidebar_position: 5
 title: Timeline
-description: Milestones from the EEZ announcement in March 2026 to the Gnosis EEZ launch in Q1 2027 and the full composability release that follows.
+description: Milestones from the EEZ announcement in March 2026 to the Gnosis EEZ launch and the full composability release that follows.
 keywords: [eez timeline, roadmap, gnosis eez launch, q1 2027, chiado fork, mainnet fork, validator sunset]
 ---
 
 # Timeline
 
-Dates below the current quarter are indicative. They move when engineering or governance milestones move, and this page is updated when they do. The one date to plan around is the launch window: Q1 2027.
+Dates below the current quarter are indicative. They move when engineering or governance milestones move, and this page is updated when they do.
 
 | When | Milestone | Status |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 | Mid 2026 | First EEZ rollup running in test. Core contracts published by the EEZ Association. | Done |
 | July 2026 | GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
 | H2 2026 | EEZ devnet running end-to-end cross-chain execution. Fork on the Chiado testnet. Launch partners test their deployments. | In progress |
-| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
+| Future | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
 | 2027 | Calls from Ethereum into Gnosis EEZ, nested calls and full bidirectional composability. Real-time ZK proving. Instance-to-instance calls. | Planned |
 
 ## What to watch
@@ -31,6 +31,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 | What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, an instance proven and settled on Ethereum (interim proving at genesis, then real-time ZK proofs) |
 | Your contracts | Deployed on Gnosis Chain | Unchanged, same addresses |
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
-| Reaching Ethereum | Through a bridge | In the same block |
+| Reaching Ethereum mainnet | Through a bridge | In the same transaction |
+| Reaching other rollups | Through a bridge | Through a bridge, unless the rollup is part of the EEZ |
 
 Building on Gnosis Chain now? [Become a launch partner](/launch-partner).

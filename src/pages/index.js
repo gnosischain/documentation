@@ -166,11 +166,11 @@ function Hero() {
     <section className={styles.hero}>
       <h1 className={styles.heroTitle}>
         <span className={styles.heroLine}>Deploy now on Gnosis Chain.</span>{' '}
-        <span className={styles.heroLine}>Launch on Gnosis EEZ in Q1 2027.</span>
+        <span className={styles.heroLine}>Launch on Gnosis EEZ.</span>
       </h1>
       <p className={styles.heroLede}>
         Gnosis EEZ is the first instance of the Ethereum Economic Zone, a neutral rollup framework
-        co-funded by the Ethereum Foundation. Gnosis Chain becomes Gnosis EEZ in Q1 2027. Same
+        co-funded by the Ethereum Foundation. Gnosis Chain will become Gnosis EEZ. Same
         contracts, same addresses, nothing to migrate.
       </p>
       <div className={styles.heroActions}>

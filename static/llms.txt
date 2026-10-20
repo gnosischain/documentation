@@ -1932,13 +1932,54 @@ xDai being a native token of the network does not comply with ERC-20 standard. W
 
 // File: bridges/README
 
-Welcome to Gnosis Bridge! 🎉 You can check out Gnosis Bridge here : https://bridge.gnosischain.com/
-<Card
-        title="What is Gnosis Bridge App?"
-        subtitle="Gnosis Chain bridge is a single bridge which allows you to bridge ERC20 tokens and xDAI token from Ethereum to Gnosis Chain and vice-versa. The requested token amount is minted and sent to the account initiating the transfer (or an alternative receiver account specified by the sender)."
-        url="https://bridge.gnosischain.com"
+# Bridges
 
-/>
+Gnosis Bridge moves tokens and messages between Ethereum and Gnosis Chain. Bridge stablecoins in to get xDai for gas, bring ERC-20 tokens across, or send data from a contract on one chain to a contract on the other.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="https://bridge.gnosischain.com">Open Gnosis Bridge</a>
+  <a className="button button--secondary button--lg" href="/bridges/usebridges">How to use it</a>
+</div>
+
+## Which bridge do I need?
+
+All three native bridges run behind the same app at [bridge.gnosischain.com](https://bridge.gnosischain.com).
+
+| If you want to | Use | How it works |
+| --- | --- | --- |
+| Get xDai, the gas token on Gnosis Chain | [xDai bridge](/bridges/About%20Token%20Bridges/xdai-bridge) | Bridges USDS (previously DAI) from Ethereum and mints xDai on Gnosis Chain |
+| Move an ERC-20 token such as GNO, WETH or WBTC | [Omnibridge](/bridges/About%20Token%20Bridges/omnibridge) | Mints the canonical bridged version of the token on Gnosis Chain |
+| Send data or call a contract on the other chain | [Arbitrary Message Bridge (AMB)](/bridges/About%20Token%20Bridges/amb-bridge) | Passes messages between the chains; the Omnibridge is built on it |
+| Bridge from a chain other than Ethereum | [Third-party bridges](/bridges/thirdpartybridges) | Bridges and swaps such as Jumper and Bungee, run by third parties |
+
+Transfers on the native bridges are signed by a set of [bridge validators](/bridges/management/validators). Moving from Ethereum to Gnosis Chain takes around 30 minutes, because the bridge waits for Ethereum finality.
+
+## What is in this section
+
+### Use the bridge
+
+- [How to use Gnosis Bridge](/bridges/usebridges): step-by-step transfers in both directions.
+- [Bridge Explorer](/bridges/Bridge%20Explorer): track a transfer, check bridge settings and validator status, and claim a transfer.
+- [Bridge limits](/bridges/brige-limits): per-transaction and daily limits for the most bridged tokens.
+
+### Understand the bridges
+
+- [How the bridges fit together](/bridges/About%20Token%20Bridges): native, third-party and application-specific bridges.
+- [xDai bridge](/bridges/About%20Token%20Bridges/xdai-bridge), [Omnibridge](/bridges/About%20Token%20Bridges/omnibridge) and [Arbitrary Message Bridge](/bridges/About%20Token%20Bridges/amb-bridge): contracts, trust model and transfer flow for each.
+
+### Build with the bridges
+
+- [Build with the AMB](/bridges/using-amb): send messages between contracts, and submit confirmations manually.
+
+### Security and governance
+
+- [Bridge management](/bridges/management): who governs the bridges, [governance decisions](/bridges/management/decisions) and [bridge validators](/bridges/management/validators).
+- [Audits](/bridges/audits): independent security audits of the Omnibridge and xDai bridge.
+- [Roadmap](/bridges/roadmap) and [Fast Confirmation Rule](/bridges/fast-confirmation-rule): work to cut bridging time from Ethereum.
+
+## Bridges and Gnosis EEZ
+
+The bridges keep operating through the move to [Gnosis EEZ](/eez). Once Gnosis EEZ is live, a contract will be able to call Ethereum mainnet synchronously, in the same transaction, which will reduce the need to bridge to mainnet. Rollups that are not part of the EEZ will still be reached through a bridge. This section stays current for as long as the bridges are in use.
 
 ---
 
@@ -4229,6 +4270,95 @@ Bridge transactions currently requires signatures from 4 of 7 validators.
 ```
 
 - [TokenBridge Docs: Migrating Oracle to new Server](https://github.com/tokenbridge/docs/blob/master/xdai-bridge/xdai-bridge-oracle-maintenance/oracle-migration-to-a-new-server.md)
+
+---
+
+// File: developers/README
+
+# Developer guides
+
+Gnosis Chain is EVM-equivalent: the contracts, tools and libraries you use on Ethereum work here unchanged. This section takes you from a first deployment to a production setup. Everything you deploy today carries over to [Gnosis EEZ](/eez) at the same address.
+
+## Start here
+
+New to Gnosis Chain? Pick one of these. Each ends in a result you can check on-chain.
+
+| If you want to | Start with | Time |
+| --- | --- | --- |
+| Deploy from the browser, with nothing to install | [Quickstart](/developers/quickstart), using Remix and MetaMask | About 15 minutes |
+| Work from the terminal, with tests and verification | [Deploy your first contract](/developers/guides/deploy-your-first-contract), using Foundry | About 30 minutes |
+| Call live protocols instead of deploying your own | [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow), using viem | About 40 minutes |
+
+### Quickstart: buy a tokenised asset with CoW Swap
+
+Write about eighty lines of JavaScript that buy a yield-bearing tokenised asset through CoW Protocol, with no solver, quoting engine or price oracle of your own. Then change three constants and the same script trades on Ethereum mainnet, because CoW Protocol lives at the same address on both chains.
+
+<div className="eez-cta-row">
+  <a className="button button--primary button--lg" href="/developers/demo-projects/buy-a-tokenised-asset-with-cow">Start the CoW Swap quickstart</a>
+</div>
+
+## Network details
+
+| | Gnosis Chain | Chiado testnet |
+| --- | --- | --- |
+| Chain ID | 100 | 10200 |
+| RPC | `https://rpc.gnosischain.com` | `https://rpc.chiadochain.net` |
+| Explorer | [Gnosisscan](https://gnosisscan.io) | [Blockscout](https://gnosis-chiado.blockscout.com) |
+| Gas token | xDai | xDai (test), from the [faucet](/tools/Faucets) |
+
+More endpoints are on [RPC providers](/tools/RPC%20Providers/), and the full network reference is in [networks](/about/networks/).
+
+## What is in this section
+
+### 0-1 guides
+
+Each guide starts from an empty directory and ends in a result you can verify on-chain. Work through them in order.
+
+| Guide | What you build | Time |
+| --- | --- | --- |
+| [Deploy your first contract](/developers/guides/deploy-your-first-contract) | A verified contract, with a state change you read back two ways | 30 minutes |
+| [Accept stablecoin payments](/developers/guides/accept-stablecoin-payments) | A payment receiver that pulls a stablecoin, records who paid and what for, and lets you withdraw | 40 minutes |
+| [Launch a tokenised asset](/developers/guides/launch-a-tokenised-asset) | A capped-supply token bound to an off-chain asset, with issuance controls you have tested | 45 minutes |
+
+### Set up your environment
+
+| Tool | Use it for |
+| --- | --- |
+| [Foundry](/developers/dev-environment/foundry) | Solidity-native testing, scripting and deployment from the terminal |
+| [Hardhat](/developers/dev-environment/hardhat) | A JavaScript or TypeScript project with plugins and scripted deploys |
+| [Cookbook](/developers/dev-environment/cookbook) | Finding, deploying and reusing open-source Solidity contracts |
+
+### Build from templates
+
+| Template | What you get |
+| --- | --- |
+| [ERC-20 token](/developers/Build%20contracts%20on%20gnosis/token) | A fungible token deployed to Gnosis |
+| [ERC-721 NFT](/developers/Build%20contracts%20on%20gnosis/nft) | An NFT collection deployed to Gnosis |
+| [Full-stack dApp](/developers/Build%20contracts%20on%20gnosis/full-stack-dapp) | A Hello World app with a contract and a frontend |
+
+### Call contracts from your app
+
+| Library | Use it for |
+| --- | --- |
+| [Ethers.js](/developers/Interact%20on%20Gnosis/ethers-js) | Reading and writing contracts from JavaScript |
+| [Web3.js](/developers/Interact%20on%20Gnosis/web3-js) | The same, with the web3.js library |
+| [MetaMask API](/developers/Interact%20on%20Gnosis/metamask) | Detecting the wallet and adding Gnosis Chain and tokens to it |
+
+### Verify your contracts
+
+Publish your source code so anyone can read the contract they are calling.
+
+- [Verification overview](/developers/Verify%20Smart%20Contracts/): what verification does.
+- [Blockscout](/developers/Verify%20Smart%20Contracts/blockscout) and [Sourcify](/developers/Verify%20Smart%20Contracts/sourcify): step-by-step guides.
+
+### Go further
+
+- [Useful contracts](/developers/Usefulcontracts): contract, bridge and validator addresses for Gnosis Chain, Chiado and Ethereum.
+- [Developer tutorials](/technicalguides): smart accounts, custom signers, EIP-7702 and EIP-5792.
+
+## Get help
+
+Ask in [Discord](https://discord.gg/gnosis) or on the [forum](https://forum.gnosis.io/).
 
 ---
 
@@ -6927,18 +7057,19 @@ The claim it represents is a legal artefact, not a Solidity one. Look at how the
 
 The **Ethereum Economic Zone (EEZ)** is a neutral rollup framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. Rollups built on it settle to Ethereum and are designed to call Ethereum mainnet contracts in the same transaction, with no bridge in the middle. The framework has no token and is not a Gnosis product.
 
-**Gnosis EEZ** is its first instance, operated by Gnosis. In Q1 2027 the state of Gnosis Chain will be hard-forked onto it. Contracts, balances, addresses and the xDai gas token carry over unchanged, so nothing deployed on Gnosis Chain today needs to be redeployed.
+**Gnosis EEZ** is its first instance, operated by Gnosis. In the future, the state of Gnosis Chain will be hard-forked onto it. Contracts, balances, addresses and the xDai gas token carry over unchanged, so nothing deployed on Gnosis Chain today needs to be redeployed.
 
 The rest of this documentation covers Gnosis Chain as it runs today, and stays accurate until the fork.
 
 ## What changes, in short
 
-| | Gnosis Chain today | Gnosis EEZ, from Q1 2027 |
+| | Gnosis Chain today | Gnosis EEZ (future) |
 | --- | --- | --- |
 | What it is | A proof-of-stake Layer 1 | A rollup that settles to Ethereum |
 | Blocks | Every 5 seconds, from a validator set | Every 2 seconds, from a composer operated by Gnosis |
 | Security | Validator economic security | Proofs verified on Ethereum |
-| Reaching Ethereum | Through a bridge | A call into Ethereum in the same transaction |
+| Reaching Ethereum mainnet | Through a bridge | A synchronous call into Ethereum mainnet, in the same transaction |
+| Reaching other rollups | Through a bridge | Through a bridge, unless the rollup is part of the EEZ |
 | Your contracts | Deployed on Gnosis Chain | Unchanged, at the same addresses |
 
 The full comparison is on [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez).
@@ -6962,7 +7093,7 @@ The core contracts are an early-stage implementation that has not been audited. 
     />
     <Card
         title="Timeline"
-        subtitle="From the EEZ announcement to the Gnosis EEZ launch in Q1 2027."
+        subtitle="From the EEZ announcement to the Gnosis EEZ launch, and what follows."
         url="/eez/timeline"
     />
     <Card
@@ -6987,7 +7118,7 @@ The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no t
 
 Gnosis EEZ is not a new chain. It is Gnosis Chain, re-based onto Ethereum through a hard fork of the existing state. If you have a contract on Gnosis Chain today, it will be on Gnosis EEZ at the same address with the same storage the moment the fork activates. You do not redeploy, migrate liquidity or ask users to switch networks.
 
-The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 1 until then, and the rest of this documentation stays accurate for building on it.
+The transition is planned for the future, and no date is set yet. Gnosis Chain continues to run as a Layer 1 until then, and the rest of this documentation stays accurate for building on it.
 
 ## What stays the same
 
@@ -7010,7 +7141,8 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 | Settlement | Gnosis Chain is its own settlement layer | Blocks settle to Ethereum. Data is published to Ethereum blobs. |
 | Block time | 5 seconds | 2 seconds, with a composing block every 12-second Ethereum slot |
 | Finality | Around 2.5 minutes to hard finality | Soft confirmation in seconds. Hard finality when the proof lands on Ethereum. |
-| Reaching Ethereum | Native bridge, or a third-party bridge | A call from Gnosis EEZ into Ethereum in the same transaction, with no bridge or wrapped asset |
+| Reaching Ethereum mainnet | Native bridge, or a third-party bridge | A synchronous call from Gnosis EEZ into Ethereum mainnet in the same transaction, with no bridge or wrapped asset |
+| Reaching other rollups | A bridge | Still a bridge, unless the rollup is part of the EEZ |
 | Fees | One fee, paid in xDai | Priced by route (instance only, instance to Ethereum, Ethereum to instance), still paid in xDai |
 
 ## For validators and node operators
@@ -7081,7 +7213,7 @@ The [timeline](/eez/timeline) shows when each of these is expected to close.
 
 # Timeline
 
-Dates below the current quarter are indicative. They move when engineering or governance milestones move, and this page is updated when they do. The one date to plan around is the launch window: Q1 2027.
+Dates below the current quarter are indicative. They move when engineering or governance milestones move, and this page is updated when they do.
 
 | When | Milestone | Status |
 | --- | --- | --- |
@@ -7089,7 +7221,7 @@ Dates below the current quarter are indicative. They move when engineering or go
 | Mid 2026 | First EEZ rollup running in test. Core contracts published by the EEZ Association. | Done |
 | July 2026 | GnosisDAO approved the transition of Gnosis Chain into the Ethereum Economic Zone. | Done |
 | H2 2026 | EEZ devnet running end-to-end cross-chain execution. Fork on the Chiado testnet. Launch partners test their deployments. | In progress |
-| Q1 2027 | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
+| Future | **Mainnet fork. Gnosis EEZ activates.** State carried over, launch partners in production, validator set retires. | Planned |
 | 2027 | Calls from Ethereum into Gnosis EEZ, nested calls and full bidirectional composability. Real-time ZK proving. Instance-to-instance calls. | Planned |
 
 ## What to watch
@@ -7105,7 +7237,8 @@ Dates below the current quarter are indicative. They move when engineering or go
 | What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, an instance proven and settled on Ethereum (interim proving at genesis, then real-time ZK proofs) |
 | Your contracts | Deployed on Gnosis Chain | Unchanged, same addresses |
 | Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
-| Reaching Ethereum | Through a bridge | In the same block |
+| Reaching Ethereum mainnet | Through a bridge | In the same transaction |
+| Reaching other rollups | Through a bridge | Through a bridge, unless the rollup is part of the EEZ |
 
 Building on Gnosis Chain now? [Become a launch partner](/launch-partner).
 
@@ -7147,7 +7280,7 @@ You keep an execution client. The consensus-layer client is no longer needed aft
 
 ### Will the bridges keep working?
 
-The existing bridges keep operating. Over time, calls between Ethereum and Gnosis EEZ in the same block reduce the need to bridge for most flows. The [bridges](/bridges) section stays current for as long as the bridges are in use.
+The existing bridges keep operating. Once Gnosis EEZ is live, synchronous calls to Ethereum mainnet in the same transaction will reduce the need to bridge to mainnet for most flows. Reaching rollups that are not part of the EEZ will still need a bridge. The [bridges](/bridges) section stays current for as long as the bridges are in use.
 
 ### Is Gnosis Chain shutting down?
 
@@ -7159,7 +7292,7 @@ It is an instance of the Ethereum Economic Zone: a chain whose blocks are proven
 
 ### When exactly is the fork?
 
-Gnosis EEZ genesis is targeted for Q1 2027. The activation block is published on the [timeline](/eez/timeline) when it is set.
+No date is set yet. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
 ### What is not ready at launch?
 
@@ -7177,7 +7310,7 @@ Calls from Ethereum into Gnosis EEZ, nested calls, instance-to-instance calls, a
 
 **Deploy on Gnosis Chain now, and you are live on Gnosis EEZ at launch.**
 
-Gnosis Chain becomes [Gnosis EEZ](/eez) in Q1 2027 through a hard fork of its state. Every contract, balance and address on Gnosis Chain the day before the fork is on Gnosis EEZ the day after. There is no second deployment and nothing to migrate.
+Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state. Every contract, balance and address on Gnosis Chain the day before the fork is on Gnosis EEZ the day after. There is no second deployment and nothing to migrate.
 
 ## How to join
 
@@ -7735,20 +7868,55 @@ main();
 
 // File: technicalguides/README
 
-# Gnosis Chain Developer Tutorials
+# Developer tutorials
 
-Welcome to the Gnosis Chain Developer Tutorials!
+Step-by-step tutorials for integrating the tools and protocols that run on Gnosis Chain. Each one takes you from setup to working code.
 
-Gnosis Chain is at the forefront of blockchain innovation, boasting a robust ecosystem filled with industry-leading integrations and a vibrant developer community. Our chain is designed to be developer-friendly, ensuring that you have the tools and resources needed to build groundbreaking applications.
+**Before you start:** you need Node.js, a wallet, and some test xDai on the Chiado testnet from the [faucet](/tools/Faucets). New to the chain? Do the [quickstart](/developers/quickstart) first.
 
+## Smart accounts and account abstraction
 
-This section is dedicated to developers looking to dive deep into the Gnosis Chain ecosystem. Whether you're aiming to integrate our cutting-edge products into your applications or exploring the possibilities within decentralized finance (DeFi), these tutorials are your first step towards mastering Gnosis Chain.
+Give users smart contract wallets with batched transactions, gas sponsorship and recovery.
 
+| Tutorial | What you build |
+| --- | --- |
+| [Understanding account abstraction](/technicalguides/account-abstraction) | What account abstraction is, and the providers that support it on Gnosis Chain |
+| [Account abstraction with Safe](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers) | Safe as the smart account layer |
+| [Generate your Safe Smart Account](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers/integration-guide-for-safe) | A Safe created with Auth Kit and On Ramp Kit |
+| [Safe with Gelato](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers/gelato) | Gasless Safe transactions through Gelato Relay |
+| [Safe with Pimlico](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers/pimilico) | ERC-4337 user operations with a Pimlico bundler and paymaster |
+| [ZeroDev](/technicalguides/account-abstraction/zerodev-guide) | An app with a ZeroDev embedded smart wallet |
+| [Particle Network](/technicalguides/account-abstraction/particle-network) | An app with Particle's smart wallet-as-a-service |
 
+## Custom signers
 
-## Join the Community
+Let users sign in with email, social logins or passkeys instead of a seed phrase.
 
-If you encounter any issues or have questions, our developer community is here to help. Join our [Discord](https://discord.gg/gnosis) or [Forum](https://forum.gnosis.io/) to connect with other developers and the Gnosis Chain Developer Relations team.
+| Tutorial | What you build |
+| --- | --- |
+| [Custom signers](/technicalguides/custom-signers) | The concepts, and when to use them |
+| [Privy](/technicalguides/custom-signers/privy) | Login flows and embedded wallets with Privy |
+| [Dynamic](/technicalguides/custom-signers/dynamic) | Login and onboarding flows with Dynamic |
+
+## Pectra upgrades
+
+Use the wallet features that arrived with the Pectra hard fork.
+
+| Tutorial | What you build |
+| --- | --- |
+| [EIP-7702](/technicalguides/Pectra/eip-7702) | An EOA that temporarily runs smart contract code |
+| [EIP-5792](/technicalguides/Pectra/eip-5792) | Batched calls in a single wallet prompt, with status polling |
+
+## DeFi and confidential computing
+
+| Tutorial | What you build |
+| --- | --- |
+| [Deploy a CoW Swap frontend](/technicalguides/DeFi/Deploy%20A%20Cow%20Swap%20Widget) | Your own swap interface from the CoW Swap widget examples |
+| [Secret Network](/technicalguides/Confidential%20Computing/secret-network) | Confidential data and private computation for a Gnosis app |
+
+## Get help
+
+Stuck on a step? Ask in [Discord](https://discord.gg/gnosis) or on the [forum](https://forum.gnosis.io/), where the community and the Gnosis Chain developer relations team can help.
 
 ---
 
@@ -11905,7 +12073,7 @@ const metadata = await web3Name.getMetadata({ name: "public.gno" });
 
 # Validators and node operators: the move to Gnosis EEZ
 
-Gnosis Chain becomes Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez), in Q1 2027. GnosisDAO has approved the transition. This page sets out what it means for the people who run the chain today: validators, and operators of RPC and archive nodes.
+Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez). GnosisDAO has approved the transition. This page sets out what it means for the people who run the chain today: validators, and operators of RPC and archive nodes.
 
 The short version: keep running until activation. Nothing changes before then.
 
@@ -11928,6 +12096,11 @@ Gnosis Chain continues to run as a proof-of-stake Layer 1 until the fork. At act
 - **There is no action to take** before the activation block is announced.
 - **RPC and archive nodes run as they do today**, with both an execution client and a consensus-layer client.
 
+Managing a validator before activation works as it always has:
+
+- [Validator withdrawals](/validators/withdrawals): withdrawal credentials, enabling withdrawals (`0x00` to `0x01`), switching to compounding (`0x01` to `0x02`) and claiming your GNO.
+- [Voluntary exit](/validators/voluntary-exit): stop validating and withdraw your full balance.
+
 ## At activation
 
 - **The validator set retires.** Block production moves to the composer, and blocks are proven and settled on Ethereum.
@@ -11948,7 +12121,7 @@ Keep your execution client. After activation, the consensus-layer client is no l
 
 ## When it happens
 
-The launch window is Q1 2027. The activation block for the mainnet fork will be published on the [timeline](/eez/timeline) when it is set.
+No launch date is set yet. The activation block for the mainnet fork will be published on the [timeline](/eez/timeline) when it is set.
 
 {/* TODO(ben): confirm where else the activation block will be announced (for example Discord, the forum or a client release), and the timings for client releases ahead of the fork. */}
 
@@ -11969,3 +12142,479 @@ The launch window is Q1 2027. The activation block for the mainnet fork will be 
 - [ ] Check the [network details](/about/networks/) for any parameter changes before activation.
 
 Other questions are answered in the [transition FAQ](/eez/faq).
+
+---
+
+// File: validators/voluntary-exit
+
+If you decide to stop validating and disable your node, you can initiate a voluntary exit. This will freeze your balance at its current value (rewards and/or penalties will no longer accrue).
+
+If you initiate a voluntary exit, your validator's full balance becomes withdrawable once exit processing is complete. On Gnosis Chain it is then swept to the deposit contract, where you [claim](withdrawals/claiming-your-gno.md) it to your configured withdrawal address — see [how long that takes](withdrawals/claiming-your-gno.md#how-long-does-it-take) and [withdrawal credential details](withdrawals/withdrawals.md).
+
+The easiest way to exit — and the recommended first choice below — only works if your validator already has an **execution withdrawal address** set (credential prefix `0x01` or `0x02`). If you're not sure whether you have one, or still need to set one, check the [validator withdrawals](withdrawals/withdrawals.md#check-withdrawal-credential) page first.
+
+:::caution
+Exits are non-reversible; once you have exited you cannot restart your validator.
+
+It is recommended to set execution withdrawal credentials before exiting your validator. Updating credentials later, after your node is stopped, can be more difficult. See [validator withdrawals](withdrawals/withdrawals.md). 
+:::
+
+### Validators app (recommended)
+
+The simplest way to exit, if your validator has an execution withdrawal address (`0x01` or `0x02`) — no node access, keystore, or client-specific command needed.
+
+1. Go to the [validators app](https://validators.gnosischain.com/) and connect the wallet holding your validator's **withdrawal address** (not your validator keystore — this method works by sending a request from that address, so it only applies to `0x01`/`0x02` validators; check [here](withdrawals/withdrawals.md#check-withdrawal-credential) if you're unsure which you have). Give it a few seconds to load your validators — if the list doesn't show up, try refreshing the page.
+
+   ![Validators app table, showing the Actions column on the right of each validator row](../../static/img/node/voluntary-exit/launchpad-main.png)
+
+2. Find your validator in the table and click the **withdraw** icon in the **Actions** column, on the right. This opens a withdraw panel for that validator, showing its balance and an amount field:
+   - To make a **partial withdrawal** (only possible if the validator holds more than 1 GNO), enter the amount you want withdrawn and confirm — the button reads **Withdraw**.
+   - To **exit the validator entirely**, click **MAX** next to the amount field (or just confirm as-is if the balance is already 1 GNO or less) — the button changes to **Exit validator**.
+
+   ![Withdraw panel for a validator, showing its balance, the amount field, network fee, and the Exit validator button](../../static/img/node/voluntary-exit/launchpad-withdraw-panel.png)
+
+3. Confirm the transaction in your wallet. You'll need a little xDAI in that wallet to cover the gas (see [Faucets](../tools/Faucets.md) if you need some).
+
+:::tip Using a Safe as your withdrawal address?
+You can open the validators app from inside your Safe: in [app.safe.global](https://app.safe.global/), go to **Apps → My custom apps**, add `https://validators.gnosischain.com/` as a custom app, then open it from there. Your Safe will need a small amount of xDAI to confirm validator actions like this one.
+:::
+
+:::tip Running many validators?
+Exiting one by one on the validators app works fine for a handful of validators, but if you're running many, requesting the exit directly from Dappnode or your consensus client (below) — which typically let you select and exit several validators at once — will be faster.
+:::
+
+Otherwise — for `0x00` validators, or if you'd rather exit directly from your node — voluntary exit procedures vary depending on your client:
+
+### Dappnode
+
+Navigate to the Stakers > Gnosis Chain menu, click on the "Upload Keystores" button on the Web3Signer card. Once you are in the Web3Signer UI, select the validators you want to exit and click on the "Exit Validator" button on the top right part of the UI. Follow the instructions and type `I want to exit`, followed then click the "Exit" button. 
+
+- For more info, see the [Dappnode Docs](https://docs.dappnode.io/docs/user/staking/gnosis-chain/solo#1-exit-the-validator-from-the-dappnode-ui).
+
+### Lighthouse
+
+In order to initiate an exit, users can use the lighthouse account validator exit command.
+
+```bash
+lighthouse --network gnosis account validator exit --keystore /path/to/keystore --beacon-node http://consensus:5052
+```
+
+- For more info, see the [Lighthouse Voluntary Exit docs](https://lighthouse-book.sigmaprime.io/voluntary-exit.html).
+
+### Lodestar
+
+Follow the syntax of the Lodestar CLI commands and their options.
+
+```bash
+validator voluntary-exit --network gnosis --pubkeys 0xF00
+```
+
+- For more info, see the [Lodestar Command Line Reference doc](https://chainsafe.github.io/lodestar/run/validator-management/validator-cli/#validator-voluntary-exit).
+
+### Nimbus
+
+To perform a voluntary exit, make sure your beacon node is running with the `--rest` option enabled, then run:
+
+```bash
+build/nimbus_beacon_node deposits exit --data-dir=build/data/shared_gnosis_0 --validator=<VALIDATOR_PUBLIC_KEY>
+```
+
+- For more info, see the Nimbus [Perform a voluntary exit](https://nimbus.guide/voluntary-exit.html) docs.
+
+### Teku
+
+Use the voluntary-exit subcommand to initiate a voluntary exit for specified validators.
+
+```bash
+teku voluntary-exit --beacon-node-api-endpoint=http://consensus:5051 \
+--validator-keys=validator/keys/validator_ABC.json:validator/passwords/validator_ABC.txt
+```
+
+- For more info, see the Teku [Voluntarily exit a validator](https://docs.teku.consensys.io/how-to/voluntarily-exit) docs.
+
+---
+
+// File: validators/withdrawals/bls-to-execution-change
+
+If your validator is still on `0x00`, a one‑time **BLS‑to‑Execution change** attaches an execution withdrawal address to it. Not sure which prefix you're on? Check the [prefix table](./withdrawals.md#check-withdrawal-credential) first.
+
+:::note This step can only produce `0x01`
+A `BLSToExecutionChange` requires the current prefix to be `0x00` and always writes the `0x01` prefix — see [`process_bls_to_execution_change`](https://github.com/ethereum/consensus-specs/blob/master/specs/capella/beacon-chain.md#new-process_bls_to_execution_change) in the consensus specs. It cannot produce `0x02`, and it cannot be applied to a validator that is already on `0x01`. To end up on `0x02`, complete this step first and then [switch to compounding](./switch-to-compounding.md).
+:::
+
+:::tip Recommended tool: ethstaker-deposit-cli
+This is the same tool most validators already used to generate their keys ([ethstaker-deposit-cli](https://github.com/eth-educators/ethstaker-deposit-cli)), now extended with a `generate-bls-to-execution-change` command. It natively understands the `gnosis` and `chiado` networks (correct fork version and genesis validators root built in), so there's no need for the offline/online two-machine dance or fork-version guesswork that `ethdo` requires. `ethdo` still works and is kept as a fallback below, but for most validators this is the simpler path.
+:::
+
+### Prerequisites
+
+* The 24‑word mnemonic used to generate this validator's keys.
+
+  :::danger Never share your mnemonic
+  Your mnemonic can derive every key controlled by it, so anyone who obtains it can steal your funds — this is true for the tool used in this step just as much as for `ethdo`, or any other tool. Only ever type it into a tool running on a machine you control (offline/air‑gapped, ideally), never into a website or an app you didn't verify yourself, and never share it with anyone claiming to help you "support", "validate", or "fix" your validator.
+  :::
+
+* Your validator's **index**. Look your validator up on the [Beacon chain explorer](https://beaconchain.gnosischain.com/) (search by its public key) — the number in the page title, e.g. "Validator 2190", is its index. The [validators app](https://validators.gnosischain.com/) shows the same number in its **Index** column.
+* Your validator's current **`0x00` withdrawal_credentials** (the full value, not just the prefix) — used only to verify locally that you're operating on the right key; it is never transmitted anywhere. The most reliable source is the `deposit_data-*.json` (or `deposit-m*.json`) file you saved when you originally staked — its `withdrawal_credentials` field is the complete, untruncated value. The explorer's *Deposits* tab also shows it (under "Your current withdrawal credentials are: …"), but often truncated for display — the JSON file is the safer source to copy from.
+* The **execution address** you want withdrawals paid to. Use an address you fully control — a hardware wallet is strongly recommended. **Never use an exchange address**: this change is irreversible.
+* Ideally, do this on an offline/air‑gapped machine — the command needs your mnemonic.
+
+### Step A — Get the tool
+
+If you still have the `ethstaker-deposit-cli` folder you used to generate your validator keys, skip ahead to Step B — it's the same binary.
+
+Otherwise, go to the [ETHstaker Deposit CLI releases page](https://github.com/ethstaker/ethstaker-deposit-cli/releases). The entry at the very top is the latest version. Its downloadable files are listed under **Assets** — on GitHub this list is collapsed by default, so click the word **Assets** (or the small triangle next to it) to expand it.
+
+You'll see a handful of files named like `ethstaker_deposit-cli-<version>-<os>-<arch>.tar.gz` (or `.zip` for Windows). Pick the one matching your computer:
+
+| Your computer               | File to click              |
+| ---------------------------- | --------------------------- |
+| Windows                      | `...-windows-amd64.zip`     |
+| macOS, Apple Silicon (M1/M2/M3/M4) | `...-darwin-arm64.tar.gz` |
+| macOS, Intel                  | `...-darwin-amd64.tar.gz`  |
+| Linux, Intel/AMD              | `...-linux-amd64.tar.gz`   |
+| Linux, ARM                    | `...-linux-arm64.tar.gz`   |
+
+Ignore the matching `.sha256` file next to each — that's only needed if you want to verify your download wasn't corrupted.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs className="tabgroup-with-label os-tabgroup" groupId="os" defaultValue="others" values={[
+    {label: 'Linux, MacOS, Arm64', value: 'others'},
+    {label: 'Windows', value: 'win'}
+]}>
+<TabItem value="others">
+
+- Back on the [releases page](https://github.com/ethstaker/ethstaker-deposit-cli/releases), under **Assets**, click the filename you identified above to download it — or from a terminal (replace the URL with the one for your OS/arch):
+    ```shell
+    wget https://github.com/ethstaker/ethstaker-deposit-cli/releases/download/<version>/<FILE_NAME>.tar.gz
+    ```
+- Extract it:
+    ```shell
+    tar -xvf <FILE_NAME>.tar.gz
+    ```
+- Move into the extracted folder — this is where the `./deposit` program lives:
+    ```shell
+    cd ethstaker_deposit-cli-...
+    ```
+
+</TabItem>
+<TabItem value="win">
+
+- Back on the [releases page](https://github.com/ethstaker/ethstaker-deposit-cli/releases), under **Assets**, click the `...-windows-amd64.zip` file to download it, then extract the zip (right‑click it → *Extract All...*).
+- Open a terminal (PowerShell or Command Prompt) in the extracted folder — this is where `deposit.exe` lives. In File Explorer, you can `Shift + right‑click` inside the folder and choose *Open PowerShell window here*.
+
+</TabItem>
+</Tabs>
+
+### Step B — Run the tool and answer its questions
+
+Launch it, telling it up front which network you're on (this saves you one generic prompt about "mainnet or testnet"):
+
+```bash
+./deposit generate-bls-to-execution-change --chain gnosis
+```
+
+Use `--chain chiado` instead if you're testing this on the Chiado testnet. On Windows, replace `./deposit` with `deposit.exe`.
+
+The tool will then ask you a short series of questions, one at a time. Here is exactly what to expect and what to type at each one:
+
+1. `Please enter your mnemonic separated by spaces (" ")...`
+   Type the 24‑word mnemonic you used to generate **this validator's** keys, separated by spaces, then press Enter. This is processed entirely on your machine and is never sent anywhere — which is exactly why you should be doing this on an offline computer if at all possible.
+
+2. `Please enter the index position for the keys to start generating withdrawal credentials in ERC-2334 format. [0]:`
+   This is *not* your beacon‑chain validator index — it's the position in your mnemonic's derivation path (the order you generated keys in). If this validator was the first (or only) one you ever generated from this mnemonic, just press Enter to accept the default `0`.
+
+3. `Please enter a list of the validator index number(s) of your validator(s) as identified on the beacon chain...`
+   This *is* the number from the Prerequisites above — the index shown on the [Beacon chain explorer](https://beaconchain.gnosischain.com/). Type it and press Enter. If you're doing several validators at once, separate the indices with commas or spaces, e.g. `1234, 1235`.
+
+4. `Please enter a list of the old BLS withdrawal credentials of your validator(s)...`
+   Paste the `0x00…` value from the Prerequisites above, in the **same order** as the indices you just entered. The tool uses this only to double‑check, locally, that the mnemonic you typed actually matches this validator — it will refuse to continue if it doesn't.
+
+5. `Please enter the withdrawal address. Note that you CANNOT change it once you have set it on chain.:`
+   Type the execution address you want withdrawals paid to — one you fully control. A hardware wallet is strongly recommended; **never enter an exchange address**. The tool will print a warning reminding you this can't be changed later.
+
+6. `Repeat your withdrawal address for confirmation.:`
+   Type the exact same address again.
+
+The tool then re‑derives your keys locally to verify everything matches, and finishes with:
+
+```
+Success!
+Your SignedBLSToExecutionChange JSON file can be found at: ./bls_to_execution_changes
+```
+
+### Step C — Verify before broadcasting
+
+Open the generated `bls_to_execution_change-<index>.json` file and check, before doing anything else with it:
+   * `message.validator_index` matches the validator you intended to change.
+   * `message.to_execution_address` matches the address you fully control.
+
+### Step D — Broadcast
+
+This step is public and irreversible. Either:
+
+   * Paste/upload the file to the [Gnosis broadcast tool](https://beaconchain.gnosischain.com/tools/broadcast), **or**
+   * Submit it to any beacon node you have API access to:
+
+   ```bash
+   curl -X POST -H "Content-Type: application/json" \
+        -d @bls_to_execution_changes/bls_to_execution_change-<index>.json \
+        http://127.0.0.1:<BEACON_PORT>/eth/v1/beacon/pool/bls_to_execution_changes
+   ```
+
+### Step E — Confirm
+
+Look your validator up again on the [Beacon chain explorer](https://beaconchain.gnosischain.com/) — `withdrawal_credentials` should now read `0x01` followed by your execution address. Propagation is typically near‑instant; any balance already above 1 GNO will be swept to the deposit contract on the next sweep cycle, ready to [claim](./claiming-your-gno.md).
+
+<details>
+<summary>Show the <code>ethdo</code> alternative</summary>
+<div>
+
+### Prefer ethdo? (alternative method)
+
+`ethdo` also supports BLS‑to‑execution changes, but requires an online step to fetch `--prepare-offline` state and a separate offline machine to sign, and needs the correct Gnosis fork version supplied manually. It can only ever produce `0x01` credentials too — there is no `0x02`/compounding flag for this command, regardless of what you may have read elsewhere.
+
+1. **Generate** `offline-preparation.json` on your **online** machine:
+
+```bash
+ethdo validator credentials set \
+      --connection=http://localhost:<BEACON_PORT> \
+      --prepare-offline
+```
+
+2. **Sign** it on an **offline** machine — copy `offline-preparation.json` across first; `ethdo` writes `change-operations.json` next to it:
+
+```bash
+ethdo validator credentials set \
+      --offline \
+      --mnemonic="your 24 word mnemonic" \
+      --withdrawal-address=0xYourExecAddress
+```
+
+3. Broadcast the resulting `change-operations.json` the same way as in Step D above.
+
+See the [ethdo changing‑withdrawal‑credentials guide](https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md) for full detail.
+
+</div>
+</details>
+
+---
+
+## Reference material
+
+* [ethstaker-deposit-cli releases](https://github.com/ethstaker/ethstaker-deposit-cli/releases)
+* [ethdo changing‑withdrawal‑credentials guide](https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md) (fallback method)
+
+---
+
+// File: validators/withdrawals/switch-to-compounding
+
+This section covers validators that are **already running** on `0x01`. If you have not deposited yet, create the validator as `0x02` directly instead — see the [prefix overview](./withdrawals.md#check-withdrawal-credential).
+
+Moving an existing validator from `0x01` to `0x02` is **not** a BLS‑to‑Execution change. It is an [EIP‑7251](https://eips.ethereum.org/EIPS/eip-7251) *consolidation request* whose source and target are the same validator — a **self‑consolidation** — submitted on the execution layer through the consolidation system contract. Gnosis Chain has supported it since [Pectra](../../about/specs/hard-forks/pectra.md) (30 April 2025, epoch 1 337 856).
+
+The following must all be true, per the consensus spec's [`is_valid_switch_to_compounding_request`](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md#new-is_valid_switch_to_compounding_request) check:
+
+* the validator is currently on `0x01` — if you are on `0x00`, do the [BLS‑to‑Execution change](./bls-to-execution-change.md) first;
+* the request is sent **from the validator’s withdrawal address**, i.e. the execution address in its credentials;
+* the validator is active and has not initiated an exit.
+
+Unlike a consolidation of two *different* validators, the switch costs no churn and has no activation‑age requirement.
+
+### Option A — the validators app (recommended)
+
+1. Open the [validators app](https://validators.gnosischain.com/) and connect the wallet that controls your **withdrawal address**.
+2. Select the validators listed as `Type 1` that you want to consolidate.
+3. Choose **Consolidate** and confirm.
+
+What happens depends on how many validators you select:
+
+* **Select just one.** It's simply self‑consolidated — no merging, no other validator involved. You end up with the same validator, same balance, now on `0x02`.
+* **Select several.** You don't need to switch each one individually first. The app designates only as many of them as *targets* — self‑consolidating each to `0x02` (or reusing one you already had on `0x02`, if it has room) — and merges the rest into those targets. A slider lets you choose how much GNO each target should hold (anywhere from 1 up to the 64 GNO cap; it defaults to 40 GNO), and the app packs validators into each target up to that amount before starting a new one. Leave it at the default and selecting, say, 10 one‑GNO validators typically produces **one** resulting `0x02` validator holding all 10 GNO, not ten separate `0x02` validators. A validator merged this way isn't separately switched to `0x02`; its balance moves into the target and it stops being an active validator of its own.
+
+<details>
+<summary>Option B — call the system contract directly (advanced, most people won't need this)</summary>
+<div>
+
+### Option B — call the system contract directly
+
+Send a transaction from your withdrawal address to the consolidation contract:
+
+| Field   | Value                                                                                          |
+| ------- | ---------------------------------------------------------------------------------------------- |
+| `to`    | `0x0000BBdDc7CE488642fb579F8B00f3a590007251`                                                   |
+| `data`  | Your validator’s 48‑byte public key **repeated twice** — 96 bytes of `source_pubkey ‖ target_pubkey` |
+| `value` | The current request fee, in wei                                                                |
+
+The fee is dynamic — it starts at 1 wei and grows with queue pressure, and a request that sends less than the current fee reverts. Read it by calling the contract with empty calldata:
+
+```bash
+# Current consolidation request fee, returned in wei (hex)
+curl -s -X POST https://rpc.gnosischain.com \
+     -H 'Content-Type: application/json' \
+     --data '{"jsonrpc":"2.0","id":1,"method":"eth_call",
+              "params":[{"to":"0x0000BBdDc7CE488642fb579F8B00f3a590007251","data":"0x"},"latest"]}'
+```
+
+Then submit the request. `<PUBKEY>` is your validator’s public key **without** the leading `0x`, written twice so that the calldata is exactly 96 bytes:
+
+```bash
+cast send 0x0000BBdDc7CE488642fb579F8B00f3a590007251 \
+     --data 0x<PUBKEY><PUBKEY> \
+     --value <FEE_IN_WEI> \
+     --rpc-url https://rpc.gnosischain.com \
+     --ledger    # or --account <keystore>, --private-key <key>
+```
+
+The signing key **must** be the validator’s withdrawal address; a request sent from any other address is silently ignored by the consensus layer.
+
+</div>
+</details>
+
+:::info The balance above 1 GNO is not paid out
+When the switch is processed, the beacon chain moves everything above 1 GNO out of the validator and immediately re‑deposits it into that same validator ([`queue_excess_active_balance`](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md#new-queue_excess_active_balance)). The explorer shows this as a `SYSTEM` withdrawal followed by a new deposit — it is bookkeeping, not a payout, and there is nothing to claim.
+:::
+
+Once processed, the validator’s prefix becomes `0x02`, its maximum effective balance rises from 1 GNO to 64 GNO, and rewards compound instead of being swept.
+
+---
+
+// File: validators/withdrawals/claiming-your-gno
+
+Because Gnosis Chain pays out **GNO** rather than the gas token (xDai), withdrawals are **not sent automatically** to your address. After the Beacon‑chain message has executed, the GNO sits in the deposit contract until *claimed* — [`0x0B98057eA310F4d31F2a452B414647007d1645d9`](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract).
+
+## Option A — claim from the validators app (recommended) {#claim-option-a}
+
+The easiest option for most validators:
+
+1. Open the [validators app](https://validators.gnosischain.com/) and connect the wallet that **is** your withdrawal/recipient address — the one the GNO is owed to.
+2. Once connected, any claimable balance shows up automatically as "Ready to claim," with a **Claim** button right there.
+3. Click **Claim** and confirm the transaction in your wallet.
+
+![Ready to claim panel on the validators app, with the Claim button highlighted](../../../static/img/node/withdrawal/validators-app-claim.png)
+
+This claims straight to your connected withdrawal address — there's no separate recipient address to type or mix up. It only works for the connected wallet's own balance, though: if you want to claim on behalf of a *different* recipient address, or claim for several recipients at once, use Option B instead.
+
+## Option B — claim from the deposit contract directly {#claim-option-b}
+
+1. Connect **any** wallet on Gnosis Chain (it does *not* have to be the validator or recipient address — claiming is permissionless, anyone can trigger it for anyone).
+2. On the contract's [write page](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#writeProxyContract), use:
+
+   * `claimWithdrawal(address validatorRecipient)` – single recipient, or
+   * `claimWithdrawals(address[] validatorRecipients)` – batch, for several recipients in one transaction.
+3. Enter the **withdrawal (recipient) address** exactly as displayed on the *Beacon chain explorer*.
+4. Sign & send – on confirmation the GNO appears at the recipient address.
+
+> The `withdrawal address` and the `recipient address` are identical. Do *not* paste the long internal address you may see elsewhere.
+
+![validator\_recipient\_address](../../../static/img/node/withdrawal/validator_recipient_address.png)
+
+## How long does it take? {#how-long-does-it-take}
+
+There's no single fixed number, because the timeline has a few distinct stages — only the first one is really variable:
+
+1. **Exit queue** (full exits only). Your validator doesn't leave the moment you broadcast a `voluntary_exit` (or trigger an EIP‑7002 full‑exit request) — it enters an exit queue shared with every other validator exiting at the same time, gated by a protocol‑level churn limit. When few validators are exiting this clears within minutes; during periods of mass exits it can take substantially longer. The [Beacon chain explorer](https://beaconchain.gnosischain.com/) homepage shows the current number of validators "Leaving" — an empty queue means yours will process quickly.
+2. **Withdrawability delay.** Once your exit is processed, there's a fixed `256`‑epoch wait before the balance is eligible to be swept — this is a hard protocol constant, not something that varies with network conditions. On Gnosis Chain's 5‑second slots (16 slots per epoch, so an 80‑second epoch), that works out to a fixed **~5.7 hours**.
+3. **The sweep.** The protocol then needs to reach your validator in its rolling sweep of all active validators (it visits up to 8,192 validators per epoch). Unless the active validator set has grown well beyond that, this step completes within a handful of epochs — minutes, not hours.
+4. **Claim.** Unlike Ethereum, this sweep does **not** deposit GNO straight into your withdrawal address — it moves the GNO into the deposit contract, where it sits until you (or anyone) claim it as described above. This last step is manual and has no deadline: nobody claims it automatically for you, and there's no time limit on when you can.
+
+Add it up, and a full exit is commonly claimable within **1–2 days** of broadcasting it — a rule of thumb, not a guarantee. The exit queue (step 1) is the only meaningfully variable part; everything after it is fast and predictable.
+
+---
+
+// File: validators/withdrawals/withdrawals
+
+:::info Validator withdrawal has now been enabled!
+Gnosis Chain underwent Shanghai/Capella Hardfork successfully on **August 1 2023, 11:34:20 UTC (slot 10 379 264, epoch 648 704)**.
+:::
+
+# What is Validator Withdrawal?
+
+Validator withdrawal moves a validator’s balance from the Beacon Chain to the Execution Layer, paid out **in GNO** to the validator’s *withdrawal address* — the execution address recorded in the validator’s withdrawal credentials.
+
+There are three kinds of withdrawals:
+
+| Type                          | Trigger                                                                                                                                                       | What happens?                                                                                                                                     |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Partial — automatic sweep** | Automatic                                                                                                                                                     | Any balance above the validator’s maximum effective balance (**1 GNO** with `0x01`, **64 GNO** with `0x02`) is swept to the [deposit contract](./claiming-your-gno.md), ready to claim. |
+| **Partial — on request**      | The withdrawal address submits an [EIP‑7002](https://eips.ethereum.org/EIPS/eip-7002) withdrawal request. **Requires `0x02` credentials.**                     | The requested amount is queued and swept to the deposit contract, ready to claim, down to the 1 GNO activation minimum.                                                                |
+| **Full**                      | Validator signs and broadcasts a [`voluntary_exit`](../voluntary-exit.md), or the withdrawal address submits an EIP‑7002 full‑exit request (both irreversible) | The entire balance is swept to the deposit contract, ready to claim. See [timing](./claiming-your-gno.md#how-long-does-it-take) for what to expect.                                                                                        |
+
+---
+
+## What is the difference between validator withdrawal on Gnosis Chain and Ethereum?
+
+![GC vs ETH](../../../static/img/node/withdrawal/GCvsETH.png)
+
+* **For users:** the experience is identical – funds simply arrive at the withdrawal address.
+* **Under the hood:** Gnosis Chain uses a smart‑contract (the same address as the deposit contract) to pay out GNO. If the contract temporarily lacks GNO, queued withdrawals are retried once topped up and drained at a fixed rate (4‑16 per slot, TBD).
+
+**References**
+
+1. [Gnosis Chain Withdrawals spec](https://github.com/gnosischain/concepts/specs/blob/master/execution/withdrawals.md)
+2. [Withdrawal Contract](https://github.com/gnosischain/deposit-contract/blob/master/contracts/SBCDepositContract.sol)
+
+---
+
+## 1 · Check your withdrawal credential prefix {#check-withdrawal-credential}
+
+The first byte of a validator’s `withdrawal_credentials` is its *withdrawal prefix*. Three prefixes exist on Gnosis Chain:
+
+| Prefix | Behaviour on Gnosis Chain                                                                                                                                                                                                                                                                                                              | Max effective balance |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
+| `0x02` | **Compounding — recommended.** Rewards stay in the validator and compound instead of being swept away. Supports validator‑initiated partial withdrawals ([EIP‑7002](https://eips.ethereum.org/EIPS/eip-7002)) and can be the target of a consolidation. Can be set at deposit time or switched to later. Available since the [Pectra upgrade](../../about/specs/hard-forks/pectra.md) (30 April 2025). | **64 GNO**            |
+| `0x01` | **Execution address, auto‑sweep.** Any balance above 1 GNO is automatically swept to the deposit contract on a rolling basis, ready to claim. Rewards do **not** compound, and validator‑initiated partial withdrawals are **not** available.                                                                                                         | 1 GNO                 |
+| `0x00` | **BLS‑only** — no execution address is set, so **no withdrawals are possible** until you upgrade to `0x01`.                                                                                                                                                                                                                             | 1 GNO                 |
+
+**Why `0x02` exists:** the `0x01` sweep is automatic, but it is also unavoidable — it forces everything above 1 GNO out of the validator, so those rewards stop earning. [EIP‑7251](https://eips.ethereum.org/EIPS/eip-7251) raises the ceiling to 64 GNO so rewards compound in place, lets a single validator hold what previously needed 64 of them, and replaces the forced sweep with withdrawals you request when you actually want them.
+
+:::warning `--eth1_withdrawal_address` does not tell you your prefix on its own
+In the [ETHstaker Deposit CLI](https://deposit-cli.ethstaker.cc/) — the tool most validators used to generate their keys ([source](https://github.com/eth-educators/ethstaker-deposit-cli)) — `--eth1_withdrawal_address` is only an alias for `--withdrawal_address`. Which prefix you ended up with depends on the tool and the version:
+
+| How the keys were generated                                                                          | Prefix |
+| ---------------------------------------------------------------------------------------------------- | ------ |
+| ETHstaker Deposit CLI **v1.2.0 or later** (April 2025) with a withdrawal address — compounding is the default | `0x02` |
+| ETHstaker Deposit CLI v1.1.0, or any version run with `--regular_withdrawal`                         | `0x01` |
+| Ethereum `staking-deposit-cli`, Wagyu Key Gen, or the legacy `validator-data-generator`              | `0x01` |
+| No withdrawal address supplied at all                                                                | `0x00` |
+
+Don’t assume — read the credential itself, as described below.
+:::
+
+:::tip New validators can be created as `0x02` directly
+You do **not** have to deposit as `0x01` and convert afterwards. The ETHstaker Deposit CLI generates compounding deposit data for Gnosis directly, and the deposit contract has accepted the variable deposit amounts that `0x02` allows since its [`batchDeposit` upgrade](../../bridges/management/decisions.md) (2 May 2025):
+
+```shell
+./deposit new-mnemonic --chain gnosis \
+          --withdrawal_address 0xYourExecAddress \
+          --compounding \
+          --amount 64
+```
+
+On Gnosis, `--amount` is denominated in **GNO**: it defaults to the 1 GNO activation minimum and can go up to 64 GNO. Use [`partial-deposit`](https://deposit-cli.ethstaker.cc/partial_deposit.html) to top a validator up later.
+:::
+
+**How to check**
+
+1. Look up your validator on the [Beacon chain explorer](https://beaconchain.gnosischain.com/) → *Withdrawal* tab, **or**
+2. Open the [validators app](https://validators.gnosischain.com/) and read the *Type* column (`Type 1` = `0x01`, `Type 2` = `0x02`), **or**
+3. Open the `deposit‑m*.json` file you saved when staking and examine `withdrawal_credentials` — the first byte is the prefix.
+
+![CheckWC](../../../static/img/node/withdrawal/withdrawcreds.png)
+![deposit\_json](../../../static/img/node/withdrawal/deposit_json.png)
+
+---
+
+## 2 · What should I do next?
+
+* **Still on `0x00`?** [Enable withdrawals](./bls-to-execution-change.md) — a one‑time step to attach an execution withdrawal address, using `ethstaker-deposit-cli`.
+* **On `0x01` and want compounding rewards / partial withdrawals on request?** [Enable compounding rewards](./switch-to-compounding.md) (`0x01` → `0x02`) via the validators app or a direct contract call.
+* **Already exited, or have a balance sitting in the deposit contract?** Head to [claiming your GNO](./claiming-your-gno.md) — plus how long the whole process typically takes.
+
+---
+
+## Reference material
+
+* [Gnosis Validator Meetup #5 – Shanghai/Capella Upgrade](https://www.youtube.com/watch?v=6G7CmTHTor0)

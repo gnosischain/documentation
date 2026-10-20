@@ -53,4 +53,4 @@ Transfers on the native bridges are signed by a set of [bridge validators](/brid
 
 ## Bridges and Gnosis EEZ
 
-The bridges keep operating through the move to [Gnosis EEZ](/eez). Once Gnosis EEZ is live, a contract will be able to call Ethereum in the same transaction, which will reduce the need to bridge for many flows. This section stays current for as long as the bridges are in use.
+The bridges keep operating through the move to [Gnosis EEZ](/eez). Once Gnosis EEZ is live, a contract will be able to call Ethereum mainnet synchronously, in the same transaction, which will reduce the need to bridge to mainnet. Rollups that are not part of the EEZ will still be reached through a bridge. This section stays current for as long as the bridges are in use.

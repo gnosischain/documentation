@@ -3,13 +3,13 @@ sidebar_position: 1
 sidebar_label: The move to Gnosis EEZ
 title: "Validators and node operators: the move to Gnosis EEZ"
 slug: /validators/eez-transition
-description: What validators, RPC node operators and archive node operators do before, at and after Gnosis Chain becomes Gnosis EEZ in Q1 2027. Keep running until activation. The validator set then retires, staked GNO is unlocked, and nodes keep only an execution client.
+description: What validators, RPC node operators and archive node operators do before, at and after Gnosis Chain becomes Gnosis EEZ. Keep running until activation. The validator set then retires, staked GNO is unlocked, and nodes keep only an execution client.
 keywords: [validators, node operators, gnosis eez, validator set, staked gno, unlock, rpc node, archive node, execution client, consensus client, proof systems]
 ---
 
 # Validators and node operators: the move to Gnosis EEZ
 
-Gnosis Chain becomes Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez), in Q1 2027. GnosisDAO has approved the transition. This page sets out what it means for the people who run the chain today: validators, and operators of RPC and archive nodes.
+Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez). GnosisDAO has approved the transition. This page sets out what it means for the people who run the chain today: validators, and operators of RPC and archive nodes.
 
 The short version: keep running until activation. Nothing changes before then.
 
@@ -57,7 +57,7 @@ Keep your execution client. After activation, the consensus-layer client is no l
 
 ## When it happens
 
-The launch window is Q1 2027. The activation block for the mainnet fork will be published on the [timeline](/eez/timeline) when it is set.
+No launch date is set yet. The activation block for the mainnet fork will be published on the [timeline](/eez/timeline) when it is set.
 
 {/* TODO(ben): confirm where else the activation block will be announced (for example Discord, the forum or a client release), and the timings for client releases ahead of the fork. */}
 

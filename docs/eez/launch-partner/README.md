@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Become a launch partner
 title: Become a Gnosis EEZ launch partner
 slug: /launch-partner
-description: Deploy on Gnosis Chain now to become a Gnosis EEZ launch partner. State is hard-forked at launch in Q1 2027, so your contracts carry over at the same addresses with nothing to redeploy.
+description: Deploy on Gnosis Chain now to become a Gnosis EEZ launch partner. State is hard-forked at launch, so your contracts carry over at the same addresses with nothing to redeploy.
 keywords: [launch partner, deploy on gnosis chain, gnosis eez launch, q1 2027, ethereum economic zone]
 ---
 
@@ -11,7 +11,7 @@ keywords: [launch partner, deploy on gnosis chain, gnosis eez launch, q1 2027, e
 
 **Deploy on Gnosis Chain now, and you are live on Gnosis EEZ at launch.**
 
-Gnosis Chain becomes [Gnosis EEZ](/eez) in Q1 2027 through a hard fork of its state. Every contract, balance and address on Gnosis Chain the day before the fork is on Gnosis EEZ the day after. There is no second deployment and nothing to migrate.
+Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state. Every contract, balance and address on Gnosis Chain the day before the fork is on Gnosis EEZ the day after. There is no second deployment and nothing to migrate.
 
 ## How to join
 

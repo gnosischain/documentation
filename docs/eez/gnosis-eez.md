@@ -12,7 +12,7 @@ The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework with no t
 
 Gnosis EEZ is not a new chain. It is Gnosis Chain, re-based onto Ethereum through a hard fork of the existing state. If you have a contract on Gnosis Chain today, it will be on Gnosis EEZ at the same address with the same storage the moment the fork activates. You do not redeploy, migrate liquidity or ask users to switch networks.
 
-The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 1 until then, and the rest of this documentation stays accurate for building on it.
+The transition is planned for the future, and no date is set yet. Gnosis Chain continues to run as a Layer 1 until then, and the rest of this documentation stays accurate for building on it.
 
 ## What stays the same
 
@@ -35,7 +35,8 @@ The transition is planned for Q1 2027. Gnosis Chain continues to run as a Layer 
 | Settlement | Gnosis Chain is its own settlement layer | Blocks settle to Ethereum. Data is published to Ethereum blobs. |
 | Block time | 5 seconds | 2 seconds, with a composing block every 12-second Ethereum slot |
 | Finality | Around 2.5 minutes to hard finality | Soft confirmation in seconds. Hard finality when the proof lands on Ethereum. |
-| Reaching Ethereum | Native bridge, or a third-party bridge | A call from Gnosis EEZ into Ethereum in the same transaction, with no bridge or wrapped asset |
+| Reaching Ethereum mainnet | Native bridge, or a third-party bridge | A synchronous call from Gnosis EEZ into Ethereum mainnet in the same transaction, with no bridge or wrapped asset |
+| Reaching other rollups | A bridge | Still a bridge, unless the rollup is part of the EEZ |
 | Fees | One fee, paid in xDai | Priced by route (instance only, instance to Ethereum, Ethereum to instance), still paid in xDai |
 
 ## For validators and node operators

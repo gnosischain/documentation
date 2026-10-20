@@ -69,7 +69,7 @@ const config = {
       announcementBar: {
         id: "eez_launch_partner_q1_2027",
         content:
-          'Gnosis EEZ launches in Q1 2027. Deploy on Gnosis Chain now, no redeployment at the fork. <a href="/launch-partner">Become a launch partner</a>',
+          'Gnosis Chain is becoming Gnosis EEZ. Deploy now, with no redeployment at the fork. <a href="/launch-partner">Become a launch partner</a>',
         isCloseable: true,
       },
       colorMode: {
