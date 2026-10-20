@@ -213,13 +213,7 @@ function RouteCards({routes}) {
 function Eez() {
   return (
     <section className={styles.section}>
-      <div className={styles.sectionHead}>
-        <h2 className={styles.sectionTitle}>Gnosis Chain now, Gnosis EEZ in Q1 2027</h2>
-        <p className={styles.sectionSub}>
-          Gnosis Chain becomes Gnosis EEZ through a hard fork of its state. Here is what changes, how
-          it works, and how to be live on day one.
-        </p>
-      </div>
+      <h2 className={styles.sectionTitle}>Get started</h2>
       <RouteCards routes={EEZ_ROUTES} />
     </section>
   );
