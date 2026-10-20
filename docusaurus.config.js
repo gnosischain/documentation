@@ -102,17 +102,8 @@ const config = {
           { type: "docSidebar", position: "left", sidebarId: "gnosisChain", label: "Gnosis Chain" },
           { type: "docSidebar", position: "left", sidebarId: "developerGuides", label: "Developers" },
           { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
-          {
-            type: "dropdown",
-            position: "left",
-            label: "Resources",
-            items: [
-              { type: "docSidebar", sidebarId: "tools", label: "Tools" },
-              { type: "docSidebar", sidebarId: "technicalGuides", label: "Knowledge hub" },
-              { type: "docSidebar", sidebarId: "validators", label: "Validators" },
-              { type: "docSidebar", sidebarId: "faq", label: "FAQ" },
-            ],
-          },
+          // Tools, technical guides, validators and FAQ, sectioned in its left sidebar
+          { type: "docSidebar", position: "left", sidebarId: "knowledgeHub", label: "Knowledge hub" },
           {
             href: "https://bridge.gnosischain.com/",
             position: "right",

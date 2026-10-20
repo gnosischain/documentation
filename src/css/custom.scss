@@ -364,17 +364,10 @@ nav.navbar {
   color: var(--gc-text);
 }
 
-.navbar__link--active,
-.navbar__item.dropdown:has(.dropdown__link--active) > .navbar__link {
+.navbar__link--active {
   color: var(--gc-text);
   background: none;
   font-weight: 600;
-}
-/* A dropdown of doc sidebars (Resources) is not marked active by
-   Docusaurus, so it borrows the active look from its open child page. Its
-   ::after is the caret, so the underline is an inset shadow instead. */
-.navbar__item.dropdown:has(.dropdown__link--active) > .navbar__link {
-  box-shadow: inset 0 -2px 0 var(--gc-text);
 }
 
 .navbar__link--active::after {
