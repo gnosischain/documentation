@@ -8,9 +8,9 @@ keywords: [ethereum economic zone, eez, gnosis eez, rollup, synchronous composab
 
 # What is Gnosis EEZ
 
-The **Ethereum Economic Zone (EEZ)** is a neutral rollup framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. Rollups built on it settle to Ethereum and are designed to call Ethereum mainnet contracts in the same transaction, with no bridge in the middle. The framework has no token and is not a Gnosis product.
+The Ethereum Economic Zone (EEZ) is a neutral rollup framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. Rollups built on it settle to Ethereum and are designed to call Ethereum mainnet contracts in the same transaction, with no bridge in the middle. The framework has no token and is not a Gnosis product.
 
-**Gnosis EEZ** is its first instance, operated by Gnosis. In the future, the state of Gnosis Chain will be hard-forked onto it. Contracts, balances, addresses and the xDai gas token carry over unchanged, so nothing deployed on Gnosis Chain today needs to be redeployed.
+Gnosis EEZ is its first instance, operated by Gnosis. In the future, the state of Gnosis Chain will be hard-forked onto it. Contracts, balances, addresses and the xDai gas token carry over unchanged, so nothing deployed on Gnosis Chain today needs to be redeployed.
 
 The rest of this documentation covers Gnosis Chain as it runs today, and stays accurate until the fork.
 
@@ -31,9 +31,9 @@ The full comparison is on [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez).
 
 Ethereum doesn't have a scaling problem. It has a fragmentation problem. Rollups brought costs down and throughput up, but each one launched with its own liquidity, its own bridge and its own deployments, and each became its own island. Users pay for that in bridging fees, delays and risk every time they move.
 
-The EEZ is built to **reverse fragmentation**. Rollups that join the zone are designed to compose with Ethereum mainnet in the same transaction and, in time, with each other. Ethereum stays the settlement layer and the source of truth, so liquidity and users gather around mainnet instead of drifting away from it.
+The EEZ is built to reverse fragmentation. Rollups that join the zone are designed to compose with Ethereum mainnet in the same transaction and, in time, with each other. Ethereum stays the settlement layer and the source of truth, so liquidity and users gather around mainnet instead of drifting away from it.
 
-Gnosis EEZ is the first instance, not the whole zone. The framework is open source and **credibly neutral**: it is governed through a Swiss non-profit, no single company controls it, and any team can run an instance on it. It is co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation.
+Gnosis EEZ is the first instance, not the whole zone. The framework is open source and credibly neutral: it is governed through a Swiss non-profit, no single company controls it, and any team can run an instance on it. It is co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation.
 
 ## Where this stands
 
