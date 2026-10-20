@@ -144,8 +144,11 @@ html:root {
 }
 
 /* Dark mode stays available from the toggle; light is the default. Ink ground,
-   paper text, Fresh-Green brand accent, links in paper with an underline. */
-html[data-theme='dark'] {
+   paper text, Fresh-Green brand accent, links in paper with an underline.
+   `:root` matches the light tokens' `html:root`, plus the attribute: the
+   production CSS minifier moves this block above the light one, so without
+   the extra weight the light tokens win in the build (dev looked fine). */
+html[data-theme='dark']:root {
   --gc-mint-soft: rgba(141, 233, 170, 0.16);
   --gc-gradient-hero: linear-gradient(180deg, var(--purple-950) 0%, var(--purple-1000) 96%);
   --gc-gradient-wash: none;
