@@ -24,14 +24,4 @@ Dates below the current quarter are indicative. They move when engineering or go
 - **The activation block.** GnosisDAO has approved the transition. The activation block for the mainnet fork is announced closer to genesis and published here.
 - **Audit results.** Published before mainnet activation.
 
-## Before and after, in one table
-
-| | Before the fork | After the fork |
-| --- | --- | --- |
-| What you build on | Gnosis Chain, a proof-of-stake Layer 1 | Gnosis EEZ, an instance proven and settled on Ethereum (interim proving at genesis, then real-time ZK proofs) |
-| Your contracts | Deployed on Gnosis Chain | Unchanged, same addresses |
-| Your users | On Gnosis Chain | On Gnosis EEZ, no network switch |
-| Reaching Ethereum mainnet | Through a bridge | In the same transaction |
-| Reaching other rollups | Through a bridge | Through a bridge, unless the rollup is part of the EEZ |
-
 Building on Gnosis Chain now? [Become a launch partner](/launch-partner).
