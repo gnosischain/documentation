@@ -1,14 +1,13 @@
 ---
 sidebar_position: 3
-title: The four steps behind every Gnosis EEZ block
-sidebar_label: How it works
+title: How it works
 description: A high-level overview of how Gnosis EEZ works. Blocks every 2 seconds, settled to Ethereum once per Ethereum block, with calls into Ethereum mainnet landing in the same Ethereum block or not at all.
 keywords: [gnosis eez, how it works, sequencer, composer, sync block, proof signer, settlement, synchronous composability, eez-rollup0]
 ---
 
 import EezPipeline from '@site/src/components/EezPipeline';
 
-# The four steps behind every Gnosis EEZ block
+# How it works
 
 :::caution For review by the core development team
 

@@ -24,7 +24,7 @@ Gnosis Chain continues to run as a proof-of-stake Layer 1 until the fork. At act
 | Security | Validator economic security | Proofs verified on Ethereum |
 | Node software | Execution client and consensus-layer client | Execution client only |
 
-See [what stays the same and what changes at the fork](/eez/gnosis-eez) for the full comparison.
+[Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez) has the full comparison.
 
 ## Between now and activation
 
