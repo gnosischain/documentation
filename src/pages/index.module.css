@@ -1,6 +1,26 @@
 /* Full-bleed fresh-product-hero wash (canon gradient) behind the hero, ending on the page ground. */
 .home {
+  position: relative;
+  isolation: isolate;
   background: var(--gc-gradient-hero) top / 100% 820px no-repeat, var(--gc-bg);
+}
+/* Still dot field over the wash, fading out to the left and down (as on the build site). */
+.home::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 820px;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(7, 5, 44, 0.16) 1px, transparent 1.4px);
+  background-size: 18px 18px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 90% 20%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(ellipse 60% 70% at 90% 20%, #000 0%, transparent 70%);
+}
+html[data-theme='dark'] .home::before {
+  background-image: radial-gradient(circle, rgba(255, 250, 251, 0.14) 1px, transparent 1.4px);
 }
 
 .page {
