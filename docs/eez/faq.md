@@ -49,14 +49,18 @@ No. Only the validator set retires. The chain, its state, its contracts and its 
 
 It is an instance of the Ethereum Economic Zone: a chain whose blocks are proven and settled on Ethereum, starting with an interim proving setup and moving to real-time ZK proofs, and which can be called from Ethereum in the same block. Most people will call that an L2. The difference from a typical L2 is that there is no bridge between it and Ethereum.
 
-### When exactly is the fork?
+### When does Gnosis EEZ launch?
 
-No date is set yet. The activation block is published on the [timeline](/eez/timeline) when it is set.
+No date is set yet. Design partners work on the EEZ devnet until then. The activation block is published on the [timeline](/eez/timeline) when it is set.
 
-### What is not ready at launch?
+### What works at launch?
 
-Calls from Ethereum into Gnosis EEZ, nested calls, instance-to-instance calls, and real-time ZK proving, which starts with an interim setup. [How it works](/eez/how-it-works) lists each one.
+Your Gnosis EEZ contracts can call Ethereum mainnet atomically from genesis. Full bidirectional composability, nested calls and real-time ZK proving follow after launch, and calls between EEZ instances come after that. Build for the first and design for the second. [How it works](/eez/how-it-works) has the detail.
 
-### How do I get involved before launch?
+### Is the EEZ a Gnosis product?
 
-[Become a launch partner](/launch-partner).
+No. Gnosis EEZ will be the first rollup in the zone, but the framework is open source, shared infrastructure, stewarded by the EEZ Association and not owned by any single team.
+
+### How do I get in touch?
+
+[Book a call with the ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) or reach us on [Discord](https://discord.gg/gnosis). Tell us what you run today and what you want to build on Gnosis EEZ. We read everything. To be live on Gnosis EEZ at launch, [become a launch partner](/launch-partner).
