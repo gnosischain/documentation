@@ -27,7 +27,7 @@ Nothing at launch. xDai stays the gas token and the unit of account.
 
 ### What happens to GNO?
 
-GNO continues as the governance token. Staked GNO unlocks when the validator set retires. Former validators can run proof systems.
+GNO continues as the governance token. Staked GNO unlocks when the validator set retires.
 
 ### I run a validator. What should I do?
 
