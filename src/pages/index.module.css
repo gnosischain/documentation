@@ -144,8 +144,8 @@ html[data-theme='dark'] .home::before {
 .pathway {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  padding: 1.75rem;
+  gap: 1rem;
+  padding: 1.5rem;
   border: 1px solid var(--gc-border);
   border-radius: var(--gc-radius);
   background: var(--gc-surface);
@@ -197,7 +197,7 @@ html[data-theme='dark'] .home::before {
 
 .pathwayFoot {
   display: flex;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--gc-border);
 }
 .pathwayCta {
@@ -219,10 +219,8 @@ html[data-theme='dark'] .home::before {
 .featureCard {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 3.5rem;
-  min-height: 210px;
-  padding: 1.75rem;
+  gap: 1rem;
+  padding: 1.5rem;
   border: 1px solid var(--gc-border);
   border-radius: var(--gc-radius);
   background: var(--gc-surface);
@@ -361,10 +359,6 @@ html[data-theme='dark'] .home::before {
   .pathwayGrid {
     grid-template-columns: 1fr;
   }
-  .featureCard {
-    min-height: 180px;
-    gap: 2.5rem;
-  }
 }
 
 @media (max-width: 640px) {
@@ -381,10 +375,6 @@ html[data-theme='dark'] .home::before {
   .useCaseGrid,
   .pathwayGrid {
     grid-template-columns: 1fr;
-  }
-  .featureCard {
-    min-height: 0;
-    gap: 1.5rem;
   }
   .facts {
     margin-bottom: 3rem;
