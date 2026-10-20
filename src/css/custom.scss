@@ -119,7 +119,7 @@ html:root {
   --ifm-line-height-base: 1.65;
   --ifm-code-font-size: 88%;
   --ifm-global-radius: 16px;
-  --ifm-navbar-height: 112px; /* 12px gap + 56px floating header pill + 44px section row */
+  --ifm-navbar-height: 104px;
   --ifm-navbar-background-color: var(--gc-bg);
   --ifm-navbar-shadow: none;
   --ifm-toc-border-color: var(--gc-border);
@@ -323,7 +323,7 @@ a {
 /* ---------- navbar ---------- */
 nav.navbar {
   height: var(--ifm-navbar-height);
-  padding: 0; /* the header pill and the section row pad themselves */
+  padding: 0 2rem;
   box-shadow: none;
   border-bottom: 1px solid var(--gc-border);
   background-color: var(--ifm-navbar-background-color);
@@ -430,9 +430,9 @@ a:hover .socialButton path {
 }
 /* Docusaurus's own theme takes the search container out of the navbar's flow
    below 996px (`position: absolute; right: ...`) so it can sit beside a
-   collapsed logo. We keep it in normal flow at every width, so it stays inside
-   the floating header pill (centered down to phone width, then at the end). */
-@media (max-width: 996px) {
+   collapsed logo. We want the full pill to stay centered in the row down to
+   phone width instead, so put it back in normal flow through that range. */
+@media (max-width: 996px) and (min-width: 561px) {
   .navbar [class*='navbarSearchContainer'] {
     position: static;
   }
@@ -532,7 +532,10 @@ a:hover .socialButton path {
 
 @media (max-width: 996px) {
   html:root {
-    --ifm-navbar-height: 68px; /* 8px gap + 52px floating header pill + 8px */
+    --ifm-navbar-height: 56px;
+  }
+  nav.navbar {
+    padding: 0 1rem;
   }
   .navbar__logo,
   .navbar__logo img {
