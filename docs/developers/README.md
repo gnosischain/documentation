@@ -21,14 +21,6 @@ New to Gnosis Chain? Pick one of these. Each ends in a result you can check on-c
 | Work from the terminal, with tests and verification | [Deploy your first contract](/developers/guides/deploy-your-first-contract), using Foundry | About 30 minutes |
 | Call live protocols instead of deploying your own | [Buy a tokenised asset with CoW Swap](/developers/demo-projects/buy-a-tokenised-asset-with-cow), using viem | About 40 minutes |
 
-### Quickstart: buy a tokenised asset with CoW Swap
-
-Write about eighty lines of JavaScript that buy a yield-bearing tokenised asset through CoW Protocol, with no solver, quoting engine or price oracle of your own. Then change three constants and the same script trades on Ethereum mainnet, because CoW Protocol lives at the same address on both chains.
-
-<div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="/developers/demo-projects/buy-a-tokenised-asset-with-cow">Start the CoW Swap quickstart</a>
-</div>
-
 ## Network details
 
 | | Gnosis Chain | Chiado testnet |
