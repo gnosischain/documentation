@@ -173,3 +173,13 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## Goldsky Edge RPC
+
+Goldsky provides HTTPS JSON-RPC for Gnosis Mainnet (chain ID 100), including archive data and trace methods. An API key is required.
+
+- [Docs](https://docs.goldsky.com/edge-rpc/introduction)
+
+```shell
+https://edge.goldsky.com/standard/evm/100?key=<API_KEY>
+```
