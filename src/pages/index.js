@@ -222,12 +222,7 @@ function Eez() {
 function Features() {
   return (
     <section className={styles.section}>
-      <div className={styles.sectionHead}>
-        <h2 className={styles.sectionTitle}>Build</h2>
-        <p className={styles.sectionSub}>
-          Core building blocks for shipping directly on Gnosis Chain.
-        </p>
-      </div>
+      <h2 className={styles.sectionTitle}>Build</h2>
       <div className={styles.featureGrid}>
         {FEATURES.map(({icon: I, title, body, to}) => (
           <Link key={title} className={styles.featureCard} to={to}>
