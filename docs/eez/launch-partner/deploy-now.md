@@ -11,7 +11,7 @@ keywords: [deploy, gnosis chain, mainnet, chiado, foundry, forge, verify, gnosis
 
 **Job:** deploy and verify a contract on Gnosis Chain mainnet. **Time:** about 45 minutes. **Chains:** Chiado testnet, then Gnosis mainnet.
 
-**Prerequisites:** a terminal on macOS or Linux, Git, a free [Etherscan API key](https://etherscan.io/myapikey) for verifying on mainnet, and a small amount of xDai on Gnosis Chain for the mainnet step. Around one xDai is far more than you need.
+**Prerequisites:** a terminal on macOS or Linux, Git, a free [Blockscout API key](https://dev.blockscout.com/) for verifying on mainnet, and a small amount of xDai on Gnosis Chain for the mainnet step. Around one xDai is far more than you need.
 
 This guide takes you from an empty directory to a contract on Gnosis Chain mainnet whose source anyone can read on the block explorer. You rehearse every step on Chiado first, where nothing costs real money, then repeat it on mainnet.
 
@@ -219,10 +219,10 @@ Copy the contract address it prints. From here `<CONTRACT>` means the mainnet ad
 
 ### Verify
 
-Mainnet verification goes to Gnosisscan through Etherscan's multichain API, so one Etherscan key covers Gnosis Chain. Put the key in your environment rather than on the command line:
+Mainnet verification goes to Gnosisscan, the Gnosis Chain explorer, which is run by Blockscout. Get a free API key from the [Blockscout developer portal](https://dev.blockscout.com/) and put it in your environment rather than on the command line:
 
 ```bash
-export ETHERSCAN_API_KEY=<YOUR_KEY>
+export BLOCKSCOUT_API_KEY=<YOUR_KEY>
 ```
 
 Then verify:
@@ -230,13 +230,14 @@ Then verify:
 ```bash
 forge verify-contract <CONTRACT> src/Counter.sol:Counter \
   --chain 100 \
-  --verifier etherscan \
-  --etherscan-api-key $ETHERSCAN_API_KEY
+  --verifier blockscout \
+  --verifier-url https://gnosisscan.io/api/ \
+  --verifier-api-key $BLOCKSCOUT_API_KEY
 ```
 
 On success it prints `Contract successfully verified`. Open `https://gnosisscan.io/address/<CONTRACT>`. The **Contract** tab shows your source with a verified tick, and **Read Contract** and **Write Contract** are available.
 
-If you would rather not create an Etherscan account, Sourcify verifies Gnosis Chain contracts with no key. Swap the last two flags for `--verifier sourcify`. The source is then published on [Sourcify](https://sourcify.dev) rather than shown on Gnosisscan.
+If you would rather not create a Blockscout account, Sourcify verifies Gnosis Chain contracts with no key. Swap the last three flags for `--verifier sourcify`. The source is then published on [Sourcify](https://sourcify.dev) rather than shown on Gnosisscan.
 
 ## Read it back
 
