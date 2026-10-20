@@ -70,6 +70,8 @@ html:root {
   --fresh-green-500: #8ce8ab;
   /* Chain accent on light grounds (live-site value, see brands.md) */
   --emerald-700: #047857;
+  /* Soft mint for icon chips on landing cards, as on the build site */
+  --gc-mint-soft: #d6f6e2;
 
   /* Canon fresh gradients (gradients.json, fresh family) */
   --gc-gradient-hero: linear-gradient(180deg, #d6e2f4 0%, #dbeeea 42%, #ddf2e6 62%, var(--purple-75) 96%);
@@ -144,6 +146,7 @@ html:root {
 /* Dark mode stays available from the toggle; light is the default. Ink ground,
    paper text, Fresh-Green brand accent, links in paper with an underline. */
 html[data-theme='dark'] {
+  --gc-mint-soft: rgba(141, 233, 170, 0.16);
   --gc-gradient-hero: linear-gradient(180deg, var(--purple-950) 0%, var(--purple-1000) 96%);
   --gc-gradient-wash: none;
 
@@ -361,10 +364,17 @@ nav.navbar {
   color: var(--gc-text);
 }
 
-.navbar__link--active {
+.navbar__link--active,
+.navbar__item.dropdown:has(.dropdown__link--active) > .navbar__link {
   color: var(--gc-text);
   background: none;
   font-weight: 600;
+}
+/* A dropdown of doc sidebars (Resources) is not marked active by
+   Docusaurus, so it borrows the active look from its open child page. Its
+   ::after is the caret, so the underline is an inset shadow instead. */
+.navbar__item.dropdown:has(.dropdown__link--active) > .navbar__link {
+  box-shadow: inset 0 -2px 0 var(--gc-text);
 }
 
 .navbar__link--active::after {
@@ -380,15 +390,12 @@ nav.navbar {
 
 .navbar__items--right .navbar__link {
   height: 32px;
-  border: 1px solid var(--gc-border);
-  border-radius: 100px;
-  padding: 0 0.8rem;
-  font-size: 0.825rem;
-  color: var(--gc-text);
-  background: var(--gc-surface);
+  padding: 0 0.6rem;
+  font-size: 0.9rem;
+  color: var(--gc-text-muted);
 }
 .navbar__items--right .navbar__link:hover {
-  border-color: var(--gc-border-strong);
+  color: var(--gc-text);
 }
 .navbar__items--right .navbar__link--active::after {
   display: none;
@@ -410,6 +417,12 @@ nav.navbar {
 .socialButton {
   height: 30px;
   width: 30px;
+}
+/* Laptop widths: socials go (they are in the footer too), so search keeps its room. */
+@media (max-width: 1280px) {
+  .navbar__items--right a.navbar__link:has(.socialButton) {
+    display: none;
+  }
 }
 .socialButton rect {
   fill: none;

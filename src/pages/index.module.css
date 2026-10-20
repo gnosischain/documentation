@@ -165,8 +165,14 @@ html[data-theme='dark'] .home::before {
   align-items: center;
 }
 .pathwayIcon {
-  color: var(--gc-accent);
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gc-mint-soft);
+  color: var(--gc-text);
 }
 
 .pathwayBody {
@@ -232,8 +238,14 @@ html[data-theme='dark'] .home::before {
 }
 
 .featureIcon {
-  color: var(--gc-accent);
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gc-mint-soft);
+  color: var(--gc-text);
 }
 
 .featureText {
@@ -290,7 +302,7 @@ html[data-theme='dark'] .home::before {
   border-bottom: 1px solid var(--gc-border);
 }
 .useCaseIcon {
-  color: var(--gc-accent);
+  color: var(--gc-text);
   flex-shrink: 0;
 }
 .useCaseList {

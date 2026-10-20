@@ -102,10 +102,17 @@ const config = {
           { type: "docSidebar", position: "left", sidebarId: "gnosisChain", label: "Gnosis Chain" },
           { type: "docSidebar", position: "left", sidebarId: "developerGuides", label: "Developers" },
           { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
-          { type: "docSidebar", position: "left", sidebarId: "tools", label: "Tools" },
-          { type: "docSidebar", position: "left", sidebarId: "technicalGuides", label: "Knowledge hub" },
-          { type: "docSidebar", position: "left", sidebarId: "validators", label: "Validators" },
-          { type: "docSidebar", position: "left", sidebarId: "faq", label: "FAQ" },
+          {
+            type: "dropdown",
+            position: "left",
+            label: "Resources",
+            items: [
+              { type: "docSidebar", sidebarId: "tools", label: "Tools" },
+              { type: "docSidebar", sidebarId: "technicalGuides", label: "Knowledge hub" },
+              { type: "docSidebar", sidebarId: "validators", label: "Validators" },
+              { type: "docSidebar", sidebarId: "faq", label: "FAQ" },
+            ],
+          },
           {
             href: "https://bridge.gnosischain.com/",
             position: "right",
