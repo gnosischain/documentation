@@ -107,9 +107,9 @@ const config = {
           { type: "docSidebar", position: "left", sidebarId: "validators", label: "Validators" },
           { type: "docSidebar", position: "left", sidebarId: "faq", label: "FAQ" },
           {
-            href: "https://build.gnosischain.com/",
+            href: "https://bridge.gnosischain.com/",
             position: "right",
-            label: "Ecosystem",
+            label: "Bridge",
           },
           {
             href: "https://faucet.chiadochain.net",
