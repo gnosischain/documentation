@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
-title: "Gnosis Chain now and Gnosis EEZ"
+title: "What stays the same and what changes at the fork"
 sidebar_label: Now vs Gnosis EEZ
 description: Gnosis EEZ is Gnosis Chain re-based onto Ethereum. State, contracts and addresses carry over in a hard fork. The validator set retires and blocks are proven and settled on Ethereum, starting with an interim proving setup before real-time ZK proofs.
 keywords: [gnosis eez, hard fork, validator set, xdai, gno, zk proofs, zisk, ethereum settlement, no redeploy]
 ---
 
-# Gnosis Chain now and Gnosis EEZ
+# What stays the same and what changes at the fork
 
 The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework. Gnosis EEZ is its first instance, operated by Gnosis.
 

@@ -25,7 +25,7 @@ The rest of this documentation covers Gnosis Chain as it runs today, and stays a
 | Reaching other rollups | Through a bridge | Through a bridge, unless the rollup is part of the EEZ |
 | Your contracts | Deployed on Gnosis Chain | Unchanged, at the same addresses |
 
-The full comparison is on [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez).
+See [what stays the same and what changes at the fork](/eez/gnosis-eez) for the full comparison.
 
 ## One Ethereum, not a hundred islands
 
@@ -43,13 +43,13 @@ The core contracts are an early-stage implementation that has not been audited. 
 
 <CardContainer>
     <Card
-        title="Gnosis Chain now and Gnosis EEZ"
-        subtitle="What stays the same, what changes, and what the fork means for validators."
+        title="What stays the same and what changes at the fork"
+        subtitle="Contracts, blocks, security, settlement and fees, side by side, and what it means for validators."
         url="/eez/gnosis-eez"
     />
     <Card
-        title="How it works"
-        subtitle="Sequence, compose, attest, settle: the four steps behind every Gnosis EEZ block."
+        title="The four steps behind every Gnosis EEZ block"
+        subtitle="Sequence, compose, attest and settle, and why you can trust it."
         url="/eez/how-it-works"
     />
     <Card
@@ -63,8 +63,8 @@ The core contracts are an early-stage implementation that has not been audited. 
         url="/eez/faq"
     />
     <Card
-        title="Become a launch partner"
-        subtitle="Deploy on Gnosis Chain now and be live on Gnosis EEZ at launch."
+        title="Deploy on Gnosis Chain now and be live on Gnosis EEZ at launch"
+        subtitle="Become a launch partner, with hands-on support from the Gnosis engineering team."
         url="/launch-partner"
     />
 </CardContainer>

@@ -281,7 +281,7 @@ Nothing you need to do. When Gnosis EEZ activates, this contract keeps:
 | Gas token | xDai | xDai |
 | Your keys and tooling | `gnosis-deployer`, Foundry | Unchanged |
 
-What changes is around it: blocks every 2 seconds, proven and settled on Ethereum (an interim proving setup at genesis, then real-time ZK proofs), and the ability to call Ethereum mainnet contracts in the same transaction. [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez) has the full comparison.
+What changes is around it: blocks every 2 seconds, proven and settled on Ethereum (an interim proving setup at genesis, then real-time ZK proofs), and the ability to call Ethereum mainnet contracts in the same transaction. See [what stays the same and what changes at the fork](/eez/gnosis-eez) for the full comparison.
 
 ## Register as a launch partner
 
