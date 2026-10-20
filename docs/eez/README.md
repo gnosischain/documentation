@@ -49,7 +49,7 @@ The core contracts are an early-stage implementation that has not been audited. 
     />
     <Card
         title="How it works"
-        subtitle="Sequencing, proving, settlement on Ethereum and cross-chain calls, in four steps."
+        subtitle="Sequence, compose, attest, settle: the four steps behind every Gnosis EEZ block."
         url="/eez/how-it-works"
     />
     <Card

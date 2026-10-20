@@ -1,0 +1,112 @@
+.figure {
+  margin: 1.5rem 0 2.25rem;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 20px;
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius-sm);
+  background: var(--gc-surface);
+}
+
+/* Arrow between steps */
+.step + .step::before {
+  content: '→';
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gc-text-faint);
+  font-size: 1rem;
+}
+
+/* The settle step happens on Ethereum: give it the ink treatment */
+.step[data-l1] {
+  background: var(--purple-1000);
+  border-color: var(--purple-1000);
+}
+.step[data-l1] .where,
+.step[data-l1] .body {
+  color: rgba(255, 250, 251, 0.72);
+}
+.step[data-l1] .title {
+  color: var(--purple-50);
+}
+.step[data-l1] .num {
+  background: var(--fresh-green-500);
+  color: var(--purple-1000);
+}
+[data-theme='dark'] .step[data-l1] {
+  background: var(--gc-surface-2);
+  border-color: var(--gc-border-strong);
+}
+
+.where {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gc-text-faint);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gc-heading);
+}
+
+.num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--gc-accent-soft);
+  color: var(--gc-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.body {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--gc-text-muted);
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: var(--gc-text-muted);
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .step + .step::before {
+    content: '↓';
+    left: 24px;
+    top: -21px;
+    transform: none;
+  }
+}

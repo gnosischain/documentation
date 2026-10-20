@@ -78,7 +78,7 @@ const EEZ_ROUTES = [
     icon: Icon.Server,
     title: 'How it works',
     audience:
-      'Sequence, prove, settle, compose: the four steps behind every Gnosis EEZ block.',
+      'Sequence, compose, attest, settle: the four steps behind every Gnosis EEZ block.',
     cta: 'Read',
     to: '/eez/how-it-works',
   },
