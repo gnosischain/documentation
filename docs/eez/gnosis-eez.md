@@ -10,9 +10,11 @@ keywords: [gnosis eez, hard fork, validator set, xdai, gno, zk proofs, zisk, eth
 
 The [Ethereum Economic Zone](/eez) (EEZ) is a neutral rollup framework. Gnosis EEZ is its first instance, operated by Gnosis.
 
-Gnosis EEZ is not a new chain. It is Gnosis Chain, re-based onto Ethereum through a hard fork of the existing state. If you have a contract on Gnosis Chain today, it will be on Gnosis EEZ at the same address with the same storage the moment the fork activates. You do not redeploy, migrate liquidity or ask users to switch networks.
+Gnosis EEZ is not a new ecosystem. It is Gnosis Chain, re-based onto Ethereum through a hard fork of the existing state. If you have a contract on Gnosis Chain today, it will be on Gnosis EEZ at the same address with the same storage the moment the fork activates. You do not redeploy, migrate liquidity or ask users to switch networks. If your deployment needs any configuration for the fork, the Gnosis team will be in touch.
 
 The transition is planned for the future, and no date is set yet. Gnosis Chain continues to run as a Layer 1 until then, and the rest of this documentation stays accurate for building on it.
+
+If you want to be a Gnosis EEZ launch partner, deploy on Gnosis Chain now. A live deployment is how you confirm your place. [Become a launch partner](/launch-partner) sets out the steps.
 
 ## What stays the same
 
