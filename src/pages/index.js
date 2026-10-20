@@ -70,7 +70,7 @@ const EEZ_ROUTES = [
     icon: Icon.Trending,
     title: 'Now vs Gnosis EEZ',
     audience:
-      'What stays the same and what changes at the fork: blocks, security, settlement and reaching Ethereum.',
+      'What stays the same and what changes at the fork.',
     cta: 'Compare',
     to: '/eez/gnosis-eez',
   },
@@ -78,7 +78,7 @@ const EEZ_ROUTES = [
     icon: Icon.Server,
     title: 'How it works',
     audience:
-      'Sequence, compose, attest, settle: the four steps behind every Gnosis EEZ block.',
+      'The four steps behind every Gnosis EEZ block.',
     cta: 'Read',
     to: '/eez/how-it-works',
   },
@@ -86,7 +86,7 @@ const EEZ_ROUTES = [
     icon: Icon.Arrow,
     title: 'Become a launch partner',
     audience:
-      'Deploy on Gnosis Chain now and be live on Gnosis EEZ at launch, with nothing to redeploy.',
+      'Deploy on Gnosis Chain now and be live on Gnosis EEZ at launch.',
     cta: 'Deploy',
     to: '/launch-partner',
   },
