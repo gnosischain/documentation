@@ -169,8 +169,8 @@ function Hero() {
         <span className={styles.heroLine}>Launch on Gnosis EEZ.</span>
       </h1>
       <p className={styles.heroLede}>
-        Gnosis EEZ is the first instance of the Ethereum Economic Zone, a neutral rollup framework
-        co-funded by the Ethereum Foundation. Gnosis Chain will become Gnosis EEZ. Same
+        Gnosis EEZ is the first instance of the Ethereum Economic Zone, and will have synchronous
+        composability with mainnet. Gnosis Chain will become Gnosis EEZ. Same
         contracts, same addresses, nothing to migrate.
       </p>
       <div className={styles.heroActions}>
