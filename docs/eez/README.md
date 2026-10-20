@@ -35,12 +35,6 @@ The EEZ is built to **reverse fragmentation**. Rollups that join the zone are de
 
 Gnosis EEZ is the first instance, not the whole zone. The framework is open source and **credibly neutral**: it is governed through a Swiss non-profit, no single company controls it, and any team can run an instance on it. It is co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation.
 
-## Ethereum, building together
-
-The EEZ brings teams from across Ethereum onto one shared framework. Its founding Alliance includes Aave, Safe, CoW Swap, Flashbots, Nethermind, Titan, Beaverbuild, Centrifuge, Monerium and xStocks: lending, wallets, trading, block building, client development and real-world assets, all committed to building on the same zone.
-
-That is the shift underway. Instead of every team building its own island and bridging between them, protocols, infrastructure providers and the Ethereum Foundation are working towards one composable economy. Each rollup that joins adds to it.
-
 ## Where this stands
 
 The core contracts are an early-stage implementation that has not been audited. The first release will start with an interim proving setup before real-time ZK proving, and synchronous calls will run from Gnosis EEZ into Ethereum before the reverse direction is live. Calls between EEZ instances come after that. The [timeline](/eez/timeline) tracks each milestone.
