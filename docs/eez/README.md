@@ -27,9 +27,23 @@ The rest of this documentation covers Gnosis Chain as it runs today, and stays a
 
 The full comparison is on [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez).
 
+## One Ethereum, not a hundred islands
+
+Ethereum doesn't have a scaling problem. It has a fragmentation problem. Rollups brought costs down and throughput up, but each one launched with its own liquidity, its own bridge and its own deployments, and each became its own island. Users pay for that in bridging fees, delays and risk every time they move.
+
+The EEZ is built to **reverse fragmentation**. Rollups that join the zone are designed to compose with Ethereum mainnet in the same transaction and, in time, with each other. Ethereum stays the settlement layer and the source of truth, so liquidity and users gather around mainnet instead of drifting away from it.
+
+Gnosis EEZ is the first instance, not the whole zone. The framework is open source and **credibly neutral**: it is governed through a Swiss non-profit, no single company controls it, and any team can run an instance on it. It is co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation.
+
+## Ethereum, building together
+
+The EEZ brings teams from across Ethereum onto one shared framework. Its founding Alliance includes Aave, Safe, CoW Swap, Flashbots, Nethermind, Titan, Beaverbuild, Centrifuge, Monerium and xStocks: lending, wallets, trading, block building, client development and real-world assets, all committed to building on the same zone.
+
+That is the shift underway. Instead of every team building its own island and bridging between them, protocols, infrastructure providers and the Ethereum Foundation are working towards one composable economy. Each rollup that joins adds to it.
+
 ## Where this stands
 
-The core contracts are an early-stage implementation that has not been audited. The first release will start with an interim proving setup before real-time ZK proving, and synchronous calls will run from Gnosis EEZ into Ethereum before the reverse direction is live. The [timeline](/eez/timeline) tracks each milestone.
+The core contracts are an early-stage implementation that has not been audited. The first release will start with an interim proving setup before real-time ZK proving, and synchronous calls will run from Gnosis EEZ into Ethereum before the reverse direction is live. Calls between EEZ instances come after that. The [timeline](/eez/timeline) tracks each milestone.
 
 ## Where to go next
 
