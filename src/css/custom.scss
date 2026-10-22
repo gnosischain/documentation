@@ -341,7 +341,6 @@ nav.navbar {
 
 .navbar__inner {
   height: 56px;
-  padding: 0 10px 0 22px;
   border: 1px solid transparent;
   border-radius: 999px;
   transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
@@ -548,7 +547,6 @@ a:hover .socialButton path {
   }
   .navbar__inner {
     height: 52px;
-    padding: 0 8px 0 14px;
   }
   .navbar__logo,
   .navbar__logo img {
