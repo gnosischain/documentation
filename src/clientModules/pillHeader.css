@@ -1,0 +1,104 @@
+/* Pill header test: three versions, picked by html[data-pill] (see pillHeader.js). */
+
+/* ---------- A and B: the whole header becomes a floating, fully rounded bar (as on gnosis.io) ---------- */
+html[data-pill='a'],
+html[data-pill='b'] {
+  --ifm-navbar-height: 76px;
+}
+html[data-pill='a'] nav.navbar,
+html[data-pill='b'] nav.navbar {
+  background: transparent;
+  border-bottom: 0;
+  padding: 12px 24px 0;
+}
+html[data-pill='a'] .navbar__inner,
+html[data-pill='b'] .navbar__inner {
+  height: 56px;
+  padding: 0 10px 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+html[data-pill='a'] nav.navbar [class*='topRow_'],
+html[data-pill='b'] nav.navbar [class*='topRow_'] {
+  height: 100%;
+}
+/* Inside the pill the active tab is a soft filled pill, not an underline on the bar's edge */
+html[data-pill='a'] nav.navbar .navbar__link,
+html[data-pill='b'] nav.navbar .navbar__link {
+  height: 36px;
+  border-radius: 999px;
+}
+html[data-pill='a'] nav.navbar .navbar__link--active,
+html[data-pill='b'] nav.navbar .navbar__link--active {
+  background: var(--gc-surface-2);
+}
+html[data-pill='a'] nav.navbar .navbar__link--active::after,
+html[data-pill='b'] nav.navbar .navbar__link--active::after {
+  display: none;
+}
+
+/* A: see-through over the page top, filled once you scroll (the gnosis.io behaviour) */
+html[data-pill='a'][data-scrolled] .navbar__inner {
+  background: color-mix(in srgb, var(--gc-surface) 96%, transparent);
+  border-color: var(--gc-border);
+  box-shadow: 0 6px 24px rgba(7, 5, 44, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+/* B: always filled, with a hairline border */
+html[data-pill='b'] .navbar__inner {
+  background: var(--gc-surface);
+  border-color: var(--gc-border);
+}
+
+/* The pills' padding costs the tabs their room on narrow laptops; the DOCS label gives it back */
+@media (min-width: 997px) and (max-width: 1199px) {
+  html[data-pill] nav.navbar [class*='wordmark_'] {
+    display: none;
+  }
+}
+
+@media (max-width: 996px) {
+  html[data-pill='a'],
+  html[data-pill='b'] {
+    --ifm-navbar-height: 64px;
+  }
+  html[data-pill='a'] nav.navbar,
+  html[data-pill='b'] nav.navbar {
+    padding: 8px 12px 0;
+  }
+  html[data-pill='a'] .navbar__inner,
+  html[data-pill='b'] .navbar__inner {
+    height: 52px;
+    padding: 0 8px 0 14px;
+  }
+}
+
+/* ---------- C: full-width bar as now, with the section tabs grouped in a pill ---------- */
+html[data-pill='c'] nav.navbar [class*='sections_'] {
+  flex: 0 1 auto;
+  align-self: center;
+  height: 40px;
+  padding: 4px;
+  gap: 2px;
+  margin-right: auto;
+  border-radius: 999px;
+  background: var(--gc-surface-2);
+}
+html[data-pill='c'] nav.navbar [class*='sections_'] .navbar__link {
+  height: 32px;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+}
+html[data-pill='c'] nav.navbar [class*='sections_'] .navbar__link--active {
+  background: var(--gc-surface);
+  box-shadow: 0 1px 2px rgba(7, 5, 44, 0.1);
+}
+html[data-theme='dark'][data-pill='c'] nav.navbar [class*='sections_'] .navbar__link--active {
+  background: rgba(255, 250, 251, 0.12);
+  box-shadow: none;
+}
+html[data-pill='c'] nav.navbar .navbar__link--active::after {
+  display: none;
+}

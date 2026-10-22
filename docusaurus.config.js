@@ -183,6 +183,9 @@ const config = {
       ],
     }),
 
+  // Pill header test: ?pill=a|b|c|off switches versions (remove once one is picked)
+  clientModules: [require.resolve("./src/clientModules/pillHeader.js")],
+
   plugins: [
     [require.resolve("docusaurus-plugin-sass"), {}],
     // The old developer overview now lands on the Developer guides overview. Both casings
