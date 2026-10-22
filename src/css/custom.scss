@@ -121,7 +121,7 @@ html:root {
   --ifm-line-height-base: 1.65;
   --ifm-code-font-size: 88%;
   --ifm-global-radius: 16px;
-  --ifm-navbar-height: 64px;
+  --ifm-navbar-height: 76px;
   --ifm-navbar-background-color: var(--gc-bg);
   --ifm-navbar-shadow: none;
   --ifm-toc-border-color: var(--gc-border);
@@ -327,12 +327,30 @@ a {
 }
 
 /* ---------- navbar ---------- */
+/* A floating, fully rounded bar as on gnosis.io: see-through at the top of the page,
+   filled once you scroll (html[data-scrolled], set by src/clientModules/navbarScroll.js).
+   The band behind it stays the page colour so the docs sidebar's right border, which
+   runs up behind the navbar, never shows through; the home page clears it (index.module.css). */
 nav.navbar {
   height: var(--ifm-navbar-height);
-  padding: 0 2rem;
+  padding: 12px 24px 0;
   box-shadow: none;
-  border-bottom: 1px solid var(--gc-border);
+  border-bottom: 0;
   background-color: var(--ifm-navbar-background-color);
+}
+
+.navbar__inner {
+  height: 56px;
+  padding: 0 10px 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+html[data-scrolled] .navbar__inner {
+  background: color-mix(in srgb, var(--gc-surface) 96%, transparent);
+  border-color: var(--gc-border);
+  box-shadow: 0 6px 24px rgba(7, 5, 44, 0.06);
+  backdrop-filter: blur(8px);
 }
 
 .navbar__brand {
@@ -356,7 +374,8 @@ nav.navbar {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0 0.75rem;
-  height: var(--ifm-navbar-height);
+  height: 36px;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -367,21 +386,11 @@ nav.navbar {
   color: var(--gc-text);
 }
 
+/* Inside the pill the active section is a soft filled pill */
 .navbar__link--active {
   color: var(--gc-text);
-  background: none;
+  background: var(--gc-surface-2);
   font-weight: 600;
-}
-
-.navbar__link--active::after {
-  content: '';
-  position: absolute;
-  left: 0.75rem;
-  right: 0.75rem;
-  bottom: -1px;
-  height: 2px;
-  background: var(--gc-text);
-  border-radius: 2px 2px 0 0;
 }
 
 .navbar__items--right .navbar__link {
@@ -392,9 +401,6 @@ nav.navbar {
 }
 .navbar__items--right .navbar__link:hover {
   color: var(--gc-text);
-}
-.navbar__items--right .navbar__link--active::after {
-  display: none;
 }
 
 /* The arrow glyph is noise in a cluster this dense; the label is enough. */
@@ -535,10 +541,14 @@ a:hover .socialButton path {
 
 @media (max-width: 996px) {
   html:root {
-    --ifm-navbar-height: 56px;
+    --ifm-navbar-height: 64px;
   }
   nav.navbar {
-    padding: 0 1rem;
+    padding: 8px 12px 0;
+  }
+  .navbar__inner {
+    height: 52px;
+    padding: 0 8px 0 14px;
   }
   .navbar__logo,
   .navbar__logo img {

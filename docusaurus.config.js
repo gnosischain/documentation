@@ -183,8 +183,8 @@ const config = {
       ],
     }),
 
-  // Pill header test: ?pill=a|b|c|off switches versions (remove once one is picked)
-  clientModules: [require.resolve("./src/clientModules/pillHeader.js")],
+  // Fills the navbar pill once the page has scrolled
+  clientModules: [require.resolve("./src/clientModules/navbarScroll.js")],
 
   plugins: [
     [require.resolve("docusaurus-plugin-sass"), {}],

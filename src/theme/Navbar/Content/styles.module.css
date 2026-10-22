@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  height: var(--ifm-navbar-height);
+  height: 100%;
   flex: none;
 }
 
@@ -68,9 +68,15 @@
   align-items: center;
 }
 
+/* The pill's padding costs the tabs their room on narrow laptops; the DOCS label gives it back */
+@media (min-width: 997px) and (max-width: 1199px) {
+  .wordmark {
+    display: none;
+  }
+}
+
 @media (max-width: 996px) {
   .topRow {
-    height: 56px;
     gap: 0.5rem;
   }
   .wordmark {

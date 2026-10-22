@@ -3,6 +3,12 @@
   position: relative;
   isolation: isolate;
   background: var(--gc-gradient-hero) top / 100% 820px no-repeat, var(--gc-bg);
+  /* Start the wash under the navbar, which is see-through here (no docs sidebar to hide) */
+  margin-top: calc(-1 * var(--ifm-navbar-height));
+  padding-top: var(--ifm-navbar-height);
+}
+:global(body):has(.home) :global(nav.navbar) {
+  background-color: transparent;
 }
 
 .page {
