@@ -104,6 +104,8 @@ const sidebars = {
   // Knowledge hub: tools, technical guides, validators and FAQ in one sidebar,
   // behind one navbar tab. Each section opens when you are on one of its pages.
   knowledgeHub: [
+    // Landing page that introduces the four sections below
+    "knowledge-hub",
     {
       type: "category",
       label: "Tools",

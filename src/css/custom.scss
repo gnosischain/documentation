@@ -776,6 +776,15 @@ footer.footer--dark .footer__title {
   gap: 16px;
   margin: 1.25rem 0 2rem;
 }
+/* Exactly four cards: a 2 x 2 grid rather than three plus one */
+.custom-card-container:has(> :nth-child(4):last-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 640px) {
+  .custom-card-container:has(> :nth-child(4):last-child) {
+    grid-template-columns: 1fr;
+  }
+}
 .custom-card-link {
   display: flex;
   min-width: 0;
