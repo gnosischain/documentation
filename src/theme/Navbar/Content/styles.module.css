@@ -35,6 +35,80 @@
   white-space: nowrap;
 }
 
+/* ---------- site switcher (the DOCS label) ---------- */
+.switcher {
+  position: relative;
+}
+
+.switcherButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: -6px 0 -6px -4px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.switcherButton:hover,
+.switcherButton[aria-expanded='true'] {
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+}
+.switcherButton:focus-visible {
+  outline: 2px solid var(--gc-text);
+  outline-offset: 2px;
+}
+
+.switcherChevron {
+  transition: transform 0.15s ease;
+}
+.switcherButton[aria-expanded='true'] .switcherChevron {
+  transform: rotate(180deg);
+}
+
+.switcherMenu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: -4px;
+  z-index: 10;
+  min-width: 180px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--gc-surface);
+  border: 1px solid var(--gc-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(7, 5, 44, 0.12);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.switcherItem {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--gc-text-muted);
+  text-decoration: none;
+}
+a.switcherItem:hover {
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+  text-decoration: none;
+}
+.switcherCurrent {
+  color: var(--gc-text);
+  font-weight: 600;
+}
+
 .search {
   flex: 0 1 240px;
   display: flex;
@@ -74,12 +148,6 @@
 @media (min-width: 997px) and (max-width: 1199px) {
   .wordmark {
     display: none;
-  }
-  .sections :global(.navbar__link) {
-    padding: 0 0.4rem;
-  }
-  .topRow {
-    gap: 0.75rem;
   }
 }
 

@@ -15,6 +15,7 @@ import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
+import SiteSwitcher from './SiteSwitcher';
 import styles from './styles.module.css';
 
 /**
@@ -64,7 +65,9 @@ export default function NavbarContent() {
           )}>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
-          <span className={styles.wordmark}>Docs</span>
+          <div className={styles.wordmark}>
+            <SiteSwitcher />
+          </div>
         </div>
 
         <div className={clsx('navbar__items', styles.sections)}>
