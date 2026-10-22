@@ -5,9 +5,11 @@ html[data-pill='a'],
 html[data-pill='b'] {
   --ifm-navbar-height: 76px;
 }
+/* The band behind the pill stays the page colour: it covers the docs sidebar's
+   right border (which runs up behind the navbar) and the content scrolling under it. */
 html[data-pill='a'] nav.navbar,
 html[data-pill='b'] nav.navbar {
-  background: transparent;
+  background: var(--gc-bg);
   border-bottom: 0;
   padding: 12px 24px 0;
 }
