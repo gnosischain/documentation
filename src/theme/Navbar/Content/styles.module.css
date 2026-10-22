@@ -53,12 +53,6 @@
   background: var(--gc-border);
   flex: none;
 }
-/* The social icons hide at laptop widths (custom.scss); the divider goes with them. */
-@media (max-width: 1280px) {
-  .divider {
-    display: none;
-  }
-}
 
 .sections {
   flex: none;

@@ -34,23 +34,24 @@
   font-size: 1rem;
 }
 
-/* The settle step happens on Ethereum: give it the ink treatment */
-.step[data-l1] {
+/* The three Gnosis EEZ steps get the ink treatment, so the highlight sits on
+   Gnosis EEZ; the settle step on Ethereum stays a plain card. */
+.step:not([data-l1]) {
   background: var(--purple-1000);
   border-color: var(--purple-1000);
 }
-.step[data-l1] .where,
-.step[data-l1] .body {
+.step:not([data-l1]) .where,
+.step:not([data-l1]) .body {
   color: rgba(255, 250, 251, 0.72);
 }
-.step[data-l1] .title {
+.step:not([data-l1]) .title {
   color: var(--purple-50);
 }
-.step[data-l1] .num {
+.step:not([data-l1]) .num {
   background: var(--fresh-green-500);
   color: var(--purple-1000);
 }
-[data-theme='dark'] .step[data-l1] {
+[data-theme='dark'] .step:not([data-l1]) {
   background: var(--gc-surface-2);
   border-color: var(--gc-border-strong);
 }

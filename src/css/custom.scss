@@ -414,12 +414,6 @@ nav.navbar {
   height: 30px;
   width: 30px;
 }
-/* Laptop widths: socials go (they are in the footer too), so search keeps its room. */
-@media (max-width: 1280px) {
-  .navbar__items--right a.navbar__link:has(.socialButton) {
-    display: none;
-  }
-}
 .socialButton rect {
   fill: none;
   stroke: none;
