@@ -18,9 +18,9 @@ import NavbarSearch from '@theme/Navbar/Search';
 import styles from './styles.module.css';
 
 /**
- * Two-row navbar.
- *  Row 1: mobile toggle, logo, search, right-hand items, colour-mode toggle.
- *  Row 2: section links (the "left" navbar items from docusaurus.config.js).
+ * One-row navbar: mobile toggle, logo, section links (the "left" navbar items
+ * from docusaurus.config.js), then search, any right-hand items and the
+ * colour-mode toggle.
  */
 function NavbarItems({items}) {
   return (
@@ -67,6 +67,10 @@ export default function NavbarContent() {
           <span className={styles.wordmark}>Docs</span>
         </div>
 
+        <div className={clsx('navbar__items', styles.sections)}>
+          <NavbarItems items={leftItems} />
+        </div>
+
         {!searchBarItem && (
           <div className={styles.search}>
             <NavbarSearch>
@@ -88,10 +92,6 @@ export default function NavbarContent() {
           <NavbarItems items={rightIconItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
         </div>
-      </div>
-
-      <div className={clsx('navbar__items', styles.sections)}>
-        <NavbarItems items={leftItems} />
       </div>
     </div>
   );

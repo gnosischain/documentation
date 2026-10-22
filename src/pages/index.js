@@ -175,7 +175,7 @@ function Hero() {
       </h1>
       <p className={styles.heroLede}>
         Gnosis EEZ is the first instance of the Ethereum Economic Zone, and will have synchronous
-        composability with mainnet. Gnosis Chain will become Gnosis EEZ.
+        composability with mainnet.
       </p>
       <div className={styles.heroActions}>
         <Link className={styles.btnPrimary} to="/launch-partner">

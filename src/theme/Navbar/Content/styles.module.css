@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  height: 60px;
+  height: var(--ifm-navbar-height);
   flex: none;
 }
 
@@ -35,9 +35,9 @@
 }
 
 .search {
-  flex: 1 1 auto;
+  flex: 0 1 240px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   min-width: 0;
 }
 
@@ -55,8 +55,8 @@
 }
 
 .sections {
-  flex: none;
-  height: 44px;
+  flex: 1 1 auto;
+  height: 100%;
   gap: 0.25rem;
   /* No overflow here: overflow-x forces overflow-y to clip too, which hides
      dropdown menus (e.g. Gnosis Chain) that open below the row. */

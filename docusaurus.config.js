@@ -104,27 +104,7 @@ const config = {
           { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
           // Tools, technical guides, validators and FAQ, sectioned in its left sidebar
           { type: "docSidebar", position: "left", sidebarId: "knowledgeHub", label: "Knowledge hub" },
-          // Same four links as the build.gnosischain.com header, in the same order.
-          {
-            href: "https://build.gnosischain.com/",
-            position: "right",
-            label: "Home",
-          },
-          {
-            href: "https://build.gnosischain.com/ecosystem",
-            position: "right",
-            label: "Ecosystem",
-          },
-          {
-            href: "https://bridge.gnosischain.com/",
-            position: "right",
-            label: "Bridge",
-          },
-          {
-            href: "https://faucet.chiadochain.net",
-            position: "right",
-            label: "Faucet",
-          },
+          // No right-hand links: Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js).
         ],
       },
       footer: {

@@ -121,7 +121,7 @@ html:root {
   --ifm-line-height-base: 1.65;
   --ifm-code-font-size: 88%;
   --ifm-global-radius: 16px;
-  --ifm-navbar-height: 104px;
+  --ifm-navbar-height: 64px;
   --ifm-navbar-background-color: var(--gc-bg);
   --ifm-navbar-shadow: none;
   --ifm-toc-border-color: var(--gc-border);
@@ -356,7 +356,7 @@ nav.navbar {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0 0.75rem;
-  height: 44px;
+  height: var(--ifm-navbar-height);
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -433,9 +433,9 @@ a:hover .socialButton path {
 }
 /* Docusaurus's own theme takes the search container out of the navbar's flow
    below 996px (`position: absolute; right: ...`) so it can sit beside a
-   collapsed logo. We want the full pill to stay centered in the row down to
-   phone width instead, so put it back in normal flow through that range. */
-@media (max-width: 996px) and (min-width: 561px) {
+   collapsed logo. Put it back in normal flow so it stays vertically centered
+   in the row at every width. */
+@media (max-width: 996px) {
   .navbar [class*='navbarSearchContainer'] {
     position: static;
   }
@@ -548,7 +548,8 @@ a:hover .socialButton path {
 
 /* Only collapse the search pill to an icon-only button on true phone
    widths; down to tablet width it stays full-size and centered. */
-@media (max-width: 560px) {
+/* Also on narrow laptops, where the one-row header needs the room for its section tabs. */
+@media (max-width: 560px), (min-width: 997px) and (max-width: 1199px) {
   .navbar .navbarSearchContainer_Bca1,
   .navbar [class*='navbarSearchContainer'] {
     width: auto;
@@ -558,8 +559,8 @@ a:hover .socialButton path {
     height: 40px;
     padding: 0 0.6rem;
   }
-  .DocSearch-Button-Placeholder,
-  .DocSearch-Button-Keys {
+  .navbar .DocSearch-Button-Placeholder,
+  .navbar .DocSearch-Button-Keys {
     display: none;
   }
 }
