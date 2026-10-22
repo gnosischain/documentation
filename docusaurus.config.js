@@ -104,6 +104,17 @@ const config = {
           { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
           // Tools, technical guides, validators and FAQ, sectioned in its left sidebar
           { type: "docSidebar", position: "left", sidebarId: "knowledgeHub", label: "Knowledge hub" },
+          // Same four links as the build.gnosischain.com header, in the same order.
+          {
+            href: "https://build.gnosischain.com/",
+            position: "right",
+            label: "Home",
+          },
+          {
+            href: "https://build.gnosischain.com/ecosystem",
+            position: "right",
+            label: "Ecosystem",
+          },
           {
             href: "https://bridge.gnosischain.com/",
             position: "right",
@@ -165,7 +176,6 @@ const config = {
               { label: "Chiado testnet", to: "/about/networks/chiado" },
               { label: "GNO and xDai", to: "/about/tokens" },
               { label: "Chain specs", to: "/about/specs" },
-              { label: "Validators and node operators", to: "/validators/eez-transition" },
             ],
           },
           {

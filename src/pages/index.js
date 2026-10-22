@@ -53,6 +53,11 @@ const Icon = {
       <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 10h16" /><path d="M4 15h16" />
     </svg>
   ),
+  Shield: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6L12 3Z" /><path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
   Trending: (p) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
       <path d="m3 17 6-6 4 4 8-9" /><path d="M15 6h6v6" />
@@ -148,12 +153,12 @@ const USE_CASES = [
     ],
   },
   {
-    icon: Icon.Wallet,
-    title: 'Build with smart accounts',
+    icon: Icon.Shield,
+    title: 'Run a validator',
     links: [
-      ['Account abstraction', '/technicalguides/account-abstraction/'],
-      ['Custom signers', '/technicalguides/custom-signers/'],
-      ['EIP-7702 on Gnosis', '/technicalguides/Pectra/eip-7702'],
+      ['The move to Gnosis EEZ', '/validators/eez-transition'],
+      ['Validator withdrawals', '/validators/withdrawals'],
+      ['Voluntary exit', '/validators/voluntary-exit'],
     ],
   },
 ];
