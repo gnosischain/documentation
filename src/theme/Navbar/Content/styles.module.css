@@ -56,7 +56,8 @@
 }
 
 .sections {
-  flex: 1 1 auto;
+  /* Tabs never shrink; the search pill gives up the room instead */
+  flex: 1 0 auto;
   height: 100%;
   gap: 0.25rem;
   /* No overflow here: overflow-x forces overflow-y to clip too, which hides
@@ -73,6 +74,12 @@
 @media (min-width: 997px) and (max-width: 1199px) {
   .wordmark {
     display: none;
+  }
+  .sections :global(.navbar__link) {
+    padding: 0 0.4rem;
+  }
+  .topRow {
+    gap: 0.75rem;
   }
 }
 

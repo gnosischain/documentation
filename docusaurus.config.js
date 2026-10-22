@@ -104,7 +104,14 @@ const config = {
           { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
           // Tools, technical guides, validators and FAQ, sectioned in its left sidebar
           { type: "docSidebar", position: "left", sidebarId: "knowledgeHub", label: "Knowledge hub" },
-          // No right-hand links: Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js).
+          // Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js).
+          // One right-hand link: an ink pill back to the build site, before the colour-mode toggle
+          {
+            href: "https://build.gnosischain.com/",
+            position: "right",
+            label: "Build site",
+            className: "navbarCta",
+          },
         ],
       },
       footer: {

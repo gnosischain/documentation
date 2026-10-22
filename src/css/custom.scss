@@ -402,6 +402,22 @@ html[data-scrolled] .navbar__inner {
   color: var(--gc-text);
 }
 
+/* Build-site button: the ink pill gnosis.io and build.gnosischain.com close their headers with */
+.navbar__items--right .navbar__link.navbarCta {
+  height: 36px;
+  margin: 0 0.4rem;
+  padding: 0 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gc-cta-ink);
+  background: var(--gc-cta);
+  transition: background-color 0.15s ease;
+}
+.navbar__items--right .navbar__link.navbarCta:hover {
+  color: var(--gc-cta-ink);
+  background: var(--gc-cta-hover);
+}
+
 /* The arrow glyph is noise in a cluster this dense; the label is enough. */
 .navbar__items--right .navbar__link svg[class*='iconExternalLink'] {
   display: none;
@@ -557,7 +573,7 @@ a:hover .socialButton path {
 /* Only collapse the search pill to an icon-only button on true phone
    widths; down to tablet width it stays full-size and centered. */
 /* Also on narrow laptops, where the one-row header needs the room for its section tabs. */
-@media (max-width: 560px), (min-width: 997px) and (max-width: 1199px) {
+@media (max-width: 560px), (min-width: 997px) and (max-width: 1279px) {
   .navbar .navbarSearchContainer_Bca1,
   .navbar [class*='navbarSearchContainer'] {
     width: auto;
