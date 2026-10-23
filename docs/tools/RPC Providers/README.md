@@ -173,3 +173,40 @@ https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 https://gnosis.api.onfinality.io/public
 ```
+
+## PublicNode
+
+[PublicNode](https://publicnode.com) by Allnodes provides fast, free, and privacy-first RPC endpoints for Gnosis Chain.
+
+- [PublicNode Gnosis page](https://gnosis.publicnode.com)
+
+<Tabs>
+<TabItem label="Mainnet" value="Mainnet">
+
+```shell
+# HTTP RPC
+https://gnosis-rpc.publicnode.com
+
+# WSS RPC
+wss://gnosis-rpc.publicnode.com
+
+# Beacon API
+https://gnosis-beacon-api.publicnode.com
+```
+
+</TabItem>
+<TabItem label="Chiado" value="Chiado">
+
+```shell
+# HTTP RPC
+https://gnosis-chiado-rpc.publicnode.com
+
+# WSS RPC
+wss://gnosis-chiado-rpc.publicnode.com
+
+# Beacon API
+https://gnosis-chiado-beacon-api.publicnode.com
+```
+
+</TabItem>
+</Tabs>
