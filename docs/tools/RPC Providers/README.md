@@ -108,6 +108,16 @@ dRPC NodeCloud offers an AI-powered load-balancer, 180+ network endpoints, flat-
 
 - [Chainstack's Docs for Gnosis RPCs](https://chainstack.com/build-better-with-gnosis-chain/)
 
+## Pinax
+
+Pinax provides archive RPC for Gnosis and Chiado, with full historical state queryable at any
+block, plus a public EIP-4844 blob sidecar endpoint that needs no API key.
+
+- [Gnosis RPC](https://gnosis.rpc.pinax.network) and [Chiado RPC](https://chiado.rpc.pinax.network)
+- [Blob sidecars](https://gnosis.blobs.pinax.network/eth/v1/beacon/blobs/head), a drop-in
+  replacement for the consensus-layer `/eth/v1/beacon/blobs` endpoint
+- [Docs](https://app.pinax.network/docs)
+
 ## POKT
 
 - [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/supported-blockchains/)
