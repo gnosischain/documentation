@@ -1,14 +1,18 @@
 import React, {useEffect, useRef, useState} from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const SITES = [
   {label: 'Docs', href: 'https://docs.gnosischain.com', current: true},
   {label: 'Build', href: 'https://build.gnosischain.com/'},
+  {label: 'Bridge', href: 'https://bridge.gnosischain.com/'},
+  // The docs page that lists every faucet (mainnet and Chiado), not one faucet site
+  {label: 'Faucets', to: '/tools/Faucets'},
 ];
 
 /**
- * The DOCS label beside the logo, as a menu to switch between the docs and the build site.
+ * The DOCS label beside the logo, as a menu of the docs, the build site, the bridge and the faucets.
  * Closes on an outside click, Escape, or picking a site.
  */
 export default function SiteSwitcher() {
@@ -49,12 +53,16 @@ export default function SiteSwitcher() {
       </button>
       {open && (
         <ul className={styles.switcherMenu}>
-          {SITES.map(({label, href, current}) => (
+          {SITES.map(({label, href, to, current}) => (
             <li key={label}>
               {current ? (
                 <span className={clsx(styles.switcherItem, styles.switcherCurrent)} aria-current="page">
                   {label}
                 </span>
+              ) : to ? (
+                <Link className={styles.switcherItem} to={to} onClick={() => setOpen(false)}>
+                  {label}
+                </Link>
               ) : (
                 <a className={styles.switcherItem} href={href} onClick={() => setOpen(false)}>
                   {label}
