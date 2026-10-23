@@ -9,6 +9,7 @@ overrides:
   serialize-javascript: '7.1.1'
   tinypool: '2.2.0'
   uuid: '11.1.1'
+  'follow-redirects': '1.16.1'
 
 audit:
   level: high
