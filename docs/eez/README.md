@@ -53,6 +53,11 @@ The core contracts are an early-stage implementation that has not been audited. 
         url="/eez/how-it-works"
     />
     <Card
+        title="EEZ demos and protocol docs"
+        subtitle="Hands-on walkthroughs of a synchronous call, and the full protocol documentation."
+        url="/eez/demos-and-docs"
+    />
+    <Card
         title="Timeline"
         subtitle="From the EEZ announcement to the Gnosis EEZ launch, and what follows."
         url="/eez/timeline"

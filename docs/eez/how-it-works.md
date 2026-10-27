@@ -69,3 +69,5 @@ The reference implementation is open source:
 - [eez-rollup0](https://github.com/eez-association/eez-rollup0): the rollup node, with the sequencer, composer, proof signer and follower.
 - [eez-core-protocol](https://github.com/eez-association/eez-core-protocol): the smart contracts on Ethereum.
 - [specs-draft](https://github.com/eez-association/specs-draft): the draft specification.
+
+To see a call run step by step, or to read the protocol in full, go to [EEZ demos and protocol docs](/eez/demos-and-docs).
