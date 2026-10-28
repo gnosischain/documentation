@@ -8,14 +8,11 @@ keywords: [eez demos, eez protocol docs, ethereum economic zone, synchronous com
 
 # EEZ demos and protocol docs
 
-This documentation covers Gnosis EEZ, the first instance of the Ethereum Economic Zone. The EEZ framework itself has its own documentation and a set of hands-on demos, maintained by the EEZ Association, which you can check out here:
+This documentation covers Gnosis EEZ, the first instance of the Ethereum Economic Zone. The EEZ framework itself has its own documentation and a set of hands-on demos, maintained by the EEZ Association.
+
+## EEZ resources
 
 <CardContainer>
-    <Card
-        title="EEZ demos"
-        subtitle="Animated walkthroughs that follow one call from one chain to another and back in the same transaction, with real protocol code cited at a pinned commit."
-        url="https://build.eez.io/"
-    />
     <Card
         title="EEZ protocol docs"
         subtitle="The specification: execution and static entries, multi-prover verification, limits and boundaries, and the blob format."
@@ -23,15 +20,19 @@ This documentation covers Gnosis EEZ, the first instance of the Ethereum Economi
     />
 </CardContainer>
 
-## Pick your path
+{/* TODO(ben): add the Remix contracts link here once we have the URL. */}
 
-The demos are grouped by who you are.
+## Learn about the EEZ
 
-**Dapp developers.** Make your first cross-chain call and learn the patterns to build with.
+Hands-on walkthroughs that follow one call from one chain to another and back in the same transaction, with real protocol code. They are grouped by who you are: dapp developers, rollup operators and protocol researchers.
 
-**Rollup operators.** Run the stack, deploy the protocol and send a test call through it.
-
-**Protocol researchers.** See how the components divide the work, one level deeper than [How it works](/eez/how-it-works).
+<CardContainer>
+    <Card
+        title="EEZ demos"
+        subtitle="Make your first cross-chain call, run the stack, or see how the components divide the work."
+        url="https://build.eez.io/"
+    />
+</CardContainer>
 
 ## Before you build
 
