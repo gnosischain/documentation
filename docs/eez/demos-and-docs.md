@@ -12,27 +12,13 @@ This documentation covers Gnosis EEZ, the first instance of the Ethereum Economi
 
 ## EEZ resources
 
-<CardContainer>
-    <Card
-        title="EEZ protocol docs"
-        subtitle="The specification: execution and static entries, multi-prover verification, limits and boundaries, and the blob format."
-        url="https://docs.eez.io/"
-    />
-</CardContainer>
+- **[EEZ protocol docs](https://docs.eez.io/)**: the specification, covering execution and static entries, multi-prover verification, limits and boundaries, and the blob format.
 
 {/* TODO(ben): add the Remix contracts link here once we have the URL. */}
 
 ## Learn about the EEZ
 
-Hands-on walkthroughs that follow one call from one chain to another and back in the same transaction, with real protocol code. They are grouped by who you are: dapp developers, rollup operators and protocol researchers.
-
-<CardContainer>
-    <Card
-        title="EEZ demos"
-        subtitle="Make your first cross-chain call, run the stack, or see how the components divide the work."
-        url="https://build.eez.io/"
-    />
-</CardContainer>
+- **[EEZ demos](https://build.eez.io/)**: hands-on walkthroughs that follow one call from one chain to another and back in the same transaction, with real protocol code. They are grouped by who you are: dapp developers, rollup operators and protocol researchers.
 
 ## Before you build
 
