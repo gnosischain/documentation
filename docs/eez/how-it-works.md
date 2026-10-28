@@ -25,9 +25,9 @@ Gnosis EEZ will produce a block every 2 seconds. Once per Ethereum block, it set
 
 ## The four steps
 
-1. **Sequence.** The sequencer orders transactions into a Gnosis EEZ block every 2 seconds: six blocks to each 12-second Ethereum block.
-2. **Compose.** Once per Ethereum block, the composer builds a Sync block. It carries the cross-chain work: a call into Ethereum is held, simulated and packed in alongside the ordinary blocks.
-3. **Attest.** A proof signer re-runs the batch independently and signs the result. This attestation will be replaced by ZK proofs.
+1. **Sequence.** The [sequencer](/eez/glossary#sequencer) orders transactions into a Gnosis EEZ block every 2 seconds: six blocks to each 12-second Ethereum block.
+2. **Compose.** Once per Ethereum block, the [composer](/eez/glossary#composer) builds a [Sync block](/eez/glossary#sync-block). It carries the cross-chain work: a call into Ethereum is held, simulated and packed in alongside the ordinary blocks.
+3. **Attest.** A [proof signer](/eez/glossary#proof-signer) re-runs the batch independently and signs the result. This [attestation](/eez/glossary#attestation) will be replaced by [ZK proofs](/eez/glossary#zk-proof).
 4. **Settle.** The composer posts the batch, the attestation and the Ethereum side of any cross-chain calls together, so they land in the same Ethereum block. The EEZ contract on Ethereum checks the attestation before anything settles.
 
 {/* TODO(ben): confirm the proving setup at launch. eez-rollup0 uses the signer attestation described above, verified on Ethereum by ECDSAProofSystem; other pages still describe an interim setup that is "likely TEE-based". */}
