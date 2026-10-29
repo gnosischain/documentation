@@ -599,26 +599,41 @@ html[data-theme='dark'] {
 }
 .DocSearch-Modal {
   font-family: var(--gc-font-body);
-  border-radius: var(--gc-radius-sm);
+  border-radius: var(--gc-radius);
+  border: 1px solid var(--gc-border);
   overflow: hidden;
 }
+/* Search field: a rounded card with inner spacing, like our other cards. */
 .DocSearch-SearchBar {
-  padding: 14px 16px;
+  padding: 1.25rem 1.25rem 0.75rem;
 }
 .DocSearch-Form {
-  border-radius: 999px;
+  border-radius: var(--gc-radius-sm);
+  padding: 0 1rem;
+  height: 52px;
   box-shadow: var(--docsearch-searchbox-shadow);
 }
+/* Result list: padded, each hit a rounded card. */
+.DocSearch-Dropdown {
+  padding: 0 1rem 0.5rem;
+}
 .DocSearch-Hit a {
-  border-radius: 10px;
+  border-radius: var(--gc-radius-sm);
+  padding: 0 0.75rem;
 }
 .DocSearch-Hit[aria-selected='true'] a {
   background: var(--gc-accent);
+}
+/* Footer: its own padding and a rounded key chip. */
+.DocSearch-Footer {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--gc-radius) var(--gc-radius);
 }
 .DocSearch-Commands-Key {
   background: var(--gc-surface-2);
   box-shadow: none;
   border: 1px solid var(--gc-border);
+  border-radius: 6px;
   color: var(--gc-text-muted);
 }
 
