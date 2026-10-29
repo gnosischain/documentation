@@ -30,7 +30,7 @@ To stake on GBC, follow the validator instructions at [validategnosis.com](https
 | Slashing                     | Reductions to 16 mGNO, then removal                                                                                                                                                   |
 | Clients                      | Prysm, Lighthouse                                                                                                                                                                     |
 | Custom Deposit Contract      | <p></p><ul><li>mGNO deposit (ERC20 enabled)</li><li>Upgradeable</li><li>Claiming on accidental locks</li><li>Custom network keys generation (deposit-cli)</li></ul>                   |
-| Explorer                     | <p>Modified beaconchain explorer<br /><span data-gb-custom-inline data-tag="emoji" data-code="1f50d">🔍</span> <a href="http://beacon.gnosischain.com">beacon.gnosischain.com</a></p> |
+| Explorer                     | <p>Modified beaconchain explorer<br /><a href="http://beacon.gnosischain.com">beacon.gnosischain.com</a></p> |
 | RPC                          | [https://rpc-gbc.gnosischain.com](https://rpc-gbc.gnosischain.com)                                                                                                                    |
 | Launch MVP                   | <p>4096 validators<br />131,072 mGNO </p><p>83% APY</p>                                                                                                                               |
 | Security Goal Prior to Merge | <p>50K+ validators</p><p>1.6M+ mGNO</p><p>23% APY</p>                                                                                                                                 |

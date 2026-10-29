@@ -88,7 +88,8 @@ html:root {
   --gc-border-strong: rgba(7, 5, 44, 0.18);
   --gc-text: var(--purple-1000);
   --gc-text-muted: rgba(7, 5, 44, 0.72);
-  --gc-text-faint: rgba(7, 5, 44, 0.52);
+  /* 0.6 keeps captions ("Last updated") above the AA 4.5:1 floor on the page ground */
+  --gc-text-faint: rgba(7, 5, 44, 0.6);
   --gc-heading: var(--purple-1000);
   --gc-accent: var(--purple-800);
   --gc-accent-hover: var(--purple-1000);
@@ -163,7 +164,7 @@ html[data-theme='dark']:root {
   --gc-border-strong: rgba(255, 250, 251, 0.22);
   --gc-text: var(--purple-50);
   --gc-text-muted: rgba(255, 250, 251, 0.72);
-  --gc-text-faint: rgba(255, 250, 251, 0.52);
+  --gc-text-faint: rgba(255, 250, 251, 0.62);
   --gc-heading: var(--purple-50);
   --gc-accent: var(--purple-300);
   --gc-accent-hover: var(--purple-50);
@@ -957,6 +958,61 @@ aside[class*='docSidebarContainer'] {
 }
 .theme-admonition [class*='admonitionHeading'] {
   margin-left: 0;
+}
+/* Brand + accessible admonition palette. Infima's stock cyan/amber/green fail
+   contrast and sit off-brand; map each type to a legible accent (info → brand
+   purple, tip → Chain emerald, warning/danger → darkened functional hues) with
+   a soft tint of the same hue. Accent drives the border, heading and icon. */
+.theme-admonition {
+  --adm-accent: var(--gc-text-muted);
+  --adm-bg: var(--gc-surface-2);
+  background-color: var(--adm-bg) !important;
+  border-left-color: var(--adm-accent) !important;
+}
+.theme-admonition-info {
+  --adm-accent: var(--gc-accent);
+  --adm-bg: rgba(63, 42, 205, 0.06);
+}
+.theme-admonition-tip {
+  --adm-accent: var(--emerald-700);
+  --adm-bg: rgba(4, 120, 87, 0.08);
+}
+.theme-admonition-warning,
+.theme-admonition-caution {
+  --adm-accent: #b45309;
+  --adm-bg: rgba(180, 83, 9, 0.09);
+}
+.theme-admonition-danger {
+  --adm-accent: #be123c;
+  --adm-bg: rgba(190, 18, 60, 0.08);
+}
+.theme-admonition [class*='admonitionHeading'] {
+  color: var(--adm-accent);
+}
+.theme-admonition [class*='admonitionIcon'] svg {
+  fill: var(--adm-accent);
+}
+/* Dark: lighter accents for contrast on the dark tint, lower-alpha grounds. */
+html[data-theme='dark'] .theme-admonition {
+  --adm-accent: var(--gc-text-muted);
+  --adm-bg: rgba(255, 250, 251, 0.05);
+}
+html[data-theme='dark'] .theme-admonition-info {
+  --adm-accent: var(--purple-300);
+  --adm-bg: rgba(180, 175, 253, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-tip {
+  --adm-accent: var(--fresh-green-500);
+  --adm-bg: rgba(141, 232, 171, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-warning,
+html[data-theme='dark'] .theme-admonition-caution {
+  --adm-accent: #f5b36b;
+  --adm-bg: rgba(245, 179, 107, 0.1);
+}
+html[data-theme='dark'] .theme-admonition-danger {
+  --adm-accent: #fb7185;
+  --adm-bg: rgba(251, 113, 133, 0.1);
 }
 .tabs__item {
   border-radius: 6px 6px 0 0;
