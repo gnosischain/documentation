@@ -58,6 +58,17 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M15 9h.01" />
     </>
   ),
+  folder: (
+    <>
+      <path d="M4 20h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-7.9a1 1 0 0 1-.8-.4l-1.1-1.5a1 1 0 0 0-.8-.4H4a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1z" />
+    </>
+  ),
+  file: (
+    <>
+      <path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z" />
+      <path d="M14 3v5h5" />
+    </>
+  ),
 };
 
 interface IconProps {

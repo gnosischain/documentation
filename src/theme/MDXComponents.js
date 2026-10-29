@@ -8,11 +8,13 @@ import FeatureCard from '@site/src/components/Card/FeatureCard';
 import CardContainer from '@site/src/components/Card/CardContainer';
 import FeatureGrid from '@site/src/components/Card/FeatureGrid';
 import Button from '@site/src/components/Button';
+import MdxLink from '@site/src/components/Link/MdxLink';
 // import outlineCard from '@site/src/components/Card/outlineCard';
 
 
 export default {
   ...MDXComponents,
+  a: MdxLink,
   box: Box,
   tutorialsFeatured: TutorialsFeatured,
   Tabs: tabs,
