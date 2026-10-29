@@ -1,22 +1,38 @@
 ---
-sidebar_label: "About Gnosis Chain"
-sidebar_position: 1
-description: Gnosis Chain is a community-owned EVM-based network that is operated by a diverse set of validators around the world
-keywords: [gnosis concepts] 
-title: Concepts
+sidebar_position: 0
+sidebar_label: Overview
+title: Gnosis Chain
+description: Gnosis Chain today, the EVM L1 with 5-second blocks, xDai as gas and a validator set secured by GNO, and where to start building on it.
+keywords: [about gnosis chain, gnosis chain, l1, evm, xdai, gno, validators, chain id, fees]
 ---
 
-# Introducing Gnosis Chain
+# Gnosis Chain
 
-Gnosis Chain is a community-owned EVM-based network operated by a diverse set of validators around the world. It is one of Ethereum’s first sidechains focused on resilience and credible neutrality as its core values. Currently, there are over 200,000 validators who secure the network.
+Gnosis Chain is a community-owned EVM L1, live since 2018 and secured by over 200,000 validators around the world. Resilience and credible neutrality are its core values, and anyone can take part in governance through the GnosisDAO.
 
-Gnosis Chain uses DAO governance mechanism to ensure anyone can participate in the decision-making processes regarding the development and future of the network. Creating dApps and integrating with Gnosis Chain products is similar to any other EVM-based blockchain. You can find more details in the [protocol specification](/about/specs).
+Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez) (EEZ), a neutral rollup framework that settles to Ethereum. Gnosis operates the instance. Everything you build on Gnosis Chain today carries over: contracts, addresses and state are hard-forked across, so nothing is redeployed.
 
+## At a glance
 
-# Fees
+| Property | Value |
+| --- | --- |
+| Block time | 5 seconds |
+| Fee token | [xDai](/about/tokens/xdai), a stablecoin |
+| Consensus token | [GNO](/about/tokens/gno), staked by validators |
+| Chain ID | 100 (mainnet), 10200 (Chiado testnet) |
+| Execution | EVM, Osaka patchset |
 
-Each transaction on the Gnosis Chain (sending tokens, interacting with smart contracts, etc.) is associated with the fee in xDai stablecoin.
-- It is one of the main differences from other EVM chains where users pay in a native token of that network. 
-- This approach reduces the volatility risks and simplifies the development experience.
+**Fees are paid in a stablecoin.** Most EVM chains charge gas in a volatile native token. On Gnosis Chain every transaction is paid in xDai, so costs are predictable for you and your users. Fees go to the validator who sealed the block.
 
-Also, transaction fees are not split among pool participants of the validation process. They are received only by the validator who sealed the block. Note, this is subject to change. As the network grows, the fees may be redirected to support additional aspects of the protocol.
+**Building is the same as on Ethereum.** The same tooling, wallets and contracts work unchanged. Point them at the [network RPC](/about/networks) and deploy.
+
+## Find your way around
+
+- **[Networks](/about/networks):** RPC endpoints, explorers and faucets for mainnet and Chiado.
+- **[Tokens](/about/tokens):** the dual-token model of xDai for fees and GNO for consensus.
+- **[Chain specifications](/about/specs):** consensus, hard forks, deposit contracts and audits.
+- **[Developer guides](/developers/quickstart):** build, deploy, interact with and verify contracts.
+- **[Bridges](/bridges):** move assets between Ethereum and Gnosis Chain.
+- **[Tools](/tools):** oracles, indexers, wallets and other infrastructure.
+- **[Knowledge hub](/technicalguides):** deeper technical guides.
+- **[Validators and node operators](/validators/eez-transition):** what the move to Gnosis EEZ means if you run a validator or a node.

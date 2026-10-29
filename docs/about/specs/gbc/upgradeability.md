@@ -17,5 +17,5 @@ c
 
 ### Contracts managed by the Governance Board
 
-- Deposit Contract: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9/read-contract)
+- Deposit Contract: [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9#readContract)
 

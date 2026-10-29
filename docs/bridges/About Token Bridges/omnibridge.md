@@ -194,7 +194,7 @@ Additional References:
 
 ### Canonical Token Registries
 
-- [Canonical Bridged Tokens](https://gnosis.blockscout.com/tokens?tab=bridged)
+- [Canonical Bridged Tokens](https://gnosisscan.io/tokens)
 - Select the origin chain by using **Filter** option.
 
 ### Multiple Representations
@@ -206,8 +206,8 @@ For example, there are two different representations of USDC on Gnosis(created b
 
 | Asset              | Token Contract                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
-| USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://gnosis.blockscout.com/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
+| USDC from Ethereum | [0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) |
+| USDC from BSC      | [0xD10Cc63531a514BBa7789682E487Add1f15A51E2](https://gnosisscan.io/address/0xD10Cc63531a514BBa7789682E487Add1f15A51E2) |
 
 Gnosis adopts a naming convention where the "chain of origin" is added as a suffix to the token name (e.g. USDC from Ethereum, USDC from BSC)
 
@@ -223,7 +223,7 @@ Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and 
 USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://github.com/circlefin/stablecoin-evm/blob/master/doc/bridged_USDC_standard.md). To ensure smooth bridging operations, when using [Bridge UI](https://bridge.gnosischain.com/) to bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) from Ethereum, user will get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0) by default.
 
 1. Bridging from ETH:  
-   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosis.blockscout.com/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
+   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
 2. Bridging from GC:  
    a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).  
    b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.

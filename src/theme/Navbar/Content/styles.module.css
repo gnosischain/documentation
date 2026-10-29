@@ -1,0 +1,183 @@
+.inner {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0;
+  /* Room between the pill's rounded ends and the logo / colour-mode toggle */
+  padding: 0 24px;
+  width: 100%;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 100%;
+  flex: none;
+}
+
+.brand {
+  flex: 0 0 auto;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.wordmark {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gc-text-muted);
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--gc-border);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ---------- site switcher (the DOCS label) ---------- */
+.switcher {
+  position: relative;
+}
+
+.switcherButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: -6px 0 -6px -4px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.switcherButton:hover,
+.switcherButton[aria-expanded='true'] {
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+}
+.switcherButton:focus-visible {
+  outline: 2px solid var(--gc-text);
+  outline-offset: 2px;
+}
+
+.switcherChevron {
+  transition: transform 0.15s ease;
+}
+.switcherButton[aria-expanded='true'] .switcherChevron {
+  transform: rotate(180deg);
+}
+
+.switcherMenu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: -4px;
+  z-index: 10;
+  min-width: 180px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--gc-surface);
+  border: 1px solid var(--gc-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(7, 5, 44, 0.12);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.switcherItem {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--gc-text-muted);
+  text-decoration: none;
+}
+a.switcherItem:hover {
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+  text-decoration: none;
+}
+.switcherCurrent {
+  color: var(--gc-text);
+  font-weight: 600;
+}
+
+.search {
+  flex: 0 1 240px;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.actions {
+  flex: 0 0 auto;
+  gap: 0.35rem;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  margin: 0 0.4rem;
+  background: var(--gc-border);
+  flex: none;
+}
+
+.sections {
+  /* Tabs never shrink; the search pill gives up the room instead */
+  flex: 1 0 auto;
+  height: 100%;
+  gap: 0.25rem;
+  /* No overflow here: overflow-x forces overflow-y to clip too, which hides
+     dropdown menus (e.g. Gnosis Chain) that open below the row. */
+}
+
+.colorModeToggle {
+  margin-left: 0.15rem;
+  display: flex;
+  align-items: center;
+}
+
+/* The pill's padding costs the tabs their room on narrow laptops; the DOCS label gives it back */
+@media (min-width: 997px) and (max-width: 1199px) {
+  .wordmark {
+    display: none;
+  }
+}
+
+@media (max-width: 996px) {
+  .inner {
+    padding: 0 14px;
+  }
+  .topRow {
+    gap: 0.5rem;
+  }
+  .wordmark {
+    display: none;
+  }
+  .sections {
+    display: none;
+  }
+  .actions,
+  .divider {
+    display: none;
+  }
+  .colorModeToggle {
+    display: none;
+  }
+}
+
+/* Below phone width the search pill collapses to an icon (see custom.scss);
+   only then does it need to sit beside the logo instead of centered. */
+@media (max-width: 560px) {
+  .search {
+    justify-content: flex-end;
+    flex: 1 1 auto;
+  }
+}
