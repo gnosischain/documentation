@@ -13,26 +13,31 @@ The reference shelf for building on and running Gnosis Chain. Pick what you need
 
 <CardContainer>
     <Card
+        icon="tools"
         title="Tools"
         subtitle="RPC providers, explorers, faucets, oracles, indexers, wallets and onboarding kits."
         url="/tools"
     />
     <Card
+        icon="guides"
         title="Technical guides"
         subtitle="Smart accounts, custom signers, EIP-7702 and EIP-5792, and more."
         url="/technicalguides"
     />
     <Card
+        icon="validators"
         title="Validators"
         subtitle="The move to Gnosis EEZ, withdrawals, compounding and voluntary exit."
         url="/validators/eez-transition"
     />
     <Card
+        icon="faq"
         title="FAQ"
         subtitle="Quick answers on wallets, staking, GNO and bridging."
         url="/faq/others"
     />
     <Card
+        icon="glossary"
         title="Glossary"
         subtitle="Plain-language definitions of rollup, settlement, composer, ZK proof and more."
         url="/knowledge-hub/glossary"

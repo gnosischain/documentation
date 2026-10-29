@@ -1,20 +1,31 @@
-/* Full-bleed fresh-product-hero wash (canon gradient) behind the hero, ending on the page ground. */
+/* Monochromatic purple wash behind the hero (the docs read calmer and more "tool"
+   than the multi-hue marketing hero), ending on the page ground. */
 .home {
   position: relative;
   isolation: isolate;
-  background: var(--gc-gradient-hero) top / 100% 820px no-repeat, var(--gc-bg);
+  background: linear-gradient(180deg, #ece5f4 0%, #f1ecf8 38%, var(--purple-75) 82%)
+      top / 100% 820px no-repeat,
+    var(--gc-bg);
   /* Start the wash under the navbar, which is see-through here (no docs sidebar to hide) */
   margin-top: calc(-1 * var(--ifm-navbar-height));
   padding-top: var(--ifm-navbar-height);
+}
+:global(html[data-theme='dark']) .home {
+  background: linear-gradient(180deg, var(--purple-950) 0%, var(--purple-1000) 82%)
+      top / 100% 820px no-repeat,
+    var(--gc-bg);
 }
 :global(body):has(.home) :global(nav.navbar) {
   background-color: transparent;
 }
 
+/* 48px (3rem) side gutters put the content's left edge on the logo's line (the
+   logo sits 48px from the page edge). Wide max-width so it reads as a grid like
+   gnosis.io rather than a narrow centred column. */
 .page {
-  max-width: 1280px;
+  max-width: 1512px;
   margin: 0 auto;
-  padding: 5.5rem 2rem 0;
+  padding: 5.5rem 3rem 0;
 }
 
 /* line the footer columns up with the page's content edge on the home page */
@@ -159,8 +170,8 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--gc-mint-soft);
-  color: var(--gc-text);
+  background: var(--gc-accent-soft);
+  color: var(--gc-accent);
 }
 
 .pathwayBody {
@@ -230,8 +241,8 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--gc-mint-soft);
-  color: var(--gc-text);
+  background: var(--gc-accent-soft);
+  color: var(--gc-accent);
 }
 
 .featureText {

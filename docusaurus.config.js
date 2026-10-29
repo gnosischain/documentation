@@ -20,6 +20,14 @@ const config = {
       async: true,
     },
   ],
+  // Inter is the canon Gnosis UI/body sans (typography.json). Kept all-sans per
+  // the docs' own type direction; no Playfair serif display face.
+  stylesheets: [
+    {
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+      rel: "stylesheet",
+    },
+  ],
   customFields: {
     POSTHOG_KEY: process.env.POSTHOG_KEY,
   },
@@ -75,7 +83,8 @@ const config = {
       },
       docs: {
         sidebar: {
-          hideable: true,
+          // Sidebar always visible: no collapse control (also hidden in custom.scss).
+          hideable: false,
         },
       },
       navbar: {
@@ -120,8 +129,10 @@ const config = {
             sidebarId: "knowledgeHub",
             label: "Knowledge hub",
           },
-          // No right-hand links: Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js),
-          // and the build site is in the DOCS switcher beside the logo.
+          // No marketing CTA in the docs header: it is kept clean and functional so
+          // the docs read as a tool, not a second marketing page. The launch-partner
+          // call lives in the announcement bar. Faucet, Bridge and Ecosystem live in
+          // the left sidebars; the build/bridge sites are in the DOCS switcher.
         ],
       },
       footer: {
