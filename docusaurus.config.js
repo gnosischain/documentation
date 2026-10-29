@@ -372,7 +372,7 @@ const config = {
           { title: "EEZ demos", url: "https://build.eez.io/", description: "Hands-on walkthroughs of a synchronous cross-chain call" },
         ],
         // Same order as the navbar tabs: Gnosis EEZ first, since that is where an agent should begin.
-        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/tools/**", "/technicalguides/**", "/validators/**", "/faq/**"],
+        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/knowledge-hub/**", "/tools/**", "/technicalguides/**", "/validators/**", "/node/**", "/faq/**"],
         content: {
           enableLlmsFullTxt: true,
           includePages: true,
