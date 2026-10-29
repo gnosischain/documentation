@@ -358,17 +358,27 @@ const config = {
       },
     ],
     [
-      "docusaurus-plugin-generate-llms-txt",
+      // Agent-readable output: llms.txt (index), llms-full.txt (all content) and a .md copy of
+      // every page, which the "Copy page" menu next to each doc title also uses.
+      require.resolve("./src/plugins/llms-txt.mjs"),
       {
-        outputFile: "llms.txt", // defaults to llms.txt if not specified
-      },
-    ],
-    [
-      // A .md copy of every page, used by the "Copy page" menu next to each doc title.
-      require.resolve("./src/plugins/page-markdown.mjs"),
-      {
+        siteTitle: "Gnosis Chain Docs",
+        siteDescription:
+          "Documentation for Gnosis Chain and Gnosis EEZ. Gnosis Chain is an EVM network (chain ID 100) with 5-second blocks and xDai, a stablecoin, as gas. Gnosis EEZ is the first instance of the Ethereum Economic Zone: Gnosis Chain will be hard-forked onto it, with contracts, balances and addresses carried over unchanged.",
+        // One section per top-level folder; depth 2 gave every single page its own heading.
+        depth: 1,
+        optionalLinks: [
+          { title: "EEZ protocol docs", url: "https://docs.eez.io/", description: "The Ethereum Economic Zone specification" },
+          { title: "EEZ demos", url: "https://build.eez.io/", description: "Hands-on walkthroughs of a synchronous cross-chain call" },
+        ],
+        // Same order as the navbar tabs: Gnosis EEZ first, since that is where an agent should begin.
+        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/tools/**", "/technicalguides/**", "/validators/**", "/faq/**"],
         content: {
+          enableLlmsFullTxt: true,
           includePages: true,
+          // Sidebar category pages are only lists of links to pages already in the index.
+          includeGeneratedIndex: false,
+          // Full URLs, so every link resolves from wherever an agent read the file.
           relativePaths: false,
           excludeRoutes: ["/search", "/live-samples/**"],
         },
