@@ -21,7 +21,7 @@ const config = {
     },
   ],
   customFields: {
-    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7",
+    POSTHOG_KEY: process.env.POSTHOG_KEY,
   },
 
   // GitHub pages deployment config.
@@ -54,10 +54,6 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
-        // gtag: {
-        //   trackingID: process.env.GOOGLE_ANALYTICS_ID ?? "G-YVPQSCP6S7", // staging by default
-        //   anonymizeIP: true,
-        // },
       }),
     ],
   ],
@@ -99,11 +95,31 @@ const config = {
             label: "Gnosis EEZ",
           },
           // The Gnosis Chain doc set, one tab per section
-          { type: "docSidebar", position: "left", sidebarId: "gnosisChain", label: "Gnosis Chain" },
-          { type: "docSidebar", position: "left", sidebarId: "developerGuides", label: "Developers" },
-          { type: "docSidebar", position: "left", sidebarId: "bridges", label: "Bridges" },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "gnosisChain",
+            label: "Gnosis Chain",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "developerGuides",
+            label: "Developers",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "bridges",
+            label: "Bridges",
+          },
           // Tools, technical guides, validators and FAQ, sectioned in its left sidebar
-          { type: "docSidebar", position: "left", sidebarId: "knowledgeHub", label: "Knowledge hub" },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "knowledgeHub",
+            label: "Knowledge hub",
+          },
           // No right-hand links: Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js),
           // and the build site is in the DOCS switcher beside the logo.
         ],
@@ -156,7 +172,10 @@ const config = {
             items: [
               { label: "FAQ", to: "/faq/others" },
               { label: "Gnosisscan", href: "https://gnosisscan.io" },
-              { label: "Gnosis Bridge app", href: "https://bridge.gnosischain.com" },
+              {
+                label: "Gnosis Bridge app",
+                href: "https://bridge.gnosischain.com",
+              },
               { label: "Careers", href: "https://gnosis.io/careers/" },
               { label: "Media kit", href: "https://www.gnosis.io/press" },
               { label: "Terms of use", to: "/terms-conditions" },
@@ -229,12 +248,22 @@ const config = {
             from: "/start/about-gnosis-chain",
           },
           // Validator withdrawals and voluntary exit moved to the Validators section
-          { to: "/validators/withdrawals", from: "/node/management/withdrawals" },
-          ...["bls-to-execution-change", "claiming-your-gno", "switch-to-compounding"].map((page) => ({
+          {
+            to: "/validators/withdrawals",
+            from: "/node/management/withdrawals",
+          },
+          ...[
+            "bls-to-execution-change",
+            "claiming-your-gno",
+            "switch-to-compounding",
+          ].map((page) => ({
             to: `/validators/withdrawals/${page}`,
             from: `/node/management/withdrawals/${page}`,
           })),
-          { to: "/validators/voluntary-exit", from: "/node/management/voluntary-exit" },
+          {
+            to: "/validators/voluntary-exit",
+            from: "/node/management/voluntary-exit",
+          },
           // Run a node archived to /archives/Node; the section is no longer published.
           // Node and validator readers land on the runbook for the move to Gnosis EEZ.
           {

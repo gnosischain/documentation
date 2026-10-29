@@ -192,11 +192,11 @@ const main = async() => {
 
    const homeAMB = "0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59"
    const foreignAMB = "0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e"
-   
+
    // Choose either home or foreign
 
-   // Foreign 
-   const foreignLogs =  await ethClient.getContractEvents({ 
+   // Foreign
+   const foreignLogs =  await ethClient.getContractEvents({
       address: foreignAMB,
       abi: [parseAbiItem("event RelayedMessage(address indexed sender,address indexed executor,bytes32 indexed messageId,bool status)")],
       eventName: 'RelayedMessage',
@@ -208,9 +208,9 @@ const main = async() => {
       })
 
       console.log(foreignLogs[0].transactionHash)
-      
-      // Home 
-      const homeLogs = await gnoClient.getContractEvents({ 
+
+      // Home
+      const homeLogs = await gnoClient.getContractEvents({
       address: homeAMB,
       abi: [parseAbiItem("event AffirmationCompleted(address indexed sender,address indexed executor,bytes32 indexed messageId,bool status)")],
       eventName: 'AffirmationCompleted',
@@ -222,7 +222,7 @@ const main = async() => {
       })
 
       console.log(homeLogs[0].transactionHash)
-};  
+};
 
 main();
 ```
