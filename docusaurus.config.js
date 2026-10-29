@@ -220,6 +220,11 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Glossary moved from the Gnosis EEZ section into the Knowledge hub
+          {
+            to: "/knowledge-hub/glossary",
+            from: "/eez/glossary",
+          },
           // Launch partner moved out of the Gnosis EEZ section to its own page
           {
             to: "/launch-partner",

@@ -7,7 +7,11 @@ keywords: [stablecoin, payments, eure, usdc, erc20, foundry, payment receiver, m
 
 # Accept stablecoin payments
 
-**Job:** accept stablecoin payments in your app. **Time:** about 40 minutes. **Chain:** Chiado testnet.
+**Job:** accept stablecoin payments in your app.
+
+**Time:** about 40 minutes.
+
+**Chain:** Chiado testnet.
 
 **Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 

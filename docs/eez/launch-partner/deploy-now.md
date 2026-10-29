@@ -9,13 +9,19 @@ keywords: [deploy, gnosis chain, mainnet, chiado, foundry, forge, verify, gnosis
 
 # Deploy now: from nothing to a verified contract on Gnosis Chain
 
-**Job:** deploy and verify a contract on Gnosis Chain mainnet. **Time:** about 45 minutes. **Chains:** Chiado testnet, then Gnosis mainnet.
+<p><strong>Job:</strong> deploy and verify a contract on Gnosis Chain mainnet.</p>
+
+<p><strong>Time:</strong> about 45 minutes.</p>
+
+<p><strong>Chains:</strong> Chiado testnet, then Gnosis mainnet.</p>
+
+Gnosis EEZ is not a separate chain. Gnosis Chain becomes Gnosis EEZ at the fork, so you deploy on Gnosis Chain today and your contract is on Gnosis EEZ at the same address, with nothing to redeploy. [Gnosis Chain now and Gnosis EEZ](/eez/gnosis-eez) explains what changes.
 
 **Prerequisites:** a terminal on macOS or Linux, Git, a free [Blockscout API key](https://dev.blockscout.com/) for verifying on mainnet, and a small amount of xDai on Gnosis Chain for the mainnet step. Around one xDai is far more than you need.
 
 This guide takes you from an empty directory to a contract on Gnosis Chain mainnet whose source anyone can read on the block explorer. You rehearse every step on Chiado first, where nothing costs real money, then repeat it on mainnet.
 
-**Why mainnet matters here.** Gnosis EEZ goes live by hard-forking the state of Gnosis Chain mainnet. A contract you deploy on mainnet today is on Gnosis EEZ at the same address the moment the fork activates. A contract on Chiado is not. Chiado is for rehearsal, and it gets its own fork for testing before mainnet.
+**Why the last step is on mainnet.** Only Gnosis Chain mainnet carries over to Gnosis EEZ. A contract on Chiado does not. Chiado is for rehearsal, and it gets its own fork for testing before mainnet.
 
 Every step ends in something you can see. If a step does not produce the result described, stop there. The next step will not work.
 

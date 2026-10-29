@@ -32,6 +32,11 @@ The reference shelf for building on and running Gnosis Chain. Pick what you need
         subtitle="Quick answers on wallets, staking, GNO and bridging."
         url="/faq/others"
     />
+    <Card
+        title="Glossary"
+        subtitle="Plain-language definitions of rollup, settlement, composer, ZK proof and more."
+        url="/knowledge-hub/glossary"
+    />
 </CardContainer>
 
 ## Tools
@@ -76,3 +81,7 @@ Short answers to the questions the community asks most.
 - [Bridging](/faq/others#bridging): native bridges, timings, daily limits and bridging from a Safe.
 
 Questions about the move to Gnosis EEZ are in the [transition FAQ](/eez/faq).
+
+## Glossary
+
+Plain-language definitions of the terms used across these docs, from attestation and composer to rollup, settlement and ZK proof. [Open the glossary](/knowledge-hub/glossary).
