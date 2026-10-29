@@ -266,7 +266,7 @@ Remove Signers:
 
 1. Upgrade AMB proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
    1. Foreign AMB implementation contract: [0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316](https://etherscan.io/address/0x098f51bdfb5D6d319DD4FDf06b64773d25bD1316#readContract), version: 6
-   2. Home AMB Implementation contract: [0xA033535983d1aBcc2648af730EDCb198909903D7](https://gnosis.blockscout.com/address/0xA033535983d1aBcc2648af730EDCb198909903D7#code), version: 6
+   2. Home AMB Implementation contract: [0xA033535983d1aBcc2648af730EDCb198909903D7](https://gnosisscan.io/address/0xA033535983d1aBcc2648af730EDCb198909903D7#code), version: 6
 2. Remove Telepathy from AMB’s validator list
    1. Succinct Labs is deprecating the Telepathy platform; thus, we are removing Telepathy [0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E](https://gnosisscan.io/address/0x456c255A8BC1F33778603A2a48Eb6B0C69F4d48E) from validator list. We will add the new SP1 based implementation when ready.
 3. Unlock TRAC token to users
@@ -588,7 +588,7 @@ Increase the amount of blocks required for confirmation on the Ethereum Mainnet 
 
 ## Return user funds
 
-🗳 Justification: A user accidentally [sent over 2000 USDC](https://blockscout.com/xdai/mainnet/tx/0x2837cd89972f2e37a1cb631e60dbb761213010fe526a089c99f48ed483f63956) to the USDC token contract on Gnosis. After confirming the users identity, the board agreed to call the `claimTokensFromTokenContract` method and return the amount to the user.
+🗳 Justification: A user accidentally [sent over 2000 USDC](https://gnosisscan.io/tx/0x2837cd89972f2e37a1cb631e60dbb761213010fe526a089c99f48ed483f63956) to the USDC token contract on Gnosis. After confirming the users identity, the board agreed to call the `claimTokensFromTokenContract` method and return the amount to the user.
 
 ✅ Implemented: April 15, 2021
 

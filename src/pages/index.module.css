@@ -1,134 +1,377 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-@font-face {
-    font-family: "Suisse Intl";
-    src:
-        url("../fonts/SuisseIntl-Regular.woff2") format("woff2"),
-        url("../fonts/SuisseIntl-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+/* Full-bleed fresh-product-hero wash (canon gradient) behind the hero, ending on the page ground. */
+.home {
+  position: relative;
+  isolation: isolate;
+  background: var(--gc-gradient-hero) top / 100% 820px no-repeat, var(--gc-bg);
+  /* Start the wash under the navbar, which is see-through here (no docs sidebar to hide) */
+  margin-top: calc(-1 * var(--ifm-navbar-height));
+  padding-top: var(--ifm-navbar-height);
+}
+:global(body):has(.home) :global(nav.navbar) {
+  background-color: transparent;
 }
 
-@font-face {
-    font-family: "Suisse Intl";
-    src:
-        url("../fonts/SuisseIntl-Medium.woff2") format("woff2"),
-        url("../fonts/SuisseIntl-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5.5rem 2rem 0;
 }
 
-@font-face {
-    font-family: "Suisse Intl";
-    src:
-        url("../fonts/SuisseIntl-Semibold.woff2") format("woff2"),
-        url("../fonts/SuisseIntl-Semibold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+/* line the footer columns up with the page's content edge on the home page */
+:global(body):has(.page) :global(footer.footer) {
+  padding-left: 0;
+  padding-right: 0;
+}
+:global(body):has(.page) :global(footer.footer .container) {
+  max-width: 1280px;
+  padding: 0 2rem;
+}
+@media (max-width: 640px) {
+  :global(body):has(.page) :global(footer.footer .container) {
+    padding: 0 1rem;
+  }
 }
 
-.homePage {
-    background: linear-gradient(180deg, #3f2acd 0%, #151629 100%) !important;
+/* ---------- hero ---------- */
+.hero {
+  max-width: 1040px;
+  margin-bottom: 6rem;
 }
 
-.fixedLine {
-    position: sticky;
-    top: 0;
-    left: 3%;
-    width: 94%;
-    height: 1.5px;
-    background-color: white;
+.heroTitle {
+  font-family: var(--gc-font-display);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-variant-numeric: lining-nums;
+  margin: 0 0 1.75rem;
+  color: var(--gc-heading);
 }
 
-.homePage h1,
-.homePage h2,
-.homePage h3,
-.homePage h4,
-.homePage h5,
-.homePage span {
-    font-family: "Suisse Intl", sans-serif;
-    color: #f0ebde;
+/* Two deliberate, non-wrapping lines on desktop (the size scales down instead of
+   breaking into a third line); one flowing sentence when space is tight. */
+.heroLine {
+  display: block;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .heroLine {
+    white-space: normal;
+  }
 }
 
-.container {
-    color: white !important;
+.heroLede {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--gc-text-muted);
+  margin: 0 0 2.25rem;
+  max-width: 600px;
 }
 
-.announcementBarContent {
-    color: rgb(9, 30, 66) !important;
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.homePage h1 {
-    font-size: 2rem;
+/* Primary: ink pill, paper label, hover to Purple-800. Colour change only, no movement. */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 1.6rem;
+  border-radius: 999px;
+  background: var(--gc-cta);
+  color: var(--gc-cta-ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btnPrimary:hover {
+  background: var(--gc-cta-hover);
+  color: var(--gc-cta-ink);
+  text-decoration: none;
+}
+/* Secondary: a text link in Purple-800 with an arrow */
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gc-accent);
+  text-decoration: none;
+}
+.btnSecondary:hover {
+  color: var(--gc-accent-hover);
+  text-decoration: none;
 }
 
-.heroBanner {
-    padding: 3rem 0 2rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+/* ---------- getting started routes (three component bundles) ---------- */
+.sectionHead {
+  margin-bottom: 1.5rem;
+}
+.sectionSub {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--gc-text-muted);
+  margin: 0.4rem 0 0;
+  max-width: 620px;
 }
 
-.heroBanner img {
-    max-width: 550px;
+.pathwayGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-@media screen and (max-width: 1000px) {
-    .heroBanner {
-        padding: 2rem;
-    }
+.pathway {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius);
+  background: var(--gc-surface);
+  color: var(--gc-text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.pathway:hover {
+  border-color: var(--gc-border-strong);
+  box-shadow: var(--gc-shadow);
+  color: var(--gc-text);
+  text-decoration: none;
 }
 
-/* general flex column */
-.flexCol {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.pathwayTop {
+  display: flex;
+  align-items: center;
+}
+.pathwayIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gc-mint-soft);
+  color: var(--gc-text);
 }
 
-.copyField {
-    padding: 8px 14px 8px 14px;
-    border-radius: 10px;
-    border: 1px solid #f0ebde;
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 300px;
+.pathwayBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+}
+.pathwayTitle {
+  font-family: var(--gc-font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--gc-heading);
+}
+.pathwayAudience {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--gc-text-muted);
 }
 
-@media screen and (max-width: 320px) {
-    .copyField {
-        width: 100%;
-        min-width: 100%;
-    }
-
-    .homePage h1 {
-        font-size: 1.5rem;
-    }
-
-    .homePage h2 {
-        font-size: 1.2rem;
-    }
+.pathwayFoot {
+  display: flex;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gc-border);
+}
+.pathwayCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gc-accent);
 }
 
-.iconButton {
-    background-color: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ---------- feature cards ---------- */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.icon:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.2);
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius);
+  background: var(--gc-surface);
+  color: var(--gc-text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.featureCard:hover {
+  border-color: var(--gc-border-strong);
+  box-shadow: var(--gc-shadow);
+  color: var(--gc-text);
+  text-decoration: none;
+}
+
+.featureIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gc-mint-soft);
+  color: var(--gc-text);
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.featureTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gc-heading);
+}
+.featureBody {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--gc-text-muted);
+}
+
+/* ---------- sections ---------- */
+.section {
+  margin-bottom: 6rem;
+}
+.sectionTitle {
+  font-family: var(--gc-font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--gc-heading);
+  margin: 0 0 1.5rem;
+}
+.sectionHead .sectionTitle {
+  margin-bottom: 0.75rem;
+}
+/* ---------- use cases ---------- */
+.useCaseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.useCase {
+  border: 1px solid var(--gc-border);
+  border-radius: var(--gc-radius);
+  background: var(--gc-surface);
+  overflow: hidden;
+}
+.useCaseHead {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--gc-border);
+}
+.useCaseIcon {
+  color: var(--gc-text);
+  flex-shrink: 0;
+}
+.useCaseList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.useCaseList li + li {
+  border-top: 1px solid var(--gc-border);
+}
+.useCaseLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.8rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--gc-text-muted);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.useCaseLink svg {
+  color: var(--gc-text-faint);
+  flex-shrink: 0;
+}
+.useCaseLink:hover {
+  background: var(--gc-surface-2);
+  color: var(--gc-text);
+  text-decoration: none;
+}
+.useCaseLink:hover svg {
+  color: var(--gc-text);
+}
+
+.moreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gc-text);
+  text-decoration: none;
+}
+.moreLink:hover {
+  color: var(--gc-accent);
+  text-decoration: none;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .featureGrid,
+  .useCaseGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pathwayGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 2.5rem 1rem 3rem;
+  }
+  .hero {
+    margin-bottom: 2.5rem;
+  }
+  .heroLine {
+    display: inline;
+  }
+  .featureGrid,
+  .useCaseGrid,
+  .pathwayGrid {
+    grid-template-columns: 1fr;
+  }
+  .facts {
+    margin-bottom: 3rem;
+  }
+  .fact {
+    flex-basis: 50%;
+    border-bottom: 1px solid var(--gc-border);
+  }
+  .section {
+    margin-bottom: 3rem;
+  }
 }

@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+/* the row owns the spacing; the breadcrumbs keep theirs out of it */
+.row > nav {
+  margin-bottom: 0;
+  min-width: 0;
+}

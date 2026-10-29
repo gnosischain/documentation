@@ -1,71 +1,289 @@
-import React, { useEffect, useState } from 'react';
-import clsx from 'clsx';
+import React from 'react';
+import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-function HomepageHeader() {
-  const handleClickCopy = async () => {
-    try {
-      await navigator.clipboard.writeText('npx build-with-gnosis');
-    } catch (err) {
-      console.error(err);
-    }
-  }
+/* ------------------------------------------------------------------ */
+/* Icons: 20px, 1.5px stroke, currentColor                             */
+/* ------------------------------------------------------------------ */
+const Icon = {
+  Build: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="M12 3 3 7.5 12 12l9-4.5L12 3Z" /><path d="M3 12l9 4.5 9-4.5" /><path d="M3 16.5 12 21l9-4.5" />
+    </svg>
+  ),
+  Bridge: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="M4 7h16" /><path d="M4 17h16" /><path d="m15 3 4 4-4 4" /><path d="m9 13-4 4 4 4" />
+    </svg>
+  ),
+  Pay: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 10h18" /><path d="M7 15h3" />
+    </svg>
+  ),
+  Wallet: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="M3 7a2 2 0 0 1 2-2h13v4" /><rect x="3" y="7" width="18" height="12" rx="2" /><path d="M16 13h.01" />
+    </svg>
+  ),
+  Tools: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="m14.5 6.5 3 3" /><path d="M4 20l7.5-7.5" /><path d="M14 4.5a4 4 0 0 0 5.5 5.5L17 12.5 11.5 7 14 4.5Z" />
+    </svg>
+  ),
+  Arrow: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="M5 12h14" /><path d="m13 6 6 6-6 6" />
+    </svg>
+  ),
+  Chevron: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="m9 6 6 6-6 6" />
+    </svg>
+  ),
+  Terminal: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="m5 7 5 5-5 5" /><path d="M12 17h7" />
+    </svg>
+  ),
+  Server: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 10h16" /><path d="M4 15h16" />
+    </svg>
+  ),
+  Shield: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6L12 3Z" /><path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
+  Trending: (p) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}>
+      <path d="m3 17 6-6 4 4 8-9" /><path d="M15 6h6v6" />
+    </svg>
+  ),
+};
 
+/* ------------------------------------------------------------------ */
+/* Content                                                             */
+/* ------------------------------------------------------------------ */
+
+/* Gnosis EEZ: what changes at the fork, how it works, and how to be live at launch. */
+const EEZ_ROUTES = [
+  {
+    icon: Icon.Trending,
+    title: 'Now vs Gnosis EEZ',
+    audience:
+      'What stays the same and what changes at the fork.',
+    cta: 'Compare',
+    to: '/eez/gnosis-eez',
+  },
+  {
+    icon: Icon.Server,
+    title: 'How it works',
+    audience:
+      'The four steps behind every Gnosis EEZ block.',
+    cta: 'Read',
+    to: '/eez/how-it-works',
+  },
+  {
+    icon: Icon.Arrow,
+    title: 'Become a launch partner',
+    audience:
+      'Deploy on Gnosis Chain now and be live on Gnosis EEZ at launch.',
+    cta: 'Deploy',
+    to: '/launch-partner',
+  },
+];
+
+const FEATURES = [
+  {
+    icon: Icon.Build,
+    title: 'Build on Gnosis',
+    body: 'Deploy EVM contracts with Foundry or Hardhat and verify them on Gnosisscan.',
+    to: '/developers/quickstart',
+  },
+  {
+    icon: Icon.Bridge,
+    title: 'Bridge assets',
+    body: 'Move tokens and messages between Ethereum and Gnosis with the native bridges.',
+    to: '/bridges',
+  },
+  {
+    icon: Icon.Wallet,
+    title: 'Use smart accounts',
+    body: 'Account abstraction, custom signers and EIP-7702 with Safe as the custody layer.',
+    to: '/technicalguides/account-abstraction/',
+  },
+  {
+    icon: Icon.Pay,
+    title: 'Build with real money',
+    body: 'Stablecoins, e-money and self-custodial cards. Payments that settle in seconds.',
+    to: '/about/tokens',
+  },
+];
+
+const USE_CASES = [
+  {
+    icon: Icon.Terminal,
+    title: 'Deploy contracts',
+    links: [
+      ['Quickstart', '/developers/quickstart'],
+      ['Using Foundry', '/developers/dev-environment/foundry'],
+      ['Verify smart contracts', '/developers/Verify Smart Contracts/'],
+    ],
+  },
+  {
+    icon: Icon.Bridge,
+    title: 'Move assets across chains',
+    links: [
+      ['Use Gnosis Bridge', '/bridges/usebridges'],
+      ['Arbitrary Message Bridge', '/bridges/using-amb'],
+      ['Third-party bridges', '/bridges/thirdpartybridges'],
+    ],
+  },
+  {
+    icon: Icon.Server,
+    title: 'Read and index chain data',
+    links: [
+      ['RPC providers', '/tools/RPC Providers/'],
+      ['Indexers and analytics', '/tools/Indexer & Analytics/'],
+      ['Block explorers', '/tools/Blockchain Explorers/'],
+    ],
+  },
+  {
+    icon: Icon.Shield,
+    title: 'Run a validator',
+    links: [
+      ['The move to Gnosis EEZ', '/validators/eez-transition'],
+      ['Validator withdrawals', '/validators/withdrawals'],
+      ['Voluntary exit', '/validators/voluntary-exit'],
+    ],
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/* Sections                                                            */
+/* ------------------------------------------------------------------ */
+function Hero() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className='container margin-vert--lg' id="intro">
-        <img src='img/gnosis-chain.svg' alt='Gnosis Chain' />
-        <h1 className='margin-vert--md'>Documentation</h1>
-
-        {/* <div className={clsx('margin-top--xl', styles.flexCol)} >
-          <h2>Deploy a Dapp in 5 Minutes</h2>
-          <span className={styles.copyField}>
-            npx build-with-gnosis
-            <button className={styles.iconButton} onClick={handleClickCopy}>
-              <img className={styles.icon} src='img/copy-icon.svg' alt='Copy' />
-            </button>
-          </span>
-        </div> */}
+    <section className={styles.hero}>
+      <h1 className={styles.heroTitle}>
+        <span className={styles.heroLine}>Deploy now on Gnosis Chain.</span>{' '}
+        <span className={styles.heroLine}>Launch on Gnosis EEZ.</span>
+      </h1>
+      <p className={styles.heroLede}>
+        Gnosis EEZ is the first instance of the Ethereum Economic Zone, and will have synchronous
+        composability with mainnet.
+      </p>
+      <div className={styles.heroActions}>
+        <Link className={styles.btnPrimary} to="/launch-partner">
+          Become a launch partner
+        </Link>
+        <Link className={styles.btnSecondary} to="/developers/quickstart">
+          Start building <Icon.Arrow width="16" height="16" />
+        </Link>
       </div>
-    </header>
+    </section>
+  );
+}
+
+function RouteCards({routes}) {
+  return (
+    <div className={styles.pathwayGrid}>
+      {routes.map(({icon: I, title, audience, cta, to}) => (
+        <Link key={title} className={styles.pathway} to={to}>
+          <span className={styles.pathwayTop}>
+            <span className={styles.pathwayIcon}>
+              <I width="22" height="22" />
+            </span>
+          </span>
+          <span className={styles.pathwayBody}>
+            <span className={styles.pathwayTitle}>{title}</span>
+            <span className={styles.pathwayAudience}>{audience}</span>
+          </span>
+          <span className={styles.pathwayFoot}>
+            <span className={styles.pathwayCta}>
+              {cta} <Icon.Arrow width="14" height="14" />
+            </span>
+          </span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+function Eez() {
+  return (
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>Get started</h2>
+      <RouteCards routes={EEZ_ROUTES} />
+    </section>
+  );
+}
+
+function Features() {
+  return (
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>Build</h2>
+      <div className={styles.featureGrid}>
+        {FEATURES.map(({icon: I, title, body, to}) => (
+          <Link key={title} className={styles.featureCard} to={to}>
+            <span className={styles.featureIcon}>
+              <I width="22" height="22" />
+            </span>
+            <span className={styles.featureText}>
+              <span className={styles.featureTitle}>{title}</span>
+              <span className={styles.featureBody}>{body}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function UseCases() {
+  return (
+    <section className={styles.section}>
+      <h2 className={styles.sectionTitle}>Common workflows</h2>
+      <div className={styles.useCaseGrid}>
+        {USE_CASES.map(({icon: I, title, links}) => (
+          <div key={title} className={styles.useCase}>
+            <div className={styles.useCaseHead}>
+              <I width="18" height="18" className={styles.useCaseIcon} />
+              <span>{title}</span>
+            </div>
+            <ul className={styles.useCaseList}>
+              {links.map(([label, to]) => (
+                <li key={to}>
+                  <Link to={to} className={styles.useCaseLink}>
+                    <span>{label}</span>
+                    <Icon.Chevron width="16" height="16" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext()
-  const [linePosition, setLinePosition] = useState(0)
-
-  useEffect(() => {
-    const updateNavbarPosition = () => {
-      const navbar = document.querySelector('.navbar')
-      if (navbar) {
-        const rect = navbar.getBoundingClientRect()
-        setLinePosition(rect.bottom)
-      }
-    }
-
-    window.addEventListener('scroll', updateNavbarPosition)
-
-    updateNavbarPosition()
-
-    return () => {
-      window.removeEventListener('scroll', updateNavbarPosition)
-    }
-  }, [])
-
+  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description={`${siteConfig.tagline}`}
-    >
-      <div className={clsx(styles.homePage)} >
-        <div className={clsx(styles.fixedLine)} style={{top: linePosition}}></div>
-        <HomepageHeader />
-        <HomepageFeatures />
-      </div>
+    <Layout title={siteConfig.title} description={siteConfig.tagline}>
+      <main className={styles.home}>
+        <div className={styles.page}>
+          <Hero />
+          <Eez />
+          <Features />
+          <UseCases />
+        </div>
+      </main>
     </Layout>
   );
 }

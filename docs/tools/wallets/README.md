@@ -13,24 +13,27 @@ Do you own research while selecting your wallet, keep your seed and funds safely
 
 ## Software wallets
 
+- [1inch Wallet](https://1inch.io/wallet/)
 - [Alpha Wallet](https://alphawallet.com/asset/the-best-wallet-for-xdai/)
 - [Ambire Wallet](https://www.ambire.com/)
 - [Coinbase Wallet](https://www.coinbase.com/wallet)
-- [DEX Wallet](https://www.dexwallet.io/)
 - [Enkrypt](https://www.enkrypt.com/?mtm_campaign=Gnosis%20Chain%20Wallet%20Wiki&mtm_kwd=Wiki)
+- [FoxWallet](https://foxwallet.com/)
 - [Frame](https://frame.sh/)
+- [FxWallet](https://www.fxwallet.com/)
+- [Gem Wallet](https://gemwallet.com/)
+- [imToken](https://token.im/)
 - [Mt Pelerin](https://www.mtpelerin.com/bridge-wallet)
 - [MetaMask](/tools/wallets/metamask)
-- [Minerva Wallet](https://minerva.digital/)
-- [MyCrypto](https://app.mycrypto.com/)
 - [Nabox Wallet](https://nabox.io/)
 - [O3Labs](https://o3.network/)
 - [Pillar Wallet](https://www.pillar.fi/)
 - [Poketto Cash](https://poketto.cash/)
-- [Portis Wallet](https://wallet.portis.io/)
 - [Rabby Wallet](https://rabby.io/)
+- [Safe](/tools/wallets/safe)
 - [TokenPocket](https://tokenpocket-gm.medium.com/how-to-add-xdai-chain-through-adding-custom-network-72d95597b017)
-- [Wallet3](https://wallet3.io/)
+- [Wigwam Wallet](https://wigwam.app/)
+- [Zerion](https://zerion.io/)
 
 ## Hardware Wallets
 
