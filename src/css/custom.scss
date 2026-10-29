@@ -302,16 +302,22 @@ pre {
   width: 39%;
 }
 
-/* Table standard: every content table runs the full width of the column, with a
-   auto layout so columns size to their content — short action/link columns hug
-   their text instead of being stretched to an even share, and the prose column
-   takes the slack. First column gets a sensible width hint. One padding, one
-   border, a tinted header, aligned figures. */
+/* Table standard: auto layout so columns size to their content — short
+   action/link columns hug their text, the prose column takes the slack. Cell
+   content is not force-broken (so long numbers and headers never shred into a
+   vertical stack); a wide table instead overflows its wrapper and scrolls
+   horizontally. One padding, one border, a tinted header, aligned figures. */
+.theme-doc-markdown.markdown .table-wrapper {
+  margin: 1.25rem 0 2rem;
+  overflow-x: auto;
+  /* round the scroll container so the table's corners stay clipped on overflow */
+  border-radius: var(--gc-radius-sm);
+}
 .theme-doc-markdown.markdown table {
   display: table;
   width: 100%;
   table-layout: auto;
-  margin: 1.25rem 0 2rem;
+  margin: 0;
   border: 1px solid var(--gc-border);
   border-radius: var(--gc-radius-sm);
   border-collapse: separate;
@@ -325,15 +331,10 @@ pre {
   border: 0;
   border-bottom: 1px solid var(--gc-border);
   vertical-align: top;
-  overflow-wrap: anywhere;
   text-align: left;
 }
 .theme-doc-markdown.markdown table tr:last-child td {
   border-bottom: 0;
-}
-.theme-doc-markdown.markdown table th:first-child,
-.theme-doc-markdown.markdown table td:first-child {
-  width: 26%;
 }
 .theme-doc-markdown.markdown table thead th {
   background: var(--gc-surface-2);
