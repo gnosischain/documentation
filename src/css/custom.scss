@@ -1307,17 +1307,21 @@ html[data-theme='dark'] .install-tabs .tabs__item:first-child:hover {
   --ifm-button-border-color: var(--gc-cta-hover);
   color: var(--gc-cta-ink);
 }
-/* Secondary: a text link in the link colour. Matches Infima's own
-   `.button--secondary:not(.button--outline)` specificity so its grey text does not win. */
+/* Secondary: an outlined ink pill so it reads as a button beside the primary.
+   Transparent with an ink border and ink label; fills to ink on hover. Matches
+   Infima's own `.button--secondary:not(.button--outline)` specificity so its
+   grey default does not win. */
 .button.button--secondary:not(.button--outline) {
   --ifm-button-background-color: transparent;
-  --ifm-button-border-color: transparent;
-  --ifm-button-color: var(--gc-accent);
-  color: var(--gc-accent);
+  --ifm-button-border-color: var(--gc-cta);
+  --ifm-button-color: var(--gc-cta);
+  color: var(--gc-cta);
 }
 .button.button--secondary:not(.button--outline):hover {
-  --ifm-button-background-color: var(--gc-accent-soft);
-  color: var(--gc-accent-hover);
+  --ifm-button-background-color: var(--gc-cta);
+  --ifm-button-border-color: var(--gc-cta);
+  --ifm-button-color: var(--gc-cta-ink);
+  color: var(--gc-cta-ink);
 }
 
 /* Launch partner CTA row */
