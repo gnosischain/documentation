@@ -302,12 +302,14 @@ pre {
 }
 
 /* Table standard: every content table runs the full width of the column, with a
-   fixed layout so columns are predictable — first column 26%, the rest split
-   evenly. One padding, one border, a tinted header, aligned figures. */
+   auto layout so columns size to their content — short action/link columns hug
+   their text instead of being stretched to an even share, and the prose column
+   takes the slack. First column gets a sensible width hint. One padding, one
+   border, a tinted header, aligned figures. */
 .theme-doc-markdown.markdown table {
   display: table;
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
   margin: 1.25rem 0 2rem;
   border: 1px solid var(--gc-border);
   border-radius: var(--gc-radius-sm);
@@ -1170,6 +1172,12 @@ footer.footer--dark .footer__title {
 /* ---------- external links in body copy ---------- */
 /* Any http(s) link leaving the docs gets a trailing arrow glyph (and opens in a
    new tab, set on the element). Keeps the glyph and label on the same line. */
+/* In table cells, keep the whole external link (and its arrow) on one line so
+   the glyph never orphans; prose links still wrap long URLs. */
+.theme-doc-markdown.markdown td .external-link,
+.theme-doc-markdown.markdown th .external-link {
+  white-space: nowrap;
+}
 .external-link .external-link-icon {
   display: inline-block;
   margin-left: 0.18em;
