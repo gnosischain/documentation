@@ -37,6 +37,8 @@ Managing a validator before activation works as it always has:
 - [Validator withdrawals](/validators/withdrawals): withdrawal credentials, enabling withdrawals (`0x00` to `0x01`), switching to compounding (`0x01` to `0x02`) and claiming your GNO.
 - [Voluntary exit](/validators/voluntary-exit): stop validating and withdraw your full balance.
 
+The client setup, key generation, deposit and monitoring guides for running a node or validator until then are still available under [Run a node](/node).
+
 ## At activation
 
 - **The validator set retires.** Block production moves to the composer, and blocks are proven and settled on Ethereum.

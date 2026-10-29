@@ -16,7 +16,6 @@ bridge instructions in archived pages have not been maintained and should not be
 | [Embed](./Embed/) | The Embed landing page and the three fintech component bundles. The 0-1 guides moved to Developer guides | October 2026 |
 | [Updates](./Updates/) | The updates blog (announcements, core devs call notes, weekly recaps) is no longer published | September 2026 |
 | [FAQ](./FAQ/) | Node FAQs and the Validators FAQ; the remaining FAQs live at `/faq` | September 2026 |
-| [Node](./Node/) | The whole "Run a node" section — manual client setup, validator keys, deposits, withdrawals, monitoring, node tooling | September 2026 |
 | [Optimism](./Optimism/) | Optimism on Gnosis (chain ID 300) was deprecated | March 2023 |
 | [Truffle](./Truffle/) | Truffle was sunset by Consensys | 2023 |
 | [Hashi](./Hashi/) | Hashi is no longer part of the Gnosis Chain stack | 2025 |

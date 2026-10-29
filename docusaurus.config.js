@@ -48,6 +48,24 @@ const config = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           showLastUpdateTime: true,
+          // Withdrawals and voluntary exit live in the Validators section; link them from
+          // Run a node > Management too, where node operators used to find them
+          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
+            const items = await defaultSidebarItemsGenerator(args);
+            if (args.item.dirName !== "node") return items;
+            return items.map((item) =>
+              item.type === "category" && item.label === "Management"
+                ? {
+                    ...item,
+                    items: [
+                      ...item.items,
+                      { type: "ref", id: "validators/withdrawals/withdrawals", label: "Validator withdrawals" },
+                      { type: "ref", id: "validators/voluntary-exit", label: "Voluntary exit" },
+                    ],
+                  }
+                : item,
+            );
+          },
         },
         // Updates blog archived to /archives/Updates (not published).
         blog: false,
@@ -263,54 +281,6 @@ const config = {
           {
             to: "/validators/voluntary-exit",
             from: "/node/management/voluntary-exit",
-          },
-          // Run a node archived to /archives/Node; the section is no longer published.
-          // Node and validator readers land on the runbook for the move to Gnosis EEZ.
-          {
-            to: "/validators/eez-transition",
-            from: [
-              "/node",
-              "/node/architecture",
-              "/node/rewards-penalties",
-              "/node/Node Tools/dappnode",
-              "/node/Node Tools/eth-docker",
-              "/node/Node Tools/sedge",
-              "/node/Node Tools/stereum",
-              "/node/management/migrating-validator",
-              "/node/management/monitoring-node",
-              "/node/management/monitoring-validators",
-              "/node/manual",
-              "/node/manual/configure-server",
-              "/node/manual/beacon/lighthouse",
-              "/node/manual/beacon/lodestar",
-              "/node/manual/beacon/nimbus",
-              "/node/manual/beacon/teku",
-              "/node/manual/execution/erigon",
-              "/node/manual/execution/geth",
-              "/node/manual/execution/nethermind",
-              "/node/manual/execution/reth",
-              "/node/manual/validator/deposit",
-              "/node/manual/validator/verify",
-              "/node/manual/validator/generate-keys",
-              "/node/manual/validator/generate-keys/cli",
-              "/node/manual/validator/generate-keys/wagyu",
-              "/node/manual/validator/Run Client/lighthouse",
-              "/node/manual/validator/Run Client/lodestar",
-              "/node/manual/validator/Run Client/nimbus",
-              "/node/manual/validator/Run Client/teku",
-              "/node/participate-validator/liquid-staking",
-              "/node/participate-validator/swarm",
-              "/node/participate-validator/swarm/a-quickstart-swarm",
-              "/node/participate-validator/swarm/b-docker-swarm",
-              "/node/participate-validator/swarm/c-dappnode-swarm",
-              // Generated category pages for the archived node sections
-              "/category/management",
-              "/category/node-tools",
-              "/category/participate-as-a-validator",
-              "/category/step--2---run-execution-client",
-              "/category/step--3---run-consensus-client",
-              "/category/step--4---run-validator",
-            ],
           },
           // Bridges FAQs merged into the master FAQ as its Bridging subsection
           {
