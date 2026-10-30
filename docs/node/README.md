@@ -1,16 +1,9 @@
 ---
 title: Run a Node
-description: The Run a node landing page for Gnosis Chain - solo staking, minimum stake, and how Gnosis compares to Ethereum. Archived - previously published at /node.
-keywords: [node, validator, staking, solo staker, archived]
+sidebar_position : 1
 ---
 
-# Run a Node (Archived)
-
-:::danger Archived
-This page is **no longer published**. It was served at `/node`, which now redirects to the
-homepage. Kept for historical reference only; the figures and client guidance below have not been
-maintained. See [archives/Node/README.md](./README.md) for the rest of the archived section.
-:::
+# Run a Node
 
 <img width="1480" height="520" alt="Screenshot 2025-10-22 at 15 15 33" src="https://github.com/user-attachments/assets/3d535d6f-43ef-4282-80d9-e3fad2bb1801" />
 
