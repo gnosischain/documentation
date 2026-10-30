@@ -109,16 +109,26 @@ export default async function llmsTxt(context, options) {
         `> **Gnosis Chain is moving to Gnosis EEZ.** These guides cover running a node and a validator on Gnosis Chain as it runs today, and stay valid until the fork. ` +
         `At activation the validator set retires and nodes keep only an execution client. See [the move to Gnosis EEZ](${page("validators/eez-transition")}). ` +
         `Managing an existing validator? Go to [Validator withdrawals](${page("validators/withdrawals")}) or [Voluntary exit](${page("validators/voluntary-exit")}).\n\n`;
+      const pages = new Map();
       for (const file of await listMarkdown(props.outDir)) {
-        const md = fixLinks(await fs.readFile(file, "utf8"), siteRoot);
         const rel = path.relative(props.outDir, file);
         const isNodePage = rel === "node.md" || rel.startsWith(`node${path.sep}`);
-        await fs.writeFile(file, directive + (isNodePage ? nodeNotice : "") + md);
+        const md = (isNodePage ? nodeNotice : "") + fixLinks(await fs.readFile(file, "utf8"), siteRoot);
+        pages.set(new URL(baseUrl + rel.split(path.sep).join("/"), url).href, md);
+        await fs.writeFile(file, directive + md);
       }
-      for (const name of ["llms.txt", "llms-full.txt"]) {
-        const file = path.join(props.outDir, name);
-        await fs.writeFile(file, fixLinks(await fs.readFile(file, "utf8"), siteRoot));
-      }
+      const llmsFile = path.join(props.outDir, "llms.txt");
+      const llms = fixLinks(await fs.readFile(llmsFile, "utf8"), siteRoot);
+      await fs.writeFile(llmsFile, llms);
+
+      // The plugin builds llms-full.txt from the .md files before the notice above is added,
+      // so rebuild it from the final pages: the index, then every page in index order.
+      const listed = [...llms.matchAll(/^- \[[^\]]*\]\(([^)\s]+\.md)\)/gm)].map((m) => m[1]);
+      const root = new URL(`${baseUrl}index.md`, url).href;
+      const missing = listed.filter((u) => u !== root && !pages.has(u));
+      if (missing.length) throw new Error(`llms-full.txt: no .md file for ${missing.join(", ")}`);
+      const body = listed.filter((u) => u !== root).map((u) => `${pages.get(u)}\n\n---\n\n`).join("");
+      await fs.writeFile(path.join(props.outDir, "llms-full.txt"), `${llms}\n\n---\n\n# Full Documentation Content\n\n${body}`);
     },
   };
 }
