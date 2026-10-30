@@ -22,8 +22,10 @@ Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state, so
 
 - **Be first to reach mainnet from an L2.** Your contracts will call Ethereum mainnet in the same transaction, with no bridge and no wrapped assets. Mainnet liquidity, collateral and settlement, as if they were local.
 - **Hands-on technical support.** Work with the Gnosis engineering team as a design partner, from the Chiado testnet fork through to launch.
-- **Build hybrid apps.** Keep settlement and liquidity on Ethereum, and run your engines on Gnosis EEZ. Some apps already work this way: [Derive](https://www.derive.xyz/) settles on Ethereum and runs its options and margin engine on an L2. Over the next six months we are running hybrid-app exercises with the Gnosis engineering team to push what is possible, and we want existing Ethereum protocols to take part.
+- **Build hybrid apps.** Keep settlement and liquidity on Ethereum, and run your engines on Gnosis EEZ. Over the next six months we are running hybrid-app exercises with the Gnosis engineering team to push what is possible, and we want existing Ethereum protocols to take part.
 - **The whole zone, in reach.** As other rollups and apps join the Ethereum Economic Zone, your app can reach them too, with no further integration work.
+
+A deployed contract counts when it is live on Gnosis Chain mainnet and its source is verified on Gnosisscan. Contracts on the Chiado testnet do not count, because they do not carry over to Gnosis EEZ.
 
 ## What you can build
 

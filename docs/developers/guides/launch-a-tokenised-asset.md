@@ -7,7 +7,11 @@ keywords: [tokenisation, rwa, tokenised asset, erc20, cap, foundry, backed, secu
 
 # Launch a tokenised asset
 
-**Job:** tokenise an asset. **Time:** about 45 minutes. **Chain:** Chiado testnet.
+**Job:** tokenise an asset.
+
+**Time:** about 45 minutes.
+
+**Chain:** Chiado testnet.
 
 **Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 

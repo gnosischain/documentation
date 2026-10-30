@@ -1,6 +1,6 @@
 ---
-sidebar_position: 7
 title: Glossary
+slug: /knowledge-hub/glossary
 description: Plain-language definitions of the terms used across the Gnosis EEZ pages, from attestation and composer to rollup, settlement and ZK proof.
 keywords: [gnosis eez glossary, eez terms, rollup, settlement, sequencer, composer, proof signer, attestation, synchronous call, zk proof, tee, finality]
 ---

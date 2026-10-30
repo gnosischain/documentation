@@ -20,6 +20,14 @@ const config = {
       async: true,
     },
   ],
+  // Inter is the canon Gnosis UI/body sans (typography.json). Kept all-sans per
+  // the docs' own type direction; no Playfair serif display face.
+  stylesheets: [
+    {
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+      rel: "stylesheet",
+    },
+  ],
   customFields: {
     POSTHOG_KEY: process.env.POSTHOG_KEY,
   },
@@ -93,7 +101,8 @@ const config = {
       },
       docs: {
         sidebar: {
-          hideable: true,
+          // Sidebar always visible: no collapse control (also hidden in custom.scss).
+          hideable: false,
         },
       },
       navbar: {
@@ -138,8 +147,10 @@ const config = {
             sidebarId: "knowledgeHub",
             label: "Knowledge hub",
           },
-          // No right-hand links: Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js),
-          // and the build site is in the DOCS switcher beside the logo.
+          // No marketing CTA in the docs header: it is kept clean and functional so
+          // the docs read as a tool, not a second marketing page. The launch-partner
+          // call lives in the announcement bar. Faucet, Bridge and Ecosystem live in
+          // the left sidebars; the build/bridge sites are in the DOCS switcher.
         ],
       },
       footer: {
@@ -182,7 +193,7 @@ const config = {
               { label: "Telegram", href: "https://t.me/gnosischain" },
               { label: "X", href: "https://twitter.com/gnosischain" },
               { label: "GitHub", href: "https://github.com/gnosischain" },
-              { label: "Ecosystem", href: "https://build.gnosischain.com/" },
+              { label: "Build", href: "https://build.gnosischain.com/" },
             ],
           },
           {
@@ -238,6 +249,11 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Glossary moved from the Gnosis EEZ section into the Knowledge hub
+          {
+            to: "/knowledge-hub/glossary",
+            from: "/eez/glossary",
+          },
           // Launch partner moved out of the Gnosis EEZ section to its own page
           {
             to: "/launch-partner",
@@ -323,17 +339,27 @@ const config = {
       },
     ],
     [
-      "docusaurus-plugin-generate-llms-txt",
+      // Agent-readable output: llms.txt (index), llms-full.txt (all content) and a .md copy of
+      // every page, which the "Copy page" menu next to each doc title also uses.
+      require.resolve("./src/plugins/llms-txt.mjs"),
       {
-        outputFile: "llms.txt", // defaults to llms.txt if not specified
-      },
-    ],
-    [
-      // A .md copy of every page, used by the "Copy page" menu next to each doc title.
-      require.resolve("./src/plugins/page-markdown.mjs"),
-      {
+        siteTitle: "Gnosis Chain Docs",
+        siteDescription:
+          "Documentation for Gnosis Chain and Gnosis EEZ. Gnosis Chain is an EVM network (chain ID 100) with 5-second blocks and xDai, a stablecoin, as gas. Gnosis EEZ is the first instance of the Ethereum Economic Zone: Gnosis Chain will be hard-forked onto it, with contracts, balances and addresses carried over unchanged.",
+        // One section per top-level folder; depth 2 gave every single page its own heading.
+        depth: 1,
+        optionalLinks: [
+          { title: "EEZ protocol docs", url: "https://docs.eez.io/", description: "The Ethereum Economic Zone specification" },
+          { title: "EEZ demos", url: "https://build.eez.io/", description: "Hands-on walkthroughs of a synchronous cross-chain call" },
+        ],
+        // Same order as the navbar tabs: Gnosis EEZ first, since that is where an agent should begin.
+        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/knowledge-hub/**", "/tools/**", "/technicalguides/**", "/validators/**", "/node/**", "/faq/**"],
         content: {
+          enableLlmsFullTxt: true,
           includePages: true,
+          // Sidebar category pages are only lists of links to pages already in the index.
+          includeGeneratedIndex: false,
+          // Full URLs, so every link resolves from wherever an agent read the file.
           relativePaths: false,
           excludeRoutes: ["/search", "/live-samples/**"],
         },
