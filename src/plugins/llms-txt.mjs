@@ -102,9 +102,18 @@ export default async function llmsTxt(context, options) {
     async postBuild(props) {
       await inner.postBuild(props);
       const directive = `> For the complete documentation index, see [llms.txt](${indexUrl})\n\n`;
+      // The Run a node pages show a transition notice from a DocItem wrapper, outside the
+      // content the plugin converts; repeat it here so agents know the guides end at the fork.
+      const page = (p) => new URL(`${baseUrl}${p}.md`, url).href;
+      const nodeNotice =
+        `> **Gnosis Chain is moving to Gnosis EEZ.** These guides cover running a node and a validator on Gnosis Chain as it runs today, and stay valid until the fork. ` +
+        `At activation the validator set retires and nodes keep only an execution client. See [the move to Gnosis EEZ](${page("validators/eez-transition")}). ` +
+        `Managing an existing validator? Go to [Validator withdrawals](${page("validators/withdrawals")}) or [Voluntary exit](${page("validators/voluntary-exit")}).\n\n`;
       for (const file of await listMarkdown(props.outDir)) {
         const md = fixLinks(await fs.readFile(file, "utf8"), siteRoot);
-        await fs.writeFile(file, directive + md);
+        const rel = path.relative(props.outDir, file);
+        const isNodePage = rel === "node.md" || rel.startsWith(`node${path.sep}`);
+        await fs.writeFile(file, directive + (isNodePage ? nodeNotice : "") + md);
       }
       for (const name of ["llms.txt", "llms-full.txt"]) {
         const file = path.join(props.outDir, name);
