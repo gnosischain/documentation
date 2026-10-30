@@ -7,8 +7,8 @@ const SITES = [
   {label: 'Docs', href: 'https://docs.gnosischain.com', current: true},
   // The Gnosis Chain home on gnosis.io; external, opens in a new tab
   {label: 'Home', href: 'https://www.gnosis.io/chain', external: true},
-  // The ecosystem page (gnosis.io calls it "Ecosystem"); external, opens in a new tab
-  {label: 'Ecosystem', href: 'https://www.gnosis.io/chain/ecosystem', external: true},
+  // The ecosystem section of the build site; external, opens in a new tab
+  {label: 'Ecosystem', href: 'https://build.gnosischain.com/ecosystem', external: true},
   {label: 'Build', href: 'https://build.gnosischain.com/', external: true},
   {label: 'Bridge', href: 'https://bridge.gnosischain.com/', external: true},
   // The docs page that lists every faucet (mainnet and Chiado), not one faucet site: stays in-site
