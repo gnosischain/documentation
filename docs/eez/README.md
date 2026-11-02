@@ -8,7 +8,7 @@ keywords: [ethereum economic zone, eez, gnosis eez, rollup, synchronous composab
 
 # What is Gnosis EEZ
 
-The Ethereum Economic Zone (EEZ) is a neutral [rollup](/eez/glossary#rollup) framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. Rollups built on it [settle](/eez/glossary#settlement) to Ethereum and are designed to call Ethereum mainnet contracts in the same transaction, with no bridge in the middle. The framework is not a Gnosis product.
+The Ethereum Economic Zone (EEZ) is a neutral [rollup](/knowledge-hub/glossary#rollup) framework, co-led by Gnosis and Zisk and co-funded by the Ethereum Foundation. Rollups built on it [settle](/knowledge-hub/glossary#settlement) to Ethereum and are designed to call Ethereum mainnet contracts in the same transaction, with no bridge in the middle. The framework is not a Gnosis product.
 
 Gnosis EEZ is its first instance, operated by Gnosis. In the future, the state of Gnosis Chain will be hard-forked onto it. Contracts, balances, addresses and the xDai gas token carry over unchanged, so nothing deployed on Gnosis Chain today needs to be redeployed.
 
@@ -53,8 +53,8 @@ The core contracts are an early-stage implementation that has not been audited. 
         url="/eez/how-it-works"
     />
     <Card
-        title="EEZ demos and protocol docs"
-        subtitle="Hands-on walkthroughs of a synchronous call, and the full protocol documentation."
+        title="EEZ References & Demos"
+        subtitle="Hands-on demos, the protocol documentation and the source code."
         url="/eez/demos-and-docs"
     />
     <Card

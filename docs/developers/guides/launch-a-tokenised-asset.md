@@ -7,7 +7,11 @@ keywords: [tokenisation, rwa, tokenised asset, erc20, cap, foundry, backed, secu
 
 # Launch a tokenised asset
 
-**Job:** tokenise an asset. **Time:** about 45 minutes. **Chain:** Chiado testnet.
+**Job:** tokenise an asset.
+
+**Time:** about 45 minutes.
+
+**Chain:** Chiado testnet.
 
 **Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 
@@ -21,7 +25,7 @@ The contract below is the ledger. It is not the product.
 
 A real tokenised asset needs a legal structure that makes the token a claim on the asset: a special purpose vehicle, a custodian, a prospectus or an exemption from one, and a transfer agent. Without that, holders own a token that references an asset they have no enforceable right to. Which structure applies depends on the asset, the jurisdiction, and who you sell to, and getting it wrong is a securities matter rather than an engineering one.
 
-The RWA projects in the [ecosystem directory](https://build.gnosischain.com/) have done this work. Backed issues tokens tracking listed securities against a custodian; that arrangement, not its Solidity, is what makes the token meaningful.
+The RWA projects in the [ecosystem directory](https://www.gnosis.io/chain/ecosystem) have done this work. Backed issues tokens tracking listed securities against a custodian; that arrangement, not its Solidity, is what makes the token meaningful.
 
 Build the contract to understand the mechanics. Get advice before you issue anything to anyone.
 
@@ -284,4 +288,4 @@ What changes is everything around it. Before issuing on mainnet you need the leg
 
 A capped, verified token on Chiado with an immutable supply limit, an on-chain reference to its documentation, and issuance controls you have tested against the owner. That is a sound ledger.
 
-The claim it represents is a legal artefact, not a Solidity one. Look at how the RWA projects in the [ecosystem directory](https://build.gnosischain.com/) have structured theirs before going further.
+The claim it represents is a legal artefact, not a Solidity one. Look at how the RWA projects in the [ecosystem directory](https://www.gnosis.io/chain/ecosystem) have structured theirs before going further.

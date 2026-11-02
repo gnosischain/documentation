@@ -22,8 +22,10 @@ Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state, so
 
 - **Be first to reach mainnet from an L2.** Your contracts will call Ethereum mainnet in the same transaction, with no bridge and no wrapped assets. Mainnet liquidity, collateral and settlement, as if they were local.
 - **Hands-on technical support.** Work with the Gnosis engineering team as a design partner, from the Chiado testnet fork through to launch.
-- **Build hybrid apps.** Keep settlement and liquidity on Ethereum, and run your engines on Gnosis EEZ. Some apps already work this way: [Derive](https://www.derive.xyz/) settles on Ethereum and runs its options and margin engine on an L2. Over the next six months we are running hybrid-app exercises with the Gnosis engineering team to push what is possible, and we want existing Ethereum protocols to take part.
+- **Build hybrid apps.** Keep settlement and liquidity on Ethereum, and run your engines on Gnosis EEZ. Over the next six months we are running hybrid-app exercises with the Gnosis engineering team to push what is possible, and we want existing Ethereum protocols to take part.
 - **The whole zone, in reach.** As other rollups and apps join the Ethereum Economic Zone, your app can reach them too, with no further integration work.
+
+A deployed contract counts when it is live on Gnosis Chain mainnet and its source is verified on Gnosisscan. Contracts on the Chiado testnet do not count, because they do not carry over to Gnosis EEZ.
 
 ## What you can build
 
@@ -38,7 +40,7 @@ Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state, so
 ## How to join
 
 1. **Deploy on Gnosis Chain mainnet.** [Deploy now](/launch-partner/deploy-now) takes you from an empty directory to a verified contract on mainnet in about 45 minutes. That deployment is what carries over at the fork.
-2. **Register your contracts** in the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked on-chain before they are listed.
+2. **Register your contracts** in the [ecosystem directory](https://www.gnosis.io/chain/ecosystem). Addresses are checked on-chain before they are listed.
 3. **Book a call** with the [ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership and get access to the Chiado testnet fork when it opens. You can also reach the team on [Discord](https://discord.gg/gnosis).
 
 There is no fee and no token allocation.

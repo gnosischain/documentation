@@ -7,7 +7,11 @@ keywords: [foundry, forge, deploy, verify, blockscout, chiado, solidity]
 
 # Deploy your first contract
 
-**Job:** go from nothing to a verified contract on Gnosis. **Time:** about 30 minutes. **Chain:** Chiado testnet.
+**Job:** go from nothing to a verified contract on Gnosis.
+
+**Time:** about 30 minutes.
+
+**Chain:** Chiado testnet.
 
 **Prerequisites:** a terminal on macOS or Linux, and Git installed.
 

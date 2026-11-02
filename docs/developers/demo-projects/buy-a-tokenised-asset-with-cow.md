@@ -2,16 +2,20 @@
 sidebar_position: 1
 title: Buy a tokenised asset with CoW Swap
 description: Build a script that buys a yield-bearing tokenised asset on Gnosis through CoW Protocol, then point the same code at Ethereum mainnet without changing the contract addresses. About 40 minutes.
-keywords: [cow protocol, cow swap, tokenised asset, sdai, gnosis eez, eip-712, viem, ethereum mainnet, intents]
+keywords: [cow protocol, cow swap, tokenised asset, sdai, eip-712, viem, ethereum mainnet, intents]
 ---
 
 # Buy a tokenised asset with CoW Swap
 
-**Job:** buy a tokenised asset from your own app, and reach Ethereum mainnet with the same code. **Time:** about 40 minutes. **Chain:** Gnosis mainnet.
+**Job:** buy a tokenised asset from your own app, and reach Ethereum mainnet with the same code.
+
+**Time:** about 40 minutes.
+
+**Chain:** Gnosis mainnet.
 
 **Prerequisites:** Node.js 20 or later, and an account on Gnosis holding a small amount of xDai for gas plus at least 1 WXDAI to spend.
 
-This is the shortest honest demonstration of what the Ethereum Economic Zone gives you. You will write about eighty lines that buy a yield-bearing tokenised asset, without running a solver, quoting engine or price oracle of your own. Then you will change three constants and the same script trades on Ethereum mainnet, because the protocol you are calling lives at the same address on both chains.
+This guide shows how much a short script can do when it calls live protocols instead of deploying your own. You will write about eighty lines that buy a yield-bearing tokenised asset, without running a solver, quoting engine or price oracle of your own. Then you will change three constants and the same script trades on Ethereum mainnet, because the protocol you are calling lives at the same address on both chains.
 
 ## Read this before you start
 
@@ -372,7 +376,7 @@ export const config = {
 
 Swap the import in `buy.js` and change `gnosis` to `mainnet` from `viem/chains`. Everything else, the EIP-712 types, the fee handling, the appData hash, the polling loop, stays as it is. The only thing your signature notices is the chain ID inside the domain.
 
-That is what "tap into Ethereum mainnet" means concretely. You develop against Gnosis, then run the identical integration against mainnet liquidity when you need it. Assets move between the two over the [Gnosis Bridge](/bridges), so a position opened on one side is not stranded there.
+In practice, you develop against Gnosis Chain, then run the identical integration against mainnet liquidity when you need it. Assets move between the two over the [Gnosis Bridge](/bridges), so a position opened on one side is not stranded there.
 
 ### One thing does change: the minimum viable trade
 
@@ -393,7 +397,7 @@ The consequence is a product decision, not a technical one. On mainnet you need 
 
 An app that buys a yield-bearing tokenised asset with one on-chain approval and a signed message, gets MEV protection and solver competition without operating either, and runs against Ethereum mainnet by changing three constants.
 
-None of the moving parts belong to you. Spark issues the asset, CoW's solvers find the price, Gnosis Chain settles it. That is the EEZ working as intended: components you compose rather than infrastructure you run.
+None of the moving parts belong to you. Spark issues the asset, CoW's solvers find the price, Gnosis Chain settles it. You compose existing components rather than running the infrastructure yourself.
 
 Extend it in whichever direction your product needs:
 

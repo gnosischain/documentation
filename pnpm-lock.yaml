@@ -37,9 +37,6 @@ importers:
       clsx:
         specifier: 1.2.1
         version: 1.2.1
-      docusaurus-plugin-generate-llms-txt:
-        specifier: 0.0.1
-        version: 0.0.1(@docusaurus/core@3.10.2(@mdx-js/react@3.0.0(@types/react@19.2.18)(react@18.0.0))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(supports-color@8.1.1))
       docusaurus-plugin-sass:
         specifier: 0.2.6
         version: 0.2.6(@docusaurus/core@3.10.2(@mdx-js/react@3.0.0(@types/react@19.2.18)(react@18.0.0))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(supports-color@8.1.1))(sass@1.56.1)(webpack@5.110.1(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(html-minifier-terser@7.2.0)(postcss@8.5.26))
@@ -2517,12 +2514,6 @@ packages:
   dns-packet@5.6.1:
     resolution: {integrity: sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==}
     engines: {node: '>=6'}
-
-  docusaurus-plugin-generate-llms-txt@0.0.1:
-    resolution: {integrity: sha512-XlUeQ23anYc85I1k9pO61fWcMWcUs8Tx7n3zqIus/1wjZ1mjezm0lOX9jymu9Y2MAi3/YQbDxsfo4kZrMf5q6A==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      '@docusaurus/core': '>=2.0.0'
 
   docusaurus-plugin-sass@0.2.6:
     resolution: {integrity: sha512-2hKQQDkrufMong9upKoG/kSHJhuwd+FA3iAe/qzS/BmWpbIpe7XKmq5wlz4J5CJaOPu4x+iDJbgAxZqcoQf0kg==}
@@ -9010,11 +9001,6 @@ snapshots:
   dns-packet@5.6.1:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
-
-  docusaurus-plugin-generate-llms-txt@0.0.1(@docusaurus/core@3.10.2(@mdx-js/react@3.0.0(@types/react@19.2.18)(react@18.0.0))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(supports-color@8.1.1)):
-    dependencies:
-      '@docusaurus/core': 3.10.2(@mdx-js/react@3.0.0(@types/react@19.2.18)(react@18.0.0))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(supports-color@8.1.1)
-      js-yaml: 4.3.2
 
   docusaurus-plugin-sass@0.2.6(@docusaurus/core@3.10.2(@mdx-js/react@3.0.0(@types/react@19.2.18)(react@18.0.0))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(postcss@8.5.26)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(supports-color@8.1.1))(sass@1.56.1)(webpack@5.110.1(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.26))(csso@5.0.5)(html-minifier-terser@7.2.0)(postcss@8.5.26)):
     dependencies:
