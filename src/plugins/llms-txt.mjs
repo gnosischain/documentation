@@ -1,12 +1,9 @@
-// A Markdown copy of every docs page (page.md next to page.html), for the
-// "Copy page" menu and for AI agents. Wraps @signalwire/docusaurus-plugin-llms-txt
-// and only keeps its per-page .md files: llms.txt stays the one from
-// docusaurus-plugin-generate-llms-txt (see docusaurus.config.js).
+// Wraps @signalwire/docusaurus-plugin-llms-txt so the agent-facing output
+// (llms.txt, llms-full.txt, one .md per page) reads cleanly:
 // - before HTML -> Markdown: drop React comment markers and heading anchors,
 //   keep tab labels next to their content, and keep code blocks intact.
 // - after the build: undo the plugin's doubled baseUrl in page links (/docs/docs/),
 //   encode spaces in link targets, and point every .md page at llms.txt.
-// Copied from the hub-wip branch (src/plugins/llms-txt.mjs).
 import fs from "node:fs/promises";
 import path from "node:path";
 import llmsTxtPlugin from "@signalwire/docusaurus-plugin-llms-txt";
@@ -70,11 +67,12 @@ function rehypeCleanDocusaurus() {
 }
 
 // Link targets come as ](url), ](<url>) or ](url "title"); the url itself may contain spaces.
+// Links to a folder's index page (trailing slash) come out as .../folder/.md; the file is .../folder.md.
 const fixLinks = (md, siteRoot) =>
   md.replace(/\]\((?:<([^>]+)>|([^)]+?))(?=\s+"[^"]*"\)|\))/g, (m, bracketed, plain) => {
     const url = bracketed ?? plain;
     const fixed = siteRoot && url.startsWith(siteRoot.doubled) ? siteRoot.single + url.slice(siteRoot.doubled.length) : url;
-    return `](${fixed.replace(/ /g, "%20")}`;
+    return `](${fixed.replace(/ /g, "%20").replace(/\/\.md(?=#|$)/, ".md")}`;
   });
 
 async function listMarkdown(dir) {
@@ -87,7 +85,7 @@ async function listMarkdown(dir) {
   return out;
 }
 
-export default async function pageMarkdown(context, options) {
+export default async function llmsTxt(context, options) {
   const { baseUrl, url } = context.siteConfig;
   const indexUrl = new URL(`${baseUrl}llms.txt`, url).href;
   const siteRoot = baseUrl === "/" ? null : { single: url + baseUrl, doubled: url + baseUrl + baseUrl.slice(1) };
@@ -95,7 +93,6 @@ export default async function pageMarkdown(context, options) {
     ...options,
     content: {
       ...options.content,
-      enableLlmsFullTxt: false,
       beforeDefaultRehypePlugins: [rehypeCleanDocusaurus],
     },
   });
@@ -103,17 +100,35 @@ export default async function pageMarkdown(context, options) {
   return {
     ...inner,
     async postBuild(props) {
-      // The inner plugin always writes llms.txt; put the existing one back after it.
-      const llmsFile = path.join(props.outDir, "llms.txt");
-      const llmsTxt = await fs.readFile(llmsFile, "utf8").catch(() => null);
       await inner.postBuild(props);
-      if (llmsTxt === null) await fs.rm(llmsFile, { force: true });
-      else await fs.writeFile(llmsFile, llmsTxt);
       const directive = `> For the complete documentation index, see [llms.txt](${indexUrl})\n\n`;
+      // The Run a node pages show a transition notice from a DocItem wrapper, outside the
+      // content the plugin converts; repeat it here so agents know the guides end at the fork.
+      const page = (p) => new URL(`${baseUrl}${p}.md`, url).href;
+      const nodeNotice =
+        `> **Gnosis Chain is moving to Gnosis EEZ.** These guides cover running a node and a validator on Gnosis Chain as it runs today, and stay valid until the fork. ` +
+        `At activation the validator set retires and nodes keep only an execution client. See [the move to Gnosis EEZ](${page("validators/eez-transition")}). ` +
+        `Managing an existing validator? Go to [Validator withdrawals](${page("validators/withdrawals")}) or [Voluntary exit](${page("validators/voluntary-exit")}).\n\n`;
+      const pages = new Map();
       for (const file of await listMarkdown(props.outDir)) {
-        const md = fixLinks(await fs.readFile(file, "utf8"), siteRoot);
+        const rel = path.relative(props.outDir, file);
+        const isNodePage = rel === "node.md" || rel.startsWith(`node${path.sep}`);
+        const md = (isNodePage ? nodeNotice : "") + fixLinks(await fs.readFile(file, "utf8"), siteRoot);
+        pages.set(new URL(baseUrl + rel.split(path.sep).join("/"), url).href, md);
         await fs.writeFile(file, directive + md);
       }
+      const llmsFile = path.join(props.outDir, "llms.txt");
+      const llms = fixLinks(await fs.readFile(llmsFile, "utf8"), siteRoot);
+      await fs.writeFile(llmsFile, llms);
+
+      // The plugin builds llms-full.txt from the .md files before the notice above is added,
+      // so rebuild it from the final pages: the index, then every page in index order.
+      const listed = [...llms.matchAll(/^- \[[^\]]*\]\(([^)\s]+\.md)\)/gm)].map((m) => m[1]);
+      const root = new URL(`${baseUrl}index.md`, url).href;
+      const missing = listed.filter((u) => u !== root && !pages.has(u));
+      if (missing.length) throw new Error(`llms-full.txt: no .md file for ${missing.join(", ")}`);
+      const body = listed.filter((u) => u !== root).map((u) => `${pages.get(u)}\n\n---\n\n`).join("");
+      await fs.writeFile(path.join(props.outDir, "llms-full.txt"), `${llms}\n\n---\n\n# Full Documentation Content\n\n${body}`);
     },
   };
 }

@@ -24,7 +24,6 @@ keywords: [gnosis, gnosis twitter, gnosis telegram, gnosis discord, governance f
 ## Support
 
 - [Discord](https://discord.gg/gnosis)
-- [Validator Resources & Feedback Form](https://tally.so/r/3y4V1W)
 - General Inquiries: [community@gnosis.io](mailto:community@gnosis.io) 
 
 ## Events and Press

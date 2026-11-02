@@ -44,7 +44,7 @@
 10. What DApps can we use on Gnosis?
 
     All dApps on Gnosis Ecosystem can be found here:
-    https://build.gnosischain.com/
+    https://www.gnosis.io/chain/ecosystem
 
 11. What are the NFT marketplaces on Gnosis Chain?
 

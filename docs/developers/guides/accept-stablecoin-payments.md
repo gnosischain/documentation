@@ -7,7 +7,11 @@ keywords: [stablecoin, payments, eure, usdc, erc20, foundry, payment receiver, m
 
 # Accept stablecoin payments
 
-**Job:** accept stablecoin payments in your app. **Time:** about 40 minutes. **Chain:** Chiado testnet.
+**Job:** accept stablecoin payments in your app.
+
+**Time:** about 40 minutes.
+
+**Chain:** Chiado testnet.
 
 **Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 
@@ -303,7 +307,7 @@ On Gnosis you use a real stablecoin, and you must not guess its address. Ask the
 { "app_slug": "monerium", "chain_id": 100 }
 ```
 
-That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://build.gnosischain.com/) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
+That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://www.gnosis.io/chain/ecosystem) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
 
 Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain 100`.
 

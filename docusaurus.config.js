@@ -20,6 +20,14 @@ const config = {
       async: true,
     },
   ],
+  // Inter is the canon Gnosis UI/body sans (typography.json). Kept all-sans per
+  // the docs' own type direction; no Playfair serif display face.
+  stylesheets: [
+    {
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+      rel: "stylesheet",
+    },
+  ],
   customFields: {
     POSTHOG_KEY: process.env.POSTHOG_KEY,
   },
@@ -48,6 +56,24 @@ const config = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           showLastUpdateTime: true,
+          // Withdrawals and voluntary exit live in the Validators section; link them from
+          // Run a node > Management too, where node operators used to find them
+          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
+            const items = await defaultSidebarItemsGenerator(args);
+            if (args.item.dirName !== "node") return items;
+            return items.map((item) =>
+              item.type === "category" && item.label === "Management"
+                ? {
+                    ...item,
+                    items: [
+                      ...item.items,
+                      { type: "ref", id: "validators/withdrawals/withdrawals", label: "Validator withdrawals" },
+                      { type: "ref", id: "validators/voluntary-exit", label: "Voluntary exit" },
+                    ],
+                  }
+                : item,
+            );
+          },
         },
         // Updates blog archived to /archives/Updates (not published).
         blog: false,
@@ -75,7 +101,8 @@ const config = {
       },
       docs: {
         sidebar: {
-          hideable: true,
+          // Sidebar always visible: no collapse control (also hidden in custom.scss).
+          hideable: false,
         },
       },
       navbar: {
@@ -120,8 +147,10 @@ const config = {
             sidebarId: "knowledgeHub",
             label: "Knowledge hub",
           },
-          // No right-hand links: Faucet, Bridge app and Ecosystem live in the left sidebars (sidebars.js),
-          // and the build site is in the DOCS switcher beside the logo.
+          // No marketing CTA in the docs header: it is kept clean and functional so
+          // the docs read as a tool, not a second marketing page. The launch-partner
+          // call lives in the announcement bar. Faucet, Bridge and Ecosystem live in
+          // the left sidebars; the build/bridge sites are in the DOCS switcher.
         ],
       },
       footer: {
@@ -164,7 +193,7 @@ const config = {
               { label: "Telegram", href: "https://t.me/gnosischain" },
               { label: "X", href: "https://twitter.com/gnosischain" },
               { label: "GitHub", href: "https://github.com/gnosischain" },
-              { label: "Ecosystem", href: "https://build.gnosischain.com/" },
+              { label: "Build", href: "https://www.gnosis.io/chain/build" },
             ],
           },
           {
@@ -220,6 +249,11 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Glossary moved from the Gnosis EEZ section into the Knowledge hub
+          {
+            to: "/knowledge-hub/glossary",
+            from: "/eez/glossary",
+          },
           // Launch partner moved out of the Gnosis EEZ section to its own page
           {
             to: "/launch-partner",
@@ -264,54 +298,6 @@ const config = {
             to: "/validators/voluntary-exit",
             from: "/node/management/voluntary-exit",
           },
-          // Run a node archived to /archives/Node; the section is no longer published.
-          // Node and validator readers land on the runbook for the move to Gnosis EEZ.
-          {
-            to: "/validators/eez-transition",
-            from: [
-              "/node",
-              "/node/architecture",
-              "/node/rewards-penalties",
-              "/node/Node Tools/dappnode",
-              "/node/Node Tools/eth-docker",
-              "/node/Node Tools/sedge",
-              "/node/Node Tools/stereum",
-              "/node/management/migrating-validator",
-              "/node/management/monitoring-node",
-              "/node/management/monitoring-validators",
-              "/node/manual",
-              "/node/manual/configure-server",
-              "/node/manual/beacon/lighthouse",
-              "/node/manual/beacon/lodestar",
-              "/node/manual/beacon/nimbus",
-              "/node/manual/beacon/teku",
-              "/node/manual/execution/erigon",
-              "/node/manual/execution/geth",
-              "/node/manual/execution/nethermind",
-              "/node/manual/execution/reth",
-              "/node/manual/validator/deposit",
-              "/node/manual/validator/verify",
-              "/node/manual/validator/generate-keys",
-              "/node/manual/validator/generate-keys/cli",
-              "/node/manual/validator/generate-keys/wagyu",
-              "/node/manual/validator/Run Client/lighthouse",
-              "/node/manual/validator/Run Client/lodestar",
-              "/node/manual/validator/Run Client/nimbus",
-              "/node/manual/validator/Run Client/teku",
-              "/node/participate-validator/liquid-staking",
-              "/node/participate-validator/swarm",
-              "/node/participate-validator/swarm/a-quickstart-swarm",
-              "/node/participate-validator/swarm/b-docker-swarm",
-              "/node/participate-validator/swarm/c-dappnode-swarm",
-              // Generated category pages for the archived node sections
-              "/category/management",
-              "/category/node-tools",
-              "/category/participate-as-a-validator",
-              "/category/step--2---run-execution-client",
-              "/category/step--3---run-consensus-client",
-              "/category/step--4---run-validator",
-            ],
-          },
           // Bridges FAQs merged into the master FAQ as its Bridging subsection
           {
             to: "/faq/others",
@@ -353,17 +339,27 @@ const config = {
       },
     ],
     [
-      "docusaurus-plugin-generate-llms-txt",
+      // Agent-readable output: llms.txt (index), llms-full.txt (all content) and a .md copy of
+      // every page, which the "Copy page" menu next to each doc title also uses.
+      require.resolve("./src/plugins/llms-txt.mjs"),
       {
-        outputFile: "llms.txt", // defaults to llms.txt if not specified
-      },
-    ],
-    [
-      // A .md copy of every page, used by the "Copy page" menu next to each doc title.
-      require.resolve("./src/plugins/page-markdown.mjs"),
-      {
+        siteTitle: "Gnosis Chain Docs",
+        siteDescription:
+          "Documentation for Gnosis Chain and Gnosis EEZ. Gnosis Chain is an EVM network (chain ID 100) with 5-second blocks and xDai, a stablecoin, as gas. Gnosis EEZ is the first instance of the Ethereum Economic Zone: Gnosis Chain will be hard-forked onto it, with contracts, balances and addresses carried over unchanged.",
+        // One section per top-level folder; depth 2 gave every single page its own heading.
+        depth: 1,
+        optionalLinks: [
+          { title: "EEZ protocol docs", url: "https://docs.eez.io/", description: "The Ethereum Economic Zone specification" },
+          { title: "EEZ demos", url: "https://build.eez.io/", description: "Hands-on walkthroughs of a synchronous cross-chain call" },
+        ],
+        // Same order as the navbar tabs: Gnosis EEZ first, since that is where an agent should begin.
+        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/knowledge-hub/**", "/tools/**", "/technicalguides/**", "/validators/**", "/node/**", "/faq/**"],
         content: {
+          enableLlmsFullTxt: true,
           includePages: true,
+          // Sidebar category pages are only lists of links to pages already in the index.
+          includeGeneratedIndex: false,
+          // Full URLs, so every link resolves from wherever an agent read the file.
           relativePaths: false,
           excludeRoutes: ["/search", "/live-samples/**"],
         },

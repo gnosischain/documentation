@@ -23,7 +23,6 @@
     "@mdx-js/react": "3.0.0",
     "@signalwire/docusaurus-plugin-llms-txt": "1.2.2",
     "clsx": "1.2.1",
-    "docusaurus-plugin-generate-llms-txt": "0.0.1",
     "docusaurus-plugin-sass": "0.2.6",
     "dotenv": "16.4.4",
     "posthog-js": "1.438.9",

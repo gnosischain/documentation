@@ -93,11 +93,21 @@
 }
 
 .switcherItem {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   padding: 8px 12px;
   border-radius: 10px;
   color: var(--gc-text-muted);
   text-decoration: none;
+}
+.switcherExt {
+  flex: none;
+  color: var(--gc-text-faint);
+}
+a.switcherItem:hover .switcherExt {
+  color: var(--gc-text);
 }
 a.switcherItem:hover {
   background: var(--gc-surface-2);
@@ -110,7 +120,7 @@ a.switcherItem:hover {
 }
 
 .search {
-  flex: 0 1 240px;
+  flex: 0 0 200px;
   display: flex;
   justify-content: flex-end;
   min-width: 0;
@@ -144,10 +154,11 @@ a.switcherItem:hover {
   align-items: center;
 }
 
-/* The pill's padding costs the tabs their room on narrow laptops; the DOCS label gives it back */
+/* DOCS stays visible on laptops so it is always clear this is the docs site, not
+   the marketing page; the search slot gives up room instead. */
 @media (min-width: 997px) and (max-width: 1199px) {
-  .wordmark {
-    display: none;
+  .search {
+    flex: 0 0 auto;
   }
 }
 
