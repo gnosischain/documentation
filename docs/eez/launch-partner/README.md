@@ -40,7 +40,7 @@ A deployed contract counts when it is live on Gnosis Chain mainnet and its sourc
 ## How to join
 
 1. **Deploy on Gnosis Chain mainnet.** [Deploy now](/launch-partner/deploy-now) takes you from an empty directory to a verified contract on mainnet in about 45 minutes. That deployment is what carries over at the fork.
-2. **Register your contracts** in the [ecosystem directory](https://build.gnosischain.com/). Addresses are checked on-chain before they are listed.
+2. **Register your contracts** in the [ecosystem directory](https://www.gnosis.io/chain/ecosystem). Addresses are checked on-chain before they are listed.
 3. **Book a call** with the [ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership and get access to the Chiado testnet fork when it opens. You can also reach the team on [Discord](https://discord.gg/gnosis).
 
 There is no fee and no token allocation.
