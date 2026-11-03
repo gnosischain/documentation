@@ -10,7 +10,7 @@ Shanghai/Capella hardfork enables validator withdrawal and several execution lay
 
 Validator withdrawal allows a validator's account balance get withdrawn from Beacon Chain to Execution Layer, in the form of GNO. The GNO will be accrued on validator's withdrawal address on the Execution Layer, which is set using `eth1_withdrawal_address` option during validator key generation.
 
-Check out [validator withdrawal](/node/management/withdrawals) for more details.
+For current validator withdrawal guidance, see [validategnosis.com](https://www.validategnosis.com/).
 
 ## Upgrade Schedule
 
@@ -27,7 +27,7 @@ Check out [validator withdrawal](/node/management/withdrawals) for more details.
 
    For any type of withdrawals, a validator need to have `0x01` withdrawal credential. You’re fine if you used `--eth1_withdrawal_address` to create your validator keys. If not, tooling will be made available.
 
-   Refer to [validator withdrawal](/node/management/withdrawals) for more details.
+   Refer to [validategnosis.com](https://www.validategnosis.com/) for more details.
 
 2. Update your clients
 
@@ -59,4 +59,4 @@ As we have modified some specs regarding the withdrawals to enable withdrawing G
 
 ### Full Withdrawal
 
-Please check guide on [voluntary exit](/node/management/voluntary-exit).
+For voluntary exit guidance, see [validategnosis.com](https://www.validategnosis.com/).

@@ -45,6 +45,8 @@ export const MultiDimensionalContentWidget = () => {
 
 	let isSelectedByText = function (text) {
 		var targetElement = getByText(text);
+		if (!targetElement)
+			return false;
 		var isSelected = targetElement.classList.contains('tabs__item--active');
 		return isSelected;
 	}
@@ -59,6 +61,11 @@ export const MultiDimensionalContentWidget = () => {
 	}
 
 	let stashConfig = function () {
+		var tabWidget = document.querySelector('.install-tabs');
+		// bindTabs runs on a timer, so the reader may have left the page by now
+		if (!tabWidget)
+			return;
+
 		var selectedOS, selectedNetwork, selectedEL, selectedCL, selectedENBN;
 
 		if (isSelectedByText('Windows'))
@@ -89,7 +96,6 @@ export const MultiDimensionalContentWidget = () => {
 		else if (isSelectedByText('Teku'))
 			selectedCL = "Teku";
 
-		var tabWidget = document.querySelector('.install-tabs');
 		tabWidget.dataset.selectedOS = selectedOS;
 		tabWidget.dataset.selectedNetwork = selectedNetwork;
 		tabWidget.dataset.selectedEL = selectedEL;

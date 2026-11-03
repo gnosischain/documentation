@@ -54,7 +54,7 @@ Gnosis' rewards curve was [proposed in Nov 2021](https://forum.gnosis.io/t/launc
 
 :::
 
-- The minimum initial stake to run a validator is [1 GNO](/concepts/tokens/gno) .
+- The minimum initial stake to run a validator is [1 GNO](/about/tokens/gno) .
 - The reward rate drops with more active validators
 
 | GNO staked | % of GNO validating | reward for validators | Total GNO rewards | Overall inflation p.a. |
@@ -73,7 +73,7 @@ You can claim your Gnosis Chain rewards on the [Deposit website](https://validat
 
 ![faucet](/img/node/withdrawal/claim-withdrawal.png)
 
-> You can learn more about Deposit contracts in the [Deposit contracts](/concepts/specs/deposit-contracts) doc.
+> You can learn more about Deposit contracts in the [Deposit contracts](/about/specs/deposit-contracts) doc.
 
 ## Penalties
 

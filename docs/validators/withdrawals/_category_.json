@@ -1,0 +1,8 @@
+{
+  "label": "Validator withdrawals",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "validators/withdrawals/withdrawals"
+  }
+}

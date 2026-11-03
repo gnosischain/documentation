@@ -111,7 +111,7 @@ https://docs.gnosischain.com/img/tokens/gno.png
 
 ### Staking
 
-By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking [rewards](../../node/rewards-penalties). For a more comprehensive understanding of the validator deposit process, check the [validator deposit process](/node/manual/validator/deposit) page.
+By staking your GNO tokens, you play a vital role in securing the Gnosis chain through the validation of blocks within the PoS consensus. As a reward for your participation, you will receive staking rewards. For a more comprehensive understanding of the validator deposit process, see [validategnosis.com](https://www.validategnosis.com/).
 
 
 :::note Historical use of `mGNO`
@@ -121,7 +121,7 @@ Historically, deposits on the Beacon Chain were made with a token called `mGNO` 
 
 :::
 
-For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about sGNO and rGNO tokens, please consult the [Stakewise](/node/participate-validator/liquid-staking) page.
+For those who prefer not to manage the infrastructure themselves, liquid staking providers offer the opportunity to stake without the need for personal infrastructure management. For more in-depth information about sGNO and rGNO tokens, please consult [Stakewise](https://stakewise.io/).
 
 ### GnosisDAO Governance
 

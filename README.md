@@ -27,6 +27,23 @@ This step-by-step guide will walk you through getting ready for the deployment.
     - refresh the page, a new job will be marked as running, enter the job to check the logs out
 5. A notification is sent on Slack to the DevOps team containing the project being deployed, the version and the name of the user who triggered the action
 
+## Analytics
+
+Product analytics run on [PostHog](https://posthog.com)'s EU cloud. The setup is in [src/clientModules/analytics.js](src/clientModules/analytics.js).
+
+- **No cookies.** PostHog runs in cookieless mode: nothing is stored in the browser, and visitors are counted with a daily-salted hash on PostHog's servers, so the site needs no cookie banner.
+- **Production only.** The production deployment passes the `POSTHOG_PROJECT_KEY` repository variable to the build as `POSTHOG_KEY`. Builds without it, dev and local ones included, load nothing.
+
+Pageviews and page leaves feed PostHog's Web Analytics (visitors, referrers, UTM campaigns, devices).
+
+To try it locally, start the site with any key:
+
+```
+$ POSTHOG_KEY=phc_test pnpm start
+```
+
+Then add `?__posthog_debug=true` to the URL: the console logs every event PostHog sends.
+
 ## Credits
 
 Some content in this site was adapted or inherited from the work done by [Andrew](https://github.com/andogro), [Igor](https://github.com/igorbarinov) and team on the development of xDai. We thank them for the great job done!

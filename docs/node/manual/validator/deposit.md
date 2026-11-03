@@ -15,7 +15,7 @@ sidebar_position : 2
 
 ### GNO on Gnosis Chain
 
-- Validators need to be funded using [GNO on Gnosis Chain](/concepts/tokens/gno)
+- Validators need to be funded using [GNO on Gnosis Chain](/about/tokens/gno)
 - You will need to bridge GNO over from Ethereum to Gnosis Chain
 
 :::tip

@@ -22,7 +22,7 @@ keywords:
 | Native (fee) token | xDAI                             | Chiado xDAI                          |
 | Chain ID           | 100                              | 10200                                |
 | EL RPC             | https://rpc.gnosischain.com      | https://rpc.chiadochain.net          |
-| EL Explorer        | https://gnosisscan.io            | https://blockscout.com/gnosis/chiado |
+| EL Explorer        | https://gnosisscan.io            | https://gnosis-chiado.blockscout.com |
 | CL Explorer        | https://beaconchain.gnosischain.com/           | https://beacon.chiadochain.net       |
 | Fork monitor       | https://forkmon.gnosischain.com  | https://forkmon.chiadochain.net      |
 | EthStats           | https://ethstats.gnosischain.com | https://ethstats.chiadochain.net     |

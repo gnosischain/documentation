@@ -76,7 +76,9 @@ forge create --rpc-url https://rpc.gnosischain.com \
 
 ## Verify your Contract
 
-#### Verify your Gnosis contract on deployment using Etherscan:
+#### Verify your Gnosis contract on deployment using Blockscout:
+
+Get a free API key from the [Blockscout developer portal](https://dev.blockscout.com/).
 
  Use the ```--verify``` flag as shown below:
 
@@ -86,8 +88,10 @@ forge create --rpc-url https://rpc.gnosischain.com \
 ```bash
 forge create --rpc-url https://rpc.chiadochain.net \
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
-    --etherscan-api-key <your_etherscan_api_key> \
-    --verify
+    --verify \
+    --verifier blockscout \
+    --verifier-url https://gnosis-chiado.blockscout.com/api/ \
+    --verifier-api-key <your_blockscout_api_key>
 ```
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
@@ -95,8 +99,10 @@ forge create --rpc-url https://rpc.chiadochain.net \
 ```bash
 forge create --rpc-url https://rpc.gnosischain.com \
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
-    --etherscan-api-key <your_etherscan_api_key> \
-    --verify
+    --verify \
+    --verifier blockscout \
+    --verifier-url https://gnosisscan.io/api/ \
+    --verifier-api-key <your_blockscout_api_key>
 ```
 </TabItem>
 </Tabs>

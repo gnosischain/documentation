@@ -1,0 +1,129 @@
+.figure {
+  margin: 1.5rem 0 2.25rem;
+  --eez-indigo: #4040c0;
+}
+[data-theme='dark'] .figure {
+  --eez-indigo: var(--purple-500);
+}
+
+/* Keep labels legible on phones: scroll the diagram rather than shrink it. */
+.scroll {
+  overflow-x: auto;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  min-width: 420px;
+  height: auto;
+  font-family: var(--gc-font-body);
+}
+
+.frame {
+  fill: var(--gc-surface);
+  stroke: var(--gc-border-strong);
+}
+
+.eyebrow,
+.laneLabel,
+.laneLabelEez {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.eyebrow {
+  fill: var(--gc-accent);
+}
+.laneLabel {
+  fill: var(--gc-text-faint);
+}
+.laneLabelEez {
+  fill: rgba(255, 250, 251, 0.72);
+}
+
+.laneL1 {
+  fill: var(--gc-bg);
+  stroke: var(--gc-border);
+}
+.laneEez {
+  fill: var(--purple-1000);
+  stroke: var(--purple-1000);
+}
+[data-theme='dark'] .laneEez {
+  fill: var(--gc-surface-2);
+  stroke: var(--gc-border-strong);
+}
+
+.cardL1 {
+  fill: var(--gc-surface);
+  stroke: var(--gc-border-strong);
+}
+.cardEez {
+  fill: var(--purple-950);
+  stroke: rgba(255, 250, 251, 0.22);
+}
+
+.cardTitle,
+.cardTitleEez {
+  font-size: 30px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+.cardTitle {
+  fill: var(--gc-heading);
+}
+.cardTitleEez {
+  fill: var(--purple-50);
+}
+
+.tick {
+  fill: var(--fresh-green-500);
+}
+.tickMark {
+  fill: none;
+  stroke: var(--purple-1000);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flowLabel,
+.flowLabelEez {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.flowLabel {
+  fill: var(--gc-text-muted);
+}
+.flowLabelEez {
+  fill: rgba(255, 250, 251, 0.72);
+}
+
+.stopIndigo {
+  stop-color: var(--eez-indigo);
+}
+
+.arrowMint,
+.arrowIndigo {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.arrowMint {
+  stroke: var(--fresh-green-500);
+}
+.arrowIndigo {
+  stroke: var(--eez-indigo);
+}
+
+.caption {
+  max-width: 620px;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: var(--gc-text-muted);
+}

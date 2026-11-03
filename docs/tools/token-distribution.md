@@ -13,7 +13,7 @@ This section shows ways to send tokens to multiple addresses in batch. Various t
 - [LinkDrop](https://linkdrop.io/): features SDK, mult-chain and multi-token support.
 - [Token MultiSender](https://multisender.app/): dev-focused & security minded interface.
 - [Iroiro](https://xdai.iroiro.social/): airdrops with lower fees, csv generation for bulk sends.
-- [AirdropMe](https://airdropme.io/): simple and free multi-chain airdrops.
+- [BiuBiu.Tools](https://biubiu.tools/#/apps/multisender): batch sending of tokens with reduced gas costs.
 
 :::info Connect to Gnosis
 All the platforms above requires to [connect MetaMask to Gnosis](/tools/wallets/metamask/).

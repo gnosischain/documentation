@@ -8,14 +8,14 @@ keywords: [gnosis beacon chain, gnosis upgradeability, gbc, gbc contracts]
 ### **Contracts & Token Addresses**
 
 :::caution DO NOT send funds directly to the GBC Deposit Contract.
-To stake on GBC, follow the Validator instructions starting with [Validator Requirements and Responsibilities](/node/manual).
+To stake on GBC, follow the validator instructions at [validategnosis.com](https://www.validategnosis.com/).
 :::
 
 | Contract             | Address                                                                                                                                            |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GBC Deposit Contract | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosis.blockscout.com/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)                     |
-| GNO-> mGNO contract  | [0x647507A70Ff598F386CB96ae5046486389368C66](https://gnosis.blockscout.com/address/0x647507A70Ff598F386CB96ae5046486389368C66)                     |
-| GNO token on Gnosis  | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://blockscout.com/xdai/mainnet/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb/token-transfers) |
+| GBC Deposit Contract | [0x0B98057eA310F4d31F2a452B414647007d1645d9](https://gnosisscan.io/address/0x0B98057eA310F4d31F2a452B414647007d1645d9)                     |
+| GNO-> mGNO contract  | [0x647507A70Ff598F386CB96ae5046486389368C66](https://gnosisscan.io/address/0x647507A70Ff598F386CB96ae5046486389368C66)                     |
+| GNO token on Gnosis  | [0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb](https://gnosisscan.io/token/0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb) |
 
 
 ### **Initial Parameters (subject to change)**
@@ -30,7 +30,7 @@ To stake on GBC, follow the Validator instructions starting with [Validator Requ
 | Slashing                     | Reductions to 16 mGNO, then removal                                                                                                                                                   |
 | Clients                      | Prysm, Lighthouse                                                                                                                                                                     |
 | Custom Deposit Contract      | <p></p><ul><li>mGNO deposit (ERC20 enabled)</li><li>Upgradeable</li><li>Claiming on accidental locks</li><li>Custom network keys generation (deposit-cli)</li></ul>                   |
-| Explorer                     | <p>Modified beaconchain explorer<br /><span data-gb-custom-inline data-tag="emoji" data-code="1f50d">🔍</span> <a href="http://beacon.gnosischain.com">beacon.gnosischain.com</a></p> |
+| Explorer                     | <p>Modified beaconchain explorer<br /><a href="http://beacon.gnosischain.com">beacon.gnosischain.com</a></p> |
 | RPC                          | [https://rpc-gbc.gnosischain.com](https://rpc-gbc.gnosischain.com)                                                                                                                    |
 | Launch MVP                   | <p>4096 validators<br />131,072 mGNO </p><p>83% APY</p>                                                                                                                               |
 | Security Goal Prior to Merge | <p>50K+ validators</p><p>1.6M+ mGNO</p><p>23% APY</p>                                                                                                                                 |

@@ -11,7 +11,6 @@ Hard forks are backward-incompatible upgrades used to introduce new functionalit
 - **Network**: Gnosis
 - **Beacon block number**: `6,306,357`
 - **Completed:** 8 December 2022
-- [Merged successful announcement](/updates/2022/12/10/merge)
 
 # The Merge
 

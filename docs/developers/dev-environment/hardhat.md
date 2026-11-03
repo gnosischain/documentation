@@ -47,34 +47,30 @@ const config: HardhatUserConfig = {
       accounts: accounts,
     },
   },
+  // hardhat-verify reads explorer settings from the `etherscan` key, even for Blockscout
   etherscan: {
     customChains: [
       {
         network: "chiado",
         chainId: 10200,
         urls: {
-          //Blockscout
-          apiURL: "https://blockscout.com/gnosis/chiado/api",
-          browserURL: "https://blockscout.com/gnosis/chiado",
+          // Blockscout
+          apiURL: "https://gnosis-chiado.blockscout.com/api",
+          browserURL: "https://gnosis-chiado.blockscout.com",
         },
       },
       {
         network: "gnosis",
         chainId: 100,
         urls: {
-          // 3) Select to what explorer verify the contracts
-          // Gnosisscan
-          apiURL: "https://api.gnosisscan.io/api",
-          browserURL: "https://gnosisscan.io/",
-          // Blockscout
-          //apiURL: "https://blockscout.com/xdai/mainnet/api",
-          //browserURL: "https://blockscout.com/xdai/mainnet",
+          // 3) Gnosisscan, run by Blockscout
+          apiURL: "https://gnosisscan.io/api",
+          browserURL: "https://gnosisscan.io",
         },
       },
     ],
     apiKey: {
-      //4) Insert your Gnosisscan API key
-      //blockscout explorer verification does not require keys
+      //4) Insert your Blockscout API key, from https://dev.blockscout.com
       chiado: "your key",
       gnosis: "your key",
     },
@@ -117,34 +113,30 @@ module.exports = {
       accounts: accounts,
     },
   },
+  // hardhat-verify reads explorer settings from the `etherscan` key, even for Blockscout
   etherscan: {
     customChains: [
       {
         network: "chiado",
         chainId: 10200,
         urls: {
-          //Blockscout
-          apiURL: "https://blockscout.com/gnosis/chiado/api",
-          browserURL: "https://blockscout.com/gnosis/chiado",
+          // Blockscout
+          apiURL: "https://gnosis-chiado.blockscout.com/api",
+          browserURL: "https://gnosis-chiado.blockscout.com",
         },
       },
       {
         network: "gnosis",
         chainId: 100,
         urls: {
-          // 3) Select to what explorer verify the contracts
-          // Gnosisscan
-          apiURL: "https://api.gnosisscan.io/api",
-          browserURL: "https://gnosisscan.io/",
-          // Blockscout
-          //apiURL: "https://blockscout.com/xdai/mainnet/api",
-          //browserURL: "https://blockscout.com/xdai/mainnet",
+          // 3) Gnosisscan, run by Blockscout
+          apiURL: "https://gnosisscan.io/api",
+          browserURL: "https://gnosisscan.io",
         },
       },
     ],
     apiKey: {
-      //4) Insert your Gnosisscan API key
-      //blockscout explorer verification does not require keys
+      //4) Insert your Blockscout API key, from https://dev.blockscout.com
       chiado: "your key",
       gnosis: "your key",
     },
