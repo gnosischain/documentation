@@ -4,7 +4,7 @@ After setting up your validators, it’s essential to ensure they are running pr
 
 ## Tool
 
-[node-sentinel.xyz](https://www.node-sentinel.xyz/) provides a [monitoring tool](https://t.me/gbc_validators_bot) to help you keep track of your validators.  
+[node-sentinel.xyz](https://www.node-sentinel.xyz/) provides a [monitoring tool](https://t.me/gnosis_nodeSentinel_bot) to help you keep track of your validators.  
 It runs entirely through a Telegram bot and is free for everyone. You can register your validators by messaging the bot and providing your withdrawal address(es). The bot will automatically load all your validators and start delivering real-time stats and alerts.
 
 ![Node Sentinel Dashboard](/img/node/management/node-sentinel-dashboard.png)
