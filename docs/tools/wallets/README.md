@@ -26,7 +26,6 @@ Do you own research while selecting your wallet, keep your seed and funds safely
 - [Mt Pelerin](https://www.mtpelerin.com/bridge-wallet)
 - [MetaMask](/tools/wallets/metamask)
 - [Nabox Wallet](https://nabox.io/)
-- [O3Labs](https://o3.network/)
 - [Pillar Wallet](https://www.pillar.fi/)
 - [Poketto Cash](https://poketto.cash/)
 - [Rabby Wallet](https://rabby.io/)

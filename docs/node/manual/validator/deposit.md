@@ -20,7 +20,7 @@ sidebar_position : 2
 
 :::tip
 
-You can use [Transferto.xyz](https://transferto.xyz/) or the [Omnibridge](https://omni.gnosischain.com/bridge) to bridge GNO from Ethereum to Gnosis Chain.
+You can use [Gnosis Bridge](https://bridge.gnosischain.com/), which runs the Omnibridge, or [Jumper](https://jumper.xyz/) to bridge GNO from Ethereum to Gnosis Chain. [Use Gnosis Bridge](/bridges/usebridges) walks through it.
 
 :::
 

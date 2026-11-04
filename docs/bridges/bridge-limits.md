@@ -1,14 +1,14 @@
 ---
 sidebar_position: 6
 title: Gnosis Bridge Limits
-description: Limits of Gnosis Omni Birdge
+description: Per-transaction and daily limits of the Omnibridge for the most bridged tokens, and how to read them from the bridge contracts.
 keywords:
   [amb bridge, arbitrary message bridge, using amb, bridge, gnosis bridge]
 ---
 
 Below is a summary of each token’s transaction limits on both Ethereum and Gnosis Chain, along with quick links to inspect their on-chain contract addresses:
 
-The below list only mentions the top 10 most actively bridged assets. For a detailed view for all assets, checkout the [Bridge Explorer's limit dashbaord](https://bridge.gnosischain.com/bridge-explorer/bridges).
+The below list only mentions the top 10 most actively bridged assets. For a detailed view for all assets, checkout the [Bridge Explorer's limit dashboard](https://bridge.gnosischain.com/bridge-explorer/bridges).
 
 
 | Token | ETH Max/Tx                                | ETH Daily Limit                                 | ETH Exec Daily              | Gnosis Max/Tx                          | Gnosis Daily Limit                     | Gnosis Exec Daily                             | Ethereum Address                                                                                                                   | Gnosis Address                                                                                                                   |
@@ -29,7 +29,7 @@ The below list only mentions the top 10 most actively bridged assets. For a deta
 | ------------------- | ------------------ | ------------------ |
 | Default Bridge Fees | 0%                 | 0.1%               |
 
-## Check Limits thorugh Smart Contracts
+## Check limits through smart contracts
 
 ![alt text](bridge.png)
 
@@ -46,8 +46,8 @@ This guide explains how to programmatically retrieve daily usage and per-transac
 > * RPC access to Ethereum Mainnet and Gnosis Chain
 > * The WETH token address on each chain
 >
->   * Mainnet WETH: `0xC02aaa39b223FE8D0A0e5C4F27eAD9083C756Cc2`
->   * Gnosis WETH: (check the token registry for the canonical address)
+>   * Mainnet WETH: `0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`
+>   * Gnosis WETH: `0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1`
 
 ---
 
@@ -206,7 +206,7 @@ const gnoClient = createPublicClient({ chain: gnosis, transport: http() });
 
 const ETH_BRIDGE = "0x88ad09518695c6c3712AC10a214bE5109a655671";
 const GNO_BRIDGE = "0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d";
-const WETH = "0xC02aaa39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
 
 async function fetchLimits() {
   const [dayEth] = await ethClient.read({ address: ETH_BRIDGE, abi: bridgeAbi, functionName: "day" });

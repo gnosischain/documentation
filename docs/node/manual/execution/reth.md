@@ -1,8 +1,10 @@
 ---
-title: Reth 
+title: Reth
+description: Run Reth on Gnosis Chain or Chiado with reth_gnosis, the Gnosis extension of Reth, from the Docker image or built from source.
+keywords: [reth, reth_gnosis, execution client, gnosis node, chiado]
 ---
 
-# Reth 
+# Reth
 
 Gnosis‑compatible **Reth** client — **not a fork**, but an **extension** built with the `NodeBuilder` API.
 
@@ -11,7 +13,7 @@ Repository: [gnosischain/reth_gnosis](https://github.com/gnosischain/reth_gnosis
 ---
 
 
-# Installation
+## Installation
 
 Reth differs from other clients: **you must import a post‑merge state**.  
 All file downloads are handled internally in the setup script.

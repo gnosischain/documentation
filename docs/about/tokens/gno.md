@@ -104,7 +104,7 @@ https://docs.gnosischain.com/img/tokens/gno.png
 
 ### Bridge
 
-- Ethereum to Gnosis token bridge: [OmniBridge](https://omni.gnosischain.com/)
+- Ethereum to Gnosis token bridge: [Gnosis Bridge](https://bridge.gnosischain.com/), which runs the [Omnibridge](/bridges/About%20Token%20Bridges/omnibridge)
 <!-- non native bridges  -->
 
 ## Use GNO Tokens
@@ -127,7 +127,7 @@ For those who prefer not to manage the infrastructure themselves, liquid staking
 
 - [GnosisDAO Governance Forum](https://forum.gnosis.io/)
 - [GNO Utility and Value Proposition](https://forum.gnosis.io/t/gno-utility-and-value-proposition/2344)
-- [Community](/developers/communication)
+- [Community](/about/communication)
 
 ## GNO Token Audit
 

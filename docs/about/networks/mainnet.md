@@ -37,8 +37,6 @@ keywords:
 | ------------------------ | ------------------------------------------- |
 | Consensus Layer RPC      | https://rpc-gbc.gnosischain.com             |
 | Beacon Explorer          | https://beaconchain.gnosischain.com/                      |
-| Beacon Explorer Backup 1 | https://beacon-v1.gnosischain.com           |
-| Beacon Explorer Backup 2 | https://beacon-v2.gnosischain.com           |
 | Beacon Checkpoint Sync   | https://checkpoint.gnosischain.com          |
 | Beacon Checkpoint Sync   | https://checkpoint-sync-gnosis.dappnode.io/ |
 
@@ -46,7 +44,6 @@ keywords:
 
 | Other Tools      |                                |
 | ---------------- | ------------------------------ |
-| GnosisPools.info | https://gnosispools.info       |
 | D14N Info        | https://d14n.info/             |
 | Bordel           | https://bordel.wtf/            |
 | More tools       | [Tools](../../tools/README.md) |
@@ -77,8 +74,6 @@ Gnosis maintains a [Configs Repo](https://github.com/gnosischain/configs/) that 
 - [genesis.json](https://github.com/gnosischain/configs/blob/main/mainnet/genesis.json)
 - [GnosisDAO's Recommended CL Bootnodes](https://github.com/gnosischain/configs/blob/main/mainnet/bootnodes.yaml)
 - [GnosisDAO's Recommended EL Bootnodes](https://github.com/gnosischain/configs/blob/main/mainnet/bootnodes_execution.yaml)
-- [Nethermind's Recommended CL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/poa_networks/gnosis/inventory/data/bootnodes-beacon.json)
-- [Nethermind's Recommended EL Bootnodes](https://github.com/NethermindEth/ansible-deployments/blob/main/poa_networks/gnosis/inventory/data/bootnodes-execution.json)
 
 ## Key Contracts
 

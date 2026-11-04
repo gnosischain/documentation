@@ -70,7 +70,7 @@ In V2, StakeWise charged a 10% commission for operating the network on all staki
 
 ![](/img/node/stakewise-8.png)
 
-If you hold or purchase any remaining sGNO or rGNO, StakeWise has provided a migration interface to move the underlying GNO tokens into V3. Follow this [tutorial](https://docs.stakewise.io/guides/stakewise-v2/migrate-to-stakewise-v3-on-gnosis-chain) to migrate, and check the Genesis Vault in V3 to find your migrated GNO.
+If you hold or purchase any remaining sGNO or rGNO, StakeWise has provided a migration interface to move the underlying GNO tokens into V3. Follow this [tutorial](https://docs.stakewise.io/staker/stakewise-v2/migrate-to-stakewise-v3-on-gnosis-chain) to migrate, and check the Genesis Vault in V3 to find your migrated GNO.
 
 ## Learn More
 

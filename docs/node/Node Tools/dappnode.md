@@ -7,7 +7,7 @@ title: DAppNode
 [DAppNode](https://dappnode.com/) is a simple platform for deploying and hosting DApps, P2P clients, and blockchain nodes. It provides a user-friendly way to set up and configure nodes with a couple of clicks.  It is a Free Open Source Software, and can be used in the following ways
 
 1. Purchase one of their pre-installed [DAppNode Servers](https://dappnode.com/en-us/collections/frontpage). These are designed to be able to be run by those with very little technical know-how, and requires no command line at any point.
-2. Install DAppNode software on any compatible hardware or even a VPS. The installation is done by following their official installation documentation [Here](https://docs.dappnode.io/user/quick-start/Core/installation)
+2. Install DAppNode software on any compatible hardware or even a VPS. The installation is done by following their official installation documentation [Here](https://docs.dappnode.io/docs/user/install/overview/)
 
 ## Using DAppNode {#install-on-dappnode}
 

@@ -44,7 +44,7 @@ For this walk through, we're going to be using [Hardhat](https://hardhat.org/) (
 
 ## Prerequisites 
 To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/category/deploy-contracts-on-gnosis).
-You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/faucets).
+You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/Faucets).
 
 
 ## Step 1: Set up your environment

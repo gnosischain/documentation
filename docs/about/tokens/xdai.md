@@ -14,18 +14,16 @@ xDai tokens are native tokens on Gnosis and also used to pay for execution of sm
 
 Convert DAI from Ethereum to xDai using the [Unified Gnosis Bridge App](/bridges/usebridges).
 
-### Buy xDAI
+### Buy xDai
 
 Gateways and Exchanges allow users to get xDai using FIAT or swap other crypto into xDai.
 
 - [AscendEX](https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xdai)
 - [Mt Pelerin](https://www.mtpelerin.com/buy-xdai)
-- [Ramp](https://ramp.network/buy/?swapAsset=XDAI)
-- [Honeyswap](https://honeyswap.1hive.eth.limo/)
 
 ### Faucets
 
-Gnosis offers [free mainnet faucets](/tools/faucets/).
+Gnosis offers [free mainnet faucets](/tools/Faucets).
 
 ## Specifications
 
@@ -88,7 +86,6 @@ xDai being a native token of the network does not comply with ERC-20 standard. W
 
 - Wrap your xDai in [Wrap Eth](https://wrapeth.com/) connected with [MetaMask to Gnosis](/tools/wallets/metamask/)
 - [Swapr](https://swapr.eth.limo/#/swap?chainId=100)
-- [Honeyswap](https://honeyswap.1hive.eth.limo/)
 
 ## More Links
 

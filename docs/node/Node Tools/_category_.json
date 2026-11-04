@@ -2,6 +2,7 @@
     "position": 2,
     "collapsible": true,
     "link": {
-      "type": "generated-index"
+      "type": "generated-index",
+      "description": "Tools that install and run a Gnosis node for you: DAppNode, eth-docker, Sedge and Stereum."
     }
   }

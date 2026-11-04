@@ -1,5 +1,6 @@
 ---
-title: Teku
+title: Teku beacon node
+sidebar_label: Teku
 ---
 import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 
@@ -17,7 +18,7 @@ The Beacon Node requires an Execution client in order to operate. See [Step 2: R
 
 ## Overview
 
-Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/).
+Teku is a consensus client built to meet institutional needs and security requirements. Built by PegaSys, an arm of ConsenSys, who are dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform. More information on [Teku](https://consensys.com/teku).
 
 ### Key Links
 

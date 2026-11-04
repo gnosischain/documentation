@@ -34,7 +34,7 @@ Transfers on the native bridges are signed by a set of [bridge validators](/brid
 
 - [How to use Gnosis Bridge](/bridges/usebridges): step-by-step transfers in both directions.
 - [Bridge Explorer](/bridges/Bridge%20Explorer): track a transfer, check bridge settings and validator status, and claim a transfer.
-- [Bridge limits](/bridges/brige-limits): per-transaction and daily limits for the most bridged tokens.
+- [Bridge limits](/bridges/bridge-limits): per-transaction and daily limits for the most bridged tokens.
 
 ### Understand the bridges
 

@@ -23,7 +23,7 @@ The table below lists differences if any.
 
 \* See [Differences with Ethereum mainnet](#differences-with-ethereum-mainnet)
 
-Note: The trusted setup required for [deneb's cryptography](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/polynomial-commitments.md#trusted-setup) is the same as defined in Ethereum's consensus spec release v1.4.0, which can be found [here](https://github.com/gnosischain/specs/blob/master/consensus/preset/gnosis/trusted_setups/trusted_setup_4096.json).
+Note: The trusted setup required for [deneb's cryptography](https://github.com/ethereum/consensus-specs/blob/4afe39822c9ad9747e0f5635cca117c18441ec1b/specs/deneb/polynomial-commitments.md#trusted-setup) is the same as defined in Ethereum's consensus spec release v1.4.0, which can be found [here](https://github.com/gnosischain/specs/blob/master/consensus/preset/gnosis/trusted_setups/trusted_setup_4096.json).
 
 ## Differences with Ethereum mainnet
 

@@ -8,8 +8,7 @@ keywords: [omnibridge, token bridge, token claim]
 # Omnibridge
 
 :::info
-The Omnibride can be used in https://bridge.gnosischain.com/.  
-Please avoid using the legacy Omnibridge: https://omni.legacy.gnosischain.com/bridge
+The Omnibridge can be used at https://bridge.gnosischain.com/. The legacy Omnibridge app has been retired.
 :::
 
 ## Key Information
@@ -54,17 +53,17 @@ The Omnibridge mints bridged tokens using a variant of the [ERC-677](https://git
 | AMB Proxy Contract (Home)             | [0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59](https://gnosisscan.io/address/0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59#writeProxyContract) |
 | Omnibridge Multi-Token Mediator Proxy | [0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d](https://gnosisscan.io/address/0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d#writeProxyContract) |
 | Validator Management Contract         | [0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008](https://gnosisscan.io/address/0xA280feD8D7CaD9a76C8b50cA5c33c2534fFa5008#writeContract)      |
-| USDS Transmuter Contract              | [0x0392a2f5ac47388945d8c84212469f545fae52b2](https://gnosisscan.io/address/0x0392a2f5ac47388945d8c84212469f545fae52b2/advanced#code)      |
+| USDS Transmuter Contract              | [0x0392a2f5ac47388945d8c84212469f545fae52b2](https://gnosisscan.io/address/0x0392a2f5ac47388945d8c84212469f545fae52b2?tab=contract)      |
 
 </TabItem>
 
 <TabItem value="sepolia-chiado" label="Sepolia-Chiado">
 
-### Sepolia - Chiaado
+### Sepolia - Chiado
 
 | Contract                     | Address                                                                                                                               |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Omnibrdge (Sepolia)          | [0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e](https://sepolia.etherscan.io/address/0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e)         |
+| Omnibridge (Sepolia)         | [0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e](https://sepolia.etherscan.io/address/0x63e47c5e3303dddcaf3b404b1ccf9eb633652e9e)         |
 | AMB (Sepolia)                | [0xf2546d6648bd2af6a008a7e7c1542bb240329e11](https://sepolia.etherscan.io/address/0xf2546d6648bd2af6a008a7e7c1542bb240329e11)         |
 | Validator Contract (Sepolia) | [0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a](https://sepolia.etherscan.io/address/0xa0bd95dd2570632c8640ab5bc213f3a0ea33e26a)         |
 | Omnibridge (Chiado)          | [0x82f63B9730f419CbfEEF10d58a522203838d74c8](https://gnosis-chiado.blockscout.com/address/0x82f63B9730f419CbfEEF10d58a522203838d74c8) |
@@ -216,17 +215,17 @@ Gnosis adopts a naming convention where the "chain of origin" is added as a suff
 :::info  
 When using [Bridge UI](https://bridge.gnosischain.com/):  
 Bridging from Ethereum, users bridge [USDC on Ethereum](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) and get [USDC.e on Gnosis Chain](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0).  
-Bridging from Gnosis Chain, users bridge [USDC on xDAI](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) and get [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).  
-Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and USDC on xDAI
+Bridging from Gnosis Chain, users bridge [USDC on xDai](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83) and get [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).  
+Use [USDC swap](https://bridge.gnosischain.com/usdc) to swap between USDC.e and USDC on xDai
 :::
 
 USDC.e is a token compliant with the [Circle's Bridged USDC Standard](https://github.com/circlefin/stablecoin-evm/blob/master/doc/bridged_USDC_standard.md). To ensure smooth bridging operations, when using [Bridge UI](https://bridge.gnosischain.com/) to bridge [USDC](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) from Ethereum, user will get [USDC.e](https://gnosisscan.io/address/0x2a22f9c3b484c3629090feed35f17ff8f88f76f0) by default.
 
 1. Bridging from ETH:  
-   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDAI (old USDC)](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
+   a. Select **Ethereum** as source chain and **USDC** as token to bridge, you will get the equivalent amount of USDC.e on Gnosis Chain. (If you wish to get the [USDC on xDai (old USDC)](https://gnosisscan.io/address/0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83), you may use the [USDC swap](https://bridge.gnosischain.com/usdc) in the Bridge UI to swap your USDC.e to USDC(old), and vice versa)
 2. Bridging from GC:  
-   a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDAI(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).  
-   b. Select **Gnosis Chain** as source chain and **USDC on xDAI (old USDC)** as token, and claim their USDC on Ethereum.
+   a. Select **Gnosis Chain** as source chain and **USDC.e** as token, is not allowed, user need to swap their **USDC.e** to **USDC on xDai(old USDC)** on the [USDC swap](https://bridge.gnosischain.com/usdc).  
+   b. Select **Gnosis Chain** as source chain and **USDC on xDai (old USDC)** as token, and claim their USDC on Ethereum.
 
 For more detail, check out [this twitter post](https://x.com/gnosischain/status/1800565095065641409).
 

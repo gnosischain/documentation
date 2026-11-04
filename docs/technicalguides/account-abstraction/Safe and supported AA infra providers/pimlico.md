@@ -4,7 +4,7 @@ description: Pimlico's vision is to be the underlying infrastructure layer that 
 keywords: [pimlico,account-abstraction,paymaster, bundlers]
 ---
 
-# Building on Safe AA with Pimilico
+# Building on Safe AA with Pimlico
 
 Safe supports 4337 which means you can now plug in Safe accounts to ERC-4337 bundlers and paymasters. This guide will walk you through how to create and use a Safe account with permissionless.js.
 

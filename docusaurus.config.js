@@ -11,8 +11,13 @@ const config = {
     "Build apps, payments and infrastructure on Gnosis Chain: an EVM network with 5-second blocks, near-zero fees and a stablecoin as gas.",
   url: "https://docs.gnosischain.com",
   baseUrl: "/",
-  onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "ignore",
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
   favicon: "img/favicon.ico",
   scripts: [
     {
@@ -77,6 +82,10 @@ const config = {
         },
         // Updates blog archived to /archives/Updates (not published).
         blog: false,
+        // Search results and live samples (demo pages linked from the guides) are not documentation to index.
+        sitemap: {
+          ignorePatterns: ["/search", "/live-samples/**"],
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
@@ -334,6 +343,12 @@ const config = {
           {
             to: "/developers/Verify Smart Contracts/",
             from: "/developers/Verify Smart Contracts/truffle",
+          },
+          // The hosting treats a path with a dot as a file, so the old slug only loaded with a
+          // trailing slash. The redirect keeps that URL working.
+          {
+            to: "/about/specs/hard-forks/spec-json-update",
+            from: "/about/specs/hard-forks/spec.json-update",
           },
         ],
       },

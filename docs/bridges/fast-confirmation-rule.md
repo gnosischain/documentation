@@ -99,7 +99,7 @@ FCR is live as of October 8th 2026, and is the first production system to implem
 <details>
 <summary>Which bridge?</summary>
 
-Both xDAI bridge and Omnibridge.
+Both xDai bridge and Omnibridge.
 
 </details>
 
