@@ -28,7 +28,6 @@ Do you own research while selecting your wallet, keep your seed and funds safely
 - [Nabox Wallet](https://nabox.io/)
 - [O3Labs](https://o3.network/)
 - [Pillar Wallet](https://www.pillar.fi/)
-- [Poketto Cash](https://poketto.cash/)
 - [Rabby Wallet](https://rabby.io/)
 - [Safe](/tools/wallets/safe)
 - [TokenPocket](https://tokenpocket-gm.medium.com/how-to-add-xdai-chain-through-adding-custom-network-72d95597b017)
