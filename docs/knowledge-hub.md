@@ -63,10 +63,10 @@ The infrastructure your app runs on, from Gnosis Chain and its ecosystem.
 
 Hands-on tutorials that take you from setup to working code.
 
-- **Smart accounts and account abstraction:** Safe with Pimlico, ZeroDev and Particle Network.
+- **Smart accounts and account abstraction:** Safe with Pimlico, and Particle Network.
 - **Custom signers:** sign-in with email, social logins or passkeys through Privy or Dynamic.
 - **Pectra upgrades:** EIP-7702 and EIP-5792 for batched, sponsored wallet calls.
-- **DeFi and confidential computing:** your own CoW Swap frontend, and Secret Network.
+- **Confidential computing:** Secret Network.
 
 [See all technical guides](/technicalguides).
 
