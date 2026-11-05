@@ -262,18 +262,7 @@ cast call <CONTRACT> "count()(uint256)" --rpc-url https://rpc.gnosischain.com
 cast call <CONTRACT> "deployer()(address)" --rpc-url https://rpc.gnosischain.com
 ```
 
-The first prints `1`. The second prints your mainnet deployer address.
-
-If you use the Gnosis EEZ MCP server, your agent can make the same read with the `chain_read_contract` tool:
-
-```json
-{
-  "address": "<CONTRACT>",
-  "abi_fragment": "function count() view returns (uint256)",
-  "function": "count",
-  "chain_id": 100
-}
-```
+The first prints `1`. The second prints your mainnet deployer address. The **Read Contract** tab on Gnosisscan shows the same values.
 
 ## What happens at the fork
 
@@ -293,7 +282,7 @@ What changes is around it: blocks every 2 seconds, proven and settled on Ethereu
 
 You now have a verified contract on the chain that becomes Gnosis EEZ. Two steps make it count:
 
-1. **Register the deployment** in the [ecosystem directory](https://www.gnosis.io/chain/ecosystem). Addresses are checked before they are listed, and the listing is what developers and agents see through the Gnosis EEZ MCP server.
+1. **Register the deployment** in the [ecosystem directory](https://www.gnosis.io/chain/ecosystem). Addresses are checked before they are listed.
 2. **Book a call** with the [ecosystem team](https://calendar.app.google/nG7XU4gvtqZgY9Cm9) to confirm the partnership and get access to the Chiado fork when it opens.
 
 ## Next steps

@@ -11,7 +11,9 @@ import EezCallReturn from '@site/src/components/EezCallReturn';
 
 ## The EEZ protocol underneath
 
-Gnosis EEZ is built on the EEZ protocol. EEZ provides the contract machinery for synchronous composability between Ethereum and the rollups that join it, and it is designed for based rollups that share Ethereum's sequencing. On Gnosis EEZ, it is what lets a contract call a contract on Ethereum through a local proxy and get the predicted return value back inside its own transaction. That makes flows possible such as calling back into Ethereum while an Ethereum-to-Gnosis EEZ operation is still open, or borrowing, using the funds across chains and repaying, all within one composed operation.
+Gnosis EEZ is built on the EEZ protocol. EEZ provides the contract machinery for synchronous composability between Ethereum and the rollups that join it, and it is designed for based rollups that share Ethereum's sequencing. On Gnosis EEZ, it is what lets a contract call a contract on Ethereum through a local proxy and get the predicted return value back inside its own transaction. That is the direction live at launch.
+
+The protocol also supports calls from Ethereum into a rollup and nested calls, which make flows possible such as calling back into Ethereum while an Ethereum-to-Gnosis EEZ operation is still open, or borrowing, using the funds across chains and repaying, all within one composed operation. On Gnosis EEZ these follow in 2027. [What is not in the first release](/eez/gnosis-eez#what-is-not-in-the-first-release) lists the limits.
 
 <EezCallReturn />
 
@@ -28,7 +30,7 @@ So a proxy call on Gnosis EEZ resolves locally, using data prepared in advance. 
 
 - **Ethereum is the source of truth.** Gnosis EEZ adds each block straight away, but keeps it only if Ethereum confirms it. If a batch does not land on Ethereum, the block is rolled back.
 - **All or nothing.** A cross-chain call completes on both chains or on neither.
-- **No need to trust the operator.** Anyone can run a follower that rebuilds the same chain from Ethereum alone.
+- **Anyone can check the operator.** Anyone can run a [follower](/knowledge-hub/glossary#follower) that rebuilds the same chain from Ethereum alone. Until real-time ZK proofs are live, Ethereum accepts each batch on the interim setup's [attestation](/knowledge-hub/glossary#attestation), so settlement still trusts the [proof signer](/knowledge-hub/glossary#proof-signer), and the `EEZL2` contract trusts the Gnosis EEZ node, as step 4 describes.
 
 ## What stays the same for developers
 
