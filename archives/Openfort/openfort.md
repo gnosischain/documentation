@@ -1,9 +1,16 @@
 ---
-description: Openfort is an open-source wallet infrastructure provider that gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
-keywords: [openfort, account abstraction, user onboarding, connect wallet, embedded wallet, gasless]
+title: Openfort
+description: Openfort embedded wallets and smart accounts on Gnosis Chain. Archived - Openfort does not support Gnosis Chain.
+keywords: [openfort, account abstraction, user onboarding, embedded wallet, deprecated, archived]
 ---
 
-# Openfort
+# Openfort (Archived)
+
+:::danger Archived
+Openfort **does not support Gnosis Chain**: its [supported chains](https://www.openfort.io/docs/configuration/chains) include neither Gnosis Chain nor Chiado.
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 **[Openfort](https://www.openfort.io/?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)** is an open-source wallet infrastructure provider that gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
 

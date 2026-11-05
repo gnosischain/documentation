@@ -1,14 +1,15 @@
 ---
-# web3.js was sunset in March 2025. Kept for old links and existing code, but out of the sidebar, sitemap and search.
-unlisted: true
-description: web3.js is a collection of libraries that allow you to interact with a local or remote Ethereum node using HTTP, IPC or WebSocket.
-keywords: [web3.js, library, web3, javascript, package]
+title: Using Web3.js
+description: Interacting with Gnosis Chain using the web3.js library. Archived - web3.js was sunset by ChainSafe in March 2025.
+keywords: [web3.js, library, javascript, deprecated, sunset, archived]
 ---
 
-# Using Web3.js
+# Using Web3.js (Archived)
 
-:::warning web3.js is deprecated
-ChainSafe sunset web3.js on 4 March 2025 and archived the [web3.js repository](https://github.com/web3/web3.js), so the library no longer receives updates. For new projects, use [viem](https://viem.sh) or [ethers.js](/developers/Interact%20on%20Gnosis/ethers-js). This page is kept for existing web3.js code.
+:::danger Archived
+ChainSafe **sunset web3.js on 4 March 2025** and archived the [web3.js repository](https://github.com/web3/web3.js), so the library no longer receives updates. Use [viem](https://viem.sh) or [ethers.js](https://docs.gnosischain.com/developers/Interact%20on%20Gnosis/ethers-js) instead.
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
 :::
 
 [web3.js](https://web3js.readthedocs.io/en/v1.7.5/web3.html) is a collection of libraries that allow you to interact with a local or remote Ethereum node using HTTP, IPC or WebSocket. Since Gnosis and Ethereum are very similar, web3.js can also be used in the same way. This page will go over some of the basics to get started. The web3.js docs have a lot more on the full features and functionality of the library and can be found [here](https://web3js.readthedocs.io/en/v1.7.5/). You can view RPCs to connect to [here](/tools/RPC%20Providers/). 

@@ -344,6 +344,60 @@ const config = {
             to: "/developers/Verify Smart Contracts/",
             from: "/developers/Verify Smart Contracts/truffle",
           },
+          // Pyth no longer supports Gnosis Chain or Chiado (August 2026); page archived to /archives/Pyth
+          {
+            to: "/tools/Oracle Providers/",
+            from: "/tools/Oracle Providers/pyth",
+          },
+          // SupraOracles does not support Gnosis Chain (its price feeds dropped Gnosis and Chiado,
+          // Supra VRF is on Chiado only); pages archived to /archives/SupraOracles
+          {
+            to: "/tools/Oracle Providers/",
+            from: [
+              "/tools/Oracle Providers/supraoracles",
+              "/tools/Oracle Providers/supraoracles/vrf",
+            ],
+          },
+          // Cookbook, the smart contract marketplace, is no longer online; page archived to /archives/Cookbook
+          {
+            to: "/developers/guides/deploy-your-first-contract",
+            from: "/developers/dev-environment/cookbook",
+          },
+          // Tellor no longer lists Gnosis Chain and DIA has no maintained oracle on it; pages archived
+          // to /archives/Tellor and /archives/DIA
+          {
+            to: "/tools/Oracle Providers/",
+            from: ["/tools/Oracle Providers/tellor", "/tools/Oracle Providers/dia"],
+          },
+          // Openfort does not support Gnosis Chain; page archived to /archives/Openfort
+          {
+            to: "/tools/User Onboarding/",
+            from: "/tools/User Onboarding/openfort",
+          },
+          // Guides built on Safe's deprecated Auth Kit and on Relay Kit with Gelato (removed in
+          // September 2026); pages archived to /archives/Safe Kits
+          {
+            to: "/technicalguides/account-abstraction/Safe and supported AA infra providers/",
+            from: [
+              "/technicalguides/account-abstraction/Safe and supported AA infra providers/gelato",
+              "/technicalguides/account-abstraction/Safe and supported AA infra providers/integration-guide-for-safe",
+            ],
+          },
+          // ZeroDev guide built on the deprecated @zerodev/waas SDK; page archived to /archives/ZeroDev
+          {
+            to: "/technicalguides/account-abstraction/",
+            from: "/technicalguides/account-abstraction/zerodev-guide",
+          },
+          // web3.js was sunset by ChainSafe in March 2025; page archived to /archives/Web3.js
+          {
+            to: "/developers/Interact on Gnosis/ethers-js",
+            from: "/developers/Interact on Gnosis/web3-js",
+          },
+          // CoW Swap guide built on the archived widget examples; page archived to /archives/CoW Swap Widget
+          {
+            to: "/technicalguides/",
+            from: "/technicalguides/DeFi/Deploy A Cow Swap Widget",
+          },
           // The hosting treats a path with a dot as a file, so the old slug only loaded with a
           // trailing slash. The redirect keeps that URL working.
           {
