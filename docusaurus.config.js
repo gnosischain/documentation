@@ -369,11 +369,6 @@ const config = {
             to: "/tools/Oracle Providers/",
             from: ["/tools/Oracle Providers/tellor", "/tools/Oracle Providers/dia"],
           },
-          // Openfort does not support Gnosis Chain; page archived to /archives/Openfort
-          {
-            to: "/tools/User Onboarding/",
-            from: "/tools/User Onboarding/openfort",
-          },
           // Guides built on Safe's deprecated Auth Kit and on Relay Kit with Gelato (removed in
           // September 2026); pages archived to /archives/Safe Kits
           {
@@ -383,7 +378,8 @@ const config = {
               "/technicalguides/account-abstraction/Safe and supported AA infra providers/integration-guide-for-safe",
             ],
           },
-          // ZeroDev guide built on the deprecated @zerodev/waas SDK; page archived to /archives/ZeroDev
+          // ZeroDev guide built on @zerodev/waas, which has not been updated since June 2024; page
+          // archived to /archives/ZeroDev
           {
             to: "/technicalguides/account-abstraction/",
             from: "/technicalguides/account-abstraction/zerodev-guide",
@@ -397,6 +393,12 @@ const config = {
           {
             to: "/technicalguides/",
             from: "/technicalguides/DeFi/Deploy A Cow Swap Widget",
+          },
+          // Secret's Confidential Computing Layer docs for EVM chains are offline and its Gnosis Chain
+          // gateway has had no activity since July 2024; page archived to /archives/Secret Network
+          {
+            to: "/technicalguides/",
+            from: "/technicalguides/Confidential Computing/secret-network",
           },
           // The hosting treats a path with a dot as a file, so the old slug only loaded with a
           // trailing slash. The redirect keeps that URL working.

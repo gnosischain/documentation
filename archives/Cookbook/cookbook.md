@@ -7,7 +7,7 @@ keywords: [cookbook, deployment, smart contract, deprecated, archived]
 # Using Cookbook (Archived)
 
 :::danger Archived
-Cookbook, the smart contract marketplace this page described, **is no longer online**: cookbook.dev no longer resolves. Do not follow the links to it on this page, because a lapsed domain can be re-registered by anyone.
+Cookbook, the smart contract marketplace this page described, **is no longer online**: cookbook.dev no longer resolves. Links to it have been removed from this page, because a lapsed domain can be re-registered by anyone.
 
 This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
 :::
@@ -17,7 +17,7 @@ Cookbook is an open source smart contract marketplace. You can search, upload, d
 It supports Gnosis Chain and Chiado.
 
 ## Search on smart contract marketplace
-Navigate to [Cookbook](https://www.cookbook.dev/search?q=), and search for the smart contract you would like to use or deploy: 
+Navigate to Cookbook, and search for the smart contract you would like to use or deploy: 
 
 ![marketplace](./img/cookbook-marketplace.png)
 
@@ -45,6 +45,3 @@ Click **Deploy** and you'll be prompted to sign a smart contract creation transa
 Once the smart contract is deployed, you may check the address on Dashboard. You may also download ABI, Bytecode, Source Code and Verification Data from here.
 
 ![dashboard](./img/dashboard.png)
-
-## Additional Resources
-* [Cookbook](https://www.cookbook.dev/)
