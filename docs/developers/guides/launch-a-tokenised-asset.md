@@ -15,7 +15,7 @@ keywords: [tokenisation, rwa, tokenised asset, erc20, cap, foundry, backed, secu
 
 **Prerequisites:** [deploy your first contract](/developers/guides/deploy-your-first-contract), Foundry installed, and an account funded on Chiado.
 
-Tokenising an asset means issuing a token whose supply is bound to something that exists off-chain: a property, a bond, a warehouse of coffee. The on-chain part is the easy half, and this guide covers it honestly: a capped-supply ERC-20, a documented reference to the asset, and controls over who can hold it.
+Tokenising an asset means issuing a token whose supply is bound to something that exists off-chain: a property, a bond, a warehouse of coffee. The on-chain part is the easy half, and this guide covers it honestly: a capped-supply ERC-20, a documented reference to the asset, and issuance controls.
 
 Read the scope note before you build anything.
 
@@ -184,7 +184,7 @@ Three tests pass. The middle one is the important one: it proves the cap holds a
 The token points at a document. Produce the hash from the actual file so the on-chain value means something:
 
 ```bash
-cast keccak "$(cat legal/offering.pdf)"
+cast keccak < legal/offering.pdf
 ```
 
 For this walkthrough, hash a placeholder so you have a real value to deploy with:
@@ -265,22 +265,11 @@ cast call <ASSET> "documentHash()(bytes32)" --rpc-url https://rpc.chiadochain.ne
 
 It matches `<DOCHASH>`.
 
-Through the MCP server, `chain_read_contract` gives your agent the same reading:
-
-```json
-{
-  "address": "<ASSET>",
-  "abi_fragment": "function totalSupply() view returns (uint256)",
-  "function": "totalSupply",
-  "chain_id": 10200
-}
-```
-
-And `chain_get_token_info` returns the name, symbol, decimals and holder count as Blockscout has indexed them.
+The token page at `https://gnosis-chiado.blockscout.com/token/<ASSET>` shows the same supply, along with the name, symbol, decimals and holder count as Blockscout has indexed them.
 
 ## Switch to mainnet
 
-The contract deploys unchanged against `https://rpc.gnosischain.com` with `--chain 100`.
+The contract deploys unchanged against `https://rpc.gnosischain.com`. [Deploy your first contract](/developers/guides/deploy-your-first-contract#switch-to-mainnet) lists what else changes on mainnet, including verification.
 
 What changes is everything around it. Before issuing on mainnet you need the legal structure from the scope note, a real document at a durable URI whose hash you have committed, and a decision about transfer restrictions. Most regulated instruments cannot trade freely to any address, which means an allowlist or a permissioned transfer hook this contract does not have.
 

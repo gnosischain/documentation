@@ -15,7 +15,7 @@ bridge instructions in archived pages have not been maintained and should not be
 | [Cookbook](./Cookbook/) | Cookbook, a smart contract marketplace, is no longer online | November 2026 |
 | [Tellor](./Tellor/) | Tellor no longer lists Gnosis Chain | November 2026 |
 | [DIA](./DIA/) | DIA has no maintained oracle on Gnosis Chain | November 2026 |
-| [Safe Kits](./Safe%20Kits/) | Guides built on Safe's Auth Kit, which Safe removed, and on Relay Kit with Gelato, which Safe dropped on 1 September 2026 | November 2026 |
+| [Safe Kits](./Safe%20Kits/) | The Safe section's overview and guides, built on Safe's Auth Kit, which Safe removed, on Relay Kit with Gelato, which Safe dropped on 1 September 2026, and on permissionless.js APIs that have since been removed | November 2026 |
 | [Web3.js](./Web3.js/) | web3.js was sunset by ChainSafe in March 2025 | November 2026 |
 | [CoW Swap Widget](./CoW%20Swap%20Widget/) | Built on CoW Protocol's widget examples, which are archived | November 2026 |
 | [ZeroDev](./ZeroDev/) | Built on `@zerodev/waas`, which has not been updated since June 2024 and is no longer in ZeroDev's docs | November 2026 |

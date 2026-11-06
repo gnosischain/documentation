@@ -56,11 +56,11 @@ import Moralis from 'moralis';
 
 try {
   await Moralis.start({
-    apiKey: "mmRBnJ94TQu5Fr2FSMCYBAtDtpDKz3axFSqcUZ7wr6skFnJtfrJXW3XRt3AeRyph"
+    apiKey: process.env.MORALIS_API_KEY
   });
 
   const response = await Moralis.EvmApi.nft.getWalletNFTs({
-    "chain": "0x1",
+    "chain": "0x64",
     "format": "decimal",
     "mediaItems": false,
     "address": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
@@ -78,10 +78,10 @@ try {
 {
   "page": 1,
   "page_size": 100,
-  "cursor": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21QYXJhbXMiOnsid2FsbGV0QWRkcmVzcyI6IjB4ZDhkYTZiZjI2OTY0YWY5ZDdlZWQ5ZTAzZTUzNDE1ZDM3YWE5NjA0NSJ9LCJrZXlzIjpbIjE2ODU5MzY5NDQuNTE3Il0sIndoZXJlIjp7Im93bmVyX29mIjoiMHhkOGRhNmJmMjY5NjRhZjlkN2VlZDllMDNlNTM0MTVkMzdhYTk2MDQ1In0sImxpbWl0IjoxMDAsIm9mZnNldCI6MCwib3JkZXIiOltdLCJkaXNhYmxlX3RvdGFsIjp0cnVlLCJleGNsdWRlX3NwYW0iOmZhbHNlLCJ0b3RhbCI6bnVsbCwicGFnZSI6MSwidGFpbE9mZnNldCI6MSwiaWF0IjoxNjkzNDY3ODc0fQ.z5vEhLXquK4l91WxS62KgGzL3zgI8vYuWOe2Uzi64iI",
+  "cursor": "<CURSOR>",
   "result": [
     {
-      "token_address": "0xb365e53b64655476e3c3b7a3e225d8bf2e95f71d",
+      "token_address": "<NFT_CONTRACT>",
       "token_id": "1",
       "amount": "1",
       "owner_of": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",

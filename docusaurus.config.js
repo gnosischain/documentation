@@ -369,13 +369,14 @@ const config = {
             to: "/tools/Oracle Providers/",
             from: ["/tools/Oracle Providers/tellor", "/tools/Oracle Providers/dia"],
           },
-          // Guides built on Safe's deprecated Auth Kit and on Relay Kit with Gelato (removed in
-          // September 2026); pages archived to /archives/Safe Kits
+          // Guides built on Safe's deprecated Auth Kit, on Relay Kit with Gelato (removed in
+          // September 2026) and on removed permissionless.js APIs; pages archived to /archives/Safe Kits
           {
             to: "/technicalguides/account-abstraction/Safe and supported AA infra providers/",
             from: [
               "/technicalguides/account-abstraction/Safe and supported AA infra providers/gelato",
               "/technicalguides/account-abstraction/Safe and supported AA infra providers/integration-guide-for-safe",
+              "/technicalguides/account-abstraction/Safe and supported AA infra providers/pimlico",
             ],
           },
           // ZeroDev guide built on @zerodev/waas, which has not been updated since June 2024; page

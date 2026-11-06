@@ -276,17 +276,6 @@ cast call <TOKEN> "balanceOf(address)(uint256)" <RECEIVER> \
 
 Same number. The count and the balance agreeing is the result to look for. If they diverge, the contract accounted for something it did not receive.
 
-Your agent can confirm the same through the MCP server with `chain_read_contract`:
-
-```json
-{
-  "address": "<RECEIVER>",
-  "abi_fragment": "function totalReceived() view returns (uint256)",
-  "function": "totalReceived",
-  "chain_id": 10200
-}
-```
-
 Open `https://gnosis-chiado.blockscout.com/address/<RECEIVER>?tab=logs` to see the `PaymentReceived` event with your reference decoded. This is what your backend would watch.
 
 ## Withdraw
@@ -301,15 +290,14 @@ Read the contract's token balance again. It is now `0`, and your own balance has
 
 ## Switch to mainnet
 
-On Gnosis you use a real stablecoin, and you must not guess its address. Ask the registry for the canonical one. With the MCP server installed, your agent calls `eez_get_contract_addresses`:
+On Gnosis you use a real stablecoin, and you must not guess its address. Take the canonical address from [Useful contracts](/developers/Usefulcontracts#gnosis-chain-contract-addresses), then check on-chain that it is the token you expect:
 
-```json
-{ "app_slug": "monerium", "chain_id": 100 }
+```bash
+cast call <TOKEN> "symbol()(string)" --rpc-url https://rpc.gnosischain.com
+cast call <TOKEN> "decimals()(uint8)" --rpc-url https://rpc.gnosischain.com
 ```
 
-That returns the EURe token address, checked against Blockscout. You can also read it from the [Monerium record](https://www.gnosis.io/chain/ecosystem) in the directory, or from `eez_chain_info`, which lists the canonical tokens for chain 100: EURe, USDC, WXDAI, GNO and sDAI. The same addresses are listed in [useful contracts](/developers/Usefulcontracts).
-
-Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com` and `--chain 100`.
+Deploy the same receiver with that address as the constructor argument, against `https://rpc.gnosischain.com`. [Deploy your first contract](/developers/guides/deploy-your-first-contract#switch-to-mainnet) lists what else changes on mainnet, including verification.
 
 :::warning
 Check the decimals of whichever stablecoin you use. EURe and WXDAI have 18 decimals; USDC on Gnosis has 6. An amount computed for 18 decimals sent to a 6-decimal token is a payment a million million times too large. Read `decimals()` rather than assuming.

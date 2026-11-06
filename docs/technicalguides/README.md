@@ -19,8 +19,7 @@ Give users smart contract wallets with batched transactions, gas sponsorship and
 | Tutorial | What you build |
 | --- | --- |
 | [Understanding account abstraction](/technicalguides/account-abstraction) | What account abstraction is, and the providers that support it on Gnosis Chain |
-| [Account abstraction with Safe](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers) | Safe as the smart account layer |
-| [Safe with Pimlico](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers/pimlico) | ERC-4337 user operations with a Pimlico bundler and paymaster |
+| [Account abstraction with Safe](/technicalguides/account-abstraction/Safe%20and%20supported%20AA%20infra%20providers) | Links to Safe's SDK and ERC-4337 docs |
 | [Particle Network](/technicalguides/account-abstraction/particle-network) | An app with Particle's smart wallet-as-a-service |
 
 ## Custom signers
