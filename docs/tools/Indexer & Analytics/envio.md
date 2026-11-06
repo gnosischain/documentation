@@ -1,88 +1,71 @@
 ---
 title: Envio
-description: Envio is a feature-rich indexing solution for fast and flexible access to real-time and historical data for any EVM.
+description: Envio HyperIndex is an indexing framework for real-time and historical Gnosis Chain data, with HyperSync as its data source.
 keywords: [envio, data indexing, query data, chain data, api]
 ---
 
-[Envio](https://envio.dev/) is a feature-rich indexing solution that provides developers with a seamless and efficient way to index and aggregate blockchain data for any EVM. The indexed data is easily accessible through custom GraphQL queries, providing developers with the flexibility and power to retrieve specific information.
+[Envio](https://envio.dev/) HyperIndex is an indexing framework for real-time and historical blockchain data. You define the contracts and events to index, write handlers that turn those events into entities, and query the result through a GraphQL API.
 
-Envio offers native support for Gnosis (both testnet and mainnet) and has been designed to support high-throughput blockchain applications that rely on real-time data for their business requirements.
+HyperIndex supports Gnosis Chain mainnet (chain ID 100) and the Chiado testnet (chain ID 10200). Handlers are written in TypeScript (the default) or ReScript. You can run an indexer locally, self-host it, or deploy it to [Envio Cloud](https://docs.envio.dev/docs/HyperIndex/hosted-service), Envio's managed hosting.
 
-Designed to optimize the user experience, Envio offers automatic code generation, flexible language support, quickstart templates, and a reliable cost-effective [hosted service](https://docs.envio.dev/docs/hosted-service).
+## Envio HyperSync
 
-Indexers on Envio can be written in JavaScript, TypeScript, or ReScript.
+[HyperSync](https://docs.envio.dev/docs/HyperSync/overview) is Envio's data retrieval layer, used as an alternative to JSON-RPC. It is available on Gnosis at `https://gnosis.hypersync.xyz` and on Chiado at `https://gnosis-chiado.hypersync.xyz`.
 
-## Envio HyperSync 
+HyperIndex uses HyperSync as its default data source, so you don't need to configure RPC URLs or handle rate limits. HyperSync is also available as a standalone API through the [Python, Rust, Node.js, and Go clients](https://docs.envio.dev/docs/HyperSync/hypersync-clients). HyperSync requires an [API token](https://docs.envio.dev/docs/HyperSync/api-tokens).
 
-Envio supports [HyperSync](https://docs.envio.dev/docs/hypersync) on Gnosis mainnet. 
+## Other key features
 
-HyperSync is an indexed layer of the Gnosis blockchain, providing accelerated APIs (JSON-RPC bypass) for the hyper-speed syncing of historical data. Developers do not need to worry about RPC URLs, rate-limiting, or managing infrastructure, and can easily sync large datasets in a few minutes, something that would usually take 20-100x longer via JSON-RPC. 
+- Contract import: generate an indexer from the address of a verified contract, or from a local ABI file.
+- [Multichain indexing](https://docs.envio.dev/docs/HyperIndex/multichain-indexing): index several chains into one database and query them through one GraphQL API.
+- [Factory contracts](https://docs.envio.dev/docs/HyperIndex/dynamic-contracts): index contracts that other contracts create at runtime.
+- [Testing](https://docs.envio.dev/docs/HyperIndex/testing): test handler logic without syncing the chain.
 
+## Getting started
 
-## Other Key Features 
+You need [Node.js](https://nodejs.org/en/download) 22 or newer, and [Docker Desktop](https://www.docker.com/products/docker-desktop/) to run the indexer locally. [pnpm](https://pnpm.io/installation) is recommended.
 
-- Contract Import: Autogenerate the key boilerplate for an entire Indexer project off a single smart contract definition. Deploy within minutes. 
-
-- Multi-chain Support: Aggregate data across multiple networks into a single database. Query all your data with a unified GraphQL API. 
-
-- Detailed logging and error messaging are provided for effective troubleshooting and debugging.
-
-- Quickstart templates with pre-defined indexing logic for popular OpenZeppelin contracts.
-
-
-## Getting Started
-
-The following files are required from the user to run the Envio indexer:
-
-- Configuration (defaults to `config.yaml`)
-- GraphQL Schema (defaults to `schema.graphql`)
-- Event Handlers (defaults to `src/EventHandlers.*` depending on the language chosen)
-
-These files are auto-generated according to the template and language chosen by running the `envio init` command.
-
-[**Quickstart Guide**](https://docs.envio.dev/docs/quickstart)
-
+Run the following command and follow the prompts:
 
 ```bash
-? Would you like to start from a template or migrate from a subgraph?
-> "Template"
-  "SubgraphMigration"
-[↑↓ to move, enter to select, type to filter]
-
+pnpx envio init
 ```
 
-Then choose a template out of the possible options
+Select `Evm` as the blockchain ecosystem, then choose how to start:
 
 ```bash
-? Which template would you like to use?
-> "Blank"
-  "Greeter"
-  "ERC-20"
+? Choose an initialization option
+> From Address - Lookup ABI from block explorer
+  From ABI File - Use your own ABI file
+  Template: ERC20
+  Template: Greeter
+  Feature: External Calls
+  Feature: Factory Contract
 [↑↓ to move, enter to select, type to filter]
 ```
 
-Then choose a language from **Javascript**, **Typescript**, or **Rescript** to write the event handlers file.
+With `From Address`, select `gnosis` (or `gnosis-chiado` for the testnet) and enter the contract address. The CLI fetches the ABI from a block explorer and lets you choose which events to index. At the end, it asks you to add an Envio API token to the project's `.env` file.
+
+You can also run contract import without prompts:
 
 ```bash
-? Which language would you like to use?
-> "Javascript"
-  "Typescript"
-  "Rescript"
-[↑↓ to move, enter to select, type to filter]
+pnpx envio init contract-import explorer -b gnosis -c <CONTRACT_ADDRESS> --single-contract --all-events -n my-indexer -d my-indexer
 ```
 
-This will create the config, schema and event handlers files according to the template and language chosen.
+The command generates these files:
 
-:::info Envio Indexer Examples
-Click [here](https://docs.envio.dev/docs/example-uniswap-v3) for Envio Indexer Examples.
+- Configuration (`config.yaml`)
+- GraphQL schema (`schema.graphql`)
+- Event handlers (`src/handlers/`)
+
+To start the indexer locally, make sure Docker is running and run `pnpm dev` from the project folder. See [running the indexer locally](https://docs.envio.dev/docs/HyperIndex/running-locally) and the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart).
+
+:::info Envio indexer examples
+See the [HyperIndex tutorials](https://docs.envio.dev/docs/HyperIndex/tutorial-erc20-token-transfers) for examples.
 :::
 
+## Getting help
 
-## Getting Help
-
-Indexing can be a rollercoaster, especially for more complex use cases. Our engineers are available to help you with your data availability needs.
-
-Join our growing community of elite builders, and find peace of mind with Envio. 
-
-* [Discord](https://discord.gg/mZHNWgNCAc)
-* Email: [hello@envio.dev](mailto:hello@envio.dev)
+- [Envio documentation](https://docs.envio.dev/docs/HyperIndex/overview)
+- [Discord](https://discord.gg/envio)
+- Email: [hello@envio.dev](mailto:hello@envio.dev)
