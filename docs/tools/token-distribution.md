@@ -1,6 +1,6 @@
 ---
 description: Send tokens to multiple addresses in batch. Various tools built by the community are available. 
-keywords: [linkdrop, token distribution, multisender, multisend, airdrop]
+keywords: [token distribution, multisender, multisend, airdrop]
 ---
 
 # Token Distribution
@@ -10,7 +10,6 @@ This section shows ways to send tokens to multiple addresses in batch. Various t
 
 ## Platforms Supporting Gnosis
 
-- [LinkDrop](https://linkdrop.io/): features SDK, mult-chain and multi-token support.
 - [Token MultiSender](https://multisender.app/): dev-focused & security minded interface.
 - [BiuBiu.Tools](https://biubiu.tools/#/apps/multisender): batch sending of tokens with reduced gas costs.
 

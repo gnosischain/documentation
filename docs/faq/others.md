@@ -8,7 +8,7 @@
 
 2. Is Gnosis Chain a Testnet or Mainnet released?
 
-   Gnosis Chain is not a testnet. It is a fully operational Layer 1 utilizing Proof of Stake. But if you are wondering, Gnosis Chain has its testnet called Chiado, the details of which can be found here: https://docs.gnosischain.com/concepts/networks/chiado.
+   Gnosis Chain is not a testnet. It is a fully operational Layer 1 utilizing Proof of Stake. But if you are wondering, Gnosis Chain has its testnet called Chiado, the details of which are on the [Chiado page](/about/networks/chiado).
 
 3. I’m totally new to this project and I’m trying to feel myself around. Where should I start learning?
 
@@ -16,7 +16,7 @@
 
 4. What is Gnosis Faucet?
 
-   The Gnosis Chain xDAI faucet distributes xDAI to new users so that they may have enough gas to complete a few transactions and interact with applications on Gnosis Chain : https://faucet.gnosischain.com/
+   The Gnosis Chain xDai faucet distributes xDai to new users so that they may have enough gas to complete a few transactions and interact with applications on Gnosis Chain : https://faucet.gnosischain.com/
 
 5. Which wallets can I use on the Gnosis Chain?
 
@@ -24,8 +24,7 @@
 
 6. How do I connect my wallet to Gnosis Chain?
 
-   Click 'Add to Metamask' in [here](https://docs.gnosischain.com/concepts/networks/mainnet) or view other options from
-   https://docs.gnosischain.com/tools/wallets/
+   Click 'Add to MetaMask' on the [mainnet page](/about/networks/mainnet), or see the other options on the [wallets page](/tools/wallets/).
 
 7. How can I add Gnosis Chain to Metamask?
 
@@ -70,14 +69,13 @@
 
     Yes, you can run a Node and qualify for rewards. For current guidance on running a node and validating, see [validategnosis.com](https://www.validategnosis.com/) or ask in [Discord](https://discord.gg/gnosis).
 
-17. I was staking xdai on the easystaking xdai site and it is no longer active. How can I access my xdai?
+17. I was staking STAKE on the xDai EasyStaking site and it is no longer active. How can I withdraw my STAKE?
 
-    This has been down for some time now due to the old team that was running xdai not maintain it anymore. You will need to use the block explorer to interact with the contracts without the UI in order for it to be withdrawn.
+    The EasyStaking site has been down for some time because the former xDai team no longer maintains it. You can still withdraw by calling the [EasyStaking contract](https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad) on Ethereum directly from Etherscan:
 
-    These are the steps that need to be taken:
-
-    https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad#readProxyContract 11. lastDepositIds Type your address which gives you a number. 3. balances Find your deposits. They are numbered from 0 up to the number you got previously. Check all of them.
-    https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad#writeProxyContract 7. makeForcedWithdrawal Withdraw. Please note this instant-withdrawal has a 2% fee
+    1. On the [Read as Proxy](https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad#readProxyContract) tab, call `lastDepositIds` with your address. It returns a number.
+    2. Call `balances` with your address and each deposit ID from 0 up to that number to find your deposits.
+    3. On the [Write as Proxy](https://etherscan.io/address/0xecbcd6d7264e3c9eac24c7130ed3cd2b38f5a7ad#writeProxyContract) tab, connect your wallet and call `makeForcedWithdrawal` with the deposit ID and the amount. This instant withdrawal has a 2% fee.
 
 18. I recently transferred an ERC-1155 into a safe. I realized after the fact that gnosis does not support 1155s. Is there a way that I’m able to transfer it back out?
 
@@ -117,16 +115,16 @@
 
 1. What native bridges does Gnosis have?
 
-   [xDAI & OmniBridge](https://docs.gnosischain.com/bridges/)
+   [xDai & OmniBridge](https://docs.gnosischain.com/bridges/)
 
 2. Where can I bridge my tokens to Gnosis Chain?
 
    Between Ethereum and Gnosis Chain : https://bridge.gnosischain.com/
-   More chains and options : [jumper](https://jumper.exchange/), [bungee](https://www.bungee.exchange/), [hop](https://app.hop.exchange/)
+   More chains and options : [jumper](https://jumper.exchange/), [bungee](https://www.bungee.exchange/)
 
 3. What is the best way to bridge it to another chain?
 
-   For larger amounts, you can use the xDAI bridge (from Gnosis Chain to Ethereum) : https://bridge.gnosischain.com/ For smaller amounts or if you want to bridge them to another chain (to a L2 or another chain), with very small gas fees using Jumper : https://jumper.exchange/
+   For larger amounts, you can use the xDai bridge (from Gnosis Chain to Ethereum) : https://bridge.gnosischain.com/ For smaller amounts or if you want to bridge them to another chain (to a L2 or another chain), with very small gas fees using Jumper : https://jumper.exchange/
 
 4. How much time does it take to bridge using Omni Bridge ?
 
@@ -134,11 +132,11 @@
 
 5. I’m trying to bridge but Omni Bridge says that the maximum amount was already transferred?
 
-   Some tokens have [bridge limits](https://docs.gnosischain.com/bridges/tokenbridge/omnibridge#single-transaction-limits), which can be a daily limit and or maximum or minimum per transaction, this is for example the case for GNO between Gnosis Chain and Ethereum, you can click the “Limits” button below the bridge box to check the current limits for a given token. These Daily Limits will be reset at 00:00 UTC.
+   Some tokens have [bridge limits](/bridges/bridge-limits), which can be a daily limit and or maximum or minimum per transaction, this is for example the case for GNO between Gnosis Chain and Ethereum, you can click the “Limits” button below the bridge box to check the current limits for a given token. These Daily Limits will be reset at 00:00 UTC.
 
 6. On AMB/Omni Bridge once the daily limit has been reached, how can I get my tokens?
 
-   Follow the manual execution tutorial https://docs.gnosischain.com/bridges/tutorials/using-amb once you have initiated the `executeSignature()` transaction, the token release transaction will be credited to your account automatically the next day.
+   Follow the [manual execution tutorial](/bridges/using-amb) once you have initiated the `executeSignature()` transaction, the token release transaction will be credited to your account automatically the next day.
 
 7. Why do the tokens I just got on Gnosis Chain after bridging from Ethereum have a different contract address?
 
@@ -152,9 +150,9 @@
 
    When bridging [WETH](https://gnosisscan.io/token/0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1) from Gnosis Chain, Omnibridge will automatically unwrap your WETH on Ethereum to ETH, so you will only accept ETH on Ethereum. The transaction calls [WETHOmnibridgeHelper](https://etherscan.io/address/0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a) to withdraw ETH from [WETH](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) token contract, create a new contract to receive the ETH and eventually self destruct that contract and send the ETH to the user. Check out [this transaction](https://etherscan.io/tx/0xfed3bfb9a86b4c65039de6e64f4582e7fad8b1cac0b67f69c185c0332b3fab7e) for more details.
 
-10. How do I know if xDAI get minted to my account when I'm using xDAI bridge for bridging DAI from Ethereum?
+10. How do I know if xDai get minted to my account when I'm using xDai bridge for bridging DAI from Ethereum?
 
-    Because xDAI is gas token(or native token) on Gnosis Chain, newly minted xDAI by xDAI bridge will not create a transaction. You may check your balance increment visually by looking for **coin balance history** section in blockscout: https://gnosis.blockscout.com/address/$YOUR_ADDRESS?tab=coin_balance_history or querying the balance programmatically using eth_getBalance api.
+    Because xDai is gas token(or native token) on Gnosis Chain, newly minted xDai by xDai bridge will not create a transaction. You may check your balance increment visually by looking for **coin balance history** section in blockscout: https://gnosis.blockscout.com/address/$YOUR_ADDRESS?tab=coin_balance_history or querying the balance programmatically using eth_getBalance api.
 
 11. How do I check if my message from AMB(or Omnibridge) has been executed?
 

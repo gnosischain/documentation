@@ -1,8 +1,8 @@
 ---
 title: Developer tutorials
 sidebar_label: Overview
-description: Hands-on tutorials for building on Gnosis Chain, covering smart accounts and account abstraction, custom signers, EIP-7702 and EIP-5792, and confidential computing.
-keywords: [gnosis chain tutorials, account abstraction, safe, erc-4337, eip-7702, eip-5792, custom signers, privy, dynamic, secret network]
+description: Hands-on tutorials for building on Gnosis Chain, covering smart accounts and account abstraction, custom signers, and the Pectra upgrades EIP-7702 and EIP-5792.
+keywords: [gnosis chain tutorials, account abstraction, safe, erc-4337, eip-7702, eip-5792, custom signers, privy, dynamic]
 sidebar_position: 1
 ---
 
@@ -41,12 +41,6 @@ Use the wallet features that arrived with the Pectra hard fork.
 | --- | --- |
 | [EIP-7702](/technicalguides/Pectra/eip-7702) | An EOA that temporarily runs smart contract code |
 | [EIP-5792](/technicalguides/Pectra/eip-5792) | Batched calls in a single wallet prompt, with status polling |
-
-## Confidential computing
-
-| Tutorial | What you build |
-| --- | --- |
-| [Secret Network](/technicalguides/Confidential%20Computing/secret-network) | Confidential data and private computation for a Gnosis app |
 
 ## Get help
 
