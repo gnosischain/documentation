@@ -170,3 +170,13 @@ https://gnosis.api.onfinality.io/public
 ## Fastnode
 
 - [Fastnode](https://fastnode.io/)
+
+## BlockVectra
+
+[BlockVectra](https://blockvectra.com/en/) provides a public HTTP RPC for Gnosis mainnet (chain ID `100`), with no API key required.
+
+```text
+https://api.blockvectra.com/v1/gnosis_mainnet/public
+```
+
+See the [public network directory](https://api.blockvectra.com/v1/chains) for supported methods and rate limits.
