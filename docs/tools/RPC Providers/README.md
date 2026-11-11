@@ -170,3 +170,18 @@ https://gnosis.api.onfinality.io/public
 ## Fastnode
 
 - [Fastnode](https://fastnode.io/)
+
+## Taifoon
+
+Taifoon's public RPC gateway answers JSON-RPC reads on Gnosis without a key, at a free daily rate per IP, and relays transactions the wallet already signed. A free key raises the allowance.
+
+```shell
+# HTTP RPC
+https://coord.taifoon.dev/gw/rpc/100
+
+# WSS RPC
+wss://coord.taifoon.dev/gw/ws/100
+```
+
+- [Docs](https://www.taifoon.io/docs/guides/rpc)
+- [Privacy](https://www.taifoon.io/privacy#rpc-gateway)
