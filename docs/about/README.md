@@ -20,9 +20,9 @@ Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economi
 | Fee token | [xDai](/about/tokens/xdai), a stablecoin |
 | Consensus token | [GNO](/about/tokens/gno), staked by validators |
 | Chain ID | 100 (mainnet), 10200 (Chiado testnet) |
-| Execution | EVM, Osaka patchset ([Fusaka](/about/specs/hard-forks/fusaka)) |
+| Execution | EVM, Osaka patchset |
 
-**Fees are paid in a stablecoin.** Most EVM chains charge gas in a volatile native token. On Gnosis Chain every transaction is paid in xDai, so costs are predictable for you and your users. Tips go to the validator that proposed the block, and the base fee goes to a [fee collector](/about/specs/hard-forks/eip-1559#how-eip-1559-works-on-gnosis) rather than being burned.
+**Fees are paid in a stablecoin.** Most EVM chains charge gas in a volatile native token. On Gnosis Chain every transaction is paid in xDai, so costs are predictable for you and your users. Tips go to the validator that proposed the block, and the base fee goes to a [fee collector](/about/specs/hard-forks/eip-1559#how-1559-impacts-the-gnosis) rather than being burned.
 
 **Building is the same as on Ethereum.** The same tooling, wallets and contracts work unchanged. Point them at the [network RPC](/about/networks) and deploy.
 
