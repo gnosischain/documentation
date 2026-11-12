@@ -4,6 +4,7 @@
     "collapsible": true,
     "collapsed":true,
     "link": {
-      "type": "generated-index"
+      "type": "generated-index",
+      "description": "Keep a Gnosis node and its validators running: monitoring, migrating validators to a new machine, withdrawals and voluntary exits."
     }
   }

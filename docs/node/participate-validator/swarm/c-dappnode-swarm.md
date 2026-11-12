@@ -22,7 +22,7 @@ You will also need a Gnosis RPC Endpoint (such as Nethermind xDAI) for your bee 
 
 ### Tokens
 
-* A small amount of [xDAI](https://docs.ethswarm.org/docs/references/tokens#xdai) to pay for Gnosis Chain transactions, 0.1 xDAI should be enough
+* A small amount of [xDai](https://docs.ethswarm.org/docs/references/tokens#xdai) to pay for Gnosis Chain transactions, 0.1 xDai should be enough
 * [xBZZ](https://docs.ethswarm.org/docs/references/tokens#xbzz) (BZZ on Gnosis Chain) is required for funding the chequebook, buying stamps for storage and staking (minimum 10 xBZZ) 
 
 ## Full node setup process 
@@ -59,7 +59,7 @@ Send a small amount of `xDAI` (bit more than the `min_amount` above) to the bee 
 
 ![DAppStore Swarm Package Info](/img/tools/swarm/dashboard-ui-link.png)
 
-(7) Go to the Bee Dashboard and click the **Account** link in the sidebar. You can find your bee nodes wallet address and the amount of xDAI and xBZZ it holds. 
+(7) Go to the Bee Dashboard and click the **Account** link in the sidebar. You can find your bee nodes wallet address and the amount of xDai and xBZZ it holds. 
 
 ![DAppStore Swarm Package Info](/img/tools/swarm/dashboard-account-page.png)
 

@@ -12,7 +12,7 @@ Fast Confirmation Rule is a new Ethereum feature that provides a very strong ass
 ### Hashi - A cross chain protocol based on distributed trust of the underlying security mechanisms
 
 :::warning
-The Hashi integration initiative, originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB and xDAI bridges, is formally **deprecated**.
+The Hashi integration initiative, originally approved under [GIP‑93](https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245) and subsequently implemented across both the AMB and xDai bridges, is formally **deprecated**.
 
 Read the entire forum details [here](https://forum.gnosis.io/t/deprecation-notice-hashi-on-gnosis-canonical-bridges-ends-maintenance/11467)
 :::

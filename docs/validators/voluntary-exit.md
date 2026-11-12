@@ -29,10 +29,10 @@ The simplest way to exit, if your validator has an execution withdrawal address 
 
    ![Withdraw panel for a validator, showing its balance, the amount field, network fee, and the Exit validator button](../../static/img/node/voluntary-exit/launchpad-withdraw-panel.png)
 
-3. Confirm the transaction in your wallet. You'll need a little xDAI in that wallet to cover the gas (see [Faucets](../tools/Faucets.md) if you need some).
+3. Confirm the transaction in your wallet. You'll need a little xDai in that wallet to cover the gas (see [Faucets](../tools/Faucets.md) if you need some).
 
 :::tip Using a Safe as your withdrawal address?
-You can open the validators app from inside your Safe: in [app.safe.global](https://app.safe.global/), go to **Apps → My custom apps**, add `https://validators.gnosischain.com/` as a custom app, then open it from there. Your Safe will need a small amount of xDAI to confirm validator actions like this one.
+You can open the validators app from inside your Safe: in [app.safe.global](https://app.safe.global/), go to **Apps → My custom apps**, add `https://validators.gnosischain.com/` as a custom app, then open it from there. Your Safe will need a small amount of xDai to confirm validator actions like this one.
 :::
 
 :::tip Running many validators?

@@ -1,8 +1,16 @@
 ---
 title: SupraOracles
-description: SupraOracles provides smart contracts with a next-generation cross-chain oracle solution that has superior data accuracy, speed, scalability and security. 
-keywords: [supraoracles, oracle, data feeds, price feeds]
+description: SupraOracles price feeds and Supra VRF on Chiado. Archived - Supra does not support Gnosis Chain.
+keywords: [supraoracles, oracle, data feeds, price feeds, vrf, deprecated, archived]
 ---
+
+# SupraOracles on Gnosis (Archived)
+
+:::danger Archived
+SupraOracles **does not support Gnosis Chain**. Supra's [push oracle](https://docs.supra.com/oracles/data-feeds/push-oracle/networks) and [pull oracle](https://docs.supra.com/oracles/data-feeds/pull-oracle/networks) network lists include neither Gnosis Chain nor Chiado, and [Supra dVRF](https://docs.supra.com/dvrf/learn-supra-dvrf/networks) is only available on Chiado. Do not use the contract addresses in these pages.
+
+The pages in this folder are kept for historical reference only and are not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 :::info testnet
 SupraOracles only supports [Chiado testnet](/concepts/networks/chiado).
@@ -139,3 +147,7 @@ The SNAP program is partnered with some of Web3's most prolific names who are he
 * [Twitter](https://twitter.com/SupraOracles)
 * [Discord](https://discord.gg/supraoracles)
 * [Youtube](https://www.youtube.com/SupraOfficial)
+
+## Archived pages
+
+- [Supra VRF](./vrf.md) — requesting random numbers from the Supra Router on Chiado

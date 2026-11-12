@@ -27,9 +27,9 @@ The Explorer covers mainnet only. The Sepolia and Chiado testnet bridge uses the
 
 ![](/img/bridges/diagrams/amb-bridge-validator-flow.png)
 
-## xDAI bridge
+## xDai bridge
 
-The xDAI bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle.
+The xDai bridge relies on trusted xDai Bridge Validators as cross-chain bridge oracle.
 
 Bridge transactions currently require signatures from 4 of 7 validators. The live list of active xDai bridge validators, with their addresses, is in the [Gnosis Bridge Explorer](https://bridge.gnosischain.com/bridge-explorer/validators).
 
@@ -62,7 +62,7 @@ The Explorer covers mainnet only. The Chiado and Sepolia testnet bridge uses the
  docker-compose -f docker-compose-amb.yml up -d --build
 ```
 
-**Setup bridge validator for xDAI**
+**Setup bridge validator for xDai**
 
 1. Create .env.xdai and configure the value based on https://github.com/gnosischain/tokenbridge/blob/master/oracle/.env.example.xdai
 2. Configure your docker compose based on https://github.com/gnosischain/tokenbridge/blob/master/oracle/docker-compose-xdai.yml

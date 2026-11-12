@@ -15,7 +15,7 @@ Chainlink offers a tutorial on using secure data feeds with Gnosis. [See it in a
 ## Addresses
 
 - **LINK Token on Gnosis**: [`0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2`](https://gnosisscan.io/address/0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2)
-- **Price Feeds on Gnosis:** [Latest list is available in the Chainlink Documentation](https://docs.chain.link/docs/data-feeds-gnosis-chain/#Gnosis%20Chain%20Mainnet)
+- **Price Feeds on Gnosis:** [Latest list is available in the Chainlink Documentation](https://docs.chain.link/data-feeds/price-feeds/addresses?network=gnosis-chain)
 
 ## Basic Tutorial: Price Feeds
 
@@ -27,7 +27,7 @@ See [MetaMask setup page](/tools/wallets/metamask) and follow the setup and conf
 
 ### 2) Get xDai with Faucet
 
-You can get enough xDai to deploy your contracts and more with the a [Faucet](/tools/faucets). You should see it added to your address in a few seconds.
+You can get enough xDai to deploy your contracts and more with the a [Faucet](/tools/Faucets). You should see it added to your address in a few seconds.
 
 ### 3) Open Remix and Create File
 

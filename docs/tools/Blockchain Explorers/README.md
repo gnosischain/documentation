@@ -9,6 +9,6 @@ Explorers are pieces of software that scans Gnosis and make easier for users to 
 
 Gnosis supports the following explorers:
 
-- [Blockscout](/tools/explorers/blockscout)
+- [Blockscout](/tools/Blockchain%20Explorers/blockscout)
 - [Beacon chain explorer](https://beaconchain.gnosischain.com/)
 - [3xpl](https://3xpl.com/gnosis-chain)

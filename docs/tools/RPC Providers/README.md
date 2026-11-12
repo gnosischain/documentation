@@ -49,32 +49,31 @@ wss://rpc.chiadochain.net/wss
 </TabItem>
 </Tabs>
 
-## Nodies DLB
+## Nodies
 
-[Nodies DLB](https://nodies.app) offers free public endpoints for Gnosis Mainnet and Chiado (available on request), in addition to Pay-As-You-Go and enterprise plans that cater to the individual needs of developers.
+Requires a paid plan. [Nodies](https://www.nodies.app) Mainnet only: Chiado is not supported.
 
+Once subscribed, copy your Gnosis Chain endpoint from the Networks tab of your Nodies workspace.
+
+- [Pricing](https://www.nodies.app/pricing)
 - [Docs](https://docs.nodies.app/)
-
-```
-https://lb.nodies.app/v1/406d8dcc043f4cb3959ed7d6673d311a
-```
 
 ## Ankr
 
-- [Ankr's Docs for Gnosis RPCs](https://www.ankr.com/protocol/public/gnosis/)
+- [Ankr's Docs for Gnosis RPCs](https://www.ankr.com/rpc/gnosis/)
 
 <Tabs>
 <TabItem label="Mainnet" value="Mainnet">
 
 ```
-https://rpc.ankr.com/gnosis
+https://rpc.ankr.com/gnosis/<API_KEY>
 ```
 
 </TabItem>
 <TabItem label="Chiado" value="Chiado">
 
 ```
-https://rpc.ankr.com/gnosis_testnet
+https://rpc.ankr.com/gnosis_testnet/<API_KEY>
 ```
 
 </TabItem>
@@ -110,10 +109,10 @@ dRPC NodeCloud offers an AI-powered load-balancer, 180+ network endpoints, flat-
 
 ## POKT
 
-- [POKT's Docs for Gnosis Chain RPCs](https://docs.pokt.network/supported-blockchains/)
+- [POKT's Docs for Gnosis Chain RPCs](https://docs.pocket.network/developers/supported-chains/)
 
 ```
-https://gnosis-pokt.nodies.app
+https://gnosis.api.pocket.network
 ```
 
 ## GetBlock
@@ -130,27 +129,10 @@ wss://go.getblock.io/<ACCESS_TOKEN>
 
 ## BlockPI Network
 
-- [BlockPI's Docs for Gnosis RPCs](https://docs.blockpi.io/documentations/api-reference/gnosis)
+- [BlockPI's Docs for Gnosis RPCs](https://docs.blockpi.io/build/api-reference/gnosis)
 
 ```
 https://gnosis.blockpi.network/v1/rpc/<API_KEY>
-```
-
-## Chain49
-
-Free API keys available after signing up.
-
-Archive data for Mainnet and Chiado Testnet is available for paid subscriptions.
-
-- [Chain49.com](https://chain49.com/)
-- [Chain49 Docs for EVM-based chains](https://chain49.readme.io/reference/evm-based)
-
-```shell
-# Gnosis Mainnet RPC
-https://rpc.chain49.com/gnosis/<API_KEY>
-
-# Gnosis Chiado Testnet RPC
-https://rpc.chain49.com/gnosis-chiado/<API_KEY>
 ```
 
 ## OnFinality

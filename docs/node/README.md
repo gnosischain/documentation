@@ -74,7 +74,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [Chainnodes](https://www.chainnodes.org/chains/gnosis)
 - [Blast](https://blastapi.io/public-api/gnosis)
 - [GetBlock](https://getblock.io/nodes/gno/)
-- [BlockPI](https://docs.blockpi.io/documentations/api-reference/gnosis)
+- [BlockPI](https://docs.blockpi.io/build/api-reference/gnosis)
 
 Check out also [rpc providers](../tools/RPC%20Providers/README.md) for more options on hosted nodes.
 
@@ -149,19 +149,9 @@ Running a Gnosis node requires no different hardware configuration from other no
 
 Running a node requires a reliable internet connection, as nodes are constantly exchanging data across the peer-to-peer network. Brief offline periods will result in [small inactivity penalties](./rewards-penalties), but this will typically be recouped quickly as long as the outage is short.
 
-A Gnosis node with an average number of peers consumes approximately 700 mb/hour of upload bandwidth, and this may increase with time. Note that syncing the execution layer of Gnosis may take up to 1-3 days, depending on your setup.
+Bandwidth use depends on your clients, your peer count and how many validators you run, and it changes as the network does. Use an unmetered connection, measure your own node's traffic once it is synced, and leave spare capacity for growth.
 
-For better understanding of the network throughput requirements, a benchmark was conducted on the [Lighthouse v2.2.1 client](./manual/beacon/lighthouse.md) running a GBC on 4th May 2022. The client was configured to maintain 100 simultaneous peer connections. Inbound and outbound traffic consumption was measured while altering the number of active validators connected to the beacon node.
-
-Validators are advised to consider those numbers when planning their infrastructure and budget. With growth of the overall validator set, these requirements will increase over time as well. Make sure to allocate enough spare resources to account for future network growth.
-
-| Number of validators | Inbound traffic | Outbound traffic | Approximate monthly traffic |
-| -------------------- | --------------- | ---------------- | --------------------------- |
-| 10                   | 1.0 MB/s        | 1.8 MB/s         | 7.2 TB                      |
-| 32                   | 2.4 MB/s        | 3.15 MB/s        | 14.2 TB                     |
-| 64                   | 4.5 MB/s        | 3.8 MB/s         | 21.2 TB                     |
-| 128                  | 4.6 MB/s        | 3.8 MB/s         | 21.5 TB                     |
-| >256                 | 4.6 MB/s        | 3.9 MB/s         | 21.7 TB                     |
+Syncing the execution layer of Gnosis may take 1 to 3 days, depending on your setup.
 
 ### **Plug-and-play solutions**
 
@@ -169,7 +159,6 @@ The easiest option for running a node with your own hardware is using plug-and-p
 
 - [DappNode](https://docs.gnosischain.com/node/Node%20Tools/dappnode)
 - [Avado](https://docs.ava.do/more-staking-opportunities/gnosis-staking)
-- [eNode](https://enode.ebunker.io/)
 - [Orange Pi 5 Plus](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-plus-32GB.html)
 - [NanoPC T6 board 16 GB ](https://www.friendlyelec.com/index.php?route=product/product&product_id=292)
 

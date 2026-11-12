@@ -5,7 +5,7 @@ keywords: [explorer, block explorer, blockscout]
 
 # BlockScout
 
-BlockScout is a full-featured, open-source explorer for Gnosis Mainnet, Chiado Testnet and many other chains. [The Gnosis explorer is available here](https://gnosis.blockscout.com/).
+BlockScout is a full-featured, open-source explorer for Gnosis Mainnet, Chiado Testnet and many other chains. On Gnosis Chain it runs as [Gnosisscan](https://gnosisscan.io), also reachable at [gnosis.blockscout.com](https://gnosis.blockscout.com/). The Chiado explorer is [gnosis-chiado.blockscout.com](https://gnosis-chiado.blockscout.com).
 
 With BlockScout you can:
 
@@ -26,6 +26,5 @@ Full docs: [https://docs.blockscout.com/devs/pro-api#pro-api-overview](https://d
 
 ## More links
 
-- GraphQL: [https://blockscout.com/poa/xdai/graphiql](https://blockscout.com/poa/xdai/graphiql)
-- RPC: [https://blockscout.com/xdai/mainnet/api-docs](https://blockscout.com/xdai/mainnet/api-docs)
-- Eth RPC: [https://gnosis.blockscout.com/api-docs?tab=eth_rpc_api](https://gnosis.blockscout.com/api-docs?tab=eth_rpc_api)
+- API documentation: [Blockscout APIs](https://docs.blockscout.com/devs/apis), covering the REST API (`https://gnosisscan.io/api/v2/`), the Etherscan-compatible RPC API (`https://gnosisscan.io/api`) and the JSON-RPC proxy (`https://gnosisscan.io/api/eth-rpc`)
+- GraphQL endpoint: `https://gnosisscan.io/api/v1/graphql`

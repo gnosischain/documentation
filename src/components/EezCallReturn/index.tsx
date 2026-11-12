@@ -44,7 +44,7 @@ export default function EezCallReturn(): JSX.Element {
         <svg
           viewBox="0 0 960 520"
           role="img"
-          aria-label="One transaction: Contract A on Ethereum calls Contract B on Gnosis EEZ, and the return value comes back to Contract A in the same transaction."
+          aria-label="One transaction: Contract A on Gnosis EEZ calls Contract B on Ethereum, and the return value comes back to Contract A in the same transaction."
           className={styles.svg}>
           <defs>
             <Gradient id="eez-flow" y1={170} y2={350} />
@@ -68,37 +68,39 @@ export default function EezCallReturn(): JSX.Element {
           <text x="82" y="336" className={styles.laneLabelEez}>Gnosis EEZ</text>
 
           <rect x="240" y="110" width="260" height="96" rx="12" className={styles.cardL1} />
-          <text x="370" y="166" className={styles.cardTitle}>Contract A</text>
+          <text x="370" y="166" className={styles.cardTitle}>Contract B</text>
           <Tick cx={476} cy={132} />
 
           <rect x="580" y="356" width="260" height="96" rx="12" className={styles.cardEez} />
-          <text x="710" y="412" className={styles.cardTitleEez}>Contract B</text>
+          <text x="710" y="412" className={styles.cardTitleEez}>Contract A</text>
           <Tick cx={816} cy={378} />
 
+          {/* Return: Contract B on Ethereum back to Contract A on Gnosis EEZ. */}
           <path
             d="M500 158 H686 Q710 158 710 182 V344"
-            fill="none"
-            stroke="url(#eez-flow)"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path d="M700 336 L710 348 L720 336" className={styles.arrowMint} />
-          <text x="600" y="144" className={styles.flowLabel}>Call</text>
-
-          <path
-            d="M580 404 H330 Q310 404 310 384 V214"
             fill="none"
             stroke="url(#eez-flow)"
             strokeWidth="3"
             strokeDasharray="8 8"
             strokeLinecap="round"
           />
+          <path d="M700 336 L710 348 L720 336" className={styles.arrowMint} />
+          <text x="600" y="144" className={styles.flowLabel}>Return</text>
+
+          {/* Call: Contract A on Gnosis EEZ to Contract B on Ethereum, the direction live at launch. */}
+          <path
+            d="M580 404 H330 Q310 404 310 384 V214"
+            fill="none"
+            stroke="url(#eez-flow)"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
           <path d="M300 222 L310 210 L320 222" className={styles.arrowIndigo} />
-          <text x="445" y="432" className={styles.flowLabelEez}>Return</text>
+          <text x="445" y="432" className={styles.flowLabelEez}>Call</text>
         </svg>
       </div>
       <figcaption className={styles.caption}>
-        Contract A on Ethereum calls Contract B on Gnosis EEZ and gets the return value back. Both
+        Contract A on Gnosis EEZ calls Contract B on Ethereum and gets the return value back. Both
         complete inside one transaction.
       </figcaption>
     </figure>

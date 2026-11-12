@@ -27,9 +27,9 @@ Particle Network offers native ERC-4337 Account Abstraction capabilities within 
 
 This integration is facilitated by:
 - [Particle Network Wallet-as-a-Service](https://developers.particle.network)
-- [Particle Network AA SDK](https://developers.particle.network/reference/introduction-to-smart-waas)
-- [Particle Network Bundler](https://developers.particle.network/docs/particle-bundler)
-- [Particle Network Paymaster](https://developers.particle.network/docs/omnichain-paymaster)
+- [Particle Network AA SDK](https://developers.particle.network/aa/introduction)
+- [Particle Network Bundler](https://developers.particle.network/aa/architecture/bundler)
+- [Particle Network Paymaster](https://developers.particle.network/aa/architecture/omni-paymaster)
 
 And thus, the collection of these technologies is coined as "Smart Wallet-as-a-Service." You can learn more about Particle Network's Smart Wallet-as-a-Service Modular Stack [here](https://blog.particle.network/announcing-our-smart-wallet-as-a-service-modular-stack-upgrading-waas-with-erc-4337/).
 

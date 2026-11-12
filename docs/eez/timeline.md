@@ -7,7 +7,7 @@ keywords: [eez timeline, roadmap, gnosis eez launch, q1 2027, chiado fork, mainn
 
 # Timeline
 
-Dates below the current quarter are indicative. They move when engineering or governance milestones move, and this page is updated when they do.
+Dates after the current quarter are indicative. They move when engineering or governance milestones move, and this page is updated when they do.
 
 | When | Milestone | Status |
 | --- | --- | --- |

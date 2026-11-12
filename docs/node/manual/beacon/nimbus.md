@@ -1,5 +1,6 @@
 ---
-title: Nimbus
+title: Nimbus beacon node and validator
+sidebar_label: Nimbus
 ---
 
 # Run Beacon Node + Validator: Nimbus

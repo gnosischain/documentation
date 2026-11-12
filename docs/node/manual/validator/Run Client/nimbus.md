@@ -1,5 +1,6 @@
 ---
-title: Nimbus
+title: Nimbus validator client
+sidebar_label: Nimbus
 ---
 
 # Run Validator: Nimbus

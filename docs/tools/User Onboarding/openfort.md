@@ -1,27 +1,18 @@
 ---
-description: Openfort is an open-source wallet infrastructure provider that gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
-keywords: [openfort, account abstraction, user onboarding, connect wallet, embedded wallet, gasless]
+description: Openfort embedded wallets let users sign in to your Gnosis Chain app with email, SMS or a social login and get a self-custodial wallet without a seed phrase.
+keywords: [openfort, user onboarding, embedded wallet, server wallet, social login, connect wallet, gnosis pay]
 ---
 
 # Openfort
 
-**[Openfort](https://www.openfort.io/?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)** is an open-source wallet infrastructure provider that gives developers the tools to build user experiences that make digital ownership effortless, intuitive, and secure.
+**[Openfort](https://www.openfort.io/?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)** is wallet infrastructure for apps. Its embedded wallets give each user a self-custodial wallet with no seed phrase. Users sign in with email, SMS or a social login such as Google, Apple or X, and can recover the wallet on a new device with a password or a passkey.
 
-Openfort has two major product offerings: **Embedded Wallets** and **Smart Accounts**.
+## What works on Gnosis Chain
 
-## Embedded Wallets
+Openfort's embedded and server wallets work on every EVM chain, including Gnosis Chain and Chiado. On Gnosis Chain they are EOAs (externally owned accounts), not smart accounts.
 
-Openfort's Embedded Wallets allow you to create invisible, non-custodial wallets for your users. You can onboard users with familiar methods like social logins (Google, X, etc.), email, or passkeys, removing the friction of seed phrases. This ensures a smooth onboarding experience while maintaining security and user sovereignty.
-
-## Smart Accounts
-
-Leveraging ERC-4337, Openfort's Smart Accounts unlock powerful features for your application. You can sponsor gas fees to offer a free-to-play experience, batch multiple transactions into a single click, and use session keys to avoid repeated signature requests during gameplay or extended usage.
-
-To summarize, **Openfort** provides the infrastructure for **frictionless Web3 gaming and consumer apps**.
-
-You will be able to use Openfort to power end-to-end wallet interactions on your Web3 app deployed on Gnosis.
+Openfort's smart accounts (ERC-4337) and EIP-7702 delegated accounts are not offered on Gnosis Chain: the [chains that support them](https://www.openfort.io/docs/configuration/chains?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks) include neither Gnosis Chain nor Chiado. Openfort's [account types](https://www.openfort.io/docs/products/embedded-wallet/account-types?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks) page lists gas sponsorship, transaction batching and session keys for those two account types only, not for EOAs.
 
 Some links to learn more about Openfort:
 - [Website](https://www.openfort.io/?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)
-- [Blog](https://www.openfort.io/blog?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)
 - [Docs](https://www.openfort.io/docs?utm_source=gnosis&utm_medium=docs&utm_campaign=backlinks)

@@ -52,7 +52,7 @@ The [`jq` utility](https://jqlang.github.io/jq/) is used in this guide to automa
 
 ### Tokens
 
-* A small amount of xDAI to pay for Gnosis Chain transactions, 0.1 xDAI should be enough
+* A small amount of xDai to pay for Gnosis Chain transactions, 0.1 xDai should be enough
 * 10 xBZZ (BZZ on Gnosis Chain) is required for staking 
 
 ## Full node setup process 
@@ -195,7 +195,7 @@ version: 2.7.1
 "time"="2024-09-24 18:15:38.728534" "level"="warning" "logger"="node/chequebook" "msg"="cannot continue until there is at least min xDAI (for Gas) available on address" "min_amount"="0.0003750000017" "address"="0x1A801dd3ec955E905ca424a85C3423599bfb0E66"
 ```
 
-Here you can see that the node has started up successfully, but our node still needs to be funded with xDAI and xBZZ (xDAI for Gnosis Chain transactions and xBZZ for uploads/downloads and staking). 
+Here you can see that the node has started up successfully, but our node still needs to be funded with xDai and xBZZ (xDai for Gnosis Chain transactions and xBZZ for uploads/downloads and staking). 
 
 ### Fund node
 
@@ -204,22 +204,22 @@ Check the logs from the previous step. Look for the line which says:
 ```
 "time"="2024-09-24 18:15:34.520716" "level"="info" "logger"="node" "msg"="using ethereum address" "address"="0x1A801dd3ec955E905ca424a85C3423599bfb0E66"
 ```
-That address is your node's address on Gnosis Chain which needs to be funded with xDAI and xBZZ. Copy it and save it for the next step.
+That address is your node's address on Gnosis Chain which needs to be funded with xDai and xBZZ. Copy it and save it for the next step.
 
-xDAI is widely available from many different centralized and decentralized exchanges, just make sure that you are getting xDAI on Gnosis Chain, and not DAI on some other chain. See [this page](https://www.ethswarm.org/get-bzz) for a list of resources for getting xBZZ (again, make certain that you are getting the Gnosis Chain version, and not BZZ on Ethereum).  
+xDai is widely available from many different centralized and decentralized exchanges, just make sure that you are getting xDai on Gnosis Chain, and not DAI on some other chain. See [this page](https://www.ethswarm.org/get-bzz) for a list of resources for getting xBZZ (again, make certain that you are getting the Gnosis Chain version, and not BZZ on Ethereum).  
 
-After acquiring some xDAI and some xBZZ, send them to the address you copied above.
+After acquiring some xDai and some xBZZ, send them to the address you copied above.
 
 ***How Much to Send?***
 
-Only a very small amount of xDAI is needed to get started, 0.1 is more than enough.
+Only a very small amount of xDai is needed to get started, 0.1 is more than enough.
  
 You can start with just 2 or 3 xBZZ for uploading small amounts of data, but you will need at least 10 xBZZ if you plan on staking.
 
 
 ### Initialize full node
 
-After sending the required tokens (~0.1 xDAI and 10 xBZZ) to your node's Gnosis Chain address, close the bee process in your terminal (`Ctrl + C`). Then start it again with the same command:
+After sending the required tokens (~0.1 xDai and 10 xBZZ) to your node's Gnosis Chain address, close the bee process in your terminal (`Ctrl + C`). Then start it again with the same command:
 
 ```bash
 bee start \

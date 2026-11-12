@@ -15,12 +15,12 @@ Rotating the following bridge validator addresses as security hardening practice
 
 1.  CoW
     1.  New address for AMB: 0x5524b7a3e2Dc024f4C9c2Ecd7FE003ee316ac624
-    1.  New address for xDAI bridge: 0xA2746D5eE860a6A9cbb79C34533313144d467CA8
+    1.  New address for xDai bridge: 0xA2746D5eE860a6A9cbb79C34533313144d467CA8
     1.  Old address for AMB: 0xcc46a3873bfcaa08a6a946a308bb621535d6e6dd
-    1.  Old address for xDAI bridge: 0xaee7c90ef0fc461ec63c4d451b12c340642bc656
+    1.  Old address for xDai bridge: 0xaee7c90ef0fc461ec63c4d451b12c340642bc656
 1.  Kleros:
-    1.  New address for AMB & xDAI bridge: 0x59D3C2829900Ae20D02Ca547082b09FD27380eA6
-    1.  Old address for AMB & xDAI bridge: 0x156c0daab0cd73c224a424a781866d35f0f8fade
+    1.  New address for AMB & xDai bridge: 0x59D3C2829900Ae20D02Ca547082b09FD27380eA6
+    1.  Old address for AMB & xDai bridge: 0x156c0daab0cd73c224a424a781866d35f0f8fade
 
 Tx on Ethereum [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x935ca4b76ccfa5f573e2a5631de8e687760cffc41ce83c63d48f6fc0b6decffd)
 
@@ -32,27 +32,27 @@ Tx on Gnosis Chain [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48
 
 🗳 Justification:
 
-1. As a security hardening process, we're replacing the bridge validator addresses on AMB and xDAI bridge validator contract.
+1. As a security hardening process, we're replacing the bridge validator addresses on AMB and xDai bridge validator contract.
    1. Gnosis:
       1. Old address for AMB: 0xbdc141c8d2343f33f40cb9edd601ccf460cd0dde
       2. New address for AMB: 0x4A07b8AE561CC558eDD3f1836365AB8e02C52dE2
-      3. Old address for xDAI bridge: 0x97630e2ae609d4104abda91f3066c556403182dd
-      4. New address for xDAI bridge: 0x82b00cA9D162859f645B51967746E55bb6498DfC
+      3. Old address for xDai bridge: 0x97630e2ae609d4104abda91f3066c556403182dd
+      4. New address for xDai bridge: 0x82b00cA9D162859f645B51967746E55bb6498DfC
    2. Protofire:
       1. Old address for AMB: 0x459a3bd49f1ff109bc90b76125533699aaaaf9a6
       2. New address for AMB: 0xAD93BffBC65002cC75AD2d5770d3AAfFdefd8D55
-      3. Old address for xDAI bridge: 0x4d1c96b9a49c4469a0b720a22b74b034eddfe051
-      4. New address for xDAI bridge: 0x2245bFAD58a6cD50e9e413084d4091C497281911
+      3. Old address for xDai bridge: 0x4d1c96b9a49c4469a0b720a22b74b034eddfe051
+      4. New address for xDai bridge: 0x2245bFAD58a6cD50e9e413084d4091C497281911
    3. Giveth:
       1. Old address for AMB: 0x105cd22ed3d089bf5589c59b452f9de0796ca52d
       2. New address for AMB: 0xE9fc29AE64c2923FeBb615cB016b77aF9492EBcE
-      3. Old address for xDAI bridge: 0xc073c8e5ed9aa11cf6776c69b3e13b259ba9f506
-      4. New address for xDAI bridge: 0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13
+      3. Old address for xDai bridge: 0xc073c8e5ed9aa11cf6776c69b3e13b259ba9f506
+      4. New address for xDai bridge: 0xC9f0d7e76E7970590e217c57Af5d2B7d07A62c13
    4. Kleros:
       1. Old address for AMB: 0x7117f73afbdec3221bdd50ddcbf73204b3998302
       2. New address for AMB: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade
-      3. Old address for xDAI bridge: 0x7117f73afbdec3221bdd50ddcbf73204b3998302
-      4. New address for xDAI bridge: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade
+      3. Old address for xDai bridge: 0x7117f73afbdec3221bdd50ddcbf73204b3998302
+      4. New address for xDai bridge: 0x156c0DAAb0cD73c224a424a781866d35f0F8Fade
 
 Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x32c52cf71d61d8134b5bdbc7e96dd2ed8cbe618a2fbd8d4bcaab91e3595bbf17)
 
@@ -64,7 +64,7 @@ Tx on GC: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA9
 
 🗳 Justification:
 
-1. Due to the compromised github bot, attacker was able to access the private key of Hopr's bridge validator. As a security hardening process, we're replacing the Hopr's bridge validator address on AMB and xDAI bridge validator contract.
+1. Due to the compromised github bot, attacker was able to access the private key of Hopr's bridge validator. As a security hardening process, we're replacing the Hopr's bridge validator address on AMB and xDai bridge validator contract.
 
 Old address: `0x6236925FF8Aa09f29f1609a9BcD54Af20e4be6B4`  
 New address: `0xb54B5572F3C4f70fF3cc8F67C19C8cddb838FBaA`
@@ -86,7 +86,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 🗳 Justification:
 
-1. Due to the [hack](https://x.com/gnosispay/status/2061372038628196356?s=20) related to Gnosis Pay's Delay Module, we decided to halt the outflow ot major tokens on Omnibridge & xDAI bridge from Gnosis Chain to Ethereum as precautionary measure.
+1. Due to the [hack](https://x.com/gnosispay/status/2061372038628196356?s=20) related to Gnosis Pay's Delay Module, we decided to halt the outflow ot major tokens on Omnibridge & xDai bridge from Gnosis Chain to Ethereum as precautionary measure.
    |Token | Address on Gnosis Chain |
    |------------|---------------------------------------------|
    | GNO | 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb |
@@ -108,7 +108,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
    | EURC | 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6 |
    | LINK | 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2 |
    | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
-   | xDAI | Native token on Gnosis Chain |
+   | xDai | Native token on Gnosis Chain |
 
 Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea2201019546f72352c28d9dfb45877d7a2ecef394d2/)
 
@@ -118,11 +118,11 @@ Tx on Gnosis Chain: [url](https://gnosisscan.io/tx/0xc2d0f232b065c65416acea22010
 
 🗳 Justification:
 
-One of CoW's developer's laptop is compromised and it has access to bridge validator instance. As a security hardening process, we're replacing the CoW's bridge validator address on AMB and xDAI bridge validator contract.
+One of CoW's developer's laptop is compromised and it has access to bridge validator instance. As a security hardening process, we're replacing the CoW's bridge validator address on AMB and xDai bridge validator contract.
 Old CoW bridge validator address on AMB: `0x674c97db4ce6cac04a124d745979f3e4cba0e9f0`
-Old CoW bridge alidator address on xDAI bridge: `0x587c0d02b40822f15f05301d87c16f6a08aaddde`
+Old CoW bridge alidator address on xDai bridge: `0x587c0d02b40822f15f05301d87c16f6a08aaddde`
 New CoW bridge validator address on AMB: `0xCC46a3873BfCaa08a6a946a308bB621535D6E6Dd`  
-New CoW bridge alidator address on xDAI bridge: `0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656`
+New CoW bridge alidator address on xDai bridge: `0xAeE7C90Ef0fC461ec63c4d451B12c340642bc656`
 
 Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xdde0b589cb6654688b614f3c8d0e248fb9c4e4267785b1dddd9205feff33431c)
 Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xd7de756475bfc6a46b0673bcd9777038378b5e7dc3b40090ab21d00b2710dbef)
@@ -151,11 +151,11 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 ✅ Implemented: Nov 26, 2025
 
-## USDS migration on xDAI Bridge: sDAI replaced by sUSDS
+## USDS migration on xDai Bridge: sDAI replaced by sUSDS
 
 🗳 Justification:
 
-1. This is the follow up from [GIP-118: Should sDAI be replaced by sUSDS in the bridge?](https://forum.gnosis.io/t/gip-118-should-sdai-be-replaced-by-susds-in-the-bridge/9354). xDAI bridge on both Ethereum and Gnosis Chain is upgraded to new implementation.
+1. This is the follow up from [GIP-118: Should sDAI be replaced by sUSDS in the bridge?](https://forum.gnosis.io/t/gip-118-should-sdai-be-replaced-by-susds-in-the-bridge/9354). xDai bridge on both Ethereum and Gnosis Chain is upgraded to new implementation.
 
 Upgrade Tx on Ethereum: [url](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x7309151c47d50ea0bac9eac0b28a13b8c2904857d7ddd6c65653336d9b53acc0)
 Upgrade Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0xb6d709f3f6fe73958bf4de18a2d8ba81b8981a18e0c17c9f608e61c03ec0e166)
@@ -176,7 +176,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 🗳 Justification:
 
-1. Due to the [BalancerV2 exploit](https://x.com/Balancer/status/1986104426667401241), we decided to halt the outflow ot major tokens on Omnibridge & xDAI bridge from Gnosis Chain to Ethereum as precautionary measure.
+1. Due to the [BalancerV2 exploit](https://x.com/Balancer/status/1986104426667401241), we decided to halt the outflow ot major tokens on Omnibridge & xDai bridge from Gnosis Chain to Ethereum as precautionary measure.
    |Token | Address on Gnosis Chain |
    |------------|---------------------------------------------|
    | GNO | 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb |
@@ -198,7 +198,7 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
    | EURC | 0x54E4cB2a4Fa0ee46E3d9A98D13Bea119666E09f6 |
    | LINK | 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2 |
    | BAL | 0x7eF541E2a22058048904fE5744f9c7E4C57AF717 |
-   | xDAI | Native token on Gnosis Chain |
+   | xDai | Native token on Gnosis Chain |
 
 Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x472e844f33471d49f93af3e106cea45f855e70804a239cc6959be89b721f4fd3)
 
@@ -215,14 +215,14 @@ Tx on Gnosis Chain: [url](https://app.safe.global/transactions/tx?safe=gno:0x7a4
 
 ✅ Implemented: May 2, 2025
 
-## Upgrade xDAI implementation contract for Hashi integraion, replacing Metacartel with Monerium
+## Upgrade xDai implementation contract for Hashi integraion, replacing Metacartel with Monerium
 
 🗳 Justification:
 
-1. Upgrade xDAI proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
-   1. Foreign xDAI implementation contract: [0xb54042F5bA4B048fEa54aaE70abbbe41AC716299](https://etherscan.io/address/0xb54042F5bA4B048fEa54aaE70abbbe41AC716299#readContract), version: 9
-   2. Home xDAI Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosisscan.io/address/0xb740472c650fe949931b9df0cb253b48c80c82de#readContract), version: 6
-2. set Hashi Manager for xDAI Bridge
+1. Upgrade xDai proxy contract to the new Hashi integrated bridge contract according to https://forum.gnosis.io/t/gip-93-should-gnosisdao-support-the-integration-of-hashi-within-gnosis-chains-canonical-bridges/8245:
+   1. Foreign xDai implementation contract: [0xb54042F5bA4B048fEa54aaE70abbbe41AC716299](https://etherscan.io/address/0xb54042F5bA4B048fEa54aaE70abbbe41AC716299#readContract), version: 9
+   2. Home xDai Implementation contract: [0xb740472c650fe949931b9df0cb253b48c80c82de](https://gnosisscan.io/address/0xb740472c650fe949931b9df0cb253b48c80c82de#readContract), version: 6
+2. set Hashi Manager for xDai Bridge
    1. Hashi Manager on ETH: [0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD](https://etherscan.io/address/0x9acCFAD714A1e670CD1f6dc666FE892d1d5547BD)
    2. Hashi Manager on Gnosis Chain: [0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49](https://gnosisscan.io/address/0x60Aa15198a3AdfC86FF15B941549A6447B2dDB49)
 3. Replace MetaCartel in Bridge governors with Monerium
@@ -312,19 +312,19 @@ Bridged OLAS token on Gnosis: https://gnosisscan.io/address/0xce11e14225575945b8
 
 ✅ Implemented: Nov 9, 2023
 
-## Savings xDAI launch - Initiate sDAI interest bridging and increase xDAI bridge limits.
+## Savings xDAI launch - Initiate sDAI interest bridging and increase xDai bridge limits.
 
-🗳 Justification: This is a follow-up on the previous proposal. After the successful upgrade of the xDAI bridge to deploy reserves on the sDAI vault, we launched the Savings xDAI vault on Gnosis chain which will distribute the interest earned on mainnet to holders of the sDAI token on Gnosis chain. We [set interest receiver](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x933bd8409a8f46789ee29d50af1c10ed40378e05705681c8530aa744eb322ac5) to the interest receiver contract on Gnosis Chain.
+🗳 Justification: This is a follow-up on the previous proposal. After the successful upgrade of the xDai bridge to deploy reserves on the sDAI vault, we launched the Savings xDAI vault on Gnosis chain which will distribute the interest earned on mainnet to holders of the sDAI token on Gnosis chain. We [set interest receiver](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0x933bd8409a8f46789ee29d50af1c10ed40378e05705681c8530aa744eb322ac5) to the interest receiver contract on Gnosis Chain.
 
-We [increased the limits](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x330f022997f6cb47b9d9643ebf032871bc0ffb82a0a3ee8e1020649de22dc6ec) for incoming xDAI transactions to Gnosis chain as we are anticipating higher volumes due this launch. Previous value: 10 million. New value: 15 million.
+We [increased the limits](https://app.safe.global/transactions/tx?safe=gno:0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd&id=multisig_0x7a48Dac683DA91e4faa5aB13D91AB5fd170875bd_0x330f022997f6cb47b9d9643ebf032871bc0ffb82a0a3ee8e1020649de22dc6ec) for incoming xDai transactions to Gnosis chain as we are anticipating higher volumes due this launch. Previous value: 10 million. New value: 15 million.
 
 ✅ Implemented: Oct 5, 2023
 
-## Upgrade xDAI bridge to support investing in sDAI vault.
+## Upgrade xDai bridge to support investing in sDAI vault.
 
-🗳 Justification: We [upgrade](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xd8683bccfe39ace95a1da5f58a5c9a83dc324de39ce07f11fcffb5c2397ca96c) [xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) to new implementation version in order to support investing DAI from the bridge contract into sDAI vault from Spark Protocol. This upgrade only implements changes on Ethereum, and the next phase will be on Gnosis Chain. The implementation contract is [audited by Omega and ChainSafe](../audits.md#xdai-bridge-upgrade-audit-by-omega-and-chainsafe). For more details, please refer to [docs](../tokenbridge/xdai-bridge.md#savings-xdai)
+🗳 Justification: We [upgrade](https://app.safe.global/transactions/tx?safe=eth:0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6&id=multisig_0x42F38ec5A75acCEc50054671233dfAC9C0E7A3F6_0xd8683bccfe39ace95a1da5f58a5c9a83dc324de39ce07f11fcffb5c2397ca96c) [xDai bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) to new implementation version in order to support investing DAI from the bridge contract into sDAI vault from Spark Protocol. This upgrade only implements changes on Ethereum, and the next phase will be on Gnosis Chain. The implementation contract is [audited by Omega and ChainSafe](../audits.md#xdai-bridge-upgrade-audit-by-omega-and-chainsafe). For more details, please refer to [docs](../About%20Token%20Bridges/xdai-bridge.md#savings-xdai)
 
-We call the method `upgradeTo()` on the xDAI bridge proxy contract (0x4aa42145aa6ebf72e164c9bbc74fbd3788045016) with parameters: version 8 and impl. 0x166124b75c798cedf1b43655e9b5284ebd5203db.
+We call the method `upgradeTo()` on the xDai bridge proxy contract (0x4aa42145aa6ebf72e164c9bbc74fbd3788045016) with parameters: version 8 and impl. 0x166124b75c798cedf1b43655e9b5284ebd5203db.
 
 We call the `initializeInterest()` with the following parameters.
 
@@ -377,19 +377,19 @@ More details on the design: https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn
 
 ✅ Implemented: February 23, 2023
 
-## Add Karpatkey and remove Syncnode from the set of validators of AMB & xDAI Bridges
+## Add Karpatkey and remove Syncnode from the set of validators of AMB & xDai Bridges
 
 🗳 Justification: Syncnode team requested to be removed from the validator set. In the same time addition of Karpatkey validator creates additional reliability and decentralization of validators set.
 
 ✅ Implemented: December 4, 2022
 
-## Remove Funds from lending protocols AAVE and Compound and disable Interest Function on Omni Bridge and xDAI Bridge
+## Remove Funds from lending protocols AAVE and Compound and disable Interest Function on Omni Bridge and xDai Bridge
 
 🗳 Justification: reduce risk and exposure during the uncertainty that came with the merge. After the merge, a new strategy must be developed in order to define how to approach this type of investment considering the implications related to transparency to the users and the risk involved.
 
 ✅ Implemented: September 14, 2022
 
-## Remove Former xDai Team Validators from AMB & xDAI Bridges
+## Remove Former xDai Team Validators from AMB & xDai Bridges
 
 🗳 Justification: xDai validators were important at the early stages of the project to ensure operational execution and bridge functionality. Now, with increased community involvement and ecosystem maturity, the next step is to further decentralize processes and remove the former xDai team.
 
@@ -419,7 +419,7 @@ More details on the design: https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn
 
 ✅ Implemented: May 24, 2022
 
-## Increase Limits for xDAI, USDC and USDT
+## Increase Limits for xDai, USDC and USDT
 
 🗳 Justification: Due to market conditions, stablecoin bridge limits should be temporarily raised to ensure leveraged positions are not liquidated due to inability to bridge.
 
@@ -468,7 +468,7 @@ More details on the design: https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn
 
 🗳 Justification: Increase the bridge security by decreasing the allowable daily limits for the following assets:
 
-- xDAI - 3’000’000 (4%)
+- xDai - 3’000’000 (4%)
 - USDC - 2’500’000 (3%)
 - USDT - 1’500’000 (4%)
 - WETH - 250 (3%)
@@ -539,7 +539,7 @@ More details on the design: https://hackmd.io/@wdyZgTm3RrOsm-rhXDXEHA/BJ_7ExKgn
 
 ## Increase finalization time to 20 blocks
 
-🗳 Justification: To increase security, finalization time on Gnosis for the xDAI TokenBridge and for the ETH-xDAI Arbitrary Message Bridge increased to 20 blocks from previous 8-12.
+🗳 Justification: To increase security, finalization time on Gnosis for the xDai TokenBridge and for the ETH-xDai Arbitrary Message Bridge increased to 20 blocks from previous 8-12.
 
 ✅ Implemented: October 18, 2021
 

@@ -14,7 +14,7 @@ To monitor the network, options include ethstats, forkmon, beacon.gnosischain, a
 
 ![Prometheus-Grafana-NodeExporter](../../../static/img/node/prometheus-grafana.png)
 
-To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://github.com/ethstaker/ethstaker-guides/blob/main/monitoring.md).
+To set up these tools, please refer to the excellent guide from ethstaker on [how to do monitoring for an Ethereum validator](https://docs.ethstaker.org/guides/monitoring-maintenance/monitoring/).
 
 You may also refer to the [Ethereum Setup Instructions ](https://launchpad.ethereum.org/en/)and [CoinCashew's guide](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-i-installation/monitoring-your-validator-with-grafana-and-prometheus) for best monitoring practices.
 
@@ -151,38 +151,17 @@ Forkmon (Fork monitor) is another tool to monitor Node's status.
 - Gnosis Chain: https://forkmon.gnosischain.com/
 - Chiado: https://forkmon.chiadochain.net/
 
-### d14n.info
-
-:::note
-The site is deprecated
-:::
-[d14n.info](https://d14n.info/) is a real-time dashboard that measures decentralization of Gnosis Chain and Ethereum networks.
-
-![d14n dashboard](../../../static/img/node/monitor-node/d14n.png)
-
-### GnosisPools.info
-
-[GnosisPools.info](https://gnosispools.info/d/Pz05j7dVk/gnosispools-public?orgId=1&refresh=5m&from=now-24h&to=now) allows you to monitor the performance of Gnosis consensus staking pool. Some of the metrics you can track include:
-
-- % of inactive validators
-- Delta in rewards/penalties between consecutive epochs
-- Proposed and missed blocks for each epoch
-
 ### Block explorer
 
 #### Execution Layer
 
-- [Gnosisscan](https://gnosisscan.io/) provides data about blocks, transactions, validator's reward on Execution Layer, etc.
+- [Gnosisscan](https://gnosisscan.io/), the Blockscout explorer for Gnosis Chain, provides data about blocks, transactions, validator's reward on Execution Layer, etc.
 
-  To check your Execution Layer Reward (in xDAI):
+  To check your Execution Layer Reward (in xDai):
 
   1. Search your `fee-recipient-address` that is set when [running validator](../manual/README.md#step-4-run-a-validator)
-  2. Click **Validated Blocks**
-     ![GnosisScan Block Validated by Validator](../../../static/img/node/monitor-node/gnosisscan-validated-block.png)
-
-- [Blockscout](https://gnosis.blockscout.com/) is another block explorer similar to Gnosisscan.
-
-  ![Blockscout Block Validator by Validator](../../../static/img/node/monitor-node/blockscout-validated-block.png)
+  2. Open the **Blocks validated** tab
+     ![Blockscout Block Validator by Validator](../../../static/img/node/monitor-node/blockscout-validated-block.png)
 
 #### Consensus Layer
 

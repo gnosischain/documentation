@@ -4,6 +4,7 @@
     "collapsible": true,
     "collapsed": true,
     "link": {
-      "type": "generated-index"
+      "type": "generated-index",
+      "description": "Generate validator keys, run a validator client, deposit GNO and check that your Gnosis validators are active."
     }
   }
