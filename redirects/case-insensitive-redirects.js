@@ -19,7 +19,7 @@ function redirectPage(to) {
 }
 
 module.exports = (redirects) =>
-  function caseInsensitiveRedirects() {
+  function caseInsensitiveRedirects({ siteConfig }) {
     return {
       name: "case-insensitive-redirects",
       async postBuild({ outDir }) {
@@ -27,7 +27,7 @@ module.exports = (redirects) =>
           const dir = path.join(outDir, from);
           await fs.mkdir(dir, { recursive: true });
           try {
-            await fs.writeFile(path.join(dir, "index.html"), redirectPage(to), { flag: "wx" });
+            await fs.writeFile(path.join(dir, "index.html"), redirectPage(siteConfig.baseUrl.replace(/\/$/, "") + to), { flag: "wx" });
           } catch (err) {
             if (err.code !== "EEXIST") throw err;
           }

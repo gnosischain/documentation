@@ -47,7 +47,7 @@ There are several ways to create a new file. Here we:
 /** This example code is designed to quickly deploy an example contract using Remix.
  *  If you have never used Remix, try our example walkthrough: https://docs.chain.link/docs/example-walkthrough
  *  You will need xDai to deploy on Gnosis.
- *     - xDai Faucet: https://docs.gnosischain.com/tools/faucets
+ *     - xDai Faucet: https://www.gnosis.io/docs/tools/Faucets
  *     - LINK address on xDai: 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2
  */
 

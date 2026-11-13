@@ -47,9 +47,9 @@ xDAI
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/xdai.png
+https://www.gnosis.io/docs/img/tokens/xdai.png
 ```
-<a href="/img/tokens/xdai.png"><img src="/img/tokens/xdai.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/xdai.png').default}><img src={require('@site/static/img/tokens/xdai.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
   </TabItem>
   <TabItem value="ctest" label="Chiado Testnet">
@@ -67,9 +67,9 @@ Chiado xDai
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/chiado-xdai.png
+https://www.gnosis.io/docs/img/tokens/chiado-xdai.png
 ```
-<a href="/img/tokens/chiado-xdai.png"><img src="/img/tokens/chiado-xdai.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/chiado-xdai.png').default}><img src={require('@site/static/img/tokens/chiado-xdai.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
   </TabItem>
 </Tabs>

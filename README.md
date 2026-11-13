@@ -1,7 +1,7 @@
 # Gnosis Chain Documentation
 
 ## Overview
-This repo contains the contents for our docs deployed [here](https://docs.gnosischain.com).
+This repo contains the contents for our docs deployed [here](https://www.gnosis.io/docs).
 
 The website is built using [Docusaurus 2](https://docusaurus.io/).
 ## Contributing

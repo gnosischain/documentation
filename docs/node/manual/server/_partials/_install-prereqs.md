@@ -1,3 +1,5 @@
+import Link from '@docusaurus/Link';
+
 <table>
   <thead>
     <tr>
@@ -17,7 +19,7 @@
       </ul> 
       </td>
       <td>
-        Check <a href="/node/#requirements" target="_blank">requirements</a> section.
+        Check <Link to="/node/#requirements" target="_blank">requirements</Link> section.
       </td>
     </tr> 
     <tr>

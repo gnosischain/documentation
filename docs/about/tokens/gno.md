@@ -32,9 +32,9 @@ GNO
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/gno.png
+https://www.gnosis.io/docs/img/tokens/gno.png
 ```
-<a href="/img/tokens/gno.png"><img src="/img/tokens/gno.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/gno.png').default}><img src={require('@site/static/img/tokens/gno.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
@@ -60,9 +60,9 @@ GNO
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/gno.png
+https://www.gnosis.io/docs/img/tokens/gno.png
 ```
-<a href="/img/tokens/gno.png"><img src="/img/tokens/gno.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/gno.png').default}><img src={require('@site/static/img/tokens/gno.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
 </TabItem>
 <TabItem value="chiado" label="Chiado Testnet">
@@ -89,7 +89,7 @@ GNO
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/gno.png
+https://www.gnosis.io/docs/img/tokens/gno.png
 ```
 
 </TabItem>

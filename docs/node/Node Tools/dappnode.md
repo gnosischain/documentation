@@ -83,7 +83,7 @@ Be patient, the installation process can take several minutes. You can check all
   <li>
     Choose a secure password and confirm. You will be shown a mnemonic seed phrase. Write down and store your keystore password and mnemonic safely offline.
     <br/>
-    <img src="/img/node/dappnode-step3.png" alt="DappNode Step 3"/>
+    <img src={require('@site/static/img/node/dappnode-step3.png').default} alt="DappNode Step 3"/>
     Following execution, the path you defined for <code>/path/to/validator_keys</code> will contain the keystores and <code>deposit_data*.json</code> file.
   </li>
 </ol>

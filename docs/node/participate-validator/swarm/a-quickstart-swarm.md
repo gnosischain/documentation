@@ -41,7 +41,7 @@ While it is possible to run multiple Bee nodes on a single machine, due to the h
 ### Software 
 
 * A computer running a supported version of Linux (almost all commonly used distros should work). macOS will also work but you may need to slightly modify some commands.
-* A Gnosis Chain RPC endpoint (either by running your own node or the [free RPC endpoint](https://xdai.fairdatasociety.org) offered from the Fair Data Society. Other free public options are available at the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/). 
+* A Gnosis Chain RPC endpoint (either by running your own node or the [free RPC endpoint](https://xdai.fairdatasociety.org) offered from the Fair Data Society. Other free public options are available at the [Gnosis Chain docs](/tools/RPC%20Providers/). 
 * (Optional) [jq utility](https://jqlang.github.io/jq/) for formatting API output. 
 * (Optional) [bashtop utility] for monitoring processes (such as our Bee node).
 

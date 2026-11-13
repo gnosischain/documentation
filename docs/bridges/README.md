@@ -6,13 +6,15 @@ description: How to move tokens and messages between Ethereum and Gnosis Chain. 
 keywords: [gnosis bridges, gnosis bridge, omnibridge, xdai bridge, arbitrary message bridge, amb, bridge explorer, third-party bridges]
 ---
 
+import Link from '@docusaurus/Link';
+
 # Bridges
 
 Gnosis Bridge moves tokens and messages between Ethereum and Gnosis Chain. Bridge stablecoins in to get xDai for gas, bring ERC-20 tokens across, or send data from a contract on one chain to a contract on the other.
 
 <div className="eez-cta-row">
   <a className="button button--primary button--lg" href="https://bridge.gnosischain.com">Open Gnosis Bridge</a>
-  <a className="button button--secondary button--lg" href="/bridges/usebridges">How to use it</a>
+  <Link className="button button--secondary button--lg" to="/bridges/usebridges">How to use it</Link>
 </div>
 
 ## Which bridge do I need?
