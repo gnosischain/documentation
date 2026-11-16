@@ -4,6 +4,7 @@
     "collapsible": true,
     "collapsed": true,
     "link": {
-      "type": "generated-index"
+      "type": "generated-index",
+      "description": "The two tokens of Gnosis Chain: GNO, which validators stake to secure the chain, and xDai, the stablecoin used to pay fees."
     }
   }

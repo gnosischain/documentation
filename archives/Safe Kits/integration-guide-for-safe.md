@@ -1,10 +1,17 @@
 ---
-sidebar_position: 2
 title: Generate your Safe Smart Account
-sidebar_label: Generate your Safe Smart Account
-description: This is an integration guide that uses Auth Kit and On Ramp kit.
-keywords: [safe,account-abstraction,AA, smart wallet, smart account]
+description: Generating a Safe Smart Account on Gnosis Chain with Safe's Auth Kit and Protocol Kit. Archived - Auth Kit is deprecated.
+keywords: [safe, auth kit, protocol kit, account-abstraction, smart account, deprecated, archived]
 ---
+
+# Generate your Safe Smart Account (Archived)
+
+:::danger Archived
+This guide is built on Safe's **Auth Kit, which Safe removed from the Safe Core SDK in September 2024**; its npm package, `@safe-global/auth-kit`, is deprecated. Safe now recommends integrating an auth provider directly: see [Safe signers](https://docs.safe.global/sdk/signers).
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
+
 ### In this guide, you will learn the very first steps to generate safe smart account and execute transactions on Gnosis Chain.
 
 
@@ -141,4 +148,3 @@ const createSafe = async () => {
 If you would like to check out the full code implementation of how to use `SafeAuthPack` and Protocol Kit, you can checkout this code repository hosted on [Github](https://github.com/vanshika-srivastava/safe-gnosis-chain/blob/2baf5926250adf6aabe963c7bd053afc844e46da/src/App.jsx#L14).
 
 #### We would be moving to next guide implementation which is for using the [Relay Kit by Gelato](./gelato.md). 
-

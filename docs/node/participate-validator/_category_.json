@@ -4,6 +4,7 @@
     "collapsible": true,
     "collapsed":true,
     "link": {
-      "type": "generated-index"
+      "type": "generated-index",
+      "description": "Other ways to take part in the Gnosis network: stake GNO through a liquid staking provider, or run a Swarm Bee node on Gnosis Chain."
     }
   }

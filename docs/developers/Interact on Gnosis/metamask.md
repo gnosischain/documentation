@@ -64,7 +64,7 @@ var getAccount = async function(){
 ```
 ## Add Custom Token to MetaMask
 In addition to directing the user to [manually import tokens using the MetaMask UI](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H),
-you can add code to your dApp's front end to prompt the user to add it to their MetaMask wallet automatically. This can be done using the [`wallet_watchAsset` method](https://docs.metamask.io/guide/rpc-api.html#wallet-watchasset). To do so, add the following code to your dApp's front end:
+you can add code to your dApp's front end to prompt the user to add it to their MetaMask wallet automatically. This can be done using the [`wallet_watchAsset` method](https://docs.metamask.io/metamask-connect/evm/reference/json-rpc-api/wallet_watchAsset/). To do so, add the following code to your dApp's front end:
 ```javascript showLineNumbers
 const tokenAddress = 'custom-token-address-on-gnosis';
 const tokenSymbol = 'your-token-symbol';
@@ -103,7 +103,6 @@ This documentation site is built in ReactJS, check [this sample page](/live-samp
 
 ## More info
 
-- Read more about [Connect Users To Layer 2 Networks With The MetaMask Custom Networks API](https://consensys.net/blog/metamask/connect-users-to-layer-2-networks-with-the-metamask-custom-networks-api/) on the MetaMask Blog.
 - [EIP-3085](https://eips.ethereum.org/EIPS/eip-3085) is an [Ethereum Improvement Proposal](https://eips.ethereum.org/) that defines an RPC method for adding Ethereum-compatible chains to wallet applications.
-- [Full API for the window.ethereum object](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents)
+- [Full API for the window.ethereum object](https://docs.metamask.io/metamask-connect/evm/reference/provider-api/)
 

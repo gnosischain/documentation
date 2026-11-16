@@ -9,13 +9,13 @@ keywords: [Foundry, Forge, Gnosis, Deployment, Smart, Chain, Contract, EVM, Ethe
 
 #### Foundry is a smart contract development toolchain.
 
-Follow the [Foundry documentation](https://book.getfoundry.sh/getting-started/installation) for general installation and overview.
+Follow the [Foundry documentation](https://www.getfoundry.sh/introduction/installation) for general installation and overview.
 
 Foundry consists of:
 
-- [Forge](https://github.com/foundry-rs/foundry/blob/master/forge): Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- [Cast](https://github.com/foundry-rs/foundry/blob/master/cast): Swiss army knife for interacting with EVM smart contracts, sending      transactions and getting chain data.
-- [Anvil](https://github.com/foundry-rs/foundry/blob/master/anvil): local Ethereum node, akin to Ganache, Hardhat Network.
+- [Forge](https://www.getfoundry.sh/forge): Ethereum testing framework (like Truffle, Hardhat and DappTools).
+- [Cast](https://www.getfoundry.sh/cast): Swiss army knife for interacting with EVM smart contracts, sending      transactions and getting chain data.
+- [Anvil](https://www.getfoundry.sh/anvil): local Ethereum node, akin to Ganache, Hardhat Network.
 
 ## Compile your Gnosis Contract
 
@@ -26,7 +26,7 @@ forge build
 ```
 
 
-Additional compilation options can be found [here](https://book.getfoundry.sh/reference/forge/forge-build).
+Additional compilation options can be found [here](https://www.getfoundry.sh/reference/forge/build).
 
 ## Deploy your Contract
 
@@ -40,13 +40,13 @@ Because Solidity files may contain multiple contracts, ```:<YourContract>``` (Se
 <TabItem value="chiado" label="Chiado Testnet">
 
 ```bash
-forge create --rpc-url https://rpc.chiadochain.net --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
+forge create --rpc-url https://rpc.chiadochain.net --private-key <your_private_key> src/<YourContract>.sol:<YourContract> --broadcast
 ```
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
 
 ```bash
-forge create --rpc-url https://rpc.gnosischain.com --private-key <your_private_key> src/<YourContract>.sol:<YourContract>
+forge create --rpc-url https://rpc.gnosischain.com --private-key <your_private_key> src/<YourContract>.sol:<YourContract> --broadcast
 ```
 </TabItem>
 </Tabs>
@@ -62,6 +62,7 @@ Use the ```--constructor-args``` flag to pass arguments to the constructor:
 forge create --rpc-url https://rpc.chiadochain.net \
     --constructor-args <argument-1> <argument-2...>\
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
+    --broadcast
 ```
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
@@ -70,6 +71,7 @@ forge create --rpc-url https://rpc.chiadochain.net \
 forge create --rpc-url https://rpc.gnosischain.com \
     --constructor-args <argument-1> <argument-2...>\
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
+    --broadcast
 ```
 </TabItem>
 </Tabs>
@@ -88,6 +90,7 @@ Get a free API key from the [Blockscout developer portal](https://dev.blockscout
 ```bash
 forge create --rpc-url https://rpc.chiadochain.net \
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
+    --broadcast \
     --verify \
     --verifier blockscout \
     --verifier-url https://gnosis-chiado.blockscout.com/api/ \
@@ -99,6 +102,7 @@ forge create --rpc-url https://rpc.chiadochain.net \
 ```bash
 forge create --rpc-url https://rpc.gnosischain.com \
     --private-key <your_private_key> src/<YourToken>.sol:<YourToken> \
+    --broadcast \
     --verify \
     --verifier blockscout \
     --verifier-url https://gnosisscan.io/api/ \
@@ -107,6 +111,6 @@ forge create --rpc-url https://rpc.gnosischain.com \
 </TabItem>
 </Tabs>
 
-For information regarding pre-existing contract verification, visit the [official Forge documentation](https://book.getfoundry.sh/forge/deploying#verifying-a-pre-existing-contract).
+For information regarding pre-existing contract verification, visit the [official Forge documentation](https://www.getfoundry.sh/guides/deploying-contracts#manual-verification).
 
-For further Contract Verification information, visit our [official page](/developers/verify/)
+For further Contract Verification information, visit our [official page](/developers/Verify%20Smart%20Contracts/)

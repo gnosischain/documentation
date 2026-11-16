@@ -8,14 +8,14 @@ keywords: [xdai bridge, bridge, dai, ethereum, gnosis bridge]
 # xDai Bridge
 
 :::info
-The xDAI bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDAI.  
+The xDai bridge can be used in https://bridge.gnosischain.com by selecting DAI/xDai.  
 Please avoid using the legacy xDai bridge: https://bridge.legacy.gnosischain.com/.
 
 :::
 
 :::info
 
-DAI is replaced with USDS as the default accepted token on Ethereum, while xDAI will continue to be minted on Gnosis Chain. Please refer to [here](https://github.com/gnosischain/tokenbridge-contracts/blob/xdaibridge/USDSMigration.md) for details regarding the contracts, workflow pre & post migration.
+DAI is replaced with USDS as the default accepted token on Ethereum, while xDai will continue to be minted on Gnosis Chain. Please refer to [here](https://github.com/gnosischain/tokenbridge-contracts/blob/xdaibridge/USDSMigration.md) for details regarding the contracts, workflow pre & post migration.
 
 :::
 
@@ -45,7 +45,7 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 
 | Contract                      | Ethereum Address                                                                                                                            |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract          | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
+| xDai Bridge Contract          | [eth:0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract) |
 | Validator Management Contract | [eth:0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E](https://etherscan.io/address/0xe1579dEbdD2DF16Ebdb9db8694391fa74EeA201E#code)              |
 | BridgeRouter Proxy            | [eth:0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0](https://etherscan.io/address/0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0)                   |
 
@@ -56,7 +56,7 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 
 | Contract                      | Gnosis Address                                                                                                                                  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract          | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) |
+| xDai Bridge Contract          | [gno:0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) |
 | Block Reward Contract         | [gno:0x481c034c6d9441db23Ea48De68BCAe812C5d39bA](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA)              |
 | Validator Management Contract | [gno:0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D](https://gnosisscan.io/address/0xB289f0e6fBDFf8EEE340498a56e1787B303F1B6D#readProxyContract)   |
 | ERC20ToNative Helper Contract | [gno:0xe30269bc61E677cD60aD163a221e464B7022fbf5](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) |
@@ -70,9 +70,9 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 
 | Contract                       | Address                                                                                                                                            |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| xDAI Bridge Contract (Sepolia) | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2)                      |
-| Validator Contract (Sepolia)   | [0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59](https://goerli.etherscan.io/address/0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59)                       |
-| xDAI Bridge Contract (Chiado)  | [0xccA0Dc2A058884e62082312F09541cC7566406f0](https://gnosis-chiado.blockscout.com/address/0xccA0Dc2A058884e62082312F09541cC7566406f0)              |
+| xDai Bridge Contract (Sepolia) | [0x180ff98e734415ecd35fac3d32940e1b45fad0a2](https://sepolia.etherscan.io/address/0x180ff98e734415ecd35fac3d32940e1b45fad0a2)                      |
+| Validator Contract (Sepolia)   | [0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59](https://sepolia.etherscan.io/address/0x3Ea1A9f92A99bC8e820541E7bed5d1F2419fFe59)                       |
+| xDai Bridge Contract (Chiado)  | [0xccA0Dc2A058884e62082312F09541cC7566406f0](https://gnosis-chiado.blockscout.com/address/0xccA0Dc2A058884e62082312F09541cC7566406f0)              |
 | Validator Contract (Chiado)    | [0x138190e157d7604B8f89637AA10508Abd4c673B2](https://gnosis-chiado.blockscout.com/address/0x138190e157d7604B8f89637AA10508Abd4c673B2)              |
 | ERC20ToNative Helper Contract  | [0x9866D9d242Ac9D7EC4AC56ce61D0d957A02FD8e2](https://gnosis-chiado.blockscout.com/address/0x9866D9d242Ac9D7EC4AC56ce61D0d957A02FD8e2#readContract) |
 
@@ -81,7 +81,7 @@ Once USDS is bridged into the xDai bridge, the xDai bridge contract on Gnosis no
 </Tabs>
 
 :::info
-The current deployment of xDAI bridge contract is from https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge, with the commit hash `f53666fd4f832b1dde479b701d39eddc10b6877c`
+The current deployment of xDai bridge contract is from https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge, with the commit hash `f53666fd4f832b1dde479b701d39eddc10b6877c`
 :::
 
 References:  
@@ -109,7 +109,7 @@ Daily Limit is reset according to the following logic: the smart contract stores
 **Claim tokens on Ethreum**
 ![](../../../static/img/bridges/xdaibridge/bridge-router-claim-token.svg)
 
-**Relay xDAI from Gnosis**
+**Relay xDai from Gnosis**
 ![](../../../static/img/bridges/xdaibridge/xdai-transfer-usds-contract.svg)
 
 **Callflow**
@@ -123,18 +123,18 @@ The [xDai token](/about/tokens/xdai) is minted when USDS\*\* is transferred from
 
 :::warning
 
-Calling `transfer` on Foreign xDAI bridge will no longer mint xDAI on Gnosis Chain, and users must use `relayTokens` instead.
+Calling `transfer` on Foreign xDai bridge will no longer mint xDai on Gnosis Chain, and users must use `relayTokens` instead.
 For more detail, please check [here](https://forum.gnosis.io/t/decommissioning-of-the-transfer-function-on-xdai-bridge/8575).
 
 :::
 
 1. Users initiate the relay transaction on Ethereum by approving the bridge contract and calling the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) `relayTokens(address recipient, uint256 value)`.
 2. `UserRequestForAffirmation(address recipient, uint256 value, bytes32 nonce)` event is emitted from the [bridge contract](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016).
-3. Bridge validators observe the event and call `executeAffirmation(address recipient, uint256 value, bytes32 nonce)` function on [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
-4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDAI to mint.
-5. The [block reward contract](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDAI balance. `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)` event is emitted within the same transaction and receiver address will be credited for the equivalent xDAI amount.
+3. Bridge validators observe the event and call `executeAffirmation(address recipient, uint256 value, bytes32 nonce)` function on [Home xDai bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
+4. When enough confirmations are collected (4/7 majority), the bridge contract on Gnosis Chain calls the block reward contract to record the receiver(s) and amount(s) of xDai to mint.
+5. The [block reward contract](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) is called by the consensus engine to update user's xDai balance. `AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge)` event is emitted within the same transaction and receiver address will be credited for the equivalent xDai amount.
 
-User may check the balance change visually on [Gnosisscan](https://gnosisscan.io/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C) or programmatically using [eth_getBalance](https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_getbalance) API by querying the balance on block number where `AddedReceiver` event is emitted.
+User may check the balance change visually on [Gnosisscan](https://gnosisscan.io/address/0xE05FB316eB8C4ba7288D43c1bd87BE8a8d16761C) or programmatically using [eth_getBalance](https://docs.infura.io/reference/ethereum/json-rpc-methods/eth_getbalance/) API by querying the balance on block number where `AddedReceiver` event is emitted.
 
 You can also view a receiver's address and amount of xDai received in the [block reward contract's](https://gnosisscan.io/address/0x481c034c6d9441db23Ea48De68BCAe812C5d39bA) logs. Whenever the `executeAffirmation` method is called and enough signatures has been collected from bridge valdiators, it emits the `AddedReceiver` event:
 
@@ -155,13 +155,13 @@ Example: https://gnosisscan.io/tx/0x5892a695860f6087a2d93140f05e6365142ff77fd712
 ![](/img/bridges/diagrams/dai-bridge-02.png)
 
 1. Based on the received token on Ethereum
-   1. To receive DAI on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. The equivalent amount of xDAI is burned.
-   1. To receive USDS on Ethereum: User transfer xDAI to or call `relayTokens(address receiver, uint256 value)` on [USDS Deposit Contract](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9) on Gnosis Chain. The equivalent amount of xDAI is burned.
-2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` event is emitted from [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosisscan.io/tx/0xca6fa9395f734501a9497f409db12699782b0a068dc4463d736561572eda8441#eventlog)
-3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDAI bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
+   1. To receive DAI on Ethereum: User transfer xDai to or call `relayTokens(address receiver, uint256 value)` on [Home xDai bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain. The equivalent amount of xDai is burned.
+   1. To receive USDS on Ethereum: User transfer xDai to or call `relayTokens(address receiver, uint256 value)` on [USDS Deposit Contract](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9) on Gnosis Chain. The equivalent amount of xDai is burned.
+2. `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` event is emitted from [Home xDai bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6). [Example](https://gnosisscan.io/tx/0xca6fa9395f734501a9497f409db12699782b0a068dc4463d736561572eda8441#eventlog)
+3. Bridge validators observe the event and call `submitSignature(bytes signature, bytes message)` function on [Home xDai bridge contract](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) on Gnosis Chain.
 4. After enough signatures are collected, `CollectedSignatures` event is emitted/
-5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDAI bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-usds-on-ethereum). **USDS** is unlocked to the receiver or swap to **DAI** to the receive.
-6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDAI Bridge. Please be aware that `transactionHash` carries the value of `nonce`.
+5. Anyone can execute the withdrawal on Ethereum by calling `executeSignatures(bytes message, bytes signatures)` on [Foreign xDai bridge](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016) on Ethereum. To fetch the calldata value, please check the [guideline below](#how-to-claim-usds-on-ethereum). **USDS** is unlocked to the receiver or swap to **DAI** to the receive.
+6. `RelayedMessage(address recipient, uint256 value, bytes32 transactionHash)` emitted on Foreign xDai Bridge. Please be aware that `transactionHash` carries the value of `nonce`.
 
 ### Savings xDAI
 
@@ -169,23 +169,21 @@ Application: https://app.spark.fi/savings/gnosis/sdai
 
 #### Rationale
 
-MakerDAO’s DSR current rate is 5%. Since the increase of the DSR to ~3.5%, ~7M DAI have fled out of the xDAI bridge, as can be seen on this [dashboard](https://dune.com/queries/2650075/4403805?d=11). Bridging the DSR yield into Gnosis Chain will help regain these deposits. In order to provide the needed catalyst for Gnosis Chain Defi to boom, interest rates on Gnosis Chain have to pick up or reach parity with Ethereum or other chains with higher borrowing demand.
+MakerDAO’s DSR current rate is 5%. Since the increase of the DSR to ~3.5%, ~7M DAI have fled out of the xDai bridge, as can be seen on this [dashboard](https://dune.com/queries/2650075/4403805?d=11). Bridging the DSR yield into Gnosis Chain will help regain these deposits. In order to provide the needed catalyst for Gnosis Chain Defi to boom, interest rates on Gnosis Chain have to pick up or reach parity with Ethereum or other chains with higher borrowing demand.
 
-Introducing Savings DAI (sDAI), a DSR(Dai Savings Rate) module in xDAI Bridge between Ethereum and Gnosis Chain.
+Introducing Savings DAI (sDAI), a DSR(Dai Savings Rate) module in xDai Bridge between Ethereum and Gnosis Chain.
 
-By depositing most of the DAI in xDAI bridge into sDAI vault from Spark Protocol on Ethereum, which is a ERC4626 vault depositing all DAI into the Maker DSR, interest is accrued from Maker DSR and relayed to Gnosis Chain. xDAI holders on Gnosis Chain can mint sDAI with their xDAI, and enjoy the interest accumulating from Ethereum.
+By depositing most of the DAI in xDai bridge into sDAI vault from Spark Protocol on Ethereum, which is a ERC4626 vault depositing all DAI into the Maker DSR, interest is accrued from Maker DSR and relayed to Gnosis Chain. xDai holders on Gnosis Chain can mint sDAI with their xDai, and enjoy the interest accumulating from Ethereum.
 
-Check out the proposal from Karpatkey to **[Deposit DAI of the xDAI bridge in sDAI vault from Spark](https://forum.gnosis.io/t/deposit-dai-of-the-xdai-bridge-in-sdai-vault-from-spark/7236)**
+Check out the proposal from Karpatkey to **[Deposit DAI of the xDai bridge in sDAI vault from Spark](https://forum.gnosis.io/t/deposit-dai-of-the-xdai-bridge-in-sdai-vault-from-spark/7236)**
 
 #### Interest rate
 
-Assuming the amount of “Savings DAI on GC” minted is lower than the one held by the bridge, then the yield will be higher than the Dai savings Rate. The bridge currently holds roughly 25M DAI and the DSR yield is 5%, assuming 25M get wrapped into sDAI and only 10M xDAI get deposited into the vault on GC, the yield will be 12.5% .
+Assuming the amount of “Savings DAI on GC” minted is lower than the one held by the bridge, then the yield will be higher than the Dai savings Rate. The bridge currently holds roughly 25M DAI and the DSR yield is 5%, assuming 25M get wrapped into sDAI and only 10M xDai get deposited into the vault on GC, the yield will be 12.5% .
 
 The expectation is that the sDAI rate will always be higher on GC than Mainnet, as only if almost 100% of all DAI bridged is staked will we achieve rate parity.
 
 Considering the current 25M DAI sitting in the bridge, that represents ~1.25M yearly to incentivise GC.
-
-DSR yield is risk-free if you are already holding DAI. All the risks derived from the collateral are borne by all DAI holders, regardless of them depositing in the DSR. Karpatkey team have written a research piece [here.](https://www.karpatkey.com/contents/makerdaos-game-changing-move) The only newly introduced risk is smart contract risk in how the integration is made with the sDAI vault on Ethereum and the implementation of the sDAI vault on GC.
 
 #### Architecture
 
@@ -203,18 +201,18 @@ A new implementation upgrade in xDAIForeignBridge contract: [SavingsDAI Connecto
 
 There are two contracts being deployed on Gnosis.
 
-The first one is the sDAI vault, also an ERC 4626 which is the most popular standard for vaults which makes it extremely useful for Defi integrations from Lending Protocols like Agave and Spark,  to DEXes like Curve and Balancer with their boosted pools. The only modification to the standard vault (OZ implementation) is that it will allow for direct deposits and withdrawals in xDAI, rather than exclusively the ERC20 WXDAI.
+The first one is the sDAI vault, also an ERC 4626 which is the most popular standard for vaults which makes it extremely useful for Defi integrations from Lending Protocols like Agave and Spark,  to DEXes like Curve and Balancer with their boosted pools. The only modification to the standard vault (OZ implementation) is that it will allow for direct deposits and withdrawals in xDai, rather than exclusively the ERC20 WXDAI.
 
-The second contract is the Interest Receiver. This will be the address provided on Mainnet bridge as the interest receiver. What this contract does is quite simple, it distributes the balance it holds in xDAI and WXDAI into sDAI at a fixed block rate that gets updated every 1-2 days to adjust for interest rate changes coming from mainnet. The goal of this contract is to not make it possible to front run the bridging process of the interest, and to make sure there is a fairly frequent update of the sDAI shares value and exchange rate. This contract has the perk of being very easy to switch for a different one by simply setting a new receiver on the bridge, without impacting any of the operations. This means if we want to make modifications such as add a fee or normalize rates in the future, that will be very easy to plug-in.
+The second contract is the Interest Receiver. This will be the address provided on Mainnet bridge as the interest receiver. What this contract does is quite simple, it distributes the balance it holds in xDai and WXDAI into sDAI at a fixed block rate that gets updated every 1-2 days to adjust for interest rate changes coming from mainnet. The goal of this contract is to not make it possible to front run the bridging process of the interest, and to make sure there is a fairly frequent update of the sDAI shares value and exchange rate. This contract has the perk of being very easy to switch for a different one by simply setting a new receiver on the bridge, without impacting any of the operations. This means if we want to make modifications such as add a fee or normalize rates in the future, that will be very easy to plug-in.
 
 #### Role and responsibilities
 
-**xDAI/wxDAI holder**
+**xDai/wxDAI holder**
 
-1. Deposit xDAI/wxDAI and get sDAI shares:
-   1. xDAI/wxDAI holders can deposit xDAI/wxDAI in https://app.spark.fi/savings/gnosis/sdai, in return for sDAI, and their corresponding shares in the vault are recorded.
+1. Deposit xDai/wxDAI and get sDAI shares:
+   1. xDai/wxDAI holders can deposit xDai/wxDAI in https://app.spark.fi/savings/gnosis/sdai, in return for sDAI, and their corresponding shares in the vault are recorded.
    2. Bridge Interest Receiver receives interest from mainnet and distribute to sDAI vault.
-   3. sDAI holders withdraw/redeem xDAI/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2
+   3. sDAI holders withdraw/redeem xDai/wxDAI (interest+original amount) according to their shares, that has gone up because of the interest received in step 2
 
 **Keeper**
 
@@ -266,9 +264,9 @@ The second contract is the Interest Receiver. This will be the address provided 
 
 ### How to claim USDS on Ethereum
 
-1. Fetch the value of `recipient`, `value`, `nonce` and `token` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` from the transction emitted by [Home xDAI Bridge](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) Gnosis Chain.
+1. Fetch the value of `recipient`, `value`, `nonce` and `token` from `UserRequestForSignature(address recipient, uint256 value, bytes32 nonce, address token)` from the transction emitted by [Home xDai Bridge](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6) Gnosis Chain.
    ![](../../../static/img/bridges/xdaibridge/gc-xdai-tx-post-usds.png)
-2. Go to the [xDAI bridge helper contract on Gnosis Chain](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract).
+2. Go to the [xDai bridge helper contract on Gnosis Chain](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract).
 
    1. Call [`getMessageHash(address _recipient,  uint256 _value, _origTxHash, address _token)`](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) : with `recipient`, `value` and `token` from the `UserRequestForSignature` and `_origTxHash` as `nonce` from `UserRequestForSignature` (not the transaction hash!). Fetch the returned message hash.
    2. Call [`getMessage(bytes32 _msgHash)`](https://gnosisscan.io/address/0x2d51eaa266eafcb59bb36dd3c7e99c515e58113a#readContract) & [`getSignatures(bytes32 _msgHash)`](https://gnosisscan.io/address/0xe30269bc61E677cD60aD163a221e464B7022fbf5#readContract) with the message hash from the previous step.
@@ -289,15 +287,15 @@ The second contract is the Interest Receiver. This will be the address provided 
 
 1. BridgeRouter: Entry point contract after the migration on Ethereum, facilitating routing and token swapping.
    1. address: [0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0](https://etherscan.io/address/0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0)
-   2. contract: [BridgeRouter.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/upgradeable_contracts/erc20_to_native/BridgeRouter.sol)
-2. xDAIForeignBridge / Foreign xDAI bridge: xDAI bridge on Ethereum.
+   2. contract: [BridgeRouter.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/f53666fd4f832b1dde479b701d39eddc10b6877c/contracts/upgradeable_contracts/erc20_to_native/BridgeRouter.sol)
+2. xDAIForeignBridge / Foreign xDai bridge: xDai bridge on Ethereum.
    1. address: [0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016](https://etherscan.io/address/0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016#readProxyContract)
-   2. contract: [XDaiForeignBridge.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/upgradeable_contracts/erc20_to_native/XDaiForeignBridge.sol)
-3. HomeBridgeErcToNative / Home xDAI Bridge : xDAI bridge on Gnosis Chain.
+   2. contract: [XDaiForeignBridge.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/f53666fd4f832b1dde479b701d39eddc10b6877c/contracts/upgradeable_contracts/erc20_to_native/XDaiForeignBridge.sol)
+3. HomeBridgeErcToNative / Home xDai Bridge : xDai bridge on Gnosis Chain.
    1. address: [0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6](https://gnosisscan.io/address/0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6)
-   2. contract: [HomeBridgeErcToNative.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/upgradeable_contracts/erc20_to_native/HomeBridgeErcToNative.sol)
+   2. contract: [HomeBridgeErcToNative.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/f53666fd4f832b1dde479b701d39eddc10b6877c/contracts/upgradeable_contracts/erc20_to_native/HomeBridgeErcToNative.sol)
 4. USDS deposit contract: Deposit contract on Gnosis Chain that acts as an entry point contract if user wants to receive USDS on Ethereum.
    1. address: [0x5C183C8A49aBA6e31049997a56D75600E27FF8c9](https://gnosisscan.io/address/0x5C183C8A49aBA6e31049997a56D75600E27FF8c9#code)
-   2. contract: [USDSDepositContract.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/feat/xdaibridge/contracts/USDSDepositContract.sol)
+   2. contract: [USDSDepositContract.sol](https://github.com/gnosischain/tokenbridge-contracts/blob/f53666fd4f832b1dde479b701d39eddc10b6877c/contracts/USDSDepositContract.sol)
 5. Foreign Chain : Ethereum
 6. Home Chain: Gnosis Chain

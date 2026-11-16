@@ -1,24 +1,29 @@
-# Proof of Stake (PoS)
+---
+title: Proof of Stake
+description: How proof of stake secures Gnosis Chain. Validators stake GNO, Gasper combines the LMD GHOST fork choice with Casper FFG finality, and new nodes sync from a recent checkpoint.
+keywords: [proof of stake, gasper, casper ffg, lmd ghost, finality, weak subjectivity, checkpoint sync, gno staking]
+---
 
-[Proof of Stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/) (PoS) is a consensus mechanism utilized in blockchain networks to establish network consensus and authenticate transactions. In PoS, participants are chosen to create new blocks and validate transactions based on the number of coins they hold or "stake." The more coins one possesses, the greater their likelihood of selection. PoS depends on participants having a financial stake in the network, rather than energy-intensive computations.
+# Proof of Stake
 
-Proof of Stake is necessary due to its numerous advantages over other consensus mechanisms. Firstly, it is more energy-efficient than methods like Proof of Work, which demand substantial computational power, thus reducing the environmental impact of blockchain networks. Secondly, PoS fosters decentralization by allowing anyone with a stake in the network to partake in block validation, preventing power concentration among a few participants.
+Gnosis Chain uses [proof of stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/), with the same protocol and client software as Ethereum. Instead of spending computing power, validators lock up stake, and they lose part of it if they break the protocol rules.
 
-The benefits of Proof of Stake encompass enhanced energy efficiency, scalability, and security. PoS consumes less energy than PoW, rendering it more sustainable. It also provides improved scalability, as it is not constrained by increasing computational power. PoS bolsters security by offering economic incentives for participants to act honestly. Validators face the risk of losing their staked coins if they engage in malicious activities, deterring fraud and ensuring the network's integrity.
+## Validators and stake
 
+A Gnosis validator needs at least 1 GNO to activate, where Ethereum requires 32 ETH. Since the Pectra upgrade in April 2025, a validator with compounding (`0x02`) [withdrawal credentials](/validators/withdrawals) can stake up to 64 GNO, the counterpart of Ethereum's 2048 ETH. A validator with `0x01` credentials stays at 1 GNO, because anything above that is withdrawn automatically.
 
-# Gasper:
+Time is divided into 5-second slots, and 16 slots make an 80-second epoch. In each slot, one validator, chosen pseudo-randomly in proportion to its stake, proposes a block. Every validator attests once per epoch, voting for the block it sees as the head of the chain.
 
-[Gasper](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/) is a hybrid consensus mechanism that merges the best features of Proof of Stake (PoS) and Proof of Work (PoW) to establish a secure and efficient consensus protocol for blockchain networks. In Gasper, participants not only stake their coins but also solve cryptographic puzzles to authenticate transactions and generate new blocks.
+Validators that do their duties earn GNO. Validators that go offline lose a small amount. Validators that sign conflicting blocks or votes are slashed: they lose part of their stake and are removed from the validator set. [Rewards and penalties](/node/rewards-penalties) has the details.
 
-By addressing the limitations of individual consensus mechanisms, Gasper achieves a balance between security and efficiency. It mitigates the risk of attacks by necessitating the solving of cryptographic puzzles, making it harder for malicious actors to exploit the network. Furthermore, Gasper employs staking to ensure that even participants with smaller stakes have an opportunity to validate transactions, fostering decentralization.
+## Gasper
 
-Gasper provides several advantages over traditional consensus mechanisms. First, it heightens security by obligating participants to solve puzzles in addition to staking their coins, making it more difficult for attackers to breach the network. Second, Gasper is more energy-efficient than PoW, as it doesn't rely solely on computational power, thus reducing the environmental impact associated with mining. Lastly, Gasper ensures fair and democratic participation by enabling participants with various stake sizes to contribute to the consensus process.
+[Gasper](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/) is the name for the two protocols that together decide which chain is canonical. Both work purely from validators' votes, and neither involves mining.
 
-# Weak Subjectivity:
+On Gnosis Chain, a block is finalized after about two epochs, roughly 2.7 minutes, compared with about 13 minutes on Ethereum.
 
-[Weak subjectivity](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) is a concept in blockchain networks that enables participants with a minimal stake to partake in block validation and consensus processes. This ensures that consensus decisions are not exclusively controlled by participants with substantial stakes.
+## Weak subjectivity
 
-Maintaining decentralization in blockchain networks is vital, and weak subjectivity plays a crucial role in achieving this. If only participants with large stakes were involved in consensus, it would result in a more centralized system and potential power imbalances. Weak subjectivity promotes inclusivity, allowing a diverse range of participants to contribute to the network's decision-making process.
+A node that sees the chain for the first time cannot tell the real history from a fake one signed by validators that have since exited, because exited validators can no longer be slashed. Proof of stake handles this with [weak subjectivity](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/weak-subjectivity/): a node that joins the network, or returns after a long time offline, starts from a recent state it trusts, called a weak subjectivity checkpoint, and syncs forward from there.
 
-By fostering decentralization, weak subjectivity allows participants with smaller stakes to validate transactions and engage in consensus processes. This democratic approach ensures that decisions are not dictated by a select few with significant stakes. Encouraging broader participation, weak subjectivity enhances the network's resilience and cultivates a more diverse and robust ecosystem.
+Gnosis consensus clients do this through checkpoint sync. Point the client at a checkpoint sync endpoint, such as the ones listed for [Gnosis Chain](/about/networks/mainnet#consensus-layer) and [Chiado](/about/networks/chiado#key-infra), and check the checkpoint against a second source you trust, such as another endpoint or a beacon chain explorer.

@@ -4,14 +4,14 @@ Welcome to the Gnosis Documentation site! We welcome all contributors.
 
 ## Environments
 
-Prod: [https://docs.gnosischain.com](https://docs.gnosischain.com)
-Dev: [https://docs.dev.gnosisdev.com/](https://docs.dev.gnosisdev.com/)
+Prod: [https://www.gnosis.io/docs](https://www.gnosis.io/docs)
+Dev: [https://docs.dev.gnosisdev.com/docs/](https://docs.dev.gnosisdev.com/docs/)
 
 ## Git Workflow
 
-- `release` branch: the current state of [docs.gnosischain.com](https://docs.gnosischain.com)
+- `release` branch: the current state of [www.gnosis.io/docs](https://www.gnosis.io/docs)
 - `main` branch
-- `dev` branch: the current state of [docs.dev.gnosisdev.com](https://docs.dev.gnosisdev.com/)
+- `dev` branch: the current state of [docs.dev.gnosisdev.com/docs](https://docs.dev.gnosisdev.com/docs/)
 - Feature branches: individual contributors issue a PR to `dev` branch
 
 Currently, @zengzengzenghuy and @giacomolicari have push rights to `release` branch.

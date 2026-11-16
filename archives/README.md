@@ -12,6 +12,16 @@ bridge instructions in archived pages have not been maintained and should not be
 
 | Area | Why | Archived |
 | --- | --- | --- |
+| [Cookbook](./Cookbook/) | Cookbook, a smart contract marketplace, is no longer online | November 2026 |
+| [Tellor](./Tellor/) | Tellor no longer lists Gnosis Chain | November 2026 |
+| [DIA](./DIA/) | DIA has no maintained oracle on Gnosis Chain | November 2026 |
+| [Safe Kits](./Safe%20Kits/) | The Safe section's overview and guides, built on Safe's Auth Kit, which Safe removed, on Relay Kit with Gelato, which Safe dropped on 1 September 2026, and on permissionless.js APIs that have since been removed | November 2026 |
+| [Web3.js](./Web3.js/) | web3.js was sunset by ChainSafe in March 2025 | November 2026 |
+| [CoW Swap Widget](./CoW%20Swap%20Widget/) | Built on CoW Protocol's widget examples, which are archived | November 2026 |
+| [ZeroDev](./ZeroDev/) | Built on `@zerodev/waas`, which has not been updated since June 2024 and is no longer in ZeroDev's docs | November 2026 |
+| [SupraOracles](./SupraOracles/) | Supra does not support Gnosis Chain: its price feeds no longer list Gnosis Chain or Chiado, and Supra VRF is on Chiado only | November 2026 |
+| [Secret Network](./Secret%20Network/) | Secret's Confidential Computing Layer docs for EVM chains are offline, and its Gnosis Chain gateway has had no activity since it was deployed in July 2024 | November 2026 |
+| [Pyth](./Pyth/) | Pyth no longer supports Gnosis Chain or Chiado | August 2026 |
 | [Use Cases](./Use%20Cases/) | The use cases section, the developer overview (Building on Gnosis EEZ), the request for builders and the shared components table. The docs now cover Gnosis Chain plus a short Gnosis EEZ section | October 2026 |
 | [Embed](./Embed/) | The Embed landing page and the three fintech component bundles. The 0-1 guides moved to Developer guides | October 2026 |
 | [Updates](./Updates/) | The updates blog (announcements, core devs call notes, weekly recaps) is no longer published | September 2026 |

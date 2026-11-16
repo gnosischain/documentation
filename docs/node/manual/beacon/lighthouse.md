@@ -1,5 +1,6 @@
 ---
-title: Lighthouse
+title: Lighthouse beacon node
+sidebar_label: Lighthouse
 ---
 import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 

@@ -71,7 +71,7 @@ The point at which a transaction can no longer be undone. On Gnosis EEZ a transa
 
 ### Follower
 
-A node that rebuilds the Gnosis EEZ chain from Ethereum data alone. Anyone can run one, so nobody has to trust the operator.
+A node that rebuilds the Gnosis EEZ chain from Ethereum data alone. Anyone can run one to check the chain without relying on the operator. Until real-time [ZK proofs](#zk-proof) are live, settlement on Ethereum still relies on the [proof signer](#proof-signer)'s [attestation](#attestation).
 
 ### Genesis
 

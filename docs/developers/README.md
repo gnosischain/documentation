@@ -4,7 +4,7 @@ sidebar_label: Overview
 sidebar_position: 1
 slug: /developers
 description: Everything in the Developer guides section, in the order you are likely to need it. Deploy a first contract, set up Foundry or Hardhat, build from templates, call contracts from your app, verify, and find network details and contract addresses.
-keywords: [gnosis chain developers, quickstart, foundry, hardhat, remix, deploy, verify, ethers, viem, web3.js, chiado, chain id]
+keywords: [gnosis chain developers, quickstart, foundry, hardhat, remix, deploy, verify, ethers, viem, chiado, chain id]
 ---
 
 # Developer guides
@@ -50,7 +50,6 @@ Each guide starts from an empty directory and ends in a result you can verify on
 | --- | --- |
 | [Foundry](/developers/dev-environment/foundry) | Solidity-native testing, scripting and deployment from the terminal |
 | [Hardhat](/developers/dev-environment/hardhat) | A JavaScript or TypeScript project with plugins and scripted deploys |
-| [Cookbook](/developers/dev-environment/cookbook) | Finding, deploying and reusing open-source Solidity contracts |
 
 ### Build from templates
 
@@ -64,8 +63,8 @@ Each guide starts from an empty directory and ends in a result you can verify on
 
 | Library | Use it for |
 | --- | --- |
+| [viem](https://viem.sh) | Reading and writing contracts from TypeScript. Gnosis Chain and Chiado are built in as `gnosis` and `gnosisChiado` |
 | [Ethers.js](/developers/Interact%20on%20Gnosis/ethers-js) | Reading and writing contracts from JavaScript |
-| [Web3.js](/developers/Interact%20on%20Gnosis/web3-js) | The same, with the web3.js library |
 | [MetaMask API](/developers/Interact%20on%20Gnosis/metamask) | Detecting the wallet and adding Gnosis Chain and tokens to it |
 
 ### Verify your contracts

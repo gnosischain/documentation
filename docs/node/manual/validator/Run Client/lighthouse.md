@@ -1,5 +1,6 @@
 ---
-title: Lighthouse
+title: Lighthouse validator client
+sidebar_label: Lighthouse
 ---
 
 # Run Validator: Lighthouse

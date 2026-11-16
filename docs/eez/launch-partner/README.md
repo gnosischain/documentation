@@ -4,8 +4,10 @@ sidebar_label: Become a launch partner
 title: Become a Gnosis EEZ launch partner
 slug: /launch-partner
 description: Deploy on Gnosis Chain now to become a Gnosis EEZ launch partner. Be among the first apps to call Ethereum mainnet from an L2, build hybrid apps with hands-on support from the Gnosis engineering team, and carry over at launch with nothing to redeploy.
-keywords: [launch partner, design partner, hybrid apps, deploy on gnosis chain, gnosis eez launch, synchronous composability, ethereum economic zone]
+keywords: [launch partner, hybrid apps, deploy on gnosis chain, gnosis eez launch, synchronous composability, ethereum economic zone]
 ---
+
+import Link from '@docusaurus/Link';
 
 # Become a Gnosis EEZ launch partner
 
@@ -14,20 +16,22 @@ keywords: [launch partner, design partner, hybrid apps, deploy on gnosis chain, 
 Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state, so every contract on Gnosis Chain carries over at the same address. There is no second deployment and nothing to migrate.
 
 <div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="/launch-partner/deploy-now">Deploy now</a>
+  <Link className="button button--primary button--lg" to="/launch-partner/deploy-now">Deploy now</Link>
   <a className="button button--secondary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call</a>
 </div>
 
 ## Why be a launch partner
 
 - **Be first to reach mainnet from an L2.** Your contracts will call Ethereum mainnet in the same transaction, with no bridge and no wrapped assets. Mainnet liquidity, collateral and settlement, as if they were local.
-- **Hands-on technical support.** Work with the Gnosis engineering team as a design partner, from the Chiado testnet fork through to launch.
-- **Build hybrid apps.** Keep settlement and liquidity on Ethereum, and run your engines on Gnosis EEZ. Over the next six months we are running hybrid-app exercises with the Gnosis engineering team to push what is possible, and we want existing Ethereum protocols to take part.
+- **Hands-on technical support.** Work with the Gnosis engineering team from the Chiado testnet fork through to launch.
+- **Build hybrid apps.** Keep settlement and liquidity on Ethereum, and run your engines on Gnosis EEZ. Until April 2027 we are running hybrid-app exercises with the Gnosis engineering team to push what is possible, and we want existing Ethereum protocols to take part.
 - **The whole zone, in reach.** As other rollups and apps join the Ethereum Economic Zone, your app can reach them too, with no further integration work.
 
 A deployed contract counts when it is live on Gnosis Chain mainnet and its source is verified on Gnosisscan. Contracts on the Chiado testnet do not count, because they do not carry over to Gnosis EEZ.
 
 ## What you can build
+
+At launch, synchronous calls run one way: a contract on Gnosis EEZ calls Ethereum and uses the result in the same transaction. Calls from Ethereum into Gnosis EEZ, and nested calls, follow in 2027. Design each flow so the Gnosis EEZ side makes the calls, and check the [limits of the first release](/eez/gnosis-eez#what-is-not-in-the-first-release) against it before you build.
 
 - **Lending markets.** Canonical mainnet ETH as collateral, with no bridge or wrapper, and underwater positions liquidated into mainnet liquidity in the same transaction.
 - **Options venues.** Quote and match on 2-second blocks, then hedge, exercise or settle against mainnet spot atomically, from one pool of capital.
@@ -46,5 +50,5 @@ A deployed contract counts when it is live on Gnosis Chain mainnet and its sourc
 There is no fee and no token allocation.
 
 <div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="/launch-partner/deploy-now">Deploy on Gnosis Chain now</a>
+  <Link className="button button--primary button--lg" to="/launch-partner/deploy-now">Deploy on Gnosis Chain now</Link>
 </div>

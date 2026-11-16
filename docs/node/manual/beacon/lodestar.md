@@ -1,5 +1,6 @@
 ---
-title: Lodestar
+title: Lodestar beacon node
+sidebar_label: Lodestar
 ---
 import BeaconFolderStructurePartial from '@site/docs/node/manual/beacon/\_partials/\_beacon_folder_structure.md';
 

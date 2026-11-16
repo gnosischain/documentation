@@ -1,10 +1,16 @@
 ---
 title: Tellor
-description: The Tellor protocol enables smart contracts to get any verifiable data onchain using a censorship-resistant network of reporters.
-keywords: [tellor, oracle, data feeds, price feeds]
+description: Tellor data feeds on Gnosis Chain. Archived - Tellor no longer lists Gnosis Chain.
+keywords: [tellor, oracle, data feeds, price feeds, deprecated, archived]
 ---
 
-# Tellor Data Feeds
+# Tellor Data Feeds (Archived)
+
+:::danger Archived
+Tellor **no longer lists Gnosis Chain**: its [contracts reference](https://docs.tellor.io/tellor/using-tellor-data/contracts-reference) covers only Ethereum, Sepolia and Base. Do not build on Tellor data feeds on Gnosis Chain.
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 Tellor is an immutable decentralized oracle protocol that incentivizes an open, permissionless network of data reporting and data validation, ensuring that data can be provided by anyone and checked by everyone.
 

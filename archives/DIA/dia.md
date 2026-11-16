@@ -1,10 +1,16 @@
 ---
 title: DIA
-description: DIA provides transparent, customizable oracles for price feeds and other on-chain data.
-keywords: [dia, oracle, price feeds, data feeds]
+description: DIA price feeds on Gnosis Chain. Archived - DIA has no maintained oracle on Gnosis Chain.
+keywords: [dia, oracle, price feeds, data feeds, deprecated, archived]
 ---
 
-# DIA
+# DIA (Archived)
+
+:::danger Archived
+DIA **has no maintained oracle on Gnosis Chain**: the Gnosis Chain oracle it announced stopped updating in July 2025, and its [Gnosis Chain guide](https://www.diadata.org/docs/guides/chain-specific-guide/gnosis-chain) lists no contracts.
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 [DIA](https://www.diadata.org) is a cross-chain, trustless oracle network delivering verifiable price feeds for Gnosis Chain. DIA sources raw trade data directly from primary markets and computes it on-chain, ensuring complete transparency and data integrity.
 

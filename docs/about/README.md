@@ -1,14 +1,14 @@
 ---
 sidebar_position: 0
 sidebar_label: Overview
-title: Gnosis Chain
+title: Gnosis Chain overview
 description: Gnosis Chain today, the EVM L1 with 5-second blocks, xDai as gas and a validator set secured by GNO, and where to start building on it.
 keywords: [about gnosis chain, gnosis chain, l1, evm, xdai, gno, validators, chain id, fees]
 ---
 
 # Gnosis Chain
 
-Gnosis Chain is a community-owned EVM L1, live since 2018 and secured by over 200,000 validators around the world. Resilience and credible neutrality are its core values, and anyone can take part in governance through the GnosisDAO.
+Gnosis Chain is a community-owned EVM L1, live since 2018 and secured by validators around the world who stake over 290,000 GNO. Resilience and credible neutrality are its core values, and anyone can take part in governance through the GnosisDAO.
 
 Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economic Zone](/eez) (EEZ), a neutral rollup framework that settles to Ethereum. Gnosis operates the instance. Everything you build on Gnosis Chain today carries over: contracts, addresses and state are hard-forked across, so nothing is redeployed.
 
@@ -22,7 +22,7 @@ Gnosis Chain will become Gnosis EEZ, the first instance of the [Ethereum Economi
 | Chain ID | 100 (mainnet), 10200 (Chiado testnet) |
 | Execution | EVM, Osaka patchset |
 
-**Fees are paid in a stablecoin.** Most EVM chains charge gas in a volatile native token. On Gnosis Chain every transaction is paid in xDai, so costs are predictable for you and your users. Fees go to the validator who sealed the block.
+**Fees are paid in a stablecoin.** Most EVM chains charge gas in a volatile native token. On Gnosis Chain every transaction is paid in xDai, so costs are predictable for you and your users. Tips go to the validator that proposed the block, and the base fee goes to a [fee collector](/about/specs/hard-forks/eip-1559#how-1559-impacts-the-gnosis) rather than being burned.
 
 **Building is the same as on Ethereum.** The same tooling, wallets and contracts work unchanged. Point them at the [network RPC](/about/networks) and deploy.
 

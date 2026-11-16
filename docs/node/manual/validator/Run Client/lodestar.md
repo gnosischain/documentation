@@ -1,5 +1,6 @@
 ---
-title: Lodestar
+title: Lodestar validator client
+sidebar_label: Lodestar
 ---
 
 # Run Validator: Lodestar

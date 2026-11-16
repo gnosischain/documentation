@@ -75,7 +75,7 @@ export const DynamicWidgetButton: React.FC = () => {
 
 - Let's create our Main component in **page.tsx** file.
 
-In this file, we will [**useDynamicContext**](https://docs.dynamic.xyz/sdks/react-sdk/hooks/usedynamiccontext#header) provided by the dynamic sdk to fetch the wallet connected. We will also use this same wallet to execute all our ethers expression.
+In this file, we will [**useDynamicContext**](https://www.dynamic.xyz/docs/react/reference/hooks/usedynamiccontext) provided by the dynamic sdk to fetch the wallet connected. We will also use this same wallet to execute all our ethers expression.
 
 ```
   const { primaryWallet } = useDynamicContext();

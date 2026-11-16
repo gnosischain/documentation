@@ -32,9 +32,9 @@ GNO
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/gno.png
+https://www.gnosis.io/docs/img/tokens/gno.png
 ```
-<a href="/img/tokens/gno.png"><img src="/img/tokens/gno.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/gno.png').default}><img src={require('@site/static/img/tokens/gno.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
 </TabItem>
 <TabItem value="gnosis" label="Gnosis Mainnet">
@@ -60,9 +60,9 @@ GNO
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/gno.png
+https://www.gnosis.io/docs/img/tokens/gno.png
 ```
-<a href="/img/tokens/gno.png"><img src="/img/tokens/gno.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/gno.png').default}><img src={require('@site/static/img/tokens/gno.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
 </TabItem>
 <TabItem value="chiado" label="Chiado Testnet">
@@ -89,7 +89,7 @@ GNO
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/gno.png
+https://www.gnosis.io/docs/img/tokens/gno.png
 ```
 
 </TabItem>
@@ -104,7 +104,7 @@ https://docs.gnosischain.com/img/tokens/gno.png
 
 ### Bridge
 
-- Ethereum to Gnosis token bridge: [OmniBridge](https://omni.gnosischain.com/)
+- Ethereum to Gnosis token bridge: [Gnosis Bridge](https://bridge.gnosischain.com/), which runs the [Omnibridge](/bridges/About%20Token%20Bridges/omnibridge)
 <!-- non native bridges  -->
 
 ## Use GNO Tokens
@@ -127,7 +127,7 @@ For those who prefer not to manage the infrastructure themselves, liquid staking
 
 - [GnosisDAO Governance Forum](https://forum.gnosis.io/)
 - [GNO Utility and Value Proposition](https://forum.gnosis.io/t/gno-utility-and-value-proposition/2344)
-- [Community](/developers/communication)
+- [Community](/about/communication)
 
 ## GNO Token Audit
 

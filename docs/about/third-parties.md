@@ -8,5 +8,5 @@ title: Third Party On-Ramp Solutions
 ### On-ramps
 - [Monerium](https://monerium.com/)
 - [Mt Pelerin](https://www.mtpelerin.com/)
-- [Ramp](https://ramp.network/)
+- [Ramp](https://rampnetwork.com/): USDC.e on Gnosis Chain.
 - [AscendEX](https://ascendex.com/en)

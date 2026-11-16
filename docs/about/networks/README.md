@@ -19,7 +19,7 @@ keywords:
 
 | Network Name       | [Gnosis (mainnet)](./mainnet.md) | [Chiado (testnet)](./chiado.md)      |
 | ------------------ | -------------------------------- | ------------------------------------ |
-| Native (fee) token | xDAI                             | Chiado xDAI                          |
+| Native (fee) token | xDai                             | Chiado xDai                          |
 | Chain ID           | 100                              | 10200                                |
 | EL RPC             | https://rpc.gnosischain.com      | https://rpc.chiadochain.net          |
 | EL Explorer        | https://gnosisscan.io            | https://gnosis-chiado.blockscout.com |

@@ -83,13 +83,45 @@ contract Counter {
 }
 ```
 
-Compile it:
+## Test it locally
 
-```bash
-forge build
+The template's test calls functions the new contract no longer has, so the project does not compile until you replace it. Replace `test/Counter.t.sol` with a test that checks both pieces of state:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import {Test} from "forge-std/Test.sol";
+import {Counter} from "../src/Counter.sol";
+
+contract CounterTest is Test {
+    Counter counter;
+
+    function setUp() public {
+        counter = new Counter();
+    }
+
+    function test_RecordsDeployer() public view {
+        assertEq(counter.deployer(), address(this));
+    }
+
+    function test_Increments() public {
+        counter.increment();
+        counter.increment();
+        assertEq(counter.count(), 2);
+    }
+}
 ```
 
-`Compiler run successful` again. If the compiler complains about the pragma, check the `solc` version in `foundry.toml` is 0.8.20 or later.
+Run the tests:
+
+```bash
+forge test
+```
+
+You should see two tests passing. Nothing has touched a network yet.
+
+If the compiler complains about the pragma, check the `solc` version in `foundry.toml` is 0.8.20 or later.
 
 ## Create an account
 
@@ -121,7 +153,7 @@ This account is for testnet work only. Never import a key that holds real funds 
 
 Chiado is the Gnosis testnet. Its chain ID is 10200 and its gas token is a valueless test xDai.
 
-Copy your address from the previous step and request funds from the faucet at [faucet.chiadochain.net](https://faucet.chiadochain.net).
+Copy your address from the previous step and request funds from the [Chiado faucet](https://faucet.gnosischain.com/?chain=chiado).
 
 Check the balance arrived:
 
@@ -189,18 +221,7 @@ This prints `1`. Read the deployer as well, and check it matches the address you
 cast call <CONTRACT> "deployer()(address)" --rpc-url https://rpc.chiadochain.net
 ```
 
-If you have the Gnosis EEZ MCP server installed, your agent can do the same read without leaving the conversation, using the `chain_read_contract` tool:
-
-```json
-{
-  "address": "<CONTRACT>",
-  "abi_fragment": "function count() view returns (uint256)",
-  "function": "count",
-  "chain_id": 10200
-}
-```
-
-It returns `{ "result": "1" }`, the same value, from the same chain, through a different route. Your agent can also call `chain_get_contract_source` on the address to confirm the source is verified.
+Now read the same state through the explorer. Open the **Read contract** tab at `https://gnosis-chiado.blockscout.com/address/<CONTRACT>`. It lists `count` and `deployer` with their current values: `count` shows `1`, the same value from the same chain through a different route. The tab exists only because you verified the source.
 
 ## Switch to mainnet
 
@@ -213,6 +234,8 @@ Everything above works identically on Gnosis mainnet. Three things change:
 | Explorer | `https://gnosis-chiado.blockscout.com` | `https://gnosisscan.io` |
 
 The gas token on mainnet is xDai, and it is worth real money, though a deployment like this one costs a fraction of a cent. Fund the account by bridging at [bridge.gnosischain.com](https://bridge.gnosischain.com) rather than from a faucet.
+
+Verifying on Gnosisscan also needs a free Blockscout API key. [Deploy to Gnosis Chain mainnet](/launch-partner/deploy-now#deploy-to-gnosis-chain-mainnet) walks through the mainnet deployment, including the key.
 
 :::warning
 Use a different account for mainnet than the one you generated here. A testnet key that has been pasted around should never hold value.

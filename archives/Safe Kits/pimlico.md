@@ -1,10 +1,16 @@
 ---
-description: Pimlico's vision is to be the underlying infrastructure layer that will power Ethereum's transition to smart contract wallets through mass ERC-4337 adoption.
-
-keywords: [pimlico,account-abstraction,paymaster, bundlers]
+title: Building on Safe AA with Pimlico
+description: A Safe account sending ERC-4337 user operations through Pimlico's bundler and paymaster with permissionless.js. Archived - permissionless.js has removed the APIs it uses.
+keywords: [safe, pimlico, permissionless, erc-4337, account-abstraction, paymaster, bundlers, deprecated, archived]
 ---
 
-# Building on Safe AA with Pimilico
+# Building on Safe AA with Pimlico (Archived)
+
+:::danger Archived
+The permissionless.js APIs this guide uses, including `ENTRYPOINT_ADDRESS_V06`, `signerToSafeSmartAccount`, `createPimlicoBundlerClient` and `createPimlicoPaymasterClient`, have since been removed, so the code on this page does not run with current releases. For the current walkthrough, see Pimlico's [Safe account guide](https://docs.pimlico.io/guides/how-to/accounts/use-safe-account).
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 Safe supports 4337 which means you can now plug in Safe accounts to ERC-4337 bundlers and paymasters. This guide will walk you through how to create and use a Safe account with permissionless.js.
 

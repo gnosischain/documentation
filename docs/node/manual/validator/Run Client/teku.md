@@ -1,5 +1,6 @@
 ---
-title: Teku
+title: Teku validator client
+sidebar_label: Teku
 ---
 
 # Run Validator: Teku

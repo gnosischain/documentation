@@ -66,7 +66,7 @@ If you choose to use WalletConnect, select the WalletConnect option in the conne
 
 When sending to your new Safe, make sure you are connected to Gnosis Chain, copy the Safe address, and process as you would any other Gnosis transaction. For more information, see this tutorial from Safe:
 
-[How can I receive assets?](https://help.safe.global/en/articles/40867-how-can-i-receive-assets)
+[How can I receive assets?](https://help.safe.global/articles/4119085855-how-can-i-receive-assets)
 
 :::danger Safe Address
 The Safe deployed to Gnosis Chain is not present in Ethereum or other networks. So, the Safe address is not shared across chains.

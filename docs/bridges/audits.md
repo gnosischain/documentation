@@ -7,30 +7,28 @@ keywords: [omnibridge audit, xdai bridge audit, security audit]
 
 The OmniBridge and xDai Bridge have undergone multiple independent security audits and assessments. We have engaged in the auditing process after introducing major functionality, and have acknowledged and/or fixed all issues found during these audits. Audit results are presented starting with the most recent.
 
-## USDS migration xDAI bridge by Omega, Gnosis Ltd(internal audit)
+## USDS migration xDai bridge by Omega, Gnosis Ltd(internal audit)
 
 **Audit Report**:
 
 1. [Omega-Gnosis-USDS Upgrade Final Audit Report](https://github.com/OmegaAudits/audits/blob/main/202510-Gnosis-Bridge-USDS-Upgrade.pdf)
-2. [Gnosis Ltd internal audit final report](https://github.com/cducrest/audit-reports/blob/main/bridge-USDS-upgrade3.pdf)
+2. [Gnosis Ltd internal audit final report](https://github.com/cducrest/audit-reports/blob/main/reports/bridge-USDS-upgrade3.pdf)
 
-## xDAI bridge upgrade Audit by Omega and ChainSafe
+## xDai bridge upgrade Audit by Omega and ChainSafe
 
 ### Omega
 
 **Completed**: August 31, 2023  
 **Conclusion**: 2 medium issues, 5 low risk issues, 3 info issues. All issues has been resolved.  
-**Contracts**: https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
 **Audit Report**: [Omega Gnosis Bridge Final Audit Report](../../static/files/Omega%20-%20Gnosis%20Bridge%20-%20final%20report.pdf)
 
 ### ChainSafe
 
 **Completed**: August 31, 2023  
 **Conclusion**: 2 minor issues, 2 optimizational issues.  
-**Contracts**: https://github.com/gnosischain/tokenbridge-contracts/tree/xdaibridge-upgrade-sdai  
 **Audit Report**: [ChainSafe Audit Report](../../static/files/dai-xdai-08-23.pdf)
 
-**Reference**: [Savings xDAI](../bridges/Token%20Bridge/xdai-bridge.md#savings-xdai)
+**Reference**: [Savings xDAI](./About%20Token%20Bridges/xdai-bridge.md#savings-xdai)
 
 ## OmniBridge v6.0 Smart Contracts Audit by ChainSecurity
 
@@ -56,7 +54,7 @@ The OmniBridge and xDai Bridge have undergone multiple independent security audi
 ## TokenBridge Audit by Quantstamp (covers AMB bridge)
 
 **Completed**: January 8, 2020  
-**Conclusion**: : All high risk issues resolved and low risk issues addressed. [More information available in this post](https://forum.poa.network/t/quantstamp-security-audit-for-tokenbridge-contracts-completed/3233).  
+**Conclusion**: All high risk issues resolved and low risk issues addressed.  
 **Contracts**: Revised in version 3.3.0 to address audit. https://github.com/poanetwork/tokenbridge-contracts/releases/tag/3.3.0  
 **Audit Report**: [TokenBridge Audit by Quantstamp - AMB Bridge](https://github.com/omni/tokenbridge/blob/73d500210546e2959536dc569f1aec5752077225/audit/quantstamp/POA-Network-Token-bridge-security-assessment-report.pdf)
 

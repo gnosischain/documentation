@@ -14,18 +14,16 @@ xDai tokens are native tokens on Gnosis and also used to pay for execution of sm
 
 Convert DAI from Ethereum to xDai using the [Unified Gnosis Bridge App](/bridges/usebridges).
 
-### Buy xDAI
+### Buy xDai
 
 Gateways and Exchanges allow users to get xDai using FIAT or swap other crypto into xDai.
 
 - [AscendEX](https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xdai)
 - [Mt Pelerin](https://www.mtpelerin.com/buy-xdai)
-- [Ramp](https://ramp.network/buy/?swapAsset=XDAI)
-- [Honeyswap](https://honeyswap.1hive.eth.limo/)
 
 ### Faucets
 
-Gnosis offers [free mainnet faucets](/tools/faucets/).
+Gnosis offers [free mainnet faucets](/tools/Faucets).
 
 ## Specifications
 
@@ -49,9 +47,9 @@ xDAI
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/xdai.png
+https://www.gnosis.io/docs/img/tokens/xdai.png
 ```
-<a href="/img/tokens/xdai.png"><img src="/img/tokens/xdai.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/xdai.png').default}><img src={require('@site/static/img/tokens/xdai.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
   </TabItem>
   <TabItem value="ctest" label="Chiado Testnet">
@@ -69,9 +67,9 @@ Chiado xDai
 ```
 
 ```jsx title="Icon"
-https://docs.gnosischain.com/img/tokens/chiado-xdai.png
+https://www.gnosis.io/docs/img/tokens/chiado-xdai.png
 ```
-<a href="/img/tokens/chiado-xdai.png"><img src="/img/tokens/chiado-xdai.png" style={{width: '100px', height: '100px', display: 'inline'}} /></a>
+<a href={require('@site/static/img/tokens/chiado-xdai.png').default}><img src={require('@site/static/img/tokens/chiado-xdai.png').default} style={{width: '100px', height: '100px', display: 'inline'}} /></a>
 
   </TabItem>
 </Tabs>
@@ -88,7 +86,6 @@ xDai being a native token of the network does not comply with ERC-20 standard. W
 
 - Wrap your xDai in [Wrap Eth](https://wrapeth.com/) connected with [MetaMask to Gnosis](/tools/wallets/metamask/)
 - [Swapr](https://swapr.eth.limo/#/swap?chainId=100)
-- [Honeyswap](https://honeyswap.1hive.eth.limo/)
 
 ## More Links
 

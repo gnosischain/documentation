@@ -8,7 +8,7 @@ keywords: [bridge architecture]
 
 Gnosis has three main types of bridges:
 
-- **Native Bridge**: built into the chain itself, and mint the xDAI and ERC20 token from Ethereum to Gnosis Chain
+- **Native Bridge**: built into the chain itself, and mint the xDai and ERC20 token from Ethereum to Gnosis Chain
 - **3rd-party Bridges**: these are maintained by 3rd parties and allow users to swap for canonical tokens created by native bridges
 - **Application-Specific Bridges**: some applications may provide custom bridges that maintain their own canonical token on Gnosis
 
@@ -18,7 +18,7 @@ Gnosis has three main types of bridges:
 
 Gnosis Chain bridge :
 
-- allows to mint the native stablecoin xDAI on gnosis chain by bridging USDS from Ethereum
+- allows to mint the native stablecoin xDai on gnosis chain by bridging USDS from Ethereum
 - allows to bridge ERC2O token from Ethereum to Gnosis Chain
 
 ### Bridging Data
@@ -33,5 +33,5 @@ Gnosis has a [long-term roadmap](../roadmap.md) to move towards trustless bridge
 
 We would love to hear from you on suggestions and ideas on bridges in Gnosis Chain.
 
-- [Gnosis Bridges Improvement Proposals](https://docs.google.com/forms/d/1V5RH7rIcHw-7JSePErUNutWO_p59HwbbsNedoWidTKA/viewform?edit_requested=true)
-- [AMB developers form](https://docs.google.com/forms/d/1wj31wGZ2sxMd_n35ZTavqegQo8XEp2C9brBPLFwCMn0/viewform?edit_requested=true#responses)
+- Propose a bridge improvement on the [Gnosis forum](https://forum.gnosis.io).
+- Building on the AMB, or have a question about the bridges? Ask in the [Gnosis Discord](https://discord.gg/gnosis).

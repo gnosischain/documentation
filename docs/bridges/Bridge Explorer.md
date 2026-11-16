@@ -65,15 +65,15 @@ This section shows insight of bridge limit and is reset every `Daily limit reset
 
 1. **Daily Limit**
    - Ethereum -> Gnosis Chain: Maximum amount of DAI/token that users can bridge from Ethereum to Gnosis in a day
-   - Gnosis Chain -> Ethereum: Maximum amount of XDAI/token that users can bridge from Gnosis to Ethereum in a day.
+   - Gnosis Chain -> Ethereum: Maximum amount of xDai/token that users can bridge from Gnosis to Ethereum in a day.
 2. **Execution Daily Limit**
    - Ethereum -> Gnosis Chain: Maximum amount of DAI/token that bridge validators can execute and bridge from Gnosis to Ethereum in a day.
-   - Gnosis Chain -> Ethereum: Maximum amount of XDAI/token that bridge validators can execute and bridge from Ethereum to Gnosis in a day.
+   - Gnosis Chain -> Ethereum: Maximum amount of xDai/token that bridge validators can execute and bridge from Ethereum to Gnosis in a day.
 3. **Min. per transaction**: Minimum amount of token that users can bridge in a single transaction.
 4. **Max. per transaction**: Maximum amount of token that users can bridge in a single transaction.
 5. **Execution max. per transaction**: Maximum amount of token that validators can execute in a single transaction.
 6. **Daily limit reset**: In how many hours will the daily limit get reset to zero.
-7. **Token address**: Token address of corresponding token, native token(xDAI) don't have an address.
+7. **Token address**: Token address of corresponding token, native token(xDai) don't have an address.
 
 ![](../../static/img/bridges/bridge-explorer/bridge-info-new.png)
 
@@ -92,10 +92,8 @@ This section shows the insight of current bridges validators, including last see
 If you are not coming from Ethereum, you can use one of the following bridges:
 - [Jumper](https://jumper.exchange/) (by Li.Fi)
 - [Bungee](https://www.bungee.exchange)
-- [Hop](https://app.hop.exchange/)
-- [Connext Bridge](https://bridge.connext.network/)
 
-Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](../bridges/About%20Token%20Bridges/amb-bridgeamb-bridge#bridge-validators). There is a [roadmap](../bridges/roadmap.md) as well that you can follow.
+Gnosis' native bridges allow for sending tokens and data, and are run by a group of [trusted bridge validators](./About%20Token%20Bridges/amb-bridge.md#bridge-validators). There is a [roadmap](../bridges/roadmap.md) as well that you can follow.
 
 Gnosis' native bridges are first-class citizens in the chain's architecture due to the [native Omni and xDai bridge's](../bridges/About%20Token%20Bridges/README.md) integral role in minting and burning the native [xDai token](../about/tokens/xdai.md) used for gas.
 

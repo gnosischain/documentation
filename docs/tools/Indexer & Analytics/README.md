@@ -9,9 +9,9 @@ keywords: [indexer, analytics, data indexing, query data, chain data, api, the g
 
 Indexing and analytics tools let you query and analyze on-chain data on Gnosis Chain through APIs and GraphQL, instead of scanning blocks yourself.
 
-- [The Graph](/tools/Indexer%20%26%20Analytics/the-graph) - decentralized protocol for indexing and querying chain data.
-- [SubQuery](/tools/Indexer%20%26%20Analytics/subquery) - open-source data indexer with custom APIs.
-- [Envio](/tools/Indexer%20%26%20Analytics/envio) - fast, flexible indexing solution for real-time and historical EVM data.
-- [Moralis](/tools/Indexer%20%26%20Analytics/moralis) - enterprise-grade APIs for wallet, token and NFT data.
-- [GoldRush - powered by Covalent](/tools/Indexer%20%26%20Analytics/covalent) - comprehensive blockchain data API suite.
-- [Dune](/tools/Indexer%20%26%20Analytics/dune) - on-chain data platform and dashboards.
+- [The Graph](./the-graph.md) - decentralized protocol for indexing and querying chain data.
+- [SubQuery](./subquery.md) - open-source data indexer with custom APIs.
+- [Envio](./envio.md) - fast, flexible indexing solution for real-time and historical EVM data.
+- [Moralis](./moralis.md) - enterprise-grade APIs for wallet, token and NFT data.
+- [GoldRush - powered by Covalent](./covalent.md) - comprehensive blockchain data API suite.
+- [Dune](./dune.md) - on-chain data platform and dashboards.

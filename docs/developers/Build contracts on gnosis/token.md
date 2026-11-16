@@ -28,7 +28,7 @@ For this tutorial, we are going to be using [Hardhat](https://hardhat.org/).
 
 ## Prerequisites 
 To follow along, it's recommended to review and be familiar with the [documentation on deploying a contract](/category/deploy-contracts-on-gnosis). This will also follow a lot of the same steps as the [Launching an NFT on Gnosis tutorial](/developers/Build%20contracts%20on%20gnosis/nft).
-You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/faucets).
+You will also need to have a working Node.js >=16.0 installation and [a small amount of xDai for gas](/tools/Faucets).
 
 Also, take a look at [these important points to consider](https://forum.openzeppelin.com/t/points-to-consider-when-creating-a-fungible-token-erc20-erc777/2915) before creating your token.
 

@@ -1,8 +1,16 @@
 ---
 title: Supra VRF
-description: Supra VRF provides smart contracts with a secure and decentralized source of randomness that is unbiasable, unpredictable, and publicly verifiable. 
-keywords: [SupraOracles, verifiable random function, random number generation]
+description: Supra VRF on Chiado. Archived - Supra VRF does not support Gnosis Chain.
+keywords: [SupraOracles, verifiable random function, random number generation, deprecated, archived]
 ---
+
+# Supra VRF on Gnosis (Archived)
+
+:::danger Archived
+Supra VRF **does not support Gnosis Chain**: Supra lists [dVRF](https://docs.supra.com/dvrf/learn-supra-dvrf/networks) on Chiado only, and the router address on this page is from an earlier dVRF version that Supra no longer lists. Do not use the contract addresses on this page.
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 :::info testnet
 SupraOracles only supports [Chiado testnet](../../../about/networks/chiado.md).

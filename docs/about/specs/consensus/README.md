@@ -1,9 +1,16 @@
 ---
-description: The hardfork replaced Gnosis’ current “proof-of-authority” consensus with the “proof-of-stake” system as it merges with the Gnosis Beacon Chain. 
-keywords: [gnosis beacon chain, merge, the merge, wen gnosis merge]
+title: Consensus
+description: Gnosis Chain runs proof-of-stake consensus on the Gnosis Beacon Chain, with validators staking GNO. What it replaced, and what the Merge changed.
+keywords: [gnosis consensus, gnosis beacon chain, proof of stake, merge, the merge]
 ---
 
-# The Merge
+# Consensus
+
+Gnosis Chain runs proof-of-stake consensus, the same as Ethereum. Validators stake GNO on the [Gnosis Beacon Chain](/about/specs/gbc), propose and attest to a block every 5 seconds, and finalize blocks after two 16-slot epochs, about 2.7 minutes. [Proof of Stake](/about/specs/consensus/proof-of-stake) explains the mechanism.
+
+Until December 2022, Gnosis Chain used [AuRa](/about/specs/consensus/aura), a proof-of-authority consensus, with validators chosen through [POSDAO](/about/specs/consensus/posdao). The Merge replaced it. The [Merge hard fork page](/about/specs/hard-forks/merge) has the dates and client releases.
+
+## The Merge
 
 Gnosis, as a closely-related fork of Ethereum, underwent a “Merge” hardfork similar to that of Ethereum. The hardfork replaced Gnosis’ former “proof-of-authority” consensus with the “proof-of-stake” system as it merged with the Gnosis Beacon Chain. 
 
@@ -14,7 +21,7 @@ This change is also significant as Gnosis now is similar to Ethereum in being fu
 You can read more on the Ethereum merge here: [https://ethereum.org/en/upgrades/merge/](https://ethereum.org/en/upgrades/merge/).
 
 
-## **How will this affect me? **
+## What the Merge changed
 
 
 ### Users
@@ -63,10 +70,10 @@ You must **run an execution client** alongside your existing consensus client. N
 ## More info
 
 - [Testnet Deployments](https://github.com/gnosischain/consensus-deployment-ansible#readme)
-- [Chiado Testnet](/concepts/networks/chiado)
+- [Chiado Testnet](/about/networks/chiado)
 
 
 ## Pre-merge consensus articles
 
-- [POSDAO](/concepts/specs/consensus/posdao)
-- [AURA](/concepts/specs/consensus/aura)
+- [POSDAO](/about/specs/consensus/posdao)
+- [AURA](/about/specs/consensus/aura)

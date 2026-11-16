@@ -8,12 +8,12 @@ To begin using Gnosis Bridge, you need to go on this following link : https://br
 :::
 
 :::note
-You will need xDAI to perform any transactions on Gnosis Chain as it’s the chain’s gas token. You can get xDAI by transferring DAI from Ethereum using the Bridge Explorer
+You will need xDai to perform any transactions on Gnosis Chain as it’s the chain’s gas token. You can get xDai by transferring DAI from Ethereum using the Bridge Explorer
 :::
 
-![xDAI bridge from ethereum](../../static/img/bridges/bridge-xdai-new.png)
+![xDai bridge from ethereum](../../static/img/bridges/bridge-xdai-new.png)
 
-### Follow the below steps to get xDAI into your Ethereum address: 
+### Follow the below steps to get xDai into your Ethereum address: 
 1. Go to the Gnosis Chain Bridge UI and connect your wallet to the Ethereum Mainnet.
 2. Once connected, you will see your address populated in the header, and your DAI balance will be displayed on the page.
 3. Enter the amount of DAI you would like to transfer to Gnosis, and click the Transfer button.

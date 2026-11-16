@@ -88,11 +88,11 @@ There are two possible scenarios for how the bridge or validators contracts can 
 
 ### Governor: Setting bridge limits
 
-Different limits are set for the [xDai Bridge](../Token%20Bridge/xdai-bridge.md#fees--daily-limits) and the [OmniBridge](../Token%20Bridge/omnibridge.md#fees--daily-limits) by the bridge governors. Please see their respective documentation pages for more information.
+Different limits are set for the [xDai Bridge](../About%20Token%20Bridges/xdai-bridge.md) and the [OmniBridge](../About%20Token%20Bridges/omnibridge.md) by the bridge governors. [Bridge limits](../bridge-limits.md) lists the current Omnibridge limits and shows how to read them from the contracts.
 
 ## Bridge Validators
 
-Bridge Validators monitor events on both sides of the chains to ensure that the user's bridging requests are validated promptly. In the Gnosis Chain, there are both trusted and trustless validators. [Telepathy](/bridges/Token%20Bridge/amb-bridge#how-it-works-with-telepathy-validator), a trustless ZK-based validator on AMB, secures transactions using zero-knowledge proofs, while the rest of the validators sign the message to validate the message. The threshold of signatures from validators has to be reached in order to execute the message on the destination chain.
+Bridge Validators monitor events on both sides of the chains to ensure that the user's bridging requests are validated promptly. Each validator signs the messages it has validated, and a message executes on the destination chain once the threshold of validator signatures is reached.
 
 - [xDai Bridge Validators](/bridges/management/validators#xdai-bridge)
 - [AMB & OmniBridge Validators](/bridges/management/validators#amb--omnibridge)
@@ -112,6 +112,6 @@ Bridge Validators monitor events on both sides of the chains to ensure that the 
   - listen for `UserRequestForAffirmation` (depending on the bridge mode) events on the Foreign Bridge and send approval to Home Bridge to relay assets from Foreign Network to Home
 - **User** role:
   - sends assets to Bridge contracts:
-    - In xDAI bridge: Send DAI token to the Foreign xDAI Bridge to receive xDAI token from the Home xDAI Bridge, send xDAI token to the Home xDAI Bridge to unlock DAI token from the Foreign xDAI Bridge;
+    - In xDai bridge: Send DAI token to the Foreign xDai Bridge to receive xDai token from the Home xDai Bridge, send xDai token to the Home xDai Bridge to unlock DAI token from the Foreign xDai Bridge;
     - In AMB: Invoke Home/Foreign Bridge to send a message that will be executed on the other chain as an arbitrary contract method invocation;
     - In Omnibridge: Approve & relay ERC20 tokens to the Foreign Omnibridge which will interact with Foreign AMB Bridge to mint ERC20 tokens on the Home chain, and transfer ERC20 tokens to the Home Omnibridge which will interact with Home AMB Bridge to unlock ERC20 tokens on Foreign chain.

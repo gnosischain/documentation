@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Account Abstraction
+description: What account abstraction adds over externally owned accounts, and the account abstraction providers with guides for Gnosis Chain.
+keywords: [account abstraction, smart accounts, ERC-4337, gasless transactions, gnosis chain]
 ---
 
 # Understanding Account Abstraction
@@ -35,7 +37,7 @@ sidebar_label: Account Abstraction
 
 ---
 
-# Account Abstraction on Gnosis Chain
+## Account Abstraction on Gnosis Chain
 
 Gnosis Chain offers a range of account abstraction (AA) providers designed to enhance user experience of dApps, so that users can do on-chain activities and transactions cheaper and leverage the power of AA stack with different provider solutions for the non-web3 users.
 ### Providers for Account Abstraction on Gnosis Chain

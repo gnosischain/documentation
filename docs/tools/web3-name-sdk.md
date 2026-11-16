@@ -73,7 +73,7 @@ By providing chain IDs, you can resolve addresses on selected chains and get an 
 // Resolve an address from Gnosis Chain
 const name = await web3name.getDomainName({
   address: "0x18ce5dc03a2bd7275ff5b69f76b76267ba7da9f4",
-  queryChainIdList: [2818],
+  queryChainIdList: [100],
 }); // expect: goncalo.gno
 ```
 

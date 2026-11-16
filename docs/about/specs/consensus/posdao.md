@@ -5,7 +5,7 @@ description: POSDAO describes the pre-merge validator selection method for the G
 # POSDAO
 
 :::caution The merge
-Gnosis transitioned to PoS using the [GNO Token](/concepts/tokens/gno), this page defines the pre-merge consensus model. Learn more [about The Merge](/).
+Gnosis transitioned to PoS using the [GNO Token](/about/tokens/gno), this page defines the pre-merge consensus model. Learn more [about The Merge](/about/specs/hard-forks/merge).
 :::
 
 ## Proof of Stake Decentralized Autonomous Organization
@@ -24,6 +24,3 @@ Prior to Public POSDAO, Permissioned POSDAO was used nominated validators to sig
 ## Whitepaper
 
 > Barinov, I., Arasev, V., Fackler, A., Komendantskiy, V., Gross, A., Kolotov, A. and Isakova, D. POSDAO: Proof of Stake Decentralized Autonomous Organization (April 29, 2019). Available at SSRN: [https://ssrn.com/abstract=3368483](https://ssrn.com/abstract=3368483) or [http://dx.doi.org/10.2139/ssrn.3368483](https://dx.doi.org/10.2139/ssrn.3368483)
-
-:::success [Summary and PDF version of the latest whitepaper version](https://forum.poa.network/t/posdao-white-paper/2208)
-:::

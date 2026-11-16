@@ -9,17 +9,16 @@ const config = {
   title: "Gnosis Chain",
   tagline:
     "Build apps, payments and infrastructure on Gnosis Chain: an EVM network with 5-second blocks, near-zero fees and a stablecoin as gas.",
-  url: "https://docs.gnosischain.com",
-  baseUrl: "/",
-  onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "ignore",
-  favicon: "img/favicon.ico",
-  scripts: [
-    {
-      src: "/js/analytics-consent.js",
-      async: true,
+  url: "https://www.gnosis.io",
+  baseUrl: "/docs/",
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
     },
-  ],
+  },
+  favicon: "img/favicon.ico",
   // Inter is the canon Gnosis UI/body sans (typography.json). Kept all-sans per
   // the docs' own type direction; no Playfair serif display face.
   stylesheets: [
@@ -77,6 +76,11 @@ const config = {
         },
         // Updates blog archived to /archives/Updates (not published).
         blog: false,
+        // Search results and live samples (demo pages linked from the guides) are not documentation to index.
+        sitemap: {
+          // Matched against full route paths, so they carry the baseUrl
+          ignorePatterns: ["/docs/search", "/docs/live-samples/**"],
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
@@ -91,7 +95,7 @@ const config = {
       announcementBar: {
         id: "eez_launch_partner_q1_2027",
         content:
-          'Gnosis Chain is becoming Gnosis EEZ. Deploy now, with no redeployment at the fork. <a href="/launch-partner">Become a launch partner</a>',
+          'Gnosis Chain is becoming Gnosis EEZ. Deploy now, with no redeployment at the fork. <a href="/docs/launch-partner">Become a launch partner</a>',
         isCloseable: true,
       },
       colorMode: {
@@ -335,6 +339,69 @@ const config = {
             to: "/developers/Verify Smart Contracts/",
             from: "/developers/Verify Smart Contracts/truffle",
           },
+          // Pyth no longer supports Gnosis Chain or Chiado (August 2026); page archived to /archives/Pyth
+          {
+            to: "/tools/Oracle Providers/",
+            from: "/tools/Oracle Providers/pyth",
+          },
+          // SupraOracles does not support Gnosis Chain (its price feeds dropped Gnosis and Chiado,
+          // Supra VRF is on Chiado only); pages archived to /archives/SupraOracles
+          {
+            to: "/tools/Oracle Providers/",
+            from: [
+              "/tools/Oracle Providers/supraoracles",
+              "/tools/Oracle Providers/supraoracles/vrf",
+            ],
+          },
+          // Cookbook, the smart contract marketplace, is no longer online; page archived to /archives/Cookbook
+          {
+            to: "/developers/guides/deploy-your-first-contract",
+            from: "/developers/dev-environment/cookbook",
+          },
+          // Tellor no longer lists Gnosis Chain and DIA has no maintained oracle on it; pages archived
+          // to /archives/Tellor and /archives/DIA
+          {
+            to: "/tools/Oracle Providers/",
+            from: ["/tools/Oracle Providers/tellor", "/tools/Oracle Providers/dia"],
+          },
+          // Guides built on Safe's deprecated Auth Kit, on Relay Kit with Gelato (removed in
+          // September 2026) and on removed permissionless.js APIs; pages archived to /archives/Safe Kits
+          {
+            to: "/technicalguides/account-abstraction/Safe and supported AA infra providers/",
+            from: [
+              "/technicalguides/account-abstraction/Safe and supported AA infra providers/gelato",
+              "/technicalguides/account-abstraction/Safe and supported AA infra providers/integration-guide-for-safe",
+              "/technicalguides/account-abstraction/Safe and supported AA infra providers/pimlico",
+            ],
+          },
+          // ZeroDev guide built on @zerodev/waas, which has not been updated since June 2024; page
+          // archived to /archives/ZeroDev
+          {
+            to: "/technicalguides/account-abstraction/",
+            from: "/technicalguides/account-abstraction/zerodev-guide",
+          },
+          // web3.js was sunset by ChainSafe in March 2025; page archived to /archives/Web3.js
+          {
+            to: "/developers/Interact on Gnosis/ethers-js",
+            from: "/developers/Interact on Gnosis/web3-js",
+          },
+          // CoW Swap guide built on the archived widget examples; page archived to /archives/CoW Swap Widget
+          {
+            to: "/technicalguides/",
+            from: "/technicalguides/DeFi/Deploy A Cow Swap Widget",
+          },
+          // Secret's Confidential Computing Layer docs for EVM chains are offline and its Gnosis Chain
+          // gateway has had no activity since July 2024; page archived to /archives/Secret Network
+          {
+            to: "/technicalguides/",
+            from: "/technicalguides/Confidential Computing/secret-network",
+          },
+          // The hosting treats a path with a dot as a file, so the old slug only loaded with a
+          // trailing slash. The redirect keeps that URL working.
+          {
+            to: "/about/specs/hard-forks/spec-json-update",
+            from: "/about/specs/hard-forks/spec.json-update",
+          },
         ],
       },
     ],
@@ -346,14 +413,14 @@ const config = {
         siteTitle: "Gnosis Chain Docs",
         siteDescription:
           "Documentation for Gnosis Chain and Gnosis EEZ. Gnosis Chain is an EVM network (chain ID 100) with 5-second blocks and xDai, a stablecoin, as gas. Gnosis EEZ is the first instance of the Ethereum Economic Zone: Gnosis Chain will be hard-forked onto it, with contracts, balances and addresses carried over unchanged.",
-        // One section per top-level folder; depth 2 gave every single page its own heading.
-        depth: 1,
+        // One section per top-level folder: depth 2 because every route now starts with /docs/.
+        depth: 2,
         optionalLinks: [
           { title: "EEZ protocol docs", url: "https://docs.eez.io/", description: "The Ethereum Economic Zone specification" },
           { title: "EEZ demos", url: "https://build.eez.io/", description: "Hands-on walkthroughs of a synchronous cross-chain call" },
         ],
         // Same order as the navbar tabs: Gnosis EEZ first, since that is where an agent should begin.
-        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/knowledge-hub/**", "/tools/**", "/technicalguides/**", "/validators/**", "/node/**", "/faq/**"],
+        includeOrder: ["/docs/eez/**", "/docs/launch-partner/**", "/docs/about/**", "/docs/developers/**", "/docs/bridges/**", "/docs/knowledge-hub", "/docs/knowledge-hub/**", "/docs/tools/**", "/docs/technicalguides/**", "/docs/validators/**", "/docs/node/**", "/docs/faq/**"],
         content: {
           enableLlmsFullTxt: true,
           includePages: true,
@@ -361,7 +428,7 @@ const config = {
           includeGeneratedIndex: false,
           // Full URLs, so every link resolves from wherever an agent read the file.
           relativePaths: false,
-          excludeRoutes: ["/search", "/live-samples/**"],
+          excludeRoutes: ["/docs/search", "/docs/live-samples/**"],
         },
       },
     ],

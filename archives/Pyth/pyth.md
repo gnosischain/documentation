@@ -1,8 +1,16 @@
 ---
 title: Pyth
-description: The Pyth network is the largest first-party financial oracle network, delivering real-time market data to over 40 blockchains securely and transparently.
-keywords: [pyth, entropy, oracle, price feeds]
+description: Pyth price feeds on Gnosis Chain and Chiado. Archived - Pyth no longer supports Gnosis Chain or Chiado.
+keywords: [pyth, entropy, oracle, price feeds, deprecated, archived]
 ---
+
+# Pyth on Gnosis (Archived)
+
+:::danger Archived
+Pyth **no longer supports Gnosis Chain or Chiado**. Its Pyth Core contracts on both networks were not upgraded on 26 August 2026, and Pyth now lists both networks as having [no supported Pyth contract](https://docs.pyth.network/pro/no-longer-supported). Do not use the Pyth contracts listed on this page.
+
+This page is kept for historical reference only and is not published on [docs.gnosischain.com](https://docs.gnosischain.com).
+:::
 
 ## Overview
 
