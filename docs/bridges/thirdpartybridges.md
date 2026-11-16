@@ -21,3 +21,4 @@ The following third-party bridges allow seamless asset transfers to and from Gno
 | Jumper   | Multiple EVM Chains, Solana | [Visit](https://jumper.exchange/?fromChain=100) |
 | Bungee | Multiple EVM Chains  | [Visit](https://www.bungee.exchange/) |
 | Symbiosis         | Multiple EVM and non-EVM chains   | [Visit](https://app.symbiosis.finance/swap) |
+| AllSwap | Multiple EVM and non-EVM chains (Ethereum, Bitcoin, Solana, TRON and more) | [Visit](https://allswap.io/chains/gnosis) |
