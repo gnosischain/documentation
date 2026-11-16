@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
@@ -73,7 +74,7 @@ export default function MetaMaskAddButton() {
               <Layout title="MetaMask AddButton">
                 <div style={{textAlign: 'center',}}>
                   <p>MetaMask is NOT installed.</p>
-                  <p><a href='/tools/wallets/metamask'>Setup and configure MetaMask</a></p>
+                  <p><Link to='/tools/wallets/metamask'>Setup and configure MetaMask</Link></p>
                   <p><a href={samplesLink}>View all live samples code in Github.</a></p>
                 </div>
               </Layout>
@@ -88,7 +89,7 @@ export default function MetaMaskAddButton() {
                   <div style={{textAlign: 'center',}}>
                   <p>MetaMask is installed but not connected to Gnosis.</p>
                   <p><a href='#' onClick={addGnosisToMetaMask}>Add Gnosis to MetaMask Button</a></p>
-                  <p><a href='/tools/wallets/metamask#2-configure'>Configure MetaMask guide</a></p>
+                  <p><Link to='/tools/wallets/metamask#2-configure'>Configure MetaMask guide</Link></p>
                   <p><a href={samplesLink}>View all live samples code in Github.</a></p>
                   </div>
               </Layout>
@@ -103,7 +104,7 @@ export default function MetaMaskAddButton() {
           <p>Chain ID: {chainId}</p>
           <p><a href='#' onClick={getAccount}>Get account</a></p>
           <p>{account}</p>
-          <p> Now Add the <a href={'/about/tokens/gno'} target="_blank">GNO token</a>!</p>
+          <p> Now Add the <Link to='/about/tokens/gno' target="_blank">GNO token</Link>!</p>
           <p><a href='#' onClick={addGno}>Add GNO</a></p>
           <p><a href={samplesLink} target="_blank">View all live samples code in Github.</a></p>
           <p> <a href={'https://www.validategnosis.com/'} target="_blank">P.S.: Got GNO? Stake it!</a></p>

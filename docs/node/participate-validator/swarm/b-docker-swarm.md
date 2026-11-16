@@ -42,7 +42,7 @@ While it is possible to run multiple Bee nodes on a single machine, due to the h
 
 ### Software
 
-* A Gnosis Chain RPC endpoint (either by running your own node or the [free RPC endpoint](https://xdai.fairdatasociety.org) offered from the Fair Data Society. Other free public options are available at the [Gnosis Chain docs](https://docs.gnosischain.com/tools/RPC%20Providers/). 
+* A Gnosis Chain RPC endpoint (either by running your own node or the [free RPC endpoint](https://xdai.fairdatasociety.org) offered from the Fair Data Society. Other free public options are available at the [Gnosis Chain docs](/tools/RPC%20Providers/). 
 * [jq utility](https://jqlang.github.io/jq/) for formatting API output (optional)
 
 :::info

@@ -157,7 +157,7 @@ Syncing the execution layer of Gnosis may take 1 to 3 days, depending on your se
 
 The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the most straightforward experience: order, connect, run. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software.
 
-- [DappNode](https://docs.gnosischain.com/node/Node%20Tools/dappnode)
+- [DappNode](/node/Node%20Tools/dappnode)
 - [Avado](https://docs.ava.do/more-staking-opportunities/gnosis-staking)
 - [Orange Pi 5 Plus](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-plus-32GB.html)
 - [NanoPC T6 board 16 GB ](https://www.friendlyelec.com/index.php?route=product/product&product_id=292)

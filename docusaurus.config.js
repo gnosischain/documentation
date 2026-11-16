@@ -9,8 +9,8 @@ const config = {
   title: "Gnosis Chain",
   tagline:
     "Build apps, payments and infrastructure on Gnosis Chain: an EVM network with 5-second blocks, near-zero fees and a stablecoin as gas.",
-  url: "https://docs.gnosischain.com",
-  baseUrl: "/",
+  url: "https://www.gnosis.io",
+  baseUrl: "/docs/",
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
   markdown: {
@@ -19,12 +19,6 @@ const config = {
     },
   },
   favicon: "img/favicon.ico",
-  scripts: [
-    {
-      src: "/js/analytics-consent.js",
-      async: true,
-    },
-  ],
   // Inter is the canon Gnosis UI/body sans (typography.json). Kept all-sans per
   // the docs' own type direction; no Playfair serif display face.
   stylesheets: [
@@ -84,7 +78,8 @@ const config = {
         blog: false,
         // Search results and live samples (demo pages linked from the guides) are not documentation to index.
         sitemap: {
-          ignorePatterns: ["/search", "/live-samples/**"],
+          // Matched against full route paths, so they carry the baseUrl
+          ignorePatterns: ["/docs/search", "/docs/live-samples/**"],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -100,7 +95,7 @@ const config = {
       announcementBar: {
         id: "eez_launch_partner_q1_2027",
         content:
-          'Gnosis Chain is becoming Gnosis EEZ. Deploy now, with no redeployment at the fork. <a href="/launch-partner">Become a launch partner</a>',
+          'Gnosis Chain is becoming Gnosis EEZ. Deploy now, with no redeployment at the fork. <a href="/docs/launch-partner">Become a launch partner</a>',
         isCloseable: true,
       },
       colorMode: {
@@ -418,14 +413,14 @@ const config = {
         siteTitle: "Gnosis Chain Docs",
         siteDescription:
           "Documentation for Gnosis Chain and Gnosis EEZ. Gnosis Chain is an EVM network (chain ID 100) with 5-second blocks and xDai, a stablecoin, as gas. Gnosis EEZ is the first instance of the Ethereum Economic Zone: Gnosis Chain will be hard-forked onto it, with contracts, balances and addresses carried over unchanged.",
-        // One section per top-level folder; depth 2 gave every single page its own heading.
-        depth: 1,
+        // One section per top-level folder: depth 2 because every route now starts with /docs/.
+        depth: 2,
         optionalLinks: [
           { title: "EEZ protocol docs", url: "https://docs.eez.io/", description: "The Ethereum Economic Zone specification" },
           { title: "EEZ demos", url: "https://build.eez.io/", description: "Hands-on walkthroughs of a synchronous cross-chain call" },
         ],
         // Same order as the navbar tabs: Gnosis EEZ first, since that is where an agent should begin.
-        includeOrder: ["/eez/**", "/launch-partner/**", "/about/**", "/developers/**", "/bridges/**", "/knowledge-hub", "/knowledge-hub/**", "/tools/**", "/technicalguides/**", "/validators/**", "/node/**", "/faq/**"],
+        includeOrder: ["/docs/eez/**", "/docs/launch-partner/**", "/docs/about/**", "/docs/developers/**", "/docs/bridges/**", "/docs/knowledge-hub", "/docs/knowledge-hub/**", "/docs/tools/**", "/docs/technicalguides/**", "/docs/validators/**", "/docs/node/**", "/docs/faq/**"],
         content: {
           enableLlmsFullTxt: true,
           includePages: true,
@@ -433,7 +428,7 @@ const config = {
           includeGeneratedIndex: false,
           // Full URLs, so every link resolves from wherever an agent read the file.
           relativePaths: false,
-          excludeRoutes: ["/search", "/live-samples/**"],
+          excludeRoutes: ["/docs/search", "/docs/live-samples/**"],
         },
       },
     ],

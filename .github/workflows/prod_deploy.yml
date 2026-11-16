@@ -63,11 +63,12 @@ jobs:
           aws-region: ${{ secrets.PROD_AWS_DEFAULT_REGION }}
           mask-aws-account-id: true
 
+      # Under docs/ to match baseUrl "/docs/": gnosis.io forwards /docs/* to this origin with the path kept
       - name: 'Deploy to S3: Release'
         run: |
-          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*.html" --exclude "sitemap.xml" --cache-control max-age=86400,public
-          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
-          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }} --delete --exclude "*" --include "sitemap.xml" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/xml
+          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }}/docs --delete --exclude "*.html" --exclude "sitemap.xml" --cache-control max-age=86400,public
+          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }}/docs --delete --exclude "*" --include "*.html" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html
+          aws s3 sync build/ s3://${{ secrets.RELEASE_BUCKET_NAME }}/docs --delete --exclude "*" --include "sitemap.xml" --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/xml
 
       - name: 'Cloudfront: cache invalidation'
         run: |

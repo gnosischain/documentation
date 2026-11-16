@@ -12,7 +12,7 @@
 
 3. I’m totally new to this project and I’m trying to feel myself around. Where should I start learning?
 
-   You can jump to all relevant links on our landing page at https://www.gnosis.io/. Alternatively, you can check our documentation https://docs.gnosischain.com/. Also, feel free to take a look at the governance forum to see what is being discussed around the community regarding improvement proposals https://forum.gnosis.io/.
+   You can jump to all relevant links on our landing page at https://www.gnosis.io/. Alternatively, you can check our documentation [https://www.gnosis.io/docs/](/). Also, feel free to take a look at the governance forum to see what is being discussed around the community regarding improvement proposals https://forum.gnosis.io/.
 
 4. What is Gnosis Faucet?
 
@@ -28,7 +28,7 @@
 
 7. How can I add Gnosis Chain to Metamask?
 
-   You can follow the instructions on this page: https://docs.gnosischain.com/tools/wallets/metamask/
+   You can follow the instructions on this page: [https://www.gnosis.io/docs/tools/wallets/metamask/](/tools/wallets/metamask/)
 
    Or alternatively, you can go to https://chainlist.org/ search for Gnosis Chain to get Gnosis Chain added automatically to your Metamask.
 
@@ -115,7 +115,7 @@
 
 1. What native bridges does Gnosis have?
 
-   [xDai & OmniBridge](https://docs.gnosischain.com/bridges/)
+   [xDai & OmniBridge](/bridges/)
 
 2. Where can I bridge my tokens to Gnosis Chain?
 

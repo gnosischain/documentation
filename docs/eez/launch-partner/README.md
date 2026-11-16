@@ -7,6 +7,8 @@ description: Deploy on Gnosis Chain now to become a Gnosis EEZ launch partner. B
 keywords: [launch partner, hybrid apps, deploy on gnosis chain, gnosis eez launch, synchronous composability, ethereum economic zone]
 ---
 
+import Link from '@docusaurus/Link';
+
 # Become a Gnosis EEZ launch partner
 
 **Deploy on Gnosis Chain now, and you are live on Gnosis EEZ at launch.**
@@ -14,7 +16,7 @@ keywords: [launch partner, hybrid apps, deploy on gnosis chain, gnosis eez launc
 Gnosis Chain will become [Gnosis EEZ](/eez) through a hard fork of its state, so every contract on Gnosis Chain carries over at the same address. There is no second deployment and nothing to migrate.
 
 <div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="/launch-partner/deploy-now">Deploy now</a>
+  <Link className="button button--primary button--lg" to="/launch-partner/deploy-now">Deploy now</Link>
   <a className="button button--secondary button--lg" href="https://calendar.app.google/nG7XU4gvtqZgY9Cm9">Book a call</a>
 </div>
 
@@ -48,5 +50,5 @@ At launch, synchronous calls run one way: a contract on Gnosis EEZ calls Ethereu
 There is no fee and no token allocation.
 
 <div className="eez-cta-row">
-  <a className="button button--primary button--lg" href="/launch-partner/deploy-now">Deploy on Gnosis Chain now</a>
+  <Link className="button button--primary button--lg" to="/launch-partner/deploy-now">Deploy on Gnosis Chain now</Link>
 </div>

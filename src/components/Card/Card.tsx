@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '@docusaurus/Link'
 import Icon from '../Icon'
 
 interface CardProps {
@@ -10,7 +11,7 @@ interface CardProps {
 
 export default function Card({ title, subtitle, url, icon }: CardProps): JSX.Element {
   return(
-    <a href={url} className='custom-card-link'>
+    <Link to={url} className='custom-card-link'>
       <div className='custom-card'>
         {icon && (
           <span className='custom-card-icon' aria-hidden='true'>
@@ -20,6 +21,6 @@ export default function Card({ title, subtitle, url, icon }: CardProps): JSX.Ele
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div>
-    </a>
+    </Link>
   )
 }

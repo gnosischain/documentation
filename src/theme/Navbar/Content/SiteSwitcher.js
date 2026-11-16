@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const SITES = [
-  {label: 'Docs', href: 'https://docs.gnosischain.com', current: true},
+  {label: 'Docs', href: 'https://www.gnosis.io/docs', current: true},
   // The Gnosis Chain home on gnosis.io; external, opens in a new tab
   {label: 'Home', href: 'https://www.gnosis.io/chain', external: true},
   // The ecosystem and build pages on gnosis.io; external, open in a new tab
