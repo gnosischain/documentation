@@ -152,3 +152,10 @@ https://gnosis.api.onfinality.io/public
 ## Fastnode
 
 - [Fastnode](https://fastnode.io/)
+
+## RouteMesh
+
+[RouteMesh](https://routeme.sh/) provides managed JSON-RPC access to Gnosis Chain. It routes requests across eligible upstream providers with automatic failover. Economy routing prioritizes cost, and Performance routing prioritizes low latency. Paid access is pay-as-you-go in USD per RPC method, with no compute units or minimum commitment.
+
+- [RouteMesh quick start](https://routeme.sh/docs/intro/quick-start)
+- [RPC pricing](https://routeme.sh/pricing)
