@@ -103,13 +103,12 @@
 
     ‼️UPDATE: The Gnosis Ecosystem Fund was discontinued. Projects can now directly apply for funding through the GnosisDAO. For non commercial/public goods : https://bit.ly/gnosis-grants
 
-21. What is d14n.info?
+21. What was d14n.info?
 
     :::note
-    The site is deprecated.
+    d14n.info and gnosismetrics.com have been retired. Network metrics now live on [Gnosis Analytics](https://metrics.gnosischain.com/).
     :::
-    [d14n.info](https://www.d14n.info/) is a real-time dashboard that measures decentralization of the Gnosis Chain and Ethereum networks. We use the Nakamoto Coefficient as the primary quantitative measure across multiple dimensions of the network.
-    You may also check out [Gnosis Metrics](https://www.gnosismetrics.com/#overview)
+    d14n.info was a real-time dashboard that measured the decentralization of the Gnosis Chain and Ethereum networks, using the Nakamoto Coefficient as the primary quantitative measure across multiple dimensions of the network.
 
 ## Bridging
 
