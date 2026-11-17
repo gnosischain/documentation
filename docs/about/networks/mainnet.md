@@ -42,11 +42,11 @@ keywords:
 
 ### Other Tools
 
-| Other Tools      |                                |
-| ---------------- | ------------------------------ |
-| D14N Info        | https://d14n.info/             |
-| Bordel           | https://bordel.wtf/            |
-| More tools       | [Tools](../../tools/README.md) |
+| Other Tools      |                                  |
+| ---------------- | -------------------------------- |
+| Gnosis Analytics | https://metrics.gnosischain.com/ |
+| Bordel           | https://bordel.wtf/              |
+| More tools       | [Tools](../../tools/README.md)   |
 
 ## Key Parameters
 
