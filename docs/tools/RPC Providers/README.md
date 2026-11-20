@@ -152,3 +152,10 @@ https://gnosis.api.onfinality.io/public
 ## Fastnode
 
 - [Fastnode](https://fastnode.io/)
+
+## Spectrum Nodes
+
+Spectrum Nodes serves Gnosis Chain mainnet and Chiado from our own bare metal servers, with archive data on both and debug and trace methods on mainnet.
+
+- [Spectrum Nodes](https://spectrumnodes.com/)
+- [Docs](https://spectrumnodes.com/docs/)
