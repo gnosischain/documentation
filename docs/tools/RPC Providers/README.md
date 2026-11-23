@@ -148,6 +148,16 @@ https://gnosis.api.onfinality.io/public
 
 - [Tatum](https://tatum.io/)
 - [Tatum Docs](https://docs.tatum.io/)
+- [Gnosis RPC](https://tatum.io/chain/gnosis)
+- [Gnosis free endpoints](https://freerpc.com/gnosis) (no API key, 5 requests per minute)
+
+```shell
+# Gnosis Mainnet
+https://gnosis-mainnet.gateway.tatum.io
+
+# Chiado Testnet
+https://gnosis-testnet.gateway.tatum.io
+```
 
 ## Fastnode
 
