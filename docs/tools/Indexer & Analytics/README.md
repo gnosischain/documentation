@@ -12,6 +12,7 @@ Indexing and analytics tools let you query and analyze on-chain data on Gnosis C
 - [The Graph](./the-graph.md) - decentralized protocol for indexing and querying chain data.
 - [SubQuery](./subquery.md) - open-source data indexer with custom APIs.
 - [Envio](./envio.md) - fast, flexible indexing solution for real-time and historical EVM data.
+- [nuthatch](./nuthatch.md) - self-hosted indexer for a contract's event history, queried with SQL, from your own RPC.
 - [Moralis](./moralis.md) - enterprise-grade APIs for wallet, token and NFT data.
 - [GoldRush - powered by Covalent](./covalent.md) - comprehensive blockchain data API suite.
 - [Dune](./dune.md) - on-chain data platform and dashboards.
