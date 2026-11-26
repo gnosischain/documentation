@@ -24,12 +24,17 @@ Whether you’re dealing with privacy-focused transactions, or social recovery m
 <CardContainer>
     <Card
         title="Privy"
-        subtitle="Guide to intgerate Privy Wallet and SDK"
+        subtitle="Guide to integrate Privy Wallet and SDK"
         url="/technicalguides/custom-signers/privy" 
     />
     <Card
         title="Dynamic"
-        subtitle="Guide to intgerate Dynamic Wallet and SDK"
+        subtitle="Guide to integrate Dynamic Wallet and SDK"
         url="/technicalguides/custom-signers/dynamic" 
+    />
+    <Card
+        title="Openfort"
+        subtitle="Guide to integrate Openfort Wallet and SDK"
+        url="/technicalguides/custom-signers/openfort" 
     />
 </CardContainer>
