@@ -144,6 +144,10 @@ https://gnosis.blockpi.network/v1/rpc/<API_KEY>
 https://gnosis.api.onfinality.io/public
 ```
 
+## SolidRPC
+
+[SolidRPC](https://solidrpc.io/) provides authenticated JSON-RPC access to Gnosis Mainnet and Chiado over HTTPS. See the [network documentation](https://solidrpc.io/docs/networks).
+
 ## Tatum
 
 - [Tatum](https://tatum.io/)
